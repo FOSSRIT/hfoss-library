@@ -1,4 +1,4 @@
-# Free and Open Source Software Library
+# Free and Open Source Software Library (HFOSS Spring 2018 edition)
 
 See also CONTRIBUTING.md
 
@@ -9,9 +9,8 @@ software, broadly conceived.  We collect here a wide variety of types of
 works.  These works are collected here primarily as course material which
 instructors and students can use in the Humanitarian Free and Open Source
 Software Development (HFOSS) course (IGME-582), offered by the Rochester
-Institute of Technology's (RIT) School of Interactive Games and Media (IGM)
-[** PLEASE REVIEW: Explicitly name cultures course at this point?  **], but
-also to serve other courses in the FOSS minor offered by IGM at RIT, and
+Institute of Technology's (RIT) School of Interactive Games and Media (IGM),
+but also to serve other courses in the FOSS minor offered by IGM at RIT, and
 then beyond that as a more broadly useful open education resource (OER).
 
 As such a collection of resources, it is both about FOSS, and meant to

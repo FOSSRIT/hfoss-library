@@ -24,7 +24,7 @@ One practical consideration in including works in this library is to make
 more flexible use of the material here, and to make the collection more
 maintainable.  Material can be accessed from copies of this library without
 requiring it be distributed necessarily at the same time, with the same
-repos holding syllabi, lecture notes, assignments, evaluation tools, and
+repos holding syllabus, lecture notes, assignments, evaluation tools, and
 other course material.  This allows the course repos to be smaller, allows
 the use of the same works across multiple courses, and provides more
 visibility and transparency across related courses.

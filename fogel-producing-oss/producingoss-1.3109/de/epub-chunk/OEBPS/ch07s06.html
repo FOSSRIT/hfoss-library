@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Wartung mehrerer Versionszweige</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Wartung mehrerer Versionszweige"><div class="titlepage"><div><div><h1 class="title"><a id="release-lines"/>Wartung mehrerer Versionszweige</h1></div></div></div><p>Die meisten ausgereiften Projekte pflegen mehrere Versionszweige
+nebeneinander. Nachdem 1.0.0 erscheint, sollte diese Reihe mit micro
+Versionen (Fehlerbehebung) 1.0.1, 1.0.2, usw., so lange weiter geführt
+werden, bis das Projekt sich explizit entscheidet, die Reihe zu beenden.
+Beachten Sie, dass die Veröffentlichung der 1.1.0 kein ausreichender
+Grund ist, die 1.0.x Reihe zu beenden. Manche Nutzer aktualisieren zum
+Beispiel prinzipiell nicht auf die erste Version einer minor oder major
+Reihe – sie lassen andere die Fehler herausfinden; sagen wir bei
+der Version 1.1.0 warten sie bis 1.1.1. Das ist nicht zwangsläufig
+egoistisch (bedenken Sie, dass sie damit auch auf Bugfixes und neue
+Funktionen verzichten); sie haben sich nur entschieden – aus welchen 
+Gründen auch immer –, bei Aktualisierungen sehr vorsichtig zu sein.
+Wenn das Projekt von einem ernsthaften Fehler in 1.0.3 erfährt, kurz
+vor der Veröffentlichung von 1.1.0, wäre es entsprechend hart, den
+Bugfix nur in 1.1.0 zu stecken, und allen Nutzern der alten 1.0.x Reihe
+zu sagen, dass Sie aktualisieren sollen. Warum nicht sowohl 1.1.0 als
+auch 1.0.4 veröffentlichen, damit alle glücklich sind?</p><p>Nachdem die 1.1.x Reihe gut läuft, können Sie für 1.0.x erklären,
+dass es am Ende seines Lebenszykluses (en. <em class="firstterm">end of life
+</em>) ist. Das sollte offiziell bekannt gegeben werden. Diese
+Bekanntgabe kann für sich erfolgen, oder im Rahmen der Ankündigung 
+einer neuen 1.1.x Version; wie auch immer Sie sich entscheiden:
+die Nutzer müssen wissen, dass die alte Reihe ausläuft, damit
+sie entsprechende Entscheidungen im Bezug auf Aktualisierungen treffen
+können.</p><p>Manche Projekte legen einen Fenster fest, indem sie versprechen
+die vorhergehende Versionsreihe zu pflegen. Im Kontext von Open Source,
+bedeutet "pflege" (en. "support") die annahme von Bug-Meldungen für 
+diese Reihe, und neue Versionen zu veröffentlichen, wenn bedeutende
+Fehler gefunden werden. Andere Projekte geben keine definitive 
+Zeitangabe, halten aber ein Auge auf eintreffende Bug-Meldugen um einen
+Überblick zu behalten, wie viele Personen die alte Reihe noch 
+verwenden. Wenn der Prozentsatz unter einem gewissen Anteil sinkt,
+erklären sie für die Reihe, dass es am ende seines Lebens ist und hören
+auf es zu pflegen.</p><p>Sorgen Sie bei jeder neuen Version dafür, dass ein
+<em class="firstterm">target version</em> (de. Zielversion) oder 
+<em class="firstterm">target milestone</em> (de. Ziel-Meilenstein) in dem
+Bugtracker zur Verfügung steht, damit Personen die Bugs finden, ihre
+Meldungen unter der richtig Version einordnen können. Vergessen Sie
+nicht auch einen Ziel namens "development" (de. Entwicklung) oder
+"latest" (de. aktuelle) für den neusten Quellcode zu haben, da manche
+ – nicht nur die aktiven Entwickler –  oft den offiziellen
+Versionen voraus bleiben werden.</p><div class="sect2" title="Sicherheitsupdates"><div class="titlepage"><div><div><h2 class="title"><a id="security-releases"/>Sicherheitsupdates</h2></div></div></div><p>Die meisten Details über die Handhabung von Sicherheitslücken
+wurden in <a class="xref" href="ch06s06.html#security" title="Bekanntgabe von Sicherheitslücken">„Bekanntgabe von Sicherheitslücken“</a><span> im
+Kapitel <a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span> behandelt, es gibt
+aber ein paar besondere Details, die es für Sicherheits-Updates zu
+besprechen gibt.</p><p>Ein <em class="firstterm">Sicherheitsupdate</em> ist eine
+Version die nur gemacht wird, um eine Sicherheitslücke zu schließen.
+Der Code, welcher den Bug behebt, kann nicht veröffentlicht werden, bis
+die neue Version zur Verfügung steht, was nicht nur bedeutet, dass die
+Fixes nicht zum Projektarchiv committet werden können, bis zum Tag der
+Veröffentlichung, sondern dass die Version nicht öffentlich getestet
+weden kann, bis sie freigegeben wird. Die Entwickler können den Fix
+offensichtlich unter sich untersuchen, und die neue Version privat
+testen, aber breites Testen unter realen Bedingungen ist nicht möglich.
+</p><p>Aufgrund dieses Mangel an Tests, sollte ein Sicherheits-Update
+immer aus einer bereits herausgegebenen Version bestehen, ergänzt duch die
+Fixes für die Sicherheitslücke <span class="emphasis"><em>ohne sonstige 
+Änderungen</em></span>. Denn je mehr Änderungen Sie in einer Version
+veröffentlichen, desto wahrscheinlicher ist es, dass eine von ihnen
+einen neuen Fehler verursachen wird, vieleicht sogar eine neue
+Sicherheitslücke! In dieser Hinsicht konservativ zu sein, kommt auch 
+den Administratoren entgegen, die das Sicherheitsupdate einspielen
+werden, deren Richtlinien im Bezug auf Aktualisierungen es aber nicht
+zulassen, zur gleichen Zeit sonstige Änderungen
+einspielen.</p><p>Ein Sicherheitsupdate zu erstellen, ist manchmal auch mit ein
+wenig Täuschung verbunden. Das Projekt könnte zum Beispiel an der Version
+1.1.3 arbeiten, für die bestimmte Bugfixes an 1.1.2 bereits öffentlich 
+in Aussicht gestellt wurden, und in diesem Moment trifft die
+Sicherheitsmeldung ein. Die Entwickler können natürlich nicht über das 
+Sicherheitsproblem reden, bis sie den Fix zur Verfügung stellen; bis
+dahin müssen sie weiter öffentlich so reden, als wäre 1.1.3 das, was
+die ganze Zeit geplant war. Wenn 1.1.3 aber wirklich erscheint, wird
+es sich von 1.1.2 nur durch die Sicherheitsfixes unterscheiden, und
+alles andere wird auf die Version 1.1.4 aufgeschoben (die jetzt natürlich
+<span class="emphasis"><em>auch</em></span> den Sicherheitsfix beinhalten wird, genau
+so wie alle zukünftigen Versionen).</p><p>Sie könnten eine weitere Komponente zu der bestehenden Version
+hinzufügen, welche darauf hindeutet, dass nur Sicherheitsänderungen
+enthalten sind. Zum Beispiel könnte man alleine an den Zahlen
+erkennen, dass 1.1.2.1 ein Sicherheitsupdate zu 1.1.2 ist, und es würde
+deutlich, dass jede "höhere" Version (d.h. 1.1.3, 1.2.0, usw.) die
+gleichen Sicherheitsfixes beinhaltet. Für diejenigen die es wissen, teilt
+dieses System eine Menge Informationen mit. Andererseits kann es für
+diejenigen die das Projekt nicht so nah verfolgenein, ein wenig verwirrend
+sein, die meiste Zeit ein Drei-Komponenten-System zu sehen, in das
+gelegentlich vierstellige Versionsnummen eingestreut sind.
+Die meisten Projekte die ich mir angeschaut habe, bevorzugen
+Konsistenz und benutzen einfach die nächste geplante Versionsnummer für 
+Sicherheitsupdates, selbst wenn das bedeutet, andere geplante
+Versionen um eins zu verschieben.</p></div></div></body></html>

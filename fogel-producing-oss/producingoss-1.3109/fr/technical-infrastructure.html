@@ -1,0 +1,136 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapitre 3. L'infrastructure technique</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produire un Logiciel Libre"><link rel="up" href="index.html" title="Produire un Logiciel Libre"><link rel="prev" href="announcing.html" title="Annoncer le projet"><link rel="next" href="mailing-lists.html" title="Les listes de diffusion"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapitre 3. L'infrastructure technique</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="announcing.html">Précédent</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="mailing-lists.html">Suivant</a></td></tr></table><hr></div><div class="chapter" title="Chapitre 3. L'infrastructure technique"><div class="titlepage"><div><div><h2 class="title"><a name="technical-infrastructure"></a>Chapitre 3. L'infrastructure technique</h2></div></div></div><div class="toc"><p><b>Table des matières</b></p><dl><dt><span class="sect1"><a href="technical-infrastructure.html#tools-needed">Les besoins d'un projet</a></span></dt><dt><span class="sect1"><a href="mailing-lists.html">Les listes de diffusion</a></span></dt><dd><dl><dt><span class="sect2"><a href="mailing-lists.html#spam-prevention">Se prémunir du spam</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#spam-filtering">Filtrer les messages</a></span></dt><dt><span class="sect3"><a href="mailing-lists.html#address-hiding">Masquer les adresses dans les archives</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#header-management">Identification et gestion des en-têtes</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#reply-to">Le grand débat du « Répondre à »</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#reply-fantasies">Deux rêves</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#archiving">L&#8217;archivage</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#mailing-list-software">Les logiciels</a></span></dt></dl></dd><dt><span class="sect1"><a href="vc.html">Les logiciels de gestion de versions</a></span></dt><dd><dl><dt><span class="sect2"><a href="vc.html#vc-vocabulary">Vocabulaire de la gestion de versions</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-choosing">Choisir un logiciel de gestion de versions</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-using">Using the Version Control System</a></span></dt><dd><dl><dt><span class="sect3"><a href="vc.html#version-everything">Version everything</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-browsing">Browsability</a></span></dt><dt><span class="sect3"><a href="vc.html#commit-emails">Commit emails</a></span></dt><dt><span class="sect3"><a href="vc.html#branches">Use branches to avoid bottlenecks</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-singularity">Singularity of information</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-authz">Authorization</a></span></dt></dl></dd></dl></dd><dt><span class="sect1"><a href="bug-tracker.html">Bug Tracker</a></span></dt><dd><dl><dt><span class="sect2"><a href="bug-tracker.html#bug-tracker-mailing-list-interaction">Interaction with Mailing Lists</a></span></dt><dt><span class="sect2"><a href="bug-tracker.html#bug-filtering">Pre-Filtering the Bug Tracker</a></span></dt></dl></dd><dt><span class="sect1"><a href="irc.html">IRC / Real-Time Chat Systems</a></span></dt><dd><dl><dt><span class="sect2"><a href="irc.html#bots">Bots</a></span></dt><dt><span class="sect2"><a href="irc.html#irc-archiving">Archiving IRC</a></span></dt></dl></dd><dt><span class="sect1"><a href="wikis.html">Wikis</a></span></dt><dt><span class="sect1"><a href="web-site.html">Web Site</a></span></dt><dd><dl><dt><span class="sect2"><a href="web-site.html#canned-hosting">Canned Hosting</a></span></dt><dd><dl><dt><span class="sect3"><a href="web-site.html#canned-hosting-choosing">Choosing a canned hosting site</a></span></dt><dt><span class="sect3"><a href="web-site.html#anonymity">Anonymity and involvement</a></span></dt></dl></dd></dl></dd></dl></div><div class="simplesect"><div class="titlepage"></div><p>Les projets dans le monde du logiciel libre reposent sur des
+    technologies assurant l'acquisition sélective et l'intégration de
+    l'information. Plus vous êtes compétent dans l'utilisation de ces
+    technologies, plus votre projet sera performant. Ceci devient de
+    plus en plus vrai à mesure que le projet grandit. Une bonne gestion
+    de l'information préserve les projets libres de s'écraser sous le
+    poids de la loi de Brooks<sup>[<a name="idp5664400" href="#ftn.idp5664400" class="footnote">12</a>]</sup>
+    qui affirme qu'ajouter des ressources humaines à un projet en retard
+    ne fait que d'accentuer ce retard. Fred Brooks avait observé que la
+    complexité d'un projet augmentait suivant le carré du nombre de
+    participants. Lorsque peu de gens sont impliqués, il est aisé à
+    chacun de communiquer avec les autres, mais lorsque des centaines de
+    personnes travaillent sur le même projet, il n'est plus possible à
+    chaque personne de rester constamment informé de ce que font tous
+    les autres. Si la bonne gestion d'un projet libre doit tendre à
+    donner à chacun le sentiment de travailler dans la même pièce, que
+    ce passe-t-il si tout le monde se met à parler en même temps dans
+    une pièce bondée ?</p><p>Le problème n'est pas nouveau. Dans les assemblées réelles, la
+    solution est l'application de la<span class="emphasis"><em> procédure
+    parlementaire</em></span> : un guide formel dérivant la manière de
+    mener les discussions en temps réel dans de larges groupes de
+    personnes, d'assurer que de réels désaccords ne soient pas noyés
+    dans des commentaires d'approbation, de former des sous-comités, de
+    reconnaître qu'une décision a été prise, etc. Une part importante de
+    la procédure parlementaire est la spécification des interactions du
+    groupe avec le système de gestion de l'information. Certaines
+    remarques sont faites "pour enregistrement", les autres non.
+    L'enregistrement lui-même est sujet à des manipulations directes et
+    est conçu pour être non pas une transcription littérale mais une
+    représentation de ce qui a été dit, selon le groupe, et avec
+    l'accord de tous ses membres. L'enregistrement n'est pas
+    monolithique mais prend différentes formes selon son usage. Il
+    comprend le memorandum des interventions individuelles et de la
+    réunion dans son ensemble, des résumés, des agendas et leurs
+    annotations, des rapports de comité, des rapports réalisés par des
+    personnes non présentes, des listes d'actions, etc.</p><p>Du fait qu'Internet ne soit pas réellement une salle, nous
+    n'avons pas à nous soucier de reproduire ces parts de la procédure
+    parlementaire qui tiennent certains silencieux pendant que d'autres
+    s'expriment. Mais dans le domaine des techniques de gestion de
+    l'information, les projets libres s'avèrent être au moins aussi
+    performants que la procédure parlementaire. Comme la plupart des
+    communications sont écrites dans le développement du libre, des
+    systèmes élaborés ont émergés pour router et étiqueter correctement
+    les données ; pour limiter les doublons et ainsi éviter les
+    divergences malencontreuses ; pour stocker et retrouver des données
+    ; pour corriger des informations erronées ou obsolètes et pour
+    mettre en relation des informations les unes avec les autres lorsque
+    des connections apparaissent. Les participants actifs des projets
+    libres internalisent beaucoup de ces techniques et s'attacheront
+    souvent à effectuer des opérations complexes manuelles pour
+    s'assurer que l'information est correctement routée. Mais la
+    réussite dans cette entreprise dépend au final d'outils
+    sophistiqués. Le media de communication doit autant que possible se
+    charger lui-même du routage, de l'étiquetage et de l'enregistrement
+    des données et doit rendre l'information la plus facile possible à
+    manipuler par les humains. En pratique, les humains devront
+    néanmoins toujours intervenir dans de nombreux points du processus,
+    et il est important que le logiciel rende également ces
+    interventions aisées, mais en général si les humains s'attachent à
+    correctement étiqueter et router l'information dès son entrée dans
+    le système, le logiciel est configuré pour tirer un maximum de ces
+    méta-données.</p><p>Le contenu de ce chapitre est essentiellement pratique, basé
+    sur l'expérience dans l'utilisation de plusieurs logiciels
+    spécifiques et de pratiques méthodologiques. Cependant, son objet
+    n'est pas de vous former à une liste particulière de techniques mais
+    de monter par de petits exemples l'attitude générale qui encourage
+    la meilleure gestion de l'information dans un projet. Cette attitude
+    englobe à la fois des compétences techniques et relationnelles. Les
+    compétences techniques sont essentielles car les logiciels de
+    gestion de l'information projet demandent une configuration initiale
+    puis une maintenance et enfin des ajustements lorsque de nouveaux
+    besoins apparaissent (par exemple, voir la discussion sur la manière
+    de gérer la croissance du projet dans <a class="xref" href="bug-tracker.html#bug-filtering" title="Pre-Filtering the Bug Tracker">la section intitulée « Pre-Filtering the Bug Tracker »</a><span> plus loin dans
+    ce chapitre</span>). Les compétences relationnelles quant à elles
+    sont également nécessaire car les communautés humaines nécessitent
+    également de la maintenance : il n'est pas toujours trivial au
+    premier abord de savoir comment tirer le mailleur de ces outils, et
+    dans certain cas les projets peuvent avoir des conventions
+    contradictoires (par exemple, voir la discussion sur le paramétrage
+    de l'entête <code class="systemitem">Reply-to</code> sur les posts de liste
+    de diffusion, dans <a class="xref" href="mailing-lists.html" title="Les listes de diffusion">la section intitulée « Les listes de diffusion »</a>). Chacun doit
+    être encouragé au bon moment et de la bonne façon à travailler du
+    mieux qu'il peut à garder le projet bien organisé. Plus un
+    contributeur est impliqué dans le projet, plus il se formera à des
+    techniques complexes et spécialisées.</p><p>La gestion de l'information n'a pas de solutions sur
+    l'étagère, il y a trop de variables à prendre en compte. Même si
+    votre obtenez à un système totalement configuré tel que vous le
+    désiriez et que la communauté fonctionne correctement, certaines
+    pratiques peuvent ne plus tenir la charge lorsque le projet grandit.
+    Un autre cas est la fracture technologique : le projet se stabilise,
+    les développeurs et utilisateurs s'installent dans une relation
+    confortable avec une infrastructure technique stable quand soudain
+    quelqu'un arrive et invente un nouveau type de service de gestion de
+    l'information et peut après, les nouveaux visiteurs demandent
+    pourquoi votre projet n'en dispose pas. C'est par exemple ce qui est
+    arrivé aux projets démarré avant l'émergence du wiki (voir <a class="ulink" href="http://en.wikipedia.org/wiki/Wiki" target="_top">http://en.wikipedia.org/wiki/Wiki</a>). Bien des choix sont
+    subjectifs et impliquent des compromis entre le confort des
+    producteurs d'information et celui des consommateurs, ou entre le
+    temps requis à configurer les outils face aux bénéfices qu'ils
+    apportent au projet.</p><p>Prenez garde à ne pas trop automatiser, c'est à dire
+    d'automatiser des actions qui nécessitent une prise en compte
+    humaine. L'infrastructure technique est certes importante, mais ce
+    qui fait vivre votre projet est l'attention, et une expression
+    intelligente de cette attention, par des humains impliqués dans le
+    projet. Elle est globalement un ensemble de commodités donné aux
+    humains pour y parvenir.</p></div><div class="sect1" title="Les besoins d'un projet"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="tools-needed"></a>Les besoins d'un projet</h2></div></div></div><p>La plupart des projets Open Source offrent un minimum d'outils
+    pour la gestion de l'information :</p><div class="variablelist"><dl><dt><span class="term">Site Web</span></dt><dd><p>La vitrine de votre projet aux yeux du public (centralisé 
+          et à sens unique). Le site Web peut également servir d'interface
+          administrative à d'autres outils du projet.</p></dd><dt><span class="term">Listes de diffusion</span></dt><dd><p>Traditionnellement le principal moyen de communication, et
+          aussi le plus actif, au sein du projet et le « médium
+          d'enregistrement »</p></dd><dt><span class="term">Contrôle de versions</span></dt><dd><p>Permet aux développeurs de contrôler facilement les
+          changements apportés au code, les régressions et de gérer les
+          branches de développements parallèles. Elle permet à chacun
+          d'observer les modifications du code.</p></dd><dt><span class="term">Référencement de bogues</span></dt><dd><p>Permet aux développeurs d'avoir l'historique de leurs
+          travaux, de se coordonner les uns avec les autres et de
+          planifier les correctifs. Permet à chacun de connaître le statut
+          précis des bogues, et les informations liées (par exemple, les
+          conditions de leur reproductibilité). La même méthode peut
+          d'ailleurs être employée pour faire le suivi, non seulement des
+          bogues, mais également des tâches, des versions, des nouvelles
+          fonctionnalités, etc.</p></dd><dt><span class="term">Messagerie instantanée / chat en temps réel</span></dt><dd><p>Un endroit pour les discussions et les échanges en mode
+          questions/réponses rapides et simples. N'est pas toujours
+          archivé complètement.</p></dd></dl></div><p>Chaque outil, dans cet ensemble, satisfait un besoin particulier,
+    mais leurs fonctions sont étroitement liées et ces outils doivent être
+    conçus pour fonctionner ensemble. Plus loin, nous verrons comment ils
+    peuvent le faire, et surtout, comment faire pour que les gens les
+    utilisent. Le site Web ne sera pas évoqué tout de suite, car il s'agit
+    plus d'un ciment pour les autres composants que d'un outil à part
+    entière.</p><p>Vous pouvez vous éviter les prises de tête liées au choix et à
+    la configuration de tous ces outils en optant pour une 
+    <em class="firstterm">forge</em> : un serveur qui offre, prêts à l'emploi,
+    des modèles avec tous les outils nécessaires pour gérer un projet Open
+    Source. Voir <a class="xref" href="web-site.html#canned-hosting" title="Canned Hosting">la section intitulée « Canned Hosting »</a><span>
+    plus loin dans ce chapitre</span> pour une évaluation des avantages
+    et des inconvénients des forges.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><em class="citetitle"><sup>[<a name="ftn.idp5664400" href="#idp5664400" class="citetitle">12</a>] </sup>The
+    Mythical Man Month</em><a class="ulink" href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month" target="_top">http://en.wikipedia.org/wiki/The_Mythical_Man-Month</a><a class="ulink" href="http://en.wikipedia.org/wiki/Brooks_Law" target="_top">http://en.wikipedia.org/wiki/Brooks_Law</a></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="announcing.html">Précédent</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="mailing-lists.html">Suivant</a></td></tr><tr><td width="40%" align="left" valign="top">Annoncer le projet </td><td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td><td width="40%" align="right" valign="top"> Les listes de diffusion</td></tr></table></div></body></html>

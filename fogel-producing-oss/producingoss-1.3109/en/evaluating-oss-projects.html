@@ -1,0 +1,71 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Evaluating Open Source Projects</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producing Open Source Software"><link rel="up" href="money.html" title="Chapter 5. Participating as a Business, Non-Profit, or Government Agency"><link rel="prev" href="hiring.html" title="Hiring Open Source Developers"><link rel="next" href="crowdfunding-and-bounties.html" title="Crowdfunding and Bounties"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Evaluating Open Source Projects</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="hiring.html">Prev</a> </td><th width="60%" align="center">Chapter 5. Participating as a Business, Non-Profit, or Government Agency</th><td width="20%" align="right"> <a accesskey="n" href="crowdfunding-and-bounties.html">Next</a></td></tr></table><hr></div><div class="sect1" title="Evaluating Open Source Projects"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="evaluating-oss-projects"></a>Evaluating Open Source Projects</h2></div></div></div><p>Although this book is mainly about how to launch and run new
+open source projects, that topic is inextricably linked to the problem
+of evaluating existing open source projects.  You can't know whether
+you need to start a new one until you've evaluated what's out there
+(as explained in <a class="xref" href="getting-started.html#look-around" title="But First, Look Around">the section called &#8220;But First, Look Around&#8221;</a>).  Furthermore, even
+in a new project, you'll usually still be building on existing open
+source components, and will often be in the position of choosing
+between different projects that implement the same basic
+functionality.  That is not just a technical choice; it's also about
+social health and general level of project maturity.  How large and
+diverse are their developer communities?  Do they get new contributors
+on a regular basis?  Do they handle incoming bug reports in a
+reasonable way?  Do they make stable releases frequently enough for
+your needs?  And so on.</p><p>Evaluating open source projects is certainly an art, not a
+science.  However, there are some shortcuts that experienced people
+use.  Below is what has worked for me, and by "worked", I mean that
+when I have applied these evaluation techniques to a project and then
+checked in with that project months or years later, I have generally
+found that its current circumstances are in line with what the
+evaluation predicted.</p><div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Look at bug tracker activity first.</em></span></span></dt><dd><p>The most reliable signals of project health can usually be
+     found in the bug tracker.  Look at the rate of issue filings and
+     the number of unique filers (because that's a proxy for the size
+     and level of engagement of the user base), and look at how often
+     project developers respond in bug tickets &#8212; and
+     at <span class="emphasis"><em>how</em></span> they respond: are they constructive?
+     Do they interact well with both the reporter and with other
+     developers?  Is it always the same developer responding, or is
+     responsiveness well-distributed throughout the development team?
+     More bug reports is better, by the way, as discussed in <a class="xref" href="getting-started.html#vc-and-bug-tracker-access" title="Version Control and Bug Tracker Access">the section called &#8220;Version Control and Bug Tracker Access&#8221;</a>.  The rate at which
+     bug reports are <span class="emphasis"><em>closed</em></span> is not as important
+     as you might think; in a healthy project with an active user
+     base, bug reports will probably be filed faster than the
+     development team can close them.  The important question is not
+     rate of resolution, but how the project responds to and organizes
+     the influx of reports.</p></dd><dt><span class="term"><span class="emphasis"><em>Measure commit diversity, not commit rate.</em></span></span></dt><dd><p>Look at the distribution of commits across committers, not
+     just at the raw frequency of commits.  Does the project have a
+     variety of people working together in a sustained way?  Too often,
+     evaluators look just at the commit rate, but the rate isn't very
+     informative &#8212; knowing the number of commits per
+     week doesn't tell you anything except that (perhaps) someone
+     keeps making typos and keeps correcting them in new commits.  If
+     have time to look at the content of individual commits, then look
+     at how often one developer's commit is a response to (refers to)
+     some other developer's previous commit.  This tells you that
+     group code review is going on, and the more of that you see, the
+     better the project is doing.</p></dd><dt><span class="term"><span class="emphasis"><em>Evaluate organizational diversity.</em></span></span></dt><dd><p>In addition to looking for a variety of individual
+     identities, see if you can tell how many different
+     <span class="emphasis"><em>organizations</em></span> are participating in the
+     project &#8212; in particular, commercial
+     organizations.  If a number of different sources of money are all
+     investing in a project, that's a sign that that project is going
+     to be around for the long term.  (See the discussion of "bus
+     factor" in <a class="xref" href="social-infrastructure.html" title="Chapter 4. Social and Political Infrastructure">Chapter 4, <i>Social and Political Infrastructure</i></a>.)</p></dd><dt><span class="term"><span class="emphasis"><em>Discussion forums.</em></span></span></dt><dd><p>If the project has discussion forums, scan them quickly
+     looking for signs of a functional community.  Specifically,
+     whenever you see a long thread, spot check responses from core
+     developers coming late in the thread.  Are they summarizing
+     constructively, and taking steps to bring the thread to a
+     decision while remaining polite?  If you see a lot of flame wars
+     going on, that's often a sign that energy is going into argument
+     instead of into development.</p></dd><dt><span class="term"><span class="emphasis"><em>News, announcements, and releases.</em></span></span></dt><dd><p>Any project that is functioning well will usually have made
+     announcements within the past few months.  Check the project's
+     front page, news feed, Twitter or other microblog accounts, etc.
+     If things are quiet on stage, they're probably quiet backstage
+     too.</p></dd></dl></div><p>This is only a quick introduction to the art of evaluating
+projects, but even using just the steps above can save you a lot of
+trouble.  I have found them particularly useful when evaluating the
+two sides of a recent fork<sup>[<a name="idp2449" href="#ftn.idp2449" class="footnote">63</a>]</sup>.  Even in
+a recent fork, it is often possible to tell, just by looking at some
+of the signals described above, which side will flourish over the long
+term.</p><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp2449" href="#idp2449" class="para">63</a>] </sup>That is, a "social fork";
+see <a class="xref" href="forks.html#social-forks-vs-short-forks" title='"Social Forks" versus "Short Forks"'>"Social Forks" versus "Short Forks"</a></p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="hiring.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="money.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="crowdfunding-and-bounties.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Hiring Open Source Developers </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Crowdfunding and Bounties</td></tr></table></div></body></html>

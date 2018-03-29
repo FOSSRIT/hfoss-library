@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>发布和日常开发</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="发布和日常开发"><div class="titlepage"><div><div><h1 class="title"><a id="releases-and-daily-development"/>发布和日常开发</h1></div></div></div><p>维护同时的平行发布包含了如何完成日常开发的暗示。特别是应该遵守每次提交只包含一个单独逻辑变更的铁律，绝不要在一次提交中混杂不相关的变更。如果一次提交的变更太大，或具有破坏性，可以分为N此提交，每次提交都是一个整体变更的分区子集，而且不包含与整体变更无关的内容。</p><p>这里是一个未经慎重考虑进行提交的例子：</p><pre class="screen">
+------------------------------------------------------------------------
+r6228 | jrandom | 2004-06-30 22:13:07 -0500 (Wed, 30 Jun 2004) | 8 lines
+
+Fix Issue #1729: Make indexing gracefully warn the user when a file
+is changing as it is being indexed.
+
+* ui/repl.py
+  (ChangingFile): New exception class.
+  (DoIndex): Handle new exception.
+
+* indexer/index.py
+  (FollowStream): Raise new exception if file changes during indexing.
+  (BuildDir): Unrelatedly, remove some obsolete comments, reformat
+  some code, and fix the error check when creating a directory.
+
+Other unrelated cleanups:
+
+* www/index.html: Fix some typos, set next release date.
+------------------------------------------------------------------------
+</pre><p>当某人需要将<code class="function">BuildDir</code>错误检查修正搬运到维护即将到来维护发布分支时，这种问题立刻变得非常明显。搬运者不希望任何其他的变更—例如，#1729问题的修正未能通过维护分支的确认，而且<code class="filename">index.html</code>的修改变得毫无关系。但是她不能仅仅通过版本控制工具的合并功能只获取<code class="function">BuildDir</code>的变更，因为版本控制系统被告知该变更在逻辑上由所有其他不相关的事务组成。实际上，在合并之前这个问题也十分明显。仅仅为表决列出变更会有许多问题：不仅仅要提供修订版本号码，提议者也必须提供特别的补丁或变更分支，才能将提议的部分分离出来。对于其他人来说还要承受许多任务，仅仅因为最初的提交者未能按照逻辑把事情分组。</p><p>实际上，这个提交应该分为<span class="emphasis"><em>四</em></span>次独立的提交：一个用于修正#1729，另一个删除<code class="function">BuildDir</code>中废弃的注释，并重新格式化代码，还有一个修正<code class="function">BuildDir</code>中的错误检查，最后要修改<code class="filename">index.html</code>。其中第三个提交应该是为维护发布分支所做的提议。</p><p>当然，发布稳定不仅仅是要求每次提交仅包含一个逻辑变更的唯一原因从心理学上讲，语义上统一的提交更利于检查，更利于在必要时回退（在某些版本控制系统，回退只是一种特殊的合并）。这种每个人预先遵守的纪律可以避免项目之后的头痛。</p><div class="sect2" title="计划发布"><div class="titlepage"><div><div><h2 class="title"><a id="planning"/>计划发布</h2></div></div></div><p>与私有项目相比，开源项目在发布计划上有历史上的区别。私有项目通常有严格的最后期限。有时是因为已经向客户许诺在规定时间完成升级，可能因为新发布需要配合其他市场目标的投入，也可能是因为风险投资希望在进一步投入前看到些结果。而对于自由软件项目，现阶段主要是由业余开发者以最字面意义的方式激励着：因为喜爱，所以编码。在所有的特性完毕之前，没有人觉得需要装运。并不是所有人的工作都在开发线上。</p><p>现今，许多开源项目由公司资助，越来越受到公司文化中的最后期限影响。无论如何这也是一件好事，但是会导致有工资的私有开发者与志愿贡献时间的冲突。这些冲突通常会围绕何时以及如何计划发布等问题发生。处于压力之下的有工资开发者很自然会希望选择一个发布发生的日期，并让每个人的活动投入到这个发布线。但是志愿者有自己的日程—或许是他们希望完成的特性，或一些希望进行的测试—他们希望发布能等待这些工作完成。</p><p>当然对于此类问题，除了讨论和妥协没有普通的解决方案。但是通过将发布中某个提议的<span class="emphasis"><em>出现</em></span>与其完成的日期解耦，你可以最小化所导致阻力的频率和程度。也就是将讨论主题导向到项目在近期，以及中期将要作出的发布，以及其中包含的哪些特性，而不必一开始就确定所有关于日期的事情，除了粗略的一些猜测。<sup>[<a id="idm2574" href="#ftn.idm2574" class="footnote">23</a>]</sup>。通过尽早明确特性集合，你减少了针对任何单个发布讨论的复杂度，因而改进了可预测性。这也创建了一种惯性偏见，针对通过添加特性或其他复杂度的提议以扩展发布定义的人。如果发布的内容定义良好，则提议者需要承担证明该扩展的负担，即使发布的日期还没有设定。</p><p>在Thomas Jefferson的多卷传记<em class="citetitle">Jefferson and His Time</em>中，Dumas Malone讲了一个故事，Jefferson如何处理决定弗吉尼亚大学未来组织结构的第一次会议。大学首先来自Jefferson的一个构想，但是（不仅仅是在开源项目，其他领域也屡见不鲜）有许多其他参与者，都有自己的兴趣和日程。当他们召集在一起举行第一次会议时，Jefferson确保展示了精心准备的架构图，以及希望从欧洲引入的特定教职员工的姓名。房间中所有其他人都没有任何准备；这个团队从本质上就需要服从Jefferson的远见，而这个大学最终几乎按照他的计划建立。事实上整个建设远超预算，他的许多想法出于很多原因，最终未能得到解决，但那都是Jefferson一开始就了解，并预计到会发生的事情。他的目的是策略性的：通过在会议上展示非常确实的东西，让其他所有人仅仅需要履行修改提议的角色，所以项目整体的形状，以及随之而来的日程也可以和他的预期大体一致。</p><p>对于开源软件项目，没有一个单独的“会议”，而是一系列由问题跟踪系统代表的小建议。但是如果你在项目开始时有一些信誉，而且根据宣称的整体计划将许多特性、改进和bugs赋予到问题跟踪系统中的目标发布版本，人们会和你走到一起。一旦你根据自己的需要确立了一些事情，关于实际发布<span class="emphasis"><em>日期</em></span>的对话将会变得非常平滑。</p><p>另一个很重要的，不要把任何决定当作是天经地义的。对于未来特定发布的某个问题所关联的注释中，邀请讨论、异议并尽可能真诚的希望被说服。不要为了练习控制而练习控制：其他人越是深入的参与到发布计划过程（见<span><a class="xref" href="ch08.html" title="Chapter 8. 管理志愿者">Chapter 8, <em>管理志愿者</em></a>的</span><a class="xref" href="ch08s02.html" title="像分担技术任务一样分担管理任务">the section called “像分担技术任务一样分担管理任务”</a>），越是容易说服其他人分享你在这个问题上本属于你的特权。</p><p>另一个降低项目发布计划紧张程度的方法是提高发布的频率。当发布之间的时间很长时，每次发布在每个人心目中的地位也被放大；如果他们的代码未能进入，他们会感觉到更多的压力，因为他们知道下一次机会要等待很久。根据发布过程的重要程度，以及项目的本性，发布的间隔可以在3个月到6个月之间，尽管如果有需求时，维护线可以让微小发布更快一点。</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm2574" href="#idm2574" class="para">23</a>] </sup>作为另外一个选择，你或许希望阅读Martin Michlmayr博士的论文<em class="citetitle">Quality
+Improvement in Volunteer Free and Open Source Software Projects:
+Exploring the Impact of Release Management</em>（<a class="ulink" href="http://www.cyrius.com/publications/michlmayr-phd.html">http://www.cyrius.com/publications/michlmayr-phd.html</a>）。它使用的是基于时间的发布过程，而不是基于特性的大型自由软件项目。Michlmayr也在Google提供了一个该主题的演讲，可以通过Google Video的<a class="ulink" href="http://video.google.com/videoplay?docid=-5503858974016723264">http://video.google.com/videoplay?docid=-5503858974016723264</a>观看。</p></div></div></div></body></html>

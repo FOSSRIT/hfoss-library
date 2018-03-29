@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Trademarks</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Trademarks"><div class="titlepage"><div><div><h1 class="title"><a id="trademarks"/>Trademarks</h1></div></div></div><p>Trademark law as applied to open source projects does not differ
+significantly from trademark law as applied elsewhere.  This sometimes
+surprises people: they think that if the code can be copied freely,
+then that can't possibly be consistent with some entity controlling a
+trademark on the project's name or logo.  It is consistent, however,
+and below I'll explain why, furnishing some examples.</p><p>First, understand what trademarks are about: they are about
+truth in labeling and, to some degree, endorsement.  A trademarked
+name or symbol is a way for an entity — the entity who
+owns or controls that trademark — to signal, in an
+easily recognizeable way, that they approve of a particular product.
+Often they are signaling their approval because they are the source of
+the product, and purchases of that product provide a revenue stream
+for them.  But that is not the only circumstance under which someone
+might want to enforce accurate attribution.  For example,
+certification marks are trademarked names or symbols that an entity
+applies to <span class="emphasis"><em>someone else's</em></span> product, in order to
+signal that the product meets the certifying entity's
+standards.</p><p>Importantly, <span class="emphasis"><em>trademarks do not restrict copying,
+modification, or redistribution</em></span>.  I cannot emphasize this
+enough: trademark is unrelated to copyright, and does not govern the
+same actions that copyright governs.  Trademark is about what you may
+publicly call things, not about what you may do with those things nor
+with whom you may share them.</p><p>One famous example of trademark enforcement in free and open
+source software demonstrates these distinctions clearly.</p><div class="sect2" title="Case study: Mozilla Firefox, the Debian Project, and Iceweasel"><div class="titlepage"><div><div><h2 class="title"><a id="mozilla-firefox-debian-iceweasel"/>Case study: Mozilla Firefox, the Debian Project, and Iceweasel</h2></div></div></div><p>The Mozilla Foundation owns the trademarked name "Firefox",
+which it uses to refer to its popular free software web browser of the
+same name.  The Debian Project, which maintains a long-running and
+also quite popular GNU/Linux distribution, wanted to package Firefox
+for users of Debian GNU/Linux.</p><p>So far, so good: Debian does not need Mozilla's permission to
+package Firefox, since Firefox is open source software.  However,
+Debian does need Mozilla's permission to <span class="emphasis"><em>call</em></span> the
+packaged browser "Firefox" and to use the widely-recognized Firefox
+logo (you've probably seen it: a long reddish fox curling its body and
+tail around a blue globe) as the icon for the program, because those
+are trademarks owned by Mozilla.</p><p>Normally, Mozilla would have happily given its permission.
+After all, having Firefox distributed in Debian is good for Mozilla's
+mission of promoting openness on the Web.  However, various technical
+and policy effects of the Debian packaging process left Debian unable
+to fully comply with Mozilla's trademark usage requirements, and as a
+result, Mozilla informed Debian that their Firefox package could not
+use the Firefox name or branding.  No doubt Mozilla did so with some
+reluctance, as it is not ideal for them to have their software used
+without clear attribution.  However, they could have given Debian a
+trademark license and yet chose not to; presumably, this is because
+Debian was doing something with the code that Mozilla did not want
+accruing to their own reputation.<sup>[<a id="idm4371" href="#ftn.idm4371" class="footnote">108</a>]</sup></p><p>This decision by Mozilla did not mean that Debian had to remove
+Firefox from their package system, of course.  Debian simply changed
+the name to "Iceweasel" and used a different logo.  The underlying
+code is still the Mozilla Firefox code, except for the minor bits
+Debian had to change to integrate the different name and
+logo — changes they were perfectly free to make, of
+course, because of the code's open source license.</p></div><p>It is even consistent to license your project's logo artwork
+files under a fully free license while still retaining a trademark on
+the logo, as the following story of the GNOME logo and the fish
+pedicure shop (I'm not making this up) illustrates.</p><div class="sect2" title="Case study: The GNOME Logo and the Fish Pedicure Shop"><div class="titlepage"><div><div><h2 class="title"><a id="gnome-fish-pedicure"/>Case study: The GNOME Logo and the Fish Pedicure Shop</h2></div></div></div><p>The GNOME project (<a class="ulink" href="https://gnome.org/">https://gnome.org/</a>), which
+produces one of the major free software desktop environments, is
+represented legally by the GNOME Foundation (<a class="ulink" href="https://www.gnome.org/foundation/">https://www.gnome.org/foundation/</a>),
+which owns and enforces trademarks on behalf of the project.  Their
+best-known trademark is the GNOME logo: a curved, stylized foot with
+four toes floating close above it.<sup>[<a id="idm4381" href="#ftn.idm4381" class="footnote">109</a>]</sup></p><p>One day, Karen Sandler, then the Executive Director of the GNOME
+Foundation, heard from a GNOME contributor that a mobile fish-pedicure
+van (fish pedicure is a technique in which one places one's feet in
+water so that small fish can nibble away dead skin) was using a
+modified version of the GNOME logo.  The central foot part of the
+image had been slightly modified to look like a fish, and a fifth toe
+had been added above, so that the overall logo looked even more like a
+human foot but cleverly made reference to fish as well.  You can see
+it, along with discussion of other trademark issues GNOME has dealt
+with, in the Linux Weekly News article where this story is told in
+full: <a class="ulink" href="https://lwn.net/Articles/491639/">https://lwn.net/Articles/491639/</a>.</p><p>Although GNOME does actively enforce its trademarks, Sandler did
+not see any infringement in this case: the fish-pedicure business is
+so distant from what the GNOME Project does that there was no
+possibility of confusion in the mind of the public or dilution (if
+you'll pardon the expression) of the mark.  Furthermore, because the
+<span class="emphasis"><em>copyright</em></span> license on GNOME's images is an open
+source license, the fish pedicure company was free to make their
+modifications to the graphic and display the results.  There was no
+trademark violation, because there was no infringement within GNOME's
+domain of activity, and there was no copyright violation, because
+GNOME's materials are released under free licenses.</p></div><p>The point of these examples is to merely show that there is no
+inherent contradiction in registering and maintaining trademarks
+related to open source projects.  This does not mean that a trademark
+owner should do whatever they want with the marks, ignoring what other
+participants in the project have to say.  Trademarks are like any
+other centrally-controlled resource: if you use them in a way that
+harms a significant portion of the project's community, then expect
+complaints and pushback in return; if you use them in a way that
+supports the goals of the project, then most participants will be glad
+and will consider that use to be itself a form of contribution.</p><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm4371" href="#idm4371" class="para">108</a>] </sup>In fact, that was
+indeed the reason, though we do not need to go into the details here
+of exactly what changes Debian makes to the Firefox code that Mozilla
+disagrees with strongly enough to want to dissociate their name from
+the result.  The entire saga is recounted in more detail at <a class="ulink" href="https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project">https://en.wikipedia.org/wiki/Mozilla_Corporation_software_rebranded_by_the_Debian_project</a>.
+Coincidentally, I'm writing these words on a Debian GNU/Linux system,
+where Iceweasel has long been my default browser — I
+just used it to check that URL.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4381" href="#idm4381" class="para">109</a>] </sup>You can see examples
+at <a class="ulink" href="https://www.gnome.org/foundation/legal-and-trademarks/">https://www.gnome.org/foundation/legal-and-trademarks/</a>.</p></div></div></div></body></html>

@@ -1,0 +1,413 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Controllo di versione</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="technical-infrastructure.html" title="Capitolo 3. L'Infrastruttura Tecnica"><link rel="prev" href="mailing-lists.html" title="Mailing Lists"><link rel="next" href="bug-tracker.html" title="Tracciamento dei bug"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Controllo di versione</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="mailing-lists.html">Indietro</a> </td><th width="60%" align="center">Capitolo 3. L'Infrastruttura Tecnica
+</th><td width="20%" align="right"> <a accesskey="n" href="bug-tracker.html">Avanti</a></td></tr></table><hr></div><div class="sect1" title="Controllo di versione"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="vc"></a>Controllo di versione</h2></div></div></div><p>Un <em class="firstterm">sistema di controllo di versione</em> (version control system) (o
+<em class="firstterm">sistema di controllo di revisione</em>) è una combinazione di tecnologie e procedure
+per tenere traccia e controllare i cambiamenti dei file di un progetto, in particolare del codice sorgente,
+della documentazione e delle pagine web. Se non avete mai usato il controllo di versione prima, la prima cosa
+che dovreste fare è cercare qualcuno che l'abbia usato e coinvolgerlo nel vostro progetto. In questi tempi,
+chiunque si aspetterà che almeno il codice sorgente del vostro progetto sia sotto controllo di versione, e 
+probabilmente non prenderà il progetto seriamente se questo non usa il controllo di versione con
+almeno le minime competenze.</p><p>La ragione per cui il controllo di versione è così universale è che aiuta potenzialmente ogni
+aspetto della gestione di un progetto: comunicazioni tra sviluppatori, gestione dei rilasci, gestione
+dei bug, stabilità del codice e tentativi di sviluppo sperimentali, e attribuzione e autorizzazione di
+cambiamenti da parte di alcuni sviluppatori. Il controllo di versione mette a disposizione un centro di
+coordinamento per tutte queste aree. Il cuore del controllo di versione è la 
+a central coordinating force among all of these areas.  The core of <em class="firstterm">gestione dei cambiamenti</em> 
+(change management) che identifica ogni cambiamento apportato ai file del progetto, annotando ogni cambiamento con
+metadati quali la data di modifica e l'autore e quindi replicando questi fatti a chiunque chieda, in qualunque
+modo sia chiesto. E' un meccanismo di comunicazione dove un cambiamento è l'unità base di informazione.</p><p>Questa sezione non discute tutti gli aspetti dell'uso del controllo di versione. E' una cosa così
+pervasiva che deve essere trattata per argomento lungo tutto il libro. Qui ci concentreremo sulla 
+scelta e sulla configurazione di un sistema di controllo di versione in modo da incoraggiare lo sviluppo 
+cooperativo.</p><div class="sect2" title="Vocabolario del controllo di versione"><div class="titlepage"><div><div><h3 class="title"><a name="vc-vocabulary"></a>Vocabolario del controllo di versione</h3></div></div></div><p>Questo libro non può insegnarvi come usare il controllo di versione se non l'avete
+mai usato prima, ma sarebbe impossibile discuterne senza alcune parole chiave.
+Queste parole sono utili indipendentemente da ogni sistema di controllo di versione: sono
+i nomi e i verbi di base della collaborazione in rete, e saranno usati in modo generico
+lungo il resto di questo libro. Anche se non ci fossero sistemi di controllo di versione,
+il problema della gestione delle modifiche rimarrebbe, e queste parole ci forniscono un linguaggio
+per parlare concisamente di questo problema.
+
+</p><div class="variablelist"><div class="sidebar" title='"Versione" contro "Revisione"'><a name="version-vs-revision"></a><div class="titlepage"><div><div><p class="title"><b>"Versione" contro "Revisione"</b></p></div></div></div><p>La parola <em class="firstterm">versione</em> è a volte usata come un sinonimo
+  di "revisione", ma non la userò in questo libro, perchè è troppo facilmente confusa con 
+  "versione" nel senso di una versione di un software&#8212;cioè, il rilascio o numero di edizione,
+  come in "Versione 1.0". Tuttavia, dal momento che la frase "controllo di versione" è già standard, continuerò
+  ad usarla come sinonimo di "controllo di revisione" e "controllo delle modifiche".</p></div><dl><dt><a name="vc-vocabulary-commit"></a><span class="term"><em class="firstterm">commit</em></span></dt><dd><p>Fare una modifica al progetto; più formalmente, archiviare
+  una modifica al progetto nel database del controllo di versione in modo che possa
+  essere incluso nei futuri rilasci del progetto. "Commit" può essere usato come nome
+  e come verbo. Come nome, è essenzialmente un sinonimo di "cambiamento". Per esempio:
+  "Ho appena commitato una fiz per il crollo del server che gli addetti ai bug hanno segnalato
+  su Mac OS X. Jay, potresti per favore rivedere il commit e controllare che lì non stia usando
+  male l'allocatore?"</p></dd><dt><a name="vc-vocabulary-log-message"></a><span class="term"><em class="firstterm">messaggio di log</em></span></dt><dd><p>Un po' di commento allegato ad ogni commit, descrivendo la natura e lo scopo del 
+  commit. I messaggi di log sono tra i documenti più importanti di ogni progetto: sono il ponte tra
+  il linguaggio altamente tecnico dei cambiamenti individuali di codice e il linguaggio,più orientato all'utente,
+  delle funzionalità, del fissaggio di bug e del progresso del progetto. Più avanti in questa sezione, vedremo
+  modi di distribuire messaggi di log alla audience adeguataa; inoltre, <a class="xref" href="growth.html#codifying-tradition" title="La Tradizione della Codifica">sezione chiamata «La Tradizione della Codifica»</a><span> in
+  <a class="xref" href="communications.html" title="Capitolo 6. Comunicazione">Capitolo 6, <i>Comunicazione</i></a></span> discute i modi per incoraggiare i contributori a
+  scrivere messaggi di log concisi e utili.</p></dd><dt><a name="vc-vocabulary-update"></a><span class="term"><em class="firstterm">update</em></span></dt><dd><p>Richiedere che le modifiche (commit) degli altri siano inclusi 
+  nella vostra copia locale del progetto; cioè rendere la vostra copia aggiornata.
+  Questa operazione è molto comune; la maggior parte degli sviluppatori aggiornano
+  il loro codice diverse volte al giorno, così da sapere che stanno usando all'incirca
+  la stessa cosa degli altri sviluppatori, e così che se vedono un bug, possano essere 
+  abbastanza sicuri che non sia stato già fissato. Per esempio:"Hey, ho notato che il
+  codice di indicizzazione scarta sempre l'ultimo byte. Questo è un bug?" "Si, ma è 
+  stato fissato la scorsa settimana&#8212;prova ad aggiornarti, dovrebbe sparire."</p></dd><dt><a name="vc-vocabulary-repository"></a><span class="term"><em class="firstterm">repository</em></span></dt><dd><p>
+  Un database in cui sono memorizzate le modifiche. Alcuni sistemi di controllo
+  di versione sono centralizzati: c'è un solo repository principale, che memorizza
+  tutte le modifiche del progetto. Altri sono decentralizzati: ogni sviluppatore ha il proprio
+  repository, e le modifiche sono scambiate arbitrariamente avanti e indietro tra i repository
+  Il sistema di controllo di versione mantiene traccia delle dipendenze tra le modifiche, e quando
+  è il momento del rilascio, un particolare insieme di modifiche viene approvato per il rilascio.
+  La domanda su quale sia migliore tra i sistemi centralizzati e decentralizzati è
+  una delle lunghe guerre sante dello sviluppo software; cercate di non cadere nella trappola
+  di discuterne sulle mailing list del vostro progetto.</p></dd><dt><a name="vc-vocabulary-checkout"></a><span class="term"><em class="firstterm">checkout</em></span></dt><dd><p>Il processo di ottenere una copia del progetto da un repository.
+  Un checkout solitamente produce un albero di directory chiamato "copia di lavoro"
+  (vedi sotto), da cui le modifiche possono essere committate indietro al repository
+  originale. In alcune versioni di sistemi di controllo decentralizzati, ogni copia
+  di lavoro è essa stessa un repository, e i cambiamenti possono essere presi o richiesti
+  da ogni repository che vuole accettarli.</p></dd><dt><a name="vc-vocabulary-working-copy"></a><span class="term"><em class="firstterm">copia di lavoro</em></span></dt><dd><p>L'albero di directory privato di uno sviluppatore
+  contenente i file di codice sorgente del progetto, e possibilmente le sue pagine
+  web e altri documenti. Una copia di lavoro contiene anche un po' di metadati gestiti
+  dal sistema di controllo di versione, che dice alla copia di lavoro da quale repository
+  viene, quali "revisioni" (vedi sotto) dei file sono presenti eccetera. Generalmente ogni 
+  sviluppatore ha la sua copia di lavoro, in cui fa e prova modifiche, e da cui fa commit.</p></dd><dt><a name="vc-vocabulary-revision"></a><span class="term"><em class="firstterm">revisione</em>,
+        <em class="firstterm">modifica</em>,
+        <em class="firstterm">insieme di modifiche</em></span></dt><dd><p>Una "revisione" è solitamente un'incarnazione specifica
+  di un particolare file o directory. Per esempio, se il progetto presenta
+  la revisione 6 del file F, e poi qualcuno fa il commit di una modifica a F,
+  ciò crea la revisione 7 di F. Alcuni sistemi usano anche "revisione","modifica",
+  "insieme di modifiche" per riferirsi ad un insieme di modifiche comittate insieme
+  come una unità concettuale.</p><p>Questi termini hanno occasionalmente significati tecnici distinti in diversi
+  sistemi di controllo di versione, ma l'idea generale è sempre la stessa: danno modo
+  di parlare in modo preciso di punti esatti nella storia di un file o di un insieme di file
+  (per dire, immediatamente prima e dopo la riparazione di un bug). Per esempio : "Si, ha 
+  fissato il bug nella versione 10" oppure "ha fissato il bug nella versione 10 del file foo.c"</p><p>Quando si parla di un file o di una collezione di file senza specificare la revisione, generalmente
+  si assume che si intenda la revisione più recente disponibile.</p></dd><dt><a name="vc-vocabulary-diff"></a><span class="term"><em class="firstterm">diff</em></span></dt><dd><p>Una rappresentazione testuale di una modifica. Una diff mostra
+  quali righe sono state cambiate e come, più alcune righe del contesto attorno on entrambi i lati.
+  Uno sviluppatore che è già familiare con un po' di codice può solitamente leggere una diff rispetto
+  a quel codice e capire cosa ha fatto la modifica, e persino scoprire bug.</p></dd><dt><a name="vc-vocabulary-tag"></a><span class="term"><em class="firstterm">tag</em></span></dt><dd><p>Un'etichetta per un particolare insieme di file ad una specifica revisione.
+  I tag sono solitamente usati per preservare "istantanee" interessanti del progetto. Per esempio,
+  un tag è solitamente fatto per ogni pubblico rilascio, così che one possa ottenere, direttamente
+  dal sistema di controllo di versione, l'insieme esatto dei file/revisioni compresi in quel rilascio.
+  Nomi di tag comuni sono cose del tipo <code class="literal">Release_1_0</code>, <code class="literal">Delivery_00456</code>, 
+  eccetera.</p></dd><dt><a name="vc-vocabulary-branch"></a><span class="term"><em class="firstterm">Ramo (branch)</em></span></dt><dd><p>Una copia del progetto, sotto controllo di versione ma isolata,
+  così che i cambiamenti fatti nel ramo non interferiscono con il resto
+  del progetto e viceversa, tranne quando i cambiamenti sono deliberatamente uniti da
+  un lato all'altro (vedi sotto). I rami sono anche noti come "linee di sviluppo".
+  Anche se un progetto non ha rami specifici, lo sviluppo è comunque considerato
+  accadere nel "ramo principale", detto anche "linea principale" o  
+  "<em class="firstterm">tronco</em>" (trunk).</p><p>i rami offrono un modo per isolare le diverse linee di sviluppo l'una
+  dall'altra. Per esempio, un ramo può essere usato per sviluppo sperimentale che sarebbe
+  troppo destabilizzante sul tronco principale. O al contrario, un ramo può essere usato come
+  luogo per stabilizzare un nuovo rilascio. Durante il processo di rilascio, lo sviluppo
+  regolare dovrebbe continuare ininterrotto nel tronco principale del repository; nel frattempo,
+  nel ramo del rilascio, nessuna modifica è permessa tranne quelle approvate dal manager del rilascio.
+  In questo modo, fare un rilascio non ha bisogno di interferire con lo sviluppo in corso. Vedi See <a class="xref" href="vc.html#branches" title="Use branch per evitare colli di bottiglia">sezione chiamata «Use branch per evitare colli di bottiglia»</a><span> più avanti in quesot capitolo</span> 
+  per una discussione più dettagliata della ramificazione.</p></dd><dt><a name="vc-vocabulary-merge"></a><span class="term"><em class="firstterm">Unire(merge)</em></span></dt><dd><p>Spostare una modifica da un ramo ad un altro.
+  Ciò include l'unione(merging) tra il tronco principale e qualche altro ramo o viceversa.
+  Infatti, questi sono i tipi più comuni di union; è raro portare una modifica
+  tra due rami non principali. Vedi <a class="xref" href="vc.html#vc-singularity" title="Singolarità dell'informazione">sezione chiamata «Singolarità dell'informazione»</a> per più dettagli su questo tipo di unione.</p><p>"Unire" ha altro significato correlato: è ciò che il sistema di controllo
+  di versione fa quando vede che due persone hanno cambiato lo stesso file ma in modo
+  non contrastante. Dato che le due modifiche non interferiscono l'una con l'altra,
+  quando una delle persone aggiorna la propria copia del file (che già contiene le proprie
+  modifiche), le modifiche dell'altra persona saranno unite automaticamente. Questo è molto 
+  comune, specialmente in progetti dove molte persone lavorano sullo stesso codice. Quando
+  due modifiche diverse contrastano, il risultato è un "conflitto"; vedere sotto.</p></dd><dt><a name="vc-vocabulary-conflict"></a><span class="term"><em class="firstterm">conflitto</em></span></dt><dd><p>Cosa succede quando due persone provano a fare modifiche diverse
+  nello stesso punto del codice. Tutti i sistemi di controllo di versione trovano
+  automaticamente i conflitti, e notificano ad almeno uno degli umani coinvolti che
+  i suoi cambiamenti sono in conflitto con quelli di qualcun altro. E' quindi lasciato
+  all'umano <em class="firstterm">risolvere</em> il conflitto, e comunicare la soluzione al
+  sistema di controllo di versione.</p></dd><dt><a name="vc-vocabulary-lock"></a><span class="term"><em class="firstterm">Blocco</em></span></dt><dd><p>Un modo di dichiarare un'intenzione esclusiva di cambiare
+  un certo file o directory. Per esempio, "Non posso fare il commit di tutti
+  i cambiamenti alle pagine web ora. Sembra che Alfredo le abbia bloccate tutte
+  mentre mette a posto le immagini di sfondo."
+  Non tutte le versioni di sistemi di controllo offrono anche questa possibilità
+  di blocco, e quelli che lo fanno, non tutti richiedono di usare questa funzionalità.
+  Questo perchè lo sviluppo parallelo, simultaneo è la norma, e negare alla gente l'accesso
+  ai file è (solitamente) contrario a questo ideale.</p><p>I sistemi di controllo di versione che richiedono il blocco per fare i commit
+  sono detti usare il modello <em class="firstterm">blocca-modifica-sblocca</em> (lock-modify-unlock).
+  Un'ottima e profonda spiegazione e confronto dei due modelli può essere trovata qui <a class="ulink" href="http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html" target="_top">http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html</a>.
+  In generale, il modello copia-modifica è migliore per lo sviluppo open source, e tutti i sistemi
+  di controllo di versione discussi in questo libro supportano tale modello.</p></dd></dl></div><p>
+
+</p></div><div class="sect2" title="Scegliere un sistema di controllo di versione"><div class="titlepage"><div><div><h3 class="title"><a name="vc-choosing"></a>Scegliere un sistema di controllo di versione</h3></div></div></div><p>I due sistemi di controllo di versione più popolari nel mondo del free
+software sono <em class="firstterm">Concurrent Versions
+System</em> (<em class="firstterm">CVS</em>,
+<a class="ulink" href="http://www.cvshome.org/" target="_top">http://www.cvshome.org/</a>)
+e <em class="firstterm">Subversion</em> (<em class="firstterm">SVN</em>,
+<a class="ulink" href="http://subversion.tigris.org/" target="_top">http://subversion.tigris.org/</a>).</p><p>CVS c'è da molto tempo. La maggior parte degli sviluppatori esperti ne hanno
+già familiarità, fa più o meno cosa di cui avete bisogno, e dal momento che è stato
+popolare per molto tempo, probabilmente non finirete in nessun lungo dibattito sul fatto
+che sia la scelta giusta o meno. Comunque, CVS ha alcuni svantaggi. Non fornisce un modo
+semplice per riferirsi a modifiche che coinvolgono diversi file; non vi permette di rinominare
+o copiare file sotto il controllo di versione (quindi se avete bisogno di riorganizzare il vostro 
+albero del codice dopo l'inizio del progetto, può essere una vera sofferenza); ha un mediocre 
+supporto al merging (unione); non maneggia molto bene grossi file o file binari; e alcune operazioni
+sono lente quando un gran numero di file è coinvolto.</p><p>Nessuna delle crepe di CVS è fatale ed è tuttora abbastanza popolare.
+Ad ogni modo, negli ultimi anni il più recente Subversion ha guadagnato terreno, soprattutto
+nei progetti più nuovi.<sup>[<a name="idp6361936" href="#ftn.idp6361936" class="footnote">15</a>]</sup>. Se state iniziando un nuovo progetto,
+raccomando Subversion.</p><p>Dall'altro lato, dato che sono coinvolto nel progetto Subversion, la mia
+oggettività può essere giustamente messa in discussione. E negli ultimi anni alcuni nuovi
+sistemi di controllo open source hanno fatto la loro comparsa.  
+<a class="xref" href="vc-systems.html" title="Appendice A. Sistemi di Controllo di Versione Liberi">Appendice A, <i>Sistemi di Controllo di Versione Liberi</i></a> elenca tutti quelli di cui sono a conoscenza,
+in un ordine approssimativo di popolarità. Come la lista mostra, decidere su
+un sistema di controllo di versione può facilmente diventare un progetto di ricerca lungo una vita.
+Magari vi risparmierete la decisione perchè sarà presa per voi dal sito che vi ospita. Ma se dovete scegliere,
+consultatevi con gli altri sviluppatori, chiedete in giro per vedere con quale la gente ha esperienza, infine
+prendetene uno e andate avanti con quello. Ogni sistema di controllo di versione stabile e pronto alla produzione
+andrà bene; non dovete preoccuparvi troppo di fare una scelta totalmente sbagliata. Se proprio non riuscite a 
+farvi un'idea, allora usate Subversion. E' abbastanza facile da imparare e probabilmente rimmarrà standard per almeno
+un po' di anni.</p></div><div class="sect2" title="Usare un sistema di controllo di versione"><div class="titlepage"><div><div><h3 class="title"><a name="vc-using"></a>Usare un sistema di controllo di versione</h3></div></div></div><p>I consigli di questa sezione non sono indirizzati a particolari versioni 
+di sistemi di controllo di versione, e dovrebbero essere facili da implementare
+in ognuno di loro. Consultate la documentazione specifica del vostro sistema di 
+versione per i dettagli.</p><div class="sect3" title="Tenere tutto sotto controllo di versione"><div class="titlepage"><div><div><h4 class="title"><a name="version-everything"></a>Tenere tutto sotto controllo di versione</h4></div></div></div><p>Tenere non solo il codice sorgente del vostro progetto sotto controllo di versione,
+ma anche le sue pagine web, la documentazione, FAQ, note di progetto, e qualsiasi altra cosa che
+la gente potrebbe voler modificare. Teneteli vicino al codice sorgente, nello stesso albero di
+repository. Ogni brandello di informazione che valga la pena scrivere vale la pena mettere sotto
+controllo&#8212;cioè ogni brandello di informazione che potrebbe cambiare. Cose che non
+cambiano dovrebbero essere archiviate e non messe sotto controllo di versione. Per esempio, le email,
+quando pubblicate, non cambiano (a meno che diventino parte di un documento più grande e in evoluzione).</p><p>La ragione per cui è importante mettere tutto insieme cio che è sotto controllo di versione è che in questo modo 
+la gente deve imparare solo un meccanismo per inviare le modifiche. Qualche volta un contributore 
+inizierà con l'apportare modifiche a pagine web o alla documentazione, spostandosi su piccoli contributi di
+codice in un secondo momento, per esempio. Quando il progetto usa lo stesso sistema per ogni tipo di contribuzione,
+la gente deve imparare solo una volta. Inoltre le nuove funzionalità possono essere contribuite insieme con le modifiche
+alla documentazione, fare il branching del codice farà fare il branch anche alla documentazione eccetera.</p><p>Non tenete i <em class="firstterm">file generati</em>(generated files) sotto controllo di
+versione. Non sono dati veramente editabili, dato che sono generati programmaticamente
+da altri file. Per esempio, alcuni sistemi di build creano dei <code class="filename">configure</code>  
+basati sul template <code class="filename">configure.in</code>.  Per fare un cambiamento al <code class="filename">configure</code>, 
+bisognerebbe cambiare il <code class="filename">configure.in</code> e poi rigenerare; quindi solo il
+template <code class="filename">configure.in</code> è un "file editabile".
+Mettete sotto controllo di versione solo i template&#8212;se lo fate anche con i file generati, la gente
+si dimenticherà inevitabilmente di rigenerare quando fanno il commit di una modifica al template, e le 
+inconsistenze risultanti causeranno confusione a non finire.<sup>[<a name="idp6370432" href="#ftn.idp6370432" class="footnote">16</a>]</sup></p><p>La regola che tutti i dati editabili vadano tenuti sotto controllo di versione
+ha una sfortunata eccezione: il tracciatore dei bug. I database di bug contengono una
+gran quantità di dati editabili, ma per ragioni tecniche generalmente non possono
+memorizzare questi dati nel sistema di controllo principale. ( Comunque, alcuni tracciatori
+hanno funzionalità di versionamento primitive, indipendenti dal repository principale del progetto.)</p></div><div class="sect3" title="Navigabilità"><div class="titlepage"><div><div><h4 class="title"><a name="vc-browsing"></a>Navigabilità</h4></div></div></div><p>Il repository del progetto dovrebbe essere navigabile sul web. Questo non 
+significa solo la possibilità di vedere le ultime revisioni dei file del progetto,
+ma di andare indietro nel tempo e vedere le versioni precedenti, vedere le differenze
+tra le revisioni, leggere i messaggi di log per le modifiche selezionate eccetera.</p><p>La navigabilità è importante perchè è un portale leggero verso i dati del progetto.
+Se il repository non può essere visto attraverso un browser web, allora qualcuno che vuole
+esaminare un file particolare (per esempio, per vedere se una certa fix è stata fatta in quel codice)
+dovrebbe prima installare localmente il software del client del controllo di versione, il che 
+muterebbe la semplice richiesta da un'attività di due minuti in una da mezz'ora o più.</p><p>La navigabilità implica anche URL canoniche per vedere le specifiche revisioni dei file,
+ e per vedere le ultime revisioni in ogni momento. Questo può essere molto utile nelle discussioni
+ tecniche o quando si rimanda la gente alla documentazione. Per esempio, invece di dire "Per 
+ suggerimenti sul debugging del server. vedi il file www/hacking.html nella tua copia di lavoro,"
+ uno può dire "Per suggerimenti sul debugging del server, vedi
+<span class="emphasis"><em>http://subversion.apache.org/docs/community-guide/</em></span>,"
+dando una URL che punti sempre all'ultima revisione del file <code class="filename">hacking.html</code>.  
+L'URL è meglio perchè è totalmente non ambigua, ed evita la questione sul fatto che
+il destinatario abbia o meno una copia di lavoro aggiornata.</p><p>Alcuni sistemi di controllo di versione includono meccanismi precostitutiti di navigazione
+ del repository, mentre altri si affidano a strumeti di terze parti. Tre di tali strumenti sono
+ <em class="firstterm">ViewCVS</em> (<a class="ulink" href="http://viewcvs.sourceforge.net/" target="_top">http://viewcvs.sourceforge.net/</a>),
+<em class="firstterm">CVSWeb</em> (<a class="ulink" href="http://www.freebsd.org/projects/cvsweb.html" target="_top">http://www.freebsd.org/projects/cvsweb.html</a>), e
+<em class="firstterm">WebSVN</em> (<a class="ulink" href="http://websvn.tigris.org/" target="_top">http://websvn.tigris.org/</a>).  Il primo funziona sia con CVS che con Subversion, il 
+secondo con CVS soltanto, e il terzo solo con Subversion.</p></div><div class="sect3" title="Email di commit"><div class="titlepage"><div><div><h4 class="title"><a name="commit-emails"></a>Email di commit</h4></div></div></div><p>Ogni commit sul repository dovrebbe generare un email che mostra 
+chi ha fatto le modifiche, quando, quali file e directory sono cambiati,
+e come sono cambiate.  L'email dovrebbere essere mandata su una speciale mailing list
+dedicata alle email di commit, separata dalle altre mailing list a cui la gente scrive.
+Gli sviluppatori e le altre parti interessate dovrebbero essere incoraggiati a sottoscrivere
+la mailing list dei commit, dato che è il modo più efficace per stare dietro a cosa sta
+succedendo nel progetto al livello del codice. Oltre dagli ovvi benefici tecnici della revisione
+di pari (peer review) (see <a class="xref" href="setting-tone.html#code-review" title="Praticare una Visibile Revisione del Codice">sezione chiamata «Praticare una Visibile Revisione del Codice»</a>), le email di commit aiutano a creare
+un senso di comunità perchè stabiliscono un ambiente condiviso in cui la gente può reagire agli
+eventi (i commit) che sanno essere visibili anche ad altri.</p><p>Le specifiche su come creare le email di commit cambieranno a seconda della vostra
+versione di sistema di controllo di versione, ma solitamente c'è uno script o qualcosa di
+già preparato per farlo.
+Se state avendo problemi a trovarlo, provate a guardare la documentazione sugli 
+<em class="firstterm">hooks</em> (uncini),
+in particolare il <em class="firstterm">post-commit hook</em>, detto anche il
+<em class="firstterm">hook loginfo</em> in CVS.  Gli hook post-commit sono strumenti generali
+per il lancio di attività automatiche in risposta ai commit. L'hook è lanciato da un commit individuale,
+viene fornito di tutta l'informazione sul commit, ed è poi libero di usare questa informazione per fare
+qualcosa&#8212;per esempio, mandare un'email.</p><p>Con sistemi di email di commit pre-confezionata, potreste volere
+modificare qualcuno dei loro comportamenti di defult:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Alcuni sistemi non includono i diff nella mail, ma invece
+  forniscono una URL per vedere le modifiche sul web usando il sistema
+  di navigazione del repository. Mentre è bene fornire la URL, così che si
+  possa fare riferimento alle modifiche anche in seguito, è anche 
+  <span class="emphasis"><em>molto</em></span> importante che le email di commit includano 
+  i diff stessi. Leggere le email è già parte delle abitudini della
+  gente, quindi se il contenuto della modifica è visibile proprio lì nella
+  email di commit, gli sviluppatori esamineranno il commit al volo, senza
+  lasciare il loro programma di lettura di posta. Se devono cliccare su di
+  una URL per esaminare le modifiche, la maggior parte non lo farà, perchè
+  richiede una nuova azione invece di continuare quella che stanno già facendo.
+  Inoltre, se il revisore vuole chiedere qualcosa riguardo alla modifica, è 
+  molto più semplice premere il tasto di risposta con testo e annotare il
+  diff in questione rispetto alla visita di una pagina web e laboriosamente
+  fare copia e incolla di parti del diff dal browser web al programma di email.</p><p>(Ovviamente, se il diff è grande, come quando una gran quantità di nuovo
+  codice è stato aggiunto al repository, allora ha senso omettere il diff e offrire
+  solo la URL. La maggior parte dei sistemi possono fare automaticamente questo tipo
+  di limitazione. Se il vostro non può, allora è in ogni caso meglio includere i diff,
+  e vivere con l'occasionale mail smisurata, piuttosto che lasciare del tutto fuori
+  i diff. La revisione e il commento sono la pietra angolare dello sviluppo cooperativo,
+  troppo importante per farne a meno.)</p></li><li class="listitem"><p>Le email di commit devono avere l'header Reply-to impostato sulla
+  normale mailing list di sviluppo, non sulla mailing list dei commit.
+  Cioè quando qualcuno esamina un commit e scrive una risposta, tale risposta
+  deve essere automaticamente diretta alla mailing list di sviluppo, dove
+  le questioni tecninche sono solitamente discusse. Ci sono alcune ragioni per 
+  questo. Primo, vorrete tenere tutte le discussioni tecniche su una mailing list,
+  perchè è ciò che la gente si aspetta, e per mantenere un solo archivio di ricerca.
+  Secondo, ci potrebbero essere parti interessate non iscritte alla mailing list di 
+  commit. Terzo, la mailing list di commit si presenta come un servizio per vedere i 
+  commit, non per vedere commit <span class="emphasis"><em>e</em></span> occasionali discussioni
+  tecniche. Chi ha sottoscritto la mailing list di commit l'ha fatto per nient'altro
+  che le email di commit; mandare loro altro materiale attraverso la mailing list
+  violerebbe un contratto implicito. Quarto, la gente spesso scrive programmi che leggono 
+  le email di commit e processano i risultati (per esempio per mostrarli su una pagina
+  web). Questi programmi sono fatti per gestire email di commit formattate in maniera
+  consistente, non email scritte senza formattazione da umani.</p><p>Notate che questo consiglio di impostare il Reply-to non contraddice le
+  raccomandazioni fatte in <a class="xref" href="mailing-lists.html#reply-to" title="Il grande dibattito sul 'Rispondi A'">sezione chiamata «Il grande dibattito sul 'Rispondi A'»</a><span> precedentemente
+  in questo capitolo</span>. Va sempre bene per il <span class="emphasis"><em>mittente</em></span> di un messaggio
+  impostare il Reply-to. In questo caso, il mittente è il sistema stesso
+  di controllo di versione, e imposta il Reply-to per indicare che il posto adeguato per rispondere
+  è la mailing list di sviluppo e non quella di commit.</p></li></ol></div><div class="sidebar" title="CIA: un altro meccanismo di pubblicazione delle modifiche"><a name="cia"></a><div class="titlepage"><div><div><p class="title"><b>CIA: un altro meccanismo di pubblicazione delle modifiche</b></p></div></div></div><p>Le email di commit non sono il solo modo di propagare le notizie di modifica.
+Recentemente, è stato sviluppato un altro meccanismo chiamato CIA (<a class="ulink" href="http://cia.navi.cx/" target="_top">http://cia.navi.cx/</a>).  CIA è un aggregatore e distributore di statistiche 
+di commit in tempo reale. L'uso più diffuso di CIA è l'invio di notifiche di commit 
+ai canali IRC, così che la gente loggata in questi canali vede succedere i commit
+in tempo reale. Anche se una utility in qualche modo meno tecnica delle email di commit, 
+dato che gli osservatori possono o meno essere lì quando una notifica compare in IRC,
+questa tecnica è una grandissima <span class="emphasis"><em>social</em></span> utility.
+La gente ha la sensazione di essere parte di qualcosa di
+vivo e attivo e sente che possono vedere fare il progresso proprio di fronte ai loro occhi.</p><p>Il modo in cui funziona è l'invocazione di CIA dal vostro hook di post-commit.
+Il notificatore formatta le informazioni di commit in un messaggio XML, e invia ad un
+server centrale (tipicamente <code class="literal">cia.navi.cx</code>). Questo server quindi distribuisce
+le informazioni di commit agli altri forum.</p><p>CIA può anche essere configurato per mandare feed <a class="ulink" href="http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html" target="_top">RSS</a>.  
+Vedete la documentazione qui <a class="ulink" href="http://cia.navi.cx/" target="_top">http://cia.navi.cx/</a>
+per dettagli.</p><p>Per vedere un esempio di CIA in azione, impostate il vostro client IRC a <code class="literal">irc.freenode.net</code>, canale
+<code class="literal">#commits</code>.</p></div></div><div class="sect3" title="Use branch per evitare colli di bottiglia"><div class="titlepage"><div><div><h4 class="title"><a name="branches"></a>Use branch per evitare colli di bottiglia</h4></div></div></div><p>Gli utenti non esperti del controllo di versione sono a volte 
+un po' spaventati da branch e merge. Questo è probabilmente uno degli
+effetti secondari della popolarità di CVS: la sua interfaccia per branch
+e merge è in qualche modo controintuitiva, così molta gente ha imparato
+ad evitare totalmente queste operazioni.</p><p>Se siete tra queste persone, decidetevi ora a sconfiggere ogni paura
+che possiate avere e prendetevi tempo per imparare come fare branch e merge.
+Non sono operazioni difficili, una volta che vi siete abituati, e diventano
+sempre più importanti man mano che il progetto acquista più sviluppatori.</p><p>I branch sono preziosi perchè fanno diventare una risorsa scarsa
+&#8212;una stanza di lavoro nel codice del progetto&#8212;in una abbondante.
+Normalmente, tutti gli sviluppatori lavorano assieme nello stesso ambiente,
+costruendo lo stesso castello. Quando qualcuno vuole aggiungere un nuovo
+ponte levatoio, ma non può convincere tutti gli altri che sia un miglioramento,
+fare un branch render possibile spostarsi in un angolo e provare. Se lo sforzo
+ha successo, può invitare altri sviluppatori ad esaminare il risultato.
+Se tutti sono d'accordo che il risultato è buono, possono dire al sistema
+di controll di versione di spostare (merge) il ponte levatoio dal castello branch
+a quello principale.</p><p>E' facile vedere come questa possibilitò aiuti lo sviluppo collaborativo.
+La gente ha bisogno della libertà di provare nuove cose senza sentirsi come
+se stessero interferendo con il lavoro degli altri. Altrettanto importante,
+ci sono volte in cui il codice ha bisogno di essere isolato dalla solita
+pentola, per fissare un bug o stabilizzare una release (vedi
+ <a class="xref" href="stabilizing-a-release.html" title="Stabilizzare una Release">sezione chiamata «Stabilizzare una Release»</a> e 
+<a class="xref" href="release-lines.html" title="Avere in Manutenzione più di Una Linea di Release">sezione chiamata «Avere in Manutenzione più di Una Linea di Release»</a><span> in
+<a class="xref" href="development-cycle.html" title="Capitolo 7. Confezione, Rilascio, e Sviluppo Quotidiano">Capitolo 7, <i>Confezione, Rilascio, e Sviluppo Quotidiano</i></a></span>) senza preoccuparvi del 
+tracciamento di un bersaglio mobile.</p><p>Usate liberamente i branch, e incoraggiate gli altri ad usarli.
+Ma accertatevi anche che un dato branch sia solo attivo soltanto per il tempo
+necessario. Ogni branch è una piccola falla nell'attenzione della comunità.
+Anche coloro che non stanno lavorando in un branch mantengono comunque una
+visione periferica di cosa stia succedendo. Tale visione è sicuramente desiderabile,
+e le email di commit dovrebbero essere mandate per i commit del branch come per ogni
+altro commit. Ma i branch non devono diventare un meccanismo per dividere la 
+comunità di sviluppo. Con rare eccezioni, il fine di molti branch dovrebbe
+essere qiello di fare il merge delle modifiche con il tronco principale e scomparire.</p></div><div class="sect3" title="Singolarità dell'informazione"><div class="titlepage"><div><div><h4 class="title"><a name="vc-singularity"></a>Singolarità dell'informazione</h4></div></div></div><p>Fare merge ha un importante corollario: non bisogna mai fare commit
+della stessa modifica due vole. Cioè, una certa modifica deve entrare nel
+sistema di controllo di versione  esattamente una volta sola. La revisione (o 
+insieme di revisioni) in cui la modifica è entrata a fare parte è il suo unico
+identificatore da ora in poi. Se ha bisogno di essere applicata a branch diversi
+da quello in cui è entrata, allora dovrebbe essere unita (merge) dal suo punto
+originale di ingresso a queste altre destinazioni&#8212;in maniera opposta al commit di
+una modifica testualmente identica, che avrebbe lo stesso effetto sul codice, ma 
+renderebbe l'archiviazione e la gestione dei rilasci impossibili.</p><p>Gli effetti pratici di questo consiglio cambiano da un sistema di controllo
+di versione all'altro. In alcuni sistemi, i merge sono eventi speciali, fondamentalmente
+diversi dai commit, e portano con loro particolari metadati. In altri, i risultati del 
+merge sono committati allo stesso modo delle altre modifiche, tanto che lo strumento
+principale per distinguere un merge da un modifica è il messaggio di log. Nel messaggio
+di log di un merge, non ripetete il messaggio log della modifica originale. Invece, indicate
+solo che questo è un merge, e fornite la revisione che identifica la modifica originale,
+con al massimo un sommario di una frase sul suo effetto. Se qualcuno vuole vedere il messaggio
+di log intero, dovrà consultare la revisione originale.</p><p>La ragione per cui è importante evitare la ripetizione dei
+messaggi di log è che questi messaggi sono spesso modificati dopo
+che il commit è stato fatto. Se il messaggio di log di una modifica
+è ripetuto ad ogni destinazione di un merge, allora anche se qualcuno
+modificato il messaggio originale, lascierà tutte le ripetizioni non 
+corrette&#8212;il che causerebbe solo confusione strada facendo.</p><p>Lo stesso principio vale per il disfacimento di una modifica. Se una modifica
+viene tolta dal codice, allora il messaggio di log per la revisiona deve solo 
+dire che qualche specifica revisione è stata disfatta,
+<span class="emphasis"><em>non</em></span> descrivere i cambi nel codice che risultano
+dalla revisione, dato che la semantica della modifica può essere ottenuta
+leggendo il messaggio di log e la modifica originali. Di certo il messaggio
+di log della revisione deve anche spiegare la ragione per cui la modifica è stata
+annullta, ma non deve riprendere nulla del messaggio di log originale della modifica.
+Se possibile, tornate indietro e modificate il messaggio di log originale della modifica
+per puntualizzare che è stata annullata.</p><p>Tutto ciò di cui sopra implicca che dovreste usare una sintassi
+consistente per fare riferimento alle revisioni. Ciò è utile non solo nei messaggi di log,
+ma anche nelle email, nel tracciatore di bug, e da ogni altra parte. Se state usando CVS,
+suggerisco "<code class="literal">path/to/file/in/project/tree:REV</code>", 
+dove REV è il numero di revisione CVS tipo "1.76".  Se state usando
+Subversion, la sintassi standard per la revisione 1729 è "r1729" (i path dei file
+non sono necessari perchè Subversion usa numeri di revisione globali).
+In altri sistemi, cìè solitamente una sintassi standard per esprimere il nome degli 
+insiemi di modifiche. Qualunque sia la sintassi appropriata per il vostro sistema,
+incoraggiate la gente ad usarla quando fa riferimento alle modifiche.
+Espressioni consistenti di nomi delle modifiche rende la gestione del progetto molto più facile (come
+vedremo in <a class="xref" href="communications.html" title="Capitolo 6. Comunicazione">Capitolo 6, <i>Comunicazione</i></a> e
+<a class="xref" href="development-cycle.html" title="Capitolo 7. Confezione, Rilascio, e Sviluppo Quotidiano">Capitolo 7, <i>Confezione, Rilascio, e Sviluppo Quotidiano</i></a>), e dato che buona parte della gestione
+sarà svolta da volontari, deve essere il più semplice possibile.</p><p>Vedi anche
+<a class="xref" href="releases-and-daily-development.html" title="Le Releases e Lo Sviluppo Quotidiano">sezione chiamata «Le Releases e Lo Sviluppo Quotidiano»</a><span> in
+<a class="xref" href="development-cycle.html" title="Capitolo 7. Confezione, Rilascio, e Sviluppo Quotidiano">Capitolo 7, <i>Confezione, Rilascio, e Sviluppo Quotidiano</i></a></span>.</p></div><div class="sect3" title="Autorizzazione"><div class="titlepage"><div><div><h4 class="title"><a name="vc-authz"></a>Autorizzazione</h4></div></div></div><p>La maggior parte dei sistemi di controllo di versione offre una funzionalità dove
+a certe persone può essere permesso o vietato fare il commit in specifiche sotto-aree
+del repository. Seguendo il principio che quando la gente quando ha un martello in mano,
+si guarda attorno per cercare i chiodi, molti progetti usano questa opzione senza remore,
+prudentemente lasciando accesso alla gente solo alle aree in cui un loro commit è approvato,
+e cercando di essere sicuri che non facciano commit da nessun'altra parte. (Vedi
+<a class="xref" href="committers.html" title="Quelli Che Fanno gli Invii">sezione chiamata «Quelli Che Fanno gli Invii»</a><span> in
+<a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span> per come i progetti decidono chi può
+fare commit dove.)</p><p>E' probabilmente un po' doloroso esercitare un così stretto controllo,
+ma una potica più rilassata va anche bene. Alcuni progetti semplicemente
+usano un sistema d'onore: quando ad una persona viene riconosciuto l'accesso per il commit,
+anche per sotto-aree del repository, cosa questa veramente riceve è una password che
+permette di fare commit ovunque nel progetto.
+Gli è solamente rischiesto di limitare i commit a quell'area. Ricordate che non c'è nessun rischio qui:
+in un progetto attivo, tutti i commit sono esaminati in ogni caso. Se qualcuno fa un commit che non
+deve, gli altri lo vedranno e diranno qualcosa. Se una modifica deve essere disfatta,è abbastanza semplice&#8212;
+tutto è comunque sotto controllo di versione quindi basta invertire.</p><p>Ci sono diversi vantaggi nell'approccio rilassato. Primo, dato che gli sviluppatori
+si allargono in altre aree (cosa che solitamente succede se rimangono nel progetto), non c'è
+nessuno sforzo amministrativo per garantire loro privilegi più ampi. Una volta che la decisione
+è fatta, la persona deve solo iniziare a fare commit nella nuova area.</p><p>Secondo, questo allargamento può essere fatto in modo più fine. Generalmente,
+uno che fa commit in area X che vuole allargarsi nell'area Y inizierò pubblicando
+patch su Y e chiedendone revisione. Se qualcuno che già ha l'accesso per fare commit 
+in Y vede la patch e la approva, si può semplicemente dire a chi l'ha sottomessa di 
+fare il commit della modifica direttamente (menzionando il nome di chi l'ha ricevuta/approvata 
+nel messaggio, ovviamente). In questo modo, il commit verrà dalla persona che ha fisicamente
+scritto la modifica, il che è preferibile sia dal punto di vista di gestione dell'informazione
+che dal punto di vista del riconoscimento.</p><p>Infine, e forse più importante, usare il sistema d'onore incoraggia un'atmosfera di
+fiducia e mutuo rispetto. Dare a qualcuno l'accesso per il commit in un sottodominio è 
+un'affermazione sulla sua preparazione tecnica&#8212;come dire: "Vediamo che hai le conoscenze
+per fare commit in un certo dominio, quindi fallo". Ma imporre uno stretto controllo di autorizzazione
+dice: "Non solo stabiliamo un limite alle tue capacità, ma siamo anche un po' sospettosi sulle tue 
+<span class="emphasis"><em>intenzioni</em></span>." Questo non è il tipo di affermazione che volete fare se potete
+evitarlo. Portare qualcuno che fa commit nel progetto è un'opportunità per introdurli al circolo
+della fiducia reciproca. Un buon modo per fare ciò e dare loro più potere di quello che dovrebbero
+usare, e poi informarli che sta a loro rimanere nei limiti accordati.</p><p>Il progetto Subversion ha lavorato con il sistema d'onore per più
+di quattro anni, con 33 persone che potevano fare commit ovunque e 43 limitatamente.
+L'unica distinzione che il sistema applicava è tra chi fa commit e chi no; ulteriori
+sottodivisioni sono mantenute solo dagli umani. Comunque non abbiamo mai avuto un
+problema con qualcuno che deliberatamente faceva commit fuori dal proprio dominio. Una
+o due volte ci sono stati degli innocenti equivoci riguardo ai limiti dei privilegi di commit,
+ma sono sempre stati risolti velocemente e amichevolmente.</p><p>Ovviamente in situazioni in cui l'autoregolamentazione non è possibile,
+dovete affidarvi a severi controlli di autorizzazione. Ma tali situazioni 
+sono rare. Anche quando ci sono milioni di righe di codice e centinaia o migliaia
+di sviluppatori, un commit su qualunque modulo del codice dovrebbe comunque
+verificato da chi lavora su quel modulo, e possono riconoscere se qualcuno
+ha fatto il commit senza esserne autorizzato. Se la regolare revisione dei 
+commit <span class="emphasis"><em>non</em></span> funziona, allora il progetto ha problemi più
+grandi da affrontare piuttosto che il sistema di autorizzazione.</p><p>Riassumendo, non spendete troppo tempo armeggiando con il sistema
+di autorizzazione del controllo di versione, a meno che non abbiate delle
+specifiche ragioni per farlo. Solitamente non poterà molti vantaggi tangibili,
+mentre invece ci sono vantaggi nell'affidarsi al controllo umano.</p><p>Di sicuro niente di ciò vuole dire che le limitazioni in sè non sono importanti.
+Sarebbe male per un progetto incoraggiare le persone a fare commit in aree in cui
+non sono qualificate. Inoltre, in molti progetti un accesso pieno (non limitato) ai
+commit ha uno stato speciale: implica diritti di voto su questioni riguardanti il
+progetto intero. Questo aspetto politico del commit è discusso <a class="xref" href="consensus-democracy.html#electorate" title="Chi Vota?">sezione chiamata «Chi Vota?»</a><span> in
+<a class="xref" href="social-infrastructure.html" title="Capitolo 4. L'Infrastruttura Sociale e Politica">Capitolo 4, <i>L'Infrastruttura Sociale e Politica</i></a></span>.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6361936" href="#idp6361936" class="para">15</a>] </sup>Vedi <a class="ulink" href="http://cia.vc/stats/vcs" target="_top">http://cia.vc/stats/vcs</a> e
+<a class="ulink" href="http://subversion.tigris.org/svn-dav-securityspace-survey.html" target="_top">http://subversion.tigris.org/svn-dav-securityspace-survey.html</a>
+per prove di questa crescita.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp6370432" href="#idp6370432" class="para">16</a>] </sup>Per una differente opinione
+sulla questione dei file <code class="filename">configure</code>, vedete il post di Alexey Makhotkin "<em class="citetitle">configure.in and version
+control</em>" qui
+<a class="ulink" href="http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/" target="_top">http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="mailing-lists.html">Indietro</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Risali</a></td><td width="40%" align="right"> <a accesskey="n" href="bug-tracker.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Mailing Lists </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> Tracciamento dei bug</td></tr></table></div></body></html>

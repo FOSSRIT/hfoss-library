@@ -1,0 +1,275 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen hat?</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="index.html" title="Produktion von Open-Source-Software"><link rel="prev" href="bug-trackers.html" title="Anhang B. Freie Bugtracker"><link rel="next" href="bug-reporting.html" title="Anhang D. Beispiel-Anleitung für das Melden von Fehlern"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen
+hat?</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bug-trackers.html">Zurück</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="bug-reporting.html">Weiter</a></td></tr></table><hr></div><div class="appendix" title="Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen hat?"><div class="titlepage"><div><div><h2 class="title"><a name="bikeshed-full"></a>Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen
+hat?</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Es sollte Sie nicht kümmern; es macht nicht wirklich einen
+Unterschied, und Sie haben besseres mit Ihrer Zeit zu tun.</p><p>Die berühmte E-Mail von Poul-Henning Kamp (aus der ein Ausschnitt
+in <a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a> erscheint) ist eine wortgewandte
+Abhandlung darüber, was bei Gruppendiskussionen dazu neigt, schief zu
+laufen. Es ist hier mit seiner Genehmigung kopiert und übersetzt. Die
+URL des Originals ist <a class="ulink" href="http://www.freebsd.org/cgi/getmsg.cgi?fetch=506636+517178+/usr/local/www/db/text/1999/freebsd-hackers/19991003.freebsd-hackers" target="_top">http://www.freebsd.org/cgi/getmsg.cgi?fetch=506636+517178+/usr/local/www/db/text/1999/freebsd-hackers/19991003.freebsd-hackers</a>.</p><pre class="screen">
+
+Betreff: Ein Fahrradschuppen (egal welche Farbe) auf grünerem Gras...
+Von: Poul-Henning Kamp &lt;phk@freebsd.org&gt;
+Datum: Sat, 02 Oct 1999 16:14:10 +0200
+Message-ID: &lt;18238.938873650@critter.freebsd.dk&gt;
+Absender: phk@critter.freebsd.dk
+Bcc: Blind Distribution List: ;
+MIME-Version: 1.0
+
+
+
+[bcc an committers und hackers]
+
+
+Mein letztes Schreiben wurde aureichend gut aufgenommen, sodass ich mich
+nicht davor scheue ein weiteres zu senden, und heute habe ich die Zeit
+und Muße es zu tun.
+
+
+Ich hatte ein paar Probleme zu entscheiden, wie ich so etwas
+herausgeben soll, dieses mal als bcc an committers und
+hackers, vermutlich das Beste, was ich machen kann.
+Ich bin selber nicht bei hacker angemeldet, aber dazu später mehr.
+
+
+Was mich dieses Mal angestoßen hat ist der "sleep(1) sollte mit
+Sekunden-Bruchteile funktionieren" Thread, welcher unser Leben zu viele
+Tage lang geplagt hat &#8211; wahrscheinlich sind es schon ein paar Wochen,
+ich will mir nicht mal die Mühe machen, nachzuschauen.
+
+
+An diejenigen die diesen speziellen Thread verpasst haben: Herzlichen
+Glückwunsch.
+
+
+Es war ein Vorschlag, dass sleep(1) sich richtig verhalten sollte, wenn
+man ihr ein Argument gibt, das kein Integer ist, und dieses
+bestimmte Buschfeuer in Gang setzte. Ich werde nicht mehr darüber
+sagen, weil es eine viel kleinere Angelegenheit ist, als man von der
+Länge des Threads erwarten würde, und sie hat schon viel mehr
+Aufmerksamkeit geerntet, als einige der *Probleme* die wir hier gehabt
+haben.
+
+
+Die sleep(1) Saga ist das eklatanteste Beispiel einer Fahrradschuppen-
+Diskussion, die wir je bei FreeBSD gehabt haben. Der Vorschlag war gut
+ausgearbeitet, wir wären mit OpenBSD und NetBSD kompatibler geworden, und
+trotzdem mit jedem Code vollständig kompatibel geblieben, den irgend
+jemand je geschrieben hat. 
+
+
+Es wurden jedoch so viele Einwände, Vorschläge und Änderungen
+aufgeworfen das man meinen könnte, die Änderungen hätten alle Löcher in einem
+schweizer Käse gestopft oder den Geschmack von Coca Cola verändert,
+oder etwas ähnlich gravierendes.
+
+
+"Worum geht es bei diesem Fahrradschuppen?", haben mich einige gefragt.
+
+
+Es ist eine lange Geschichte, bzw. eher eine alte Geschichte,
+aber sie ist in Wirklichkeit ziemlich kurz. C. Northcote Parkinson
+schrieb Anfang der 1960er ein Buch namens "Parkinsons Gesetz",
+welches eine Menge Einblicke in die Dynamik des Management
+beinhaltet.
+
+
+Sie können es bei Amazon finden, und vielleicht auch im Bücherregal
+ihres Vaters, es ist sowohl seinen Preis als auch die Zeit es zu lesen 
+wert. Wer Dilbert gut findet, wird auch Parkinson mögen.
+
+
+Jemand sagte mir neulich er hätte es gelesen und fand, dass
+lediglich 50% sich heutzutage anwenden ließe. Das ist verdammt gut, würde
+ich sagen, viele der modernen Bücher über Management liegen deutlich
+darunter, und dieses ist über 35 Jahre alt.
+
+
+Bei dem spezifischen Beispiel, bei dem es um einen Fahrradschuppen
+geht, ist die andere entscheidende Komponente ein Atomkraftwerk,
+was denke ich die Zeit, in der das Buch geschrieben wurde, anschaulich
+macht.
+
+
+Parkinson zeigt, wie Sie zum Vorstand gehen und
+Zustimmung für den Bau ein multi-millionen oder gar Milliarden
+Dollar teures Atomkraftwerk bekommen können, wenn Sie aber einen
+Fahrradschuppen bauen möchten sich in endlosen Diskussionen
+verzetteln werden.
+
+
+Parkinson erklärt, dass das daran liegt, dass ein Atomkraftwerk
+so gewaltig, so kostspielig und so kompliziert ist, dass Menschen es
+nicht begreifen können, und anstatt es zu versuchen eher auf 
+die Annahme zurückfallen, jemand anderes hätte bereits alle Details
+überprüft bevor es so weit gekommen ist. Richard P. Feynmann gibt
+in seinen Büchern einige interessante und treffende Beispiele, die
+mit Los Alamos zu tun haben.
+
+
+Einen Fahrradschuppen andererseits kann jeder übers Wochenende
+bauen, und noch genug Zeit übrig haben, um das Spiel im Fernsehen zu 
+schauen. Egal wie gut Sie sich also vorbereiten, egal wie vernünftig Sie 
+bei Ihrem Vorschlag sind, irgend jemand wird die Chance 
+ergreifen um Ihnen zu zeigen, dass er seine Arbeit macht, dass er 
+aufpasst, dass er *da* ist.
+
+
+In Dänemark nennen wir das "seinen Fingerabdruck hinterlassen".
+Es geht um den persönlichen Stolz und Ansehen, es geht darum irgendwo
+drauf zeigen zu können und zu sagen "Da! Das habe <span class="emphasis"><em>ich
+</em></span> gemacht". Es ist ein starker Wesenszug bei Politikern,
+aber auch in den meisten Menschen vorhanden, wenn sie dazu die
+Gelegenheit bekommen. Denken Sie einfach an Fußabdrücke im nassen
+Zement.
+
+
+Ich verneige mich mit Respekt vor dem ursprünglichen Absender des
+Vorschlags, da er wärend dieser Bombardierung durch den Pöbel bei
+seinen Waffen blieb, und die Änderung mittlerweile eingepflegt wurde.
+Ich hätte der Sache schon nach weniger als einer Handvoll Nachrichten
+den Rücken gekehrt.
+
+
+Was mich wie zuvor erwähnt zurück auf den Grund bringt, warum ich nicht
+mehr bei -hackers angemeldet bin:
+
+
+Ich habe mich von -hackers vor mehreren Jahren abgemeldet, weil ich nicht
+mehr mit der E-Mail-Flut mithalten konnte. Seitdem habe ich aus demselben
+Grund mehrere andere Mailinglisten verlassen.
+
+
+Und ich bekomme immer noch jede Menge E-Mails. Vieles wird nach /dev/null
+über Filter geleitet: Leute namens [weggelassen] werden es genau so wenig 
+auf meinem Bildschirm schaffen wie Commits an Dokumente in Sprachen, die
+ich nicht verstehe, genauso wie ähnliche Portierungen. All diese Sachen und
+mehr gehen über den Jordan, ohne dass ich je was von ihnen erfahre.
+
+
+Aber trotz dieser scharfen Zähne vor meinem Posteingang bekomme ich 
+immer noch zu viele E-Mails.
+
+
+Hier kommt nun das grünere Gras ins Bild:
+
+
+Ich wünschte, wir könnten das Maß an Rauschen auf unserern Listen
+verringern, und ich wünschte, wir ließen die Leute gelegentlich einen
+Fahrradschuppen bauen, und es kümmert mich nicht wirklich,
+in welcher Farbe sie ihn streichen.
+
+
+Der erste dieser Wünsche zielt darauf ab, E-Mails zivilisiert,
+sensibel und intelligent zu benutzen.
+
+
+Wenn ich griffige, präzise Kriterien definieren könnte, wann eine 
+E-Mail beantwortet werden sollte und wann nicht, denen jeder 
+zustimmen und folgen würde, wäre ich ein glücklicher Mensch, 
+aber ich bin zu weise, das auch nur zu versuchen.
+
+
+Lasst mich aber ein paar Pop-Up-Meldungen vorschlagen, die ich gerne von
+E-Mail-Programmen implementiert sähe, die auftauchen, sobald
+Leute versuchen, E-Mails an Listen zu schreiben oder zu
+beantworten, von denen sie möchten dass ich sie abonniere:
+
+      +------------------------------------------------------------+
+
+
+      | Ihre E-Mail wird gleich an mehrere Hundertausend           | 
+      | Personen gesandt, von denen jeder mindestens 10 Sekunden   |
+      | aufbringen muss, um entscheiden zu können ob sie           |
+      | interessant ist. Mindestens zwei Mannwochen werden beim    |
+      | Lesen ihrer E-Mail aufgebracht werden. Viele der Empfänger |
+      | werden für das Herunterladen Ihrer E-Mail bezahlen müssen. |
+      |                                                            |
+      | Sind Sie sich absolut sicher, dass Ihre E-Mail hinlänglich |
+      | bedeutend ist, um all diese Personen zu belästigen?        |
+      |                                                            |
+      |            [JA]  [ÜBERARBEITEN]  [ABBRECHEN]               |
+      +------------------------------------------------------------+
+
+      +------------------------------------------------------------+
+
+      | Achtung: Sie haben noch nicht nicht alle E-Mails in diesem |
+      | Thread gelesen. Jemand anderes könnte bereits gesagt haben,|
+      | was Sie im Begriff sind zu antworten. Lesen Sie bitte den  |
+      | ganzen Thread, bevor Sie auf irgend eine E-Mail darin      |
+      | antworten.                                                 |
+      |                                                            |
+      |                      [ABBRECHEN]                           |
+      +------------------------------------------------------------+
+
+      +------------------------------------------------------------+
+
+
+      | Achtung: Ihr E-Mail-Programm hat Ihnen nicht einmal die    |
+      | ganze Nachricht gezeigt. Es folgt logich daraus, dass Sie  |
+      | sie unmöglich komplett gelesen und verstanden haben können.|
+      |                                                            |
+      | Es ist unhöflich, auf eine E-Mail zu antworten, bevor Sie  |
+      | sie ganz gelesen und darüber nachgedacht haben.            |
+      |                                                            |
+      | Eine Zeitbeschränkung wird Sie zur Beruhigung eine Stunde  |
+      | lang daran hindern, auf irgend welche E-Mails in diesem    | 
+      | Thread zu zu antworten.                                    |
+      |                                                            |
+      |                      [ABBRECHEN]                           |
+      +------------------------------------------------------------+
+
+      +------------------------------------------------------------+
+
+      +------------------------------------------------------------+
+      | Sie haben diese E-Mail mit einer Geschwindigkeit von mehr  |
+      | als N.NN zps verfasst. Es ist i.A. möglich, schneller als  |
+      | mit einer Geschwindigkeit von A.AA zps zu denken und zu    |
+      | schreiben, und Ihre Antwort ist deshalb wahrscheinlich     |
+      | unpassend, undurchdacht und/oder emotional.                |
+      |                                                            |
+      | Eine Zeitbeschränkung wird Sie zur Beruhigung eine Stunde  |
+      | am Versenden vom E-Mails hindern.                          | 
+      |                                                            |
+      |                      [ABBRECHEN]                           |
+      +------------------------------------------------------------+
+
+
+Der zweite Teil meines Wunsches ist eher emotional. Offensichtlich haben 
+die Kapazitäten welche wir für die Besatzung dieses unfreundlichen Feuers
+in dem sleep(1) Thread hatten, trotz ihrer vielen Jahre bei dem Projekt,
+es nie als wichtig erachtet, diese kleine Handlung durchzuführen, warum
+sind sie also jetzt derart aufgebracht über jemand anderen, sehr viel
+unerfahreneren der es erledigt ?
+
+
+Ich wünschte ich wüsste es.
+
+
+Was ich weiß ist, dass Argumente es nicht schaffen werden, diese
+"Reaktionären Konservativen" aufzuhalten. Es mag sein, dass diese Leute
+über ihren eigenen Mangel an greifbaren Beiträgen in der letzten Zeit
+frustriert sind, oder es ist ein schlimmer Fall von "Wir sind alt und
+knauzig, WIR wissen, wie sich die Jugend verhalten sollte".
+
+
+So oder so, ist es für das Projekt sehr unproduktiv, ich habe aber keine
+Vorschläge es aufzuhalten. Das beste was ich vorschlagen kann, ist sich
+davor zurückzuhalten, die Ungeheuer zu füttern, die auf den Mailinglisten
+lauern: Ignoriere sie, antworte nicht auf sie, vergiss dass
+sie da sind.
+
+
+Ich hoffe wir können eine stärkere und breitere Basis von Mitwirkenden 
+bei FreeBSD bekommen, und ich hoffe dass wir zusammen die alten Knauser
+und die [Ausgelassen]en dieser Welt daran hindern können, sie durchzukauen,
+auszuspukken und abzuschrecken bevor sie überhaupt ein Bein auf den Boden
+kriegen.
+
+
+An die Leute die da draußen gelauert haben, vor diesen Untieren zurück
+geschreckt haben: Ich kann mich nur entschuldigen und euch dazu
+ermutigen, es trotzdem zu versuchen, das ist nicht die Umgebung die ich
+in dem Projekt haben möchte.
+
+Poul-Henning
+</pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bug-trackers.html">Zurück</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="bug-reporting.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Anhang B. Freie Bugtracker </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Anhang D. Beispiel-Anleitung für das Melden von Fehlern</td></tr></table></div></body></html>

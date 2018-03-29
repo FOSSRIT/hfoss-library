@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Tests und Veröffentlichung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Tests und Veröffentlichung"><div class="titlepage"><div><div><h1 class="title"><a id="testing-and-releasing"/>Tests und Veröffentlichung</h1></div></div></div><p>Wenn der Quellcode tarball von dem stabilisierten Zweig 
+produziert wurde, beginnt der Ablauf sie zu veröffentlichen. Vor der
+tarball der allgemeinen Öffentlichkeit aber zur Verfügung gestellt 
+wird, sollte es von einer minimalen Menge von Entwicklern getestet und
+bewilligt werden, üblicherweise drei oder mehr. Die Bewilligung,
+dreht sich nicht nur darum, die neue Version auf offensichtliche
+Mängel zu untersuchen, die Entwickler laden den Tarball herunter,
+machen einen Build und installieren es auf ein sauberes System, lassen
+die Folge der Regressionstests laufen (siehe <a class="xref" href="ch08.html#automated-testing" title="Automatisiertes Testen">„Automatisiertes Testen“</a>)<span> im Kapitel
+<a class="xref" href="ch08.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <em>Leitung von Freiwilligen</em></a></span>, und machen ein paar
+händische Tests. Angenommen, es besteht diese Überprüfungen, sowie
+irgend welche andere Kriterien für die Veröffentlichung, die das
+Projekt haben mag, machen die Entwickler eine digitale Signatur von
+dem tarball mit GnuPG
+(<a class="ulink" href="http://www.gnupg.org/">http://www.gnupg.org/</a>), PGP
+(<a class="ulink" href="http://www.pgpi.org/">http://www.pgpi.org/</a>), oder irgend einem anderen
+Programm welches mit PGP kompatible Signaturen erstellen kann.</p><p>In den meisten Projekten, benutzen die Entwickler einfach ihre
+eigenen digitalen Signaturen, anstatt des geteilten Schlüssel vom 
+Projekt und so viele Entwickler die wollen, können es signieren (d.h.
+es gibt eine Minimum an Entwickler, aber kein Maximum). Je mehr 
+Entwickler signieren, desto mehr Tests unterläuft die neue Version,
+und desto größer ist die Wahrscheinlichkeit, dass ein 
+sicherheitsbewusster Benutzer ein Pfad des Vertrauens von sich bis
+zu dem tarball finden kann.</p><p>Sobald sie bewilligt sind, sollte die neue Version (also, alle
+tarballs, zip Dateien, sowie alle anderen Formate die veröffentlicht
+werden) in dem Download-Bereich des Projekts platziert werden, zusammen
+mit den Signaturen, und MD5/SHA1 Prüfsummen (siehe <a class="ulink" href="http://en.wikipedia.org/wiki/Cryptographic_hash_function">http://en.wikipedia.org/wiki/Cryptographic_hash_function</a>).
+Es gibt verschiedene Standards um das zu machen. Eines ist es, jedes
+Paket von einer Datei begleiten zu lassen, mit den zugehörigen
+digitalen Signaturen, und eine weitere Datei mit der Prüfsumme. Wenn
+das veröffentlichte Paket also
+<code class="filename">scanley-2.5.0.tar.gz</code> ist, platzieren Sie in dem
+selben Verzeichnis eine Datei
+<code class="filename">scanley-2.5.0.tar.gz.asc</code> mit der digitalen
+Signatur für diesen tarball, eine weitere Datei
+<code class="filename">scanley-2.5.0.tar.gz.md5</code> mit seiner MD5
+Prüfsumme und optional eine weitere Datei
+<code class="filename">scanley-2.5.0.tar.gz.sha1</code>, mit der SHA1 Prüfsumme.
+Eine andere Art die Überprüfung zu ermöglichen ist alle Signaturen der
+veröffentlichten Pakete in eine einzelne Datei zu sammeln
+<code class="filename">scanley-2.5.0.sigs</code>; das gleiche kann mit den
+Prüfsummen gemacht werden.</p><p>Es macht nicht wirklich einen Unterschied wie Sie es machen. 
+Halten Sie sich nur an ein einfaches Schema, beschreiben Sie es klar,
+und seien einheitlich Sie über mehrere Versionen. Der Sinn von all
+diesen Signaturen und Prüfsummen ist, Nutzern eine Möglichkeit zu
+geben, zu verifizieren, dass die Kopie die sie erhalten haben nicht
+böswillig verändert wurde. Die Nutzer werden gleich den Code auf ihren
+Rechnern laufen lassen – wenn der Code manipuliert wurde, hätte
+ein Angreifer plötzlich Zugriff auf all ihre Daten. Siehe
+<a class="xref" href="ch07s06.html#security-releases" title="Sicherheitsupdates">„Sicherheitsupdates“</a><span>
+später in diesem Kapitel</span> für weitere Informationen über 
+Paranoia.</p><div class="sect2" title="Release Candidate"><div class="titlepage"><div><div><h2 class="title"><a id="candidate-releases"/>Release Candidate</h2></div></div></div><p>Bei wichtigen Veröffentlichungen die viele Änderungen beinhalten,
+bevorzugen es viele Projekte zuerst <em class="firstterm">release candidates
+</em> zu veröffentlichen, z.B., <code class="filename">scanley-2.5.0-beta1
+</code> vor <code class="filename">scanley-2.5.0</code>. Der Sinn eines
+solchen Kandidaten ist den Code weite Tests zu unterwerfen, von es
+als eine offiziell Version gesegnet wird. Wenn Probleme gefunden 
+werden, werden sie in dem Versionszweig behoben und eine neuer Kandidat
+wird veröffentlicht (<code class="filename">scanley-2.5.0-beta2</code>). Dieser
+Kreislauf wird so lange weitergeführt, bis keine untragbaren Fehler
+mehr vorhanden sind, worauf der letzte veröffentlichte Kandidat zur
+offiziellen Version wird – d.h. der einzige Unterschied zwischen
+dem letzten Release Candidate und der echten neuen version ist die
+Entfernung der Kennzeichnung von der Versionsnummer.</p><p>In den meisten anderen Beziehungen, sollten die Kandidaten wie
+eine echte finale Version behandelt werde. Die <span class="emphasis"><em>alpha
+</em></span>, <span class="emphasis"><em>beta</em></span>, oder <span class="emphasis"><em>rc</em></span>
+Kennzeichnung reicht, um die konservativen Nutzer zu warnen, dass sie
+auf die echte finale Version warten sollen, und natürlich sollten die
+E-Mails zur Bekanntgabe darauf hinweisen, dass ihr Sinn das Einholen
+von Rückmeldungen ist. Davon abgesehen, geben Sie den Kandidaten die
+gleiche Menge an Sorgfalt wie gewöhnliche neue Versionen. Schließlich
+wollen Sie, dass Leute sie benutzen, da echte Nutzung die beste 
+Möglichkeit ist, um Fehler zu entdecken, und weil Sie nie wissen,
+ob ein Release Candidate zur offiziellen Version wird.</p></div><div class="sect2" title="Bekanntgabe neuer Versionen"><div class="titlepage"><div><div><h2 class="title"><a id="release-announcement"/>Bekanntgabe neuer Versionen</h2></div></div></div><p>Eine neue Version bekannt zu geben, ist wie die ankündigung von
+jedem anderen Ereignis, und sollte die Verfahren die in 
+<a class="xref" href="ch06s06.html" title="Öffentlichkeit">„Öffentlichkeit“</a><span> im Kapitel 
+<a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span> beschrieben sind benutzen. Es
+gibt allerdings ein paar spezifische Sachen bei neuen Versionen.</p><p>Immer wenn Sie die URL zu dem Tarball einer neuen Version
+herausgeben, geben Sie unbedingt auch die MD5/SHA1 Prüfsummen an und
+weisen Sie auf die Signatur-Datei hin. Da die Bekanntgabe in meheren
+Foren stattfindet (Mailverteiler, Ihre Webseite, usw.), können 
+Benutzer die Prüfsummen aus mehreren Quellen bekommen, was die
+sicherheitsbewussten unter ihnen die zusätzliche Sicherheit gibt, dass
+die Prüfsummen selber nicht manipuliert wurden. Die Verweise auf die
+Signaturen macht diese nicht unbedingt sicherer, aber es gibt ihnen
+(insbesondere denjenigen die das Projekt nicht so nahe verfolgen) die 
+Gewissheit, dass das Projekt die Sicherheit ernst nimmt.</p><p>In der E-Mail mit der Bekanntgabe, und den Webseiten, die mehr als
+nur eine kurzen Text über die neue Version enthalten, sollten Sie auch
+den relevanten Abschnitt aus der CHANGES Datei angeben, damit Leute 
+sehen können, warum es in ihrem Interesse sein könnte eine 
+Aktualisierung durchzuführen. Das ist so wichtig, bei dien 
+Veröffentlichungs Kandidaten wie bei den finalen Versionen; die 
+Existenz von Bugfixes und neuen Funktionen ist wichtig um Leute einen
+Reitz zu geben, einen neuen Kandidaten auszuprobieren.</p><p>Schließlich, vergessen Sie es nicht die Entwicklermannschaft zu
+danken, sowie die Tester und alle anderen die sich die Zeit genommen
+haben um gute Bug-Meldungen einzureichen. Heben Sie jedoch keinen
+besonders beim Namen heraus, es sei denn es ist einer für individuell
+für einen riesigen Anteil Arbeit verantwortlich ist, dessen Wert 
+weithin von jedem in dem Projekt anerkannt ist. Seien Sie nur 
+vorsichtig vor dem rutschigen Abhang der Inflation von Anerkennung
+(siehe <a class="xref" href="ch08s05.html" title="Anerkennung">„Anerkennung“</a><span> im Kapitel 
+<a class="xref" href="ch08.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <em>Leitung von Freiwilligen</em></a></span>).</p></div></div></body></html>

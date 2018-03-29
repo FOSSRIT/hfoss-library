@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Manejando el crecimiento</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Manejando el crecimiento"><div class="titlepage"><div><div><h1 class="title"><a id="growth"/>Manejando el crecimiento</h1></div></div></div><p>El precio del éxito es muy pesado en el mundo del Open Source. Conforme
+tu software se hace más popular, el número de gente que empieza a buscar información 
+sobre él, se incrementa dramaticamente, mientras el número de gente capaza de proporcionar
+información se incrementa mucho más despacio. Además, incluso si el ratio fuera uniformemente
+balanceado, todavía existiría un problema de escalabilidad en la forma en que la mayoría de
+los proyectos Open source manejan las comunicaciones. Considera por ejemplo las listas de correo.
+La mayoría de los proyectos tienen una lista de correo para cuestiones generales de los usuarios; a
+veces los nombres de estas listas son "usuarios", "discusiones", o "ayuda" o algo similar. Cualquiera
+que sea su nombre, el propósito de esas listas es el mismo: proporcionar un lugar donde la gente pueda
+resolver sus cuestiones, mientras otros observan y (presumiblemente) absorben conocimiento de la 
+observación de ese intercambio de conocimiento.
+</p><p>Estas listas de correo funcionan muy bien hasta unos pocos miles de usuarios
+y/o un par de cientos de posts al día. Pero más o menos, a partir de ahí el sistema
+empieza a romperse, porque cada suscriptor vee cada post; si el número de post a la lista
+empieza a exceder lo que cualquier lector individual puede procesar en un día, la lista se
+convierte en una carga para sus miembros. Imagina por ejemplo, si Microsoft tuviera tal
+lista de correo para Windows XP. Windows XP tiene cientos de millones de usuarios; aún 
+incluso si el uno por ciento de ellos tuviera cuestiones en un periodo de veinticuatro
+horas, entonces esta lista hipotética cientos de miles de posts al día! Por supuesto, 
+tal lista de correo no podría existir, porque nadie permanecería subscrito. Este problema
+no esta limitado a las listas de correo; la misma lógica se aplica a los canales del IRC,
+los foros de discusión online y por ende, a cualquier sistema en el cual un grupo escuche
+preguntas de individuos. Las implicaciones son siniestras: el modelo usual del Open Source
+del soporte masivamente paralelizado simplemente no escala los niveles necesarios para
+la dominación mundial.
+</p><p>No habrá una explosión cuando los foros alcancen su punto de ruptura.
+Se trata simplemente de un efecto silencioso de feedback negativo: la gente se borrará de
+las listas, o saldrán de los canales del IRC, o a cualquier ritmo cesaran de preocuparse
+en preguntar cuestiones, porque verán que no se les escuchará entre tanta gente. Así
+cuanta más gente haga de estas su principal elección racional, la actividad de los foros
+empezará a permanecer a un nivel inmanejable precisamente porque la gente racional o 
+(al menos experimentada), empezará a buscar información por otros medios, mientras la gente
+sin experiencia permanecerá y continuará preguntando en foros y listas de correo.
+En otras palabras, uno de los efectos de continuar con el uso de modelos de comunicación
+que no son escalables mientras que el proyecto crece es que la calidad media tanto de preguntas
+y respuestas tiene a disminuir, lo cual hace que los nuevos usuarios parezcan más tontos de 
+lo que son, cuando de hecho probablemente no lo sean. Se trata simplemente de que el ratio
+beneficio/costo de el uso de esos foros masificados, disminuye, por lo que de manera 
+natural, aquellos con experiencia, empezarán a buscar respuestas en otros sitios.
+Ajustar los mecanismos de comunicación para poder con el crecimiento del proyecto,
+implicará dos estrategias relacionadas:</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Reconociendo cuando partes especiales de un foro
+            <span class="emphasis"><em>no</em></span> sufren un crecimiento desmesurado, incluso si el
+	    foro se trata como un todo, y separando aquellas partes creando otras nuevas,
+	    en foros más especializados (ejem., no dejes que los buenos se arrastren por
+            los malos).</p></li><li class="listitem"><p>Asegurando que existen muchas fuentes de información automáticas 
+	    disponibles, y que se mantienen organizadas, actualizadas y fáciles de localizar.</p></li></ol></div><p>La estrategia (1) normalmente no es muy dura. La mayoría de los proyectos
+empiezan con un foro principal: y una lista de correo para discusiones generales,
+en las cuales las ideas de características, cuestiones de diseño y problemas de 
+codificación puedan ser discutidos. Todo el mundo involucrado en el proyecto está
+en la lista. Despues de un tiempo, se comprueba que la lista ha evolucionado en
+varias sublistas basadas en diferentes temáticas. Por ejemplo, algunos hilos son 
+claramente sobre desarrollo y diseño; otros son dudad de usuarios del tipo ¿"Cómo
+hago tal cosa"?; quizá exista una tercera temática centrada en el registro de procesar
+los informes de bugs y peticiones de mejora; y así. Un individuo dado, por supuesto
+puede participar en varios tipos diferentes de hilos, pero lo más importante de todo
+es que no hay mucho solapamiento entre los diferentes tipos mismos. Pueden ser divididos
+en listas separadas sin causar ningún perjuicio en el proyecto, porque los hilos se
+mantienen repartidos por temáticas.</p><p>Actualmente, realizar esta división es un proceso de dos pasos. Creas la nueva lista
+(o el canal IRC, o lo que vaya a ser), y entonces gastas el tiempo necesario de manera 
+educada pero insistiendo y recordando a la gente a <span class="emphasis"><em>usar</em></span> los nuevos foros
+apropiadamente. Este paso puede llevar semanas pero finalmente la gente captará la idea.
+Simplemente tienes que hacer ver a alguien que envía un post al destino equivocado, cual
+es el nuevo camino y hacerlo de manera visible, animando a que otras personas ayuden tambien
+en los nuevos usuos. Es tambien muy útil tener una página web proporcionando una guía hacía
+todas las listas disponibles; tus respuestas simplemente pueden referenciar esta página y,
+como gratificación, el destinatario puede aprender sobre las pautas a seguir antes
+de escribir un correo.</p><p>La estrategia (2) es un proceso en curso, dura durante todo el tiempo de vida del proyecto
+e involucra a muchos participantes. Por supuesto es en parte cuestión de tener una documentación
+actualizada (mira
+<a class="xref" href="ch02.html#documentation" title="Documentación">“Documentación”</a><span> en
+<a class="xref" href="ch02.html" title="Capítulo 2. Primeros Pasos">Capítulo 2, <em>Primeros Pasos</em></a></span>) y asegurándote que la gente
+vaya ahí. Pero es tambien mucho más que eso; las secciones que siguen discuten
+esta estrategia en detalle.</p><div class="sect2" title="Sobresaliente uso de los archivos"><div class="titlepage"><div><div><h2 class="title"><a id="using-archives"/>Sobresaliente uso de los archivos</h2></div></div></div><p>Tipicamente, todas las comunicaciones de un proyecto Open Source (excepto algunas
+veces conversaciones en el IRC), son archivadas. Los archivos son públicos y se pueden buscar,
+y tienen una estabilidad referencial: que significa, una vez que una pieza de información
+se ha grabado en una dirección particular, permanece en esa dirección para siempre.</p><p>Usa estos archivos tanto como puedas, y tan visiblemente como sea posible. Incluso cuando
+sepas la respuesta a alguna pregunta, si piensas que existe una referencia en los archivos que
+contiene la respuestas, gasta el tiempo necesario para buscarla y presentarla. Cada vez que hagas
+esto de una manera públicamente visible, algunas personas aprenderan la primera vez que significan
+esos archivos, y que buscando en ellos pueden encontrar respuestas. Tambien, refiriéndose a los
+archivos en vez de reescribir la respuesta, refuerzas la norma social contra la duplicación de
+información. ¿Por qué obtenemos la misma respuesta en dos sitios diferentes? Cuando el número de
+sitios que se puede encontrar es mantenido a un mínimo, la gente que lo ha encontrado antes están
+más predispuestos a recordar qué y donde buscarlo para las próximas veces. Las referencias bien
+situadas tambien contribuyen a la calidad de los resultados de búsqueda en general, porque ellos
+refuerzan los recursos del objetivo en los rankings de los motores de búsqueda en Internet.
+</p><p>Sin embargo, hay veces en las que duplicar la información tiene sentido.
+Por ejemplo, supon que hay una respuesta en los archivos, que no es de tí, diciendo:</p><pre class="screen">
+Parece que los índices Scanley indexes han sido corrompidos. Para devolverlos a
+su estado original, ejecuta estos pasos:
+
+1. Apaga el servidor Scanley.
+2. Ejecuta el programa 'descorromper' que viene con Scanley.
+3. Inicia el servidor.
+</pre><p>Entonces, meses después, ves otro mail indicando que algunos indices
+han sido corrompidos. Buscas los archivos y presentas la vieja respuesta anterior,
+pero te das cuenta que faltan algunos pasos (quizás por error, o quizá porque el
+software ha cambiado desde que se escribió ese post). La clásica manera para manejar
+esto, es escribir un nuevo mail, con un conjunto de instrucciones más completo, y
+explicitamente dar como obsoleto el anterior post mencionándolo así:</p><pre class="screen">
+Parece que tus índices Scanley han sido corrompidos. Vimos este problem allá por Julio,
+y J. Random publicó una solución en http://blahblahblah/blah. Abajo hay una descripción
+más completa de como recuperar tus índices, basado en las instrucciones de J. Random
+pero extendiéndolo un poco más:
+
+1. Para el servidor Scanley.
+2. Cambiate al usuario con el que se ejecuta el servidor Scanley.
+3. Como este usuario, ejecuta el programa 'recuperar' en los índices.
+4. Ejecuta Scanley a mano para ver si los índices funcionan ahora.
+5. Reinicia el servidor.
+</pre><p>(En un mundo ideal, sería posible poner una nota en el viejo post,
+indicando que existe información más actualizada y apuntando al nuevo post
+que la contiene. Sin embargo, no conozco ningún software de archivación que
+ofrezca una característica "obsoleto por", quizá porque sería muy difícil de
+implementar de una manera en que no viole la integridad de los archivos. Esta
+es otra razón de porqué es buena idea crear páginas web con respuestas a cuestiones
+comunes.</p><p>Los archivos probablemente son buscados más a menudo para respuestas
+a cuestiones técnicas, pero su importancia para el proyecto va más allá de eso.
+Si una pauta formal del proyecto son sus leyes establecidas, los archivos son
+su ley común: una grabación de todas las decisiones hechas y como se llegó hasta
+ellas. En cualquier discusión recurrente, actualmente es casi obligatorio empezar
+con una búsqueda en los archivos. Esto permite empezar la discusión con un sumario
+del estado actual de las cosas, anticipandose a objeciones, preparando refutaciones
+y posiblemente descubriendo ángulos que no habías imaginado. También los otros 
+participantes <span class="emphasis"><em>esperan</em></span> de ti que hayas hecho una búsqueda en los
+archivos. Incluso si las discusiones previas no llevaron a ninguna parte, tú deberías
+incluir sugerencias cuando vuelvas al téma, para que la gente pueda ver por si mismos
+a) que no llegaron a ningun consenso, y b) que tú hiciste tu trabajo, y por tanto que 
+probablemente se este diciendo algo ahora que no se dijo anteriormente.</p><div class="sect3" title="Trata todos los recursos como archivos"><div class="titlepage"><div><div><h3 class="title"><a id="all-as-archives"/>Trata todos los recursos como archivos</h3></div></div></div><p>Todos los consejos anteriores son extensibles más allá de los archivos
+de las listas de mail. Tener piezas particulares de información de manera estable,
+y en direcciones que se puedan encontrar convenientemente debería ser un principio
+de organización para toda la información de un proyecto. Vamos a ver la FAQ como un
+caso de estudio.</p><p>¿Cómo usa la gente una FAQ?</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Buscan palabras y frases específicas.</p></li><li class="listitem"><p>Quieren poder navegarla, disfrutando de la información sin buscar necesariamente
+	  respuestas a cuestiones específicas.</p></li><li class="listitem"><p>Esperan que motores de búsqueda como google conozcan el contenido de la FAQ, de
+	  manera que las búsquedas puedan ser entradas en la FAQ.</p></li><li class="listitem"><p>Quieren ser capaces de dirigirse directamente a otra gente en temas específicos
+	  en la FAQ.</p></li><li class="listitem"><p>Quieren ser capaces de añadir nuevo material a la FAQ, pero 
+          hay que ver que esto ocurre menos a menudo que la búsqueda de respuestas
+          —Las FAQs son de lejos mucho más leidas que escritas.</p></li></ol></div><p>El punto 1 implica que la FAQ debería estar disponible en algún tipo de formato
+textual. Los puntos 2 y 3 implican que la FAQ debería estar disponible en forma de página HTML,
+con el punto 2 indicando adicionalmnente que el HTML debería ser diseñado con legibilidad (ejem., 
+necesitaras algún tipo de control sobre su apariencia), y debería tener una tabla de contenidos.
+El punto 4 significa que cada entrada individual en la FAQ debería ser asignada como un HTML
+<em class="firstterm">named anchor</em>, (anclas con nombre) un tag que permite a la gente alcanzar un sitio particular
+en la página. El punto 5 significa que los ficheros fuente de la FAQ deberían estar disponibles
+de una manera conveniente (ver <a class="xref" href="ch03s04.html#version-everything" title="Versiones de todo">“Versiones de todo”</a><span> en
+<a class="xref" href="ch03.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <em>Infraestructura Técnica</em></a></span>), un formato que sea fácil de editar.</p><div class="sidebar" title="Named Anchors y atributos ID"><a id="html-named-anchors-and-ids"/><div class="titlepage"><div><div><p class="title"><strong>Named Anchors y atributos ID</strong></p></div></div></div><p>Hay dos maneras para que un navegador vaya a un sitio específico
+  dentro de una página web: anclas con nombre y atributos id.</p><p>Un <em class="firstterm">ancla con nombre</em> es simplemente un elemento HTML
+  de ancla (<code class="literal">&lt;a&gt;...&lt;/a&gt;</code>), pero con un atributo
+  "name":</p><pre class="screen">&lt;a name="mylabel"&gt;...&lt;/a&gt;</pre><p>Versiones más recientes de HTML soportan un  <em class="firstterm">atributo id </em>
+  genérico, el cual puede adjuntarse a cualquier elemento HTML,
+  y no sólo a <code class="literal">&lt;a&gt;</code>.  Por ejemplo:</p><pre class="screen">&lt;p id="mylabel"&gt;...&lt;/p&gt;</pre><p>Ambos, anclas con nombre y atributos id son usados de la misma manera.
+  Uno añade una marca hash y la etiqueta a una URL, y hacer así al navegador que
+  salte directo a dicho punto de la página:
+  </p><pre class="screen">http://myproject.example.com/faq.html#mylabel</pre><p>Virtualmente todos los navegadores soportan las anclas con nombre; los navegadores
+  más modernos soportan el atributo id. Para asegurarnos, recomendaría utilizar tanto
+  anclas con nombre únicamente, o anclas con nombre<span class="emphasis"><em>y</em></span> atributos id attributes 
+  juntos (con la misma etiqueta para ambos en un mismo par, por supuesto). Las anclas con nombre
+  no pueden ser self-closing—incluso aunque no haya texto dentro del elemento, aún así
+  deberas escribirlo en la forma two-sided:</p><pre class="screen">&lt;a name="mylabel"&gt;&lt;/a&gt;</pre><p>...aunque normalmente habrá algún texto, como el título de una sección.</p><p>Allá donde utilices un ancla de nombre, o un atributo id, o ambos,
+  recuerda que la etiqueta no será visible a nadie que navegue a esa ubicación sin
+  usar la etiqueta. Pero una persona podrá querer descubrir la etiqueta de un sitio
+  en particular, para que puedan enviar un mail con la URL de la respuesta a una FAQ
+  enviada a un amigo, por ejemplo. Para ayudar en eto, añade un <em class="firstterm">atributo de título</em> en
+  el mismo elemento(s) donde has añadido el "name" y/o el atributo "id", por ejemplo:</p><pre class="screen">&lt;a name="mylabel" title="#mylabel"&gt;...&lt;/a&gt;</pre><p>Cuando el ratón se situe sobre el texto dentro del elemento con el atributo
+  del título, la mayoría de los navegadores mostraran una pequeña caja con el título.
+  Normalmente, incluyo el signo hash para recordar al usuario que esto es lo que pondrá
+  al final de la URL para ir directo a esta ubicación la próxima vez.</p></div><p>Formatenado la FAQ de esta manera es sólo un ejemplo de como crear un recurso
+presentable. Las mismas propiedades—busqueda directa, disponibilidad en la mayoría
+de buscadores de Internet, navegación, estabilidad referencial, y (donde se aplique)
+edición—son aplicables a otras páginas web, el arbol del código fuente, el seguimiento
+de bugs, etc. Simplemente ocurre que la mayoría del software de archivado de listas de correo
+hace tiempo que reconocen la importancia de estas propiedades, y es por lo que  las listas
+de correo tienden a tener estas funcionalidades de manera nativa, mientras otros formatos
+requieren de un esfuerzo extra en la parte de mantenimiento(<a class="xref" href="ch08.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <em>Coordinando a los Voluntarios</em></a> discute como
+difundir esta carga de mantenimiento a través de miles de voluntarios).</p></div></div><div class="sect2" title="Tradición en la organización del contenido"><div class="titlepage"><div><div><h2 class="title"><a id="codifying-tradition"/>Tradición en la organización del contenido</h2></div></div></div><p>Conforme un proyecto gana en complejidad y adquiere historia, la cantidad de datos que
+cada participante debe absorber incrementa. Aquellos que llevan en el proyecto mucho tiempo
+serán capaces de aprender, e inventar las convenciones del proyecto conforme avanza. A menudo
+no serán conscientes del gran cuerpo de tradición que se ha ido acumulando, y puede sorprender
+todos los pequeños fallos que los nuevos participantes del proyecto puedan hacer. Por supuesto,
+el tema no es que los recién llegados tengan una menor calidad que los de antes; sino que se enfrentan
+a una carga de cultura heredada mayor de la que tenían los recien llegados en el pasado.</p><p>Las tradiciones que un proyecto acumula son del tipo cómo comunicar y
+mantener información y sobre estándares de codificación y otros temas técnicos. Ya
+hemos repasado ambas clases de estándares, en
+<a class="xref" href="ch02.html#developer-documentation" title="Documentación para Desarrolladores">“Documentación para Desarrolladores”</a><span> 
+en <a class="xref" href="ch02.html" title="Capítulo 2. Primeros Pasos">Capítulo 2, <em>Primeros Pasos</em></a></span> y
+<a class="xref" href="ch04s03.html" title="Tomando Nota de Todo">“Tomando Nota de Todo”</a><span> en
+<a class="xref" href="ch04.html" title="Capítulo 4. Infraestructura Social y Política">Capítulo 4, <em>Infraestructura Social y Política</em></a></span> respectivamente, y
+se han mostrado ejemplos. Sobre lo que trata esta sección es de como mantener
+esas pautas actualizadas conforme el proyecto avanza, especialmente pautas sobre
+cómo se administran las comunicaciones, porque estas son las únicas que cambian
+la mayoría conforme el proyecto crece en tamaño y complejidad.</p><p>Primero, busca patrones de cómo la gente se equivoca. Si observas las mismas situaciones
+una y otra vez, especialmente con participantes nuevos, se presenta una oportunidad en forma
+de pauta que necesita ser documentada pero no lo está. Segundo, no te canses de decir las mismas
+cosas una y otra vez, y que no <span class="emphasis"><em>parezca</em></span> que estás cansado de repetirlas. Tú
+y otros veteranos del proyecto tendréis que repetirlas entre vosotros mismos a menudo; este es un
+efecto inevitable de la llegada de nuevos participantes.</p><p>Cada página web, cada mensaje de lista de correo, y cada canal del IRC, deberá ser considerado
+como un espacio de publicidad per no de anuncios comerciales, sino de anuncios sobre los recursos propios
+de tu proyecto. Lo que pongas en este espacio dependerá de la procedencia de los que lo vayan a leer.
+Un canal IRC para cuestiones de usuario, por ejemplo, atraerá gente que nunca habrá interactuado con
+el proyecto antes, a menudo alguien que ha instalado el software, y tiene alguna pregunta que le gustaría
+que le respondieran al momento (después de todo, si puediera esperar, hubiera enviado un mail a la lista
+de correo la cual probablemente usa menos de su tiempo total, aunque tardaría más en recibir respuesta).
+La gente normalmente no realiza una inversión permanente en el canal de IRC, aparecerán, lanzarán su pregunta
+y se irán.</p><p>De ahí, el tema del canal debería apuntar a gente buscando respuestas técnicas en <span class="emphasis"><em>ese
+momento</em></span>, en vez de, gente que quiera involucrarse con el proyecto de una manera permanente
+y para los cuales unas pautas de interaccion serían más apropiadas. Aquí es donde un
+canal verdaderamente ocupado lo maneja (comparalo con el ejemplo anterior en
+<a class="xref" href="ch03s06.html" title="IRC / Sistemas de Chat en Tiempo Real">“IRC / Sistemas de Chat en Tiempo Real”</a><span> en
+<a class="xref" href="ch03.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <em>Infraestructura Técnica</em></a></span>):</p><pre class="screen">
+You are now talking on #linuxhelp
+
+Topic for #linuxhelp is Please READ
+http://www.catb.org/~esr/faqs/smart-questions.html &amp;&amp;
+http://www.tldp.org/docs.html#howto BEFORE asking questions | Channel
+rules are at http://www.nerdfest.org/lh_rules.html | Please consult
+http://kerneltrap.org/node/view/799 before asking about upgrading to a
+2.6.x kernel | memory read possible: http://tinyurl.com/4s6mc -&gt;
+update to 2.6.8.1 or 2.4.27 | hash algo disaster: http://tinyurl.com/6w8rf
+| reiser4 out
+</pre><p>Con las listas de correo, el "espacio de AD" es un ligero pie de página
+añadido a cada mensaje. La mayoría de los proyectos ponen ahí instrucciones de
+suscripción/borrado, y quizás un enlace a la página principal del proyecto o también
+a la FAQ. Puedes pensar que cualquiera que esté suscrito a la lista sabrá donde encontrar
+esa información, y probablemente entonces lo hagan, pero mucha más gente que únicamente
+los subscriptores verán esos correos de la lista. Un post archivado se puede enlazar
+desde diversos lugares; de hecho, algunos posts se vuelven tan famosos que eventualmente
+son leidos por más lectores fuera de la lista que de ella.</p><p>El formateo puede crear una gran diferencia. Por ejemplo, en el proyecto, tuvimos un éxito
+limitado utilizando la técnica de filtrado de bugs descrita en
+<a class="xref" href="ch03s05.html#bug-filtering" title="Pre-filtrado del gestor de fallos">“Pre-filtrado del gestor de fallos”</a><span> en
+<a class="xref" href="ch03.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <em>Infraestructura Técnica</em></a></span>.  Muchos de los falsos bugs
+reportados estaban siendo todavía rellenados por gente sin experiencia, y ocurría
+cada vez, el informador tenía que ser educado de la misma manera que lo había sido con
+las 500 personas de antes. Un día, después de que a uno de nuestros desarrolladores finalmente
+se le agotara la paciencia y empezó a criticar y meterse con un pobre usuario por no haberse
+leído detenidamente la guía de uso del bug tracker, otro desarrollador decidió que este
+patrón había ido ya demasiado lejos. Sugirió que reformatearamos la página frontal del bug 
+tracker de tal forma que lo más importante, los mandatos para discutir los bugs en la
+lista de correo o en los canales IRC antes de rellenarlos, serían letras muy grandes, en rojo
+resaltado sobre un fondo amarillo y resaltado claramente sobre todo los demás elementos
+de la página. Así lo hicimos (puedes ver los resultados en
+<a class="ulink" href="http://subversion.tigris.org/project_issues.html">http://subversion.tigris.org/project_issues.html</a>), y
+y el resultado fue un descenso notable en el ratio de falsos bugs relleandos.
+Por supuesto, todavía los tenemos, y siempre los tendremos, pero el ratio ha descendido
+considerablemente, incluso aunque el número de usuarios incrementa. El resultado no es solamente
+que la base de datos de bugs tiene menos basura, sino que aquellos que responden a los tickets
+de bugs lo hacen con buen carácter, y es más probable permanecer amistosamente cuando se responde
+a uno de los pocos bugs falsos. Esto mejora tanto la imagen del proyecto como la salud mental de sus
+voluntarios.</p><p>La leccion para nosotros fue que únicamente escribiendo unas guías de uso no era demsiado.
+También tuvimos que colocarlas allá donde más se vieran por la gente que más las iba a necesitar,
+y formatearlas de tal manera que su estado y material introductorio estuviese inmediatamente claro
+para la gente que no estuviera familiarizada con el proyecto.</p><p>Las páginas web estáticas no son el único lugar para publicar las características
+del proyecto. Una cierta cantidad de políticas interactivas (en el sentido de recordatorio-amigable
+, no en el sentido de enjaular y atar) también son requeridas. Todas las revisiones por pares, incluso
+las revisiones de commits descritas en
+<a class="xref" href="ch02s03.html#code-review" title="Practicar Revisiones Visibles del Código">“Practicar Revisiones Visibles del Código”</a><span> en
+<a class="xref" href="ch02.html" title="Capítulo 2. Primeros Pasos">Capítulo 2, <em>Primeros Pasos</em></a></span>, deberían incluir revisiones
+de conformidad o no-conformidad con las normas del proyecto, especialmente en relación
+a las convenciones de las comunicaciones. </p><p>Otro ejemplo del proyecto Subversion: fijamos una convención de
+"r12908" qué significaba "revision 12908 en el repositorio de control
+de versiones". El prefijo "r" es facil de escribir, y porque
+es la mitad de peso que los dígitos, lo hace un bloque de texto fácilmente 
+reconocible combinado con digitos. Por supuesto, fijándolo así en la convención
+no significaba que todo el mundo lo empezara a usar consistentemente de la manera
+correcta. Hasta ahora, cuando un mail de commit viene con un log como este:</p><pre class="screen">
+------------------------------------------------------------------------
+r12908 | qsimon | 2005-02-02 14:15:06 -0600 (Wed, 02 Feb 2005) | 4 lines
+
+Patch from J. Random Contributor &lt;jrcontrib@gmail.com&gt;
+
+* trunk/contrib/client-side/psvn/psvn.el:
+  Fixed some typos from revision 12828.
+------------------------------------------------------------------------
+</pre><p>...parte de la revisión de este comit es decir "A partir de ahora, por favor
+usa 'r12828', en vez de 'revision 12828' cuando te refieras a cambios del pasado."
+Esto no es pedante; es importante tanto para el parseo automático como para los lectores
+humanos.</p><p>Siguiendo los principios generales, de seguir métodos canonicos de referencia, y
+que estos métodos de referencia debieran ser usados consistentemente en todos los sitios,
+el proyecto en efecto exporta ciertos estándares. Estos estándares hacen que la gente escriba
+herramientas que presenten las comunicaciones del proyecto de una manera más útil; por ejemplo,
+una revisión formateada como "r12828" podría transformarse en un enlace vivo dentro del sistema
+de navegación del repositorio. Esto sería muy difícil de realizar si la revisión se hubiera escrito
+como "revision 12828", tanto porque la forma podría dividirse a través de un salto de línea, y porque 
+es menos distintiva (la palabra "revision", a menudo aparecerá sola, y los grupos de números también
+apareceran solos, allí donde la combinación "r12828" puede significar únicamente un número de revisión).
+Asuntos similares se aplican tambien a temas con números, FAQs (truco: utiliza una URL con un 
+named anchor, como se describe en
+<a class="xref" href="ch06s04.html#html-named-anchors-and-ids" title="Named Anchors y atributos ID">Named Anchors y atributos ID</a>), etc.</p><p>Incluso para las entidades en las cuales no hay una manera obvia,
+la forma canónica, se debería recomendar a la gente el proporcionar piezas
+clave de información consistente. Por ejemplo, en lo que se refiere a un mensaje
+de lista de correo, no facilites simplemente el destinatario y el asunto; facilita
+tambien la URL del archivo <span class="emphasis"><em>y</em></span> la cabecera Message-ID. Esto último permitirá
+a la gente que tenga su propia copia de la lista de correo (la gente a veces copias offline, por
+ejemplo para utilizarlas en el portátil mientras viajan) indentificar de manera inequivoca el
+mensaje correcto incluso aunque no tengan acceso a los archivos. El destinatario y asunto tampoco
+serían demasiado, porque la misma persona podría crear diversos posts en el mismo hilo, incluso
+en el mismo día.</p><p>Cuanto más crece un proyecto, más importante es este tipo de consistencia. Consitencia signfica
+que allá donde todo el mundo mire, verán que se siguen los mismos patrones, así que ellos tambíen
+sabran seguir por ellos mismos los patrones. Esto también reduce el número de cuestiones que necesitarán
+preguntar. La carga de tener un millon de lectores no es más grande que el tener sólo uno; los problemas
+de escalabilidad empiezan a surgir solo cuando un cierto porcentage de estos lectores hacen preguntas.
+Conforme el proyecto crece, por tanto, se debe reducir aquel porcentage incrementando la densidad y accesibilidad
+de la información, de tal manera que una persona dada pueda encontrar la información que necesite sin
+necesidad de preguntar.</p></div></div></body></html>

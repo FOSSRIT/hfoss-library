@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 9. Licencias, Copyrights y Patentes</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Capítulo 9. Licencias, Copyrights y Patentes"><div class="titlepage"><div><div><h1 class="title"><a id="legal"/>Capítulo 9. Licencias, Copyrights y Patentes</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>La licencia que elijas probablemente no tendrá un gran impacto en la
+adopción de tu proyecto, siempre que sea software libre.
+Los usuarios generalmente eligen software basándose en la calidad
+y las funcionalidades, no en los detalles de la licencia.
+No obstante, necesitas una comprensión básica de las implicaciones
+de las licencias libres, tanto para asegurar que la licencia del proyecto
+es compatible con sus objetivos, como para discutir sobre las decisiones
+acerca de la licencia con otros. Por favor, ten en cuenta que no soy abogado,
+y nada contenido en este capítulo debe ser tenido en cuenta como advertencia legal.
+Para ello, necesitarás contratar un abogado o serlo.</p></div><div class="sect1" title="Terminología"><div class="titlepage"><div><div><h1 class="title"><a id="licenses-terminology"/>Terminología</h1></div></div></div><p>En cualquier discusión acerca de las licencias de software libre,
+lo primero que encuentras es que parece que hay diferentes nomenclaturas para los mismos conceptos:
+<em class="firstterm">software libre (free software)</em>,
+<em class="firstterm">software de fuentes abiertas (open source)</em>,
+<em class="firstterm">FOSS</em>, <em class="firstterm">F/OSS</em>, y
+<em class="firstterm">FLOSS</em>.  Empecemos por ordenar estos términos, 
+además de algunos otros.</p><div class="variablelist"><dl><dt><span class="term"><em class="firstterm">Software libre (free software)</em></span></dt><dd><p>Software que puede ser compartido y modificado con libertad,
+              incluyendo el código fuente.  El término fue acuñado
+              por Richard Stallman, quien lo utilizó en la GNU
+              General Public License (GPL), y quien fundó la Free
+              Software Foundation (<a class="ulink" href="http://www.fsf.org/">http://www.fsf.org/</a>)
+              para promocionar el concepto.</p><p>Aunque "software libre" cubre casi exactamente el
+              mismo software que "software de fuentes abiertas", la FSF, 
+              entre otros, prefiere el término anterior porque hace hincapié
+              en la idea de libertad, y el concepto de libre distribución 
+              del software principalmente como un movimiento social y 
+              no técnico. 
+              La FSF admite que el término es ambiguo—puede significar
+              "free" como "de coste cero", en lugar de "free" como 
+              "libertad"— pero considera que aún es el mejor término,
+              y que las otras alternativas en inglés tienen sus propias
+              ambigüedades (a lo largo de este libro, "free" se utiliza
+              con el sentido de libertad, y no con el concepto de gratuito).
+              </p></dd><dt><span class="term"><em class="firstterm">Software de fuentes abiertas (open source)</em></span></dt><dd><p>Software libre bajo otro nombre. Pero la diferencia
+              en el nombre refleja una importante diferencia filosófica:
+              "open source" fue acuñado por la Open Source
+              Initiative (<a class="ulink" href="http://www.opensource.org/">http://www.opensource.org/</a>)
+              como una alternativa deliberada a "free software", con el fin
+              de hacer este tipo de software una opción más apetecible para 
+              empresas, mediante su presentación como una metodología de 
+              desarrollo en vez de un movimiento político. También podrían 
+              haber querido sobreponerse a otro estigma: lo "gratuíto"
+              es de baja calidad. </p><p>Mientras que cualquier licencia que sea "free software" es 
+              también "open source", y viceversa (con unas pocas excepciones),
+              la gente tiende a elegir un término y aferrarse a él.
+              En general, aquellos que prefieren "software libre" suelen
+              tener una postura más filosófica o moral sobre el tema,
+              mientras que los que prefieren "open source" o no lo ven
+              como un asunto de libertad, o no están interesados
+              en publicitar el hecho de ese modo. Veáse
+              <a class="xref" href="ch01.html#free-vs-open-source" title="&quot;Libre&quot; vs &quot;Abierto&quot;">“"Libre" vs "Abierto"”</a><span> en
+              <a class="xref" href="ch01.html" title="Capítulo 1. Introducción">Capítulo 1, <em>Introducción</em></a></span> para una historia
+              más detallada de este cisma.</p><p>La Free Software Foundation tiene una excelente
+              —carente de objetividad, pero con matices y muy justa
+              —exégesis de los dos términos, en <a class="ulink" href="http://www.fsf.org/licensing/essays/free-software-for-freedom.html">http://www.fsf.org/licensing/essays/free-software-for-freedom.html</a>.
+              La visión de la Open Source Initiative al respecto está en dos páginas:
+              <a class="ulink" href="http://www.opensource.org/advocacy/case_for_hackers.php#marketing">http://www.opensource.org/advocacy/case_for_hackers.php#marketing</a>
+              y <a class="ulink" href="http://www.opensource.org/advocacy/free-notfree.php">http://www.opensource.org/advocacy/free-notfree.php</a>.</p></dd><dt><span class="term"><em class="firstterm">FOSS</em>,
+                      <em class="firstterm">F/OSS</em>,
+                      <em class="firstterm">FLOSS</em></span></dt><dd><p>Donde caben dos, caben tres, y eso es exactamente
+              lo que está ocurriendo con los términos para el software
+              libre. El mundo académico, quizá buscando precisión e 
+              incluso por encima de la elegancia, parece haber
+              establecido FOSS, o a veces F/OSS, significando 
+              "Free / Open Source Software".  Otra variantes ganando
+              adeptos es FLOSS, que quiere decir 
+              "Free / Libre Open Source Software"
+              (<span class="emphasis"><em>libre</em></span> es común en varios
+              idiomas y no sufre de la ambigüedad de <span class="foreignphrase"><em class="foreignphrase">free</em></span>; veáse
+              <a class="ulink" href="http://en.wikipedia.org/wiki/FLOSS">http://en.wikipedia.org/wiki/FLOSS</a> 
+              para más detalles).</p><p>Todos estos términos significan esencialmente lo
+              mismo: software que puede ser modificado y redistribuido
+              por cualquiera, algunas veces—pero no siempre—
+              con el requisito de que los trabajos derivados puedan
+              ser distribuidos libremente bajo los mismos términos.</p></dd><dt><span class="term"><em class="firstterm">Conforme con las DFSG</em></span></dt><dd><p>Conforme con las Directrices de Software Libre de Debian (
+              <span class="foreignphrase"><em class="foreignphrase">Debian Free Software Guidelines</em></span>
+              ,<a class="ulink" href="http://www.debian.org/social_contract#guidelines">http://www.debian.org/social_contract#guidelines</a>).
+              Ésta es una prueba ampliamente usada para comprobar si
+              una licencia dada es verdaderamente software libre. La misión
+              del proyecto Debian es mantener un sistema operativo totalmente
+              libre, de modo que cualquiera que lo instale nunca dude de que 
+              tiene el derecho a modificar y redistribuir cualquier parte del sistema.
+              Las Directrices de Software Libre de Debian son los requisitos
+              que la licencia de un paquete software debe cumplir para poder
+              ser incluído en Debian. Debido a que el proyecto Debian invirtió
+              gran cantidad de tiempo pensando en cómo realizar una prueba,
+              las directrices que surgieron han demostrado ser muy robustas
+              (veáse <a class="ulink" href="http://en.wikipedia.org/wiki/DFSG">http://en.wikipedia.org/wiki/DFSG</a>),
+              hasta donde yo sé, ninguna objección seria se ha lanzado
+              ni por la Free Software Foundation ni por la Open Source 
+              Initiative.  Si sabes que una licencia es conforme con las 
+              DFSG, sabes que garantiza todas las libertades importantes
+              (tales como la posibilidad de un <span class="foreignphrase"><em class="foreignphrase">fork
+              </em></span> incluso en contra de los deseos del autor)
+              requeridas para mantener la dinámica de un proyecto libre.
+              Todas las licencias tratadas en este capítulo son conformes
+              a las DFSG.</p></dd><dt><span class="term"><em class="firstterm">Aprobadas por OSI</em></span></dt><dd><p>Aprobadas por la Open Source Initiative. Este es otra
+              prueba ampliamente usada para comprobar si una licencia cumple
+              todas las libertades necesarias. La definición de la OSI del 
+              software libre está basada en las DFSG, y una licencia 
+              que se ajusta a una prueba casi siempre se ajusta a la otra.
+              A través de los años han habido contadas excepciones, pero
+              sólo relativas a un nicho de licencias de ninguna relevancia 
+              aquí. Al contrario que el proyecto Debian, la OSI mantiene una
+              lista de todas las licencias que ha aprobado, en
+              <a class="ulink" href="http://www.opensource.org/licenses/">http://www.opensource.org/licenses/</a>, por lo que
+              ser aprobada por OSI es un estado sin ambigüedades: una licencia
+              está o no está en la lista.</p><p>La Free Software Foundation también mantiene una lista de
+              licencias en <a class="ulink" href="http://www.fsf.org/licensing/licenses/license-list.html">http://www.fsf.org/licensing/licenses/license-list.html</a>.
+              La FSF clasifica las licencias no sólo por su libertad, sino también
+              por su compatibilidad con la GNU General Public License.
+              La compatibilidad con la GPL es un asunto importante, que será
+              tratado <a class="xref" href="ch09s03.html" title="La GPL y compatibilidad entre licencias">“La GPL y compatibilidad entre licencias”</a><span> más tarde en este capítulo</span>.</p></dd><dt><span class="term"><em class="firstterm">Propietario</em>,
+                      <em class="firstterm">Código cerrado</em></span></dt><dd><p>Lo opuesto al software libre. Significa
+              que el software se distribuye bajo términos tradicionales,
+              con licencias basadas en derechos de autor, donde los 
+              usuarios pagan por copia, o bajo otros términos
+              cualesquiera suficientemente restrictivos para prevenir
+              la dinámica del software libre. Incluso el software
+              distribuido gratuítamente puede ser propietario,
+              si su licencia no permite la libre redistribución
+              y derecho a modificación.</p><p>Generalmente, software "propietario" y software
+              "de código cerrado" son sinónimos. Sin embargo, "código 
+              cerrado" adicionalmente implica que el código fuente 
+              no puede ser visto. Debido a que el código no puede
+              verse en la mayoría del software privativo, esta 
+              diferencia generalmente no afecta. Sin embargo,
+              ocasionalmente alguien publica software propietario bajo
+              una licencia que permite a otros ver el código.
+              Equivocadamente, algunas veces llaman a esto 
+              "código abierto" o "cercano al código abierto", etc.,
+              pero es engañoso. La <span class="emphasis"><em>visibilidad</em></span> 
+              del código no es el problema, el tema importante es que 
+              estás autorizado a hacer con él. Así, la diferencia entre el
+              código cerrado o propietario es en gran parte intrascendente,
+              y ambos términos pueden tratarse como sinónimos.</p><p>Algunas veces <em class="firstterm">comercial</em> es
+              usado como sinónimo de "propietario", pero hablando
+              con propiedad, no es lo mismo. El software libre puede
+              ser software comercial. Después de todo, el software libre
+              puede venderse, siempre que los compradores no estén restringidos
+              a distribuir copias. También puede comercializarse por otras 
+              vías, por ejemplo mediante la venta de soporte, servicios y 
+              certificaciones. Hoy existen empresas multimillonarias basadas en 
+              el software libre, por tanto claramente no es intrínsecamente
+              anticomercial o contrario a las empresas. Por otro lado,
+              <span class="emphasis"><em>es</em></span> anti-proprietario por su naturaleza
+              y ésta es la clave de la diferencia con los modelos tradicionales
+              de licencia por copia.</p></dd><dt><span class="term"><em class="firstterm">Dominio público</em></span></dt><dd><p>Que no tiene derechos de autor, significa que no 
+              hay nada que tenga el derecho a restringir la copia
+              de la obra. Estar en el dominio público no es lo mismo
+              que no tener autor. Todo tiene un autor, e incluso
+              si el autor del trabajo o los autores eligen ponerlo en
+              el dominio público, no cambia el hecho de que ellos
+              lo escribieron.</p><p>Cuando un trabajo está en el dominio público,
+              material de éste puede ser incorporado en trabajos
+              con derechos de autor, y entonces <span class="emphasis"><em>
+              esa copia</em></span> del material está cubierta bajo
+              los mismos derechos de autor que el trabajo completo.
+              Pero esto no afecta a la disponibilidad del trabajo
+              original, que permanece en el dominio público. Así,
+              publicar algo en el dominio público es técnicamente
+              un modo de hacerlo "libre", de acuerdo con las 
+              directrices de la mayoría de organizaciones certificadoras
+              de software libre. Sin embargo, normalmente hay buenas
+              razones para usar una licencia en vez de publicar algo
+              en el dominio público: incluso con el software libre,
+              ciertas restricciones pueden ser útiles, no sólo
+              para el poseedor de los derechos de autor sino también
+              para los beneficiarios, como aclara la siguiente
+              sección.</p></dd><dt><span class="term"><em class="firstterm">copyleft</em></span></dt><dd><p>Una licencia que utiliza la ley de propiedad intelectual
+              para lograr el resultado contrario al derecho de autor
+              tradicional. Dependiendo de a quién preguntes, esto 
+              significa que cualquier licencia que permita las libertades
+              bajo discusión aquí, o, más estrictamente, las licencias
+              que no sólo permiten esas libertades sino que las 
+              <span class="emphasis"><em>imponen</em></span>, estipulando que las libertades
+              deben acompañar al trabajo. La Free Software Foundation usa
+              la segunda definición exclusivamente; en otros sitios,
+              es un complemento: mucha gente usa el término del mismo
+              modo que la FSF, pero otros —incluyendo a algunos
+              que escriben en los principales medios de comunicación—
+              tienden a usar la primera definición. Está claro
+              que no todo el mundo que usa el término es consciente
+              de que hay distinciones que deben hacerse.</p><p>El ejemplo clásico de la más limitada, una definición
+              más estricta es la GNU General Public License, que
+              estipula que todo trabajo derivado debe estar también bajo 
+              dicha licencia, veáse 
+              <a class="xref" href="ch09s03.html" title="La GPL y compatibilidad entre licencias">“La GPL y compatibilidad entre licencias”</a><span> más tarde en este capítulo
+              </span> para más detalles.</p></dd></dl></div></div></div></body></html>

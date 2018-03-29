@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Donner le ton</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Donner le ton"><div class="titlepage"><div><div><h1 class="title"><a id="setting-tone"/>Donner le ton</h1></div></div></div><p>Jusqu'ici, nous avons décrit des tâches réalisées à un moment
+    précis de la mise en place du projet : choisir une licence,
+    concevoir le site Web initial, etc. Mais les aspects les plus
+    importants dans le démarrage d'un projet sont dynamiques. Choisir
+    une adresse de liste de diffusion est facile ; s'assurer que les
+    conversations sur cette liste ne dérivent pas et restent productives
+    est une problématique complètement différente. Si le projet est
+    ouvert au monde après des années de développement propriétaire
+    fermé, son processus de développement va changer, et vous aurez à
+    préparer les développeurs actuels à ce changement.</p><p>Les premiers pas sont les plus difficiles, car le projet
+    manque de décisions prises et de reflèxes. La stabilité d'un projet
+    ne vient pas seulement de règles formalisées, mais d'une atmosphère
+    collective difficile à saisir et qui se développe au cours du temps.
+    On trouve souvent des règles écrites, mais elles se bornent souvent
+    à une distillation de préconisations tacites, évoluant régulièrement
+    et servant de guide effectif au projet. Les règlements écrits
+    définissent moins la culture du projet qu'ils la décrivent, et
+    encore souvent de façon approximative.</p><p>Il y a plusieurs raisons à cela. Les embauches et les hauts
+    niveau de rotation en entreprise ne sont pas si dommageables pour
+    les normes sociales qu'on pourrait le penser au premier abord. A
+    partir du moment où les changements ne sont pas trop rapides, il y a
+    toujours des périodes de recouvrement dans lesquelles les nouveaux
+    arrivés apprennent les méthodologies, puis les mette en pratique eux
+    mêmes. Voyez comment les comptines d'enfants passent les siècles.
+    Les enfants d'aujourd'hui chantent à peu près les mêmes refrains que
+    d'autres enfants il y des siècles, bien qu'aucun ne soit encore
+    vivant. Les enfants les plus jeunes entendent chanter leurs
+    camarades plus âgés, puis les chantent à leur tour. Les enfants ne
+    sont pas engagés dans un programme conscient de transmission,
+    évidemment, mais la raison pour laquelle les chansons survivent est
+    assurément le fait qu'elles sont transmises régulièrement et de
+    façon répétitive. L'échelle de temps des logiciels libres ne peut
+    être mesuré en siècles (nous le saurons un jour), mais les
+    dynamiques de transmission sont globalement les mêmes. Le niveau de
+    rotation est néanmoins plus élevé, et doit se voir compensé par un
+    effort de transmission plus actif et délibéré.</p><p>Cet effort est soutenu par le fait que les gens attendent et
+    recherchent naturellement les normes sociales. C'est la façon dont
+    les humains fonctionnent. Dans tout groupe unit par une cause
+    commune, les gens recherchent instinctivement des comportements qui
+    leur permettrait de se voir identifiés comme membre du groupe. Le
+    but des guides est d'amorcer des comportements de groupe utiles au
+    projet. Une fois mis en place, ils se perpétuerons seuls le plus
+    souvent.</p><p>Vous trouverez dans ce qui suit des exemples spécifiques de ce
+    qu'il est possible de faire pour prendre les bonnes décisions. Cette
+    liste n'a pas pour ambition l'exhaustivité mais simplement de
+    montrer qu'une ambiance collaborative aide rapidement et
+    considérablement un projet. Chaque développeur peut travailler seul,
+    mais vous pouvez faire en sorte qu'ils aient le
+    <span class="emphasis"><em>sentiment</em></span> de travailler en équipe, dans la même
+    pièce. Plus les développeurs le ressentiront, plus ils passeront de
+    temps sur le projet. Je choisi ces exemples particuliers qui
+    apparurent dans le projet Subversion (<a class="ulink" href="http://subversion.tigris.org/">http://subversion.tigris.org/</a>), pour lequel j'ai participé
+    et que j'ai observé depuis le tout début. Ils ne sont pas
+    spécifiques à Subversion; de telles situations sont communes dans
+    les projets libres, et doivent être considérés comme des
+    opportunités de démarrer les choses du bon pied.</p><div class="sect2" title="Évitez les discussions privées"><div class="titlepage"><div><div><h2 class="title"><a id="avoid-private-discussions"/>Évitez les discussions privées</h2></div></div></div><p>Même après avoir rendu le projet publique, vous et les
+      autres fondateurs serez souvent tentés de résoudre les questions
+      complexes en petit comité via un canal privé. C'est spécialement
+      vrai au début du projet, alors qu'il y a tant de décisions
+      importantes à prendre et, en général, si peu de volontaires
+      qualifiés pour les prendre. Tous les inconvénients évidents des
+      listes de discussion publiques vont alors apparaître de façon très
+      palpable : le délai inhérent aux conversations par courriel, le
+      besoin de réserver suffisamment de temps pour qu'un consensus se
+      forme, l'embarras à devoir répondre aux volontaires naïfs qui
+      pense comprendre tous les problèmes mais qui ne les comprennent
+      pas (tous les projets ont ce genre de personnes ; quelques fois
+      elles sont les contributeurs stars de l'année d'après, quelque
+      fois ils restent naïfs ); ceux qui ne comprennent pas que vous
+      désirez seulement résoudre le problème X alors qu'il leur semble
+      évident que ce problème est un sous-ensemble d'un problème Y, et
+      ainsi de suite. La tentation de prendre des décisions toutes
+      portes fermées et de les présenter comme faits accomplis, ou au
+      moins comme de fermes recommandations d'un groupe de votants uni
+      et influent, est en effet très grande.</p><p>Ne le faites pas.</p><p>Aussi longues et lourdes que ces discussions publiques
+      puissent paraître, elles sont presque toujours préférable sur le
+      long terme. Prendre d'importantes décisions en privé est comme
+      utiliser un repoussoir à contributeurs sur votre projet. Aucun
+      volontaire sérieux ne restera dans un environnement ou un conseil
+      secret prend toutes les décisions importantes. En outre, les
+      discussions privées ont des effets de bord bénéfiques en plus de
+      la simple résolution d'un éphémère problème technique :</p><p>
+        </p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>La discussion aide à former les nouveaux développeurs.
+            Vous ne savez jamais combien d'yeux suivent la conversation
+            ; même si la plupart des gens n'y participent pas, beaucoup
+            peuvent la suivre silencieusement, glanant des informations
+            sur le logiciel.</p></li><li class="listitem"><p>La discussion <span class="emphasis"><em>vous</em></span> entraîne aussi
+            dans l'art d'expliquer des problèmes techniques aux gens qui
+            ne sont pas encore autant familiarisés avec le logiciel que
+            vous l'êtes. Il s'agit d'une compétence qui requiert de la
+            pratique, et vous ne pouvez obtenir cette compétence en
+            parlant seulement avec les gens qui en savent déjà autant
+            que vous.</p></li><li class="listitem"><p>La discussion et ses conclusions seront disponibles
+            dans les archives publiques pour toujours, rendant possible
+            de démarrer de nouvelles discussions sans partir de zéro.
+            Voir <a class="xref" href="ch06s04.html#using-archives" title="Conspicuous Use of Archives">la section intitulée « Conspicuous Use of Archives »</a><span> du <a class="xref" href="ch06.html" title="Chapitre 6. Communications">Chapitre 6, <em>Communications</em></a></span>.</p></li></ul></div><p>
+      </p><p>Enfin, il faut mettre dans la balance la possibilité que
+      quelqu'un sur la liste fasse une réelle contribution à la
+      conversation. C'est difficile de dire si c'est probable, tout
+      dépend de la complexité du code et du degré de spécialisation
+      requis. Mais, si vous permettez l'anecdote, je suppute que c'est
+      plus probable qu'on peut le penser intuitivement. Sur le projet
+      Subversion, nous (les fondateurs) étions en face de ce que nous
+      croyions être un ensemble de problèmes complexes et profonds, sur
+      lesquels nous avions réfléchi dur depuis des mois, et nous
+      doutions franchement que quelqu'un sur la nouvelle liste de
+      diffusion puisse apporter une contribution utile à la discussion.
+      Alors, nous avons emprunté la voie de la facilité et nous avons
+      commencé à batailler sur des idées techniques via des courriels
+      privés, jusqu'à ce qu'un observateur du projet <sup>[<a id="idp5800160" href="#ftn.idp5800160" class="footnote">10</a>]</sup> présenti ce qui ce passait et demanda que la
+      discussion soit déplacée sur la liste publique. Nous le fîmes, un
+      peu à reculons il est vrai, et nous furent sidérés par le nombre
+      de commentaires pertinents et par les suggestions qui en ont
+      résultées. Dans de nombreux cas, les gens apportèrent des idées
+      qui ne nous étaient jamais venues à l'esprit. Il apparut qu'il y
+      avait des gens <span class="emphasis"><em>très</em></span> pointus sur cette liste ;
+      ils étaient simplement à attendre le bon appât. Il est vrai que
+      les discussions qui ont suivies prirent plus de temps que si la
+      conversation était restée privée, mais elles furent tellement plus
+      productives que cela justifiait largement cette rallonge.</p><p>Sans descendre aux généralités telle que "le groupe est
+      toujours meilleur que l'individu" (nous avons tous rencontré
+      suffisamment de groupes pour le savoir), nous pouvons mettre
+      l'accent sur le fait que les groupes excellent vraiment dans
+      certaines activités. La revue par pair massive est une ; générer
+      un grand nombre d'idées en est une autre. La qualité des idées
+      dépend de la qualité intellectuelle des contributeurs, bien
+      entendu, mais vous ne connaissez pas le type de penseurs auquel
+      vous vous adressez avant de les avoir stimulés avec un problème
+      coriace.</p><p>Bien sûr, certains discussions doivent rester privées, ce
+      livre en donnera des exemples. Mais le principe directeur devrait
+      être : <span class="emphasis"><em>s'il n'y a pas de vrai raison pour que ce soit
+      privé, ça doit être publique.</em></span></p><p>Y arriver requiert des actions effectives. Il n'est pas
+      suffisant de s'assurer que vos propres messages vont dans une
+      liste publique, vous devez aussi guider les conversations
+      inutilement privées des autres vers la liste. Si quelqu'un démarre
+      une discussion privée, et qu'il n'y aucune raison que cette
+      discussion reste privée, c'est à vous d'ouvrir une méta-discussion
+      immédiatement sur la liste. Ne commentez même pas le sujet initial
+      tant que vous n'avez pas déplacé la conversation dans un endroit
+      publique, à moins de vous assurer que la confidentialité est
+      requise. Si vous procédez de la sorte sur le long terme, les gens
+      saisiront le message assez rapidement et utiliseront la liste
+      publique par défaut.</p></div><div class="sect2" title="Tuez l'agressivité dans l'oeuf"><div class="titlepage"><div><div><h2 class="title"><a id="prevent-rudeness"/>Tuez l'agressivité dans l'oeuf</h2></div></div></div><p>Vous devez assurer une politique de tolérance zéro contre
+      les comportements agressifs ou insultants, et ce dès les tous
+      premiers message de la liste publique du projet. La tolérance zéro
+      ne signifie pas de prendre des mesures automatiques. Vous n'avez
+      pas, par exemple, à supprimer quelqu'un de la liste de diffusion
+      quand il attaque un autre contributeur, ou de lui enlever le droit
+      de commit parce qu'il a tenu des propos déplacés (en théorie, vous
+      pouvez éventuellement en arriver là, mais seulement après que tous
+      les autres moyens aient échoués -ce qui n'est pas le cas, par
+      définition, lorsque le projet démarre). La tolérance zéro signifie
+      simplement qu'aucun mauvais comportement ne demeurera sans
+      réponse. Par exemple, si quelqu'un envoi un message mélangeant un
+      commentaire technique avec une attaque <span class="emphasis"><em>ad
+      hominem</em></span> envers un autre développeur du projet, il est
+      impératif que vous répondiez à l'attaque <span class="emphasis"><em>ad
+      hominem</em></span> en premier et dans une question spécifique, et
+      seulement après à la question technique.</p><p>Il est malheureusement très facile, et régulier, que les
+      discussions constructives dérivent en de véritables pugilats. Les
+      gens ont tendance à dire par courriel ce qu'il ne diraient jamais
+      face à face. Le sujet de discussion amplifie seulement cet effet :
+      dans un débat technique, les gens pensent souvent qu'il n'y a
+      qu'une bonne réponse à une question donnée, et que tout désaccord
+      avec cette réponse peut seulement s'expliquer par l'ignorance ou
+      la stupidité de celui qui l'exprime. Il n'y a qu'un pas entre
+      qualifier de stupide la proposition technique de quelqu'un et le
+      qualifier de stupide lui-même. Il est en fait souvent difficile de
+      déterminer ou fini le débat et ou commence l'attaque personnelle ;
+      c'est la raison pour laquelle les réponses drastiques ou les
+      punitions ne sont pas une bonne idée. Lorsque vous pensez que le
+      débat s'envenime, envoyez plutôt un message mettant l'accent sur
+      l'importance de conserver la discussion amicale, sans accuser
+      quiconque d'être délibérément agressif. De tels messages de "bonne
+      conduite" ont néanmoins tendance à sonner comme une leçon de
+      maîtresse de maternelle :</p><div class="blockquote"><blockquote class="blockquote"><p>
+          <span class="emphasis"><em>Tout d'abord, veillons à éviter les potentielles
+          attaques ad hominem; par exemple celle de qualifier la
+          conception de la couche sécurité de J. de "naïve et ignorante
+          des principes de base de la sécurité informatique". Ce peut ou
+          non être vrai, mais c'est hors propos. J. a fait cette
+          proposition de bonne foi. Si elle présente des lacunes,
+          analysons les, et nous les corrigerons ou nous proposerons une
+          nouvelle architecture. Je suis persuadé que M. n'avait pas
+          l'intention de blesser J., mais la phrase était maladroite et
+          nous essayons de rester constructifs.</em></span>
+        </p><p>
+          <span class="emphasis"><em>Maintenant, sur la proposition en elle-même, je
+          pense que M. avait raison de dire que...</em></span>
+        </p></blockquote></div><p>Bien que pompeux, ce style de réponse a un effet non
+      négligeable. Si vous reprenez avec constance les débordements,
+      mais sans demander de faire ou de d'accepter des excuses, vous
+      laisser aux gens la possibilité de garder la tête froide et de
+      montrer leur meilleur jour en se comportant de façon plus
+      appropriée la fois suivante. Un des secrets est de ne jamais faire
+      de cette méta-discussion le sujet principal. Elle doit toujours
+      être traitée séparément, comme préface dans votre réponse.
+      Notifiez en passant que "les choses ne se traitent pas de cette
+      manière ici", mais retombez tout de suite sur le sujet initial
+      pour laisser la possibilité aux gens de répondre quelque chose en
+      rapport. Si quelqu'un proteste qu'il ne mérite pas votre
+      réprimande, refusez simplement de répondre à cette escalade. Vous
+      pouvez soit ne pas répondre (si vous pensez qu'il s'agissait
+      simplement d'un accès d'humeur), soit dire que vous êtes désolé si
+      vous avez réagit trop vivement et qu'il est difficile de percevoir
+      toutes les nuances dans un courriel, puis revenez au sujet
+      principal. N'insistez <span class="emphasis"><em>jamais</em></span> pour exiger des
+      excuses, que ce soit de façon publique ou privée, de quelqu'un qui
+      s'est mal comporté. C'est une bonne chose s'il décide de son
+      propre chef d'envoyer une excuse, mais en exiger ne cause que du
+      ressentiment.</p><p>L'étiquette doit être reconnue comme l'un des comportements
+      du groupe. Cela aide le projet car les développeurs peuvent être
+      dissuadés de participer (même des projets sur lesquels ils
+      aimeraient travailler) par les polémiques. Vous pouvez même ne
+      jamais vous en rendre compte; quelqu'un peut scruter la liste,
+      constater qu'il faut être armé d'une cuirasse pour participer au
+      projet, et donc décider de ne pas s'y investir du tout. Garder les
+      forums amicaux est une question de vie ou de mort sur le long
+      terme, et c'est bien plus facile à faire tant que le projet est
+      encore jeune. Une fois que l'étiquette rentre dans les moeurs,
+      vous n'aurez plus à être le seul à la promouvoir, elle le sera par
+      tous.</p></div><div class="sect2" title="Pratiquez la revue par pairs"><div class="titlepage"><div><div><h2 class="title"><a id="code-review"/>Pratiquez la revue par pairs</h2></div></div></div><p>L'une des meilleurs bonnes pratiques pour favoriser le
+      développement d'une communauté productive est de permettre aux
+      gens d'observer leur code les uns les autres. Un peu
+      d'infrastructure technique est requise pour y arriver, en
+      particulier il faut activer l'envoi de courriels sur commit (voir
+      <a class="xref" href="ch03s03.html#commit-emails" title="Commit emails">la section intitulée « Commit emails »</a> pour plus de détails). Le but est
+      d'émettre un courriel contenant les annotations et les changements
+      (diff) de chaque commit de code (voir <a class="xref" href="ch03s03.html#vc-vocabulary-diff">
+              <em class="firstterm">Diff</em>
+            </a> du <a class="xref" href="ch03s03.html#vc-vocabulary" title="Vocabulaire de la gestion de versions">la section intitulée « Vocabulaire de la gestion de versions »</a>). <em class="firstterm">La revue de
+      code</em> est la pratique consistant à consulter ces
+      courriels au fil de l'eau en y recherchant des bogues ou de
+      possibles améliorations.<sup>[<a id="idp5827296" href="#ftn.idp5827296" class="footnote">11</a>]</sup></p><p>La revue de code répond simultanément à plusieurs objectifs.
+      Il s'agit de l'exemple le plus évident de revue par pairs dans le
+      monde du libre, et elle aide à assurer un bon niveau de qualité au
+      logiciel. Chaque bogue incorporé dans la version finale l'a été
+      parce qu'il n'a pas été détecté à temps ; ainsi, plus d'yeux
+      observent les commits, plus le nombre de bogues sera limité. Mais
+      ce processus sert aussi un autre but plus indirect : il conforte
+      les gens dans l'idée que ce qu'ils font a de l'importance,
+      puisqu'il est évident que personne ne prendrait le temps de faire
+      une revue s'il ne se souciait de son effet sur le programme. Les
+      gens produisent leur meilleur travail quand ils savent que
+      d'autres l'évalueront.</p><p>Les revues doivent être publiques. Même lorsque j'ai été
+      assis avec d'autres développeurs dans la même pièce physique, et
+      que l'un d'entre nous avait fait un commit, nous prenions garde à
+      ne pas faire la revue verbalement, mais de l'envoyer plutôt sur la
+      liste. Tout le monde profite de cette revue. Les gens suivent les
+      commentaires et quelque fois y découvrent des erreurs, et même si
+      ce n'est pas le cas, cela leur rappelle que la revue est une
+      activité régulière, comme laver la vaisselle ou tondre la
+      pelouse.</p><p>Dans le projet Subversion, la revue de code n'a pas été
+      initialement un exercice régulier. Il n'y avait aucune garantie
+      que chaque commit serait revu, même on pouvait consulter une
+      modification si elle se trouvait dans notre champs d'action. Les
+      bogues se glissaient sans difficulté alors qu'ils aurait pu et
+      auraient du être filtrés. Un développeur nommé Greg Stein, qui
+      connaissait la valeur de la revue par pair d'un ancien travail,
+      décida qu'il allait montrer l'exemple en faisant la revue de
+      <span class="emphasis"><em>chaque commit</em></span> arrivant dans le référentiel.
+      Chaque modification était rapidement suivie d'un courriel de Greg
+      envoyé à la liste développeur dans lequel il disséquait le commit,
+      analysait les problèmes potentiels, et proposait quelque fois un
+      peu de code bien tourné. Instantanément, il attrapa des bogues et
+      des méthodes de programmation non optimales qui autrement auraient
+      glissées sans que personne ne s'en rende compte. Il est à noter
+      qu'il ne s'est jamais plaint d'être le seul à faire ces revues,
+      même s'il y consacrait une quantité de temps importante. Il en
+      chantait simplement les louanges dès qu'il le pouvait. Assez
+      rapidement, d'autres personnes, moi compris, commencèrent à
+      l'imiter. Quelle était notre motivation ? Non pas que Greg avait
+      jeté l'opprobre sur nous, mais il avait prouvé que la revue de
+      code était une façon intelligente de dépenser son temps, et que
+      chacun pouvait contribuer autant au projet en analysant le code
+      des autres qu'en écrivant du code soi-même. Une fois qu'il l'eu
+      démontré, ceci devint le comportement par défaut, au point qu'un
+      commit sans réaction aurait causé de l'angoisse à son émetteur, et
+      qu'il aurait demandé sur la liste si quelqu'un avait déjà pu faire
+      la revue. Plus tard, Greg trouva un travail qui ne lui laissait
+      peu de temps pour Subversion, et du arrêter ses revues régulières,
+      mais cette coutume était si bien enracinée en nous tous qu'elle
+      est toujours activement pratiquée depuis un temps
+      immémorial.</p><p>Commencez à faire des revues depuis le premier commit. Les
+      types de problèmes les plus faciles à détecter de cette façon sont
+      les vulnérabilités de sécurité, les fuites mémoire, les manques de
+      commentaires ou de documentation d'API, les effets de bord, les
+      erreurs de conception dans la hiérarchie d'appels, et d'autres
+      problèmes qui nécessitent un minimum de recul pour être détectés.
+      Néanmoins, même les problèmes à plus grande échelle comme
+      l'incapacité à mutualiser du code à un seul endroit devient
+      visible à force de revues, parce que le souvenir des revues
+      précédentes renseigne les revues courantes.</p><p>Ne vous inquiétez pas si vous ne trouver rien à commenter,
+      ou si vous de maîtrisez pas assez toutes les parties du code. Il y
+      aura souvent quelque chose à dire sur tout commit ; même si vous
+      ne trouvez rien à redire, quelque chose peut faire l'objet d'un
+      commentaire admiratif. L'important est de rendre clair le fait que
+      chaque développeur sache que ce qu'il fait est vu et compris. Bien
+      entendu, la revue du code n'absout pas les programmeurs de leur
+      responsabilité à vérifier et à tester leurs modifications avant de
+      commiter; personne ne devrait dépendre de la revue pour détecter
+      des problèmes qu'on aurait dû trouver soit-même.</p></div><div class="sect2" title="Lorsque vous ouvrez un projet propriétaire, soyez attentif à la gestion du changement"><div class="titlepage"><div><div><h2 class="title"><a id="opening-closed-projects"/>Lorsque vous ouvrez un projet propriétaire, soyez attentif
+      à la gestion du changement</h2></div></div></div><p>Si vous libérez un projet existant, sur lequel travaillent
+      des développeurs actifs et accoutumés à travailler dans un
+      environnement propriétaire, assurez vous que tous comprennent
+      qu'un changement important va en suivre, et de votre coté,
+      vérifiez que vous êtes en mesure de faire face leurs
+      réactions.</p><p>Représentez vous la situation telle qu'ils la perçoivent :
+      tout le code et les décisions sur la conception sont faites par un
+      groupe de développeurs qui connaissent tous plus ou moins autant
+      le logiciel, qui reçoivent la même pression du même management, et
+      qui connaissent leurs forces et faiblesses respectives. Vous leur
+      demandez soudain d'exposer leur code pour qu'il soit scruté par
+      des étrangers ne formant leur jugement que sur le résultat final,
+      et sans prendre en compte la pression de la hiérarchie qui a pu
+      forcer certaines décisions. Ces étrangers posent de nombreuses
+      questions, des questions qui déstabilisent les développeurs
+      lorsqu'ils réalisent que la documentation sur laquelle il avait
+      tant travaillé est <span class="emphasis"><em>toujours</em></span> inadéquate (c'est
+      inévitable). Ajoutez le fait que tous ces arrivants sont inconnus
+      et sans visage... Si l'un des développeurs manquait d'assurance,
+      imaginez à quel point ce sentiment se trouvera exacerbé quand des
+      nouveaux contributeurs lui désigneront des faiblesses dans son
+      code, et pire, devant ses collègues. A moins de disposer d'une
+      équipe de développeurs parfaits, c'est inévitable, en fait cela se
+      produira probablement pour tous. Non pas qu'ils soient de mauvais
+      programmeurs, c'est simplement qu'au dessus d'une certaine taille
+      un projet a des bogues et la revue par pairs permettra de les
+      détecter (voir <a class="xref" href="ch02s03.html#code-review" title="Pratiquez la revue par pairs">la section intitulée « Pratiquez la revue par pairs »</a><span> précédemment dans ce chapitre</span>). Dans le
+      même temps, les nouveaux arrivants ne seront pas eux mêmes sujets
+      à la revue par pairs puisqu'ils ne peuvent produire de code tant
+      qu'ils ne sont pas suffisamment familiers du projet. Pour vos
+      développeurs, cela peut être pris comme une situation de critique
+      unilatérale. Il y a donc danger de voir apparaître une mentalité
+      d'assiégés parmi les vétérans.</p><p>La meilleure façon de l'éviter est de prévenir le groupe de
+      ce qui va arriver. Expliquer lui que l'inconfort initial est
+      parfaitement normal, et rassurez en assurant que les choses iront
+      en s'améliorant. Certains de ces messages peuvent rester privés,
+      avant que le projet ne soit ouvert. Mais vous pouvez également
+      trouver utile d'informer sur la liste publique qu'une nouvelle
+      méthode de développement pour le projet se met en place, et qu'un
+      temps d'adaptation sera nécessaire. La meilleur chose que vous
+      puissiez faire est de piloter par l'exemple. Si vous constatez que
+      vos développeurs ne répondent pas suffisamment aux questions des
+      débutants, leur demander simplement d'y répondre plus ne fera pas
+      avancer les choses. Ils peuvent manquer de discernement entre ce
+      qui nécessite une réponse ou pas, ou ne pas savoir comment
+      prioriser le travail de développement face à la nouvelle charge
+      amenée par cette communication externe. Le moyen de les faire
+      participer est de participer vous mêmes. Soyez sur la mailing
+      liste publique, et répondez y à des questions. Si vous n'avez pas
+      l'expertise pour répondre à une question, désignez clairement un
+      développeur qui la possède, et vérifiez qu'il fournira une
+      solution ou au moins une réponse. Il peut être naturellement
+      tentant sur le long terme de glisser vers des discussion privées,
+      ce qui constituait après tout la situation antérieure. Assurez
+      vous de vous inscrire sur les mailing listes internes sur
+      lesquelles cela peut se produire pour être en mesure de demander à
+      déplacer ces discussions vers la mailing liste publique.</p><p>Il existe d'autres considérations de long terme à prendre en
+      compte lorsqu'on ouvre un projet propriétaire. <a class="xref" href="ch04.html" title="Chapitre 4. Social and Political Infrastructure">Chapitre 4, <em>Social and Political Infrastructure</em></a> explore les techniques de
+      management permettant de faire travailler avec succès
+      contributeurs bénévoles et salariés, et <a class="xref" href="ch09.html" title="Chapitre 9. Licenses, Copyrights, and Patents">Chapitre 9, <em>Licenses, Copyrights, and Patents</em></a>
+      discute de la nécessité d'un travail juridique consciencieux
+      lorsqu'on ouvre une base de code privée qui peut contenir du code
+      écrit ou "détenu" par d'autres tiers.</p></div><div class="footnotes"><br/><hr/><div class="footnote"/><div class="footnote"><p><sup>[<a id="ftn.idp5827296" href="#idp5827296" class="para">11</a>] </sup>C'est en général de cette façon qu'est réalisée la revue
+          de code dans les projets libres. Dans des projets plus
+          centralisés, cette revue peut également se faire en réunissant
+          plusieurs personnes et en analysant des listings de code
+          source à la recherche de problèmes spécifiques ou de patrons
+          de conception à mettre en place.</p></div></div></div></body></html>

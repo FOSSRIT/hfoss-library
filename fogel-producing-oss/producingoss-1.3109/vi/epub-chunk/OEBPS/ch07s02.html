@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Nhánh phát hành</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Nhánh phát hành"><div class="titlepage"><div><div><h1 class="title"><a id="release-branches"/>Nhánh phát hành</h1></div></div></div><p>
+Từ cái nhìn của người phát triển, dự án phần mềm miễn phí luôn ở trong
+trạng thái phát hành liên tục. Người phát triển luôn sử dụng mã nguồn mới nhất,
+vì họ muốn thử nghiệm và tìm lỗi, theo dõi sát sao dự án và để ý tới 
+những chức năng chưa hoàn thiện. Họ thường xuyên cập nhật kho của họ hàng ngày,
+thậm chí vài lần một ngày, kiểm tra các thay đổi và luôn kỳ vọng rằng
+những người phát triển khác có được bản copy trong vòng 24 tiếng</p><p>
+Sau đó, làm thế làm để phát hành phiên bản chính thức? Chúng ta chỉ cần
+lấy một phiên bản bất kỳ trong cây, ví dụ 3.5.0 và công bố với thế giới?
+Thông thường người ta không làm như vậy. Đàu tiên, điều kiện tiên quyết
+phải là: toàn bộ cây dự án "sạch" (nghĩa là không còn lỗi). Những chức năng
+mới có thể ở mức độ hoàn thành khác nhau. Ai đó có thể sẽ kiểm tra những thay đổi
+lớn để tìm lỗi và sửa, nhưng điều này phải làm trong quá trình phát triển,
+nghĩa là trước khi bản chính thức phát hành. Nếu làm vậy, snapshot sẽ tồn tại
+cho tới khi mọi tranh luận về nó kết thúc. Những trao đổi không liên quan
+có thể diễn ra đồng thời và chúng ta phải chờ nó kết thúc.
+Tuy nhiên, trong thực tế, những tranh luận như vậy có thể không kết thúc.</p><p>
+Trong cả hai trường hợp dùng snapshot cho toàn bộ cây dự án sẽ ảnh hưởng
+đến những chức năng đang được phát triển ngay cả khi snapshot này đã
+sẵn sàng phát hành. Giả sử snapshot này là 3.5.0; snapshot tiếp theo sẽ 
+là 3.5.1 chứa những bản sửa lỗi của 3.5.0. Nếu cả hai phiên bản này đều 
+nằm trên một cây của kho phát triển, người phát triển sẽ nhìn nhận thế nào?
+Đâu là bản "phát triển" và đâu là bản "chính thức"? Họ không thể thêm
+chức năng mới vào cả hai phiên bản và xảy ra sự không tương thích về 
+phiên bản. Không phải tất cả mọi người đều chú ý tới những bản vá cho 3.5.0,
+họ đành phải thụ đồng chờ cho cả hai phiên bản hoàn thành.</p><p>
+Giải pháp cho vấn đề trên là sử dụng 
+<em class="firstterm">phát hành rẽ nhánh</em>.  
+Một bản "phát hành rẽ nhánh" trong một hệ thống quản lý phiên bản 
+<a class="xref" href="ch03s03.html#vc-vocabulary-branch"><em class="firstterm">branch</em></a>)
+là luồng phát triển độc lập với luồng phát triển chính..
+Khái niệm này cũng đuợc dùng khá rộng rãi trong phát triển phần mềm thương mại.
+Tuy nhiên, trong môi trường thương mại, "rẽ nhánh" đôi khi được coi là hoang phí
+tài nguyên và họ bị ép bởi hạn nộp hàng và đành phải sử dụng một hay ít cây phát triển. </p><p>
+Tuy nhiên, phát hành nhánh là điều bắt buộc trong các dự án mã mở. 
+Một số dự án không phát hành nhánh và hệ quả là lập trình viên phải
+"ngồi chơi xơi nước" chờ tới khi phát hành xong. Tóm lại, hậu quả là xấu
+vì vòng phát triển bị đình trệ. Thứ hai, chất lượng cần đạt mức tốt hơn
+nó hiện có, vì khá ít người làm việc trên một nhánh và họ phải làm gấp
+để những người khác có thể tiến hành tiếp công việc của họ. Thứ ba, điều 
+này phân rã đội phát triển về mặt tâm lý và họ rơi vào trình trạng phải
+tương tác với nhau một cách không cần thiết. Người phát triển, cho dù
+không có việc gì làm, vẫn phải theo dõi các bản phát hành và tự hỏi
+"không rõ nó có liên quan tới tôi và tôi có phải làm gì không?"</p><div class="sect2" title="Nguyên lý phát hành rẽ nhánh"><div class="titlepage"><div><div><h2 class="title"><a id="release-branch-mechanics"/>Nguyên lý phát hành rẽ nhánh</h2></div></div></div><p>
+Nguyên lý để tạo bản phát hành rẽ nhánh phụ thuộc vào từng hệ thống
+quản lý phiên bản. Tuy nhiên, có những khái niệm chung cho mọi hệ thống.
+Một rẽ nhánh nói chung được triết từ nhánh chính (trunk). Ở đây, thông thường,
+"trunk" là cành chính, không bị ràng buộc bởi các phát hành. Bản phát 
+hành rẽ nhánh đầu tiên bắt đầu bằng "1.0" được triết từ nhánh chính. 
+Với CVS, lệnh nhánh chạy như sau</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b RELEASE_1_0_X
+</pre><p>với Subversion</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.0.x
+</pre><p>(All these examples assume a three-component release numbering
+system.  While I can't show the exact commands for every version
+control system, I'll give examples in CVS and Subversion and hope that
+the corresponding commands in other systems can be deduced from those
+two.)</p><p>Notice that we created branch "1.0.x" (with a literal "x")
+instead of "1.0.0".  This is because the same minor line—i.e.,
+the same branch—will be used for all the micro releases in that
+line.  The actual process of stabilizing the branch for release is
+covered in
+<a class="xref" href="ch07s03.html" title="Stabilizing a Release">phần “Stabilizing a Release”</a><span>
+later in this chapter</span>.  Here we are
+concerned just with the interaction between the version control system
+and the release process.  When the release branch is stabilized and
+ready, it is time to tag a snapshot from the branch:</p><pre class="screen">
+$ cd RELEASE_1_0_X-working-copy
+$ cvs tag RELEASE_1_0_0
+</pre><p>or</p><pre class="screen">
+$ svn copy http://.../repos/branches/1.0.x http://.../repos/tags/1.0.0
+</pre><p>That tag now represents the exact state of the project's source
+tree in the 1.0.0 release (this is useful in case anyone ever needs to
+get an old version after the packaged distributions and binaries have
+been taken down).  The next micro release in the same line is likewise
+prepared on the 1.0.x branch, and when it is ready, a tag is made for
+1.0.1.  Lather, rinse, repeat for 1.0.2, and so on.  When it's time to
+start thinking about a 1.1.x release, make a new branch from
+trunk:</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b RELEASE_1_1_X
+</pre><p>or</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.1.x
+</pre><p>Maintenance can continue in parallel along both 1.0.x and 1.1.x,
+and releases can be made independently from both lines.  In fact, it
+is not unusual to publish near-simultaneous releases from two
+different lines.  The older series is recommended for more
+conservative site administrators, who may not want to make the big
+jump to (say) 1.1 without careful preparation.  Meanwhile, more
+adventurous people usually take the most recent release on the highest
+line, to make sure they're getting the latest features, even at the
+risk of greater instability.</p></div><p>This is not the only release branch strategy, of course.  In
+some circumstances it may not even be the best, though it's worked out
+pretty well for projects I've been involved in.  Use any strategy that
+seems to work, but remember the main points: the purpose of a release
+branch is to isolate release work from the fluctuations of daily
+development, and to give the project a physical entity around which to
+organize its release process.  That process is described in detail in
+the next section.</p></div></body></html>

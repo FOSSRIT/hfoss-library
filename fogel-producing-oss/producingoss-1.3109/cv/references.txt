@@ -1,0 +1,27 @@
+References:
+
+* Greg Stein  <gstein@gmail.com>
+  Independent developer
+  Former Chairman, Apache Software Foundation
+  Former Tech Lead / Manager, Google Inc.
+  Subversion developer
+  (650) 714-1572  [cell]  (California -- Pacific time zone)
+
+* Brian Fitzpatrick  <fitz@red-bean.com>
+  Google Open Source Program Office
+  Founder/Director of Google's "Data Liberation Front" Initiative
+  Co-author, "Version Control With Subversion" (O'Reilly, 2004)
+  Subversion developer
+  (312) 925-0194  [cell]  (Chicago -- Central time zone)
+
+* Ben Collins-Sussman  <sussman@red-bean.com>
+  Google Open Source Program Office
+  Co-author, "Version Control With Subversion" (O'Reilly, 2004)
+  Subversion developer
+  (773) 636-3809  [cell]  (Chicago -- Central time zone)
+
+* C. Michael Pilato  <cmpilato@collab.net>
+  Software Engineer, CollabNet Inc.
+  Co-author, "Version Control With Subversion" (O'Reilly, 2004)
+  Subversion developer
+  (704) 807-4149  [cell]  (North Carolina -- Eastern time zone)

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>选择许可证并应用</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="选择许可证并应用"><div class="titlepage"><div><div><h1 class="title"><a id="license-quickstart"/>选择许可证并应用</h1></div></div></div><p>这部分是关于选择许可证的快速粗糙指南。阅读<a class="xref" href="ch09.html" title="Chapter 9. 许可证，版权和专利">Chapter 9, <em>许可证，版权和专利</em></a>可以理解不同许可证的法律含义细节，以及这些许可证如何影响人们将你的软件与其他自由软件混合的能力。</p><p>确实有大量可供选择的许可证。其中大多数我们这里不必讨论，因为他们通常是为了满足公司或个人的特定法律需求，不会适合你的项目。我们会限制为大多数常见的许可证；大多数情况下，你会从其中选择一个。</p><div class="sect2" title="“可以做任何事情的”许可证"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-non-gpl"/>“可以做任何事情的”许可证</h2></div></div></div><p>如果你能够接受你的项目代码会潜在的使用到私有程序中去，可以选择<em class="firstterm">MIT/X-样式</em>的许可证。这是一些最小许可证中最简单的一种，只保留署名版权（实际没有限制拷贝）并指明代码没有任何保证。细节见<a class="xref" href="ch09s04.html#license-choosing-mit-x" title="MIT / X Window System License">the section called “MIT / X Window System License”</a>。</p></div><div class="sect2" title="GPL"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-gpl"/>GPL</h2></div></div></div><p>如果你不希望你的代码在私有程序中使用，可以使用GNU的通用公共许可证。GPL可能是当世最广泛公认得自由软件许可证。在本质上是一个巨大的优势，因为许多潜在的用户和贡献者已经对此许可证十分熟悉。更多细节看<span><a class="xref" href="ch09.html" title="Chapter 9. 许可证，版权和专利">Chapter 9, <em>许可证，版权和专利</em></a>的</span><a class="xref" href="ch09s04.html#license-choosing-gpl" title="GNU General Public License">the section called “GNU General Public License”</a>。</p></div><div class="sect2" title="如何为你的软件应用许可证"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-applying"/>如何为你的软件应用许可证</h2></div></div></div><p>一旦你选择了一个许可证，你必须在项目首页注明。你不必引入许可证的实际文本；只需要提供许可证的名称，并提供到完整许可证文本的链接。</p><p>这告知公众你<span class="emphasis"><em>希望</em></span>软件按照何种许可证发布，但是对于法律目的还不足够。这个软件本身必须包含许可证。一个常见的做法是将许可证全文保存到一个叫做<code class="filename">COPYING</code>（或<code class="filename">LICENSE</code>）文件中，其中包含了许可证的全文，然后还要注意在每个源文件的开头，注明版权日期、所有者和许可证，以及何处可以找到版权全文。</p><p>这个模式也有许多变种，所以我们这里看一个实例。GNU的GPL说可以在每个源文件的开头放置如下的提醒：</p><pre class="screen">
+Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</pre><p>并不是说随程序收到的许可证拷贝在文件<code class="filename">COPYING</code>中，而是它通常放置在那个地方（你可以在上面的声明中直接注明位置）。这个模板给了获取许可证版权的地理地址。另一个常见的方法是提供包含许可证的网页链接。只要使用你的判断并指出你认为版权能够永久保存的位置，也可以是你项目网站的某个位置。一般来说，你在每个源文件放置的通告不会和上面这个完全一样，只需要其包含版权持有者和日期，以及版权的名称，并明确指明完全许可证的位置即可。</p></div></div></body></html>

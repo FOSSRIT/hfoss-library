@@ -1,0 +1,102 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Apéndice D. Ejemplo de Instrucciones para Informar sobre Fallos</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="index.html" title="Producir Software de Código Abierto"><link rel="prev" href="bikeshed-full.html" title="Apéndice C. Why Should I Care What Color the Bikeshed Is?"><link rel="next" href="copyright.html" title="Apéndice E. Copyright"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Apéndice D. Ejemplo de Instrucciones para Informar sobre Fallos</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bikeshed-full.html">Anterior</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="copyright.html">Siguiente</a></td></tr></table><hr></div><div class="appendix" title="Apéndice D. Ejemplo de Instrucciones para Informar sobre Fallos"><div class="titlepage"><div><div><h2 class="title"><a name="bug-reporting"></a>Apéndice D. Ejemplo de Instrucciones para Informar sobre Fallos</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Esto es una copia editada ligeramente de las instrucciones en línea
+del proyecto Subversion para nuevos usuarios sobre cómo informar sobre
+fallos. Ver <a class="xref" href="managing-volunteers.html#users-to-volunteers" title="Treat Every User as a Potential Volunteer">&#8220;Treat Every User as a Potential Volunteer&#8221;</a><span> en
+<a class="xref" href="managing-volunteers.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <i>Coordinando a los Voluntarios</i></a></span> para saber porque es importante 
+que un proyecto tenga tales instrucciones. El documento original se localiza en 
+<a class="ulink" href="http://svn.collab.net/repos/svn/trunk/www/bugs.html" target="_top">http://svn.collab.net/repos/svn/trunk/www/bugs.html</a>.</p><pre class="screen">
+                       Informar sobre Fallos en Subversion	
+
+Este documento explica cómo y dónde informar sobre fallos. (no es una lista
+de todos los fallos pendientes - pero se puede conseguir eso aquí)
+
+¿Dónde informar sobre un fallo?
+-----------------------------
+
+    * Si el fallo está en el propio Subversion, mandar un correo a
+      users@subversion.tigris.org. Una vez que se ha confirmado que es 
+      un fallo, alguien, posiblemente tú, puede introducirlo en el 
+      gestor de ""ejemplares"". (o si estás bastante seguro del fallo, 
+      sigue adelante y publicalo directamente en nuestra lista de desarrollo,
+      dev@subversion.tigris.org. Preo si no estás seguro, es mejor que se
+      publique primero en users@; allí alguien puede decirte si el comportamiento
+      que se encontró es el esperado o no.)
+
+    * Si el fallo está en la librería APR, por favor infórmalo en estas
+      dos listas de correo: dev@apr.apache.org, dev@subversion.tigris.org.
+
+    * Si el fallo está en la librería de HTTP Neon, por favor infórmalo en:
+      neon@webdav.org, dev@subversion.tigris.org.
+
+    * Si el fallo está en el Apache HTTPD 2.0, por favor infórmalo en 
+    	estas dos listas de correo: dev@httpd.apache.org,
+      dev@subversion.tigris.org. La lista de correo para el desarrollador de 
+      Apache httpd tiene mucho tráfico, así que tu publicación del informe
+      del fallo puede que sea pasada por alto. También debes introducir
+      un informe del fallo en http://httpd.apache.org/bug_report.html.
+
+    * Si el fallo está en tu ""alfombra"", por favor dale un abrazo y 
+    	déjalo ""cómodo"". 
+
+¿Cómo informar sobre un fallo?
+----------------------------
+
+Primero, asegúrate de que es un fallo. Si Subversion no se comporta como esperas, 
+mira la documentación y los archivos de las listas de correo buscando alguna
+evidencia que indique que debería comportarse como esperas. Por supuesto, 
+si es una cosa de sentido común, como que Subversion ha destruído tus datos
+y ha hecho que salga humo de tu monitor, entonces puedes fiarte de tu juicio. 
+Pero si no estás seguro, sigue adelante y pregunta primero en las lista
+de correo de usuarios, users@subversion.tigris.org, o pregunta en IRC, 
+irc.freenode.net, en el canal #svn.
+
+Una vez que has demostrado que es un fallo, lo más importante que debes hacer
+es proponer una descripción simple y una receta para reproducirlo. Por ejemplo, 
+si el fallo, como lo encontraste inicialmente, implica cinco ficheros
+sobre diez cambios, intenta hacer que se reproduzca con solo un fichero
+y un cambio. Cuanto más simple es la receta para reproducirlo, más
+probable es que un desarrollador tenga éxito al reproducir el fallo
+y en arreglarlo. 
+
+Cuando escribas la receta para reproducirlo, no escribas una descripción
+inversa de lo que hiciste para que ocurriera el fallo. Por el contrario, 
+da una transcripción literal de la serie exacta de comandos que ejecutaste, 
+y sus salidas. Utiliza la función cortar-y-pegar para este fin. Si hay ficheros
+implicados, asegurate incluir los nombres de los ficheros, e incluso su 
+contenido si piensas que podría ser relevante. Lo mejor es empaquetar
+tu receta para reproducirlo en un archivo de comandos, lo cual ayuda mucho.
+
+<span class="emphasis"><em>Una sana comprobación rápida: ¿*estás* utilizando la versión más
+reciente de Subvesion?, ¿no? :-) Posiblemente el fallo ya se ha corregido; 
+deberías probar tu receta para reproducir el fallo en el árbol de desarrollo
+de Subversión más reciente.</em></span>
+
+Además de la receta para reproducirlo, también necesitaremos una
+descripción completa del entorno donde se reprodució el error. 
+Esto es:
+
+    * Tu sistema operativo
+    * La versión liberada y/o revisión de Subversion
+    * El compilador y las opciones de configuración con las que ""construíste"" Subversion 
+    * Cualquier modificación personal que hiciste a Subversion
+    * La versión de la BD de Berkeley  con la que estás corriendo Subversion, si usas un BD
+    * Cualquier otra cosa que podría ser posiblemente relevante. Mejor tener demasiada información
+    	más que tener demasiada poca. 
+        
+Una vez que tienes todo esto, estás listo para escribir el informe. Empieza
+con una descripción clara del fallo en si. Es decir, di como esperabas que 
+Subversion se comportara, y contrástalo con como realmente se comportó. 
+Aunque el fallo puede parecerte obvio a ti, puede no ser tan obvio para
+otra persona, por tanto es mejor evitar las adivinanzas. Sigue con la descripción
+del entorno, y la receta para reproducirlo. Si también quieres incluir 
+alguna especulación sobre la causa, e inclusive un parche para arreglar
+el problema, sería genial - ver http://subversion.apache.org/docs/community-guide/#patches 
+con las instrucciones para mandar parches.
+
+Publica toda esta información en dev@subversion.tigris.org, o si ya lo has hecho
+y has pedido que se publique un ""ejemplar"", entonces ve al Gestor de ""Ejemplares""
+y sigue las instrucciones de allí.
+
+Gracias. Sabemos que es mucho trabajo publicar un informe de fallos efectivo, 
+pero a un buen informe puede ahorrar horas de tiempo a un desarrollador, 
+y hace que los fallos tengan más probabilidad de ser arreglados.
+</pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bikeshed-full.html">Anterior</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="copyright.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Apéndice C. Why Should I Care What Color the Bikeshed Is? </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Apéndice E. Copyright</td></tr></table></div></body></html>

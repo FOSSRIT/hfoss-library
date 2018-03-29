@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Konsensbasierte Demokratie</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Konsensbasierte Demokratie"><div class="titlepage"><div><div><h1 class="title"><a id="consensus-democracy"/>Konsensbasierte Demokratie</h1></div></div></div><p>Mit zunehmenden Alter neigen Projekte dazu, vom Modell des
+gütigen Diktators zu offeneren demokratischen Systemen zu wechseln.
+Das ist nicht zwangsläufig auf Unzufriedenheit mit einem bestimmten
+gütigen Diktator zurückzuführen. Ein gemeinschaftliches
+Regierungssystem ist auf Dauer einfach stabiler. Immer wenn ein
+gütiger Diktator zurücktritt, oder versucht die Entscheidungsgewalt
+gleichmäßiger zu verteilen, bekommt die Gruppe eine Gelegenheit, ein 
+neues, nicht-diktatorisches System einzuführen – sich sozusagen
+eine neue Verfassung zu geben. 
+Die Gruppe wird diese Gelegenheit vielleicht nicht beim ersten oder 
+zweiten Mal wahrnehmen, doch letztendlich wird sie es;
+sobald sie es tut, ist es unwahrscheinlich, dass das jemals rückgängig
+gemacht wird. Dieser Vorgang ist auch logisch: Wenn eine Gruppe
+bestehend aus N Personen, einer bestimmten Person Macht zuspräche, 
+würde das bedeuten, dass N - 1 Personen damit einverstanden
+wären, ihre eigene Macht zu verringern. Menschen können sich auf so etwas 
+im Allgemeinen nicht einigen. Selbst wenn, wäre das entstandene System
+auch nur bedingt eine Diktatur: Ein von der Gruppe erkorener gütiger
+Diktator kann genau so gut durch die Gruppe wieder abgesetzt werden.
+Sobald ein Projekt von der Führung durch eine einzelne charismatische
+Person zu einem formaleren gemeinschaftlichen System wechselt, wird es
+schwerlich einen Schritt zurück tun.</p><p>Die Einzelheiten dieser Systeme variieren zwar erheblich, es
+gibt aber zwei Gemeinsamkeiten: Erstens, die Gruppe arbeitet meist 
+im Konsens; zweitens, es gibt eine formale Einrichtung zur 
+Abstimmung, auf die man zurückgreifen kann, sobald kein Konsens 
+erreicht werden kann.</p><p><em class="firstterm">Konsens</em> bedeutet lediglich eine 
+Vereinbarung, mit der jeder leben kann. Es ist kein unklarer Zustand:
+Eine Gruppe hat Konsens erreicht, wenn jemand behauptet, man habe sich 
+geeinigt und keiner widerspricht. Die Person, die den Konsens 
+konstatiert, sollte natürlich genau formulieren worauf man sich einigt,
+und welche konkreten Schritte sich daraus ergeben, falls diese nicht
+offensichtlich sind.</p><p>Die meisten Unterhaltungen in einem Projekt drehen sind um 
+technische Themen, z.B. den besten Weg, einen Fehler zu beheben, ob eine
+neue Funktion hinzugefügt werden soll oder nicht, wie streng 
+Schnittstellen dokumentiert werden sollen, usw. Konsens-basierte
+Entscheidungen funktionieren gut, weil sie nahtlos mit der technischen 
+Diskussion verlaufen. Am Ende der Diskussion ist man sich meist 
+über den richtigen Kurs einig. Oft schreibt jemand eine abschließende 
+Zusammenfassung der Entscheidungen, und schlägt dadurch implizit 
+den Konsens vor. So gibt es eine letzte Möglichkeit, Einspruch 
+zu erheben, um das Thema gründlicher zu besprechen.</p><p>Bei kleinen, nicht kontroversen Entscheidungen ist der Konsensvorschlag 
+implizit. Wenn ein Entwickler zum Beispiel spontan einen Commit macht, 
+um einen Fehler zu beheben, ist das zugleich ein Konsensvorschlag: 
+"Ich nehme an, dass wir alle darüber einstimmen, dass 
+dieser Fehler behoben werden muss und dies der Weg dazu ist". 
+Natürlich sagt das der Entwickler nicht tatsächlich; Er macht 
+einfach den Commit, und die Anderen im Projekt machen sich nicht 
+die Mühe, ihre Zustimmung zu geben, da Schweigen hier Zustimmung 
+bedeutet. Wenn jemand einen Commit macht, bei dem sich herausstellt,
+dass es <span class="emphasis"><em>keinen</em></span> Konsens gab, wird die Änderung so 
+besprochen, als wäre sie noch gar nicht gemacht. Der Grund dafür ist 
+Thema des nächsten Abschnitts.</p><div class="sect2" title="Versionsverwaltung bedeutet Entspannung"><div class="titlepage"><div><div><h2 class="title"><a id="version-control-relaxation"/>Versionsverwaltung bedeutet Entspannung</h2></div></div></div><p>Die Tatsache, dass der Quellcode des Projekts in der 
+Versionsverwaltung gehalten wird, hat zur Folge, dass die meisten 
+Entscheidungen leicht rückgängig gemacht werden können. Der häufigste
+Fall ist, dass jemand einen Commit in der falschen Annahme ausführt,
+dass alle einverstanden seien, und sich kurze Zeit später mit Einwänden 
+konfrontiert zu sehen. Diese Einwände beginnen im Allgemeinen mit der
+obligatorischen Entschuldigung dafür, dass man die vorangegangene
+Diskussion verpasst habe, wobei man dies auslassen kann, falls in den
+Archiven der Mailingliste keine Aufzeichnung der Diskussion zu
+finden sind. So oder so sollte der Ton nach dem Commit nicht anders 
+sein als davor. Jede Änderung kann rückgängig gemacht werden, 
+zumindest solange, bis davon abhängige Änderungen eingeführt werden
+(wie neuer Code, der nicht mehr funktionieren würde, wenn man die 
+Änderung plötzlich herausnehmen würde). Die Versionsverwaltung eröffnet 
+dem Projekt die Möglichkeit, Auswirkungen schlechter oder übereilter 
+Entscheidungen rückgängig zu machen. Das wiederum gibt den Leuten 
+die Freiheit, sich in der Frage auf ihren Instinkten zu verlassen, 
+wie viel Rücksprache eine Aktion erfordert.</p><p>Der Vorgang der Konsenssuche muss deshalb auch nicht sonderlich 
+formal sein. In den meisten Projekten läuft das nach Gefühl.
+Kleine Änderungen können ohne Diskussion erledigt werden, oder nach
+minimaler Diskussion und beiläufigem Abnicken. Bei größeren
+Änderungen, besonders solchen die eine Menge Code instabil machen 
+könnten, sollten die Beteiligten ein bis zwei Tage warten, bevor sie 
+Konsens annehmen, denn bei einer so wichtigen Diskussion sollte 
+niemand übergangen werden, nur weil er seine E-Mails nicht oft 
+genug abgerufen hat.</p><p>Wenn sich also jemand sicher ist, was getan werden muss, sollte er 
+es einfach durchziehen. Das gilt nicht nur für Fehlerbehebungen, sondern 
+auch für Aktualisierungen der Website, Änderungen an der Dokumentation 
+und alles andere, für das Kontroversen unwahrscheinlich sind. Es 
+gibt selten Fälle, bei denen etwas rückgängig gemacht werden muss, und 
+diese können jeder für sich behandelt werden. Natürlich sollte man 
+Menschen nicht zu Eigensinnigkeit ermutigen. Es gibt immer noch einen
+psychologischen Unterschied zwischen einer Entscheidung, die zur 
+Debatte steht und einer, die bereits getroffen wurde, selbst wenn sie 
+technisch umkehrbar ist. Menschen haben das Gefühl, dass Bewegung
+mit Tatkraft einhergeht, und sind deshalb seltener bereit eine Änderung
+rückgängig zu machen, als sie von vornherein zu verhindern. Wenn ein
+Entwickler diese Tatsache missbraucht, indem er eine potentiell
+kontroverse Änderung zu schnell einpflegt, kann und sollte man sich 
+beschweren und dem Entwickler engere Grenzen setzen, bis hier Besserung 
+eintritt.</p></div><div class="sect2" title="Wenn kein Konsens möglich ist, stimme ab!"><div class="titlepage"><div><div><h2 class="title"><a id="voting"/>Wenn kein Konsens möglich ist, stimme ab!</h2></div></div></div><p>Zwangsläufig wird es Debatten geben, bei denen man sich einfach nicht 
+einig wird. Wenn alle anderen Möglichkeiten fehlschlagen, einen 
+Stillstand aufzulösen, sollte man abstimmen. Bevor aber eine Abstimmung 
+stattfinden kann, muss es eine klare Auswahl auf dem Stimmzettel
+geben. Auch hier läuft die technische Diskussion glücklicherweise mit den 
+Entscheidungsabläufen des Projekts zusammen. Die Art von Fragen, die
+zu einer Abstimmung führen, drehen sich oftmals um komplexe, 
+mehrschichtige Angelegenheiten. Bei jeder dieser komplexen Diskussionen
+gibt es meistens ein oder zwei Personen mit der Rolle des
+<em class="firstterm">ehrlichen Vermittlers</em>: sie fassen periodisch 
+die verschiedenen Argumente zusammen und behalten den Überblick über 
+die zentralen Streitpunkte (und Übereinstimmungen). Diese Zusammenfassungen 
+helfen allen, den Fortschritt einzuschätzen und erinnern daran, welche Punkte 
+noch offen sind. Sie dienen auch als Prototypen für die Stimmzettel, 
+sollte es zur Abstimmung kommen. Wenn die Vermittler ihre Arbeit gut 
+machen, werden sie glaubhaft abstimmen können, sobald das nötig wird, 
+und die Gruppe wird diese Stimmzettel akzeptieren. Die 
+Vermittler können an der Debatte teilnehmen; es ist nicht nötig, dass 
+sie sich aus dem Schlachtgetümmel heraushalten, solange sie die 
+Ansichten Anderer verstehen und angemessen repräsentieren können, und 
+die Meinungen ihrer Partei sie nicht daran hindert, den Stand der 
+Diskussion auf eine neutrale Art zusammenzufassen.</p><p>Der tatsächliche Inhalt des Stimmzettels ist normalerweise nicht
+kontrovers. Bis es zu einer Abstimmung kommt, hat sich die 
+Meinungsverschiedenheit auf ein paar Kernpunkte reduziert, mit
+erkennbaren Namen und kurzen Beschreibungen. Ab und zu wird ein
+Entwickler die Form des Stimmzettels beanstanden. Manchmal sind diese
+Bedenken gerechtfertigt, wenn beispielsweise ein wichtiger Punkt auf
+dem Stimmzettel ausgelassen oder nicht richtig beschrieben wurde.
+Zuweilen kann ein Entwickler aber auch lediglich die Absicht haben,
+das Unausweichliche hinauszuschieben, vielleicht mit dem Wissen, dass
+die Wahl nicht zu seinen Gunsten ausfallen wird. Siehe 
+<a class="xref" href="ch06s03.html" title="Schwierige Leute">„Schwierige Leute“</a><span> im Kapitel
+<a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span> für eine Beschreibung wie 
+man mit solchen Quertreibern umgehen sollte.</p><p>Denken Sie daran, die Wahlform festzulegen, da es viele
+verschiedene gibt und es falsche Annahmen darüber geben könnte,
+welche Form benutzt wird. Meistens ist eine
+<em class="firstterm">Zustimmungs-Wahl</em> eine gute Entscheidung, bei 
+der jeder Wähler für so viele der Kandidaten auf den Stimmzettel
+stimmen kann wie er möchte. Zustimmungs-Wahlen sind einfach zu 
+erklären und auszuzählen, und im Gegensatz zu anderen Wahlsystemen 
+erfordern sie nur einen Wahlgang. Siehe 
+<a class="ulink" href="http://de.wikipedia.org/wiki/Wahl_durch_Zustimmung">http://de.wikipedia.org/wiki/Wahl_durch_Zustimmung</a>
+für weitere Details über Zustimmungs-Wahlen. Lassen Sie sich aber
+nicht zu einer Debatte verleiten, welches Wahlsystem benutzt werden
+soll (dann fänden Sie sich schnell in einer Debatte über ein Wahlsystem, 
+um über ein Wahlsystem abzustimmen!). Zustimmungs-Wahlen sind auch gut,
+weil es sehr wenig an ihnen zu beanstanden gibt – sie
+sind so gerecht, wie ein Wahlsystem nur sein kann.</p><p>Und schließlich sollten die Wahlen öffentlich gehalten werden. 
+Es gibt keinen Grund für Geheimhaltung oder Anonymität bei einer Wahl, 
+bei der zuvor sowieso öffentlich debattiert wurde. Lassen Sie jeden Beteiligten
+seine Stimmen an die Mailingliste schicken, damit jeder Beobachter
+selber die Ergebnisse nachrechnen und überprüfen kann, und alles in den
+Archiven aufgezeichnet wird.</p></div><div class="sect2" title="Wann sollte abgestimmt werden?"><div class="titlepage"><div><div><h2 class="title"><a id="when-to-vote"/>Wann sollte abgestimmt werden?</h2></div></div></div><p>Das schwerste bei Wahlen ist zu bestimmen, wann es dafür Zeit
+ist. Im allgemeinen sollten Wahlen sehr selten sein – als letztes
+Mittel, wenn alle anderen fehlgeschlagen sind. Betrachten Sie Wahlen 
+nicht als eine tolle Möglichkeit, Debatten zu klären. Das sind sie 
+nicht. Sie beenden Diskussionen und dadurch auch kreative Überlegungen
+zu dem Problem. So lange die Diskussion weitergeht, kann jemand auf
+eine neue Lösung kommen, die allen gefällt. Das geschieht überraschend
+oft: Eine lebhafte Debatte kann zu einer neuen Art führen, das Problem 
+anzugehen und schließlich zu einer für alle zufriedenstellenden
+Lösung. Selbst ohne solche Vorschläge ist es meist dennoch besser,
+einen Kompromiss auszuhandeln als eine Wahl abzuhalten. Nach
+einem Kompromiss ist keiner ganz glücklich, aber zumindest gibt es
+anders als bei Wahlen keinen der völlig unzufrieden ist. Politisch
+gesehen ist die erste Situation vorzuziehen: Zumindest bekommt jeder 
+das Gefühl, etwas für seine Unzufriedenheit bekommen zu haben. Er mag
+unzufrieden sein, aber das sind alle anderen auch.</p><p>Der Hauptvorteil einer Abstimmung ist die Lösung der Frage, 
+damit alle endlich weitermachen können. Es wird aber durch das Zählen
+von Köpfen erledigt, anstatt durch einen vernünftigen Dialog, der alle
+zum selben Ergebnis führt. Die Bereitschaft, Fragen durch Wahlen zu
+lösen, scheint mir mit zunehmender Erfahrung der Teilnehmer bei 
+Open-Source-Projekten abzunehmen. Stattdessen versuchen Sie, vorher
+nicht in Erwägung gezogene Lösungen zu erkunden, oder größere
+Kompromisse einzugehen, als sie ursprünglich geplant hatten. Es gibt
+verschiedene Möglichkeiten, um eine voreilige Wahl zu verhindern. Die
+offensichtlichste ist einfach zu sagen, "Ich denke nicht, dass wir
+schon bereit für eine Wahl sind" und zu erklären warum. Eine weitere
+ist, eine informelle (nicht bindende) Zählung durchzuführen. Wenn die
+Reaktion klar in die eine oder andere Richtung tendiert, wird es 
+manche Teilnehmer plötzlich kompromissbereiter und damit eine
+formelle Wahl überflüssig machen. Die effektivste Lösung ist aber, 
+einfach eine neue Lösung anzubieten, oder eine neue Sicht auf einen 
+alten Vorschlag, damit Leute sich erneut mit dem Sachverhalt befassen,
+anstatt immer wieder die gleichen Argumente zu wiederholen.</p><p>Es gibt auch seltene Fälle, in denen alle sich einig sind, dass
+jede Kompromisslösung schlimmer ist als jeder der Nicht-Kompromisse.
+In einem solchen Fall gibt es weniger an einer 
+Abstimmung auszusetzen, sowohl weil es wahrscheinlich zu einer 
+besseren Lösung führt, als auch weil die Beteiligten nicht sonderlich
+unglücklich mit der Lösung sein werden, egal wie es ausgeht. Auch dann
+sollte man die Wahl nicht übereilen. Die Diskussion, die der Wahl 
+vorausgeht, bildet die Wählerschaft auch weiter, also kann ein frühes
+Ende dieser Diskussion die Qualität des Ergebnisses schmälern.</p><p>(Denken Sie daran, dass diese Empfehlung zur Zurückhaltung beim
+Ausrufen von Wahlen nicht für Wahlen zur Aufnahme von Änderungen gilt,
+die in 
+<a class="xref" href="ch07s03.html" title="Stabilisierung einer neuen Version">„Stabilisierung einer neuen Version“</a><span> im
+Kapitel <a class="xref" href="ch07.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <em>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</em></a></span> beschrieben 
+werden. Dort sind Wahlen eher ein Mittel zur Kommunikation, eine 
+Möglichkeit seine Beteiligung an der Überprüfung einer Änderung 
+kundzugeben, damit alle erkennen können ob eine Änderung ausreichend
+überprüft wurde).</p></div><div class="sect2" title="Wahlberechtigung"><div class="titlepage"><div><div><h2 class="title"><a id="electorate"/>Wahlberechtigung</h2></div></div></div><p>Bei einem Wahlsystem stellt sich die Frage nach der
+Wählerschaft: Wer darf wählen? Das kann eine sensible Frage sein, da
+es das Projekt zwingt, bestimmte Personen offiziell für ihre
+Beteiligung anzuerkennen oder für ihr besseres Urteilsvermögen 
+gegenüber anderen anzuerkennen.</p><p>Die beste Lösung ist einfach eine vorhandene Unterscheidung wie
+den Commit-Zugriff zu nehmen, und das Wahlrecht daran festzumachen.
+Bei Projekten mit mehreren Ebenen für den Zugriff, hängt die Frage ob
+Personen mit geringerem Zugriff wählen können, größtenteils von dem
+Ablauf ab mit dem die Zugriffsrechte gewährt werden. Wenn ein Projekt
+sie freizügig austeilt, um beispielsweise eine Vielzahl an Programmen 
+von dritten Parteien im Projektarchiv zu pflegen, solle es klar 
+gestellt werden, dass es bei eingeschränktem Commit-Zugriff wirklich
+um die Pflege der Software geht und nicht um die Wahlberechtigung. Die
+umgekehrte Implikation gilt natürlich auch: Da Personen mit vollem 
+Commit-Zugriff Wahlberechtigte sind, müssen sie nicht nur als 
+Programmierer, sondern als Mitglieder der Wählerschaft ausgesucht 
+werden. Wenn jemand auf der Mailingliste dazu tendiert, Unruhe zu
+stiften oder Behinderungen zu verursachen, sollte die Gruppe sich gut
+überlegen ob er die Commit-Berechtigung bekommt, selbst wenn diese 
+Person guten Code schreibt.</p><p>Das Wahlsystem selbst, sollte benutzt werden um neue Commiter
+zu wählen, sowohl Teil- als auch Vollberechtigte. Hier ist allerdings
+eine der wenigen Stellen an denen Geheimhaltung angemessen ist. Sie
+können keine Wahlen über Kandidaten auf der öffentlichen Mailingliste
+halten, da es die Gefühle (und den Ruf) des Kandidaten 
+verletzen könnte. Der übliche Weg ist stattdessen, dass bereits 
+bestehende Commiter an einen privaten Verteiler schreiben, 
+ausschließlich im Kreise der anderen Committer, mit dem Vorschlag 
+für den neuen Kandidaten. Die anderen Committer geben ihre ehrliche 
+Meinung, in dem Wissen, dass die Diskussion privat ist. Oft wird 
+es keinen Einspruch geben und eine Wahl ist nicht notwendig. 
+Nachdem man ein paar Tage gewartet hat, um allen Committern genügend 
+Reaktionszeit zu geben, schreibt der Antragsteller dem neuen 
+Kandidaten eine E-Mail indem ihm der Commit-Zugriff angeboten wird. 
+Wenn es Einwände gibt, wird wie bei jeder anderen Frage eine 
+Diskussion entstehen die möglicherweise mit einer Abstimmung endet. 
+Damit diese Diskussion offen und ehrlich abläuft, sollte die 
+bloße Tatsache, dass sie stattfindet geheim gehalten werden. 
+Wenn die Person die in Betracht gezogen wird davon wüsste und 
+niemals das Angebot bekäme, könnte er daraus schließen, dass er 
+die Wahl verloren hat und wäre wahrscheinlich gekränkt. 
+Wenn jemand natürlich explizit nach Commit-Zugriff 
+fragt, dann gibt es keine andere Möglichkeit als den Vorschlag
+in Betracht zu ziehen und ihn entweder anzunehmen oder abzuweisen. 
+Wenn letzteres der Fall ist, dann sollte es so höflich wie möglich 
+verlaufen, mit einer eindeutigen Erklärung: "Wir mögen deine Patches,
+haben davon aber bisher nicht genug gesehen", oder "Wir mögen deine 
+Patches, mussten aber wesentliche Anpassungen machen, damit sie 
+angewandt werden konnten, also fühlen wir uns noch nicht Wohl dabei,
+dir derzeit Commit-Zugriff zu geben. Wir hoffen allerdings, dass sich
+das mit der Zeit ändert". Bedenken Sie, dass ihre Worte der Person 
+einen Schlag versetzen könnte, je nachdem wie selbstsicher sie ist. 
+Versuchen Sie aus der Sicht des Empfängers zu sehen wenn Sie die 
+E-Mail schreiben.</p><p>Da es eine schwerwiegendere Entscheidung ist einen neuen 
+Committer aufzunehmen als die meisten anderen einmaligen 
+Entscheidungen, haben manche Projekte besondere Anforderungen für
+solche Abstimmungen. Es kann beispielsweise erforderlich sein, 
+<span class="emphasis"><em>n</em></span> Stimmen für und keine gegen den Kandidaten zu 
+bekommen, oder die Zustimmung einer qualifizierte Mehrheit. Die genaue
+Grenze ist nicht wichtig; grunsätzlich geht es darum bei der Aufnahme
+Vorsicht walten zu lassen. Ähnliche, oder noch strengere, spezielle 
+Anforderungen können bei Abstimmungen über das 
+<span class="emphasis"><em>Entfernen</em></span> eines Committers, obgleich das 
+hoffentlich niemals nötig sein wird. Siehe 
+<a class="xref" href="ch08s04.html" title="Committer">„Committer“</a><span> im Kapitel
+<a class="xref" href="ch08.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <em>Leitung von Freiwilligen</em></a></span> für weiteres über 
+Aspekte zu der Aufnahme und Entfernung neuer Committer, ohne
+Zusammenhang mit Wahlen.</p></div><div class="sect2" title="Meinungsumfragen contra Abstimmung"><div class="titlepage"><div><div><h2 class="title"><a id="polls"/>Meinungsumfragen contra Abstimmung</h2></div></div></div><p>Für bestimmte Abstimmungen, kann es sich lohnen den Wahlkreis 
+auszuweiten. Wenn die Entwickler beispielsweise einfach nicht
+herausbekommen, ob eine bestimmte Schnittstelle zu der Art passt, in der
+Leute die Software tatsächlich benutzen, ist eine Lösung, auf der 
+Mailingliste des Projekts darüber abstimmen zu lassen. Dies sind
+in Wirklichkeit eher <em class="firstterm">Meinungsumfragen</em> als 
+Abstimmungen, aber die Entwickler können die Ergebnisse als bindend 
+betrachten, wenn sie wollen. Wie bei jeder Meinungsumfrage
+erklären Sie den Beteiligten, dass es eine Möglichkeit gibt, Vorschläge
+zu machen: Wenn jemandem etwas besseres einfällt als bei der 
+Umfrage angeboten wird, kann seine Reaktion zu dem wichtigsten Ergebnis
+der Umfrage werden.</p></div><div class="sect2" title="Vetos"><div class="titlepage"><div><div><h2 class="title"><a id="veto"/>Vetos</h2></div></div></div><p>Manche Projekte erlauben besondere Stimmen, bekannt als 
+<em class="firstterm">Veto</em>. Ein Veto ist ein Weg für einen Entwickler
+eine übereilte oder schlecht überlegte Änderung aufzuhalten, zumindest
+lange genug, um weiter darüber zu diskutieren. Sie können ein Veto
+irgendwo zwischen starken Einspruch und handfester Obstruktion
+einordnen. Seine genaue Bedeutung unterscheidet sich von einem Projekt
+zu anderen. Manche Projekte machen es sehr schwer ein Veto aufzuheben;
+andere erlauben ihre Aufhebung durch eine gewöhnliche Mehrheit, etwa 
+nach einer erzwungenen Verzögerung für weitere Diskussion. Jedes Veto
+sollte von einer ausführliche Erklärung begleitet werden; ein Veto
+ohne Erklärung sollte gleich als ungültig erachtet werden.</p><p>Mit Vetos kommt das Problem des Missbrauchs. Manchmal sind
+Entwickler zu begierig den Einsatz zu erhöhen indem Sie ein Veto
+aussprechen. Sie können den Missbrauch von Vetos verhindern, indem Sie
+selber nur widerstreben darauf zurückgreifen, sowie indem Sie sanft
+darauf hinweisen wenn jemand anderes das Veto zu oft benutzt. Falls
+nötig, können Sie die Gruppe auch daran erinnern, dass Vetos nur so
+lange bindend sind, wie die Gruppe sich darüber einig
+ist – schließlich wird sich Änderung X durchsetzten, wenn eine 
+klare Mehrheit der Entwickler X machen will. Entweder wird das Veto 
+zurückgezogen, oder die Gruppe wird sich entschließen seine Bedeutung
+zu verringern.</p><p>Sie werden Leute vielleicht "-1" schreiben sehen, um ein Veto
+auszudrücken. Diese Nutzung kommt von der Apache Software Foundation,
+die einen hochgradig strukturierten Ablauf für Abstimmungen und Vetos
+hat, beschrieben bei
+<a class="ulink" href="http://www.apache.org/foundation/voting.html">http://www.apache.org/foundation/voting.html</a>. Die
+Apache-Normen haben sich auf andere Projekte übertragen und Sie werden
+ihre Konventionen in unterschiedlichem Maße an vielen Stellen in der
+Open-Source-Welt beobachten können. Technisch gesehen, bedeutet "-1"
+nicht immer ein formelles Veto, selbst nach den Apache-Normen.
+Informell wird es jedoch für gewöhnlich als solches betrachtet, oder
+zumindest als starken Einspruch.</p><p>Wie Stimmen bei einer Wahl, kann ein Veto auch im Nachhinein
+ausgesprochen werden. Es ist nicht in Ordnung einem Veto mit der 
+Begründung zu widersprechen, dass die zur Debatte stehende Änderung 
+bereits durchgeführt oder die Aktion bereits getätigt wurde (es sei 
+denn es handelt sich um etwas unumkehrbares, wie eine 
+Pressemitteilung). Andererseits wird und sollte ein Veto welches 
+Wochen oder Monate später ankommt wahrscheinlich nicht sonderlich 
+Ernst genommen werden.</p></div></div></body></html>

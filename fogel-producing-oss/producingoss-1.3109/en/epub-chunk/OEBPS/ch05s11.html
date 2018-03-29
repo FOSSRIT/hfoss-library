@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Open Source and the Organization</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Open Source and the Organization"><div class="titlepage"><div><div><h1 class="title"><a id="open-source-and-the-organization"/>Open Source and the Organization</h1></div></div></div><p>Through the consulting work I've done in the years since the
+first edition of this book was published, it's become clear to me that
+there are special concerns that apply to organizations launching or 
+participating in open source projects.  Organizations contain formal
+management structures and informal social structures: both are
+affected by engagement with open source projects, and both sometimes
+need to be changed to better support open source activity by the
+individuals within the organization.  In particular, government
+agencies have special pitfalls to watch out for when working with open
+source projects.</p><p>This section therefore examines organizational issues generally,
+and some issues specific to government agencies, and offers some
+advice about how to make organizational engagement with open source
+more likely to succeed.  Many of these recommendations will be brief
+and somewhat generalized, not because there isn't more depth to go
+into, but because the specifics can vary so much from organization to
+organization that exploring all the possibilities here would require
+too much space.  Please treat these bits of advice as starting points,
+not as complete recipes in themselves.</p><div class="sect2" title="Dispel Myths Within Your Organization"><div class="titlepage"><div><div><h2 class="title"><a id="dispel-myths"/>Dispel Myths Within Your Organization</h2></div></div></div><p>In organizations that have been producing or using proprietary
+software for a long time, certain myths about open source software
+sometimes circulate.  One traditional source of such myths is, of
+course, sales representatives from vendors of proprietary systems.
+But one can't attribute it all to them.  It's just as often the case
+that someone had some bad experiences in an open source project, or
+used open source in the past without ensuring proper support channels,
+and since that was their first experience in an unfamiliar territory,
+the entire territory is now tainted.</p><p>Below are some of the myths I've encountered most frequently.
+First, the negative myths:</p><div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>If it's open, that means anyone can
+   change our code.</em></span></span></dt><dd><p>Believe it or not, you need to be prepared to respond to
+     this.  Sometimes people — particularly senior
+     decision-makers who have limited technical
+     experience — don't understand the difference
+     between an upstream codebase allowing anyone to copy the code and
+     modify the resultant copies, and someone modifying the
+     <span class="emphasis"><em>particular instance that you deploy</em></span>.  The
+     former is just the definition of open
+     source, of course.  The latter would be a security vulnerability,
+     if it happened, but it has nothing to do with the license on the
+     code.  I mention this myth merely to prepare you for encountering
+     it, because otherwise you might not expect that anyone could hold
+     this particular misunderstanding.  Trust me, they
+     <span class="emphasis"><em>can</em></span>, and you need to be ready to answer
+     it.</p></dd><dt><span class="term"><span class="emphasis"><em>Open source software is insecure,
+   because anyone can see the code / change the code.</em></span></span></dt><dd><p>These are so easy to answer that I won't give a detailed
+     refutation here; again, I merely note it so you can be prepared
+     for it.  If you find yourself having to explain why open source
+     software is at least as secure as any other kind of software, if
+     not more secure, you may wish to use the excellent resources
+     provided by Dr. David A. Wheeler at <a class="ulink" href="http://www.dwheeler.com/#oss">http://www.dwheeler.com/#oss</a>,
+     and the arguments at <a class="ulink" href="http://www.mil-oss.org/learn-more/security-model-misconceptions">http://www.mil-oss.org/learn-more/security-model-misconceptions</a>.</p></dd><dt><span class="term"><span class="emphasis"><em>Open source comes with no
+   support.</em></span></span></dt><dd><p>There are plenty of companies that sell support for open
+     source software, and they're not hard to find.  There are also
+     wonderfully helpful unofficial support communities on the
+     Internet for different open source packages, of course, but often
+     what organizations are looking for is a phone number to call, or
+     a support chat room, that has a guaranteed response time.  These
+     are available, it's just that the source from which you
+     procure the software may be unrelated to the source from which
+     you procure the support.  The best way to respond to this myth is
+     to ask specifically for what packages support is desired, and
+     then show some sources of support available for
+     them.</p></dd><dt><span class="term"><span class="emphasis"><em>If we open source this project, we'll
+   have to spend a lot of time interacting with outside
+   developers.</em></span></span></dt><dd><p>You open source your code, not your time and attention.
+     You are never under any obligation to respond at all to outside
+     parties, let alone engage substantively with them.  You should
+     only do so when engaging will benefit
+     <span class="emphasis"><em>you</em></span> — which it often will;
+     after all, one of the key strengths of open source is that it
+     enlarges the collective brain of your development team in direct
+     proportion to how much they interact with other developers who
+     become interested in the code.  But that engagement is always
+     under your control and at your discretion.  If you don't want
+     your team's attention going to bug reports or development
+     questions from the outside, that's fine.  Just be up front about
+     that in project announcements and in the documentation, so that
+     others can take that into account before they put a lot of energy
+     into trying to communicate with your developers, and so they can
+     decide whether forking to create a more open community would make
+     sense for them (indeed, sometimes it might even be to your
+     advantage for them to do that).</p></dd><dt><span class="term"><span class="emphasis"><em>If we open source this project, then
+   we'll have to release all our other stuff as open source
+   too.</em></span></span></dt><dd><p>This myth usually results from a misunderstanding of
+       copyleft licenses and the GNU General Public License (GPL) in
+       particular.  I won't go into detail here; see <a class="xref" href="ch09.html" title="Chapter 9. Legal Matters: Licenses, Copyrights, Trademarks and Patents">Chapter 9, <em>Legal Matters: Licenses, Copyrights, Trademarks and Patents</em></a> for a discussion of what the GPL actually
+       stipulates.  After reading that chapter, especially
+       <a class="xref" href="ch09s04.html#copyright-holder-is-special" title="The Copyright Holder Is Special, Even In Copyleft Licenses">the section called “The Copyright Holder Is Special, Even In Copyleft Licenses”</a>, you will be able
+       to explain why this belief is incorrect.</p></dd></dl></div><p>Next, the positive myths:</p><div class="variablelist"><dl><dt><span class="term"><span class="emphasis"><em>Open source is cheaper.</em></span></span></dt><dd><p>Licensing costs are often not the largest cost with
+     proprietary software; they are often outweight by training costs,
+     installation and configuration costs, and other factors that make
+     up the "total cost of ownership".  But all of those other costs
+     are, on average, the same for open source software.  Don't make
+     the mistake of pitching your organization on open source software
+     on the grounds that it is cheaper.  At least in terms of the most
+     easily quantified costs, it is not.  It is often cheaper in the
+     long run, because it frees your organization from proprietary
+     vendor lock-in (see <a class="xref" href="ch05s10.html#lock-in-vs-freedom" title="Open Source and Freedom from Vendor Lock-In">the section called “Open Source and Freedom from Vendor Lock-In”</a>),
+     reduces training costs for new employees (because
+     they arrive already familiar with the software), gives you
+     greater ability to customize software to your needs, etc.  But
+     these are long-term benefits, and they may not show up directly
+     on a balance sheet unless you take steps to make your accounting
+     reveal them.  In the short term, open source generally isn't
+     cheaper than proprietary software, and shouldn't be pitched that
+     way.</p></dd><dt><span class="term"><span class="emphasis"><em>Developers will devote attention to
+   this code just because we released it.</em></span></span></dt><dd><p>People with little experience in open source sometimes
+     assume that the mere act of releasing code to the public will
+     result in a flurry of attention from other
+     developers — questions, patches, high-quality
+     code review, bug reports, etc.  But what actually happens, in
+     most cases, is silence.  Most good developers are busy people,
+     and they're not going to pay attention to your project until they
+     have some reason to.  If your code is good and solves a real
+     problem, you can expect word to travel to the right places
+     eventually, and of course you can help that word along with
+     tactically smart announcements and posts (see <a class="xref" href="ch06s07.html" title="Publicity">the section called “Publicity”</a><span> in <a class="xref" href="ch06.html" title="Chapter 6. Communications">Chapter 6, <em>Communications</em></a></span>).  But until your code has
+     had time to naturally accumulate credibility and mindshare, most
+     people won't pay any attention, so you shouldn't expect that
+     first release to be a big deal for anyone but you.</p><p>There is a situation in which this myth is not a myth.  A
+     large organization with a reputation and a dedicated public
+     relations team <span class="emphasis"><em>can</em></span> create buzz around an
+     initial open source release.  If you do this, then make sure not
+     to squander that buzz: be ready to constructively engage the
+     developer attention you attract right away.</p></dd><dt><span class="term"><span class="emphasis"><em>Other companies / cities / whoever
+   will pick up this software and start using it right
+   away.</em></span></span></dt><dd><p>Adopting any software involves costs.  Indeed, merely
+     <span class="emphasis"><em>evaluating</em></span> software involves costs.  So when
+     you release a new open source project that you and your team are
+     excited about, that doesn't necessarily mean other entities are
+     going to pick it up right away and run with it.  Many of them may
+     notice it, if you've done your announcement process well, but
+     that just means they'll put it on their list of things to
+     investigate based on organization-wide
+     priorities — in other words, they'll take a
+     closer look based on <span class="emphasis"><em>their</em></span> schedule, not
+     yours.  So don't expect a flood of early adopters.  You may get a
+     few, and they should definitely be cultivated because they will
+     provide the word-of-mouth that gets you more adopters.  But in
+     general you're more likely to see a trickle of early adopters
+     over the first year or so after your initial release, than to see
+     a flood of them immediately when the release is
+     made.</p></dd><dt><span class="term"><span class="emphasis"><em>We can casually copy open source code
+   into our own code.</em></span></span></dt><dd><p>Open source licenses are still licenses, and they come with
+     a few conditions.  Virtually all of them require attribution at
+     the source level and inclusion of the license together with the
+     covered code.  Some licenses, especially the copyleft licenses
+     discussed in <a class="xref" href="ch09s02.html" title="Aspects of Licenses">the section called “Aspects of Licenses”</a><span> in <a class="xref" href="ch09.html" title="Chapter 9. Legal Matters: Licenses, Copyrights, Trademarks and Patents">Chapter 9, <em>Legal Matters: Licenses, Copyrights, Trademarks and Patents</em></a></span>, cause the
+     entire derivative work to be under the same open source license
+     thus implying redistribution obligations that you may not want.
+     Some have patent clauses that can affect your company in complex
+     ways.<sup>[<a id="idm2476" href="#ftn.idm2476" class="footnote">58</a>]</sup>  For all these reasons,
+     incorporating open source code into software that will be
+     distributed under a different license — whether
+     open source or proprietary — cannot be done
+     casually.  Organizations that incorporate open source code into
+     their products usually need a formal process for doing so, one
+     that involves review by someone who understands the legal issues
+     and the possible interactions between licenses.</p></dd></dl></div></div><div class="sect2" title="Foster Pools of Expertise in Multiple Places"><div class="titlepage"><div><div><h2 class="title"><a id="foster-expertise-diversity"/>Foster Pools of Expertise in Multiple Places</h2></div></div></div><p>Sometimes organizations that are accustomed to procuring
+proprietary software treat open source software as if it were
+proprietary, in the sense that they assume there is exactly one
+authoritative provider of expert support, and that therefore it is
+necessary to have a commercial relationship with that provider.</p><p>That's not how open source works.  One of the great strengths of
+open source is the availability of support from multiple, competing
+providers.  It's perfectly fine, and often advisable, to have a
+commercial relationship with just one of those sources, but you must
+remember that support in open source is fundamentally a
+<span class="emphasis"><em>marketplace</em></span>, not an add-on feature that just
+happens to come with the software license, as is often the case with
+proprietary software.  Actually, even proprietary software sometimes
+has a competitive support marketplace — think for
+example of the third-party support providers for Oracle databases and
+Microsoft operating systems — but in open source these
+marketplaces tend to be more fluid and not as dominated by single,
+easily-recognizeable giants, because there isn't necessarily one
+commercial outfit that automatically assumes a place at the top of
+the hierarchy to sell gold-label support (e.g., as Oracle or Microsoft
+themselves would be, in the example just given).</p><p>The goal of fostering independent pools of expertise
+should even affect how you structure contracts to develop the software
+in the first place.  If you hire a firm to develop new open source
+software, have a few of your own programmers working alongside them if
+possible, so that you accumulate some in-house expertise.  This is not
+necessarily because you won't want to use the same firm for future
+maintenance — they might be a great
+choice — but just so that you'll have a better
+bargaining position and not be locked in.  Essentially, the more people
+<span class="emphasis"><em>in different organizations</em></span> who know the code, the
+better position that code is in, and the better position you are in.
+This is also one of the side benefits of holding hackathons, as
+discussed in <a class="xref" href="ch05s09.html#fund-meetings" title="Sponsoring Conferences, Hackathons, and other Developer Meetings">the section called “Sponsoring Conferences, Hackathons, and other Developer Meetings”</a>.</p><p>If your organization does not have enough in-house technical
+ability to participate in the development process directly alongside
+your contractor, or at least to perform knowledgeable review, then I
+strongly recommend finding a third-party to provide
+<span class="emphasis"><em>independent</em></span> deployability and maintainability
+review while the project is under way, as described in
+<a class="xref" href="ch05s08.html#osivv" title="Open Source IV&amp;V">the section called “Open Source IV&amp;V”</a>.</p><div class="sect3" title="Establish Contact Early With Relevant Communities"><div class="titlepage"><div><div><h3 class="title"><a id="talk-to-relevant-communities-early"/>Establish Contact Early With Relevant Communities</h3></div></div></div><p>Another way to foster independent sources of expertise is to
+establish contact with potentially interested technical communities
+early and often during development.  They're almost always out there.
+For example, if you're developing software with geospatial
+functionality, there is an open source geospatial community that
+probably wants to hear about it; if you're developing software to
+process financial data, or medical data, there are open source
+<em class="firstterm">fintech</em> and medical data communities.</p><p>You may even have already announced your project to those people
+when you began, as discussed in <a class="xref" href="ch02s05.html" title="Announcing">the section called “Announcing”</a><span> in <a class="xref" href="ch02.html" title="Chapter 2. Getting Started">Chapter 2, <em>Getting Started</em></a></span>.  But
+there's more you can do to create external reservoirs of knowledge.
+When your project runs across a design issue that you suspect others
+may have encountered before, it's fine to ask them how they handled
+it, as long as you do your homework by first finding out what you can
+from their code and documentation and then asking any remaining
+questions.  You can also arrange small-scale contracts with developers
+who are active in related projects, to serve two goals at once:
+improving your project's quality while establishing mindshare in
+places that may be strategically useful later.</p></div></div><div class="sect2" title="Don't Let Publicity Events Drive Project Schedule"><div class="titlepage"><div><div><h2 class="title"><a id="publicity-events-vs-project-events"/>Don't Let Publicity Events Drive Project Schedule</h2></div></div></div><p>Although open source projects are amenable to software project
+management techniques, in general if you have an active developer
+community you do lose some control over the exact timing of events in
+the life of the project, especially the scheduling of releases.  Or
+rather, you can still have as much control as you want, but now there
+are other things you can lose if you exercise that control
+in the wrong way.  For example, if the release manager (see <a class="xref" href="ch07s03.html#release-manager" title="Release Manager">the section called “Release Manager”</a><span> in <a class="xref" href="ch07.html" title="Chapter 7. Packaging, Releasing, and Daily Development">Chapter 7, <em>Packaging, Releasing, and Daily Development</em></a></span>) is someone from outside your
+organization, and she's doing a good job, then if you try to force the
+release to be on a certain precise date, you may cause her and many of
+the developers participating in release-specific work to give up and
+devote their attention to something else.  You'd gain fine-grained
+control of the release schedule, but at the cost of lower quality
+releases and the possible loss of some of your development
+community.</p><p>This is just one example illustrating the general principle that
+if you have publicity needs related to an open source project, you
+generally shouldn't let those needs drive the project's schedule.  If you
+arrange a press conference for the project reaching 1.0 and being
+deployed live, but then the developers decide on an extra two weeks of
+testing because of some last-minute bugs, you'll have some improvising
+to do.  (This example is drawn from real life, by the way.)</p><p>There are two ways to achieve this independence, and they are
+not mutually exclusive.  One way is to just let project events drive
+publicity instead of the other way around, such as by preparing
+release announcements ahead of time but being ready to publish them
+based on when the release is actually done.  The other way is to
+create publicity events that are not bound to development milestones,
+but are rather associated with project-related things that
+<span class="emphasis"><em>are</em></span> able to be scheduled,
+such as conference appearances, hackathons, major deployments,
+etc.</p><p>You might be tempted to try a third way: to bring the
+development community into the scheduling process, so that through
+consensus you are able schedule certain milestones accurately enough
+to tie timed publicity to them.  While that may sound like a good
+idea, in practice it rarely works.  An exception to this is if the
+whole project is on board with doing time-based releases, as described
+in <a class="xref" href="ch07s03.html#time-based-vs-feature-based" title="Time-Based Releases vs Feature-Based Releases">Time-Based Releases vs Feature-Based Releases</a><span> in <a class="xref" href="ch07.html" title="Chapter 7. Packaging, Releasing, and Daily Development">Chapter 7, <em>Packaging, Releasing, and Daily Development</em></a></span>.  If the development community
+as a whole shares that goal, then they will make the sacrifices
+necessary to keep to the time-based cycle — but your
+organization must also be willing to abide by that schedule, even if
+it doesn't always align with business needs.</p><p>An open source development community's first priority is the
+software itself, and making sure it meets the needs its participants
+are working toward.  Of course the community wants releases and other
+deadlines to be met with reasonable regularity, and every development
+community makes tradeoffs for that.  But even with the best of
+intentions among all parties, you can never guarantee how that
+tradeoff will be decided in a particular case, when things get down to
+the wire.  The outcome of a community's decision-making process cannot
+be anticipated with perfect accuracy, by
+definition — if it could, there would be no need for a
+decision-making process.  So while it's fine to try to influence the
+community's priorities in ways that work to your advantage, you should
+avoid relying on that for scheduling purposes, because you won't
+succeed at it every time.</p></div><div class="sect2" title="The Key Role of Middle Management"><div class="titlepage"><div><div><h2 class="title"><a id="middle-management"/>The Key Role of Middle Management</h2></div></div></div><p>If you intend to have long-term organizational engagement with
+open source software projects, the people in your middle layer of
+management will play a key role in determining whether you succeed or
+fail.</p><p>Supervising programmers who spend part or all of their time on
+open source projects is more complex than supervising programmers on
+purely internal projects.  Many aspects of the developers' work and
+schedule will be strongly influenced by external factors not under the
+control of management, and in any case the developers' own desires may
+not always perfectly line up with the employer's.  After all, each
+developer now has two unrelated audiences to satisfy: her employer, as
+embodied by her direct manager, and her colleagues in the open source
+project, many of whom may work for other employers.</p><p>If a manager is not sufficiently sensitive to this dynamic, then
+developers can start to feel as though they serve two conflicting
+masters.  Sometimes this conflict is the result of poor planning, and
+other times it is real and unavoidable.  Good management can prevent
+the former situation from happening in the first place, and in the
+latter situation, good management is essential for recognizing it and
+addressing it in some way that gives the developer clarity and a way
+to handle the conflicted situation.</p><p>Middle managers also have not only the usual upward and lateral
+internal reporting responsibilities, but are to some degree
+responsible for the image — the open source brand
+identity — of the organization in the projects where
+its developers participate.  This is a lot like having an entire extra
+constituency to satisfy, and managers who have no experience with open
+source participation themselves are unlikely to have a solid
+understanding of how to position the organization and its developers
+within the project.</p><p>Furthemore, the middle layer of management is often best
+positioned to serve as a communications conduit and information filter
+between the project (that is, the whole project including all its
+other participants) and the company.  The wealth of information
+available from the activity in an open source project is most useful
+to the organization if there is a filtered channel by which the most
+interesting activities can be communicated to the relevant
+stakeholders within the organization — stakeholders
+who might include other technical staff, executives, and sales team
+members.  But both by their position and their temperament, the
+programmers themselves are often not best suited to serve as this
+conduit.  They may have a very deep understanding of the particular
+projects they work on, but they often have a less complete view of the
+organization's interests — for example, in a
+commercial environment, the programmers often do not have a clear idea
+of how the project fits into the company's various lines of business
+or into its sales processes.  Middle managers are better positioned to
+maintain the requisite bidirectional sensitivity: aware enough of the
+project to ask the programmers for more information when necessary,
+and aware enough of the organization to have a sense of what in the
+project might be unexpectedly relevant to the organization.</p><p>Think carefully about who occupies the middle management
+positions that serve as the interface between the organizations's
+priorities and the open source project's development direction, and
+provide them with extra training if necessary.  It is best if the
+managers themselves have had direct experience as participants in some
+open source project.  This doesn't have to be the same project as the
+one for which they are now managing developers; the situations and
+tensions that arise in open source projects tend to be similar, so
+experience from one project will generally translate well to other
+projects.  But a manager who has never dealt with open source projects
+first-hand at all will start with limited ability to understand the
+various pressures faced by the organization's developers operating in
+open source environments, and limited ability to play the role of
+communications conduit between the organization and the
+project.</p></div><div class="sect2" title="InnerSourcing"><div class="titlepage"><div><div><h2 class="title"><a id="innersource"/>InnerSourcing</h2></div></div></div><p><em class="firstterm">InnerSource</em> or
+<em class="firstterm">innersourcing</em> means using standard open source
+development practices only within the boundaries of an organization.
+For example, a company might move all of its projects to GitHub
+(albeit in private, not public, repositories), and declare that,
+inside the company, any engineer can report bugs and contribute pull
+requests to any project anywhere in the company.  Innersourcing also
+often includes sincere efforts at internal cultural change: managers
+encouraging developers to speak their mind on both technical and
+process issues, developers being given more latitude to choose which
+projects and teams they work with, etc.</p><p>In early 2016 I conducted interviews<sup>[<a id="idm2528" href="#ftn.idm2528" class="footnote">59</a>]</sup> with open source specialists
+at a number of medium- and large-sized technology companies, many of
+whom had observed innersourcing efforts and were willing to talk about
+the results.  What they reported was pretty consistent from company to
+company, and consistent with my own experience as a consultant:
+innersourcing really <span class="emphasis"><em>can</em></span> make a positive
+difference, in several ways, but it's also definitely not the same as
+true open source.</p><p>For companies that already participate in open source projects,
+innersourcing can reduce the difference between internal development
+practices and external ones.  If some of your engineers 
+participate in upstream open source projects anyway, where they
+must use typical open source collaboration tools and adhere to open
+source standards for submitting and reviewing code and documentation,
+then moving the company's internal engineering infrastructure and
+conventions in that direction means less context-switching overhead
+for existing staff, an easier onboarding process for new hires, and
+sometimes improved technical compatibility between internal and
+external projects.  (For these reasons, innersourcing is also often
+used as the first "baby steps" toward genuine corporate participation
+in open source projects.)</p><p>But the benefits of innersourcing go beyond that.  When
+accompanied by a real commitment to reduce managerial and
+organizational barriers to engineers participating in projects across
+the company, innersourcing can improve morale, help spread expertise
+around the company more effectively (because expertise will come
+closer to flowing along its natural paths, rather than being directed
+by management), and make software development more
+efficient.<sup>[<a id="idm2533" href="#ftn.idm2533" class="footnote">60</a>]</sup></p><p>Nevertheless, innersource is not the same as open source, nor is
+it even "open source lite".  The managers we talked to reported that
+innersourced projects don't have the provocative, uncontrolled energy of truly
+open source projects, because all the actors in innersourcing are,
+ultimately, embedded in the same hierarchical authority structure.
+Fundamentally, open source dynamics require at least the potential for
+totally permissionless modification (i.e., you don't have to worry
+what someone else might think of a fork).  When software only
+circulates within a given management hierarchy, then that potential
+for permissionless collaboration vanishes — and with
+it, the potential for true open source behavior vanishes too.  The
+permission structure that governs one's behavior with respect to the
+code is not just a matter of the code's license: it's also about whom
+you report to, what others in the hierarchy might think about your
+changes, etc.</p><p>In the long run, the dynamics of open source collaboration
+require an external supply of freedom.  There must always be people
+who could, in principle, fork or do whatever they want without
+worrying about consequences to the original authors' organization.
+When that external freedom is removed, everything changes.</p><p>Innersourcing also fails the "portable résumé"
+test — an employee can't take the code with her, and
+her work will not be publicly visible (see <a class="xref" href="ch05s12.html" title="Hiring Open Source Developers">the section called “Hiring Open Source Developers”</a>).
+She can be alienated from her work, if she leaves the company, which
+means that her motivation to personally invest is reduced.</p><p>None of this means that innersourcing isn't worth it.  It can be
+very beneficial on its own terms, and is also sometimes useful as an
+intermediate step for a traditionally closed company that's still
+figuring out how to do open source participation.  Just don't imagine
+that innersourcing is somehow "just like open source, but inside our
+company".  They're two different things, and shouldn't be
+confused.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm2476" href="#idm2476" class="para">58</a>] </sup>I am strongly opposed to software patents of
+     any kind, for the reasons given in <a class="xref" href="ch09s08.html" title="Patents">the section called “Patents”</a><span> in <a class="xref" href="ch09.html" title="Chapter 9. Legal Matters: Licenses, Copyrights, Trademarks and Patents">Chapter 9, <em>Legal Matters: Licenses, Copyrights, Trademarks and Patents</em></a></span>, but if you are a patent holder I
+     would still like you to at least be aware of the possible patent
+     consequences of incorporating open code into your
+     programs.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm2528" href="#idm2528" class="para">59</a>] </sup>Actually, my
+friend and business partner James Vasile and I both conducted these
+interviews, and we were much aided by O'Reilly Media providing
+introductions to open source staff at a few companies where we did not
+have personal contacts.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm2533" href="#idm2533" class="para">60</a>] </sup>If you're interested in learning more, see
+<a class="ulink" href="http://innersourcecommons.org/">http://innersourcecommons.org/</a>, where Danese Cooper, Head of Open
+Source at PayPal, has been organizing a number of resources about
+InnerSource.</p></div></div></div></body></html>

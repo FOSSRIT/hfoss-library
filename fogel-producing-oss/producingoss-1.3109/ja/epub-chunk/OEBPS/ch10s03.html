@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>GPL とライセンスの互換性</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="GPL とライセンスの互換性"><div class="titlepage"><div><div><h1 class="title"><a id="license-compatibility"/>GPL とライセンスの互換性</h1></div></div></div><p>
+    ライセンスをくっきりと分ける境界線は、
+    独占的なライセンスと互換性があるか、ないかです。
+    つまり、GPL (GNU General Public License) とそれ以外全てです。
+    GPL の第一の目的はフリーソフトウェアを広めることなので、
+    GPL を書いた人は、意図的に独占的なコードと GPL のコードを混ぜることができないようにしました。
+    特に GPL が要求していること
+    (全文は <a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html">http://www.fsf.org/licensing/licenses/gpl.html</a> を参照してください) は以下の二つです。
+</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>
+                すべての派生物 —
+                つまり、GPL が適用されたコードを含んだあらゆるプログラム
+                — は、それ自体も GPL で配布しなければならない。
+            </p></li><li class="listitem"><p>
+                オリジナルでも、派生物であっても、
+                それを再配布する場合には制限を追加してはいけない。
+                (原文の該当箇所を以下に引用します: 「あなたは、
+                 このライセンスが与えた、または認めた権利を行使することに関して、
+                 これ以上他のいかなる制限も課してはならない。」)
+            </p></li></ol></div><p>
+    これらの条件によって、GPL は自由を伝播させることに成功しています。
+    いったんプログラムが GPL で保護されると、
+    再配布の条件が <em class="firstterm">伝染する</em> のです
+    — つまり、取り込んだコード以外のあらゆる部分にその条件を適用させ、
+    かつ GPL を採用したコードをクローズドソースなプログラムで使うのを不可能にしているのです。
+    しかしながら、
+    これらの条項は他のフリーなライセンスと GPL を非互換にするものでもあります。
+    通常は、他のライセンスが追加の条件を課したときに非互換が起きます
+    — たとえば、何らかの方法でオリジナルの作者へのクレジットを要求する場合です
+    — これは、GPL の 「あなたは、これ以上他のいかなる制限も課してはならない ...」 という文言に反しています。こうした二次的な結果は、望ましいものか、少なくとも悪いことではない、というのが FSF の見解です。
+    GPL は あなたのソフトウェアをフリーな状態に保つだけでなく、
+    <span class="emphasis"><em>他の</em></span> ソフトウェアにも自由を強制する媒体にもするのです。
+</p><p>
+    この手法がフリーソフトウェアを広める優れた手段なのかどうかは、
+    インターネット上でずっと続いている宗教論争
+    (<span><a class="xref" href="ch06.html" title="第6章 コミュニケーション">6章<em>コミュニケーション</em></a> の </span>
+     <a class="xref" href="ch06s02.html#holy-wars" title="宗教論争を回避する">「宗教論争を回避する」</a> を参照してください) のひとつであり、
+    ここでは深く触れません。重要なのは、
+    GPL と互換性があるかどうかがライセンスを選ぶ際に重大な問題になるということです。GPL は非常に重要なオープンソースライセンスです。
+    ある時点での Freecode 上では、GPL が 68% を占めており、次に高いのは 6% です
+    <sup>[<a id="idm3206" href="#ftn.idm3206" class="footnote">38</a>]</sup>。
+    GPL で保護されたコードと自分のコードを混ぜた上でフリーにしたいのなら
+    — GPL なコードがたくさんあるのだから
+    — GPLと互換性があるライセンスを選ぶべきです。
+    GPL と互換性があるオープンソースライセンスのほとんどは、
+    独占的なライセンスとも互換性があります。
+    よって、そうしたライセンスを採用したコードは、
+    GPL なコードでも使うことができますし、
+    独占的なプログラムでも使うことができるのです。
+    もちろん、そうやってコードを混ぜた
+    <span class="emphasis"><em>結果生じたもの</em></span> は相互に互換性がありません。
+    なぜなら、一方は GPL となり、
+    一方はクローズドソースなライセンスが適用されるからです。
+    問題が及ぶのは派生物に対してのみであり、
+    はじめに配布したオリジナルなコードは影響を受けません。
+</p><p>
+    ありがたいことに、FSF は GPL と互換性があるライセンスと、
+    互換性がないライセンスの一覧を <a class="ulink" href="http://www.gnu.org/licenses/license-list.html">http://www.gnu.org/licenses/license-list.html</a> で示してくれています。この章で議論しているすべてのライセンスがこのリストにありますが、GPL と互換性があるものもあれば、ないものもあります。
+</p><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm3206" href="#idm3206" class="para">38</a>] </sup>
+    かつて、ライセンスに関する統計情報が Freecode.com にありました。
+    まだ Freshmeat.net と呼ばれていた頃のものです。しかし 2008 年に彼らはプロジェクトを自由にタグ付けできるように切り替えました。
+    その結果、信頼できるライセンス統計を取得するのが難しくなりました。
+    <a class="ulink" href="http://help.freecode.com/discussions/questions/187-where-did-the-license-statistics-page-go">http://help.freecode.com/discussions/questions/187-where-did-the-license-statistics-page-go</a>
+    に、統計情報を取得する方法についての議論があります。
+    </p></div></div></div></body></html>

@@ -1,0 +1,94 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Web Site</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="technical-infrastructure.html" title="Capitolo 3. L'Infrastruttura Tecnica"><link rel="prev" href="wikis.html" title="Wiki"><link rel="next" href="social-infrastructure.html" title="Capitolo 4. L'Infrastruttura Sociale e Politica"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Web Site</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="wikis.html">Indietro</a> </td><th width="60%" align="center">Capitolo 3. L'Infrastruttura Tecnica
+</th><td width="20%" align="right"> <a accesskey="n" href="social-infrastructure.html">Avanti</a></td></tr></table><hr></div><div class="sect1" title="Web Site"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="web-site"></a>Web Site</h2></div></div></div><p>Non c'è molto da dire sulla costituzione del sito web del progetto
+da un punto di vista tecnico: tirare su un server web e scrivere pagine 
+web sono attività abbastanza semplici, e la maggior parte delle cose importanti
+da dire sulla presentazione e organizzazione sono stati trattati nel precedente
+capitolo. La funzione principale del un sito web è presentare un'introduzione al
+progetto chiara e invitante, e di integrare gli altri strumenti (il sistema di
+controllo di versione, il bug tracker eccetera). Se non avete le conoscenze per 
+tirare su il web server, di solito non è difficile trovare qualcuno che le ha e
+che vuole darvi una mano. Ciononostante, per risparmiare tempo e sforzo, la gente
+spesso preferisce usare uno dei siti di canned hosting.</p><div class="sect2" title="Canned Hosting"><div class="titlepage"><div><div><h3 class="title"><a name="canned-hosting"></a>Canned Hosting</h3></div></div></div><p>Ci sono due grandi vantaggi nell'uso di siti preconfezionati (canned site).
+Il primo è la capacitò dei server e la larghezza di banda: i loro server sono 
+grosse scatole sedute su tubi davvero capienti. Non importa quanto il vostr
+progetto diventerà di successo, non farete finire lo spazio su disco nè sovraccaricare
+la connessione di rete. Il secondo vantaggio è la semplicità. Hanno già scelto un 
+bug tracker, un sistema di controllo di versione, un gestore di mailing list,
+un archiviatore, e ogni altra cosa di cui avete bisogno per fare andare avanti un sito.
+Hanno configurato gli strumenti, e si prendono cura dei backup per tutti i dati memorizzati
+in tali strumenti. Non avete bisogno di prendere alcuna decisione. Tutto quello che dovete 
+fare è riempire un form, schiacciare un bottone e improvvisamente avete un sito web
+del progetto.</p><p>Questi sono vantaggi abbastanza significativi. Gli svantaggi, certo, sono il fatto
+di dover accettare le <span class="emphasis"><em>loro</em></span> scelte e configurazioni, anche
+se qualcosa di diverso sarebbe stato meglio per il vostro progetto.
+Solitamente i siti preconfezionati sono personalizzabili in certi secondari parametri, ma
+non avrete mai il controllo dettagliato che avreste se creaste il sito da voi e aveste un 
+pieno controllo amministrativo sul server.</p><p>Un perfetto esempio di questo è la gestione dei file generati.
+Alcune pagine web del progetto potrebbero essere file generati&#8212;per esempio,
+ci sono sistemi per mantenere i dati delle FAQ in un formato facile da modificare,
+da cui HTML,PDF e altri formati di presentazione possono essere generati. Come
+spiegato in
+<a class="xref" href="vc.html#version-everything" title="Tenere tutto sotto controllo di versione">sezione chiamata «Tenere tutto sotto controllo di versione»</a><span>
+prima in questo capitolo</span>,
+non vorreste mettere sotto controllo di versione i formati generati, solo il
+file di origine. Ma quando il vostro sito web è ospitato sul server di qualcun
+altro, potrebbe essere impossibile generare un hook personalizzato per rigenerare
+la versione HTML onlinea delle FAQ in qualunque momento il file di origine sia modificato.
+L'unico modo di aggirare questo è di mettere sotto controllo di versione anche i formati
+generati, così come appaiono sul sito web.</p><p>Ci possono anche essere conseguenze più importanti. Potreste non avere abbastanza
+controllo sulla presentazione quanto vorreste. Alcuni siti di canned hosting vi permettono
+di personalizzare le vostre pagine web, ma il layout di default del sito solitamente finisce per
+uscir fuori nei modi peggiori. Per esempio, alcuni progetti che ospitano se stessi su SourceForge
+hanno completamente personalizzato le pagine principali, ma rimandano ancora gli sviluppatori alle
+loro pagine SourceForge per maggiori informazioni. La pagina SourceForge è cosa sarebbe la pagina
+principale del progetto, se questo non avesse usato la pagina personalizzata. La pagina SourceForge
+ha link al bug tracker, al repository CVS, download eccetera. Sfortunatamente, la pagina ourceForge
+contiene anche una grande quantità di rumore estraneo. La cima è un banner di pubblicità, spesso
+un'immagine animata. Il lato sinistro è un insieme verticale di link di scarsa rilevanza per qualcuno
+interessato al progetto. Il lato destro è spesso un'altra pubblicità. Solo il centro della pagina è
+dedicato al vero materiale specifico del progetto, e anche questo è organizzato in un modo confusionario
+che spesso rende i visitatori insicuri su cosa cliccare dopo.</p><p>Dietro ogni aspetto del design di SourceForge, c'è senza dubbio una 
+buona ragione&#8212;buona dal punto di vista di SourceForge, come le pubblicità.
+Ma dal punto di vista di un progetto individuale, il risultato può essere una pagina
+web meno che ideale. Non intendo bacchettare SourceForge; gli stessi problemi si trovano
+in molti dei siti di canned hosting. Il punto è che c'è un compromesso. Voi guadagnate
+il sollievo dal fardello tecnico di far andare il sito del progetto, ma solo al prezzo di
+accettare il modo di farlo di qualcun altro.</p><p>Solo voi potete decidere se il canned hosting è la scelta
+migliore per il vostro progetto. Se scegliete un sito preconfezionato, 
+lasciate aperta l'opzione di trasferirvi su un vostro server più avanti, usando
+un nome di dominio personale per l'"indirizzo di casa". Potete fare il forward della
+URL al sito preconfezionato, o avere un home page completamente personalizzata alla URL pubblica
+e mandare gli utenti al sito preconfezionato per le funzionalità sofisticato. Fate solo in modo di
+arrangiare le cose in modo che se più avanti decidiate di usare una diversa soluzione di hosting, 
+l'indirizzo del progetto non abbia bisogno di cambiare.</p><div class="sect3" title="Scegliere un sito di canned hosting"><div class="titlepage"><div><div><h4 class="title"><a name="canned-hosting-choosing"></a>Scegliere un sito di canned hosting</h4></div></div></div><p>Il più grande e conosciuto sito di hosting è<a class="ulink" href="http://www.sourceforge.net/" target="_top">SourceForge</a>.  Altri due siti
+che forniscono un servizio uguale o simile sono <a class="ulink" href="http://savannah.gnu.org/" target="_top">savannah.gnu.org</a> e <a class="ulink" href="http://www.berlios.de/" target="_top">BerliOS.de</a>. Alcune organizzazioni come la
+<a class="ulink" href="http://www.apache.org/" target="_top">Apache Software Foundation</a> e <a class="ulink" href="http://www.tigris.org/" target="_top">Tigris.org</a><sup>[<a name="idp6606256" href="#ftn.idp6606256" class="footnote">19</a>]</sup>, forniscono hosting
+gratuito a progetti open source che ben si adattano al loro ambito e ai progetti
+esistenti della loro comunità.</p><p>Haggen So ha fatto una esauriente valutazione di vari siti di canned hosting,
+come parte della ricerca per la sua tesi di dottorato,
+<em class="citetitle">Construction of an Evaluation Model for Free/Open Source
+Project Hosting (FOSPHost) sites</em>(Costruzione di un modello di valutazione
+per l'hosting di progetti free o open source).  I risultati sono in
+<a class="ulink" href="http://www.ibiblio.org/fosphost/" target="_top">http://www.ibiblio.org/fosphost/</a>, e in particolare vedete
+il leggibilissimo grafico di paragone a <a class="ulink" href="http://www.ibiblio.org/fosphost/exhost.htm" target="_top">http://www.ibiblio.org/fosphost/exhost.htm</a>.</p></div><div class="sect3" title="Anonimità e coinvolgimento"><div class="titlepage"><div><div><h4 class="title"><a name="anonymity"></a>Anonimità e coinvolgimento</h4></div></div></div><p>Un problema che non è strettamente limitato ai siti preconfezionati, ma che
+vi si trova più di frequente, è l'abuso della funzionalità del login utente.
+La funzionalità in sè è abbastanza semplice: il sito permette ad ogni visitatore
+di registrarsi con username e password. Da lì in poi mantiene un profilo per tale
+utente, gli amministratori del progetto possono assegnare all'utente certi permessi, 
+per esempio, il diritto di fare commit sul repository.</p><p>Questo può essere estremamente utile, e infatti è one dei primi vantaggi del
+canned hosting. Il problema è che a volte il login dell'utente finisce per essere
+richiesto per compiti che dovrebbero essere permessse ai visitatori non registrati,
+in particolare la possibilità di registrare problemi nel bug tracker, e di commentare
+problemi esistenti. Richiedendo uno username valido per tali azioni, il progetto alza 
+l'indicatore di coinvolgimento per cosa dovrebbero essere attività veloci e facili.
+Di sicuro, si vorrebbe essere in grado di contattare qualcuno che ha immesso dei dati
+nel bug tracker, ma avere un campo dove (volendo) si può inserire l'indirizzo email,
+è sufficiente. Se un nuovo utente trova un bug e vuole riportarlo, sarà soloannoiato
+dal dovere completare una creazione di account prima che possa immettere il bug nel
+tracker. Potrebbe semplicemente decidere di non segnalare del tutto il bug.</p><p>I vantaggi della gestione degli utente solitamente sovrastano gli svantaggi. Ma 
+se potete scegliere quali azioni possono essere fatte in modo anonimo, siate certo non solo che
+<span class="emphasis"><em>tutte</em></span> le azioni di sola lettura siano permesse a visitatori non loggati, ma
+anche alcune azioni di immissione dati, in particolare nel bug tracker e, se le avete, nelle 
+pagine wiki.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6606256" href="#idp6606256" class="para">19</a>] </sup>Disclaimer:
+sono dipendente di <a class="ulink" href="http://www.collab.net/" target="_top">CollabNet</a>, che sostiene
+Tigris.org, e uso Tigris regolarmente.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="wikis.html">Indietro</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Risali</a></td><td width="40%" align="right"> <a accesskey="n" href="social-infrastructure.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Wiki </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> Capitolo 4. L'Infrastruttura Sociale e Politica</td></tr></table></div></body></html>

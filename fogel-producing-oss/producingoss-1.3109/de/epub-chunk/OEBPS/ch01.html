@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Kapitel 1. Einleitung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Kapitel 1. Einleitung"><div class="titlepage"><div><div><h1 class="title"><a id="introduction"/>Kapitel 1. Einleitung</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Die meisten freien Software-Projekte scheitern.</p><p>Wir hören nicht viel über Fehlschäge. Nur erfolgreiche 
+Projekte ziehen die Aufmerksamkeit auf sich, und es gibt insgesamt
+so viele Open-Source-Projekte <sup>[<a id="idp5334000" href="#ftn.idp5334000" class="footnote">3</a>]</sup>, dass obwohl
+nur ein Bruchteil Erfolg hat, immer noch eine Menge Projekte sichtbar 
+sind. Von den Fehlschlägen hören wir auch deshalb nicht, weil Versagen
+kein Ereignis ist. Es gibt keinen bestimmten Zeitpunkt, an dem ein Projekt
+aufhört realisierbar zu sein; Teilnehmer gleiten irgendwie langsam davon
+und hören auf daran zu arbeiten. Es gibt vielleicht einen Moment, an dem
+die letzte Änderung gemacht wird, aber derjenige, der sie durchführt, 
+weiß für gewöhnlich nicht, dass es die letzte sein wird. Es gibt nicht
+einmal eine klare Definition, wann ein Projekt abgelaufen ist. Ist es, 
+wenn an einem Projekt seit sechs Monaten nicht aktiv gearbeitet wurde?
+Sobald seine Nutzergemeinde aufhört zu wachsen, ohne die 
+Entwicklergemeinde 
+übertroffen zu haben? Was ist wenn die Entwickler ihr Projekt
+verlassen, sobald sie merken, dass ein anderes Projekt die gleichen
+Ziele verfolgt, und sie nur unnötig einen doppelten Aufwand betreiben,
+und sie sich diesem anderen Projekt anschließen und ihre früheren 
+Anstrengungen mit einzubeziehen? Wurde das Projekt beendet, oder ist 
+es nur umgezogen?</p><p>Durch diese Komplexität ist es unmöglich die Ausfallquote 
+genau zu beziffern. Einzelberichte aus über einem Jahrzehnt freier
+Software, kurzes Stöbern auf SourceForge.net und ein wenig Googeln, 
+deuten jedoch alle auf den gleichen Schluss: die Rate ist extrem hoch,
+wahrscheinlich in der Größenordnung von 90%–95%. Die Zahl wird 
+größer, wenn man überlebende, aber nicht vernünftig laufende Projekte mit
+einbezieht: solche die zwar laufenden Code produzieren, aber weder ein
+angenehmer Aufenthaltsort sind, noch so schnell oder zuverlässig 
+Fortschritte machen, wie sie könnten.</p><p>In diesem Buch geht es darum, Versagen zu vermeiden. Es untersucht
+nicht nur wie man Sachen richtig macht, sondern wie man sie falsch 
+macht, um frühzeitig Probleme erkennen und korrigieren zu können.
+Ich hoffe Ihnen zeigen zu können, wie man häufige Stolpersteine 
+vermeidet, und erfolgreich Wachstum und der Pflege eines Projekts 
+meistert. Erfolg ist kein Nullsummenspiel, und in diesem
+Buch geht es nicht darum zu Gewinnen oder der Konkurrenz voraus zu sein.
+Tatsächlich ist ein wichtiger Teil beim Betrieb eines Open-Source-Projekts
+die reibungslose Zusammenarbeit mit anderen verwandten
+Projekten. Auf lange Sicht trägt jedes erfolgreiche Open-Source-Projekt
+zum Wohl der gesamten Welt der freien Software bei.</p><p>Man ist versucht zu sagen, freie Software-Projekte würden aus den
+selben Gründen fehlschlagen, wie proprietäre Software-Projekte. Freie 
+Software hat sicherlich kein Monopol auf unrealistische Anforderungen,
+vage Spezifikationen, schlechte Verwaltung von Ressourcen, zu kurze 
+Entwurfsphasen, oder irgend einen der anderen Kobolde die der 
+Software-Industrie
+bereits wohl bekannt sind. Es gibt genügend Material zu diesem
+Thema und ich werde in diesem Buch nicht versuchen es zu duplizieren.
+Stattdessen werde ich versuchen die Probleme zu beschreiben, die der
+freien Software eigen sind. Wenn ein freies Software-Projekt an die Wand
+gefahren wird, liegt es oft daran dass die
+Entwickler (oder die Projektleiter) nicht um die spezifischen Probleme
+von Open-Source-Software wussten, auch wenn sie durchaus auf die 
+bekannteren Probleme der Closed-Source-Entwicklung vorbereitet 
+waren.</p><p>Einer der häufigsten Fehler sind unrealistische Erwartungen über
+die Vorteile von offenem Quellcode. Eine offene Lizenz garantiert weder,
+dass eine Horde aktiver Entwickler urplötzlich anfangen, von sich aus,
+Zeit in Ihr Projekt zu investieren, noch wird die Offenlegung die 
+Krankheiten des Projekts automatisch heilen. Tatsächlich kann es sogar 
+genau das Gegenteil bewirken: Es kann eine ganze Reihe neuer
+Komplexitäten hinzufügen und kurzfristig <span class="emphasis"><em>mehr</em></span> 
+kosten, als die Software einfach in Betrieb zu halten. Das Projekt zu
+öffnen bedeutet, den Quellcode so zu gestalten, dass er für völlig Fremde 
+verständlich ist, eine Site für Entwickler aufzubauen, Mailinglisten 
+einzurichten und oft auch zum erstem Mal eine Dokumentation 
+zu schreiben. All das ist eine Menge Arbeit. Und <span class="emphasis"><em>falls</em></span> 
+interessierte Entwickler auftauchen, gibt es die zusätzliche Bürde, eine
+Zeit lang ihre Fragen beantworten zu müssen, bevor man aus ihrer
+Anwesenheit einen Nutzen zieht. Der Entwickler Jamie Zawinski hatte 
+folgendes über die Anfangstage des Mozilla Projekts zu sagen:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Open Source funktioniert schon, aber es ist 
+	  sicherlich kein Allheilmittel. Falls es hier eine warnende Lehre 
+	  gibt, dann die, dass man ein sterbendes Projekt nicht einfach mit
+	  dem magischen Elfenstaub des "Open Source" bestreuen kann, und
+	  danach alles wie von selbst läuft. Die Probleme sind nicht so 
+	  einfach.</em></span></p><p>(aus <span class="bold"><strong><a class="ulink" href="http://www.jwz.org/gruntle/nomo.html">http://www.jwz.org/gruntle/nomo.html</a></strong></span>)</p></blockquote></div><p>Ein verwandter Fehler ist an Aufmachung und Präsentation zu 
+sparen, in der Annahme, dass diese Sachen auch später erledigt werden
+können, sobald das Projekt erst einmal läuft. Aufmachung und
+Präsentation umfasst eine weite Reihe von Aufgaben, die sich alle um das
+Thema drehen, die Einstiegshürden niedrig zu legen. Das Projekt für
+Außenstehende einladend zu machen bedeutet, Anleitungen für Nutzer und
+Entwickler zu schreiben, eine Webseite aufzubauen, die für 
+Neuankömmlinge informativ ist, möglichst viele der Kompilierungs-
+und Installationsvorgänge der Software zu automatisieren, usw. Viele
+Entwickler behandeln diese Aufgaben leider so als wären sie nur von
+zweitrangiger Bedeutung im Verhältnis zum eigentlichen Quellcode. Es 
+gibt hierfür ein paar Gründe. Erstens, kann es einem wie Fleißarbeit 
+vorkommen, denn die Vorteile sind zumeist nur für diejenigen sichtbar,
+die noch am wenigsten mit dem Projekt zu tun haben und umgekehrt. 
+Schließlich kann jemand, der bereits mit dem Projekt vertraut ist,
+auf diese ganze Aufmachung verzichten. Er weiß schon, wie man die
+Software installiert, administriert und benutzt, schließlich hat er sie
+ja entwickelt. Zweitens sind die Fähigkeiten, die Aufmachung
+und Präsentation vernünftig zu gestalten, andere als solche die man 
+benötigt um Quellcode zu schreiben. Menschen neigen dazu, sich auf das
+zu konzentrieren, was sie gut können, selbst wenn es für das Projekt 
+besser wäre, ein wenig Zeit in etwas zu investieren, was ihnen weniger
+liegt. <a class="xref" href="ch02.html" title="Kapitel 2. Der Einstieg">Kapitel 2, <em>Der Einstieg</em></a> behandelt Aufmachung und 
+Präsentation im Detail und erklärt, warum es entscheidend ist, dass 
+sie gleich von Anfang an Priorität haben sollten.</p><p>Der nächste Trugschluss ist, dass bei freier Software wenig bis
+gar kein Projektmanagement erforderlich ist bzw. umgekehrt, dass dieselben Management-Verfahren, die für die Entwicklung im Betrieb benutzt
+werden, sich genauso gut auf ein Open-Source-Projekt anwenden lassen.
+Die Verwaltung ist bei einem Open-Source-Projekt nicht immer besonders 
+offensichtlich, aber bei erfolgreichen Projekten gibt es sie in irgendeiner Form im Hintergrund. Ein kleines Gedankenexperiment reicht um die
+Gründe dafür zu zeigen. Ein Open-Source-Projekt besteht aus einem 
+zufällig zusammengewürfeltem Haufen von Programmierern – bereits
+an und für sich notorisch eigensinnige Leute –, von denen
+untereinander wahrscheinlich keiner einem anderen je begegnet ist, und 
+von denen jeder u.U. unterschiedliche eigene persönliche Ziele verfolgt.
+Das Gedankenexperiment ist einfach: Stellen Sie sich vor, was mit einer
+solchen Gruppe passieren würde, <span class="emphasis"><em>ohne</em></span> eine 
+Verwaltung. Wenn kein Wunder geschieht, würden sie sehr schnell
+auseinander gehen. Auch wenn wir es uns anders wünschen, läuft das
+Ganze nicht einfach von alleine. Die Verwaltung ist aber, wenn auch
+ziemlich aktiv, meistens informell, subtil und unauffällig. Das Einzige,
+was die Entwickler zusammenhält, ist, dass sie zusammen mehr erreichen
+können als jeder für sich. Deshalb muss die Aufgabe einer Verwaltung
+hauptsächlich darin bestehen, sie weiterhin daran glauben zu lassen,
+indem sie Richtlinien für die Kommunikation festlegt, dafür sorgt, dass 
+brauchbare Entwickler nicht aufgrund persönlicher Eigenheiten an den
+Rand gedrängt werden, und allgemein das Projekt als einen Ort zu
+gestalten, an den Entwickler gern zurückkehren. Im Verlauf des Buchs
+soll gezeigt werden, wie man diese Ziele erreicht.</p><p>Schließlich gibt es eine generelle Problematik, die man als
+"Versagen kultureller Navigation" bezeichnen könnte. Vor zehn, vielleicht
+auch nur fünf Jahren hätte es als voreilig gegolten, von einer globalen
+Kultur der freien Software zu reden, heute jedoch nicht. Eine erkennbare
+Kultur ist langsam gewachsen, und obwohl sie sicherlich nicht
+monolitisch ist – sie ist mindestens so anfällig für interne 
+Meinungsverschiedenheiten und Parteigeist wie irgend eine geographisch
+gebundene Kultur – hat sie doch einen im Grunde genommen 
+beständigen Kern. Die meisten erfolgreichen Open-Source-Projekte,
+zeigen alle, oder zumindest einen großen Teil der Merkmale von diesem
+Kern. Sie belohnen bestimmte Verhaltensmuster und bestrafen andere;
+sie schaffen eine Atmosphäre, die spontane Beteiligung fördert,
+manchmal auf Kosten zentraler Koordination; sie haben Konzepte von 
+Unhöflichkeit und gutem Benehmen, die von den anderswo vorherrschenden
+erheblich abweichen können. Vielleicht am wichtigsten sind die 
+erfahrenen Teilnehmer, die diese Konzepte meistens verinnerlicht haben,
+sodass sie einen groben Konsens über das zu erwartenden Benehmen teilen.
+Nicht erfolgreiche Projekte weichen für gewöhnlich wesentlich von diesem
+Kern ab, wenn auch unabsichtlich, und haben oft keinen Konsens 
+darüber, welches Benehmen als angemessen einzustufen ist. Das hat zur 
+Folge, dass sobald Probleme auftreten, die Situation schnell 
+eskalieren kann, da den Teilnehmern ein etablierter Grundbestand
+kultureller Reflexe fehlt, um Meinungsverschiedenheiten zu klären.</p><p>Dieses Buch ist ein praktischer Führer, keine anthropologische
+Studie oder Historie. Grundkenntnisse über die Herkunft der Kultur der
+freien Software sind dennoch, eine erforderliche Grundlage bei jedem
+praktischen Ratschlag. Jemand der die Kultur versteht, kann 
+weit und breit in der Open-Source-Welt reisen, viele lokale Unterschiede
+in den Gebräuchen und Dialekten begegnen, und trotzdem in der Lage sein,
+sich überall bequem und effektiv zu beteiligen. Im Gegensatz dazu wird
+eine Person ohne Verständnis für die Kultur, die Organisation und die
+Art sich an einem Projekt zu beteiligen, die Bräuche als schwierig und
+voller Überraschungen empfinden. Da die Anzahl der Menschen, die freie
+Software entwickeln, immer noch stark ansteigt, gibt es viele in der 
+letzten Kategorie – diese sind zum größten Teil vor kurzem
+eingewandert und das wird auch eine Weile lang so bleiben. Wenn Sie
+meinen, vielleicht eine von ihnen zu sein, gibt der nächste Abschnitt 
+einen Hintergrund für spätere Diskussionen, sowohl im Buch als auch im
+Internet. (Wenn Sie andererseits bereits eine Weile lang mit Open Source
+arbeiten, und u.U. bereits eine Menge seiner Geschichte kennen, können
+Sie den nächsten Abschnitt getrost überspringen.)</p></div><div class="sect1" title="Die Geschichte"><div class="titlepage"><div><div><h1 class="title"><a id="history"/>Die Geschichte</h1></div></div></div><p>Software wurde schon immer an Andere weitergegeben und miteinander
+geteilt. In den frühen Tagen der Computerindustrie waren Hersteller der
+Meinung, vor allem durch Innovationen in der Hardware 
+Wettbewerbsvorteile zu erreichen, und schenkten der Software als
+Vorteil gegenüber der Konkurrenz wenig Aufmerksamkeit. Viele Kunden 
+dieser frühen Maschinen waren Wissenschaftler oder Techniker, die in der
+Lage waren, die Software die mit der Maschine selbst ausgeliefert wurde, 
+selbst zu verändern und zu erweitern. Kunden gaben ihre Verbesserungen
+nicht nur an den Hersteller zurück, sondern teilten es manchmal auch mit
+den Besitzern ähnlicher Maschinen. Den Herstellern war das nur recht, sie
+ermutigten sogar dazu: Aus ihrer Sicht machte jede Verbesserung an der 
+Software, egal aus welcher Quelle, ihre Maschine attraktiver für andere
+potenzielle Kunden.</p><p>Obwohl diese frühe Zeit in vielerlei Hinsicht der heutigen freien
+Software-Kultur ähnelte, gab es zwei wesentliche Unterschiede. Erstens
+gab es noch kaum standardisierte Hardware – es war eine Zeit 
+florierender Innovationen bei den Architekturen in Computern, aber diese
+Vielfalt bedeutete, dass alles inkompatibel zueinander war. Deshalb lief
+Software, die für eine Maschine geschrieben wurde, im Allgemeinen auf
+keiner anderen. Programmierer eigneten sich im Allgemeinen Fachkenntnisse
+zu einer bestimmten Architektur oder Familie von Architekturen an (im 
+Gegensatz dazu würden sie heute eher Fachkenntnisse in einer 
+Programmiersprache oder Familie von Programmiersprachen sammeln, mit der
+Zuversicht, dass ihre Kenntnisse, auf welcher Hardware sie auch arbeiten 
+mögen, übertragbar wären). Weil die Erfahrungen einer Person dazu neigten
+sich auf einen Computer zu beschränken, hatte die Aneignung von Erfahrung
+die Folge, diesen Computer für sie und ihre Kollegen attraktiver zu 
+machen. Deshalb war es im Interesse des Herstellers, dass für seine Maschinen spezifisches Wissen und 
+Code sich so weit wie möglich 
+verbreitete.</p><p>Zweitens gab es kein Internet. Obwohl es weniger rechtliche
+Einschränkungen gab als heute, die den Austausch von Software
+verhinderten, gab es mehr technische: Es gab ein ein paar wenige, lokale
+Netzwerke, die gut waren um Informationen unter Mitarbeitern der gleichen
+Forschungseinrichtung auszutauschen. Aber es blieben Barrieren die es zu
+überwinden galt, wenn man mit jedem teilen wollte, unabhängig von seinem
+Standort. Diese Barrieren <span class="emphasis"><em>wurden</em></span> in vielen Fällen
+überwunden. Manchmal stellten verschiedene Gruppen eigenständig Kontakt
+zueinander her. Sie sandten einander Disketten oder Magnetbänder mittels
+Post zu und manchmal fungierten die Hersteller selbst als zentrale 
+Anlaufstelle für Patches. Es half auch, dass viele frühe 
+Computer-Entwickler an Universitäten arbeiteten, wo die Veröffentlichung
+des eigenen Wissens erwartet wurde. Die physische Realität der
+Datenübertragung bedeutete jedoch, dass der Austausch immer einen
+Widerstand mit sich brachte, der proportional zur Entfernung (echte
+oder organisatorische) anwuchs, die von der Software überwunden werden
+musste. Weitverbreitetes reibungsloses Tauschen, wie wir es heute
+erleben, war nicht möglich.</p><div class="sect2" title="Der Aufstieg proprietärer und freier Software"><div class="titlepage"><div><div><h2 class="title"><a id="propertization"/>Der Aufstieg proprietärer und freier Software</h2></div></div></div><p>Mit der Reifung der Industrie ergaben sich mehrere zusammenhängende
+Veränderungen. Der Wildwuchs bei den Hardware-Architekturen
+konsolidierte sich auf einige wenige Gewinner – Gewinner durch 
+überlegene Technologie, überlegenes Marketing, oder eine Kombination
+beider. Gleichzeitig, und nicht ganz zufällig, hatte die Entwicklung
+sogenannter "höherer" Programmiersprachen zur Folge, dass man
+Anwendungen in einer Sprache schreiben konnte, und es automatisch
+übersetzen ("kompilieren") lassen konnte, sodass es auf viele 
+verschiedene Computer laufen konnte. Die Folgen hiervon blieben den
+Hardware-Herstellern nicht verborgen: Ein Kunde konnte jetzt ein 
+großes Software-Projekt in Angriff nehmen, ohne sich auf eine bestimmte
+Computer-Architektur festzulegen. Diese Tatsache, zusammen mit den 
+allmählich kleiner werdenden Unterschieden zwischen den verschiedenen 
+Marken (da weniger effiziente Architekturen ausgesiebt wurden), zwang
+Hersteller, die ihre Hardware als ihr einziges Gut behandelten, sich
+auf sinkende Gewinnmargen einzustellen. Rohe Rechenleistung wurde ein
+ersetzbares Gut, während Software zum Unterscheidungsmerkmal wurde.
+Software zu verkaufen, oder zumindest es als integrierten Bestandteil
+der Hardware zu verkaufen, wurde zu einer verlockenden Strategie.</p><p>Hersteller fingen also an, die Urheberrechte auf ihren Quellcode
+strenger durchzusetzen. Wenn Nutzer einfach weiterhin frei miteinander
+Code tauschen und modifizieren konnten, würden sie vielleicht manche
+der Verbesserungen eigenständig neu implementieren, die der Hersteller
+als "Mehrwert" verkaufen wollte. Schlimmer noch, getauschter Quellcode
+könnte an die Konkurrenz gelangen. Ironisch dabei ist, dass all das
+zur selben Zeit geschah, als das Internet endlich anfing abzuheben.
+Gerade als der echte reibungslose Austausch von Software endlich 
+technisch machbar wurde, machten Veränderungen in der Computerindustrie
+es wirtschaftlich nicht wünschenswert, zumindest aus Sicht der einzelnen
+Unternehmen. Die Hersteller wurden restriktiver, entweder verwehrten sie
+den Nutzern den Zugriff auf den Quellcode der auf ihren Maschinen lief,
+oder sie bestanden auf Vertraulichkeitsvereinbarungen, die das Tauschen
+praktisch unmöglich machten.</p><div class="sect3" title="Bewusster Widerstand"><div class="titlepage"><div><div><h3 class="title"><a id="history-conscious-resistance"/>Bewusster Widerstand</h3></div></div></div><p>Langsam ließ der unbeschränkte Austausch von Quellcode
+überall in der Softwareindustrie nach. Überall? Zumindest im Kopf
+eines Programmierers kristallisierte sich eine Gegenreaktion. Richard 
+Stallman arbeitete im Labor für künstliche Intelligenz am Massachusetts 
+Institute of Technology in 
+den 1970ern und frühen '80ern. Es sollte sich herausstellen, dass dies
+die goldene Zeit und der goldene Ort für den freien Austausch von 
+Quellcode war. Das KI-Labor hatte eine starke "Hacker-Ethik", 
+<sup>[<a id="idp5443040" href="#ftn.idp5443040" class="footnote">4</a>]</sup> und Leute 
+wurden nicht nur dazu ermutigt sondern es wurde von ihnen erwartet, alle
+Verbesserungen am System mit Anderen zu teilen. Stallman schrieb 
+später:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Wir nannten unsere Software nicht "freie Software"
+      weil es diesen Begriff noch nicht gab; aber genau das war es.
+      Immer als Leute von anderen Universitäten oder Firmen eine
+      Anwendung benutzen und portieren wollte, konnten sie das gerne
+      machen. Wenn du jemand bei der Nutzung einer unbekannten und
+      interessanten Anwendung gesehen hast, konntest du immer darum
+      bitten dir den Quellcode anzuschauen, um es zu lesen, zu
+      verändern oder Teile davon für eine neue Anwendung 
+      auszuschlachten.</em></span></p><p>(von <span class="bold"><strong>
+      <a class="ulink" href="http://www.gnu.org/gnu/thegnuproject.html">http://www.gnu.org/gnu/thegnuproject.html</a>
+      </strong></span>)</p></blockquote></div><p>Die Edenische Gemeinschaft um Stallman herum, brach kurz nach 1980
+zusammen, als die Veränderungen der Industrie letztendlich 
+das KI-Labor einholten. Eine Startup-Firma stellte viele Programmierer
+des Labors ein, um an einem Betriebssystem zu arbeiten, ähnlich zu dem
+welches sie im Labor programmiert hatten, diesmal aber unter einer 
+exklusiven Lizenz. Gleichzeitig, schaffte sich das KI-Labor neue 
+Ausrüstung an, welches mit einem proprietären Betriebssystem 
+ausgeliefert wurde.</p><p>Stallman sah in den Geschehnissen das größere Muster:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Die modernen Computer dieser Ära, wie z.B. der
+      VAX oder die 68020, hatten ihre eigenen Betriebssysteme, aber
+      keines davon war freie Software: Man musste eine
+      Vertraulichkeitsvereinbarung unterschreiben, nur um eine
+      ausführbare Kopie zu bekommen.</em></span></p><p><span class="emphasis"><em>Um einen neuen Computer zu nutzen, musste man also
+      als allererstes versprechen, seinen eigenen Nachbarn nicht zu 
+      helfen. Eine gemeinschaftliche Zusammenarbeit war verboten. Die
+      Hersteller proprietärer Software stellten die Regel auf: "Wenn du
+      mit deinem Nachbarn teilst, bist du ein Pirat. Wenn du irgendwelche 
+      Änderungen haben möchtest, dann musst du bei uns darum 
+      betteln."</em></span></p></blockquote></div><p>Stallman entschied sich aus irgend eine persönliche Eigenart heraus
+Widerstand gegen diese Entwicklung zu leisten. Anstatt für das nunmehr
+dezimierte KI-Labor weiterzuarbeiten, oder eine Arbeit bei einer der
+neuen Firmen anzunehmen, wo die Ergebnisse seiner Arbeit verschlossen in
+einer Kiste wären, kündigte er dem Labor und gründete das GNU
+Projekt und die Free Software Foundation (FSF). Das Ziel von GNU
+<sup>[<a id="idp5458480" href="#ftn.idp5458480" class="footnote">5</a>]</sup> war es ein
+komplett freies und offenes Betriebssystem und eine Reihe von 
+Anwendungen zu entwickeln, die jedem Benutzer ermöglichen sollte an
+der Software zu hacken, sowie ihre Änderungen untereinander zu teilen.
+Im wesentlichen machte er sich auf den Weg wiederherzustellen, was im
+KI-Labor zerstört wurde, aber in einer weltumspannenden Größenordnung
+und ohne die Schwachstellen welche die Kultur des KI-Labors verwundbar
+gemacht hatten.</p><p>Zusätzlich zur Arbeit am neuen Betriebssystem, entwarf er eine
+urheberrechtliche Lizenz, deren Bedingungen garantierten, dass sein
+Code für immer frei bleiben würde. Die GNU General Public License (GPL)
+ist ein cleveres Stück juristisches Judo: Es besagt, dass Code ohne 
+Einschränkungen kopiert und verändert werden darf, und dass sowohl
+Kopien als auch abgeleitete Werke (das heißt veränderte Versionen)
+unter derselben Lizenz wie das Original, ohne weitere Einschränkungen,
+freigegeben werden müssen. Tatsächlich benutzt es das Urheberrecht um
+genau das Gegenteil zu erreichen wozu es üblicherweise benutzt wird: 
+Anstatt die Verbreitung der Software einzuschränken, hindert es 
+<span class="emphasis"><em>jeden</em></span>, sogar den Autor, an seiner Einschränkung.
+Für Stallman war das besser als seinen Code einfach als öffentliches
+Gut freizugeben. Ohne eine Lizenz könnte jede beliebige Kopie in eine
+proprietäre Anwendung aufgenommen werden (ein bekanntes Phänomen bei
+Code welcher unter toleranten Lizenzen veröffentlicht wird). Obwohl
+solch eine Einbindung in keiner Weise die weitere Verfügbarkeit des
+Codes einschränken würde, könnten die Anstrengungen von Stallman 
+dadurch dem Feind – proprietäre Software – zum Vorteil
+gereichen. Die GPL kann man als einen Schutz für freie Software
+betrachten, da es nicht-freie Software daran hindert, seinen GPL Code
+komplett auszunutzen. Die GPL und ihre Beziehung zu anderen freien
+Software-Lizenzen werden im Kapitel ??? ausführlich 
+behandelt.</p><p>Mit der Unterstützung vieler anderer Programmierer, teils
+Gleichgesinnte von Stallman, die seine Ideologie teilten, teils andere,
+die einfach nur möglichst viel freien Quellcode wollten, fing das GNU
+Projekt an, freien Ersatz für viele der wichtigsten Komponenten eines
+Betriebssystems zu veröffentlichen. Die nunmehr weit verbreitete
+Standardisierung von Hardware und Software erlaubte den Einsatz von
+GNU Software in ansonsten proprietären Systemen, was von vielen gemacht
+wurde. Der GNU Text-Editor (Emacs) und C Compiler (GCC) fanden großen 
+Anklang, nicht nur wegen der Ideologie, sondern einfach aufgrund ihrer
+technischen Vorzüge. Bis ca. 1990, hatte GNU den Großteil eines freien
+Betriebssystems fertiggestellt. Es fehlte noch ein Kernel – also
+die Software die beim Hochfahren geladen wird und für die Verwaltung von
+Arbeitsspeicher, Festplatten und anderer Ressourcen des Systems zuständig
+ist.</p><p>Leider hatte das GNU Projekt eine Kernelstruktur gewählt, die
+schwieriger zu implementieren war, als sie es erwartet hatten. Die
+dadurch entstandene Verzögerung hinderte die Free Software Foundation
+daran, die erste Veröffentlichung eines komplett freien Betriebssystems
+zu machen. Das letzte Stück wurde statt dessen von Linus Torvalds, einem
+finnischen Informatik-Studenten hervorgebracht, der mit der Hilfe von 
+vielen Freiwilligen, verteilt auf der ganzen Welt, einen freien Kernel
+fertig gestellt hatte, der auf einem viel konservativeren Aufbau 
+basierte. Er nannte es Linux, und als es mit den bereits existierenden
+GNU Anwendungen kombiniert wurde, war das Ergebnis ein komplett freies
+Betriebssystem. Zum ersten Mal konnte man seinen Computer ohne 
+proprietäre Software hochfahren und damit arbeiten. <sup>[<a id="idp5471344" href="#ftn.idp5471344" class="footnote">6</a>]</sup></p><p>Viel Software dieses neuen Betriebssystems wurde nicht vom GNU
+Projekt produziert. In der Tat war GNU nicht einmal die einzige Gruppe
+die daran arbeitete ein freies Betriebssystem herzustellen (ein Beispiel
+ist der Code der letztendlich in NetBSD und FreeBSD aufging, an dem zu
+dieser Zeit bereits entwickelt wurde). Die Free Software Foundation war
+nicht nur aufgrund des Codes den sie produzierten von Bedeutung,
+sondern auch wegen ihrer Rhetorik. Indem sie von freier Software eher 
+als Glaubenssache sprachen wofür es sich zu kämpfen lohnt, und nicht
+als eine Sache der Bequemlichkeit, machten sie es für Programmierer 
+schwierig <span class="emphasis"><em>nicht</em></span> ein politisches Bewusstsein darüber
+zu haben. Selbst wenn man der FSF nicht zustimmte musste man sich mit
+dem Thema befassen, wenn auch nur um eine andere Position einzunehmen. Die
+Wirksamkeit der FSF als Propagandisten bestand darin, ihren Code mittels
+der GPL und anderer Texte an eine Botschaft zu binden. Zusammen mit ihrem Code
+verbreitete sich auch ihre Botschaft.</p></div><div class="sect3" title="Zufälliger Widerstand"><div class="titlepage"><div><div><h3 class="title"><a id="history-accidental-resistance"/>Zufälliger Widerstand</h3></div></div></div><p>Es gab viele andere Vorgänge in der aufkeimenden Szene der
+freien Software und wenige waren derart offen ideologisch wie das GNU 
+Projekt von Stallman. Einer der wichtigsten war die <em class="firstterm">Berkeley
+Software Distribution</em> (<em class="firstterm">BSD</em>), eine
+schrittweise Neuimplementierung des Unix-Betriebssystems –
+bis in die späten 1970ern ein loses proprietäres Forschungsprojekt von
+Programmierern bei AT&amp;T – an der Universität von Kalifornien in Berkeley.
+Die BSD Gruppe machte keine offenkundigen politischen 
+Äußerungen darüber, dass Programmierer sich verbünden und miteinander 
+teilen mussten, aber sie <span class="emphasis"><em>praktizierten</em></span> die Idee 
+mit Spürsinn und Enthusiasmus, indem sie eine massive verteilte
+Anstrengung koordinierten, bei dem Unix-Konsolen-Anwendungen,
+Code-Bibliotheken und schließlich das Betriebssystem selbst von
+Grund auf, größtenteils von Freiwilligen, neu geschrieben wurde. Das
+BSD Projekt wurde zum Aushängeschild für Entwicklung freier Software 
+ohne ideologischen Hintergrund und diente als Ausbildungsstätte für
+viele Entwickler die später in der Open-Source-Welt weiterhin aktiv
+bleiben sollten.</p><p>Eine weitere Feuerprobe der kooperativen Entwicklung, war das
+<em class="firstterm">X Window System</em>, eine freie netzwerktransparente
+grafische Benutzerumgebung, welches Mitte der 1980er am MIT in
+Zusammenarbeit mit Hardware-Anbietern entwickelt wurde, die ein 
+gemeinsames Interesse daran hatten ihren Kunden ein Fenstersystem
+anbieten zu können. Weit davon entfernt sich proprietärer Software
+entgegenzustellen, erlaubte die X Lizenz ganz bewusst proprietäre
+Erweiterungen auf seinem freien Kern – alle Beteiligten des
+Konsortiums wollten die Möglichkeit die gängige X Version zu verbessern
+und sich dadurch von den anderen Mitgliedern abzuheben. X Windows
+<sup>[<a id="idp5466288" href="#ftn.idp5466288" class="footnote">7</a>]</sup> selbst war freie Software, aber
+hauptsächlich als Mittel um das Spielfeld zwischen konkurrierenden
+wirtschaftlichen Interessen zu ebnen, nicht als Wunsch die Vormacht 
+proprietärer Software zu brechen. Ein weiteres Beispiel, das dem
+GNU Projekt ein paar Jahre vorausging war TeX von Donald Knuth, ein
+freies Textsatzsystem für druckfertige Dokumente. Er veröffentlichte
+es unter einer Lizenz, welche jedem erlaubte es zu modifizieren und
+zu veröffentlichen, solange man das Ergebnis nicht "TeX" nannte,
+wenn es nicht einen strikten Satz an Prüfungen bestand, die
+Kompatibilität gewährleisten sollten (TeX ist ein Beispiel für
+eine Klasse von Lizenzen für freie Software die ein Markenzeichen 
+schützen sollen, welches im Kapitel <a class="xref" href="ch09.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente">Kapitel 9, <em>Lizenzen, Urheberrecht und Patente</em></a>
+ausführlicher behandelt wird). Knuth bezog nicht Stellung für die eine
+oder andere Partei in Bezug auf die Frage freier gegen proprietäre 
+Software, er brauchte nur ein besseres Textsatzsystem um sein 
+<span class="emphasis"><em>echtes</em></span> Ziel zu erreichen – ein Buch über 
+Softwareentwicklung zu schreiben – und sah, als er
+fertig war, keinen Grund sein System nicht der Welt zur Verfügung zu stellen.</p></div><p>Ohne hier jedes Projekt und jede Lizenz aufzulisten, kann man
+doch mit Sicherheit sagen, dass Ende der 1980er eine Menge freier
+Software unter einer breiten Auswahl an Lizenzen zu Verfügung stand.
+Die Vielfalt an Lizenzen spiegelte eine entsprechende Vielfalt an
+Motivationen wider. Selbst einige der Programmierer welche die GNU 
+GPL wählten waren viel weniger ideologisch getrieben als das GNU
+Projekt selbst. Obwohl sie es genossen an freier Software zu arbeiten,
+betrachteten viele Entwickler proprietäre Software nicht als soziales
+Übel. Es gab Menschen die einen moralischen Drang spürten die Welt von
+"Software-Hortung" (der Begriff den Stallman für nicht freie Software
+benutzt) zu befreien, andere waren jedoch eher durch technische 
+Begeisterung motiviert, durch die Freude an der Zusammenarbeit mit
+Gleichgesinnten, sogar durch das einfache menschliche Bedürfnis nach
+Ruhm. Dennoch beeinflussten sich diese ungleichen Motivationen
+größtenteils nicht negativ. Teilweise liegt das daran, dass Software
+im Gegensatz zu anderen kreativen Aktivitäten wie Prosa oder die
+bildende Kunst einige mehr oder weniger objektive Prüfungen bestehen
+muss um als erfolgreich erachtet zu werden: Es muss Laufen und zu einem
+gewissen Maß frei von Fehlern sein. Dadurch haben alle Teilnehmer eines
+Projekts automatisch grundlegende gemeinsame Interessen, eine Basis und
+ein Rahmenwerk um miteinander zu arbeiten, ohne sich all zu viele Sorgen um 
+eine Qualifizierung außerhalb des technischen machen zu müssen.</p><p>Entwickler hatten noch einen weiteren Grund zusammenzuhalten: es stellte
+sich heraus, dass die Welt freier Software qualitativ sehr hochwertigen
+Code produzierte. Manchmal war es aus technischer Sicht der nächstbesten 
+nicht-freien Alternative nachweislich überlegen; manchmal war es
+zumindest vergleichbar und natürlich kostete es weniger. Auch wenn nur
+wenige motiviert gewesen wären freie Software aus rein philosophischen
+Gründen zu nutzen, waren viele mehr als glücklich sie wegen ihrer
+technischen Überlegenheit zu nutzen. Und von denen die es benutzten war 
+immer irgend ein Bruchteil bereit ihre Zeit und Fähigkeiten zu spenden,
+um bei der Pflege und Verbesserung der Software mitzuhelfen.</p><p>Diese Tendenz guten Code zu produzieren war sicherlich nicht
+überall gegeben, aber bei freien Software-Projekten auf der ganzen
+Welt zunehmend oft der Fall. Geschäftszweige die zu einem gewichtigen
+Teil von Software abhingen fingen langsam an davon Wind zu bekommen.
+Viele bemerkten, dass in ihren Betrieben bereits jeden Tag freie 
+Software eingesetzt wurde, ohne es gewusst zu haben (die 
+Geschäftsleitung wird nicht immer über alles informiert, was sich in
+der IT-Abteilung abspielt). Firmen fingen an eine aktivere Rollen bei
+freien Software-Projekte einzunehmen, manchmal trugen sie mit Zeit und
+Ausrüstung bei, manchmal auch direkt durch finanzielle Unterstützung
+der Entwicklung freier Software-Anwendungen. Solche Investitionen
+konnten sich im Idealfall um ein Vielfaches auszahlen. Der Geldgeber
+stellt lediglich eine kleine Gruppe erfahrener Entwickler ein, die sich
+ganztags einem Projekt widmen, profitiert aber von den Beiträgen 
+<span class="emphasis"><em>aller</em></span> Beteiligten, also auch von unbezahlten 
+Freiwilligen und Programmierern anderer Unternehmen.</p></div><div class="sect2" title="&quot;Frei&quot; kontra &quot;Open Source&quot;"><div class="titlepage"><div><div><h2 class="title"><a id="free-vs-open-source"/>"Frei" kontra "Open Source"</h2></div></div></div><p>Mit zunehmender Aufmerksamkeit aus der Unternehmenswelt wurden
+Programmierer freier Software mit Fragen der Präsentation konfrontiert.
+Eines war das Wort "frei"<sup>[<a id="idp5512736" href="#ftn.idp5512736" class="footnote">8</a>]</sup> selbst.
+Wenn man den Begriff "freie Software" zum ersten Mal hört, denken viele
+es bedeute lediglich "gratis Software". Es stimmt zwar, dass freie 
+Software auch kostenlos ist<sup>[<a id="idp5515856" href="#ftn.idp5515856" class="footnote">9</a>]</sup>, aber nicht
+jede Software die nichts kostet ist auch frei. Ein Beispiel sind die 
+Browser-Kriege der 1990er, indem sowohl Netscape als auch Microsoft 
+ihre konkurrierenden Browser kostenlos anboten, um eilig einen möglichst
+großen Marktanteil zu erlangen. Keiner von ihnen war jedoch frei im 
+Sinne "freier Software". Man hatte keinen Zugriff auf den Quellcode und
+selbst wenn, hätte man nicht die Rechte ihn zu modifizieren und 
+weiterzugeben<sup>[<a id="idp5517296" href="#ftn.idp5517296" class="footnote">10</a>]</sup>.
+Man konnte lediglich eine ausführbare Datei herunterladen und laufen
+lassen. Die Browser waren nicht freier als eingeschweißte Software aus
+dem Geschäft; sie waren lediglich etwas günstiger.</p><p>Die Verwirrung um das Wort "frei" ist einer ganz und gar 
+unglücklichen Doppeldeutigkeit der Englischen Sprache zuzuschreiben.
+Die meisten anderen Sprachen unterscheiden zwischen einem niedrigen
+Preis und Freiheit (die Unterscheidung zwischen 
+<span class="emphasis"><em>gratis</em></span> und <span class="emphasis"><em>libre</em></span> leuchtet
+den meisten Sprechern romanischer Sprachen sofort ein). Die Stellung 
+der englischen Sprache als de-facto Brückensprache des Internets hat
+zur Folge, dass dieses Problem zu einem gewissen Grad
+ein Problem aller ist. Die Missverständnisse um das Wort "free" waren so
+verbreitet, dass die Programmierer freier Software schließlich eine 
+Standard-Formulierung als Reaktion parat hielten: "Es ist 
+<span class="emphasis"><em>frei</em></span> im Sinne von 
+<span class="emphasis"><em>Freiheit</em></span> – denke an die 
+<span class="emphasis"><em>Redefreiheit</em></span>, nicht an 
+<span class="emphasis"><em>Freibier</em></span>."<sup>[<a id="idp5524928" href="#ftn.idp5524928" class="footnote">11</a>]</sup>. Diese Erklärung dauernd wiederholen
+zu müssen ist aber auf Dauer ermüdend. Viele Programmierer fühlten, teils
+zu Recht, dass die Zweideutigkeit des Worts "frei" das Verständnis in der
+Öffentlichkeit behinderte.</p><p>Das Problem war aber viel schwerwiegender. Das Wort "frei" trug 
+eine unausweichliche moralische Konnotation: Wenn die Freiheit ein
+Ziel für sich war, dann machte es keinen Unterschied ob die Software
+zufällig auch besser oder unter bestimmten Bedingungen auch für 
+bestimmte Geschäfte profitabler war. Das waren lediglich angenehme
+Nebeneffekte einer Motivation, die im Grunde genommen weder 
+technischer noch geschäftlicher, sondern moralischer Natur war.
+Zusätzlich wurde Firmen durch den Standpunkt "frei im Sinne von 
+Freiheit" eine grelle Inkonsistenz aufgezwungen, die für einen
+Geschäftszweig freie Anwendungen unterstützen wollten,
+aber für andere weiterhin proprietäre Software vertrieben.</p><p>Diese Dilemma trafen auf eine Gemeinschaft die sich bereits mit
+einer Identitätskrise konfrontiert sah. Programmierer die wirklich
+freie Software <span class="emphasis"><em>schreiben</em></span>, waren sich nie sonderlich
+einig über das Endziel der freien Software-Bewegung, wenn es überhaupt
+ein solches gibt. Zu sagen, dass die Meinungen von einem Extrem zum
+anderen laufen wäre aber irreführend, da es fälschlicherweise eine
+lineare Reihe implizieren würde, wo es in Wirklichkeit eine 
+mehrdimensionale Verteilung gibt. Wir können jedoch grob zwischen zwei 
+Glaubensrichtungen unterschieden, wenn wir uns darauf einigen können 
+Feinheiten außen vor zu lassen. Eine Gruppe vertritt die Ansicht von
+Stallman, dass die Freiheit zu Teilen und zu Modifizieren das Wichtigste
+ist. Sollte man also aufhören über Freiheit zu reden, dann hat man die
+Kernfrage weggelassen. Andere sind der Meinung, die Software selbst sei
+das wichtigste Argument für freie Software und fühlen sich unwohl
+bei der Behauptung, proprietäre Software sei an und für sich schlecht.
+Manche, aber nicht alle Programmierer freier Software, glauben der 
+Autor (bzw. bei bezahlter Arbeit der Arbeitgeber) 
+<span class="emphasis"><em>sollte</em></span> das Recht haben die Bedingungen zu
+bestimmen, mit denen die Software verteilt werden darf und dass keine
+moralische Beurteilung an eine bestimmte Wahl von Bedingungen geknüpft
+sein muss.</p><p>Lange Zeit mussten diese Meinungsverschiedenheiten nicht klar
+untersucht oder formuliert werden. Durch den anbrechenden Erfolg in der
+Geschäftswelt wurde die Angelegenheit aber unausweichlich. 1998 wurde
+der Begriff <em class="firstterm">Open Source</em> als 
+Alternative zu "frei" erschaffen, 
+durch eine Vereinigung von Programmierern
+die letztendlich zur Open-Source-Initiative (OSI) wurde.<sup>[<a id="idp5536688" href="#ftn.idp5536688" class="footnote">12</a>]</sup> Die OSI
+war der Meinung, dass der Begriff "freie Software" nicht nur potentiell
+verwirrend war, sondern dass es ein Symptom eines allgemeinen Problems 
+war: Die Bewegung brauchte eine Marketing-Kampagne um das Konzept der 
+Geschäftswelt schmackhaft zu machen und um zu verhindern, dass das Gerede
+über Moral, soziale Vorteile und zügellosen Austausch niemals in den 
+Vorstandsetagen ankommen würde. Mit anderen Worten:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Die Open-Source-Initiative ist eine Marketingkampagne
+      für freie Software. Es ist die Anpreisung freier
+      Software auf einer pragmatischen Basis anstatt auf
+      geschwollenem ideologischem Gerede. An der erfolgreichen
+      Substanz hat sich nichts geändert, an der schlechten Einstellung
+      schon. ...</em></span></p><p><span class="emphasis"><em>Was den meisten Technikfreaks klargemacht
+      werden muss ist nicht das Konzept von Open Source, sondern der
+      Name. Warum sollen wir es nicht wie bisher "freie Software"
+      nennen?</em></span></p><p><span class="emphasis"><em>Ein Grund ist, dass der Begriff "freie
+      Software" leicht missverstanden wird und dadurch zu 
+      Konflikten führen kann. ...</em></span></p><p><span class="emphasis"><em>Der echte Grund für die Umbenennung ist aber
+      eines der Vermarktung. Wir versuchen jetzt unser Konzept der
+      Geschäftswelt zu verkaufen. Wir haben ein gutes Produkt, waren aber
+      bisher furchtbar aufgestellt. Der Begriff "freie Software" wurde
+      von Geschäftsleuten falsch verstanden, die den Wunsch
+      zu teilen als Anti-Kommerz verstanden; gar
+	  schlimmer noch, als Diebstahl.</em></span></p><p><span class="emphasis"><em>Die durchschnittliche Firmenleitung wird niemals
+      "freie Software" kaufen. Wenn wir aber genau die gleiche Tradition,
+      die selben Menschen und die selben freien Software-Lizenzen nehmen 
+      und den Namen in "Open Source" ändern? Dann kaufen Sie es
+      gerne.</em></span></p><p><span class="emphasis"><em>Manche Hacker finden das schwer zu glauben, was
+      aber nur daran liegt, dass sie logisch denken und nur konkrete
+      Tatsachen betrachten. Sie verstehen nicht wie wichtig das
+      Erscheinungsbild ist, wenn man etwas verkaufen will.</em></span>
+      </p><p><span class="emphasis"><em>Bei der Vermarktung entspricht das 
+      Erscheinungsbild auch der Wirklichkeit. Der Anschein, dass wir
+      bereit sind von unseren Barrikaden herunterzukommen um mit
+      Geschäftsleuten zu arbeiten zählt genauso viel wie unser
+	  tatsächliches Verhalten, unsere Überzeugungen und unsere
+      Software.</em></span></p><p>(von <span class="bold"><strong><a class="ulink" href="http://opensource.feratech.com/advocacy/faq.php">http://opensource.feratech.com/advocacy/faq.php</a></strong></span>
+      und <span class="bold"><strong><a class="ulink" href="http://opensource.feratech.com/advocacy/case_for_hackers.php#marketing">http://opensource.feratech.com/advocacy/case_for_hackers.php#marketing</a></strong></span>)</p></blockquote></div><p>Die Spitzen vieler Eisberge sind in diesem Text sichtbar. Es
+spricht von "unseren Überzeugungen", vermeidet aber schlauerweise klar 
+zu formulieren was diese sind. Für manche mag es die Überzeugung sein, 
+dass Code der in einem offenen Prozess entwickelt wurde besser sei;
+für andere mag es wiederum die Überzeugung sein, dass alle
+Informationen geteilt werden sollten. Das Wort "Diebstahl" wird benutzt,
+um (vermutlich) auf illegales Kopieren hinzuweisen – wozu viele
+Vorbehalte auf der Grundlage hegen, dass es kein Diebstahl ist, wenn 
+der ursprüngliche Besitzer nachher noch den Gegenstand besitzt. Der
+Text gibt einen verlockenden Hinweis, dass die Bewegung der freien 
+Software versehentlich als anti-kommerziell beschuldigt werden könnte,
+untersucht aber vorsichtigerweise nicht ob solch eine Beschuldigung 
+vielleicht einen Grundlage hat.</p><p>Das soll nicht heißen die Webseite der OSI wäre inkonsistent
+oder irreführend. Das ist sie nicht. Es ist vielmehr ein
+Beispiel für genau das was die OSI behauptet der freien Software-Bewegung fehlen
+würde: eine gute Vermarktung, wobei "gut" hier "brauchbar für 
+die Geschäftswelt" bedeutet. Die Open-Source-Initiative gab vielen genau
+das wonach sie gesucht hatten – ein Wortschatz um über freie 
+Software als Entwicklungsprinzip und Geschäftsstrategie zu sprechen, 
+anstatt als moralischen Kreuzzug.</p></div><p>Die Entstehung der Open-Source-Initiative veränderte die 
+Landschaft der freien Software. Es formalisierte einen Zwiespalt der
+lange ohne Namen geblieben war, und zwang die Bewegung so, die
+Tatsache anzuerkennen, dass es sowohl eine interne als auch eine externe
+Politik hatte. Beide Seiten waren dadurch gezwungen eine gemeinsame 
+Basis zu finden, denn die meisten Projekte haben Programmierer aus 
+beiden Lagern, sowie solche die sich nicht klar einer Kategorie zuordnen
+lassen. Was nicht bedeutet, dass die Leute nie über moralische 
+Motivationen reden – Manchmal wird zum Beispiel auf Fehler in der
+traditionellen "Hacker-Ethik" hingewiesen. Aber es ist selten, dass ein
+Entwickler freier / Open-Source-Software offen die Motive anderer im 
+Projekt in Frage stellt. Die Beteiligung ist wichtiger als der 
+Beteiligte. Wenn jemand guten Code schreibt, sollte man sie nicht fragen
+ob sie es aus moralischen Gründen machen, weil sie dafür bezahlt werden, 
+weil sie ihren Lebenslauf erweitern wollen, oder aus sonstwelchen Gründen.
+Man beurteilt den Beitrag den sie leisten auf technischer Ebene und
+antwortet auf technischer Ebene. Selbstorganisationen wie Debian,
+die explizit politischer Natur sind, dessen Ziel es ist eine komplett
+freie Rechenumgebung bereitzustellen, sind relativ locker wenn es darum
+geht mit nicht-freiem Code zu funktionieren und mit Programmierern
+zusammenzuarbeiten, die nicht genau die selben Ziele teilen.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp5334000" href="#idp5334000" class="para">3</a>] </sup>Die beliebte 
+Hosting-Seite 
+SourceForge.net, verzeichnete Mitte April 2004 79,225 Projekte.
+Natürlich ist das nicht einmal annähernd die Gesamtzahl der freien 
+Software-Projekte im Internet, sondern lediglich die Teilmenge die 
+Sourceforge als Plattform gewählt haben.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5443040" href="#idp5443040" class="para">4</a>] </sup>Stallman benutzt das Wort "Hacker" im ursprünglichen
+Sinne von "Jemand der es liebt zu Programmieren und Spaß daran hat sich
+dabei geschickt anzustellen", nicht im Sinne der relativ neuen Bedeutung
+von "Jemand der in Computer einbricht".</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5458480" href="#idp5458480" class="para">5</a>] </sup>Abkürzung für "GNU's Not Unix", und das "GNU" in dieser
+Erweiterung steht für... dasselbe.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5471344" href="#idp5471344" class="para">6</a>] </sup>Rein 
+technisch gesehen war Linux nicht das erste freie Betriebssystem,
+sondern das kurz zuvor erschienene 386BSD für IBM-kompatible Rechner. 
+386BSD war jedoch viel schwieriger zum Laufen zu bringen. Linux sorgte für Aufregung, 
+nicht nur weil es frei war, sondern weil man
+es auf seinem Computer tatsächlich zum Laufen bringen 
+konnte.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5466288" href="#idp5466288" class="para">7</a>] </sup>Sie bevorzugen den Namen "X Window System", aber 
+für gewöhnlich nennt man es "X Windows", da drei Wörter einfach zu 
+schwerfällig sind.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5512736" href="#idp5512736" class="para">8</a>] </sup>Anm. d. Übersetzer Das Wort 
+"frei" wird hier für das englische Wort "free" benutzt. Es hat eine
+ähnliche Doppeldeutigkeit wie im Englischen, auch wenn man im deutschen
+zur besseren Unterscheidung den Begriff "kostenlos" verwenden kann was
+im Englischen nicht so leicht möglich ist.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5515856" href="#idp5515856" class="para">9</a>] </sup>Man kann eine Gebühr für 
+die Aushändigung von Kopien freier Software verlangen, da man aber den 
+Empfänger nicht daran hindern kann es danach kostenlos weiterzugeben,
+läuft der Preis effektiv sofort gegen null</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5517296" href="#idp5517296" class="para">10</a>] </sup>Der Quellcode vom Netscape Navigator
+<span class="emphasis"><em>wurde</em></span> letztendlich 1998 unter eine 
+Open-Source-Lizenz 
+gestellt, und wurde zur Grundlage für den Mozilla-Browser.
+Siehe <a class="ulink" href="http://www.mozilla.org/">http://www.mozilla.org/</a>.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5524928" href="#idp5524928" class="para">11</a>] </sup>engl.: "It's 
+<span class="emphasis"><em>free</em></span> as in <span class="emphasis"><em>freedom</em></span>—think
+<span class="emphasis"><em>free speech</em></span>, not <span class="emphasis"><em>free 
+beer</em></span>."</p></div><div class="footnote"><p><sup>[<a id="ftn.idp5536688" href="#idp5536688" class="para">12</a>] </sup>Die Webseite von OSI ist
+<a class="ulink" href="http://www.opensource.org/">http://www.opensource.org/</a>.</p></div></div></div></body></html>

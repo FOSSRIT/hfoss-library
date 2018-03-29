@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Eligiendo una licencia</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Eligiendo una licencia"><div class="titlepage"><div><div><h1 class="title"><a id="license-choosing"/>Eligiendo una licencia</h1></div></div></div><p>Cuando eliges una licencia para aplicarla a tu proyecto, si es
+posible usa una licencia existente en vez de crear una nueva.
+Hay dos razones por la que licencias existentes son una mejor opción:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Familiaridad.  Si utilizas una de las tres o cuatro licencias
+            más populares, la gente no sentirá que debe leer textos legales
+            para utilizar tu código, porque ya lo habrán hecho para esa licencia
+            hace tiempo.</p></li><li class="listitem"><p>Calidad. A menos que tengas un equipo de abogados a tu
+            disposición, seguramente no consigas una licencia sólida legalmente.
+            Las licencias mencionadas aquí son producto de mucho trabajo y
+            experiencia. A menos que tu proyecto tenga necesidades poco comunes,
+            es poco probable que lo hagas mejor.</p></li></ul></div><p>Para aplicar una de estas licencias a tu proyecto, lee
+<a class="xref" href="ch02s02.html#license-quickstart-applying" title="Cómo aplicar una licencia a nuestro software">“Cómo aplicar una licencia a nuestro software”</a><span>
+en <a class="xref" href="ch02.html" title="Capítulo 2. Primeros Pasos">Capítulo 2, <em>Primeros Pasos</em></a></span>.</p><div class="sect2" title="La MIT / X Window System License"><div class="titlepage"><div><div><h2 class="title"><a id="license-choosing-mit-x"/>La MIT / X Window System License</h2></div></div></div><p>Si tu objetivo es que tu código sea accesible para
+el mayor número de desarrolladores y trabajos derivados posible,
+y no te importa que el código se pueda utilizar en software
+propietario, elije la MIT / X Window System license 
+(llamada así debido a que es la licencia bajo la cual el
+Massachusetts Institute of Technology lanzó el código original 
+del sistema de ventanas X). El mensaje básico de esta licencia
+es "Eres libre para usar este código como quieras.". Es compatible
+con la GNU GPL, y es corta, sencilla, y fácil de entender:</p><pre class="screen">Copyright (c) &lt;año&gt; &lt;propietarios del copyright&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre><p>(Tomada de <a class="ulink" href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a>.)</p></div><div class="sect2" title="La GNU General Public License"><div class="titlepage"><div><div><h2 class="title"><a id="license-choosing-gpl"/>La GNU General Public License</h2></div></div></div><p>Si prefieres que tu código no sea utilizado en software
+propietario, o si, al menos, no te importa si puede o no usarse
+en éstos, elije la GNU General Public License
+(<a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html">http://www.fsf.org/licensing/licenses/gpl.html</a>).  La
+GPL es probablemente la licencia de software libre más utilizada
+en el mundo a día de hoy; este capacidad de reconocerse en ella
+es una de las mayores ventajas de la GPL.</p><p>Cuando programamos una biblioteca cuyo fin es ser usada
+en otros programas, considera detenidamente si las restricciones
+que la GPL impone concuerdan con los objetivos de tu proyecto.
+En algunos casos — por ejemplo, si intentas desbancar una
+biblioteca propietaria competidora que realiza la misma función
+— tiene un sentido más estratégico el licenciar tu código
+de modo que pueda ser utilizada en software propietario, incluso
+aunque no lo desearas. La Free Software Foundation preparó una 
+alternativa a la GPL para esas circunstancias: la 
+<em class="firstterm">GNU Library GPL</em>, después renombrada como 
+<em class="firstterm">GNU Lesser GPL</em> (la mayoría de la gente
+utiliza directamente el acrónimo <em class="firstterm">LGPL</em>, 
+de todos modos).  La LGPL tiene restricciones menos estrictas que
+la GPL, y puede mezclarse más fácilmente con código no libre.
+Sin embargo, también es más compleja y toma más tiempo entenderla,
+por lo que si no vas a utilizar la GPL, te recomiendo utilizar una
+licencia tipo MIT/X.</p><div class="sect3" title="¿Es la GPL libre o no?"><div class="titlepage"><div><div><h3 class="title"><a id="is-the-gpl-free"/>¿Es la GPL libre o no?</h3></div></div></div><p>Una consecuencia de elegir la GPL es la posibilidad
+—pequeña, pero no infinitesimal— de encontrarte a ti
+o a tu proyecto envueltos en una disputa acerca de si la GPL es o no
+realmente libre, dado que exige ciertas restricciones en qué puedes
+hacer con el código—a saber, la restricción de que el código
+no puede ser redistribuído bajo ninguna otra licencia. Para algunos,
+la existencia de esta restricción significa que la GPL es "menos libre"
+que otras licencias más permisivas como la licencia MIT/X. El fin de
+este argumento generalmente es, por supuesto, que dado que "más libre"
+debe ser mejor que "menos libre" (después de todo, ¿quién no está a
+favor de la libertad?), esas licencias son mejores que la GPL.</p><p>Este debate es otra guerra santa (veáse
+<a class="xref" href="ch06s02.html#holy-wars" title="Evitando las Guerras Santas">“Evitando las Guerras Santas”</a><span> en
+<a class="xref" href="ch06.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <em>Comunicaciones</em></a></span>) muy popular.
+Evita participar en ella, al menos en foros del proyecto. No intentes
+probar que la GPL es menos libre, tan libre o más libre que otras licencias.
+En vez de eso, explica las razones específicas por las que elegiste la GPL
+para tu proyecto. Si fue el conocimiento de la licencia, di eso. Si 
+también fue por las restricciones de licencia libre para trabajos derivados,
+dilo también, pero niégate a discutir acerca de si esto hace al código más
+o menos libre. La libertad es un tema complejo, y no tiene mucho 
+sentido hablar de ella si la terminología que va a ser utilizada como 
+alimento para un caballo de acecho.</p><p>Dado que esto es un libro y no un hilo de una lista de correo,
+sin embargo, admitiré que nunca entendí el argumento "la GPL no es libre".
+La única restricción que la GPL impone previene a la gente de imponer
+<span class="emphasis"><em>mayores</em></span> restricciones. Decir que eso significa
+tener menos libertad siempre me ha parecido como decir que la abolición
+de la esclavitud reduce la libertad, porque previene que cierta gente
+posea esclavos.</p><p>(Oh, y si te ves inmerso en un debate sobre ello,
+no subas la apuesta haciendo analogías incendiarias.)</p></div></div><div class="sect2" title="¿Qué tal la licencia BSD?"><div class="titlepage"><div><div><h2 class="title"><a id="license-bsd"/>¿Qué tal la licencia BSD?</h2></div></div></div><p>Una gran cantidad de software libre se distribuye bajo
+la <em class="firstterm">licencia BSD</em> (o algunas veces
+una <em class="firstterm">licencia estilo BSD</em>).  La licencia original BSD
+fue usada por la Berkeley Software Distribution, en la que la
+Universidad de California lanzó partes importantes de una implementación
+de Unix. Esta licencia (el texto exacto puede verse en la sección
+2.2.2 de
+<a class="ulink" href="http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6">http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6</a>) era
+similar en esencia a la licencia MIT/X, excepto por una claúsula:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Todo material publicitado que mencione
+características o use este software debe mostrar la siguiente
+advertencia: "Este producto contiene software desarrollado por la 
+Universidad de California, Lawrence Berkeley Laboratory.
+</em></span></p></blockquote></div><p>La presencia de esta claúsula no sólo hace a la BSD
+incompatible con la GPL, sino que también sienta un peligroso
+precedente: mientras otras organizaciones pongan claúsulas 
+publicitarias similares en <span class="emphasis"><em>su</em></span> software libre
+—sustituyendo su propio nombre en lugar de "la 
+Universidad de California, Lawrence Berkeley Laboratory"—
+los redistribuidores del software se enfrentan a una creciente carga
+en cuanto a lo que se ven requeridos a mostrar.
+Afortunadamente, muchos de los proyectos que usaron esta licencia
+se percataron del problema, y simplemente eliminaron esa claúsula.
+En 1999, incluso la Universidad de California lo hizo.</p><p>El resultado es la licencia BSD revisada, que es simplemente
+la licencia BSD original sin la claúsula publicitaria. Sin embargo,
+la historia hace a la expresión "licencia BSD" un poco ambigua:
+¿se refiere a la original, o a la versión revisada? Por esto es por
+lo que prefiero la licencia MIT/X, que es equivalente en esencia, y 
+no sufre ninguna ambigüedad. Sin embargo, quizá hay una razón para
+preferir la BSD revisada frente a la licencia MIT/X, que es que
+la BSD incluye esta claúsula:
+</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Ni el nombre de la &lt;ORGANIZACIÓN&gt; ni los nombres
+de sus contribuyentes debe usarse para apoyar o promocionar
+productos derivados de este software sin permiso previo por escrito
+explícito.</em></span></p></blockquote></div><p>No queda claro que sin esa claúsula, un receptor del software
+podría tener el derecho a usar el nombre del autor, pero esa claúsula
+borra cualquier tipo de duda. Para organizaciones preocupadas por el
+control de marcas registradas, por lo tanto, la licencia BSD puede
+ser preferible a la MIT/X. En general, sin embargo, una licencia de 
+copyright liberal no implica que los receptores tengan ningún derecho
+a usar sus marcas — las leyes de copyright y las leyes de marcas
+son dos cosas diferentes.</p><p>Si quieres utilizar la licencia BSD revisada, una plantilla
+está disponible en <a class="ulink" href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a>.</p></div></div></body></html>

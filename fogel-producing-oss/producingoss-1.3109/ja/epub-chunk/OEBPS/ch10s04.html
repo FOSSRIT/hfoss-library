@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>ライセンスを選ぶ</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="ライセンスを選ぶ"><div class="titlepage"><div><div><h1 class="title"><a id="license-choosing"/>ライセンスを選ぶ</h1></div></div></div><p>
+    プロジェクトに適用するライセンスを選ぶときは、
+    できる限り新しいものを作らずに既にあるものを使うようにしましょう。
+    有り物を使う理由はふたつあります。
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>ライセンスが既に知られているからです。
+            あなたが人気のあるライセンスのうちのひとつを使えば、
+            コードを使う人が法律用語をわざわざ読む必要はないと思うでしょう。
+            ずっと以前に読んだことがあるからです。</p></li><li class="listitem"><p>ライセンスの質が保たれているからです。
+            自分の思い通りになる弁護士のチームがいなければ、
+            法的に隙がないライセンスを生み出すことはできないでしょう。
+            この章で触れているライセンスには、多くの人々の経験や思考が詰まっています。
+            つまり、あなたのプロジェクトに本当に変わった要求がない限り、
+            さらに行動する必要はないということです。</p></li></ul></div><p>プロジェクトにライセンスを適用するには、
+<span><a class="xref" href="ch02.html" title="第2章 さあ始めましょう">2章<em>さあ始めましょう</em></a> の </span> <a class="xref" href="ch02s02.html#license-quickstart-applying" title="ライセンスを適用する方法">「ライセンスを適用する方法」</a> を参照してください。</p><div class="sect2" title="MIT/X Window System ライセンス"><div class="titlepage"><div><div><h2 class="title"><a id="license-choosing-mit-x"/>MIT/X Window System ライセンス</h2></div></div></div><p>
+    自分のコードをできる限り多くの開発者と派生物で使ってもらい、
+    かつ独占的なコードで使われるのを気にしないのならば、
+    MIT/X Window System ライセンス(以下 MIT/X ライセンス) (マサチューセッツ工科大学
+    がオリジナルの X Window System のコードをこのライセンスでリリースしたので、
+    そう呼ばれています) を選びましょう。このライセンスが言っているのは基本的に
+    「あなたはこのコードを自由に、
+    無料で使うことができますよ」ということです。
+    このライセンスは GNU GPL と互換性があり、短く、簡単で、理解しやすいものです。
+</p><pre class="screen">Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+以下に定める条件に従い、本ソフトウェアおよび関連文書のファイル（以下「ソフトウェア」）の複製を取得するすべての人に対し、ソフトウェアを無制限に扱うこと
+を無償で許可します。これには、ソフトウェアの複製を使用、複写、変更、結合、掲載、頒布、サブライセンス、および/または販売する権利、およびソフトウェアを提
+供する相手に同じことを許可する権利も無制限に含まれます。
+
+上記の著作権表示および本許諾表示を、ソフトウェアのすべての複製または重要な部分に記載するものとします。
+
+ソフトウェアは「現状のまま」で、明示であるか暗黙であるかを問わず、何らの保証もなく提供されます。ここでいう保証とは、商品性、特定の目的への適合性、およ
+び権利非侵害についての保証も含みますが、それに限定されるものではありません。作者または著作権者は、契約行為、不法行為、またはそれ以外であろうと、ソフト
+ウェアに起因または関連し、あるいはソフトウェアの使用またはその他の扱いによって生じる一切の請求、損害、その他の義務について何らの責任も負わないものとし
+ます。</pre><p>(原文は <a class="ulink" href="http://www.opensource.org/licenses/mit-license.php">http://www.opensource.org/licenses/mit-license.php</a> にあります。日本語訳については <a class="ulink" href="http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license">http://sourceforge.jp/projects/opensource/wiki/licenses%2FMIT_license</a> から引用させて頂きました。)</p></div><div class="sect2" title="GPL"><div class="titlepage"><div><div><h2 class="title"><a id="license-choosing-gpl"/>GPL</h2></div></div></div><p>
+    あなたのプロジェクトが、自分達が作ったものが独占的なプログラムで使われるのを望まなかったり、
+    少なくともそうしたことを気にしないのであれば、GPL (GNU General Public License) (<a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html">http://www.fsf.org/licensing/licenses/gpl.html</a>) を選ぶとよいでしょう。
+    GPL はおそらく、現在世界でもっとも広く使われているフリーソフトウェアライセンスです。
+    認知度が高いことが、それ自体 GPL の主な利点のひとつです。
+</p><p>
+    他のプログラムの一部として使われるライブラリを書いている場合は、
+    あなたのプロジェクトの目標に照らして、GPL の制限を注意深く考える必要があります。
+    場合によっては — たとえば、自分達のライブラリと同じことをしている独占的なプログラムのシェアを奪おうとしている場合 —
+    あなたがたとえ望まなくても、独占的なプログラムで使えるようにするやり方で、
+    プログラムをライセンスするのが戦略として優れているかもしれません。
+    FSF は、こうした場合のために GPL とは別の選択肢を用意しました。
+    それが <em class="firstterm">GNU Library GPL</em>であり、
+    後に<em class="firstterm">GNU Lesser GPL</em> と改称されたものです。
+    (ほとんどの人はその頭文字をとって、<em class="firstterm">LGPL</em> という用語を使います)
+    LGPL は GPL よりも制限が緩く、フリーでないコードと容易に混ぜることができます。
+    しかしながら、LGPL はちょっと複雑で理解するのに少し時間がかかります。
+    よって、GPL を使うつもりがないなら、MIT/X スタイルのライセンスを使うことを私は勧めます。
+</p><div class="sidebar" title="GNU Affero GPL: サーバサイドにあるコード向けの GNU GPL"><a id="gnu-affero-gpl"/><div class="titlepage"><div><div><p class="title"><strong>GNU Affero GPL: サーバサイドにあるコード向けの GNU GPL</strong></p></div></div></div><p>
+      2007年、FSF は GPL の派生ライセンスとして、<em class="firstterm">GNU Affero GPL</em>
+      (<a class="ulink" href="http://www.fsf.org/licensing/licenses/agpl.html">http://www.fsf.org/licensing/licenses/agpl.html</a>)
+      と呼ばれるライセンスをリリースしました
+      <sup>[<a id="idm3244" href="#ftn.idm3244" class="footnote">39</a>]</sup>。
+  </p><p>
+      GNU AGPLv3 が示したやり方は、通常の GPL を採用した上で
+     「ネットワーク越しにリモートとやりとりする際の」条件を加えたことです。
+      この条件は、次のようなものです。
+     「<span class="emphasis"><em>... このプログラムを改変した場合、
+      あなたが改変したバージョンはすべてのユーザーに目立つやり方で、
+      コンピューターネットワーク越しにアクセスできるようにしておかなければならない
+      ... 無償で、ソフトウェアのコピーを容易にする通常の手段を使って
+      ... あなたが改変したバージョンに相当するソースコードをユーザーが受け取る機会を与えなければならない</em></span>」
+      このように GPL を拡張したことで、
+      アプリケーションサービスを提供する人たちの世界に GPL の強制力が及びます。
+      FSF は 通常ネットワーク越しに実行される あらゆるソフトウェアに対して GNU AGPLv3 を使うことを推奨しています。
+  </p><p>
+      AGPLv3 は、GPLv2 とは直接の互換性がないことに注意してください
+      (ただし、GPLv3 とはもちろん互換性があります)。しかし、
+      GPLv2 でライセンスされた殆どのソフトウェアには
+     「GPLv2 以降のバージョンで」という条件が入っています。よって、
+      この場合に GPLv2 のコードと AGPLv3 のコードを混ぜたければ、
+      単純に GPLv3 に移行すればよいのです。
+      しかし、GPLv2 だけが厳格に適用されるプログラム
+      (つまり、「GPLv2 以降のバージョンで」という文言が入ってない場合) は、
+      AGPLv3 のプログラムと混ぜることができません。
+  </p><p>
+      AGPLv3 の歴史はちょっと複雑ですが、ライセンスそのものは単純です。
+      なぜなら、これは GPLv3 の条項に、
+      ネットワーク越しでやりとりする際の追加条件を加えただけのものだからです。
+      AGPLv3 については、Wikipedia の記事が秀逸です。
+      <a class="ulink" href="http://en.wikipedia.org/wiki/Affero_General_Public_License">http://en.wikipedia.org/wiki/Affero_General_Public_License</a>
+  </p></div><div class="sect3" title="GPL はフリーなライセンスなのか?"><div class="titlepage"><div><div><h3 class="title"><a id="is-the-gpl-free"/>GPL はフリーなライセンスなのか?</h3></div></div></div><p>
+    GPL を選んだ結果、プロジェクトがコードに対してできることを制限された場合 —
+    すなわち他のライセンスでコードを配布できなかった場合 — GPL が本当の意味で「フリー(自由)」
+    なのかどうかに関する論争がプロジェクトで起こるかもしれません —
+    これが起こる可能性は小さいですが、ゼロとはいえません。
+    人によっては、他のライセンスでコードを配布できないという制限が、
+    MIT/X ライセンスのような制限の緩いライセンスよりも
+    GPL が「自由度が低い」ように映るのです。
+    もちろん、こうした主張が行き着くところは、「自由度は低いより高い方がいいに決まっている」
+    というものですが (自由であることに賛成しない人がいるでしょうか?)、
+    これに従うと、制限の緩いライセンスが GPL よりも優れているということになります。 
+</p><p>
+    この手の議論は、宗教論争 (<span><a class="xref" href="ch06.html" title="第6章 コミュニケーション">6章<em>コミュニケーション</em></a>
+    の</span><a class="xref" href="ch06s02.html#holy-wars" title="宗教論争を回避する">「宗教論争を回避する」</a> を参照してください) になるお題のひとつです。
+    少なくも公開されているフォーラムでは、これに参加しないようにしましょう。
+    GPL が 他のライセンスより自由度が高いとか、低いとか、同じだとか、
+    そういうことを証明しようとしてはいけません。
+    そうではなくて、あなたのプロジェクトがなぜ GPL を選んだのかを強調するようにしましょう。
+    ライセンスの認知度が高いことが理由なら、そう言えばいいのです。
+    派生物に同じ条件を強制するのが理由なら、それも伝えましょう。
+    しかし、GPL のやり方がコードの「自由度を高くするのか、
+    低くするのかどうか」という議論には絶対にしないでください。
+    「自由とは何か」というお題は複雑なものですし、
+    「自由」という言葉が本質を隠すために使われる限り、語るに値しないものです。
+</p><p>
+    この本はメーリングリストではありませんが、それでも敢えて言えば、
+    私は「GPLはフリーなライセンスではない」という主張は全く理解できません。
+    GPL が課している制限は、<span class="emphasis"><em>GPL が課す以上の</em></span>
+    制限をしてはいけない、ということだけです。
+    この制限こそがライセンスの自由度を下げているという主張は、
+    奴隷制度を違法化することが自由度を下げていると言っているように聞こえます。
+    なぜなら、GPL は特定の人が奴隷を所有することを防ぐものだからです。
+</p><p>
+   (おっと、あなたがこの手の議論に巻き込まれたのなら、
+    人を怒らせるような例え話をして危険な目にあわないようにしてくださいね。)
+</p></div></div><div class="sect2" title="BSDライセンス はどうなの?"><div class="titlepage"><div><div><h2 class="title"><a id="license-bsd"/>BSDライセンス はどうなの?</h2></div></div></div><p>
+    かなりの数のオープンソースソフトウェアが、<em class="firstterm">BSD ライセンス</em>
+    (または <em class="firstterm">BSD スタイルのライセンス</em> と呼ばれることもあります)
+    で配布されています。オリジナルのBSDライセンスは、
+    カリフォルニア大学バークレー校がUnixの実装としてリリースした Berkeley Software
+    Distribution (BSD) のライセンスとして使われていました。
+    このライセンス (原文は <a class="ulink" href="http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6">http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6</a>
+    の 2.2.2 にあります) の考え方は MIT/X ライセンスと似ていますが、
+    以下の一節だけは異なっています。
+</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>このソフトウェアの機能や、このソフトウェア自体を使っていることを言及する広告媒体には、必ず以下の謝辞を記載しなければならない。「この製品にはカリフォルニア大学バークレー校と、ローレンスバークレー研究所が開発したソフトウェアが含まれています。」</em></span></p></blockquote></div><p>
+    この一節こそが、オリジナルのBSDライセンスを GPL と非互換にしてしまっているばかりか、
+    危険な先例を作ってしまっています。つまり、他の組織も似たような宣伝条項を —
+   「カリフォルニア大学バークレー校と、ローレンスバークレー研究所」の部分を自分の組織の名前に置き換えることで —
+   <span class="emphasis"><em>自分達の</em></span> フリーソフトウェアに付け加えてしまいます。
+    ソフトウェアを再配付する人達にとっては、
+    記載しなければならない謝辞が増え続けることが負担になってしまいます。
+    幸運なことに、このライセンスを使っていた多くのプロジェクトがこの問題に気付き、
+    この宣伝条項を削除していました。そして1999年には、カリフォルニア大学もこの条項を削除したのです。
+</p><p>
+    この結果生まれたのが、修正BSDライセンスと呼ばれるものです。
+    これはオリジナルのBSDライセンスから宣伝条項を削除したものです。
+    しかしながら、こうした歴史的な経緯が「BSDライセンス」
+    という言葉をちょっと曖昧にしています。「BSDライセンス」と言ったとき、
+    オリジナルのBSDライセンスを指すのでしょうか？
+    それとも修正BSDライセンスを指すのでしょうか？
+    この曖昧さから、私は MIT/X ライセンスの方が好みです。
+    MIT/X ライセンスとBSDライセンスは本質的には同じものですし、
+    MIT/X ライセンスには、こうした言葉の上での曖昧さがないからです。
+    しかし、MIT/X ライセンスより修正BSDライセンスが好ましい理由がひとつだけあります。
+    それは、BSDライセンスには以下の一節が含まれているからです。
+</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>書面による特別な許可なく、本ソフトウェアから派生した製品を宣伝するために &lt;組織&gt; の名前、または本ソフトウェアに貢献した人の名前を使用してはならない。</em></span></p></blockquote></div><p>
+    この条項がなければ、ソフトウェアを受け取った人が、
+    ライセンスを与えた人(組織) の名前を使う権利があるかどうかがはっきりしませんが、
+    そうした疑いをこの条項が払拭しています。よって、
+    商標の管理に関心がある組織にとっては、
+    修正BSDライセンスが MIT/X ライセンスよりも好ましいものとなります。
+    しかし一般的には、
+    自由主義的なライセンスだからといって、それが商標を自由に使ったり、
+    商標の価値を弱める権利を与えることにはなりません。
+    — 著作権に関する法律と商標に関する法律は全く異なるものだからです。
+</p><p>
+    もし修正BSDライセンスを使いたいと思ったら、
+    雛型は <a class="ulink" href="http://www.opensource.org/licenses/bsd-license.php">http://www.opensource.org/licenses/bsd-license.php</a> に置いてあります。
+</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm3244" href="#idm3244" class="para">39</a>] </sup>
+      このライセンスと名前の歴史はちょっと複雑です。
+      このライセンスのはじめのバージョンは Affero, Inc. によってリリースされ、
+      GPL バージョン2 (GPLv2) を基にしたものでした。これは通常 AGPL と呼ばれていました。
+      のちに FSF はこのライセンスの考え方を採用することを決めましたが、
+      それより前に GPL のバージョン3 (GPLv3)
+      をリリースしていたのです。
+      よって、FSF は AGPL に基づいて自分たちのライセンスを作り、それを "GNU AGPL"
+      と呼んだのです。現在、Affero, Inc.
+      が作った古いライセンスは事実上推奨されていません。
+      もしあなたが Affero のような条件を望むなら、GNU AGPL を使うべきです。
+      曖昧にならないように、このライセンスを "AGPLv3" とか、"GNU AGPL"、
+      もしくは最大限正確を期すために "GNU AGPLv3" と呼びます。</p></div></div></div></body></html>

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Kapitel 2. Der Einstieg</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Kapitel 2. Der Einstieg"><div class="titlepage"><div><div><h1 class="title"><a id="getting-started"/>Kapitel 2. Der Einstieg</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Den klassischen Verlauf eines freien Software-Projektes 
+beschreibt Eric Raymond in seinem nunmehr berühmten Text über Open Source,
+<em class="citetitle">The Cathedral and the Bazaar</em>:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Jede gute Software entsteht aus einem persönlichen
+        Bedürfnis eines Programmierers.</em></span></p><p>(von <span class="bold"><strong>
+        <a class="ulink" href="http://www.catb.org/~esr/writings/cathedral-bazaar/">http://www.catb.org/~esr/writings/cathedral-bazaar/</a>
+      </strong></span>)</p></blockquote></div><p>Raymond sagte wohlgemerkt nicht, dass Open-Source-Projekte nur aus
+dem persönlichen Bedürfnis eines Programmierers entstehen, sondern dass
+<span class="emphasis"><em>gute</em></span> Software dann entsteht, wenn der Programmierer
+ein persönliches Interesse daran hat ein Problem zu lösen; was insofern
+für freie Software relevant ist, da sich herausstellte, dass die
+meisten Open-Source-Projekte von Programmierern begonnen wurden, die
+eines ihrer eigenen Probleme lösen wollten.</p><p>Die Motivation für die meisten freien Software-Projekte ist auch
+heute noch dieselbe, wenn auch in geringerem Maße als um 1997, zu der Zeit als
+Raymond diese Worte schrieb. Heute beobachten wir das Phänomen, dass 
+Organisationen – auch gewinnorientierte Unternehmen – große, zentral 
+organisierte Open-Source-Projekte anfangen. Der einsame Programmierer,
+der ein bisschen Code produziert um ein lokales Problem zu lösen und dann
+feststellt, dass das Ergebnis eine breitere Anwendbarkeit besitzt, ist 
+immer noch die Quelle für vieles an freier Software, jedoch nicht
+mehr die einzige.</p><p>Raymonds Sicht ist aber immer noch aufschlussreich.
+Diejenigen, die Software produzieren, müssen ein direktes Interesse an
+ihrem Erfolg haben, weil sie auch Benutzer sind. Wenn die Software nicht
+macht was es soll, wird die Person oder Organisation, die sie produziert,
+es bei der täglichen Arbeit merken. Ein gutes Beispiel ist das OpenAdapter
+Projekt (<a class="ulink" href="http://www.openadapter.org/">http://www.openadapter.org/</a>) der 
+Investmentbank Dresdner Kleinwort Wasserstein, das als Open-Source-Framework 
+zur Integration unterschiedlicher finanzieller Informationssysteme 
+begonnen wurde. Es kann wohl kaum als Bedürfnis eines eines einzelnen 
+Programmierers bezeichnet werden, sondern als institutionelles 
+Bedürfnis. Dieses Bedürfnis entsteht aber direkt aus den Erfahrungen
+der Institution und ihrer Partner. Wenn die Software ihre Aufgabe nicht
+erfüllt, wird es bemerkt. Aus diesem Arrangement entsteht gute
+Software, da Rückmeldungen an der richtigen Stelle ankommen. Die 
+Software muss nicht verkauft werden, also können sie sich auf
+<span class="emphasis"><em>ihre</em></span> Probleme konzentrieren. Sie wird geschrieben
+um die <span class="emphasis"><em>eigenen</em></span> Probleme zu lösen, um diese Lösung dann mit 
+allen zu teilen. Es ist so, als wäre das Problem eine Krankheit
+und die Software die entsprechende Medizin um eine Epidemie in den Griff
+zu bekommen.</p><p>In diesem Kapitel geht es um die Frage, wie man der Welt ein neues 
+freies Software-Projekt vorstellt. Viele seiner Empfehlungen klingen sehr 
+nach einer Gesundheitsorganisation, die Medizin verteilen will. Die Ziele 
+sind sich sehr ähnlich: Man will klarstellen, was die Medizin macht, sie
+in die Hände der richtigen Leute bringen und sicherstellen, dass 
+diejenigen, die es erhalten, damit umzugehen wissen. Bei freier
+Software will man aber auch ein paar der Empfänger zu einer Beteiligung
+an der fortwährenden Forschungsarbeit zur Verbesserung der Medizin
+bewegen.</p><p>Beim Vertrieb freier Software gibt es zwei Ziele. Die Software
+muss sowohl Nutzer als auch Entwickler anziehen. Diese beiden 
+Anforderungen stehen zueinander nicht zwangsläufig im Widerspruch, aber sie 
+machen die anfängliche Präsentation des Projekts etwas komplexer. 
+Manche Informationen sind für beide Gruppen nützlich, manche nur für 
+die eine oder die andere. Beide Arten der Information sollten das 
+Prinzip der skalierenden Präsentation verfolgen; d.h. dass die Menge an
+Informationen sich jederzeit mit der Zeit und Anstrengung decken sollte,
+die vom Leser aufgebracht wird. Eine größere Anstrengung sollte auch 
+immer eine größere Belohnung mit sich bringen. Wenn beides nicht eng
+miteinander korreliert, werden die Leser schnell die Hoffnung aufgeben
+und aufhören Zeit zu investieren.</p><p>Daraus folgt: <span class="emphasis"><em>das Erscheinungsbild ist 
+wichtig</em></span>. Programmierern fällt es besonders schwer, das zu
+glauben. Ihre Liebe zum Inhalt gegenüber dem Äußeren gehört fast
+schon zum Berufsethos. Es ist kein Zufall, dass so viele Programmierer
+gegen Marketing und Public Relations eine Antipathie hegen, oder dass
+professionelle Grafiker über so manches erschrocken sind, worauf 
+Programmierer von sich aus kommen.</p><p>Das ist schade, denn es gibt Situationen, in denen das Aussehen
+auch <span class="emphasis"><em>wirklich</em></span> dem Inhalt entspricht. Die 
+Präsentation eines Projekts ist genau solch ein Fall. Die erste
+Information, die ein Besucher über ein Projekt erhält, ist die Gestaltung
+seiner Webseite. Diese Information wird erfasst, bevor irgendein
+tatsächlicher Inhalt der Seite verstanden wird – bevor ein 
+Text gelesen wurde oder auf einen Link geklickt wurde. Egal wie
+ungerecht es sein mag, Menschen können sich nicht anders helfen, als sich
+sofort einen ersten Eindruck zu verschaffen. Im Erscheinungsbild der
+Seite wird deutlich, ob man sich beim Aufbau der Präsentation des
+Projekts Mühe gemacht hat. Menschen haben eine extrem sensible Antenne
+dafür, wieviel Mühe in etwas investiert wurde. Die meisten können mit
+einem Blick erkennen, ob eine Seite eilig zusammengebastelt wurde oder
+ob man sich ernsthafte Gedanken gemacht hat. Das ist die erste 
+Information, die Ihr Projekt nach außen gibt, und der hierdurch 
+vermittelte Eindruck überträgt sich auf das übrige Projekt.</p><p>Auch wenn sich dieses Kapitel thematisch um inhaltliche Fragen dreht,
+sollten sie daran denken, dass das Erscheinungsbild eine Rolle spielt.
+Da die Webseite für zwei Arten von Besuchern – Benutzer und 
+Entwickler – geeignet sein muss, muss besonders auf Klarheit und
+Führung geachtet werden. Auch wenn hier nicht die richtige Stelle für
+eine allgemeine Abhandlung über Web-Design ist, gibt es ein
+erwähnenswertes Prinzip, insbesondere wenn die Seite mehrere 
+(überlappende) Zielgruppen ansprechen soll: Besucher sollten eine grobe
+Vorstellung haben, wo ein Link hinführt, bevor sie darauf klicken. Das
+Ziel eines Links zur Benutzer-Dokumentation sollte <span class="emphasis"><em>allein vom 
+Anblick her</em></span> deutlich sein, und keine
+Missverständnisse aufkommen lassen, ob es sich nicht etwa um die Dokumentation
+für Entwickler handelt. Beim Betrieb eines Projekts geht es zu einem Teil
+darum, Informationen bereitzustellen, aber auch darum, ein Gefühl der
+Bequemlichkeit zu vermitteln. Allein schon die Verfügbarkeit bestimmter
+grundsätzlicher Angebote an der richtigen Stelle gibt Benutzern und
+Entwicklern eine Sicherheit bei ihrer Entscheidung, ob sie sich 
+beteiligen wollen oder nicht. Es sagt ihnen, dass dieses Projekt seine
+Siebensachen beisammen hat, Fragen erahnt, die gestellt werden, und sich die
+Mühe gemacht hat diese so zu beantworten, dass Fragesteller möglichst wenig
+Einsatz aufbringen müssen. Indem das Projekt eine Aura des Vorbereitetseins
+ausstrahlt, sendet es die folgende Botschaft aus:
+"Du verschwendest deine Zeit nicht, wenn du dich beteiligst". 
+Das ist genau die Botschaft, die Menschen hören wollen.</p><div class="sect2" title="Schauen Sie sich zuerst um"><div class="titlepage"><div><div><h2 class="title"><a id="look-around"/>Schauen Sie sich zuerst um</h2></div></div></div><p>Bevor Sie ein Open-Source-Projekt anfangen, gibt es noch eine 
+wichtige Warnung:</p><p>Schauen Sie sich vorher um, ob nicht schon ein Projekt existiert
+das Ihre Anforderungen erfüllt. Die Wahrscheinlichkeit ist hoch, dass
+unabhängig von dem Problem, das Sie lösen wollen, Ihnen jemand zuvorgekommen 
+ist. Wenn das der Fall ist und der entsprechende Code unter eine freie
+Lizenz gestellt wurde, gibt es keinen Grund das Rad neu zu erfinden. Es
+gibt natürlich Ausnahmen: Falls Sie ein Projekt um der Lernerfahrung 
+willen beginnen wollen, wird Ihnen bereits existierender Code nicht 
+weiterhelfen. Vielleicht wissen Sie bereits von vornherein, dass Ihr
+Problem so spezifisch ist, dass es mit Sicherheit noch von keinem
+gelöst wurde. Im Allgemeinen gibt es aber keinen Grund sich nicht 
+umzuschauen, und der Lohn kann beträchtlich sein. Sollten die üblichen 
+Suchmaschinen keine brauchbaren Ergebnisse liefern, sollte Sie es bei
+<a class="ulink" href="http://freshmeat.net/">http://freshmeat.net/</a> (eine Nachrichtenseite über 
+Open-Source-Projekte (zu dieser Seite, später mehr), bei 
+<a class="ulink" href="http://www.sourceforge.net/">http://www.sourceforge.net/</a> oder beim Verzeichnis 
+freier Software der Free Software Foundation 
+<a class="ulink" href="http://directory.fsf.org/">http://directory.fsf.org/</a> versuchen.</p><p>Selbst wenn Sie nicht genau das finden, wonach Sie suchen,
+könnten Sie etwas derart ähnliches finden, dass es sinnvoller ist,
+sich an diesem Projekt zu beteiligen und es um die fehlenden Funktionen
+zu erweitern, als komplett von vorne anzufangen.</p></div></div><div class="sect1" title="Mit dem Vorhandenen beginnen"><div class="titlepage"><div><div><h1 class="title"><a id="starting-from-what-you-have"/>Mit dem Vorhandenen beginnen</h1></div></div></div><p>Sie haben sich umgeschaut, herausgefunden dass nichts Ihre 
+Anforderungen erfüllt und sich entschlossen, ein neues Projekt zu
+starten.</p><p>Was nun?</p><p>Das Schwierigste beim Start eines neuen freien Software-Projekts 
+ist die Verwandlung einer persönlichen Vision in eine öffentliche. Sie
+oder Ihre Organisation mögen sehr wohl wissen was Sie wollen. Dieses
+Ziel so auszudrücken, dass die Welt es versteht, erfordert ein 
+beträchtliches Maß an Arbeit. Allerdings ist es von so grundsätzlicher
+Bedeutung, dass Sie sich die Zeit dazu nehmen sollten. Sie und die anderen
+Gründer müssen entscheiden, worum es in dem Projekt wirklich geht –
+so müssen Sie über seine Grenzen entscheiden, was es abdecken wird und was
+<span class="emphasis"><em>nicht</em></span> – und ein Missionsziel 
+(engl. mission statement) verfassen. Dieser Teil ist für
+gewöhnlich nicht allzu schwer, auch wenn es manchmal unerwähnt 
+gebliebene Annahmen, sogar Meinungsverschiedenheiten über die Natur des
+Projekts aufdecken kann, was sogar gut ist:
+es ist besser diese jetzt auszuräumen als später. Der
+nächste Schritt ist das Projekt für die öffentliche Wahrnehmung
+aufzubereiten, was im Grunde genommen eine Schinderei ist.</p><p>Diese Arbeit ist deshalb so mühselig, weil man hauptsächlich 
+Dinge organisiert und dokumentiert, die jeder bereits kennt – 
+d.h "jeder" der bislang am Projekt beteiligt ist. Für diejenigen, die
+die Arbeit machen, gibt es deshalb keinen direkten Nutzen. Sie
+brauchen weder die <code class="filename">README</code>-Datei für einen Überblick
+über das Projekt, noch Entwurfsdokumente oder Benutzerhandbücher.
+Sie brauchen keine sorgsam aufbereitete Code-Struktur die mit den
+zwar informellen aber verbreiteten Normen zur Veröffentlichung
+von Quellen konform ist. Wie auch immer der Quellcode strukturiert ist,
+es ist ihnen recht; sie sind ja bereits daran gewöhnt, und solange der 
+Code läuft, wissen sie wie man ihn benutzt. Es macht ihnen
+nicht einmal etwas aus, wenn grundlegende Annahmen über die 
+Architektur des Projekts undokumentiert bleiben; auch mit ihnen sind
+sie ja bereits vertraut.</p><p>Neulinge andererseits brauchen all diese Dinge.
+Glücklicherweise jedoch nicht alle auf einmal. Sie müssen nicht jede
+erdenklich Ressource gleich parat haben, bevor Sie mit einem Projekt an die
+Öffentlichkeit gehen. In einer perfekten Welt wäre ein neues
+Open-Source-Projekt von Beginn an ausgestattet mit einem ausführlichen 
+Entwurfsdokument, einem vollständigen Benutzerhandbuch (inklusive der
+Hinweise auf Funktionen, die zwar geplant, aber noch nicht implementiert 
+sind), wunderschönem und portabel gegliedertem Code, der auf jeder
+Plattform läuft, und so weiter. In Wirklichkeit wäre es unvertretbar zeitaufwendig,
+auf all diese Dinge zu achten; und überhaupt sind dies Arbeiten, bei
+denen man davon ausgehen kann, dass sich Freiwillige beteiligen
+sobald das Projekt läuft.</p><p><span class="emphasis"><em>Wirklich</em></span> notwendig ist jedoch, so viel in die
+Präsentation zu investieren, dass Neulinge die ersten Hürden des 
+Unbekannten überwinden können. Stellen Sie sich das wie den ersten 
+Schritt beim Hochfahren vor, um dem Projekt zu einer Art minimaler
+Aktivierungsenergie zu verhelfen. Dieser Grenzbereich wird mitunter
+<em class="firstterm">Hacktivierungs-Energie</em> genannt: die 
+Energie, die Neulinge investieren müssen, bevor sie etwas zurückbekommen.
+Je geringer die Hacktivierungs-Energie ist, desto besser. Ihre erste 
+Aufgabe ist es, die Hacktivierungs-Energie auf ein Niveau zu senken,
+das Leute dazu ermutigt sich zu beteiligen.</p><p>Jeder der folgenden Unterabschnitte, beschreibt einen wichtigen
+Aspekt beim Start eines neuen Projekts. Sie werden ungefähr in der
+Reihenfolge präsentiert, in der neue Besucher sie wahrnehmen werden,
+natürlich kann die tatsächliche Reihenfolge auch abweichen.
+Betrachten Sie sie als Checkliste.
+Wenn Sie ein Projekt starten, gehen Sie die Liste durch und stellen Sie
+sicher, dass alle Punkte erledigt sind oder zumindest dass Sie mit den 
+möglichen Folgen zurechtkommen, wenn Sie einen Punkt auslassen.</p><div class="sect2" title="Wählen Sie einen guten Namen"><div class="titlepage"><div><div><h2 class="title"><a id="choosing-a-name"/>Wählen Sie einen guten Namen</h2></div></div></div><p>Versetzen Sie sich in die Lage von jemandem, der gerade von Ihrem 
+Projekt erfahren hat, vielleicht ganz zufällig, bei der Suche nach einer 
+Software, um ein Problem zu lösen. Das erste, womit er in 
+Berührung kommen wird, ist der Name Ihres Projekts.</p><p>Ein guter Name wird Ihr Projekt nicht automatisch erfolgreich
+machen, und ein schlechter Name wird nicht seinen Untergang besiegeln –
+nun ja, ein <span class="emphasis"><em>wirklich</em></span> schlechter Name könnte das 
+vielleicht tatsächlich, aber wir gehen davon aus, dass niemand versuchen 
+wird, sein Projekt aktiv zu sabotieren. Allerdings kann ein schlechter
+Name die Aufmerksamkeit für das Projekts schmälern, entweder weil die
+Leute ihn nicht ernst nehmen oder schlicht deshalb, weil Sie ihn sich
+nicht merken können.</p><p>Ein guter Name:
+
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Gibt eine ungefähre Vorstellung davon, was das Projekt
+            tut oder steht zumindest in einer so offensichtlichen 
+            Beziehung dazu, dass man weiß was das Projekt tut, wenn man 
+            den Namen kennt, und es deshalb später leicht hat, sich an 
+            den Namen zu erinnern.</p></li><li class="listitem"><p>Ist einfach zu behalten. Man kommt hier nicht um die
+            Tatsache herum, dass Englisch zur Standardsprache im 
+            Internet geworden ist: "einfach zu behalten" bedeutet in
+            diesem Fall "Einfach zu behalten für jemanden, der Englisch
+            lesen kann". Wortspiele, die auf der einheimischen Aussprache 
+            beruhen, werden vielen Menschen, deren Muttersprache nicht 
+            Englisch ist, unverständlich bleiben. Ist das Wortspiel
+            besonders verlockend und einprägsam, kann es das wert
+            sein; denken Sie aber daran, dass viele, die den Namen sehen,
+            nicht dasselbe heraushören werden wie ein englischer 
+            Muttersprachler.</p></li><li class="listitem"><p>Gleicht nicht dem eines anderen Projekts und verletzt 
+            auch kein Markenrecht. Das ist einerseits höflich und 
+            andererseits auch rechtlich sinnvoll, denn Sie wollen keine 
+            Verwirrung über Identitäten anstiften. Es ist schwierig 
+            genug, im Blick zu behalten, was das Netz zu bieten hat, auch
+            ohne unterschiedliche Dinge mit demselben Namen.</p><p>Die zuvor in <a class="xref" href="ch02.html#look-around" title="Schauen Sie sich zuerst um">„Schauen Sie sich zuerst um“</a> erwähnten 
+            Quellen können Ihnen dabei helfen herauszufinden, ob ein
+            anderes Projekt bereits den Namen trägt, den Sie im Sinn 
+            haben. Die kostenlose Suche nach Markenzeichen ist über
+            <a class="ulink" href="http://www.nameprotect.org/">http://www.nameprotect.org/</a> und
+            <a class="ulink" href="http://www.uspto.gov/">http://www.uspto.gov/</a> verfügbar.</p></li><li class="listitem"><p>Ist idealerweise als Domain-Name verfügbar in den
+            Top-Level-Domeins
+            <code class="systemitem">.com</code>,
+            <code class="systemitem">.net</code>, und
+            <code class="systemitem">.org</code>.
+            Sie sollten eine von ihnen auswählen, vielleicht 
+            <code class="systemitem">.org</code>, um sie als offizielle Seite
+            des Projekts zu bewerben; die anderen beiden sollten darauf
+            verweisen und einfach nur dazu dienen, andere zu hindern, 
+            Verwirrung bezüglich Ihres Projektnamens zu stiften.
+            Selbst wenn Sie vorhaben, das Projekt auf einer anderen Seite
+            zu betreiben (siehe 
+            <a class="xref" href="ch02.html#starting-with-canned-hosting" title="Hosting-Pakete">„Hosting-Pakete“</a>), können Sie
+            immer noch die Projekt-spezifische URL registrieren und 
+            diese auf die Seiten des Betreibers weiterleiten. Es hilft 
+            dem Nutzer ungemein, nur eine einfache URL im Kopf behalten
+            zu müssen.</p></li></ul></div><p>
+
+</p></div><div class="sect2" title="Formulieren Sie ein klares Missionsziel"><div class="titlepage"><div><div><h2 class="title"><a id="mission-statement"/>Formulieren Sie ein klares Missionsziel</h2></div></div></div><p>Sobald Besucher ihre Projektseite gefunden haben, werden sie nach
+einer kurzen Beschreibung, dem Ziel des Projekts suchen, um (innerhalb
+von 30 Sekunden) entscheiden zu können, ob sie interessiert daran sind,
+mehr zu erfahren. Das Ziel sollte auf der Frontseite einen auffälligen
+Platz einnehmen, vorzugsweise gleich unter dem Projektnamen.</p><p>Die Formulierung des Missionsziels sollte anschaulich, klar
+umrissen und vor allem kurz sein. Hier ist ein gutes Beispiel von
+<a class="ulink" href="http://www.openoffice.org/">http://www.openoffice.org/</a>:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Gemeinschaftlich die führende internationale 
+  Office-Lösung erschaffen, die auf allen wichtigen Plattformen läuft und 
+  den Zugriff auf alle Funktionen und Daten durch offene Schnittstellen
+  und ein XML-basiertes Dateiformat erlaubt.</em></span></p></blockquote></div><p>In nur wenigen Worten haben sie alle wichtigen Punkte erfasst,
+hauptsächlich indem sie sich auf das Vorwissen der Leser stützen.
+Mit "<span class="emphasis"><em>gemeinschaftlich</em></span>", 
+signalisieren sie, dass keine einzelne Firma die Entwicklung dominieren
+wird; "<span class="emphasis"><em>international</em></span>" bedeutet, dass die Software
+es Menschen erlauben wird, in mehreren Sprachen zu arbeiten; 
+"<span class="emphasis"><em>alle wichtigen Plattformen</em></span>" heißt für Unix, 
+Macintosh und Windows. Das Übrige signalisiert, dass offene 
+Schnittstellen und leicht verständliche Dateiformate ein wichtiger Teil
+ihres Ziels sind. Sie sagen nicht offen, dass sie eine freie Alternative
+zu Microsoft Office sein wollen, aber die meisten Menschen können zwischen 
+den Zeilen lesen. Auch wenn dieser Satz auf den ersten Blick weitgreifend
+erscheint, ist es tatsächlich recht begrenzt: Der Begriff
+"<span class="emphasis"><em>Office-Lösung</em></span>" bedeutet etwas ganz bestimmtes für 
+diejenigen, die mit solcher Software vertraut sind. Die mutmaßlichen
+Vorkenntnisse der Leser (in diesem Fall wahrscheinlich mit MS Office) 
+werden ausgenutzt, um das Missionsziel kompakt zu halten.</p><p>Die Gestaltung des Missionsziels hängt teilweise davon ab, wer es 
+schreibt und nicht von der Software die es beschreibt. So ist es für
+Open Office beispielsweise sinnstiftend, das Wort
+"<span class="emphasis"><em>gemeinschaftlich</em></span>" zu verwenden, denn das Projekt
+wurde gestartet und noch immer großteils gesponsort von Sun Microsystems.
+Mit dieser Wortwahl zeigt man sich sensibel gegenüber Befürchtungen, die
+Entwicklung könne einmal seitens Sun dominiert werden. In einer solchen 
+Angelegenheit kann schon allein der Hinweis auf die 
+<span class="emphasis"><em>Möglichkeit</em></span> eines Problems einen wesentlichen 
+Schritt für seine Ausräumung darstellen. 
+
+Andererseits können Projekte, die nicht durch eine einzige Firma 
+unterstützt werden, auf solche Formulierungen verzichten; schließlich 
+ist die Entwicklung durch eine Gemeinschaft das Übliche, es gibt also 
+normalerweise keinen Grund, dies im Missionsziel aufzuführen.</p></div><div class="sect2" title="Sagen Sie, dass das Projekt frei ist"><div class="titlepage"><div><div><h2 class="title"><a id="state-freedom"/>Sagen Sie, dass das Projekt frei ist</h2></div></div></div><p>Wer die Missionziele gelesen hat und noch interessiert ist, wird
+nun weitere Einzelheiten erfahren wollen, vielleicht durch die
+Benutzer- oder Entwicklerdokumentation, schließlich wird er
+etwas herunterladen wollen. Doch vor alledem will er sicher sein,
+dass es sich um Open Source handelt.</p><p><span class="emphasis"><em>Die Hauptseite muss unmissverständlich klar machen,
+dass das Projekt Open Source ist.</em></span> Das mag offensichtlich
+klingen, Sie wären aber überrascht darüber, wie viele Projekte es 
+vergessen. Ich habe schon Projekte gesehen, deren Hauptseite nicht nur 
+versäumte zu sagen, unter welcher Lizenz ihre Software veröffentlicht
+wurde, sondern nicht einmal erwähnte, dass es sich um freie Software 
+handelt. Manchmal erschien die entscheidende Information erst auf der 
+Download-Seite, der Entwickler-Seite oder irgend einer andere Stelle die
+einen Klick mehr erforderte. Im Extremfall wurde die Lizenz überhaupt
+nicht auf der Site angegeben – die einzige Möglichkeit sie 
+herauszufinden war, die Software herunterzuladen und hineinzuschauen.</p><p>Vermeiden Sie diesen Fehler. Durch solch ein Versäumnis können 
+Ihnen viele potentieller Entwickler und Nutzer verloren gehen. Sagen Sie 
+gleich vorweg, direkt unterhalb des Missionsziels, dass das Projekt 
+freie Software oder Open-Source-Software ist, und geben Sie die genaue
+Lizenz an. Eine kurze Anleitung zur Wahl einer Lizenz bietet der Abschnitt 
+<a class="xref" href="ch02s02.html" title="Die Wahl einer Lizenz">„Die Wahl einer Lizenz“</a><span>später in 
+diesem Kapitel</span>; Lizenzfragen werden ausführlich im Kapitel
+<a class="xref" href="ch09.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente">Kapitel 9, <em>Lizenzen, Urheberrecht und Patente</em></a> behandelt.</p><p>Bis hierhin hat sich unser hypothetischer Besucher entschieden 
+– wahrscheinlich innerhalb der ersten Minute oder schon vorher 
+– ob er interessiert ist, sagen wir, zumindest weitere fünf
+Minuten in das Projekt zu investieren. Der nächste Abschnitt beschreibt,
+was er innerhalb dieser fünf Minuten vorfinden sollte.</p></div><div class="sect2" title="Funktionen und Anforderungen"><div class="titlepage"><div><div><h2 class="title"><a id="features-and-requirements"/>Funktionen und Anforderungen</h2></div></div></div><p>Es sollte eine kurze Liste der Funktionen geben, die von der 
+Software unterstützt werden (Wenn etwas noch nicht fertig ist, können 
+Sie es trotzdem auflisten, schreiben Sie aber
+"<span class="emphasis"><em>geplant</em></span>" oder "<span class="emphasis"><em>in Arbeit</em></span>"
+daneben), und der Anforderungen, die die Software an die Hardware stellt. 
+Stellen Sie sich die Liste der Funktionen/Anforderungen wie etwas vor, 
+das Sie jemandem geben würden, der eine Kurzzusammenfassung zu dieser 
+Software wünscht. Oft ist sie einfach nur eine logische Erweiterung der 
+Missionsziele. Das Missionsziel könnte zum Beispiel folgendes
+beinhalten:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Erstellung einer Volltext-Indexierungs- und 
+  -Suchmaschine mit einer umfangreichen Schnittstelle für 
+  Programmierer, die Suchdienste über große Mengen von Text anbieten
+  wollen.</em></span></p></blockquote></div><p>Die Liste der Funktionen und Anforderungen würde Details 
+bieten, um das Missionsziel zu verdeutlichen:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Funktionen:</em></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="emphasis"><em>Durchsucht Klartext, HTML, und
+                XML</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Suche nach Wörtern oder 
+                Ausdrücken</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(geplant) Unscharfe Suche</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(geplant) Inkrementelle Aktualisierung
+                der Indexe</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(geplant) Indexierung von Ressourcen im
+                Netzwerk</em></span></p></li></ul></div><p><span class="emphasis"><em>Anforderungen:</em></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="emphasis"><em>Python 2.2 oder höher</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Genug Festplattenspeicher für die Indexe
+                (ungefähr die doppelte Menge der
+                Originaldaten)</em></span></p></li></ul></div></blockquote></div><p>Durch diese Informationen gewinnen Leser schnell ein Gefühl dafür,
+ob ihnen diese Software etwas nützen könnte, und sie können gleichzeitig
+überlegen, ob sie sich als Entwickler beteiligen wollen.</p></div><div class="sect2" title="Stand der Entwicklung"><div class="titlepage"><div><div><h2 class="title"><a id="development-status"/>Stand der Entwicklung</h2></div></div></div><p>Leute wollen immer wissen wie es einem Projekt geht. Bei neuen
+Projekten wollen sie wissen wie weit seine Versprechen und sein 
+derzeitiger Stand auseinanderliegen. Bei einem ausgereiften Projekt 
+wollen sie wissen, wie aktiv es gepflegt wird, wie oft neue Versionen 
+veröffentlicht werden, wie schnell es wahrscheinlich auf Bug-Meldungen
+reagieren wird, usw.</p><p>Um diese Fragen zu beantworten, sollten Sie eine Seite zum
+Fortschritt der Entwicklung einrichten, auf der die kurzfristigen Ziele
+und Anfragen des Projekts aufgelistet werden (es könnte z.B. auf der 
+Suche nach Entwicklern mit bestimmten Fachkenntnissen sein). Die Seite
+kann auch eine Übersicht vergangener Versionen haben, mit einer 
+Auflistung der jeweiligen Funktionen, damit Besucher sich ein Bild 
+machen können, was in diesem Projekt unter "Fortschritt" verstanden wird
+und wie schnell es nach diesem Verständnis vorankommt.</p><p>Fürchten Sie sich nicht davor, einen unfertigen Eindruck zu 
+vermitteln und widerstehen Sie der Versuchung, den Entwicklungsstand 
+besser darzustellen als er wirklich ist. Jeder weiß, dass sich Software in
+Schritten entwickelt; es ist keine Schande zu sagen "Es ist Alpha-Software
+und sie hat bekannte Fehler. Sie läuft zwar und funktioniert 
+zumindest teilweise, trotzdem gilt: Nutzung auf eigene Gefahr". Diese
+Ausdrucksweise wird nicht die Art von Entwicklern verschrecken, die Sie zu
+dieser Zeit brauchen. Was die Nutzer angeht: Einer der schlimmsten 
+Fehler, die ein Projekt machen kann, ist Nutzer anzulocken, für die die
+Software noch nicht bereit ist. Der Ruf, instabil oder fehlerträchtig zu
+sein, ist schwer wieder loszuwerden, wenn er dem Projekt einmal anhaftet. 
+Auf lange Sicht zahlt es sich aus, konservativ zu sein; es ist besser 
+wenn die Software <span class="emphasis"><em>stabiler</em></span> läuft als erwartet,
+und angenehme Überraschungen sorgen für die beste Mundpropaganda.</p><div class="sidebar" title="Alpha und Beta"><a id="alpha-and-beta"/><div class="titlepage"><div><div><p class="title"><strong>Alpha und Beta</strong></p></div></div></div><p>Der Begriff <em class="firstterm">alpha</em> bedeutet für gewöhnlich
+  eine erste Version, mit der Benutzer echte Arbeit erledigen können, die
+  alle geplanten Funktionen hat, aber auch bekannte Fehler. Der vorrangige
+  Sinn von Alpha-Software ist, Rückmeldungen zu erhalten, damit die 
+  Entwickler wissen, woran sie arbeiten sollen. Die Stufe 
+  <em class="firstterm">beta</em> bedeutet, dass in der Software alle groben 
+  Fehler behoben wurden, aber noch nicht genug getestet wurde, um als zur 
+  Herausgabe geeignet zu gelten. Der Sinn von Beta-Software ist entweder
+  zur offiziellen Version zu werden, wenn keine Fehler gefunden wurden, 
+  oder detaillierte Rückmeldungen an die Entwickler zu geben, um die zügige 
+  Fertigstellung der Version zu unterstützen. Der Unterschied zwischen 
+  alpha und beta ist zum größten Teil eine Sache der Einschätzung.</p></div></div><div class="sect2" title="Downloads"><div class="titlepage"><div><div><h2 class="title"><a id="downloads"/>Downloads</h2></div></div></div><p>Man sollte die Software als Quelltext in den üblichen Formaten 
+herunterladen können. Wenn ein Projekt noch am Anfang ist, sind
+binäre (ausführbare) Dateien nicht nötig, es sei denn der
+Build-Vorgang ist derart kompliziert und voller Abhängigkeiten, dass
+es für die meisten Leute einen Menge Arbeit wäre, die Software
+überhaupt zum Laufen zu bringen. (Wenn das aber der Fall ist, wird 
+das Projekt sowieso Schwierigkeiten haben, Entwickler 
+anzuziehen.</p><p>Die veröffentlichten Dateien herunterzuladen, sollte so bequem, 
+standardkonform und mühelos sein wie möglich. Um eine Krankheit 
+auszurotten, würden Sie die Medizin nicht so verteilen, dass man zur 
+Anwendung eine unübliche Spritzengröße bräuchte. Ebenso sollte Software 
+die üblichen Build- und Installationsmethoden beachten, denn je mehr
+sie von diesen Standards abweicht, desto mehr potenzielle Benutzer und
+Entwickler werden aufgeben und sich verwirrt abwenden.</p><p>Das hört sich offensichtlich an, aber viele Projekte machen sich
+diese Mühe sehr lange Zeit nicht, in der Annahme, dass sie es jederzeit
+tun könnten: <span class="emphasis"><em>"Wir erledigen den Kram sobald der Code näher
+an der Fertigstellung ist."</em></span> Hierbei übersehen sie jedoch,
+dass das Hinausschieben der langweiligen Arbeiten an Build- und
+Installations-Vorgängen auch die Fertigstellung vom Code hinausschiebt
+– denn sie entmutigen Entwickler, die ansonsten etwas 
+zum Code beigetragen hätten. Das Heimtückische daran ist, 
+dass nicht einmal jemand davon <span class="emphasis"><em>erfährt</em></span>, dass
+Entwickler verlorengegangenen sind, denn der Vorgang ist eine 
+Ansammlung von Nicht-Ereignissen: Jemand geht auf die Webseite, lädt 
+die Software herunter, versucht einen Build zu machen, scheitert, gibt auf 
+und geht seiner Wege. Wer außer der Person selbst wird jemals davon 
+erfahren? Keiner im Projekt wird je bemerken, wie Interesse und 
+Wohlwollen von jemanden lautlos verschwendet wurde.</p><p>Langweilige Arbeit mit einem hohen Nutzen sollte immer frühzeitig
+erledigt werden, und das Herabsetzen der Einstiegshürden für ein Projekt
+durch sauberes Packen zahlt sich mit vielfachem Gewinn aus.</p><p>Wenn Sie ein Paket zum Herunterladen freigeben ist es wichtig, eine
+eindeutige Versionsnummer zu vergeben, damit die Ausgaben unterschieden
+werden können und zu sehen welche die aktuellere ist. Eine 
+ausführliche Diskussion über Versionsnummern finden Sie in 
+<a class="xref" href="ch07.html#release-numbering" title="Versionszählung">„Versionszählung“</a>, und Details zur Standardisierung
+von Build- und Installations-Vorgängen werden im Abschnitt 
+<a class="xref" href="ch07s04.html" title="Erstellung der Pakete">„Erstellung der Pakete“</a><span>, sowie in
+<a class="xref" href="ch07.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <em>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</em></a></span> behandelt.</p></div><div class="sect2" title="Zugriff auf Versionsverwaltung und Bugtracker"><div class="titlepage"><div><div><h2 class="title"><a id="vc-and-bug-tracker-access"/>Zugriff auf Versionsverwaltung und Bugtracker</h2></div></div></div><p>Den Quellcode herunterzuladen mag für diejenigen ausreichend sein, 
+die lediglich die Software installieren und benutzen wollen. Das genügt
+jedoch nicht für diejenigen, die sie weiterentwickeln wollen. Nächtliche 
+Quelltext-Schnappschüsse können helfen, sind aber nicht ausreichend
+fein für eine lebendige Entwicklergemeinschaft. Diese Leute brauchen 
+Echtzeit-Zugriff auf den neuesten Quellcode; ihn bereitzustellen wird erst
+durch die Benutzung einer Versionsverwaltung möglich. Anonymer Zugriff auf
+den Quellcode, der unter Versionsverwaltung steht, ist ein Zeichen 
+– für Entwickler wie auch für Nutzer – dass das Projekt sich 
+Mühe gibt, den Leuten das für eine Beteiligung Nötige zu geben. Wenn
+Sie nicht sofort eine Versionsverwaltung bereitstellen können, sollten
+Sie zumindest darauf hinweisen, dass Sie dies demnächst vorhaben. Das
+Thema Infrastruktur der Versionsverwaltung wird ausführlich in
+<a class="xref" href="ch03s03.html" title="Versionsverwaltung">„Versionsverwaltung“</a><span> im Kapitel
+<a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span> behandelt.</p><p>Gleiches gilt für den Bugtracker. Die Bedeutung des Bugtracker liegt
+nicht allein in seinem Nutzen für die Entwickler, sondern er ist auch ein
+Signal an Außenstehende. Für viele ist eine öffentliche Bug-Datenbank
+eines der stärksten Anzeichen dafür, dass ein Projekt ernstgenommen werden
+sollte. Desweiteren ist ein Projekt um so besser, je mehr Fehler darin 
+protokolliert sind. Auch wenn es sich widersprüchlich anhört, sollte man
+bedenken, dass die Anzahl der erfassten Fehler von drei Dingen abhängt: 
+Die absolute Anzahl in der Software enthaltene Fehler, die Anzahl seiner 
+Benutzer und wie bequem es für diese Benutzer ist, neue Fehler
+einzutragen. Von diesen dreien sind die letzten beiden wesentlich. Jede
+ausreichend große und komplexe Software enthält eine im Grunde genommen
+beliebige Menge an Fehlern, die nur darauf warten, entdeckt zu werden. 
+Die eigentliche Frage ist, wie gut das Projekt diese Fehler erfassen
+und priorisieren kann. Ein Projekt mit einer großen und gut gepflegten 
+Fehler-Datenbank (ein Zeichen dafür, dass schnell auf Bugs reagiert wird, 
+Duplikate markiert werden, usw.) macht deshalb einen besseren Eindruck 
+als ein Projekt ohne oder mit einer fast leeren Fehler-Datenbank.</p><p>Am Anfang des Projekts wird die Fehler-Datenbank natürlich nur sehr
+wenige Meldungen enthalten und es gibt nicht viel, das Sie dagegen 
+tun könnten. Wenn die Statusseite aber das junge Alter hervorhebt
+und wenn Leute, die die Bug-Datenbank betrachten, sehen können, dass
+die meisten Einträge vor kurzem gemacht wurden, können sie leicht 
+schlussfolgern, dass das Projekt immer noch eine gesunde 
+<span class="emphasis"><em>Rate</em></span> an Einträgen hat und werden dementsprechend 
+über die niedrige absolute Anzahl an Bug-Meldungen nicht wirklich
+beunruhigt sein.</p><p>Man sollte auch beachten, dass Bugtracker oft nicht nur zur 
+Verfolgung von Bugs, sondern auch für Verbesserungen an der Software, 
+Änderungen an der Dokumentation, ausstehende Aufgaben und mehr benutzt
+werden. Weiteres zum Betrieb eines Bugtrackers, wird in 
+<a class="xref" href="ch03s04.html" title="Bugtracker">„Bugtracker“</a><span> im Kapitel 
+<a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span> behandelt, also 
+werde ich hier nicht näher darauf eingehen. Das Wichtige aus Sicht der 
+Präsentation ist, überhaupt einen Bugtracker zu
+<span class="emphasis"><em>haben</em></span> und sicherzustellen, dass dieser Umstand
+bereits auf der Hauptseite deutlich wird.</p></div><div class="sect2" title="Kommunikationskanäle"><div class="titlepage"><div><div><h2 class="title"><a id="communications-channels"/>Kommunikationskanäle</h2></div></div></div><p>Besucher wollen oft wissen, wie sie am Projekt beteiligte 
+Menschen erreichen können. Veröffentlichen Sie deshalb Adressen von 
+Mailinglisten, Chat-Räumen, IRC-Kanälen und anderen Foren, auf denen 
+Beteiligte erreicht werden können. Stellen Sie klar, 
+dass Sie und die anderen Autoren des Projekts auf diesen Listen
+eingetragen sind, um den Besuchern zu zeigen , dass sie Rückmeldungen 
+an die Entwickler richten können. Eine Anmeldung auf den
+Mailinglisten beinhaltet für Sie nicht die Verpflichtung, alle Fragen 
+zu beantworten oder alle Wünsche nach neuen Funktionen zu verwirklichen.
+Auf lange Sicht betrachtet, nutzt die Mehrheit diese Foren sowieso nie,
+aber es wird sie ermutigen zu wissen, dass sie es 
+<span class="emphasis"><em>könnten</em></span>, sollte es einmal nötig sein.</p><p>Am Anfang eines Projekts hat es keinen Sinn, die Foren für Benutzer
+und Entwickler getrennt zu halten. Es ist viel besser, wenn alle 
+Projektbeteiligten miteinander reden: in einem "Raum". Unter den ersten
+Interessenten eines Projekts ist die Unterscheidung zwischen Entwickler 
+und Nutzer oft verwaschen. Sofern sie überhaupt gemacht werden kann, gibt 
+es in den frühen Tagen wesentlich mehr Entwickler im Verhältnis zu 
+Nutzern als es später der Fall ist. Obwohl Sie nicht annehmen können,
+dass jeder, der sich früh für das Projekt interessiert, ein Programmierer
+ist, der am Quelltext der Software arbeiten will, können Sie annehmen, 
+dass sie zumindest daran interessiert sind, die Diskussionen um die 
+Entwicklung mitzuverfolgen und ein Gefühl für die Richtung des Projekts
+zu entwickeln.</p><p>Da es in diesem Kapitel nur darum geht wie man ein Projekt startet,
+belassen wir es dabei zu sagen, dass diese Foren existieren sollten. 
+Später, in <a class="xref" href="ch06s04.html" title="Handhabung von Wachstum">„Handhabung von Wachstum“</a><span> im Kapitel 
+<a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span>, werden wir untersuchen, wo 
+und wie man diese Foren aufbaut, inwiefern Sie möglicherweise
+Moderation erfordern und wie man Foren für Nutzer und Foren für 
+Entwickler voneinander löst wenn es nötig wird, ohne eine
+unüberwindliche Kluft aufzureißen.</p></div><div class="sect2" title="Richtlinien für Entwickler"><div class="titlepage"><div><div><h2 class="title"><a id="developer-guidelines"/>Richtlinien für Entwickler</h2></div></div></div><p>Wenn jemand sich überlegt, etwas zu einem Projekt beizutragen, 
+wird er sich nach Richtlinien für Entwickler umschauen. Diese sind 
+weniger technischer, als viel mehr sozialer Natur: Sie erklären, wie
+Entwickler miteinander und mit Benutzern umgehen, also letzlich
+wie die Dinge laufen sollten.</p><p>Dieses Thema wird ausführlich in
+<a class="xref" href="ch04s03.html" title="Schriftliche Regeln">„Schriftliche Regeln“</a><span> im Kapitel
+<a class="xref" href="ch04.html" title="Kapitel 4. Soziale und politische Infrastruktur">Kapitel 4, <em>Soziale und politische Infrastruktur</em></a></span> behandelt, aber die 
+wesentlichen Elemente der Richtlinien sind:
+
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Hinweise auf Foren für die Zusammenarbeit mit
+            anderen Entwicklern</p></li><li class="listitem"><p>Anleitungen wie man Fehler meldet und Patches 
+            einreicht</p></li><li class="listitem"><p>Einige Hinweise darauf <span class="emphasis"><em>wie</em></span>
+            die Entwicklung für gewöhnlich abläuft – ob das Projekt
+            eine gütige Diktatur, eine Demokratie oder etwas anderes
+            ist</p></li></ul></div><p>
+
+
+Übrigens soll "Diktatur" in keiner Weise herabsetzend wirken. Es ist
+völlig in Ordnung eine Tyrannei zu betreiben, bei dem ein bestimmter 
+Entwickler das letzte Wort über alle Änderungen haben kann. Viele 
+erfolgreiche Projekte arbeiten in dieser Weise. Das Wichtige dabei ist,
+dass das Projekt dies von vornherein klarstellt. Eine Tyrannei, die 
+vorgibt eine Demokratie zu sein, wird sich Menschen abspenstig machen; 
+eine Tyrannei die klar sagt was sie ist, wird gut zurecht kommen, sofern
+der Tyrann kompetent und vertrauenswürdig ist.</p><p>Siehe 
+<a class="ulink" href="http://subversion.apache.org/docs/community-guide/">http://subversion.apache.org/docs/community-guide/</a>
+für ein Beispiel besonders gründlicher Richtlinien für Entwickler oder
+<a class="ulink" href="http://www.openoffice.org/dev_docs/guidelines.html">http://www.openoffice.org/dev_docs/guidelines.html</a> für
+allgemeinere Richtlinien, die sich mehr auf die Steuerung und Teilnahme
+am Projekt als auf technische Angelegenheiten konzentrieren.</p><p>Das etwas andere Thema, die Bereitstellung einer Projekt-Einführung
+für Programmierer, wird im Abschnitt
+<a class="xref" href="ch02.html#developer-documentation" title="Entwickler-Dokumentation">„Entwickler-Dokumentation“</a><span>
+später in diesem Kapitel behandelt</span>.</p></div><div class="sect2" title="Dokumentation"><div class="titlepage"><div><div><h2 class="title"><a id="documentation"/>Dokumentation</h2></div></div></div><p>Dokumentation ist unerlässlich. Es muss <span class="emphasis"><em>irgendetwas</em></span> 
+zum Lesen geben, selbst wenn es nur rudimentär und 
+unvollständig ist. Die Dokumentation ist ganz klar ein Teil der vorhin
+erwähnten "Plackerei" und sie ist oft das erste, das in einem neuen 
+Open-Source-Projekt zu kurz kommt. Die Missionsziele und eine Liste von 
+Funktionen zu schreiben, die Wahl einer Lizenz, den Stand der Entwicklung
+zusammenzufassen – das sind alles relativ kleine Aufgaben, die mit 
+einem Schlag erledigt werden können; und wenn sie erledigt sind, muss man
+sich normalerweise nicht weiter damit beschäftigen. Die Dokumentation
+hingegen ist nie wirklich fertig, was vielleicht ein Grund dafür ist, 
+dass man es manchmal hinauszögert, sie überhaupt in Angriff zu 
+nehmen.</p><p>Das heimtückischste daran ist, dass die Autoren der Dokumentation
+keinen direkten Nutzen aus ihr ziehen, während sie für neue Nutzer
+unerlässlich ist. Die wichtigste Dokumentation für neue Benutzer sind die
+Grundlagen: Wie richte ich die Software zügig ein, eine Übersicht über
+ihre Funktionsweise, vielleicht auch Anleitungen für häufige Aufgaben.
+All dies ist den <span class="emphasis"><em>Autoren</em></span> nur allzu gut
+bekannt – so bekannt, dass es für sie schwierig sein kann, sich in 
+die Lage der Leser zu versetzen, und mühsam die offensichtlichen
+Einzelschritte zu buchstabieren, die aus ihrem Blickwinkel kaum der
+Erwähnung wert scheinen.</p><p>Es gibt keine magische Lösung für dieses Problem. Es muss sich nur
+jemand die Zeit nehmen, alles aufzuschreiben und die Brauchbarkeit der 
+Dokumentation dann an neuen Nutzern zu testen. Benutzen Sie ein
+einfaches, leicht zu bearbeitendes Format wie HTML, Klartext oder eine
+XML-Variante – etwas geeignetes für kleine und spontane
+Verbesserungen. Das reduziert nicht nur den Aufwand für die ersten
+Autoren, die Dokumentation schrittweise zu verbessern, sondern auch 
+allen, die später zum Projekt hinzukommen.</p><p>Eine Möglichkeit, eine erste grundlegende Dokumentation abzusichern
+ist es, ihren Umfang von vornherein einzuschränken. So erscheint die
+Aufgabe zumindest nicht bodenlos. Als Richtlinie könnte gelten, dass
+folgende minimale Bedingungen erfüllt werden:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Sagen Sie dem Leser klar, welche technischen
+            Kenntnisse erwartet werden.</p></li><li class="listitem"><p>Beschreiben sie klar und deutlich, wie man die
+            Software einrichtet, und nennen Sie dem Benutzer irgendwo am
+            Anfang der Dokumentation ein Merkmal oder einen Befehl, mit
+            dem man prüfen kann, ob sie richtig eingerichtet wurde. Die
+            erste Dokumentation ist in mancherlei Hinsicht wichtiger als
+            eine echte Bedienungsanleitung. Je mehr Mühe jemand in die
+            Installation und Einrichtung der Software investiert hat,
+            desto beharrlicher wird er darin sein, fortgeschrittene, 
+            unzureichend dokumentierte Funktionen zu erfassen. Wenn Leute 
+            aufgeben, passiert es meistens gleich am Anfang; deshalb sind
+            es die frühesten Phasen wie die Installation, bei der man die
+            meiste Unterstützung braucht.</p></li><li class="listitem"><p>Geben Sie Tutorial-artige Beispiele für typische
+            Aufgaben. Natürlich sind viele Beispiele für viele
+            Aufgaben noch besser, aber wenn die Zeit knapp ist, wählen
+            Sie einen Punkt aus und schreiben Sie dazu eine ausführliche
+            Anleitung. Sobald jemand sieht, dass die Software für eine
+            Sache benutzt werden <span class="emphasis"><em>kann</em></span>, wird er
+            beginnen alleine herauszufinden, wofür sie noch zu gebrauchen
+            ist – und wenn Sie Glück haben, dazu übergehen, die 
+            Dokumentation selbst zu erweitern. Was uns zum nächsten Punkt 
+            bringt...</p></li><li class="listitem"><p>Kennzeichnen Sie unvollständige Bereiche der 
+            Dokumentation als solche. Indem Sie dem Leser zeigen, dass 
+            Sie sich über die Defizite im Klaren sind, stellen Sie sich 
+            auf seine Sicht ein. Durch Einfühlungsvermögen geben Sie
+            ihm zu verstehen, dass das Projekt nicht erst überzeugt werden
+            muss, was wichtig ist. Solche Kennzeichen entsprechen keiner
+            Verpflichtung, die Lücken bis zu einem bestimmten Datum
+            auszufüllen – sie können auch als offenen Anfragen um
+            Hilfe von Freiwilligen betrachtet werden.</p></li></ul></div><p>Der letzte Punkt hat tatsächlich umfassendere Bedeutung und kann auf 
+das ganze Projekt angewendet werden, nicht nur auf die Dokumentation. Eine 
+genaue Buchführung über bekannte Defizite ist in der Open-Source-Welt die 
+Norm. Sie müssen die Mängel des Projekts nicht hochspielen, sondern
+einfach gewissenhaft und leidenschaftslos aufzählen, wo die Veranlassung
+gegeben ist (das kann in der Dokumentation, im Bugtracker oder in einer 
+Diskussion auf einer Mailingliste geschehen). Keiner wird das als vom
+Projekt ausgehende Miesmacherei ansehen, oder als Verpflichtung die 
+Probleme bis zu einem bestimmten Datum zu lösen, es sei denn, das Projekt
+geht ausdrücklich eine solche Verpflichtung ein. Da jeder Nutzer diese 
+Mängel selbst finden wird, ist es besser, sie psychologisch darauf 
+vorzubereiten – das gibt den Eindruck, dass im Projekt ein 
+Bewusstsein über seinen Zustand besteht.</p><div class="sidebar" title="Die Pflege einer FAQ-Liste"><a id="starting-a-faq"/><div class="titlepage"><div><div><p class="title"><strong>Die Pflege einer FAQ-Liste</strong></p></div></div></div><p>Eine <em class="firstterm">FAQ</em> ("Frequently Asked 
+  Questions"<sup>[<a id="idp5976304" href="#ftn.idp5976304" class="footnote">13</a>]</sup>) 
+  kann eine der besten Investitionen des Projekts hinsichtlich ihres
+  Informationsgehalts sein. Eine FAQ ist auf 
+  Fragen abgestimmt, die von Benutzern und 
+  Entwicklern wirklich gestellt werden – nicht auf Fragen die Sie
+  vielleicht <span class="emphasis"><em>erwarten</em></span> würden – und
+  deshalb neigt eine gut gepflegte FAQ dazu, denjenigen, die sie zu Rate
+  ziehen, genau das zu geben wonach sie suchen. Die FAQ ist oft die 
+  erste Stelle, die Benutzer durchsuchen, wenn sie auf ein Problem 
+  stoßen, sie ziehen es oft sogar dem offiziellen Handbuch vor und es 
+  ist wahrscheinlich das Dokument in ihrem Projekt, worauf andere 
+  Seiten am ehesten verweisen.</p><p>Leider können Sie die FAQ nicht am Anfang eines Projekts
+  schreiben. Eine gute FAQ schreibt man nicht, man lässt sie wachsen.
+  Sie sind schon per Definition auf Rückmeldungen angewiesen. FAQs 
+  entwickeln sich erst mit der Zeit durch die tägliche Nutzung der 
+  Software. Da es unmöglich ist, die Fragen der Benutzer zu erahnen,
+  ist es unmöglich sich hinzusetzen und von Grund auf eine nützliche
+  FAQ zu schreiben.</p><p>Verschwenden Sie also nicht Ihre Zeit damit, es zu versuchen.
+  Sie können jedoch eine größtenteils leere FAQ einrichten, als Vorlage
+  und offensichtlichen Ort, an dem Leute Fragen und Antworten eintragen
+  können, wenn das Projekt erst einmal läuft. Zunächst ist wichtigste 
+  Eigenschaft einer FAQ aber nicht ihre Vollständigkeit, sondern ihre
+  Einfachheit: Wenn es einfach ist, neue Einträge zu anzufügen, wird dies
+  auch getan werden. (Die vernünftige Pflege einer FAQ ist eine nicht
+  ganz triviale, aber faszinierende Angelegenheit, die in 
+  <a class="xref" href="ch08s02.html#faq-manager" title="FAQ-Verwalter">„FAQ-Verwalter“</a><span> im Kapitel
+  <a class="xref" href="ch08.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <em>Leitung von Freiwilligen</em></a></span> weiter behandelt 
+  wird.)</p></div><div class="sect3" title="Erreichbarkeit der Dokumentation"><div class="titlepage"><div><div><h3 class="title"><a id="documentation-availability"/>Erreichbarkeit der Dokumentation</h3></div></div></div><p>Die Dokumentation sollte an zwei Stellen erreichbar sein: Online
+(direkt auf der Website) <span class="emphasis"><em>und</em></span> in der zum Download
+verfügbaren Ausgabe der Software (siehe 
+<a class="xref" href="ch07s04.html" title="Erstellung der Pakete">„Erstellung der Pakete“</a><span> im Kapitel
+<a class="xref" href="ch07.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <em>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</em></a></span>). Sie sollte online in 
+durchsuchbarer Form vorliegen, weil Interessierte die Dokumentation oft 
+lesen, <span class="emphasis"><em>bevor</em></span> sie die Software zum ersten Mal 
+herunterladen, um besser entscheiden zu können, ob sie dies überhaupt
+tun sollen. Prinzipiell sollte die Dokumentation aber auch der Software
+beiliegen, denn ein veröffentlichtes Paket sollte alles enthalten
+(d.h. lokal verfügbar machen), was man braucht um die Software zu
+benutzen.</p><p>Im Falle der Online-Dokumentation sollten Sie für einen Link sorgen,
+der auf eine <span class="emphasis"><em>vollständige</em></span> Dokumentation auf einer einzigen 
+HTML-Seite verweist (schreiben Sie einen Hinweis wie "monolitisch" oder
+"umfangreiche Einzelseite" daneben, damit die Leser nicht überrascht sind
+wenn es beim Laden etwas Zeit braucht). Das ist nützlich, da Leute oft die 
+ganze Dokumentation nach einem bestimmten Wort oder einer Wendung absuchen 
+wollen. Im Allgemeinen wissen sie schon, wonach sie suchen, können sich 
+nur nicht erinnern an welcher Stelle es stand. In dieser Situation gibt es nichts
+frustrierenderes, als je eine HTML-Seite für Inhaltsangabe, eine für die
+Einleitung, eine weitere für die Installationsanleitung, usw zu haben. 
+Wenn die Seiten so aufgeteilt sind, machen sie die Suchfunktion des 
+Browsers wertlos. Eine in mehrere Seiten aufgebrochene Dokumentation ist
+gut, wenn man weiß, welchen Abschnitt man braucht oder die ganze 
+Dokumentation von vorne nach hinten durchlesen möchte. Das ist aber 
+<span class="emphasis"><em>nicht</em></span> die häufigste Art auf die Dokumentation 
+zuzugreifen. Viel häufiger kennt sich jemand im Grunde genommen mit
+der Software aus und kehrt zurück, um nach einem bestimmten Wort oder
+Ausdruck zu suchen. Keine monolitische Datei bereitzustellen, würde in 
+solchen Fällen das Leben unnötig erschweren.</p></div><div class="sect3" title="Entwickler-Dokumentation"><div class="titlepage"><div><div><h3 class="title"><a id="developer-documentation"/>Entwickler-Dokumentation</h3></div></div></div><p>Die Entwickler-Dokumentation wird geschrieben, damit Programmierer 
+den Code verstehen, um ihn reparieren und erweitern zu können. Sie
+unterscheidet sich ein wenig zu den vorhin erwähnten 
+<span class="emphasis"><em>Richtlinien für Entwickler</em></span>, die eher sozialer als
+technischer Natur sind. Entwickler-Richtlinien sagen den Programmierern,
+wie sie miteinander zurecht kommen; die Entwickler-Dokumentation 
+hingegen sagt ihnen, wie sie mit dem Code zurechtkommen. Beide werden 
+oft der Bequemlichkeit halber gemeinsam in einem Dokument angeboten
+(wie im oben erwähnten Beispiel
+<a class="ulink" href="http://subversion.apache.org/docs/community-guide/">http://subversion.apache.org/docs/community-guide/</a>), 
+müssen dies jedoch nicht.</p><p>Obwohl die Entwickler-Dokumentation sehr hilfreich sein kann,
+gibt es keinen Grund, um ihretwillen eine Freigabe zu verzögern. So 
+lange die ursprünglichen Autoren verfügbar (und bereit) sind, Fragen zum
+Code zu beantworten, genügt das für den Anfang. Tatsächlich ist eine 
+häufige Motivation zum Schreiben der Dokumentation, dass man wieder und 
+wieder die immer gleichen Fragen beantworten muss. Aber selbst bevor sie 
+geschrieben ist, wird es entschlossenen Freiwilligen gelingen, sich einen
+Weg durch den Code zu bahnen. Was Menschen dazu treibt, ihre Zeit mit
+dem Erarbeiten einer Codebasis zu verbringen, ist, dass der Code aus
+ihrer Sicht etwas Nützliches tut. Solange sie sich dessen gewiss sind,
+nehmen sich die Zeit, Probleme zu lösen; ohne diese Zuversicht wird sie
+keine auch noch so gute Dokumentation anlocken oder halten
+können.</p><p>Wenn Sie also nur die Zeit zum Schreiben einer Dokumentation haben,
+so schreiben Sie eine für Benutzer. Jede Dokumentation für Benutzer ist
+auch für die Entwickler effektiv; jeder Programmierer, der an einer 
+Software arbeitet, muss auch damit vertraut sein, wie man sie benutzt.
+Wenn Sie später sehen, wie Programmierer andauernd die gleichen Fragen 
+stellen, nehmen Sie sich die Zeit, eine paar separate Dokumente eigens
+für sie zu schreiben.</p><p>Manche Projekte nutzen Wikis für die allererste Dokumentation, oder 
+sogar für die Hauptdokumentation. Nach meiner Erfahrung funktioniert das 
+nur dann, wenn das Wiki aktiv von einer Handvoll Leuten bearbeitet wird, 
+die hinsichtlich der Organisation und des Tonfalls der Dokumentation
+einig sind. Mehr dazu steht in 
+<a class="xref" href="ch03s07.html" title="Wikis">„Wikis“</a><span> im Kapitel
+<a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span>.
+</p></div></div><div class="sect2" title="Beispiel-Ausgaben und Screenshots"><div class="titlepage"><div><div><h2 class="title"><a id="example-output"/>Beispiel-Ausgaben und Screenshots</h2></div></div></div><p>Ein Projekt mit graphischer Benutzeroberfläche oder graphischen
+oder anderen markanten Ausgaben sollte Beispiele auf der Website des 
+Projekts anbieten. Im Fall einer Benutzeroberfläche wären es Screenshots;
+für Ausgaben können es Screenshots oder vielleicht nur Dateien sein.
+Beide befriedigen das Bedürfnis des Menschen nach direkter Belohnung:
+Ein einziges Bild kann überzeugender sein, als ganze Abstätze von
+Beschreibungen oder Geplapper auf Mailinglisten, denn ein Bild 
+ist ein unverkennbarer Beweis dafür, dass die Software 
+<span class="emphasis"><em>funktioniert</em></span>. Sie mag ihre Fehler haben, schwer 
+zu installieren und unvollständig dokumentiert sein, aber ein Bild ist
+immerhin ein Beweis, dass man sie zum Laufen bringen kann,
+wenn man sich nur genug Mühe gibt.</p><div class="sidebar" title="Screenshots"><a id="screenshots"/><div class="titlepage"><div><div><p class="title"><strong>Screenshots</strong></p></div></div></div><p>Screenshots können einschüchtern, wenn man noch nie welche 
+  gemacht hat, deshalb hier ein kleine Anleitung. Mit "Gimp"
+  (<a class="ulink" href="http://www.gimp.org/">http://www.gimp.org/</a>), öffnen Sie 
+  <span class="guimenu">Datei</span>-&gt;<span class="guimenu">Erstellen</span>-&gt;
+  <span class="guimenu">Bildschirmfoto...</span>, und wählen Sie
+  <span class="guimenuitem">Ein einzelnes Fenster aufnehmen</span>
+  oder 
+  <span class="guimenuitem">Den ganzen Bildschirm aufnehmen</span>, 
+  klicken Sie dann
+  auf <span class="guimenuitem">Aufnehmen</span>. Ziehen Sie nun den 
+  Kreuz-Cursor auf das gewünschte Fenster (dieser Schritt entfällt bei
+  ganzem Bildschirm) um das Bild in Gimp aufzunehmen. 
+  Ändern und schneiden Sie anschließend das Bild bei Bedarf 
+  nach den Anweisungen auf <a class="ulink" href="http://www.gimp.org/tutorials/Lite_Quickies/#crop">http://www.gimp.org/tutorials/Lite_Quickies/#crop</a>.</p></div></div><p>Sie können der Website des Projekts noch vieles mehr hinzufügen,
+wenn die Zeit dazu reicht, oder wenn es aus irgendeinem Grund besonders
+passend erscheint: Eine Seite mit Neuigkeiten, eine Seite mit der 
+Historie des Projekts, eine Seite mit verwandten Links, eine 
+Suchfunktion, ein Link für Spenden, usw. Nichts davon ist am Anfang 
+notwendig, aber man sollte es für später im Hinterkopf behalten.</p><div class="sect2" title="Hosting-Pakete"><div class="titlepage"><div><div><h2 class="title"><a id="starting-with-canned-hosting"/>Hosting-Pakete</h2></div></div></div><p>Es gibt ein paar Sites, die kostenlos die Infrastruktur für 
+Open-Source-Projekte bereitstellen: einen Web-Bereich, Versionsverwaltung, 
+einen Bugtracker, einen Download-Bereich, Foren, regelmäßiges Backup,
+usw. Die Details unterscheiden sich zwar von Site zu Site, aber das
+Wesentliche wird bei allen angeboten. Durch die Nutzung dieser Sites
+erhalten Sie vieles umsonst, müssen dafür aber die Kontrolle über die
+Benutzerführung teilweise aufgeben. Der Hosting-Dienst entscheidet 
+darüber, welche Software die Site benutzt, und kann so Look-and-Feel
+der Projektseiten bestimmen oder zumindest beeinflussen.</p><p>Siehe
+<a class="xref" href="ch03s08.html#canned-hosting" title="Hosting-Pakete">„Hosting-Pakete“</a><span> im Kapitel
+<a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span> für eine 
+detailliertere Diskussion über Vor- und Nachteile von Hosting-Paketen
+und eine Liste von Sites die sie anbieten.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp5976304" href="#idp5976304" class="para">13</a>] </sup>Häufig gestellte Fragen</p></div></div></div></body></html>

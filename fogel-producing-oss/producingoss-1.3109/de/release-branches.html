@@ -1,0 +1,134 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Versionszweige</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><link rel="prev" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><link rel="next" href="stabilizing-a-release.html" title="Stabilisierung einer neuen Version"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Versionszweige</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="development-cycle.html">Zurück</a> </td><th width="60%" align="center">Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</th><td width="20%" align="right"> <a accesskey="n" href="stabilizing-a-release.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Versionszweige"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="release-branches"></a>Versionszweige</h2></div></div></div><p>Aus der Sicht eines Entwicklers, ist ein freies Software-Projekt,
+in einem ständigen Zustand der Veröffentlichung. Entwickler betreiben
+für gewöhnlich zu jeder Zeit die aktuellste Version, da sie Fehler
+entdecken wollen, und da sie das Projekt dicht genug verfolgen, um von
+derzeit instabilen Bereichen des Funktionsumfangs fern zu bleiben. Sie
+aktualisieren ihre Kopie der Software für gewöhnlich jeden tag, 
+manchmal öfter, und wenn Sie eine Änderung abschicken, können sie
+halbwegs erwarten, dass jeder andere Entwickler es innerhalb von 24
+Stunden haben wird.</p><p>Wie sollte das Projekt dann eine formale Veröffentlichung machen?
+Sollte es einfach eine Momentaufnahme vom derzeitigen Zustand des
+Quellcode-Baums machen, und es der Welt als, sagen wir, "3.5.0" 
+überreichen? Die Vernunft sagt nein. Erstens gäbe es möglicherweise
+keinen einzelnen Zeitpunkt, bei dem der ganze Quellcode-Baum bereit
+für eine neue Version ist. Neu angefangene Funktionen könnten an
+verschiedenen Stellen, in verschiedenen Zuständen der
+Fertigstellung herumliegen. Jemand könnte eine riesige Änderung
+committed haben, um einen Fehler zu beheben, die Änderung könnte aber
+kontrovers sein und zu der Zeit debattiert werden indem die 
+Momentaufnahme gemacht wird. Wenn das der Fall ist, würde es nicht so
+einfach funktionieren, die Momentaufnahme zu verzögern, bis die
+Debatte beendet ist, da eine andere, nicht im Zusammenhang stehende
+Debatte in der Zwischenzeit anfangen könnte, und dann müssten Sie
+wieder <span class="emphasis"><em>darauf</em></span> warten. Man kann nicht garantieren,
+dass dieser Ablauf aufhören wird.</p><p>In jedem Fall, würde die Nutzung von Momentaufnahmen des 
+kompletten Quellcode-Baums als eine neue Version, die fortlaufenden
+Entwicklung behindern, selbst wenn der Quellcode in einem für die
+Veröffentlichung geeigneten Zustand gebracht werden könnte. Sagen wir,
+dass diese Momentaufnahme "3.5.0" sein wird; wäre die nächste Version
+vermutlich Bugfixes beinhalten, die in 3.5.0 gefunden wurden. Wenn
+beide Momentaufnahmen aber vom gleichen Baum sein sollen, was sollen
+die Entwickler in der Zeit zwischen den beiden Versionen machen? Sie
+können keine neuen Funktionen hinzufügen; dass verbieten die
+Kompatibilitätsrichtlinien. Aber nicht alle werden enthusiastisch
+darüber sein Fehler in dem Code von 3.5.0 zu beheben. Manche werden
+neue Funktionen haben, die sie versuchen fertigzustellen, und würden
+wütend werden, wenn sie dazu gezwungen wären zu wählen zwischen,
+untätig herum zu sitzen oder an Sachen zu arbeiten, die sie nicht
+interessieren, nur weil der Ablauf des Projekts beim Erstellen einer
+neuen Version erfordert, dass die Entwicklung an dem Codebaum
+unnatürlich ruhig bleibt.</p><p>Die Lösung für diese Probleme ist, immer einen
+<em class="firstterm">Versionszweig</em> (en. release branch) zu benutzen.
+Ein Versionszweig ist lediglich ein Zweig in dem
+Versionsverwaltungssystem, (siehe <a class="xref" href="vc.html#vc-vocabulary-branch"><em class="firstterm">Branch<sup>[<a name="idp4779376" href="#ftn.idp4779376" class="footnote">25</a>]</sup></em></a>), bei dem der Code, welcher für diese
+Release bestimmt ist, von der Hauptentwicklung getrennt
+werden kann. Diese Zweige sind sicherlich kein originäres Konzept
+freier Software; viele kommerzielle Unternehmen, die Software
+entwickeln, benutzen sie auch. In kommerziellen Umgebungen werden
+Versionszweige jedoch manchmal als ein Luxus betrachtet &#8211; eine
+Art formales "optimales Verfahren" (en. "best practice") welches unter
+dem Druck eines wichtigen Termins entfallen kann, während alle 
+Entwickler sich dabei beeilen, den Hauptast stabil zu bekommen.</p><p>Versionszweige sind jedoch bei Open-Source-Projekten so ziemlich
+eine Notwendigkeit. Ich habe Projekte gesehen, die neue Versionen ohne
+sie machen, das Ergebnis war jedoch immer, dass einige Entwickler 
+untätig herumsaßen, während einige andere &#8211; für gewöhnlich eine
+Minderheit &#8211; daran arbeiten die Version fertigzustellen. Dieses
+Ergebnis ist gewöhnlicherweise auf verschieden Arten schlecht. Erstens,
+verlangsamt sich die Geschwindigkeit der Entwicklung insgesamt. 
+Zweitens, ist die neue Version von einer schlechteren Qualität als es
+hätte sein müssen, da nur wenige daran gearbeitet haben, und die 
+hatten es eilig, damit alle anderen wieder an die Arbeit gehen konnten.
+Drittens, spaltet es psychologisch die Entwicklermannschaft, indem es
+eine Situation aufbaut, bei dem verschiedene Arten der Arbeit sich
+gegenseitig unnötig stören. Die Entwickler die untätig herumsitzen,
+wären wahrscheinlich froh <span class="emphasis"><em>etwas</em></span> von ihrer
+Aufmerksamkeit zu dem Versionszweig beizutragen, solange es eine
+Wahl bleibt, die sie abhängig von ihren Interessen und Zeitplänen
+treffen könnten. Ohne den Zweig, beschränkt sich ihre Auswahl jedoch
+auf "Nehme ich heute an dem Projekt teil oder nicht?" anstatt "Arbeite
+ich heute an der neuen Version, oder an der neuen Funktion in dem
+Hauptzweig, dass ich Entwickele?".</p><div class="sect2" title="Mechanik von Versionszweigen"><div class="titlepage"><div><div><h3 class="title"><a name="release-branch-mechanics"></a>Mechanik von Versionszweigen</h3></div></div></div><p>Die genaue Mechanik der Erstellung eines Versionszweiges hängt
+natürlich von Ihrem Versionsverwaltungssystem ab, die allgemeinen
+Konzepte sind aber für die meisten Systemen gleich. Ein Zweig sprießt
+für gewöhnlich aus einem anderen Zweig under dem Stamm. Traditionell,
+wird die Entwicklung in dem Stamm betrieben, ungestört von den
+Einschränkungen einer neuen Version. Der erste Zweig, welcher zu der
+Version "1.0" führt, sprießt vom Stamm ab. Bei CVS sähe der Befehl
+für einen Zweig ungefähr wie folgt aus:</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b VERSION_1_0_X
+</pre><p>Oder in Subversion, wie folgt:</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.0.x
+</pre><p>(All diese Beispiele gehen von dem Drei-Komponenten-System für
+die Nummerierung der Version aus. Obwohl ich nicht die genauen Befehle
+für jedes Versionsverwaltungssystem geben kann, sind hier Beispiel für
+CVS und Subversion und ich hoffe, dass die entsprechenden Befehle von
+den beiden abgeleitet werden können.)</p><p>Beachten Sie, dass wir den Zweig "1.0.x" (mit dem Buchstaben "x")
+anstatt "1.0.0" erzeugt haben. Das liegt daran, dass die selbe 
+Minor-Reihe 
+&#8211; d.h. der selbe Ast &#8211; für alle Micro-Versionen in der
+Reihe benutzt werden wird. Der eigentliche Vorgang, den Zweig für die
+Veröffentlichung stabil zu machen, wird in <a class="xref" href="stabilizing-a-release.html" title="Stabilisierung einer neuen Version">&#8222;Stabilisierung einer neuen Version&#8220;</a><span> später in
+diesem Kapitel</span> behandelt. Hier geht es nur um die
+Wechselwirkung zwischen dem Versionsverwaltungssystem und dem Ablauf
+beim Erstellen der neuen Version. Sobald der Versionszweig in einen
+stabilen Zustand gebracht wurde und bereit ist, wird es Zeit, eine
+Momentaufnahme von dem Zweig zu machen:</p><pre class="screen">
+$ cd VERSION_1_0_X-working-copy
+$ cvs tag VERSION_1_0_0
+</pre><p>or</p><pre class="screen">
+$ svn copy http://.../repos/branches/1.0.x http://.../repos/tags/1.0.0
+</pre><p>Dieses Tag repräsentiert jetzt genau den Zustand, in dem der
+Quellcode des Projekts war bei der Version 1.0.0 (das ist nützlich, 
+falls Sie je eine ältere Version brauchen, nachdem die veröffentlichten
+Pakete nicht mehr zur Verfügung stehen). Die nächste Micro-Version in
+der selben Reihe, wird gleichermaßen in dem 1.0.x Zweig vorbereitet, und
+wenn es bereit ist, wird ein Tag für 1.0.1. gemacht. Gleiches gilt für
+1.0.2, usw. Wenn es Zeit wird, über eine neue 1.1.x-Version nachzudenken,
+erzeugen Sie einen neuen Zweig vom Stamm:</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b VERSION_1_1_X
+</pre><p>oder</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.1.x
+</pre><p>Die Wartung kann parallel dazu in den Versionen 1.0.x und 1.1.x,
+weitergehen, und neue Versionen können in beiden Reihen unabhängig von
+einander veröffentlicht werden. Es ist sogar nicht einmal ungewöhnlich
+zwei Versionen aus verschiedenen Reihen zur gleichen Zeit zu 
+veröffentlichen. Die ältere Reihe wird für die konservativeren Server
+Administratoren empfohlen, die vielleicht nicht den großen Sprung nach
+(sagen wir) 1.1 machen wollen, ohne sorgfältige Vorbereitung. In der
+Zwischenzeit, nehmen die eher abenteuerlustigen Personen die neuste
+Version der höchsten Reihe, um sicher zu sein, dass sie all die neusten
+Funktionen bekommen, selbst mit dem Risiko einer höheren Instabilität.
+</p></div><p>Das ist natürlich nicht die einzige Strategie für neue 
+Versionszweige. Unter manchen Umständen mag es nicht einmal die beste
+sein, obwohl es für die Projekte mit denen ich zu tun hatte ziemlich
+gut funktioniert hat. Benutzen Sie irgend eine Strategie die zu
+funktionieren scheint, bedenken Sie aber die wichtigsten Punkte: Der
+Sinn eines Versionszweiges ist, die Arbeit an der neuen Version von den
+Schwankungen der täglichen Entwicklung zu trennen, und dem Projekt eine
+Physikalische Entität zu geben, um den es die Abläufe bei der
+Veröffentlichung organisieren kann. Diese Abläufe werden im nächsten
+Abschnitt detailliert beschrieben.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="development-cycle.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="stabilizing-a-release.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+ </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Stabilisierung einer neuen Version</td></tr></table></div></body></html>

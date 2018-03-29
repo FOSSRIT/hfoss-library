@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Teilen sie sowohl Verwaltungsaufgaben als auch technische Aufgaben</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Teilen sie sowohl Verwaltungsaufgaben als auch technische Aufgaben"><div class="titlepage"><div><div><h1 class="title"><a id="share-management"/>Teilen sie sowohl Verwaltungsaufgaben als auch technische
+Aufgaben</h1></div></div></div><p>Teilen Sie sowohl die Bürde der Verwaltung als auch die technische
+Bürde das Projekt in Gang zu halten. Mit zunehmender Komplexität eines Projekts
+ist mehr und mehr Arbeit in Management und Informationsfluss erforderlich.
+Es gibt keinen Grund diese Bürde nicht zu teilen; wobei, sie
+zu teilen, nicht notwendigerweise eine Hierarchie erfordert
+– was sich in der Praxis entwickelt, entspricht eher einer
+Peer-to-Peer-Topologie als einer militärichen Befehlsstruktur.</p><p>Manchmal sind die Rollen der Verwaltung formalisiert, und manchmal
+bilden sie sich spontan. Im Subversion-Projekt haben wir einen 
+Patchesverwalter, einen Übersetzungsverwalter, einen Dokumentationsverwalter,
+einen Ticketverwalter (wenn auch inoffiziell), und einen Versionsverwalter.
+Manche dieser Rollen wurden bewusst von uns eingeführt,
+andere entstanden von allein; da das Projekt wächst, erwarte ich, dass
+weitere Rollen hinzukommen. Unten werden wir diese und ein paar
+andere Rollen im Detail untersuchen (außer der des Versionsverwalters,
+die bereits in <a class="xref" href="ch07s03.html#release-manager" title="Release-Verwalter">„Release-Verwalter“</a> und 
+<a class="xref" href="ch07s03.html#release-owner" title="Diktatur durch den Versionsherrn">„Diktatur durch den Versionsherrn“</a><span> im
+vorhergehenden Kapitel besprochen wurde</span>).</p><p>Achten Sie einmal beim Lesen der Beschreibungen darauf,
+wie keine der Rollen die exklusive Kontrolle über den entsprechenden
+Bereich erfordert. So hindert der Ticketverwalter andere nicht daran,
+Änderungen an der Ticket-Datenbank vorzunehmen, der FAQ-Verwalter besteht
+nicht darauf, der einzige zu sein, der die FAQ bearbeitet, und so
+weiter. Bei diesen Rollen geht es durchweg um Verantwortung, nicht um
+eine Monopolstellung. Ein wichtiger Teil der Arbeit des Verwalters eines 
+Bereichs ist es, zu bemerken wenn andere in diesem Bereich arbeiten, und
+sie anzuleiten, die Dinge ganauso zu erledigen wie der Verwalter,
+damit die nebeneinander laufenden Anstrengungen einander stärken,
+anstatt miteinander in Konflikt zu geraten. Der Verwalter eines Bereichs
+sollte die Abläufe dokumentieren, nach denen er die Arbeit erledigt, 
+damit, sollte einmal gehen, jemand anders die Rolle übernehmen kann.</p><p>Manchmal gibt es einen Konflikt: Zwei oder mehr Personen erheben
+Anspruch auf dieselbe Rolle. Hier gibt es kein Patentrezept. Sie
+könnten anregen, dass jeder Freiwillige einen Vorschlag
+(eine "Bewerbung") einreicht, und alle Commit-Berechtigten darüber
+abstimmen lassen, welche die beste ist. Das ist aber umständlich und unter
+Umständen ungeschickt. Ich halte es für besser, die
+Kandidaten einfach darum zu bitten, das unter sich auszumachen. Meist 
+schaffen sie das auch, und sie werden mit dem Ergebnis zufriedener sein
+als mit einer von außen aufgezwungenen Entscheidung.</p><div class="sect2" title="Patchverwalter"><div class="titlepage"><div><div><h2 class="title"><a id="patch-manager"/>Patchverwalter</h2></div></div></div><p>In einem freien Software-Projekt, dem eine Menge Patches zugehen,
+kann es ein Albtraum sein, den Überblick darüber zu behalten,
+welche Patches angekommen sind und wie über sie entschieden wurde, ganz
+besonders wenn es auf eine dezentralisierte Art geschieht. Die
+meisten Patches erreichen das Projekt über die Entwickler-Mailingliste 
+(obwohl manche zuerst in dem Ticket System auftauchen, oder
+auf externen Webseiten), und es gibt unterschiedliche Routen, die
+ein Patch nach seiner Ankunft einschlagen kann.</p><p>Manchmal schaut sich jemand einen Patch an, findet Fehler darin
+und schickt ihn zur Berichtigung an seinen Autor zurück. Das führt
+normalerweise zu einem sich wiederholenden Vorgang – für alle
+auf der Mailingliste sichtbar –, bei dem der ursprüngliche Autor die
+überarbeiteten Versionen des Patches wieder zurück schickt, bis der
+Überprüfende nichts mehr zu beanstanden hat. Es ist nicht immer leicht
+zu erkennen, wann dieser Vorgang abgeschlossen ist: Wenn der Überprüfende den
+Patch committet, dann ist er eindeutig vorbei. Tut er es aber nicht, 
+kann es auch daran liegen, dass er einfach nicht genügend Zeit hatte,
+oder selbst über keine Commit-Berechtigung verfügt, und keinen anderen
+Entwickler dazu überreden konnte, es zu tun.</p><p>Eine weitere häufige Antwort auf einen Patch ist eine freilaufende
+Diskussion, nicht unbedingt über den Patch selbst, sondern darüber, ob das
+ihm zu Grunde liegende Konzept gut ist. Zum Beispiel könnte Der Patch einen
+Fehler beheben, aber das Projekt bevorzugt es, den Fehler auf eine
+andere Art zu beheben: als Teil der Lösung einer allgemeineren Klasse von
+Problemen. Oft ist das nicht im Voraus bekannt, und es ist der Patch,
+der diese Entdeckung anregt.</p><p>Gelegentlich geht ein Patch unter völligem Stillschweigen ein. 
+Normalerweise liegt das daran, dass <span class="emphasis"><em>im Moment</em></span> 
+kein Entwickler die Zeit aufbringt, den Patch unter die
+Lupe zu nemen, jader hofft, dass jemand anders das übernimmt. Da es
+keine bestimmte Grenze gibt, wie lang jede Person wartet, bis jemand
+anders den Ball ins Rollen bringt und in der Zwischenzeit immer andere
+Prioritäten auftauchen, passiert es sehr leicht, dass ein Patch durchs
+Netz fällt, ohne dass irgend jemand das gewollt hätte.
+So kann das Projekt einen nützlichen Patch verpassen, und das
+hat weitere schädliche Nebeneffekte: Es ist entmutigend für denjenigen,
+der Arbeit in den Patch investiert hat, und es lässt das Projekt als
+Ganzes den Anschein der Verwahrlosung erwecken, besonders für andere
+die im Begriff sind, Patches einzureichen.</p><p>Die Aufgabe des Patchverwalters ist sicherzustellen, dass Patches
+nicht "durchs Netz schlüpfen". Das wird erreicht, indem jeder Patch
+bis zu irgend einem stabilen Zustand verfolgt wird. Der Patchverwalter
+beobachtet jeden Thread auf der Mailingliste, der sich aus dem
+Einreichen eines Patches ergibt. Wenn dieser mit einem Commit des Patches
+endet, tut er gar nichts. Wenn er in eine Schleife von Überprüfung
+und Überarbeitung übergeht, welche in einer finalen Version, aber
+ohne Commit endet, schreibt er ein Ticket, das auf die finale Version
+verweist, sowie auf den entsprechenden Thread, damit es für Entwickler, 
+die daran später anschließen wollen, eine permanente Aufzeichnung gibt.
+Wenn der Patch ein bereits bestehendes Ticket
+betrifft, fügt er dem Ticket einen Kommentar mit der relevanten 
+Information hinzu, anstatt ein neues zu eröffnen.</p><p>Wenn ein Patch überhaupt keine Reaktion erhält, wartet der 
+Patchverwalter ein paar Tage, uns greift es dann auf, indem er fragt, ob 
+irgend jemand es sich anschauen wird. Darauf gibt es für gewöhnlich eine
+Reaktion: Ein Entwickler kann erklären, dass er nicht denkt, dass der
+Patch angewendet werden sollte, und Gründe dafür angeben, oder er
+kann es sich anschauen, worauf einer der vorher beschriebenen Wege
+eingeschlagen wird. Wenn es immer noch keine Antwort gibt, wird der
+Patchverwalter unter Umständen ein Ticket für den Patch eröffnen oder nicht,
+je nachdem, wie er es für richtig hält, zumindest hat der ursprüngliche
+Autor <span class="emphasis"><em>irgendeine</em></span> Antwort erhalten.</p><p>Einen Patchverwalter zu haben, hat für das Entwicklerteam von
+Subversion eine Menge Zeit und geistige Energie gespart. Ohne eine
+designierte Person, die die Verantwortung auf sich nimmt, müsste sich
+jeder Entwickler die ganze Zeit ständig darüber Sorgen machen, "Wenn ich
+nicht die Zeit dazu habe, jetzt auf diesen Patch zu antworten, kann ich
+mich darauf verlassen, dass jemand anders es macht? Sollte ich
+versuchen ihn im Auge zu behalten? Aber wenn andere das nun auch tun, dann
+würden wir unnötig unsere Anstrengungen verdoppeln." Der Patchverwalter
+lässt die zweite Mutmaßung in dieser Situation verschwinden. Jeder Entwickler kann
+die Entscheidung treffen, die für ihn in dem Moment richtig ist, da er den 
+Patch zum ersten mal sieht. Wenn eine Überprüfung 
+anschließen möchte, kann er das tun – der Patchverwalter wird sein
+Verhalten entsprechend anpassen. Wenn er den Patch komplett ignorieren
+will, ist das auch in Ordnung; der Patchverwalter wird dafür sorgen,
+dass er nicht in Vergessenheit gerät.</p><p>Da dieses System nur funktioniert, wenn man sich darauf 
+verlassen kann, dass der Patchverwalter ausnahmslos da ist, sollte die
+Rolle formal vergeben werden. In Subversion schrieben wir diese Stelle
+auf der Entwickler-Mailingliste und der für Benutzer aus, bekamen
+mehrere Freiwillige, und nahmen den ersten der geantwortet hatte. Als die
+Person abtreten musste (siehe 
+<a class="xref" href="ch08s03.html" title="Übergänge">„Übergänge“</a><span> später in diesem
+Kapitel</span>), machten wird das gleiche nochmal. Wir haben nie
+versucht, mehrere Personen die Rolle teilen zu lassen, da ein Übermaß an
+Kommunikation zwischen ihnen nötig gewesen wäre; aber bei einer sehr hohen 
+Anzahl von Patches könnte ein mehrköpfiger Patchverwalter vielleicht 
+sinnvoll sein.</p></div><div class="sect2" title="Übersetzungsverwalter"><div class="titlepage"><div><div><h2 class="title"><a id="translation-manager"/>Übersetzungsverwalter</h2></div></div></div><p>Bei Software-Projekten, kann sich "Übersetzung" auf zwei sehr
+unterschiedliche Dinge beziehen. Es kann die Übersetzung der
+Dokumentation in andere Sprachen bedeuten, oder es kann die Übersetzung
+der Software selber bedeuten – womit gemeint ist, dass die Anwendung
+seine Fehlermeldungen und Texte in der bevorzugten Sprache des Anwenders
+darstellt. Beides sind komplexe Aufgaben, wenn aber die richtige
+Infrastruktur erst einmal eingerichtet ist, kann mal sie größtenteils
+von der anderen Entwicklung trennen. Weil die Aufgaben sind sich in
+mancherlei Hinsicht ähnlich, kann es Sinn machen (abhängig von Ihrem
+Projekt) einen einzigen Verwalter für Übersetzungen zu haben um beides
+zu handhaben, oder es kann besser sein zwei verschiedene Verwalter zu
+haben.</p><p>Im Subversion-Projekt, haben wir einen Verwalter, der sich um
+beides kümmert. Er schreibt natürlich nicht selber die Übersetzungen
+– er wird vielleicht bei einer oder zweien aushelfen, aber zum
+Zeitpunkt dieser Niederschrift, hätte er zehn Sprachen sprechen müssen
+(zwölf wenn man Dialekte mitzählt) um bei allen mitzuarbeiten! Stattdessen
+verwaltet er die Teams der freiwilligen Übersetzer: Er hilft ihnen
+dabei, sich zu koordinieren, und koordiniert zwischen ihnen und
+dem Rest des Projekts.</p><p>Dass ein Verwalter für Übersetzungen nötig ist, liegt zum Teil
+daran, dass Übersetzer eine sehr andere Menschenart sind, als
+Entwickler. Sie haben manchmal wenig oder gar keine Erfahrung bei der
+Arbeit mit einer Versionsverwaltung, oder gar überhapt als Teil eines
+verteilten Teams von Freiwilligen. In anderer Hinsicht, sind sie
+aber oft die beste Art von Freiwilligen: Menschen mit Kenntnissen auf
+einem bestimmten Gebiet, die einen Bedarf sahen, und entschieden sich zu
+beteiligen. Sie sind meistens bereit zu lernen, und enthusiastisch mit
+der Arbeit anzufangen. Alles was sie brauchen, ist jemand der ihnen sagt
+wie. Der Übersetzungsverwalter stellt sicher, dass die Übersetzungen auf
+eine Art ablaufen, welches die gewöhnlichen Entwicklung nicht behindert.
+Er dient auch als eine Art representativer der Übersetzer, als
+geeinigten Körper, wann immer die Entwickler über technische Änderungen
+informiert werden müssen, die nötig sind, um die Übersetzungsarbeit zu
+unterstützen.</p><p>Die wichtigsten Fähigkeiten dieser Position sind desshalb
+diplomatische und nicht technische. In Subversion haben wir zum Beispiel
+eine Richtlinie, nach dem alle Übersetzungen, mindestens zwei Personen
+haben sollte, die an ihnen arbeiten, weil es ansonsten keine Möglichkeit
+gibt, dass die Texte überprüft werden. Wenn ein neuer Freiwilliger
+auftaucht, und anbietet Subversion z.B. in Malagasy zu übersetzen, muss
+der Übersetzungsverwalter ihn entweder mit jemand zusammenbringen der
+sechs Monate zuvor geschrieben hat, und auch Interesse bekundigt hat
+eine Übersetzung in Malagasy zu machen, oder ihn höflich darum bitten,
+einen <span class="emphasis"><em>weiteren</em></span> Übersetzer für Malagasy zu finden,
+der mit ihm als Partner arbeitet. Wenn genügend Leute verfügbar sind,
+gibt der Übersetzungsverwalter ihnen die nötigen Commit-Rechte,
+informiert ihnen über die Konventionen des Projekts (wie man etwa 
+Commit-Kommentare schreibt), und hält dann danach ausschau, dass sie sich
+an diese Konventionen halten.</p><p>Unterhaltungen zwischen dem Übersetzungsverwalter und den
+Entwicklern, oder zwischen dem Übersetzungsverwalter und die
+Übersetzerteam, werden meistens in der ursprünglichen Sprache
+des Projekts gehalten – also die Sprache von dem alle Übersetzungen
+gemacht werden. Für die meisten freien Software-Projekte ist das
+Englisch, es macht aber keinen Unterschied, so lange das Projek sich
+darauf einigt. (Obwohl Englisch wahrscheinlich am besten ist, für 
+Projekte die eine breite internationale Gemmeinschaft anlocken 
+wollen.)</p><p>Unterhaltungen <span class="emphasis"><em>innerhalb</em></span> eines bestimmten
+Übersetzungsteams sind jedoch meistens in der gemeinsamen Sprache,
+und eine der anderen Aufgaben des Übersetzungsverwalter ist es, eine
+gesonderte Mailingliste für jedes Team einzurichten. So können
+sich die Übersetzer frei über ihre Arbeit unterhalten, ohne andere auf
+den Hauptverteilern des Projekts abzulenken, von denen die meisten eh 
+nicht in der Lage wären, die übersetzte Sprache zu verstehen.</p><div class="sidebar" title="Internationalisierung kontra Lokalisierung"><a id="i7n"/><div class="titlepage"><div><div><p class="title"><strong>Internationalisierung kontra Lokalisierung</strong></p></div></div></div><p><em class="firstterm">Internationalisierung</em>
+  (<em class="firstterm">I18N</em>) und <em class="firstterm">lokalisierung</em>
+  (<em class="firstterm">L10N</em>) beziehen sich beide auf den
+  Arbeitsablauf, eine Anwendung anzupassen, damit sie in anderen
+  linguistischen und kulturellen Umgebungen funktioniert, als der es
+  ursprünglich geschrieben wurde. Die Begriffe werden oft als unter 
+  einander austauschbar behandelt, sind aber in wirklichkeit nicht ganz
+  das selbe. Wie <a class="ulink" href="http://en.wikipedia.org/wiki/G11n">http://en.wikipedia.org/wiki/G11n</a>
+  schreibt:</p><div class="blockquote"><blockquote class="blockquote"><p>Die Unterscheidung zwischen beiden, ist subtil aber wichtig:
+     Internationnalisierung ist die Anpassung von Produkten damit sie
+     <span class="emphasis"><em>potentiell</em></span> überall genutzt werden können,
+     wärend die lokalisierung das Hinzufügen spezifischer Funktionen für
+     die Nutzung in einem <span class="emphasis"><em>bestimmten</em></span> Gebiet
+     bezeichnent.</p></blockquote></div><p>Ihre Software zum umzustellen, damit es verlustfrei Unicode 
+  (<a class="ulink" href="http://en.wikipedia.org/wiki/Unicode">http://en.wikipedia.org/wiki/Unicode</a>) Textkodierung 
+  handhaben kann, fällt zum Beispiel under die Internationnalisierung,
+  da es nicht um eine bestimmte Sprache geht, sondern darum Text von
+  einer Vielzahl an Sprachen annehmen zu können. Ihre Software dazu zu
+  bringen, alle Fehlermeldungen auf Slovenische auszugeben, wenn es
+  erkennt, dass es unter einer slovenischen Umgebung läuft, fällte
+  andererseits under die Lokalisierung.</p><p>Die Aufgabe des Übersetzungsverwalters ist desshalb prinzipiell
+  die der Lokalisierung, nicht der Internationalisierung.</p></div></div><div class="sect2" title="Dokumentationsverwalter"><div class="titlepage"><div><div><h2 class="title"><a id="documentation-manager"/>Dokumentationsverwalter</h2></div></div></div><p>Die Dokumentation der Software auf den neusten Stand zu halten,
+ist eine niemals endende Aufgabe. Jede neue Funktion oder verbesserung
+die in den Code geht, hat das Potential, eine Änderung an der
+Dokumentation zu verursachen. Wenn die Dokumentation des Projekts erst
+einmal einen gewissen Grad der Fertigstellung erreicht hat, werden Sie
+auch sehen, dass die Patches die von Leuten eingereicht werden, für die
+Dokumentation sind, nicht für den Code. Das liegt daran, dass es viel
+mehr Leute gibt, die in der Lage sind Fehler in Prosa zu beheben, als in
+Code: Alle Nutzer sind Leser, aber nur wenige sind Programmierer.</p><p>Patches für die Dokumentation sind meistens viel einfacher zu
+überprüfen und anzuwenden, als Patches für Code. Es gibt wenig oder
+nichts zum Testen, und die Qualität der Änderung kann schnell evaluiert
+werden, alleine indem man ihn durchliest. Da die Menge groß ist, aber
+die Bürde sie zu überprüfen relativ gering ist, ist das Verhältnis des
+überschüssigen administrativen Aufwands zu produktiver Arbeit größer als
+für Patches an dem Code. Desweiteren, werden die meisten Patches
+wahrscheinlich irgend eine Art Anpassung erfordern, um einen beständigen
+Ton in der Stimme des Autors in der Dokumentation zu bewahren. In
+vielen Fällen, werden sich Patches überschneiden, oder andere Patches
+beeinflussen, und auf einander abgestimmt werden müssen vor sie
+committed werden.</p><p>Angesichts der Anforderungen an die Handhabung der Dokumentation,
+und der Tatsache, dass der Codebestand ständig überwacht werden muss
+damit die Dokumentation aktuell gehalten werden kann, macht es Sinn,
+eine Person oder eine kleine Teams zu haben, die sich der Aufgabe
+widmet. Sie können ein Protokoll darüber führen, wo genau und wie die
+Dokumentation hinter der Software herhikt, und sie können geübte Abläufe
+haben um große Mengen an Patches auf eine gegliederte Art zu
+verarbeiten.</p><p>Das hindert natürlich andere in dem Projekt nicht daran, Patches
+mal nebenbei auf die Dokumentation anzuwenden, ganz besonders kleine,
+wie es die Zeit erlaubt. Und der gleiche Patchverwalter (siehe
+<a class="xref" href="ch08s02.html#patch-manager" title="Patchverwalter">„Patchverwalter“</a><span> früher in
+diesem Kapitel</span>) kann sowohl Änderungen an dem Code, als auch an
+der Dokumentation verfolgen, und sie überall ablegen, wo die Entwickler-
+und Dokumentationsteams sie jeweils haben möchten. (Wenn die
+gesamte Menge der Patches das übersteigt, was von einem Menschen
+bewältigt werden kann, ist es wahrscheinlich ein erster Schritt, wenn 
+man auf separate Patchverwalter für Code und Dokumentation wechselt.)
+Der Sinn eines Dokumentationsteams ist es nicht, Leute zu haben,
+die sich dafür verantwortlich fühlen, die Dokumentation organisiert, auf
+dem aktuellsten Stand, und in sich konsistent zu halten. In der Praxis,
+bedeutet das, die Dokumentation intim zu kennen, den Codebestand zu
+beobachten, die Änerungen die <span class="emphasis"><em>andere</em></span> an die
+Dokumentation machen zu beobachten, nach eintreffenden Patches für die
+Dokumentation ausschau zu halten, und all diese Informationensquellen zu
+nutzen, um das zu tun, was nötig ist, um die Dokumentation in einem
+gesungen Zustand zu halten.</p></div><div class="sect2" title="Ticketverwalter"><div class="titlepage"><div><div><h2 class="title"><a id="issue-manager"/>Ticketverwalter</h2></div></div></div><p>Die Anzahl der Tickets im Bugtracker des Projekts nimmt mit
+der Anzahl der Personen zu, welche die Software benutzen. Deshalb
+sollten Sie immer noch erwarten, dass die Anzahl offener Tickets, im
+wesentlichen ohne Grenzen anwächst, selbst während sie Fehler beheben und
+eine immer robustere Anwendung produzieren. Die Menge der doppelt
+eingetragenen Tickets wird genau so wie die der unvollständigen und
+dürftig beschriebenen Tickets zunehmen.</p><p>Ticketverwalter helfen dabei, diese Probleme zu mildern, indem
+sie in die Datenbank gehen, und periodisch alles durchkämmen, auf der
+Suche nach bestimmten Problemen. Ihre häufigste Aufgabe ist es
+wahrscheinlich, eintreffende Tickets aufzubessern, entweder weil der
+Meldende einige der Formularfelder nicht richtig gesetzt hat, oder weil
+das Ticket ein Duplikat eines bereits in der Dadenbank vorhandenen ist.
+Offensichtlich wird der Ticketverwalter um so effektiver in der Lage
+sein, Duplikate zu erkennen, je besser er mit der Bug-Datenbank des 
+Projekts vertraut ist – das ist einer der hauptsächlichen Vorteile
+ein paar Personen zu haben, die sich auf die Bug-Datenbank
+spezialisiern, anstatt das alle es versuchen <span class="foreignphrase"><em class="foreignphrase">ad
+hoc</em></span> zu übernehmen. Wenn die Gruppe versucht, das auf eine
+dezentralisierte Art zu machen, eignent sich nicht ein einzelner ein
+tieferes Wissen über den Inhalt der Datenbank an.</p><p>Ticketverwalter können auch helfen, zwischen den Tickets und den
+einzelnen Entwicklern zu vermitteln. Wenn eine Menge Bug-Meldungen
+eintreffen, wird nicht jeder Entwickler die Nachrichten von Verteiler
+für die Tickets mit der gleichen Aufmerksamkeit lesen. Wenn jemand
+jedoch weiß, dass das Entwicklerteam ein Auge auf alle
+eintreffenden Tickets hält, kann sie wenn es angemessen ist, diskret 
+die Aufmerksamkeit bestimmter Entwickler auf spezifische Fehler richten.
+Das muss natürlich mit einem Gesprür für alles andere was in der
+Entwicklung abläuft geschehen, und entsprechend den Wünschen und dem
+Temprament des Empfängers. Es ist desshalb oft besser, wenn
+Ticketverwalter selber Entwickler sind.</p><p>Abhängig davon wie Ihr Projekt den Bugtracker benutzt, können
+Ticketverwalter auch die Datenbank anpassen, um die Prioritäten des
+Projekts wider zu spiegeln. Wir in Subversion zum Beispiel, planen wir
+einen Ticket für eine bestimmte zukünftige Version ein, damit wenn
+jemand fragt "Wann wird Bug X behoben sein?" wir sagen können "In zwei
+Versionen" selbst wenn wir kein genaues Datum nennen können. Die neuen
+Versionen kann man als Meilensteine in dem Bugtracker eintragen, ein
+Feld welches in IssueZilla<sup>[<a id="idp10894864" href="#ftn.idp10894864" class="footnote">43</a>]</sup> angeboten wird. Grundsätzlich hat jede neue Version von
+Subversion eine bedeutende neue Funktion, und eine liste spezifischer
+Fehler die behoben wurden. Wir weisen die entsprechenden Meilensteine
+allen Tickets zu, die für die Version geplant sind (inklusive der neuen
+Funktion – es erhält auch einen Ticket), damit man die 
+Bug-Datenbank mit der geplanten Version im Blick anschauen kann. Diese Ziele
+bleiben jedoch relativ statisch. Wärend neue Fehler gemeldet werden,
+verschieben sich manchmal die prioritäten, und ein Ticket muss von einem
+Meilenstein zum anderen verschoben werden, damit jede Version noch im
+Griff zu behalten bleibt. Das wiederum, wird am besten von Personen
+gemacht, die insgesamt, einen Sinn dafür haben, was in der Datenbank
+ist, und wie verschiedene Tickets mit einander verwandt sind.</p><p>Eine weitere Sache, die Ticketverwalter machen, ist zu erkennen,
+wann Tickets veraltet sind. Manchmal wird ein Bug aus Versehen behoben,
+als Teil einer Änderung an der Software die nicht im Zusammenhang steht.
+Manchmal ändert das Projekt auch seine Meinung darüber, ob ein bestimmtes
+Verhalten als Fehler einzustufen ist. Veraltete Tickets zu finden, ist
+nicht leicht: Der einzige Weg es systematisch zu machen, ist indem man
+über alle Tickets in der Datenbank geht. Mit der Zeit, wärend die Anzahl
+der Tickets anwächst, wird sowas allerdings immer winiger praktikabel. 
+Ab einer bestimmten Grenze, ist die einzige Möglichkeit die Datenbank in
+einem vernünftigen Zustand zu behalten, die Teile-und-herrsche-Methode:
+Kategorisieren Sie die Tickets, sofort nachdem sie eingetragen wurden
+und lenken Sie die Aufmerksamkeit der zuständigen Entwickler oder 
+des Teams darauf. Der Empfänger kümmert sich ab dann um das Ticket, bis
+es seine Lebenszeit beendet hat, und hütet es soweit nötig, bis es 
+erledigt ist oder in Vergessenheit gerät. Wenn die Datenbank derart groß
+ist, wird der Ticketverwalter eher zu einem globalen Koordinator, der
+immer weniger Zeit damit verbringt, sich jedes einzelne Ticket
+anzuschauen, und mehr damit, es in die Hände der richtigen Person zu
+legen.</p></div><div class="sect2" title="FAQ-Verwalter"><div class="titlepage"><div><div><h2 class="title"><a id="faq-manager"/>FAQ-Verwalter</h2></div></div></div><p>Die Verwaltung der FAQ ist ein überraschend schwieriges Problem.
+Anders als bei den meisten anderen Dokumenten in einem Projekt, deren
+Inhalt im vorraus von den Autoren geplant wird, ist eine FAQ von einer 
+gänzlich reaktiven Natur (siehe <a class="xref" href="ch02.html#starting-a-faq" title="Die Pflege einer FAQ-Liste">Die Pflege einer FAQ-Liste</a>). Egal
+wie groß es wird, Sie werden nie wissen, was der nächste Eintrag sein
+wird. Und weil es immer Stückweise erweitert wird, passiert es sehr
+leich, dass das Dokument als ganzes ohne Zusammenhang oder Organization
+ist, und sogar doppelte oder mit einander ähnliche Einträge enthält.
+Selbst wenn es keine solche offensichtlichen Probleme hat, gibt es oft
+unbemerkte Abhängigkeiten zwischen den Einträgen – Verweise die
+gemacht werden sollten es aber nicht sind – weil die verwandten
+Einträge ein Jahr auseinander gemacht wurden.</p><p>Die Rolle des Verwalters der FAQ ist zweifältig. Erstens pflegt er
+die allgemeine Qualität der FAQ indem er damit vertraut bleibt, oder
+zumindest mit den Themen aller Fragen die darin enthalten sint, damit
+wenn Personen neue Einträge hinzufügen, die einfach nur Duplikate, oder
+ähnlich zu bereits bestehenden Einträgen sind, die nötigen Anpassungen
+gemacht werden können. Zweitens, überwacht er die Mailinglisten und
+anderen Foren, nach immer wiederkehrenden Fragen und schreibt neue
+Einträge, auf dieser Grundlage. Letztere Aufgabe kann ziemlich komplex
+sein: Man muss in der lage sein einen Thread verfolgen zu können, die
+Kernfragen erkennen zu können, einen Eintrag für die FAQ vorzuschlagen,
+die Kommentare anderer einzubeziehen (da es unmöglich ist, dass der 
+FAQ-Verwalter ein Experte auf jedem Gebiet ist, welches in der FAQ behandelt
+wird), und merken, wann dieser Vorgang beendet ist, damit der Eintrag
+endlich hinzugefügt werden kann.</p><p>Der FAQ-Verwalter wird auch normalerweise zum Experten für die
+Formatierung der FAQ. Es gibt eine menge kleiner Details die es bei der 
+Pflege einer FAQ zu beachten gibt (siehe <a class="xref" href="ch06s04.html#all-as-archives" title="Behandeln Sie alle Ressourcen wie Archive">„Behandeln Sie alle Ressourcen wie Archive“</a><span> im Kapitel <a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span>); wenn beliebige Leute die FAQ
+bearbeiten, werden sie oft einige dieser Details vergessen. Das ist in
+Ordnugn, so lange der FAQ-Verwalter da ist, um nach ihnen aufzuräumen.
+</p><p>Es gibt einige freie Software um die Pflege einer FAQ zu
+unterstützen. Es ist ok sie zu nutzen, so lange es die Qualität der FAQ
+nicht gefährdet, seien Sie aber vor all zu viel Automatisierung gewarnt.
+Manche Projekte versuchen die Pflege der FAQ vollständig zu
+automatisieren, und erlauben es jedem, FAQ Einträge beizutragen und zu
+bearbeiten, ähnlich wie bei einer Wiki (siehe <a class="xref" href="ch03s07.html" title="Wikis">„Wikis“</a>
+<span> im Kapitel <a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span>). Ich habe das
+insbesondere bei Faq-O-Matic (<a class="ulink" href="http://faqomatic.sourceforge.net/">http://faqomatic.sourceforge.net/</a>) gesehen, obwohl das daran
+liegen kann, dass ich Fälle gesehen habe, die lediglich Missbräuche von
+dem wofür Faq-O-Matic ursprünglich gedacht war. Die komplette
+dezentralisierung der FAQ-Pflege, reduziert zwar den Aufwand für das
+Projekt, produziert aber in jedem Fall auch eine dürftigere FAQ. Es gibt
+keine eine Person mit einem groben Überblick über die ganze FAQ, keiner
+der merkt, wenn bestimmte Einträge aktualisiert werden müssen, oder
+komplett überflüssig werden, und keiner der nach den Abhängigkeiten
+zwischen den Einträgen ausschau hält. Das Ergebnis ist eine FAQ welches
+es oft nicht schafft, den Nutzern das zu geben, wonach sie gesucht haben
+und im schlimmsten Fall, sie sogar in die Irre führt. Nutzen Sie welche
+Werkzeuge Sie auch brauchen um die FAQ ihres Projekts zu pflegen, lassen
+Sie aber niemals den Komfort dieser Hilfsmittel Sie dazu verleiten die
+Qualität der FAQ beeinträchtigen.</p><p>Siehe den Artikel von Sean Michael Kerner, <em class="citetitle">The FAQs on
+FAQs</em>, bei <a class="ulink" href="http://osdir.com/Article1722.phtml">http://osdir.com/Article1722.phtml</a>, für Beschreibungen und 
+Bewertungen von Open-Source-Hilfsmitteln für die Pflege von FAQs.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp10894864" href="#idp10894864" class="para">43</a>] </sup>IssueZilla ist der 
+Bugtracker, dern wir benutzen; es ist ein Abkömling von BugZilla</p></div></div></div></body></html>

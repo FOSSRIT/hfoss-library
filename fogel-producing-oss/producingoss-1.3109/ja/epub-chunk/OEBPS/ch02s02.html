@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>ライセンスの選択と適用</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="ライセンスの選択と適用"><div class="titlepage"><div><div><h1 class="title"><a id="license-quickstart"/>ライセンスの選択と適用</h1></div></div></div><p>
+  このセクションでは、ライセンスの選択方法について
+  手っ取り早く大雑把に説明します。
+  個々のライセンスについての法的な意味合いや
+  他のフリーソフトウェアと組み合わせて使用する際に出てくる影響などについての詳細は
+  <a class="xref" href="ch10.html" title="第10章 ライセンス、著作権、特許">10章<em>ライセンス、著作権、特許</em></a> をご覧ください。
+</p><p>
+  世の中には、フリーソフトウェア用の優れたライセンスがたくさんあります。
+  ここでは、そのほとんどについては取り上げません。
+  なぜならそれらは特定の人や組織の法的な需要を満たすためだけに書かれたものだったり
+  あなたのプロジェクトには適切でないものだったりするからです。
+  ここで取り上げるのは、よく用いられているものに限定します。
+  ほとんどの場合は、ここで取り上げたものの中からライセンスを選択することになるでしょう。
+</p><div class="sect2" title="「何でもできる」ライセンス"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-non-gpl"/>「何でもできる」ライセンス</h2></div></div></div><p>
+  あなたプロジェクトのコードが独占的ソフトウェアに流用されることが気にならないのなら、
+  <em class="firstterm">MIT/X スタイル</em> のライセンスを使用しましょう。
+  これは必要最小限のことのみを記したライセンスです。
+  このライセンスは、名目上の著作権 (実際には複製を制限しません)
+  と無保証であるということだけを明記するシンプルなものです。
+  詳細は <a class="xref" href="ch10s04.html#license-choosing-mit-x" title="MIT/X Window System ライセンス">「MIT/X Window System ライセンス」</a> を参照してください。
+</p></div><div class="sect2" title="GPL"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-gpl"/>GPL</h2></div></div></div><p>
+  あなたプロジェクトのコードが独占的ソフトウェアに流用されることが気にいらないのなら、
+  GNU General Public License
+  (<a class="ulink" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>) を使用しましょう。
+  GPL は、おそらく現在世界中でいちばんよく知られているフリーソフトウェアライセンスです。
+  これは最大の利点です。というのも、
+  プロジェクトに参加しようと考えているユーザーの多くはこのライセンスを知っており、
+  そのライセンスについて学習する手間が省けるからです。
+  詳細は、<span><a class="xref" href="ch10.html" title="第10章 ライセンス、著作権、特許">10章<em>ライセンス、著作権、特許</em></a></span>
+  の <a class="xref" href="ch10s04.html#license-choosing-gpl" title="GPL">「GPL」</a> を参照してください。
+</p><div class="sidebar"><div class="titlepage"/><p>
+    ユーザーがあなたのコードとネットワーク越しにやりとりする場合 —
+    つまり、ソフトウェアがネットワーク上でホストされたサービスの一部である場合は —
+    <em class="firstterm">GNU Affero GPL</em> の利用を検討してください。
+    詳しくは、<span><a class="xref" href="ch10.html" title="第10章 ライセンス、著作権、特許">10章<em>ライセンス、著作権、特許</em></a> の</span>
+    <a class="xref" href="ch10s04.html#gnu-affero-gpl" title="GNU Affero GPL: サーバサイドにあるコード向けの GNU GPL">GNU Affero GPL: サーバサイドにあるコード向けの GNU GPL</a> を参照してください。
+</p></div></div><div class="sect2" title="ライセンスを適用する方法"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-applying"/>ライセンスを適用する方法</h2></div></div></div><p>
+  ライセンスを決めたら、それをソフトウェアに適用しなければなりません。
+</p><p>
+  まず最初にすべきことは、プロジェクトのトップページにライセンスを明記することです。
+  実際のライセンスの本文をここで示す必要はありません。単にライセンスの名前を示すだけにしておき、
+  ライセンスの本文は別のページに置いてそこにリンクするようにしましょう。
+  これにより、そのソフトウェアをどのようなライセンスのもとで提供
+  <span class="emphasis"><em>するつもり</em></span> なのかを示すことはできます。
+  しかし、法的な側面からみるとこれだけではちょっと不十分です。
+  さらに、ソフトウェア自身にライセンスが含まれていなければなりません。
+</p><p>
+  標準的な方法は、ライセンスの全文を含んだテキストファイル <code class="filename">COPYING</code>
+  (あるいは <code class="filename">LICENSE</code>) をソフトウェアのソースコードに同梱し、
+  それと同時に各ソースファイルの先頭に、簡単な説明をコメントとして付加します。
+  この説明に含めるのは、著作権の発生した日付や著作権の保持者、
+  ライセンス名、そしてライセンスの全文がどこで取得できるかなどです。
+</p><p>
+  これにはさまざまなパターンがあります。ここでは、ひとつの例として
+  GNU GPL を見てみましょう。各ソースファイルの先頭には、次のような説明を付加します。
+</p><pre class="screen">
+Copyright (C) &lt;年&gt;  &lt;作者名&gt;
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre><p>
+  この文面では、ライセンスの全文がプログラムに同梱されているファイル <code class="filename">COPYING</code>
+  あるいは <code class="filename">LICENSE</code>
+  に存在することは明記されていません。しかし、通常はこの名前のファイルを使用することになります
+  (上の文面を変更して、このファイル名を明記するようにしてもかまいません)。
+  このテンプレートには、ライセンスのコピーを取得するための手紙の宛先も記載されています。
+  これ以外の一般的な方法としては、ライセンスの本文を記載したウェブページへのリンクを用意するというものもあります。
+</p><p>
+  弁護士の助言にしたがって (そんな金銭的余裕がなければあなたの自己判断で)、
+  ライセンスのコピーが最も恒常的に存在すると思われる場所を使用するようにしましょう。
+  たとえば、あなたのプロジェクトのウェブサイト上のどこかでもかまいません。
+  一般的には、各ソースファイル中に含める注意書きは上のものと全く同じである必要はありません。
+  著作権保有者と日付、ライセンスの名前、そしてライセンスの全文がどこで取得できるのか
+  といったことが含まれていればいいのです。
+</p></div></div></body></html>

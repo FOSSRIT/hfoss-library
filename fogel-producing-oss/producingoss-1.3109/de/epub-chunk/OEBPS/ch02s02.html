@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Die Wahl einer Lizenz</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Die Wahl einer Lizenz"><div class="titlepage"><div><div><h1 class="title"><a id="license-quickstart"/>Die Wahl einer Lizenz</h1></div></div></div><p>Dieser Abschnitt soll eine schnelle und sehr grobe Anleitung zur
+Wahl einer Lizenz bieten. Lesen Sie <a class="xref" href="ch09.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente">Kapitel 9, <em>Lizenzen, Urheberrecht und Patente</em></a> um die 
+rechtlichen Folgen der verschieden Lizenzen im Detail besser zu verstehen 
+und zu erkennen, inwiefern sich Ihre Lizenz-Entscheidung auf die 
+Möglichkeit auswirkt, Ihre Software mit anderer freier Software zu
+kombinieren.</p><p>Sie können aus einer Menge von Lizenzen für freie Software wählen. 
+Die meisten müssen wir hier nicht beachten, da sie für die speziellen
+rechtlichen Bedürfnisse einer bestimmten Firma oder Person geschrieben
+wurden und für Ihr Projekt nicht angemessen wären. Wir beschränken uns
+auf die am häufigsten verwendeten Lizenzen; in den meisten Fällen werden Sie sich für
+eine von ihnen entscheiden wollen.</p><div class="sect2" title="&quot;Alles ist erlaubt&quot;-Lizenzen"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-non-gpl"/>"Alles ist erlaubt"-Lizenzen</h2></div></div></div><p>Wenn Sie kein Problem damit haben, dass der Code Ihres Projekts
+in proprietären Anwendungen benutzt wird, können Sie eine 
+<em class="firstterm">MIT/X</em>-artige Lizenz nutzen. Es ist die einfachste 
+der verschiedenen Minimal-Lizenzen, die wenig mehr leisten als die 
+Vervielfältigungsrechte abzusichern (ohne dabei wirklich die 
+Vervielfältigung einzuschränken) und zu erklären, dass keiner für den
+Code haftet. Weiteres darüber finden Sie in 
+<a class="xref" href="ch09s04.html#license-choosing-mit-x" title="Die MIT- / X-Window-System-Lizenz">„Die MIT- / X-Window-System-Lizenz“</a>.</p></div><div class="sect2" title="Die GPL"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-gpl"/>Die GPL</h2></div></div></div><p>Wenn Sie nicht wollen, dass Ihr Code in proprietären Anwendungen
+verwendet wird, benutzen Sie die GNU General Public 
+License<sup>[<a id="idp6039712" href="#ftn.idp6039712" class="footnote">14</a>]</sup>
+(<a class="ulink" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>). Die GPL ist 
+heute die wahrscheinlich bekannteste Lizenz für freie Software der 
+Welt. Das ist an und für sich schon ein großer Vorteil, da viele 
+potentielle Benutzer und Teilnehmer bereits mit ihr vertraut sein 
+werden und deshalb keine zusätzliche Zeit aufbringen müssen, um Ihre 
+Lizenz zu lesen und zu verstehen. Für weitere Details siehe
+<a class="xref" href="ch09s04.html#license-choosing-gpl" title="Die GNU GPL">„Die GNU GPL“</a><span>
+in <a class="xref" href="ch09.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente">Kapitel 9, <em>Lizenzen, Urheberrecht und Patente</em></a></span>.</p><div class="sidebar"><div class="titlepage"/><p>Wenn die Benutzer auf Ihren Code vorwiegend über ein Netzwerk
+zugreifen – d.h. wenn die Software typischerweise Teil eines
+Hostingdienstes ist – dann sollten Sie alternativ die Wahl der
+<em class="firstterm">GNU Affero GPL</em> in Betracht ziehen. Siehe
+<a class="xref" href="ch09s04.html#gnu-affero-gpl" title="The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code">The GNU Affero GPL: A Version of the GNU GPL for Server-Side
+  Code</a><span> in
+<a class="xref" href="ch09.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente">Kapitel 9, <em>Lizenzen, Urheberrecht und Patente</em></a></span> für weitere Informationen.</p></div></div><div class="sect2" title="Eine Lizenz für Ihre Software"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-applying"/>Eine Lizenz für Ihre Software</h2></div></div></div><p>Wenn Sie sich einmal für eine Lizenz entschieden haben, müssen 
+Sie diese auf Ihre Software anwenden.</p><p>Dazu sollten Sie diese zunächst auf Ihrer Website
+klar benennen. Sie müssen dort nicht den vollständigen Text dieser
+Lizenz angeben; der Name und ein Verweis auf den vollständigen Text 
+genügen für's erste. So erklären Sie der Öffentlichkeit, unter welcher 
+Lizenz Sie <span class="emphasis"><em>beabsichtigen</em></span>, die Software zu 
+veröffentlichen, rechtlich gesehen reicht das natürlich nicht. Dafür 
+muss die Software selbst die Lizenz enthalten.</p><p>Der übliche Weg dies zu tun ist, den vollständigen Text der Lizenz 
+in einer Datei namens <code class="filename">COPYING</code> (oder 
+<code class="filename">LICENSE</code>) abzulegen; dann fügen sie jeder 
+Quellcode-Datei am Beginn eine knappe Notiz hinzu, in der Sie 
+Copyright-Datum, -Inhaber und Lizenz benennen und angeben, wo der 
+vollständige Text der Lizenz zu finden ist.</p><p>Davon gibt es viele Variationen, also werden wir uns hier nur
+ein Beispiel anschauen. Die GNU GPL sagt, dass man einen Hinweis wie
+diesen an den Anfang jeder Datei des Quellcodes setzen sollte.</p><pre class="screen"> 
+Copyright (C) &lt;Jahr&gt;  &lt;Name des Autors&gt;
+
+Dieses Programm ist Freie Software: Sie können es unter den Bedingungen
+der GNU General Public License, wie von der Free Software Foundation,
+Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
+veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+Dieses Programm wird in der Hoffnung, dass es nützlich sein wird, aber
+OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+Siehe die GNU General Public License für weitere Details.
+
+Sie sollten eine Kopie der GNU General Public License zusammen mit diesem
+Programm erhalten haben. Wenn nicht, siehe &lt;http://www.gnu.org/licenses/&gt;.
+</pre><p>Damit drücken Sie nicht explizit aus, dass der vollständige Text der
+Lizenz in der Datei <code class="filename">COPYING</code> steht, es ist aber
+meistens der Fall. (Sie können den obigen Hinweis abändern um dies 
+direkt auszudrücken.) Diese Vorlage enthält auch die Post-Adresse, über 
+die eine Kopie der Lizenz bezogen werden kann. Noch häufiger wird auf die 
+eine Webseite verwiesen, die den kompletten Text der Lizenz enthält.</p><p>Konsultieren Sie einen Juristen (oder vertrauen Sie Ihrem eigenen
+Rechtsverständnis, falls Sie keinen Juristen zur Hand haben) hinsichtlich
+der Entscheidung, wo die beständigste Kopie dieser Lizenz gepflegt wird, 
+vielleicht ist es auch einfach die Webseite Ihres Projekts.
+Im Allgemeinen muss der Hinweis am Anfang jeder Datei nicht genau so
+aussehen wie der obige, sofern er mit dem Hinweis auf Inhaber des 
+Copyrights, Datum und Lizenz ausgestattet ist und dem Hinweis, wo der
+komplette Lizenztext zu finden ist.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp6039712" href="#idp6039712" class="para">14</a>] </sup>Allgemeine Öffentliche Lizenz</p></div></div></div></body></html>

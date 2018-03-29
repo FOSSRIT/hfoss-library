@@ -1,0 +1,316 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Erstellung der Pakete</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><link rel="prev" href="stabilizing-a-release.html" title="Stabilisierung einer neuen Version"><link rel="next" href="testing-and-releasing.html" title="Tests und Veröffentlichung"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Erstellung der Pakete</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="stabilizing-a-release.html">Zurück</a> </td><th width="60%" align="center">Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</th><td width="20%" align="right"> <a accesskey="n" href="testing-and-releasing.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Erstellung der Pakete"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="packaging"></a>Erstellung der Pakete</h2></div></div></div><p>Die übliche Art, freie Software zu verteilen, ist in Form von
+Quellcode. Das gilt unabhängig davon, ob die Software normalerweise mit
+dem Quellcode betrieben wird (d.h. interpretiert werden kann, wie Perl,
+Python, PHP, usw.) oder vorher kompiliert werden muss (wie C,
+C++, Java, usw.). Bei kompilierter Software, werden die meisten Nutzer
+nicht unbedingt selbst die Quellen kompilieren, sondern
+vorkompilierte binären Paketen installieren wollen
+(siehe <a class="xref" href="packaging.html#binary-packages" title="Binäre Pakete">&#8222;Binäre Pakete&#8220;</a><span>
+später in diesem Kapitel</span>). Diese binären Pakete leiten sich
+jedoch trotzdem von der ursprünglichen Quellcode-Distribution ab. Der
+Sinn der Quellpakete ist, die neue Version eindeutig zu definieren.
+Wenn das Projekt "Scanley 2.5.0" veröffentlicht, bedeutet das
+genau genommen, "Die Quellcode-Dateien, die wenn sie kompiliert
+(falls nötig) und installiert wurden, Scanley 2.5.0 erzeugen".</p><p>Es gibt einen ziemlich strikten Standard darüber, wie 
+Quellcode-Distributionen auszusehen haben. Man wird ab und zu Abweichungen davon
+sehen, sie sind aber die Ausnahme, nicht die Regel. Wenn es keinen 
+zwingenden Grund gibt es anders zu machen, sollte sich Ihr Projekt auch
+an diesen Standard halten.</p><div class="sect2" title="Formate"><div class="titlepage"><div><div><h3 class="title"><a name="packaging-format"></a>Formate</h3></div></div></div><p>Der Quellcode sollte in den Standardformaten für die Übertragung
+von Verzeichnissen verteilt werden. Bei Unix und Unix-ähnlichen
+Betriebssystemen, ist die Konvention, das TAR Format zu benutzen, 
+komprimiert mit <span class="command"><strong>compress</strong></span>, <span class="command"><strong>gzip</strong></span>,
+<span class="command"><strong>bzip</strong></span> oder <span class="command"><strong>bzip2</strong></span>. Bei MS Windows,
+ist die Standard-Methode für die Veröffentlichung von Verzeichnissen
+das <em class="firstterm">zip</em> Format, welches zufällig auch 
+komprimiert, also gibt es keinen Grund es zu komprimieren, nach der
+Erstellung.</p><div class="sidebar" title="TAR-Dateien"><a name="packaging-tar"></a><div class="titlepage"><div><div><p class="title"><b>TAR-Dateien</b></p></div></div></div><p><em class="firstterm">TAR</em> steht für "Tape ARchive",
+   da das TAR Format ein Verzeichnis als einen linearen Datenstrom
+   repräsentiert, ist es ideal für die Speicherung auf Datenbändern.
+   Die gleiche Eigenschaft, macht es zum Standard für die Verteilung
+   von Verzeichnissen als eine einzige Datei. Komprimierte TAR Dateien
+   (auch<em class="firstterm">tarballs</em>) ist relativ einfach. Auf
+   manchen Systemen, kann der <span class="command"><strong>tar</strong></span> Befehl von sich
+   aus ein komprimiertes Archiv erstellen; auf anderen, wird eine
+   separate Anwendung benutzt.</p></div></div><div class="sect2" title="Name und Aufbau"><div class="titlepage"><div><div><h3 class="title"><a name="packaging-name-and-layout"></a>Name und Aufbau</h3></div></div></div><p>Der Name des Pakets sollte aus dem Namen der Software bestehen,
+gefolgt von der Versionsnummer und den Dateiendungen für die 
+entsprechenden Archiv typen. Scanley 2.5.0, als Paket für Unix mit der
+GNU Zip (gzip) Kompression, würde zum Beispiel so aussehen:</p><div class="informalexample"><div class="literallayout"><p>scanley-2.5.0.tar.gz</p></div></div><p>oder für Windows mit zip Kompression:</p><div class="informalexample"><div class="literallayout"><p>scanley-2.5.0.zip</p></div></div><p>Beide dieser Archive erzeugen, wenn man sie entpackt, eine 
+einziges neues Verzeichnis namens <code class="filename">scanley-2.5.0</code>
+in dem derzeitigen Ordner. Im neuen Verzeichnis, sollten die Dateien
+des Quellcodes so ausgelegt sein, welches für die Kompilierung (wenn
+die Kompilierung nötig ist) und installation bereit ist. In der
+obersten Verzeichnisebene, sollte es eine Klartext-Datei mit dem Namen
+<code class="filename">README</code> geben, welches erklärt, was die Software
+macht, was diese Paket ist, und hinweise Auf andere Ressourcen, wie die
+Webseite des Projekts, andere Dateien die von Interesse sind, usw.
+Unter diesen anderen Dateien sollte eine <code class="filename">INSTALL</code>
+Datei sein, welches Anweisungen gibt, wie man einen Build der Software
+machen kann, und sie installieren kann, für alle Betriebssysteme die es
+unterstützt. Wie in <a class="xref" href="license-quickstart.html#license-quickstart-applying" title="Eine Lizenz für Ihre Software">&#8222;Eine Lizenz für Ihre Software&#8220;</a>
+<span> im Kapitel <a class="xref" href="getting-started.html" title="Kapitel 2. Der Einstieg">Kapitel 2, <i>Der Einstieg</i></a>
+</span> erwähnt, sollte es auch eine <code class="filename">COPYING</code> oder
+<code class="filename">LICENSE</code> Datei geben, welche die Bedingungen 
+enthält, unter denen die Software vertrieben werden kann.</p><p>Es sollte auch eine <code class="filename">CHANGES</code>-Datei geben
+(manchmal <code class="filename">NEWS</code>) genannt, welches erklärt, was in
+dieser Version neu ist. Die <code class="filename">CHANGES</code>-Datei listet
+die Änderungen aller Versionen auf, in antichronologischer
+Richtung, sodass die Liste für diese Version in der Datei oben 
+erscheint. Diese Liste zu vervollständigen, ist üblicherweise das 
+Letzte, was auf einem stabilisierenden Versionszweig gemacht wird; 
+manche Projekte schreiben diese Liste in Stücken während sie entwickeln,
+andere bevorzugen es, alles bis zum Schluss aufzusparen, und es dann
+von einer Person schreiben zu lassen, indem Informationen aus den
+Commit-Kommentaren der Versionsverwaltung gesammelt werden. Die Liste
+sieht in etwa so aus:</p><pre class="screen">
+Version 2.5.0
+(20 Dezember 2004, von /branches/2.5.x)
+http://svn.scanley.org/repos/svn/tags/2.5.0/
+
+ Neue Funktionen, Erweiterungen:
+    * Neue Abfragen mit regulären Ausdrücken (Meldung #53)
+    * Unterstützung für UTF-8- und UTF-16-Dokumente 
+    * Documentation in Polnisch, Russisch, Malaysisch
+    * ...
+
+ Bugfixes:
+    * Bugs in Neuindexierung behoben (Meldung #945)
+    * Einige Abfragefehler behoben (Meldung #815, #1007, #1008)
+    * ...
+</pre><p>Die Liste kann so lang wie nötig sein, Sie brauchen sich aber
+nicht darum zu kümmern, dass jeder kleiner Bugfix und jede 
+kleine Funktioserweiterung
+aufgelistet wird. Ihr Sinn ist es einfach, den Nutzern einen Überblick
+zu geben, inwiefern sie davon profitieren würden, auf die neue Version
+zu aktualisieren. Die Änderungsliste wird üblicherweise in der
+Ankündigungs-Mail aufgenommen (siehe <a class="xref" href="testing-and-releasing.html" title="Tests und Veröffentlichung">&#8222;Tests und Veröffentlichung&#8220;</a><span> später in
+diesem Kapitel</span>), schreiben Sie sie also mit dem Publikum im
+Hinterkopf.</p><div class="sidebar" title="CHANGES kontra ChangeLog"><a name="changelog"></a><div class="titlepage"><div><div><p class="title"><b>CHANGES kontra ChangeLog</b></p></div></div></div><p>Traditionell, listet eine Datei namens <em class="firstterm">ChangeLog
+   </em> jede Änderung die je an einem Projekt gemach wurde auf,
+    &#8211; das heißt, jeden Commit der in das Versionsverwaltungssystem
+   aufgenommen wurde. Es gibt verschiedene Formate für ChangeLog 
+   Dateien; die Details der Formate sind an dieser Stelle nicht 
+   wichtig, da sie alle die gleichen Informationen beinhalten: Das 
+   Datum der Änderung, sein Autor, und eine kurze Zusammenfassung
+   (oder einfach nur den Commit-Kommentar für diese Änderung).</p><p>Eine <code class="filename">CHANGES</code> Datei ist anders. Es ist
+   auch eine Liste von Änderungen, aber nur solche, von denen man
+   denkt, dass sie wichtig genug sind, dass ein bestimmtes Publikum sie
+   sieht, und ohne mit Metadaten wie das genau Datum und der Autor.
+   Um Verwirrung zu vermeiden, vertauschen Sie die Begriffe nicht. 
+   Manche Projekte benutzen "NEWS" anstatt von "CHANGES"; obwohl das
+   die mögliche Verwirrung mit "ChangeLog" vermeidet, ist es etwas
+   falsch bezeichnet, da die CHANGES Datei die Änderungs Informationen
+   über alle Versionen enthält, und deshalb eine Menge alte
+   Informationen zusätzlich zu denen ganz oben enthält.</p><p>ChangeLog Dateien mögen sowieso langsam am verschwinden sein.
+   Sie waren zu einer Zeit hilfreich, als CVS die einzige Wahl für die
+   Versionsverwaltung war, weil Daten über Änderungen nicht leicht aus
+   CVS zu bekommen waren. Bei neueren Systemen können die Daten die 
+   ehemals in dem ChangeLog geschrieben wurden, jedoch jederzeit von
+   dem Versionsverwaltungssystem angefordert werden, was es Sinnlos
+   für das Projekt macht, eine Statistik-Datei darüber zu halten &#8211; 
+   es ist sogar mehr als sinnlos, da die ChangeLog-Datei lediglich die 
+   Meldungen, die bereits im Projektarchiv gespeichert sind, duplizieren
+   würde.</p></div><p>Der tatsächliche Aufbau der Quellcode-Dateien sollte der gleiche
+sein, oder zumindest so ähnlich wie möglich zu dem sein, den man aus
+der Versionsverwaltung herunterladen kann. Für gewöhnlich gibt es ein
+paar Unterschiede, zum Beispiel weil das Paket ein paar generierte
+Dateien enthält, die für die Konfiguration und Kompilierung benötigt
+werden (siehe <a class="xref" href="packaging.html#packaging-build-install" title="Kompilierung und Installation">&#8222;Kompilierung und Installation&#8220;</a><span> später in diesem Kapitel</span>), oder weil es
+Software von dritten Parteien enthält, welches nicht von dem
+Projekt gepflegt wird, welches aber benötigt wird und die Benutzer
+wahrscheinlich nicht haben. Aber selbst wenn das Veröffentlichte
+Verzeichnis nicht genau dem Verzeichnis eines Entwicklungszweiges
+in der Versionsverwaltung entspricht, sollte die Distribution selbst,
+eine Arbeitskopie (siehe <a class="xref" href="vc.html#vc-vocabulary-working-copy"><em class="firstterm">Arbeitkopie<sup>[<a name="idp4769408" href="#ftn.idp4769408" class="footnote">21</a>]</sup></em></a>)
+sein. Die Veröffentlichung soll einen statischen Referenzpunkt
+repräsentieren &#8211; eine bestimmte, unveränderliche Konfiguration von
+Quellcode-Dateien. Wenn es eine Arbeitskopie wäre, gäbe es die Gefahr,
+dass der Nutzer es aktualisieren würde, und nachher denken, dass er die
+neue Version hat, während er tatsächlich etwas anderes hat.</p><p>Denken Sie daran, dass das Paket das gleiche ist, unabhängig von
+seiner Verpackung. Die Version &#8211; also genau die Entität, die gemeint
+ist, wenn jemand "Scanley 2.5.0" &#8211;  sagt, ist das 
+Verzeichnis, welches erstellt wird wenn die zip Datei oder der Tarball
+entpackt wird. Das Projekt könnte also all diese zum Herunterladen
+anbieten:</p><div class="informalexample"><div class="literallayout"><p>scanley-2.5.0.tar.bz2<br>
+scanley-2.5.0.tar.gz<br>
+scanley-2.5.0.zip</p></div></div><p>...aber der Quellcode-Baum, der beim entpacken entsteht, muss der
+gleiche sein. Dieser Quellcode-Baum ist die veröffentlichte Version;
+die Form in der es heruntergeladen wird, ist lediglich eine Sache der
+Bequemlichkeit. Bestimmte unwesentliche Unterschiede zwischen den
+Quellcode-Paketen sind zulässig: Zum Beispiel sollten in dem Windows
+Paket die Textdateien mit CRLF (Carriage Return und Line Feed) enden,
+während Unix-Pakete nur LF verwenden sollten. Die Verzeichnisse können
+auch leicht Unterschiedlich zwischen den verschiedenen Betriebssystemen
+angeordnet sein, wenn diese Betriebssysteme verschiedene Anordnungen
+für die Kompilierung erfordern. Das sind jedoch alles im wesentlichen
+triviale Transformationen. Die wesentlichen Quellcode-Dateien sollten
+über alle Pakete für eine Version die gleichen sein.</p><div class="sect3" title="Großschreibung - ja oder nein"><div class="titlepage"><div><div><h4 class="title"><a name="release-capitalization"></a>Großschreibung - ja oder nein</h4></div></div></div><p>Wenn man einen bestimmten Projektnamen nennt, schreiben ihn Leute
+im allgemeinen groß, wie bei einem Nomen <sup>[<a name="idp5968864" href="#ftn.idp5968864" class="footnote">38</a>]</sup> und schreiben Abkürzungen groß wenn
+solche vorhanden sind: "MySQL 5.0", "Scanley 2.5.0", usw. Ob
+das in dem Paketnamen mit übernommen wird, ist dem Projekt überlassen.
+Sowohl <code class="filename">Scanley-2.5.0.tar.gz</code> als auch 
+<code class="filename">scanley-2.5.0.tar.gz</code> wären zum Beispiel in Ordnung
+(Ich persönlich bevorzuge letzteres, da ich es nicht mag, Leute zu
+zwingen die Umschalttaste zu drücken, aber eine Menge Projekte
+veröffentlichen Pakete mit Großschreibung). Das Wichtige ist, dass das
+Verzeichnis welches beim Entpacken des Tarballs erstellt wird, die
+gleiche Schreibweise verwendet. Es sollte keine Überraschungen geben:
+Der Nutzer muss den Namen des Verzeichnisses welches erstellt werden
+wird, wenn er eine Veröffentlichung entpackt, mit absoluter Genauigkeit
+vorhersagen können.</p></div><div class="sect3" title="Vorveröffentlichungen"><div class="titlepage"><div><div><h4 class="title"><a name="release-prereleases"></a>Vorveröffentlichungen</h4></div></div></div><p>Wenn Sie eine Vorveröffentlichung machen, ist der Vermerk ein
+echter Bestandteil der Versionsnummer, nehmen Sie es also mit in den
+Namen des Pakets auf. Die geordnete Folge von Alpha- und Beta-Versionen,
+die vorher in diesem Kapitel in <a class="xref" href="development-cycle.html#release-number-components" title="Die Komponenten der Versionsnummer">&#8222;Die Komponenten der Versionsnummer&#8220;</a> verwendet wurde, würde zum 
+Beispiel folgende Paket namen haben:</p><div class="informalexample"><div class="literallayout"><p>scanley-2.3.0-alpha1.tar.gz<br>
+scanley-2.3.0-alpha2.tar.gz<br>
+scanley-2.3.0-beta1.tar.gz<br>
+scanley-2.3.0-beta2.tar.gz<br>
+scanley-2.3.0-beta3.tar.gz<br>
+scanley-2.3.0.tar.gz</p></div></div><p>Das erste würde zum Beispiel zu einem Verzeichnis namens
+<code class="filename">scanley-2.3.0-alpha1</code> entpacken, dass zweite nach
+<code class="filename">scanley-2.3.0-alpha2</code>, usw.</p></div></div><div class="sect2" title="Kompilierung und Installation"><div class="titlepage"><div><div><h3 class="title"><a name="packaging-build-install"></a>Kompilierung und Installation</h3></div></div></div><p>Bei Software, die eine Kompilierung oder Installation aus den
+Quellen erfordert, gibt es für gewöhnlich Standardverfahren, welche
+erfahrene Nutzer erwarten anwenden zu können. Bei Programmen die in
+C, C++, oder bestimmte anderen kompilierten Sprachen geschrieben sind,
+ist es in
+Unix-ähnlichen Systemen zum Beispiel für den Nutzer üblich, folgendes
+einzugeben:</p><pre class="screen">
+   $ ./configure
+   $ make
+   # make install
+</pre><p>Der erste Befehl erkennt automatisch, soviel von der Umgebung
+wie möglich, und bereitet den Build-Vorgang vor, der zweite Befehl
+kompiliert die Software im derzeitigen Pfad (installiert es jedoch
+nicht), und der letzte Befehl installiert es auf das System. Die ersten
+beiden Befehle werden als ganz normalen Nutzer ausgeführt, der dritte
+als root. Für weitere Details über die Einrichtung dieses Systems,
+siehe das ausgezeichnete <em class="citetitle">GNU Autoconf, Automake, und 
+Libtool</em> Buch von Vaughan, Elliston, Tromey, und Taylor. Es
+ist als Treeware durch New Riders veröffentlicht worden, und sein
+Inhalt ist unter <a class="ulink" href="http://sources.redhat.com/autobook/" target="_top">http://sources.redhat.com/autobook/</a>.
+frei zugänglich.</p><p>Das ist nicht der einzige Standard, obwohl es einer der am
+weitesten verbreitetsten ist. Das Build-System Ant (<a class="ulink" href="http://ant.apache.org/" target="_top">http://ant.apache.org/</a>) nimmt an Beliebtheit
+zu, insbesondere bei Projekten, die in Java geschrieben sind, und hat
+seine eigenen Abläufe für den Build und die Installation. Desweiteren,
+empfehlen bestimmte Programmiersprachen, wie Perl und Python, dass die
+gleiche Methode für die meisten Programme die in dieser Sprache
+geschrieben werden, benutzt werden (Perl-Module benutzten zum Beispiel
+den <span class="command"><strong>perl Makefile.PL</strong></span> Befehl). Wenn es für Sie
+nicht offensichtlich ist, welche Standards für Ihr Projekt gelten, 
+fragen Sie einen erfahrenen Entwickler; Sie können mit Sicherheit
+davon ausgehen, dass <span class="emphasis"><em>irgend ein</em></span> Standard gilt,
+selbst wenn Sie zuerst nicht wissen was es ist.</p><p>Was immer die entsprechenden Standards für Ihr Projekt auch sein
+mögen, weichen Sie nicht von Ihnen ab, es sei denn es ist zwingend
+notwendig. Standardabläufe bei der Installation sind mittlerweile 
+praktisch Reflexe im Rückenmark vieler Systemadministratoren. Wenn sie
+bekannte Anweisungen in der <code class="filename">INSTALL</code> Datei von
+Ihrem Projekt erkennen, hebt es gleich ihr vertrauen darin, dass Ihr
+Projekt sich allgemein über Konventionen im klaren ist, und dass es
+wahrscheinlich ist, dass Sie auch andere Sachen richtig gemacht haben.
+Wie in 
+<a class="xref" href="getting-started.html#downloads" title="Downloads">&#8222;Downloads&#8220;</a><span> im Kapitel 
+<a class="xref" href="getting-started.html" title="Kapitel 2. Der Einstieg">Kapitel 2, <i>Der Einstieg</i></a></span> beschrieben, erfreute es
+auch mögliche zukünftige Entwickler, wenn Sie standard Build-Verfahren
+benutzen.</p><p>Unter Windows, sind die Standards um einen Build zu machen und zu
+installieren weniger festgelegt. Bei Projekten die eine Kompilation
+erfordern, scheint die allgemeine Konvention zu sein, ein Verzeichnis
+zu Veröffentlichen, welches in dem Standardmodell für 
+Arbeitsumgebungen/Projekte von den Entwicklungsumgebungen von Microsoft
+(Developer Studio, Visual Studio, VS.NET, MSVC++, usw.). Abhängig von
+der Natur Ihrer Software kann es möglich sein, eine Unix-ähnliche
+Build-Option mittels der Umgebung Cygwin (<a class="ulink" href="http://www.cygwin.com/" target="_top">http://www.cygwin.com/</a>) auf Windows anzubieten. Und
+wenn Sie natürlich eine Sprache oder einen Programmier-Framework
+verwenden, welches seine eigenen Konventionen für die Installation hat,
+ &#8211; z.B, Perl oder Python &#8211;  sollte Sie einfach die 
+Standardmethode für dieses Framework benutzen, ob auf Windows, Unix,
+Mac OS X oder jedem anderen Betriebssystem.</p><p>Seien Sie bereit, zusätzliche Mühen auf sich zu nehmen, um Ihr
+Projekt konform zu den relevanten Build- und Installationsstandards zu
+machen. Build und Installation sind die Einstiegspunkte: Es ist
+in Ordnung, wenn Dinge nach diesem Einstieg schwieriger werden, falls 
+denn überhaupt, es wäre aber schändlich, Benutzern oder Entwicklern 
+gleich bei ihrer allererste Begegnung mit der Software unerwartete
+Schritte abzunötigen.</p></div><div class="sect2" title="Binäre Pakete"><div class="titlepage"><div><div><h3 class="title"><a name="binary-packages"></a>Binäre Pakete</h3></div></div></div><p>Auch wenn die formal veröffentlichte Version ein Quellcode-Paket
+ist, werden die meisten Nutzer von binären Paketen installieren, die
+entweder von dem Installationsprogramm ihres Betriebssystems angeboten
+wird, händisch von der Webseite Ihres Projekts besorgt wurden oder von
+irgend einer anderen dritten Partei. "Binär" bedeutet in diesem 
+Zusammenhang nicht unbedingt "kompiliert"; es bedeutet lediglich irgend
+eine vorkonfigurierte Form des Pakets, welches es dem Nutzer erlaubt es
+auf seinen Computer zu installieren, ohne durch die üblichen Build und
+Installations-Abläufe der Quellcode basierenden Pakete. Auf
+RedHat GNU/Linux, ist es das RPM System; auf Debian GNU/Linux, ist es
+das APT (<code class="filename">.deb</code>) System; unter MS Windows, sind es
+üblicherweise <code class="literal">.MSI</code> Dateien oder selbst 
+installierende <code class="literal">.exe</code> Dateien.</p><p>Ob diese binären Pakete von Personen die nahe an dem Projekt 
+sind, zusammengestellt werden, oder entfernte dritte Parteien, die
+Nutzer werden sie als gleichwertig zu den offiziellen 
+Veröffentlichungen des Projekts <span class="emphasis"><em>behandeln</em></span>, und
+werden Meldungen auf den Bugtracker einreichen, auf der Grundlage des
+Verhaltens dieser binärpakete. Deshalb ist es im Interesse des 
+Projekts denjenigen die Pakete schnüren, klare Richtlinien zu geben,
+und eng mit ihnen zusammen zu arbeiten, um dafür zu sorgen, dass was
+sie produzieren, die Software ordentlich und genau repräsentiert.
+</p><p>Die Hauptsache, die Ersteller von Paketen wissen müssen, ist, dass
+sie ihre binären Pakete immer aus offiziellen Quellcode-Pakete
+herleiten sollten. Manchmal sind sie versucht, eine spätere Version des
+Quellcodes aus dem Projektarchiv zu nehmen, oder ausgewählte Änderungen,
+die nach der Veröffentlichung committet wurden, zu integrieren, um den
+Nutzern bestimmte Bugfixes oder andere Verbesserungen anzubieten. Der
+Ersteller des Pakets denkt, dass er seinen Nutzern einen Gefallen
+tut, indem er ihnen neueren Code gibt, tatsächlich kann dieses
+Verfahren eine Menge Verwirrung verursachen. Projekte sind darauf
+vorbereitet, Bug-Meldungen zu bekommen, die in den neun Versionen
+gefunden werden, und Bugs die in dem derzeitigen Stamm und den Quellen
+des Hauptastes (das heißt, solche die von Personen gefunden werden, die
+den allerneusten Code verwenden). Wenn eine Bug-Meldung aus diesen
+Quellen kommt, wird der Antwortende oft in der Lage sein zu bestätigen,
+dass dieser Bug in der Momentaufnahme vorhanden ist, und vielleicht,
+dass es seitdem behoben wurde und dass der Nutzer eine Aktualisierung
+durchführen soll, oder auf die nächste Version warten soll. Wenn es ein
+vorher nicht bekannter Bug ist, machte es die Reproduktion und die
+Einordnung des Fehlers in dem Tracker einfacher, wenn man die genaue 
+Version weiß.</p><p>Projekte sind jedoch nicht darauf vorbereitet, Meldungen von Bugs
+zu erhalten, die auf nicht spezifizierte oder hybrid Versionen 
+basieren. Solche Bugs können schwer zu reproduzieren sein; sie können
+auch auf unerwartete Wechselwirkungen, zwischen einzelnen
+Änderungen zurück zu führen sein, die aus der späteren Entwicklung
+herausgezogen wurden, und deshalb Fehlverhalten verursachen, für die
+die Entwicklergemeinde die Schuld nicht tragen müssen sollte. Ich habe
+bestürzend viele Mengen an Zeit daran vergeudet gesehen, weil ein Bug
+<span class="emphasis"><em>gefehlt</em></span> hat, wenn es hätte da sein sollen: jemand
+hatte eine leicht aktualisierte Version betrieben, die auf einer
+offiziellen (aber nicht identische) Version basierte, und als der
+vorhergesagte Bug nicht auftrat, mussten alle herumsuchen um
+herauszufinden, warum.</p><p>Trotzdem wird es manchmal Umstände geben, unter denen der Ersteller
+der Pakete darauf besteht, dass Änderungen an der Quellcode-Version
+nötig sind. Paket-Ersteller sollten dazu ermutigt werden, das bei den
+Entwicklern des Projekts zur Sprache zu bringen, und ihre Pläne zu
+beschreiben. Es mag sein, dass sie die Freigabe bekommen, wenn aber nicht,
+werden sie zumindest das Projekt über ihre Vorhaben informiert
+haben, damit das Projekt für die üblichen Bug-Meldungen Ausschau halten
+kann. Die Entwickler mögen reagieren, indem sie eine Ausschlussklausel
+auf ihre Webseite stellen, und den Paket-Ersteller darum bitten, das 
+gleiche bei sich an angemessener Stelle zu machen, damit die Nutzer
+dieser binären Pakete wissen, dass was sie bekommen, nicht genau das
+gleiche ist, wie die offizielle Version. Es muss in einer solchen 
+Situation keine Bitterkeit geben, obwohl es leider oft der Fall ist.
+Es ist nur, dass die Paket-Ersteller leicht unterschiedliche Ziele im
+Vergleich zu den Entwicklern verfolgen. Sie wollen hauptsächlich für
+ihre Nutzer die bestmögliche Erfahrung. Die Entwickler wollen das 
+natürlich auch, sie müssen aber auch sicherstellen, dass sie wissen,
+welche Versionen der Software im Umlauf sind, damit sie verständliche
+Bug-Meldungen bekommen können und Garantien über die Kompatibilität
+machen können. Manchmal stehen diese Ziele im Konflikt zueinander.
+Wenn das der Fall ist, sollte man sich daran erinnern, dass das
+Projekt keine Kontrolle über die Paket-Ersteller hat, und dass das
+Schuldverhältnis in beiden Richtungen läuft. Es stimmt zwar, dass das
+Projekt den Paket-Erstellern einen Gefallen tut, alleine schon indem sie
+die Software erstellt. Die Paket-Ersteller tun dem Projekt aber auch einen
+Gefallen, indem sie die größtenteils unrühmliche Arbeit auf sich 
+nehmen, die Software einer breiteren Masse zur Verfügung zu stellen,
+oftmals um mehrere Größenordnungen. Es ist in Ordnung, mit den 
+Paket-Erstellern Meinungsverschiedenheiten zu haben, aber beleidigen
+Sie sie nicht; versuchen Sie einfach, sich mit ihnen so gut wie möglich
+zu verständigen.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp5968864" href="#idp5968864" class="para">38</a>] </sup>Anmk. des 
+Übersetzers: Im Englischen werden Eigennamen (en. proper noun) auch
+groß geschrieben</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="stabilizing-a-release.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="testing-and-releasing.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Stabilisierung einer neuen Version </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Tests und Veröffentlichung</td></tr></table></div></body></html>

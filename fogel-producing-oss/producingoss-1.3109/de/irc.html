@@ -1,0 +1,136 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>IRC / Echtzeit-Nachrichtendienste</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="prev" href="bug-tracker.html" title="Bugtracker"><link rel="next" href="rss.html" title="RSS-Feeds"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">IRC / Echtzeit-Nachrichtendienste</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bug-tracker.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Technische Infrastruktur</th><td width="20%" align="right"> <a accesskey="n" href="rss.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="IRC / Echtzeit-Nachrichtendienste"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="irc"></a>IRC / Echtzeit-Nachrichtendienste</h2></div></div></div><p>Viele Projekte bieten Chat-Foren über <em class="firstterm">Internet Relay
+Chat</em> (<em class="firstterm">IRC</em>) an, in denen Nutzer und
+Entwickler einander Fragen stellen können und sofort Antworten erhalten
+können. Auch wenn Sie einen IRC-Server über Ihre eigene Webseite
+betreiben <span class="emphasis"><em>können</em></span>, ist es im allgemeinen den
+Aufwand nicht wert. Machen Sie statt dessen was alle anderen auch
+machen: Betreiben Sie Ihre <em class="firstterm">IRC-Kanäle</em> auf
+Freenode (<a class="ulink" href="http://freenode.net/" target="_top">http://freenode.net/</a>). Freenode bietet Ihnen
+die nötige Kontrolle um die IRC-Kanäle für Ihr Projekt zu 
+verwalten<sup>[<a name="idp4912192" href="#ftn.idp4912192" class="footnote">31</a>]</sup>, da Sie Ihnen die nicht 
+unwesentliche Mühe ersparen, einen eigenen IRC-Server zu
+betreiben.</p><p>Das erste was Sie tun müssen, ist einen Namen für den Kanal
+auszusuchen. Die offensichtlichste Wahl ist der Namen Ihres 
+Projekts &#8211; wenn dieser bei Freenode verfügbar ist, nehmen Sie ihn.
+Wenn nicht, wählen Sie etwas möglichst ähnliches und leicht zu
+merkendes. Bewerben Sie den Kanal auf Ihrer Webseite, damit Besucher 
+mit kurzen Fragen hat ihn gleich finden. Folgender Hinweis erscheint 
+z.B. markant in einem Kasten oben auf der Hauptseite von 
+Subversion:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Wenn Sie Subversion nutzen, empfehlen wir Ihnen
+    die </em></span> <code class="literal">users@subversion.tigris.org</code>
+    <span class="emphasis"><em>Mailingliste zu abonnieren und das 
+    <a class="ulink" href="http://svnbook.red-bean.com/" target="_top">Subversion-Buch</a>
+	sowie die 
+    <a class="ulink" href="http://subversion.tigris.org/faq.html" target="_top">FAQ</a> zu 
+    lesen. Sie können auch Fragen im IRC stellen auf 
+    </em></span><code class="literal">irc.freenode.net</code><span class="emphasis"><em> im 
+    Kanal</em></span> <code class="literal">#svn</code>.</p></blockquote></div><p>Manche Projekte haben mehrere Kanäle, einen für jedes Unterthema.
+Einen z.B. für Probleme bei der Installation, einen weiteren für Fragen
+der Nutzer, noch einen für Diskussionen der Entwickler, usw.
+(<a class="xref" href="growth.html" title="Handhabung von Wachstum">&#8222;Handhabung von Wachstum&#8220;</a><span> im Kapitel
+<a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a></span> behandelt wie man die 
+verschieden Kanäle aufteilt). Wenn Ihr Projekt noch jung ist, sollte
+es nur einen Kanal geben, indem alle zusammen miteinander reden. 
+Später, sobald das Verhältnis von Nutzer zu Entwickler zunimmt, kann 
+es nötig werden separate Kanäle zu haben.</p><p>Wie sollen Leute von allen Kanälen wissen und woher sollen sie 
+gar wissen in welchen sie reden sollen? Und wenn sie reden, woher 
+sollen sie die hiesigen Konventionen kennen?</p><p>Die Antwort ist, es ihnen zu sagen, indem man den
+<em class="firstterm">channel topic</em> entsprechend 
+setzt.<sup>[<a name="idp4972320" href="#ftn.idp4972320" class="footnote">32</a>]</sup> Der Topic des Kanals ist 
+eine kurze Nachricht, die jeder Nutzer beim betreten des Kanals sieht.
+Es gibt Neulinge eine kurze Anleitung und Hinweise wie sie an weitere 
+Informationen kommen wie z.B.:</p><pre class="screen">
+
+Sie sind jetzt in #svn
+
+Topic: #svn ist ein Forum für Fragen von Subversion-Benutzern, siehe 
+auch http://subversion.tigris.org/. || Entwickler-Diskussionen finden 
+in #svn-dev statt. || Fügen Sie hier bitte keine langen Protokolle ein,
+nutzen Sie hierzu eine Pastebin-Seite wie http://pastebin.ca/. || 
+Neuigkeiten: Freigabe von Subversion 1.1.0, weiteres dazu auf
+http://svn110.notlong.com/.
+</pre><p>Das ist zwar knapp, aber es sagt Neueinsteigern, was sie wissen 
+müssen. Es sagt genau wofür der Channel ist, enthält den Link zur Webseite
+des Projekts (falls jemand an dem Channel vorbei kommt, ohne vorher darauf
+gewesen zu sein), erwähnt einen verwandten Channel, und gibt ein wenig
+Anleitung dazu, wie umfangreiche Einfügungen zu handhaben sind.</p><div class="sidebar" title="Pastebin-Sites"><a name="paste-sites"></a><div class="titlepage"><div><div><p class="title"><b>Pastebin-Sites</b></p></div></div></div><p>Der Platz in einem IRC-Kanal wird von allen geteilt: jeder sieht
+was der andere sagt. Normalerweise ist das etwas gutes, da es Leute
+erlaubt sich an eine Unterhaltung zu beteiligen, wenn sie meinen etwas 
+beitragen zu können und Beobachtern erlaubt beim zusehen etwas zu 
+lernen. Wenn jemand aber einen langen Text zitieren muss, wie ein 
+Protokoll aus einem Debugger wird das problematisch, da eine derart 
+viele Zeilen andere Unterhaltungen stören würde.</p><p>Die Lösung ist eine der <em class="firstterm">pastebin</em> oder
+auch <em class="firstterm">pastebot</em> -Sites zu benutzen. Wenn Sie bei 
+jemandem nach umfangreichen Daten anfragen, bitten Sie ihn darum, diese
+nicht direkt in den Kanal einzufügen, sondern ihre Daten (z.B.) auf 
+<a class="ulink" href="http://pastebin.ca/" target="_top">http://pastebin.ca/</a> abzulegen und die sich ergebende URL
+in den Kanal zu kopieren. Diese kann dann jeder besuchen, um sich 
+die Daten anzuschauen.</p><p>Es gibt eine Vielzahl freier Sites, zu viele um alle zu nennen,
+hier nur diejenigen, von denen ich weiß, dass sie benutzt werden:
+<a class="ulink" href="http://www.nomorepasting.com/" target="_top">http://www.nomorepasting.com/</a>,
+<a class="ulink" href="http://pastebin.ca/" target="_top">http://pastebin.ca/</a>,
+<a class="ulink" href="http://nopaste.php.cd/" target="_top">http://nopaste.php.cd/</a>
+<a class="ulink" href="http://rafb.net/paste/" target="_top">http://rafb.net/paste/</a>
+<a class="ulink" href="http://sourcepost.sytes.net/" target="_top">http://sourcepost.sytes.net/</a>,
+<a class="ulink" href="http://extraball.sunsite.dk/notepad.php" target="_top">http://extraball.sunsite.dk/notepad.php</a>,
+und
+<a class="ulink" href="http://www.pastebin.com/" target="_top">http://www.pastebin.com/</a>.</p></div><div class="sect2" title="Bots"><div class="titlepage"><div><div><h3 class="title"><a name="bots"></a>Bots</h3></div></div></div><p>Viele IRC-Kanäle mit einem technischen Thema haben einen 
+nicht-menschlichen Teilnehmer, einen sogenannten
+<em class="firstterm">Bot</em>, der in der Lage ist,
+auf bestimmte Befehle zu reagieren, indem er 
+Informationen speichert und wiedergibt. Typischerweise wird der Bot 
+genau wie jeder andere im Kanal angesprochen, d.h. die Befehle werden
+übermittelt, indem man den Bot "anspricht". Z.B.:</p><pre class="screen">
+&lt;kfogel&gt; ayita: learn diff-cmd = http://subversion.tigris.org/faq.html#diff-cmd
+&lt;ayita&gt;  Thanks!
+</pre><p>Dem Bot (mit dem Namen ayita im Kanal angemeldet) wurde dadurch
+gesagt, dass er sich eine bestimmte URL merken soll und bei einer
+Anfrage nach "diff-cmd" wiedergeben soll. Jetzt können wir ayita 
+ansprechen und bitten einem anderen Nutzer etwas über das diff-cmd zu 
+erzählen:</p><pre class="screen">
+
+&lt;kfogel&gt; ayita: tell hmustermann about diff-cmd
+&lt;ayita&gt;  hmustermann: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>Dafür gibt es auch ein Kürzel:</p><pre class="screen">
+
+&lt;kfogel&gt; !a hmustermann diff-cmd
+&lt;ayita&gt;  hmustermann: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>Der genaue Befehl und das Verhalten unterscheidet sich bei jedem
+Bot. Das obige Beispiel benutzt <code class="literal">ayita</code>
+(<a class="ulink" href="http://hix.nu/svn-public/alexis/trunk/" target="_top">http://hix.nu/svn-public/alexis/trunk/</a>), wovon
+üblicherweise in <code class="literal">#svn</code> eine Instanz läuft. Andere Bots
+sind unter anderem (<a class="ulink" href="http://dancer.sourceforge.net/" target="_top">http://dancer.sourceforge.net/</a>) und
+Supybot (<a class="ulink" href="http://supybot.com/" target="_top">http://supybot.com/</a>). Beachten Sie, dass man
+keine besonderen Rechte auf den Server haben muss um einen Bot zu
+betreiben. Ein Bot kann auf einem beliebigen Rechner betrieben werden;
+jeder kann einen Einrichten und anweisen einen bestimmten 
+Server/Kanal zu betreten.</p><p>Wenn Sie in Ihrem Kanal bemerken, dass immer wieder die gleichen
+Fragen gestellt werden, empfehlen ich Ihnen dringend, einen Bot 
+einzurichten. Nur wenige Nutzer im Kanal werden herausfinden wie der
+Bot zu bedienen ist, diese Personen werden aber umso mehr Fragen
+beantworten können, wenn der Bot es Ihnen ermöglicht, um so vieles
+effektiver zu antworten.</p></div><div class="sect2" title="IRC-Archivierung"><div class="titlepage"><div><div><h3 class="title"><a name="irc-archiving"></a>IRC-Archivierung</h3></div></div></div><p>Auch wenn es möglich ist, alles in einem Kanal zu archivieren,
+wird das nicht unbedingt erwartet. Unterhaltungen im IRC sind im Grunde
+genommen öffentlich, aber viele betrachten es sie als informelle,
+halbwegs private Unterhaltungen. Nutzer neigen dazu nicht so sehr auf
+ihre Grammatik zu achten und äußern Meinungen (zum Beispiel über andere
+Entwickler im Projekt) die sie nicht unbedingt archiviert haben 
+möchten.</p><p>Es wird natürlich manchmal <span class="emphasis"><em>Auszüge</em></span> geben,
+die erhalten werden sollte und das ist auch in Ordnung. Die meisten 
+IRC-Anwendungen können, wenn der Nutzer das möchte, Unterhaltungen
+mitschneiden oder wenn das nicht geht, kann die Unterhaltung immer noch
+aus dem Fenster der Anwendung heraus kopiert und in ein beständigeres
+Forum (meistens der Bugtracker) einfügt werden. Alles mitzuschneiden 
+kann aber manche Nutzer unruhig machen. Wenn sie doch alles 
+archivieren, stellen Sie sicher, dass es klar im Topic
+erklärt wird und geben Sie die URL des Archivs an.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp4912192" href="#idp4912192" class="para">31</a>] </sup>Es gibt keine Voraussetzung oder Erwartung, 
+dass Sie an Freenode spenden, wenn Ihr Projekt es sich aber leisten 
+kann, sollten Sie es in Erwägung ziehen. Sie sind eine von Steuern
+befreite gemeinnützige Einrichtung in den USA und sie betreiben einen 
+wertvollen Dienst.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4972320" href="#idp4972320" class="para">32</a>] </sup>Um den Topic in einem Kanal zu setzen, benutzen 
+Sie den <code class="literal">/topic</code> Befehl. Alle Befehle im IRC fangen 
+mit einem "<code class="literal">/</code>" an. Siehe 
+<a class="ulink" href="http://www.irchelp.org/" target="_top">http://www.irchelp.org/</a> wenn Sie nicht mit der Nutzung 
+und Administration von IRC vertraut sind; insbesondere ist 
+<a class="ulink" href="http://www.irchelp.org/irchelp/irctutorial.html" target="_top">http://www.irchelp.org/irchelp/irctutorial.html</a> eine 
+hervorragende Anleitung.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bug-tracker.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="rss.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Bugtracker </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> RSS-Feeds</td></tr></table></div></body></html>

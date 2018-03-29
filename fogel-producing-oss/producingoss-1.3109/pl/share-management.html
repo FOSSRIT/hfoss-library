@@ -1,0 +1,321 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Rozdzielaj zarówno zadania techniczne jak i kierownicze</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produkcja oprogramowania Open Source"><link rel="up" href="managing-volunteers.html" title="Rozdzia&#322; 8. Zarz&#261;dzanie ochotnikami"><link rel="prev" href="managing-volunteers.html" title="Rozdzia&#322; 8. Zarz&#261;dzanie ochotnikami"><link rel="next" href="transitions.html" title="Przekazywanie obowi&#261;zków"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Rozdzielaj zarówno zadania techniczne jak i kierownicze</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="managing-volunteers.html">Poprzedni</a> </td><th width="60%" align="center">Rozdzia&#322; 8. Zarz&#261;dzanie ochotnikami</th><td width="20%" align="right"> <a accesskey="n" href="transitions.html">Nast&#281;pny</a></td></tr></table><hr></div><div class="sect1" title="Rozdzielaj zarówno zadania techniczne jak i kierownicze"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="share-management"></a>Rozdzielaj zarówno zadania techniczne jak i kierownicze</h2></div></div></div><p>Rozdzielaj zarówno ci&#281;&#380;ar zarz&#261;dzania projektem, jak i ci&#281;&#380;ar 
+zada&#324; technicznych. W miar&#281; jak projekt ro&#347;nie, coraz wi&#281;cej pracy  
+wi&#261;&#380;e si&#281; z zarz&#261;dzaniem lud&#378;mi i przep&#322;ywem informacji. Nie ma powodu, 
+aby nie rozdziela&#263; tego ci&#281;&#380;aru, a w dodatku dzielenie si&#281; nim nie 
+wymaga tworzenia &#347;cis&#322;ej hierarchii - w praktyce kszta&#322;tuje si&#281; raczej 
+co&#347; na kszta&#322;t sieci wzajemnych powi&#261;za&#324;, ni&#380; struktura dowodzenia w 
+stylu wojskowym.</p><p>Czasami role kierownicze s&#261; sformalizowane, a czasem tworz&#261; si&#281; 
+spontanicznie. W projekcie Subversion mamy mened&#380;era &#322;atek, mened&#380;era 
+t&#322;umacze&#324;, mened&#380;erów dokumentacji, mened&#380;erów zg&#322;osze&#324; (cho&#263; jest to 
+rola nieoficjalna) oraz mened&#380;era wyda&#324;. Niektóre z tych ról zosta&#322;y 
+powo&#322;ane w wyniku naszej &#347;wiadomej decyzji, inne po prostu powsta&#322;y 
+samorzutnie; spodziewam si&#281;, &#380;e wraz z rozwojem projektu liczba ró&#380;nych 
+ról b&#281;dzie ros&#322;a. Poni&#380;ej znajduj&#261; si&#281; szczegó&#322;owe opisy tych - i kilku 
+innych - funkcji (z wyj&#261;tkiem roli mened&#380;era wyda&#324;, któr&#261; przedstawia 
+sekcja <a class="xref" href="stabilizing-a-release.html#release-manager" title="Release manager">&#8222;Release manager&#8221;</a> oraz sekcja 
+<a class="xref" href="stabilizing-a-release.html#release-owner" title="Dictatorship by Release Owner">&#8222;Dictatorship by Release Owner&#8221;</a><span>, znajduj&#261;ca si&#281; 
+wcze&#347;niej w tym samym rozdziale</span>).</p><p>Czytaj&#261;c te opisy zwró&#263; uwag&#281;, &#380;e &#380;adna z funkcji nie implikuje 
+wy&#322;&#261;cznej kontroli w danej sprawie. Istnienie mened&#380;era zg&#322;osze&#324; nie 
+oznacza, &#380;e inni ludzie nie mog&#261; dotyka&#263; bazy zg&#322;osze&#324;, mened&#380;er FAQ nie 
+upiera si&#281;, &#380;e ma by&#263; jedyn&#261; osob&#261; uprawnion&#261; do edycji listy 
+najcz&#281;&#347;ciej zadawanych pyta&#324;, i tak dalej. Sens tych ról polega na 
+okre&#347;leniu odpowiedzialno&#347;ci bez wprowadzania monopolu. Wa&#380;n&#261; cz&#281;&#347;ci&#261; 
+pracy ka&#380;dego mened&#380;era jest zwracanie uwagi na innych ludzi, którzy 
+zajmuj&#261; si&#281; danym zagadnieniem, i przekazywanie im swoich umiej&#281;tno&#347;ci 
+wykonywania zada&#324; na tym polu, aby raczej wspiera&#263; kolektywny wysi&#322;ek 
+ni&#380; wywo&#322;ywa&#263; konflikty. Mened&#380;er powinien tak&#380;e dokumentowa&#263; proces 
+swojej pracy, aby w razie jego odej&#347;cia z funkcji kto&#347; inny móg&#322; od razu 
+przej&#261;&#263; ca&#322;y kram.</p><p>Czasem powstaje konflikt, gdy dwie lub wi&#281;cej osób chce wykonywa&#263; 
+t&#281; sam&#261; rol&#281;. Nie ma jednej metody na za&#322;atwienie tego problemu. Mo&#380;esz 
+zasugerowa&#263;, aby ka&#380;dy z nich wys&#322;a&#322; swoj&#261; propozycj&#281; ("aplikacj&#281;") i 
+przeprowadzi&#263; w&#347;ród wszystkich uczestników projektu g&#322;osowanie, która 
+jest najlepsza. Ale jest to niewygodne i potencjalnie niezr&#281;czne. Moim 
+zdaniem lepsz&#261; technik&#261; jest poproszenie kandydatów, aby ustalili to 
+mi&#281;dzy sob&#261;. Zwykle tak w&#322;a&#347;nie zrobi&#261; i b&#281;d&#261; bardziej zadowoleni z 
+wyniku, ni&#380; gdyby ta decyzja zosta&#322;a im narzucona z zewn&#261;trz.</p><div class="sect2" title="Mened&#380;er &#322;atek"><div class="titlepage"><div><div><h3 class="title"><a name="patch-manager"></a>Mened&#380;er &#322;atek</h3></div></div></div><p>W projekcie wolnego oprogramowania, do którego nap&#322;ywa wiele &#322;atek,
+panowanie nad tym, które &#322;atki nadesz&#322;y i co zdecydowano w ich sprawie,
+mo&#380;e sta&#263; si&#281; koszmarem, zw&#322;aszcza w &#347;rodowisku rozproszonym. Wi&#281;kszo&#347;&#263; 
+&#322;atek nap&#322;ywa w postaci wiadomo&#347;ci na robocz&#261; list&#281; dyskusyjn&#261; projektu 
+(cho&#263; niektóre mog&#261; si&#281; najpierw pojawi&#263; w systemie &#347;ledzenia zg&#322;osze&#324; 
+lub na niezale&#380;nych stronach w sieci) i istnieje wiele ró&#380;nych &#347;cie&#380;ek,
+którymi mo&#380;e pod&#261;&#380;a&#263; zg&#322;oszona &#322;atka.</p><p>Czasami kto&#347; przegl&#261;da &#322;atk&#281;, znajduje problem i odsy&#322;a j&#261; z 
+powrotem do jej autora w celu poprawienia. To zazwyczaj prowadzi do 
+procesu wzajemnej wymiany wiadomo&#347;ci &#8212; wszystkie s&#261; widoczne na 
+li&#347;cie dyskusyjnej &#8212; w której pierwotny autor wysy&#322;a kolejne 
+wersje &#322;atki do chwili kiedy korektor nie ma ju&#380; nic do krytykowania. 
+Nie zawsze &#322;atwo jest stwierdzi&#263;, kiedy ten proces si&#281; zako&#324;czy&#322;: je&#347;li 
+korektor wprowadza &#322;atk&#281; do kodu, to z pewno&#347;ci&#261; ten cykl si&#281; zako&#324;czy&#322;. 
+Ale je&#347;li tego nie robi, to mo&#380;e wynika&#263; po prostu z braku czasu lub 
+st&#261;d, &#380;e sam nie ma prawa zapisu i nie zdo&#322;a&#322; zmusi&#263; do tego innego 
+programisty.</p><p>Inn&#261; cz&#281;st&#261; reakcj&#261; na &#322;atk&#281; jest rozp&#281;tanie si&#281; dyskusji,
+niekoniecznie na temat samej &#322;atki, ale dotycz&#261;cej tego czy sama jej 
+idea jest s&#322;uszna. Na przyk&#322;ad &#322;atka mo&#380;e naprawia&#263; b&#322;&#261;d, ale projekt
+woli to zrobi&#263; inaczej, w ramach naprawy bardziej ogólnej klasy 
+problemów. Cz&#281;sto nie wiadomo o tym od pocz&#261;tku i dopiero pojawienie 
+si&#281; &#322;atki doprowadza do takiego rozwi&#261;zania.</p><p>Zdarza si&#281;, &#380;e &#322;atka spotyka si&#281; z g&#322;uch&#261; cisz&#261;. Zwykle dzieje 
+si&#281; tak dlatego, &#380;e &#380;aden programista <span class="emphasis"><em>akurat w tej 
+chwili</em></span> nie ma czasu na jej przejrzenie, wi&#281;c ka&#380;dy liczy na 
+to, &#380;e zrobi to kto&#347; inny. Poniewa&#380; nie ma &#380;adnego limitu na to, ile
+ka&#380;da z osób czeka a&#380; kto&#347; podejmie pa&#322;eczk&#281;, a w tym czasie zawsze 
+wyp&#322;ywaj&#261; inne wa&#380;ne rzeczy, to &#322;atka bardzo &#322;atwo mo&#380;e si&#281; zagubi&#263; w 
+sposób przez nikogo nie zamierzony. Projekt mo&#380;e w ten sposób przegapi&#263;
+u&#380;yteczn&#261; &#322;atk&#281;, a to mo&#380;e doprowadzi&#263; tak&#380;e do innych szkodliwych 
+efektów ubocznych: mo&#380;e to zniech&#281;ca&#263; autora, który w&#322;o&#380;y&#322; w t&#281; &#322;atk&#281;
+swoj&#261; prac&#281;, i sprawia wra&#380;enie, jakby ca&#322;y projekt nieco straci&#322; 
+kontakt z rzeczywisto&#347;ci&#261;, zw&#322;aszcza w oczach innych osób planuj&#261;cych 
+napisa&#263; &#322;atk&#281;.</p><p>Zadaniem mened&#380;era &#322;atek jest upewni&#263; si&#281;, &#380;e &#322;atki nie "gubi&#261; 
+si&#281;". Robi to &#347;ledz&#261;c ka&#380;d&#261; &#322;atk&#281; a&#380; do momentu osi&#261;gni&#281;ci&#261; przez ni&#261;
+swego rodzaju stabilno&#347;ci. Mened&#380;er &#322;atek obserwuje ka&#380;dy w&#261;tek na 
+li&#347;cie wywo&#322;any przez wys&#322;anie &#322;atki. Je&#347;li ko&#324;czy si&#281; to zapisem do 
+kodu, to nic nie robi. Je&#347;li dochodzi do cyklu kolejnych 
+przegl&#261;dów/rewizji, który ko&#324;czy si&#281; finaln&#261; wersj&#261; &#322;atki, ale bez 
+zapisu, to wype&#322;nia zg&#322;oszenie wskazuj&#261;ce na finaln&#261; wersj&#281; oraz na 
+zwi&#261;zany z ni&#261; w&#261;tek na li&#347;cie dyskusyjnej, aby pozosta&#322; trwa&#322;y &#347;lad dla
+programistów, którzy zajm&#261; si&#281; tym potem. Je&#347;li &#322;atka dotyczy 
+istniej&#261;cego zg&#322;oszenia, odpowiednio je opisuje zamiast otwiera&#263; nowe.
+</p><p>Gdy &#322;atka nie wzbudza &#380;adnej reakcji, mened&#380;er &#322;atek czeka przez
+kilka dni, a nast&#281;pnie pyta czy kto&#347; zamierza si&#281; ni&#261; zaj&#261;&#263;. Zwykle to
+powoduje reakcj&#281;: programista mo&#380;e wyja&#347;ni&#263;, &#380;e jego zdaniem &#322;atka nie
+powinna zosta&#263; zaaplikowana i poda&#263; przyczyn&#281;, albo przejrze&#263; &#322;atk&#281;, a
+wówczas idzie ona jedn&#261; z poprzednio podanych &#347;cie&#380;ek. Je&#380;eli nadal nic
+si&#281; nie dzieje, mened&#380;er &#322;atek mo&#380;e - je&#347;li tak zdecyduje - wype&#322;ni&#263; 
+zg&#322;oszenie dla tej &#322;atki, ale autor &#322;atki przynajmniej dostaje 
+<span class="emphasis"><em>jaki&#347;</em></span> sygna&#322; zwrotny.</p><p>Posiadanie mened&#380;era &#322;atek zaoszcz&#281;dzi&#322;o zespo&#322;owi Subversion 
+mnóstwo czasu i energii psychicznej. Bez osoby wyznaczonej do takiej
+roli ka&#380;dy programista musia&#322;by si&#281; ci&#261;gle zastanawia&#263;: "Je&#347;li ja nie
+mam teraz czasu &#380;eby odpowiedzie&#263; na t&#281; &#322;atk&#281;, to czy mog&#281; liczy&#263;, &#380;e 
+kto&#347; inny to zrobi? Czy powinienem stara&#263; si&#281; o niej pami&#281;ta&#263;? Ale je&#347;li
+inni tak&#380;e o niej z jakiego&#347; powodu pami&#281;taj&#261;, to b&#281;dzie to niepotrzebne
+dublowanie wysi&#322;ków." Osoba mened&#380;era &#322;atek oddala takie spekulacje.
+Ka&#380;dy programista mo&#380;e podj&#261;&#263; odpowiedni&#261; dla siebie decyzj&#281; przy 
+pierwszym kontakcie z &#322;atk&#261;. Je&#347;li chce j&#261; przejrze&#263;, to mo&#380;e to zrobi&#263;
+&#8212; mened&#380;er &#322;atek dostosuje si&#281; do tego. Je&#347;li chce zupe&#322;nie j&#261; 
+zignorowa&#263;, to tak&#380;e jest w porz&#261;dku; mened&#380;er &#322;atek zadba o to, aby nie
+zosta&#322;a zapomniana.</p><p>Poniewa&#380; ten system dzia&#322;a tylko je&#347;li ludzie mog&#261; &#347;lepo polega&#263; 
+na obecno&#347;ci mened&#380;era &#322;atek, ta rola powinna by&#263; obejmowana formalnie. 
+W Subversion og&#322;aszali&#347;my poszukiwania do niej na li&#347;cie roboczej i na
+li&#347;cie u&#380;ytkowników, a ze zg&#322;aszaj&#261;cych si&#281; ochotników wybierali&#347;my 
+tego, który pierwszy odpowiedzia&#322;. Kiedy ta osoba musia&#322;a zrezygnowa&#263; 
+(zobacz sekcj&#281; <a class="xref" href="transitions.html" title="Przekazywanie obowi&#261;zków">&#8222;Przekazywanie obowi&#261;zków&#8221;</a><span> dalej w tym rozdziale</span>), powtarzali&#347;my ten 
+proces. Nigdy nie próbowali&#347;my obsadzi&#263; w tej roli wi&#281;cej ni&#380; jedn&#261; 
+osob&#281;, poniewa&#380; wymaga&#322;oby to dodatkowej komunikacji mi&#281;dzy nimi; ale
+by&#263; mo&#380;e w warunkach du&#380;ych ilo&#347;ci zg&#322;aszanych &#322;atek taki zespo&#322;owy 
+mened&#380;er móg&#322;by mie&#263; sens.</p></div><div class="sect2" title="Mened&#380;er t&#322;umacze&#324;"><div class="titlepage"><div><div><h3 class="title"><a name="translation-manager"></a>Mened&#380;er t&#322;umacze&#324;</h3></div></div></div><p>In software projects, "translation" can refer to two very
+different things.  It can mean translating the software's
+documentation into other languages, or it can mean translating the
+software itself&#8212;that is, having the program display errors and
+help messages in the user's preferred language.  Both are complex
+tasks, but once the right infrastructure is in place, they are largely
+separable from other development.  Because the tasks are similar in
+some ways, it may make sense (depending on your project) to have a
+single translation manager handle both, or it may be better to have
+two different managers.</p><p>In the Subversion project, we have one translation manager
+handle both.  He does not actually write the translations himself, of
+course&#8212;he may help out on one or two, but as of this writing, he
+would need to speak ten languages (twelve counting dialects) in order
+to work on all of them!  Instead, he manages teams of volunteer
+translators: he helps them coordinate among each other, and he
+coordinates between the teams and the rest of the project.</p><p>Part of the reason the translation manager is necessary is that
+translators are a different demographic from developers.  They
+sometimes have little or no experience working in a version control
+repository, or indeed with working as part of a distributed volunteer
+team at all.  But in other respects they are often the best kind of
+volunteer: people with specific domain knowledge who saw a need and
+chose to get involved.  They are usually willing to learn, and
+enthusiastic to get to work.  All they need is someone to tell them
+how.  The translation manager makes sure that the translations happen
+in a way that does not interfere unnecessarily with regular
+development.  He also serves as a sort of representative of the
+translators as a unified body, whenever the developers must be
+informed of technical changes required to support the translation
+effort.</p><p>Thus, the position's most important skills are diplomatic, not
+technical.  For example, in Subversion we have a policy that all
+translations should have at least two people working on them, because
+otherwise there is no way for the text to be reviewed.  When a new
+volunteer shows up offering to translate Subversion to, say, Malagasy,
+the translation manager has to either hook him up with someone who
+posted six months ago expressing interest in doing a Malagasy
+translation, or else politely ask the volunteer to go
+find <span class="emphasis"><em>another</em></span> Malagasy translator to work with as
+a partner.  Once enough people are available, the manager sets them up
+with the proper kind of commit access, informs them of the project's
+conventions (such as how to write log messages), and then keeps an eye
+out to make sure they adhere to those conventions.</p><p>Conversations between the translation manager and the
+developers, or between the translation manager and translation teams,
+are usually held in the project's original language&#8212;that is, the
+language from which all the translations are being made.  For most
+free software projects, this is English, but it doesn't matter what it
+is as long as the project agrees on it.  (English is probably best for
+projects that want to attract a broad international development
+community, though.)</p><p>Conversations <span class="emphasis"><em>within</em></span> a particular
+translation team usually happen in their shared language, however, and
+one of the other tasks of the translation manager is to set up a
+dedicated mailing list for each team.  That way the translators can
+discuss their work freely, without distracting people on the project's
+main lists, most of whom would not be able to understand the
+translation language anyway.</p><div class="sidebar" title="Internacjonalizacja a lokalizacja"><a name="i7n"></a><div class="titlepage"><div><div><p class="title"><b>Internacjonalizacja a lokalizacja</b></p></div></div></div><p><em class="firstterm">Internationalization</em>
+  (<em class="firstterm">I18N</em>) and <em class="firstterm">localization</em>
+  (<em class="firstterm">L10N</em>) both refer to the process of adapting
+  a program to work in linguistic and cultural environments other than
+  the one for which it was originally written.  The terms are often
+  treated as interchangeable, but in fact they are not quite the same
+  thing.  As <a class="ulink" href="http://en.wikipedia.org/wiki/G11n" target="_top">http://en.wikipedia.org/wiki/G11n</a>
+  writes:</p><div class="blockquote"><blockquote class="blockquote"><p>The distinction between them is subtle but important:
+     Internationalization is the adaptation of products
+     for <span class="emphasis"><em>potential</em></span> use virtually everywhere, while
+     localization is the addition of special features for use in
+     a <span class="emphasis"><em>specific</em></span> locale.</p></blockquote></div><p>For example, changing your software to losslessly handle
+  Unicode (<a class="ulink" href="http://en.wikipedia.org/wiki/Unicode" target="_top">http://en.wikipedia.org/wiki/Unicode</a>) text
+  encodings is an internationalization move, since it's not about a
+  particular language, but rather about accepting text from any of a
+  number of languages.  On the other hand, making your software print
+  all error messages in Slovenian, when it detects that it is running
+  in a Slovenian environment, is a localization move.</p><p>Thus, the translation manager's task is principally about
+  localization, not internationalization.</p></div></div><div class="sect2" title="Mened&#380;er dokumentacji"><div class="titlepage"><div><div><h3 class="title"><a name="documentation-manager"></a>Mened&#380;er dokumentacji</h3></div></div></div><p>Keeping software documentation up-to-date is a never-ending
+task.  Every new feature or enhancement that goes into the code has
+the potential to cause a change in the documentation.  Also, once the
+project's documentation reaches a certain level of completeness, you
+will find that a lot of the patches people send in are for the
+documentation, not for the code.  This is because there are many more
+people competent to fix bugs in prose than in code: all users are
+readers, but only a few are programmers.</p><p>Documentation patches are usually much easier to review and
+apply than code patches.  There is little or no testing to be done,
+and the quality of the change can be evaluated quickly just by review.
+Since the quantity is high, but the review burden fairly low, the
+ratio of administrative overhead to productive work is greater for
+documentation patches than for code patches.  Furthermore, most of the
+patches will probably need some sort of adjustment, in order to
+maintain a consistent authorial voice in the documentation.  In many
+cases, patches will overlap with or affect other patches, and need to
+be adjusted with respect to each other before being committed.</p><p>Given the exigencies of handling documentation patches, and the
+fact that the code base needs to be constantly monitored so the
+documentation can be kept up-to-date, it makes sense to have one
+person, or a small team, dedicated to the task.  They can keep a
+record of exactly where and how the documentation lags behind the
+software, and they can have practiced procedures for handling large
+quantities of patches in an integrated way.</p><p>Of course, this does not preclude other people in the project
+from applying documentation patches on the fly, especially small ones,
+as time permits.  And the same patch manager (see
+<a class="xref" href="share-management.html#patch-manager" title="Mened&#380;er &#322;atek">&#8222;Mened&#380;er &#322;atek&#8221;</a><span> earlier
+in this chapter</span>) can track both code and
+documentation patches, filing them wherever the development and
+documentation teams want them, respectively.  (If the total quantity of
+patches ever exceeds one human's capacity to track, though, switching
+to separate patch managers for code and documentation is probably a
+good first step.)  The point of a documentation team is to have people
+who think of themselves as responsible for keeping the documentation
+organized, up-to-date, and consistent with itself.  In practice, this
+means knowing the documentation intimately, watching the code base,
+watching the changes
+<span class="emphasis"><em>others</em></span> commit to the documentation, watching for
+incoming documentation patches, and using all these information
+sources to do whatever is necessary to keep the documentation
+healthy.</p></div><div class="sect2" title="Mened&#380;er zg&#322;osze&#324;"><div class="titlepage"><div><div><h3 class="title"><a name="issue-manager"></a>Mened&#380;er zg&#322;osze&#324;</h3></div></div></div><p>The number of issues in a project's bug tracker grows in
+proportion to the number of people using the software.  Therefore,
+even as you fix bugs and ship an increasingly robust program, you
+should still expect the number of open issues to grow essentially
+without bound.  The frequency of duplicate issues will also increase,
+as will the frequency of incomplete or poorly described issues.</p><p>Issue managers help alleviate these problems by watching what
+goes into the database, and periodically sweeping through it looking
+for specific problems.  Their most common action is probably to fix up
+incoming issues, either because the reporter didn't set some of the
+form fields correctly, or because the issue is a duplicate of one
+already in the database.  Obviously, the more familiar an issue
+manager is with the project's bug database, the more efficiently she
+will be able to detect duplicate issues&#8212;this is one of the main
+advantages of having a few people specialize in the bug database,
+instead of everyone trying to do it <span class="foreignphrase"><em class="foreignphrase">ad
+hoc</em></span>.  When the group tries to do it in a decentralized
+manner, no single individual acquires a deep expertise in the content
+of the database.</p><p>Issue managers can also help map between issues and individual
+developers.  When there are a lot of bug reports coming in, not every
+developer may read the issue notification mailing list with equal
+attention.  However, if someone who knows the development team is
+keeping an eye on all incoming issues, then she can discreetly direct
+certain developers' attention to specific bugs when appropriate.  Of
+course, this has to be done with a sensitivity to everything else
+going on in development, and to the recipient's desires and
+temperament.  Therefore, it is often best for issue managers to be
+developers themselves.</p><p>Depending on how your project uses the issue tracker, issue
+managers can also shape the database to reflect the project's
+priorities.  For example, in Subversion we schedule issues into
+specific future releases, so that when someone asks "When will bug X
+be fixed?" we can say "Two releases from now," even if we can't give
+an exact date.  The releases are represented in the issue tracker as
+target milestones, a field available in
+IssueZilla.<sup>[<a name="idp8720224" href="#ftn.idp8720224" class="footnote">25</a>]</sup> As a rule, every
+Subversion release has one major new feature and a list of specific
+bug fixes.  We assign the appropriate target milestone to all the
+issues planned for that release (including the new feature&#8212;it
+gets an issue too), so that people can view the bug database through
+the lens of release scheduling.  These targets rarely remain static,
+however.  As new bugs come in, priorities sometimes get shifted
+around, and issues must be moved from one milestone to another so that
+each release remains manageable.  This, again, is best done by people
+who have an overall sense of what's in the database, and how various
+issues relate to each other.</p><p>Another thing issue managers do is notice when issues become
+obsolete.  Sometimes a bug is fixed accidentally as part of an
+unrelated change to the software, or sometimes the project changes its
+mind about whether a certain behavior is buggy.  Finding obsoleted
+issues is not easy: the only way to do it systematically is by making
+a sweep over all the issues in the database.  Full sweeps become less
+and less feasible over time, however, as the number of issues grows.
+After a certain point, the only way to keep the database sane is to use a
+divide-and-conquer approach: categorize issues immediately on arrival
+and direct them to the appropriate developer's or team's attention.
+The recipient then takes charge of the issue for the rest of its
+lifetime, shepherding it to resolution or oblivion as necessary.  When
+the database is that large, the issue manager becomes more of an
+overall coordinator, spending less time looking at each issue herself
+and more time getting it into the right person's hands.</p></div><div class="sect2" title="Mened&#380;er FAQ"><div class="titlepage"><div><div><h3 class="title"><a name="faq-manager"></a>Mened&#380;er FAQ</h3></div></div></div><p>FAQ maintenance is a surprisingly difficult problem.  Unlike
+most other documents in a project, whose content is planned out in
+advance by the authors, a FAQ is a wholly reactive document (see
+<a class="xref" href="getting-started.html#starting-a-faq" title="Maintaining a FAQ">Maintaining a FAQ</a>).  No matter how big it gets, you
+still never know what the next addition will be.  And because it is
+always added to piecemeal, it is very easy for the document as a whole
+to become incoherent and disorganized, and even to contain duplicate
+or semi-duplicate entries.  Even when it does not have any obvious
+problems like that, there are often unnoticed interdependencies
+between items&#8212;links that should be made but aren't&#8212;because
+the related items were added a year apart.</p><p>The role of a FAQ manager is twofold.  First, she maintains the
+overall quality of the FAQ by staying familiar with at least the
+topics of all the questions in it, so that when people add new items
+that are duplicates of, or related to, existing items, the appropriate
+adjustments can be made.  Second, she watches the project mailing
+lists and other forums for recurring problems or questions, and to
+write new FAQ entries based on this input.  This latter task can be
+quite complex: one must be able to follow a thread, recognize the core
+questions raised in it, post a proposed FAQ entry, incorporate
+comments from others (since it's impossible for the FAQ manager to be
+an expert in every topic covered by the FAQ), and sense when the
+process is finished so the item can at last be added.</p><p>The FAQ manager usually also becomes the default expert in FAQ
+formatting.  There are a lot of little details involved in keeping a
+FAQ in shape (see
+<a class="xref" href="growth.html#all-as-archives" title="Treat all resources like archives">&#8222;Treat all resources like archives&#8221;</a><span> in
+<a class="xref" href="communications.html" title="Rozdzia&#322; 6. Communications">Rozdzia&#322; 6, <i>Communications</i></a></span>); when random
+people edit the FAQ, they will sometimes forget some of these details.
+That's okay, as long as the FAQ manager is there to clean up after
+them.</p><p>Various free software is available to help with the process of
+FAQ maintenance.  It's fine to use it, as long as it doesn't
+compromise the quality of the FAQ, but beware of over-automation.
+Some projects try to fully automate the process of FAQ maintenance,
+allowing everyone to contribute and edit FAQ items in a manner similar
+to a wiki (see <a class="xref" href="wikis.html" title="Wikis">&#8222;Wikis&#8221;</a><span>
+in <a class="xref" href="technical-infrastructure.html" title="Rozdzia&#322; 3. Infrastruktura techniczna">Rozdzia&#322; 3, <i>Infrastruktura techniczna</i></a></span>).  I've
+seen this happen particularly with Faq-O-Matic
+(<a class="ulink" href="http://faqomatic.sourceforge.net/" target="_top">http://faqomatic.sourceforge.net/</a>), though it may be
+that the cases I saw were simply abuses that went beyond what
+Faq-O-Matic was originally intended for.  In any case, while complete
+decentralization of FAQ maintenance does reduce the workload for the
+project, it also results in a poorer FAQ.  There's no one person with
+a broad view of the entire FAQ, no one to notice when certain items
+need updating or become obsolete entirely, and no one keeping watch for
+interdependencies between items.  The result is a FAQ that often fails
+to provide users what they were looking for, and in the worst cases
+misleads them.  Use whatever tools you need to to maintain your
+project's FAQ, but never let the convenience of the tools seduce you
+into compromising the quality of the FAQ.</p><p>See Sean Michael Kerner's article, <em class="citetitle">The FAQs on
+FAQs</em>, at
+<a class="ulink" href="http://osdir.com/Article1722.phtml" target="_top">http://osdir.com/Article1722.phtml</a>, for descriptions
+and evaluations of open source FAQ maintenance tools.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp8720224" href="#idp8720224" class="para">25</a>] </sup>IssueZilla is the issue tracker we use; it
+is a descendant of BugZilla.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="managing-volunteers.html">Poprzedni</a> </td><td width="20%" align="center"><a accesskey="u" href="managing-volunteers.html">Pocz&#261;tek rozdzia&#322;u</a></td><td width="40%" align="right"> <a accesskey="n" href="transitions.html">Nast&#281;pny</a></td></tr><tr><td width="40%" align="left" valign="top">Rozdzia&#322; 8. Zarz&#261;dzanie ochotnikami </td><td width="20%" align="center"><a accesskey="h" href="index.html">Spis tre&#347;ci</a></td><td width="40%" align="right" valign="top"> Przekazywanie obowi&#261;zków</td></tr></table></div></body></html>

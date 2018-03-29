@@ -1,0 +1,46 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>RSS-Feeds</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="prev" href="irc.html" title="IRC / Echtzeit-Nachrichtendienste"><link rel="next" href="wikis.html" title="Wikis"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">RSS-Feeds</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="irc.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Technische Infrastruktur</th><td width="20%" align="right"> <a accesskey="n" href="wikis.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="RSS-Feeds"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="rss"></a>RSS-Feeds</h2></div></div></div><p><em class="firstterm">RSS</em> (Really Simple Syndication) ist ein
+Mechanismus, um mit Metadaten versehene Kurznachrichten an "Abonnenten"
+zu verteilen, sprich Menschen, die ein Interesse bekundet haben, diese
+Neuigkeiten zu erfahren. Eine gegebene RSS-Quelle wird üblicherweise
+als <em class="firstterm">Feed</em> bezeichnet, und die Schnittstelle des
+Benutzers wird <em class="firstterm">Feed-Reader</em> oder
+<em class="firstterm">Feed-Aggregator</em> genannt. <a class="ulink" href="http://www.rssbandit.org/" target="_top">RSS Bandit</a> und der namengebende
+<a class="ulink" href="http://www.feedreader.com/" target="_top">Feedreader</a> z.B. sind
+zwei quelloffene RSS-Reader.</p><p>Hier ist nicht der Raum für eine detaillierte technische
+Erklärung von RSS<sup>[<a name="idp5004544" href="#ftn.idp5004544" class="footnote">33</a>]</sup>, aber Sie sollten sich zumindest zweier Dinge bewusst 
+sein. Erstens: die Feed-Reader-Software ist durch den Benutzer bestimmt
+und ist <span class="emphasis"><em>dieselbe</em></span> für alle Feeds, die dieser
+abonniert hat &#8211; tatsächlich ist das der springende
+Punkt bei RSS: dass der Abonnent selbst die Schnittstelle für alle
+Feeds bestimmt, und so sollte sich jeder Feed ausschließlich auf das
+Verteilen der Inhalte konzentrieren. Zweitens: RSS ist inzwischen so
+allgegenwärtig, dass die meisten Menschen gar nicht bemerken. dass
+sie es damit zu tun haben. Im großen Ganzen scheint es sich bei RSS 
+einfach um einen kleinen Knopf auf einer Webseite zu handeln mit
+einer Beschriftung etwa "diese Seite abonnieren" oder "News feed".
+Sie klicken auf diesen Knopf und von da an aktualisiert sich Ihr
+Feed-Reader (der z.B. auch ein in Ihre Startseite eingebettetes
+Applet sein könnte) automatisch wann immer es Neuigkeiten 
+von dieser Site gibt.</p><p>Das heißt dass Ihr Open-Source-Project möglicherweise einen 
+RSS-Feed anbieten sollte (beachten Sie, dass viele 
+Hosting-Sites &#8211; siehe
+<a class="xref" href="web-site.html#canned-hosting" title="Hosting-Pakete">&#8222;Hosting-Pakete&#8220;</a> &#8211; es fix und fertig
+anbieten). Widerstehen Sie der Versuchung, täglich so viele Neuigkeiten
+zu verbreiten, dass Ihre Abonnenten die Spreu nicht mehr vom Weizen
+trennen können. Wenn es zu viele Neuigkeiten gibt, werden die Benutzer
+den Feed einfach ignorieren, wenn nicht sogar gleich ganz abbestellen
+aus Verärgerung. Idealerweise würde ein Projekt unterschiedliche Feeds
+anbieten: einen für die großen Neuigkeiten, einen z.B. für
+Bugtracker-Aktivitäten, einen weiteren je Mailingliste usw.
+In der Praxis ist es schwierig, hier alles richtig zu machen; so kann
+es leicht zur Verwirrung bei den Schnittstellen für Besucher und
+Administratoren der Website führen. Zumindest aber sollte das Projekt
+einen RSS-Feed auf der Hauptseite anbieten, der die herausragenden
+Ankündigungen anbieter wie z.B. Freigaben und Sicherheitswarnungen.
+<sup>[<a name="idp4798592" href="#ftn.idp4798592" class="footnote">34</a>]</sup></p><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp5004544" href="#idp5004544" class="para">33</a>] </sup>Siehe dafür
+<a class="ulink" href="http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html" target="_top">http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html</a>
+</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4798592" href="#idp4798592" class="para">34</a>] </sup>Ehre, wem Ehre gebührt: dieser Abschnitt war nicht
+Teil der ersten Ausgabe dieses Buches, aber Brian Aker's Blog-Eintrag
+<a class="ulink" href="http://krow.livejournal.com/564980.html" target="_top">"Release Criteria,
+Open Source, Thoughts On..."</a> erinnerte mich an die Nützlichkeit
+von RSS-Feeds für Open-Source-Projekte.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="irc.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="wikis.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">IRC / Echtzeit-Nachrichtendienste </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Wikis</td></tr></table></div></body></html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>RSS フィード</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="RSS フィード"><div class="titlepage"><div><div><h1 class="title"><a id="rss"/>RSS フィード</h1></div></div></div><p>
+  <em class="firstterm">RSS</em> (Really Simple Syndication)
+  は、ニュースの概要を表すメタデータを "購読者" に配信するための仕組みです。
+  "購読者" とは、その概要を受信したいという意思を示した人たちのことです。
+  RSS ソースのことを通常は <em class="firstterm">フィード</em> と呼びます。
+  また、ユーザーがフィードを購読するインターフェイスのことを
+  <em class="firstterm">フィードリーダー</em> や
+  <em class="firstterm">フィードアグリゲータ</em> などといいます。
+  オープンソースの RSS リーダーとしては、たとえば
+  <a class="ulink" href="http://www.rssbandit.org/">RSS Bandit</a> や、
+  そのまんまの名前である <a class="ulink" href="http://www.feedreader.com/">Feedreader</a>
+  などがあります。
+</p><p>
+  ここでは、RSS についての技術的な詳細を説明することは控えます
+  <sup>[<a id="idm1387" href="#ftn.idm1387" class="footnote">22</a>]</sup>が、次のふたつはしっかり覚えておきましょう。
+  まず、購読者がフィードリーダーを使用すると、購読しているフィードを
+  <span class="emphasis"><em>同じように</em></span> 扱えるようになります。
+  これが RSS のセールスポイントのひとつです。
+  何かひとつのインターフェイスを選択すれば、
+  すべてのフィードが同じインターフェイスで使用でき、
+  配信される内容に集中することができるというわけです。
+  次に、RSS は今やあらゆるところで利用されており、
+  ほとんどの人は知らず知らずのうちにそれを使用しているということです。
+  世間一般の人たちにとっては、RSS というのはウェブページ上の
+  "このサイトを購読" とか "ニュースフィード" とか言うちっちゃなボタンのことです。
+  そのボタンをクリックすれば、フィードリーダー
+  (ホームページに埋め込まれているアプレットかもしれません)
+  は自動的にそのサイトのニュースの更新情報を取得してくれます。
+</p><p>
+  これらを踏まえると、あなたが運営するオープンソースプロジェクトでもおそらく
+  RSS フィードを提供しなければならなくなるでしょう
+  (あらかじめ用意されているホスティングサイト
+   — <a class="xref" href="ch03s08.html#canned-hosting" title="ツールが一通り揃ったホスティングサイト">「ツールが一通り揃ったホスティングサイト」</a>
+  を参照ください — の多くは、この機能を持っています)。
+  一日になんどもニュースを投稿してしまわないように注意しましょう。
+  そんなことをしたら、購読者たちは
+  どれが本当に大切なニュースなのかを判断できなくなってしまいます。
+  あまりにも大量のニュースが投稿されると、
+  そのフィードを無視されてしまったり、
+  あるいは腹が立ってそのフィードの購読をやめてしまうかもしれません。
+  理想を言えば、用途に応じて個別のフィードを提供するのがいいでしょう。
+  大事な告知用のフィード、たとえばバグ追跡システム用のフィード、
+  メーリングリストの投稿用のフィードなとといった具合です。
+  とは言え、実際にこれをするのは大変です。
+  プロジェクトのウェブサイトを訪れる人たちにとっても、
+  プロジェクトの管理者にとっても、
+  何をどうしたらいいのか混乱してしまうことでしょう。
+  しかし、少なくともプロジェクトのトップページには RSS フィードを提供するようにしましょう。
+  このフィードでは、リリース情報やセキュリティ警告といった重要な告知を配信します。
+  <sup>[<a id="idm1393" href="#ftn.idm1393" class="footnote">23</a>]</sup>
+</p><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm1387" href="#idm1387" class="para">22</a>] </sup>
+      詳細は
+      <a class="ulink" href="http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html">http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html</a>
+      をご覧ください。
+    </p></div><div class="footnote"><p><sup>[<a id="ftn.idm1393" href="#idm1393" class="para">23</a>] </sup>
+      このセクションは、書籍として出版された初版には存在しません。
+      Brian Aker のブログのエントリ
+      <a class="ulink" href="http://krow.livejournal.com/564980.html">"Release Criteria, Open Source, Thoughts On..."</a>
+      を読んで、オープンソースプロジェクトにおける RSS フィードの有用性に気づいたので追記しました。
+    </p></div></div></div></body></html>

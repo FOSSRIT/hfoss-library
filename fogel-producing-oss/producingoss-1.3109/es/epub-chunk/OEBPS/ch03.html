@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 3. Infraestructura Técnica</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Capítulo 3. Infraestructura Técnica"><div class="titlepage"><div><div><h1 class="title"><a id="technical-infrastructure"/>Capítulo 3. Infraestructura Técnica</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Los proyectos de software libre dependen de tecnologías
+que aportan la captura selectiva e integración de la información.
+Mientras mejor se sean usadas estas tecnologías y se persuada a otros
+para utilizarlas, mayor será el éxito del proyecto.</p><p>Esto se vuelve más
+cierto mientras el proyecto crece. Un buen manejo de la información es
+lo que previene a un proyecto open source de colapsar bajo el peso
+de la Ley de Brook,<sup>[<a id="idm849" href="#ftn.idm849" class="footnote">25</a>]</sup>
+la cual afirma que asignar fuerza de trabajo adicional a un proyecto 
+retrasado lo demorará aún más. Fred Brooks observó que la complejidad
+de las comunicaciones en un proyecto se incrementa al<span class="emphasis"><em>cuadrado</em></span>del
+número de participantes. Cuando solo unas pocas personas están
+involucradas, todos pueden hablar entre todos fácilmente, pero cuando
+cientos de personas están involucradas, ya no es posible que cada uno
+de los individuos se mantengan constantemente al tanto de lo que todos
+los demás están haciendo. Si dirigir bien un proyecto de software libre
+se trata de hacer que todos se sientan como si estuviesen trabajando
+juntos en la misma habitación, es obvio preguntar: ¿Qué sucedería si
+todas las personas en una habitación atestada de gente hablase a la vez?
+</p><p>Este problema no es nuevo. En una habitación no metafórica
+atestada, la solución es <em class="firstterm">un procedimiento parlamentario
+</em>: guías formales acerca de cómo tener discusiones en tiempo
+real en grupos grandes, cómo asegurarse de que las disensiones más
+importantes no se pierdan entre comentarios irrelevantes, cómo formar
+subcomites, cómo reconocer y registrar cuando se toman decisiones, etc. Las partes
+más importantes en un procedimiento parlamentario especifican como
+deben interactuar los grupos con su sistema de manejo de información.
+Algunos comentarios se hacen para el registro, otros no. El registro
+mismo es sujeto a manipulación directa y se entiende que no es una
+transcripción literal de lo que ha ocurrido, sino que es una
+representación a lo que el grupo está dispuesto a <span class="emphasis"><em>acordar
+</em></span> sobre lo sucedido. El registro no es monolítico, sino
+que toma diferentes formas para diferentes propósitos. Comprende los
+minutos de encuentros individuales, una colección completa de todos
+los minutos de todos los encuentros, sumarios, agendas y sus
+anotaciones, reportes de comités, reportes de corresponsales no
+presentes, listas de acción, etc.</p><p>Dado que Internet no es realmente una habitación, no debemos
+preocuparnos acerca de replicar aquellas partes de los procesos
+parlamentarios que mantiene a algunas personas calladas mientras
+las demás hablan. Pero cuando nos referimos a técnicas de manejo de
+la información, proyectos open source bien dirigidos son como
+procesos parlamentarios en esteroides. Ya que todas las comunicaciones
+en los proyectos open source suceden por escrito, sistemas muy 
+elaborados han evolucionado para enrutar y etiquetar apropiadamente
+los datos, para minimizar las repeticiones de forma que se eviten
+divergencias espuriosas, para almacenar y buscar los datos, para
+corregir información incorrecta u obsoleta y para
+asociar bits dispares de información con cada uno mientras que nuevas
+conexiones son observadas. Los participantes activos en los proyectos
+open source integran muchas de estas técnicas y a menudo realizaran
+complejas labores manuales para asegurar que la información sea dirigida
+correctamente. Pero todo el esfuerzo depende al final de un sofisticado
+soporte informático. Tanto que sea posible, los mismos medios
+de comunicación deben realizar éste enrutamiento, etiquetado y 
+registro y debería mantener la información al alcance de los humanos
+de la manera más conveniente posible. En la práctica, por supuesto,
+los humanos siguen necesitando intervenir en muchos puntos durante
+el proceso y también es importante que estos programas hagan ésta intervención
+lo más conveniente. Pero por lo general, si los humanos se encargan de
+etiquetar y enrutar información acertadamente desde su primera entrada
+en el sistema, entonces el software debería estar configurado para dar
+el máximo uso posible a esa metadata.</p><p>El consejo de éste capítulo es intensamente práctico, basado en
+las experiencias con aplicaciones y patrones específicos. Pero el objetivo
+no es sólo enseñar una colección particular de técnicas. Es también
+demostrar, utilizando pequeños ejemplos, la actitud general que mejor
+fomentará el correcto uso de los sistemas de manejo de información
+en el proyecto. Esta actitud incluye una combinación de habilidades
+técnicas y don de gentes. Las habilidades técnicas son esenciales
+porque las aplicaciones de manejo de información siempre requieren
+cierta configuración y además una cierta cantidad de mantenimiento
+y puesta apunto mientras nuevas necesidades vayan surgiendo (por ejemplo,
+mirad la discusión de como manejar el crecimiento del proyecto en
+<a class="xref" href="ch03s05.html#bug-filtering" title="Pre-filtrado del gestor de fallos">“Pre-filtrado del gestor de fallos”</a><span> más adelante
+en éste capítulo</span>). El don de gentes es necesario porque la
+comunidad humana también requiere de cierto mantenimiento: no siempre
+es inmediatamente obvio como utilizar estas herramientas para obtener
+una ventaja completa y en algunos casos los proyectos tienen convenciones
+conflictivas (por ejemplo, la discusión de como crear cabeceras
+<code class="systemitem">Reply-to</code> en los mensajes salientes de las
+lista de correos, en <a class="xref" href="ch03s03.html" title="Listas de Correo / Foros de Mensajes">“Listas de Correo / Foros de Mensajes”</a>).
+Todos los involucrados en el proyecto van a necesitar ser animados,
+en el momento correcto de la forma correcta, para que sigan manteniendo
+la información del proyecto bien organizada. Mientras más involucrado
+esté el contribuyente, más complejas y especializadas serán las técnicas
+que se esperará que aprendan.</p><p>El manejo de información no tiene soluciones rápidas ya que existen
+demasiadas variables. Pueden que finalmente se tenga todo configurado
+justo como se desea y tener a la mayoría de la comunidad participando
+pero luego el crecimiento del proyecto hace de estas practicas no escalables.
+El puede que el crecimiento del proyecto se estabilice y que la comunidad
+de usuarios y desarrolladores acuerden una relación confortable con
+la infraestructura técnica pero llega alguien e inventa un nuevo servicio
+de manejo de información completo y pronto muchos de los recién llegados
+empezarán a preguntar que por qué no es utilizado en el proyecto—
+por ejemplo, esto sucedió en muchos proyectos de software
+libre anteriores a la invención del Wiki (más en
+<a class="ulink" href="http://en.wikipedia.org/wiki/Wiki">en.wikipedia.org/wiki/Wiki</a>) y más recientemente ha estado pasando
+en proyectos cuyos flujos de trabajo fueron desarrollados antes de la
+aparición de los pull-requests de GitHub (ver <a class="xref" href="ch03s04.html#pull-requests">“”</a>)
+como la forma canónica de empaquetar las contribuciones propuestas.
+Muchas cuestiones de la infraestructura son
+materia de juicio, incluyendo las desventajas entre la conveniencia de
+aquellos generando información y la conveniencia de aquellos quienes la
+consumen o entre el tiempo requerido para configurar el software de
+manejo de la información y los beneficios que le brinda al proyecto.</p><p>Cuidado con la tentación de automatizar demasiado, esto es,
+automatizar cosas que realmente requieren de atención por parte de los
+humanos. La infraestructura técnica es importante, pero lo que hace que
+los proyectos de software libre funcionen es el cuidado—y la
+expresión inteligente de éste cuidado—de los humanos involucrados.
+Principalmente, la infraestructura técnica está para ofrecer medios
+fáciles para aplicar dichos cuidados.</p></div><div class="sect1" title="Lo que necesita un proyecto"><div class="titlepage"><div><div><h1 class="title"><a id="tools-needed"/>Lo que necesita un proyecto</h1></div></div></div><p>La mayoría de los proyectos open source ofrecen al menos un mínimo
+y estándar conjunto de herramientas para manejar información:</p><div class="variablelist"><dl><dt><span class="term">Sitio Web</span></dt><dd><p>
+	Principalmente, conducto de información centralizado
+	en un sentido del proyecto para el público. El sitio
+	web puede también servir como una interfaz para
+	otras herramientas del proyecto.</p></dd><dt><span class="term">Listas de Correo / Foros de Mensajes</span></dt><dd><p>Usualmente es el foro de comunicación más activo
+	         del proyecto, y el "medio de registro."</p></dd><dt><span class="term">Control de Versiones</span></dt><dd><p>
+	Permite a los desarrolladores realizar cambios al código
+	convenientemente, incluso retroceder y exportar cambios.
+	Le permite a todos mirar lo que está sucediendo con el
+	código.</p></dd><dt><span class="term">Gestión de fallos</span></dt><dd><p>
+	Permite a los desarrolladores mantener un registro de en qué
+	están trabajando, coordinandose entre ellos y planear
+	lanzamientos. Permite que todo el mundo pueda realizar
+	búsquedas acerca del estado de los fallos y registrar
+	información (p.e. recetas reproducibles) acerca de fallos
+	en particular. Puede ser utilizado para seguir no solo
+	fallos, sino también lanzamientos, tareas, 
+	nuevas características,etc.</p></dd><dt><span class="term">Chat en tiempo real</span></dt><dd><p>
+	Un sitio para discusiones rápidas, sencillas e
+	intercambios de preguntas/respuestas. No siempre
+	se archiva completamente.</p></dd></dl></div><p>Cada una de estas herramientas está dirigida a distintas necesidades,
+pero sus funciones están también interrelacionadas y se debe hacer que
+estas herramientas trabajen en conjunto. Más abajo examinaremos como podemos
+lograr esto y más importante aun como hacer que las personas se acostumbren
+a usarlas.</p><p>Se pueden evitar muchos dolores de cabeza por escoger y configurar
+muchas de estas herramientas si en su lugar utilizamos un <em class="firstterm">hosting enlatado
+</em>: un servicio en línea que ofrece servicios preempacados y con plantillas
+de algunas o todas las herramientas de colaboración necesarias para
+llevar a cabo un proyecto de software libre. Más en <a class="xref" href="ch03s02.html#canned-hosting" title="Hosting Enlatado">“Hosting Enlatado”</a><span>
+a continuación en éste mismo capítulo</span> para una discusión más
+profunda acerca de las ventajas y desventajas de estas soluciones.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm849" href="#idm849" class="para">25</a>] </sup>De su libro<em class="citetitle">El mes mítico
+del hombre</em>, 1975. Más en <a class="ulink" href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month">en.wikipedia.org/wiki/The_Mythical_Man-Month</a>, <a class="ulink" href="http://en.wikipedia.org/wiki/Brooks_Law">en.wikipedia.org/wiki/Brooks_Law</a>, y
+<a class="ulink" href="http://en.wikipedia.org/wiki/Fred_Brooks">en.wikipedia.org/wiki/Fred_Brooks</a>.</p></div></div></div></body></html>

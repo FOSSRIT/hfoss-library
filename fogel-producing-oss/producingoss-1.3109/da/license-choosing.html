@@ -1,0 +1,127 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Choosing a License</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion af open source software"><link rel="up" href="legal.html" title="Kapitel 9. Licenses, Copyrights, and Patents"><link rel="prev" href="license-compatibility.html" title="The GPL and License Compatibility"><link rel="next" href="copyright-assignment.html" title="Copyright Assignment and Ownership"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Choosing a License</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="license-compatibility.html">forrige</a> </td><th width="60%" align="center">Kapitel 9. Licenses, Copyrights, and Patents</th><td width="20%" align="right"> <a accesskey="n" href="copyright-assignment.html">næste</a></td></tr></table><hr></div><div class="sect1" title="Choosing a License"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="license-choosing"></a>Choosing a License</h2></div></div></div><p>When choosing a license to apply to your project, if at all
+possible use an existing license instead of making up a new one.
+There are two reasons why existing licenses are better:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Familiarity.  If you use one of the three or four
+            most popular licenses, people won't feel they have to read
+            the legalese in order to use your code, because they'll
+            have already done so for that license a long time ago.</p></li><li class="listitem"><p>Quality.  Unless you have a team of lawyers at your
+            disposal, you are unlikely to come up with a legally solid
+            license.  The licenses mentioned here are the products of
+            much thought and experience; unless your project has truly
+            unusual needs, it is unlikely you would do better.</p></li></ul></div><p>To apply one of these licenses to your project, see
+<a class="xref" href="license-quickstart.html#license-quickstart-applying" title="How to Apply a License to Your Software">&#8220;How to Apply a License to Your Software&#8221;</a><span>
+in <a class="xref" href="getting-started.html" title="Kapitel 2. Getting Started">Kapitel 2, <i>Getting Started</i></a></span>.</p><div class="sect2" title="The MIT / X Window System License"><div class="titlepage"><div><div><h3 class="title"><a name="license-choosing-mit-x"></a>The MIT / X Window System License</h3></div></div></div><p>If your goal is that your code be accessible by the greatest
+possible number of developers and derivative works, and you do not
+mind the code being used in proprietary programs, choose the MIT / X
+Window System license (so named because it is the license under which
+the Massachusetts Institute of Technology released the original X
+Window System code).  This license's basic message is "You are free to
+use this code however you want."  It is compatible with the GNU GPL,
+and it is short, simple, and easy to understand:</p><pre class="screen">Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre><p>(Taken from <a class="ulink" href="http://www.opensource.org/licenses/mit-license.php" target="_top">http://www.opensource.org/licenses/mit-license.php</a>.)</p></div><div class="sect2" title="The GNU General Public License"><div class="titlepage"><div><div><h3 class="title"><a name="license-choosing-gpl"></a>The GNU General Public License</h3></div></div></div><p>If you prefer that your project's code not be used in
+proprietary programs, or if you at least don't care whether or not it
+can be used in proprietary programs, choose the GNU General Public
+License
+(<a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html" target="_top">http://www.fsf.org/licensing/licenses/gpl.html</a>).  The
+GPL is probably the most widely-used free software license in the
+world today; this instant recognizability is itself one of the GPL's
+major advantages.</p><p>When writing a code library that is meant mainly to be used as
+part of other programs, consider carefully whether the restrictions
+imposed by the GPL are in line with your project's goals.  In some
+cases&#8212;for example, when you're trying to unseat a competing,
+proprietary library that does the same thing&#8212;it may make more
+strategic sense to license your code in such a way that it can be
+mixed into proprietary programs, even though you would otherwise not
+wish this.  The Free Software Foundation even fashioned an alternative
+to the GPL for such circumstances: the <em class="firstterm">GNU Library
+GPL</em>, later renamed to the <em class="firstterm">GNU Lesser
+GPL</em> (most people just use the acronym
+<em class="firstterm">LGPL</em>, in any case).  The LGPL has looser
+restrictions than the GPL, and can be mixed more easily with non-free
+code.  However, it's also a bit complex and takes some time to
+understand, so if you're not going to use the GPL, I recommend just
+using the MIT/X-style license.</p><div class="sect3" title="Is the GPL free or not free?"><div class="titlepage"><div><div><h4 class="title"><a name="is-the-gpl-free"></a>Is the GPL free or not free?</h4></div></div></div><p>One consequence of choosing the GPL is the
+possibility&#8212;small, but not infinitely small&#8212;of finding
+yourself or your project embroiled in a dispute about whether or not
+the GPL is truly "free", given that it places some restrictions on
+what you can do with the code&#8212;namely, the restriction that the
+code cannot be distributed under any other license.  For some people,
+the existence of this restriction means the GPL is "less free" than
+more permissive licenses such as the MIT/X license.  Where this
+argument usually goes, of course, is that since "more free" must be
+better than "less free" (after all, who's not in favor of freedom?),
+it follows that those licenses are better than the GPL.</p><p>This debate is another popular holy war (see
+<a class="xref" href="common-pitfalls.html#holy-wars" title="Avoid Holy Wars">&#8220;Avoid Holy Wars&#8221;</a><span> in
+<a class="xref" href="communications.html" title="Kapitel 6. Communications">Kapitel 6, <i>Communications</i></a></span>).  Avoid participating
+in it, at least in project forums.  Don't attempt to prove that the
+GPL is less free, as free, or more free than other licenses.  Instead,
+emphasize the specific reasons your project chose the GPL.  If the
+recognizability of license was a reason, say that.  If the enforcement
+of a free license on derivative works was also a reason, say that too,
+but refuse to be drawn into discussion about whether this makes the
+code more or less "free".  Freedom is a complex topic, and there is
+little point talking about it if terminology is going to be used as a
+stalking horse for substance.</p><p>Since this is a book and not a mailing list thread, however, I
+will admit that I've never understood the "GPL is not free" argument.
+The only restriction the GPL imposes is that it prevents people from
+imposing <span class="emphasis"><em>further</em></span> restrictions.  To say that this
+results in less freedom has always seemed to me like saying that
+outlawing slavery reduces freedom, because it prevents some people
+from owning slaves.</p><p>(Oh, and if you do get drawn into a debate about it, don't raise
+the stakes by making inflammatory analogies.)</p></div></div><div class="sect2" title="What About The BSD License?"><div class="titlepage"><div><div><h3 class="title"><a name="license-bsd"></a>What About The BSD License?</h3></div></div></div><p>A fair amount of open source software is distributed under
+a <em class="firstterm">BSD license</em> (or sometimes
+a <em class="firstterm">BSD-style license</em>).  The original BSD license
+was used for the Berkeley Software Distribution, in which the
+University of California released important portions of a Unix
+implementation.  This license (the exact text may be seen in section
+2.2.2 of
+<a class="ulink" href="http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6" target="_top">http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6</a>) was
+similar in spirit to the MIT/X license, except for one
+clause:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>All advertising materials mentioning features or use
+of this software must display the following acknowledgement: This
+product includes software developed by the University of California,
+Lawrence Berkeley Laboratory.</em></span></p></blockquote></div><p>The presence of that clause not only made the original BSD
+license GPL-incompatible, it also set a dangerous precedent: as other
+organizations put similar advertising clauses into
+<span class="emphasis"><em>their</em></span> free software&#8212;substituting their own
+organization's name in place of "the University of California,
+Lawrence Berkeley Laboratory"&#8212;software redistributors faced an
+ever-increasing burden in what they were required to display.
+Fortunately, many of the projects that used this license became aware
+of the problem, and simply dropped the advertising clause.  In 1999,
+even the University of California did so.</p><p>The result is the revised BSD license, which is simply the
+original BSD license with the advertising clause removed.  However,
+this history makes the phrase "BSD license" a bit ambiguous: does it
+refer to the original, or the revised version?  This is why I prefer
+the MIT/X license, which is essentially equivalent, and which does not
+suffer from any ambiguity.  However, there is perhaps one reason to
+prefer the revised BSD license to the MIT/X license, which is that the
+BSD includes this clause:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Neither the name of the &lt;ORGANIZATION&gt; nor the
+names of its contributors may be used to endorse or promote products
+derived from this software without specific prior written
+permission.</em></span></p></blockquote></div><p>It's not clear that without such a clause, a recipient of the
+software would have had the right to use the licensor's name anyway,
+but the clause removes any possible doubt.  For organizations worried
+about trademark control, therefore, the revised BSD license may be
+slightly preferable to MIT/X.  In general, however, a liberal
+copyright license does not imply that recipients have any right to use
+or dilute your trademarks &#8212; copyright law and trademark law are
+two different beasts.</p><p>If you wish to use the revised BSD license, a template is
+available at <a class="ulink" href="http://www.opensource.org/licenses/bsd-license.php" target="_top">http://www.opensource.org/licenses/bsd-license.php</a>.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="license-compatibility.html">forrige</a> </td><td width="20%" align="center"><a accesskey="u" href="legal.html">op</a></td><td width="40%" align="right"> <a accesskey="n" href="copyright-assignment.html">næste</a></td></tr><tr><td width="40%" align="left" valign="top">The GPL and License Compatibility </td><td width="20%" align="center"><a accesskey="h" href="index.html">hjem</a></td><td width="40%" align="right" valign="top"> Copyright Assignment and Ownership</td></tr></table></div></body></html>

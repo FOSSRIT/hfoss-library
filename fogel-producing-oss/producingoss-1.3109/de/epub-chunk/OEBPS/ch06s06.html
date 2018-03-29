@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Öffentlichkeit</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Öffentlichkeit"><div class="titlepage"><div><div><h1 class="title"><a id="publicity"/>Öffentlichkeit</h1></div></div></div><p>Bei freier Software gibt es einen relativ glatten Übergang
+zwischen rein internen Diskussionen und öffentlichen Bekanntmachungen.
+Das liegt zum Teil daran, dass die Zielgruppe immer schlecht bestimmbar
+ist: Angesichts, dass die meisten oder alle Nachrichten öffentlich
+zugänglich sind, hat das Projekt nicht die volle Kontrolle darüber,
+welchen Eindruck die Öffentlichkeit bekommt. Jemand – sagen wir
+ein <a class="ulink" href="heise.de">heise.de</a> Mitarbeiter – kann die Aufmerksamkeit
+von Millionen Lesern auf eine Nachricht richten, von der keiner vermutet
+hätte, dass sie jemals außerhalb des Projekts gesehen werden würde.
+Das ist eine Tatsache des Lebens, mit der alle Open-Source-Projekte
+leben müssen, in der Praxis aber, ist das Risiko für gewöhnlich klein.
+Im algemeinen, sind die Bekanntgaben die das Projekt am ehesten
+öffentlich verbreiten will, diejenigen die auch am ehesten bekannt
+werden, angenommen Sie nutzen die richtigen Mechanismen darauf 
+hinzuweisen, wie berichtenswert es ist für die Öffentlichkeit ist.
+</p><p>Für großere Bekanntgaben, gibt es allgemein vier Hauptkanäle der
+Verbreitung, auf den Melungen so gleichzeitig wie möglich gemacht 
+werden sollten:</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Die erste Seite Ihres Projekts wird wahrscheinlich
+	    von mehr leuten gesehen, als irgend ein anderer Teil des
+	    Projekts. Wenn Sie eine wirklich große Ankündigung haben,
+	    schreiben Sie einen paar kurzen Sätze dorthin. Sie sollten
+	    eine kurze Zusammenfassung sein die auf die Pressemitteilung
+	    (siehe unten) für weitere Informationen verweist.</p></li><li class="listitem"><p>Gleichzeitig, sollten Sie auch einen "Nachrichten"
+	    oder "Pressemitteilungen" Bereich auf der Webseite haben
+	    wo die Bekanntgabe im detail erläutert werden kann. Der
+	    Sinn von einer Pressemitteilung liegt zum Teil darin, ein
+	    einziges kanonisches "Bekanntgabe-Objekt" zu haben, auf
+	    das andere Seite verlinken können, also stellen Sie sicher,
+	    dass es entsprechend strukturiert ist: entweder als eine
+	    Webseite für jede neue Version, als diskreten Eintrag in
+	    einem Blog, oder als irgend eine andere Art Entität auf
+	    die verlinkt werden kann, und die trotzdem eindeutig
+            von anderen Veröffentlichungen imselben Bereich zu
+	    unterscheiden ist.</p></li><li class="listitem"><p>Wenn Ihr Projekt einen RSS-Feed hat, stellen Sie 
+	    sicher, dass die Ankündigung auch dort veröffentlicht wird.
+	    Das mag automatisch passieren wenn Sie die Pressemitteilung
+	    erstellen, abhängig davon, wie Ihre Webseite eingerichtet
+	    ist. (<em class="firstterm">RSS</em> ist eine Methode, um
+	    Nachrichten-Zusammenfassungen mit einer Menge Metadaten an
+	    "Abonenten" zu verteilen, zu verbreiten, also Leute die ein
+	    Interesse gezeigt haben, diese Zusammenfassungen zu 
+	    bekommen. Siehe <a class="ulink" href="http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html">http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html</a>
+            für weitere Informationen über RSS.)</p></li><li class="listitem"><p>Wenn es in der Ankündigung um eine neue Version der
+	Software geht, dann aktualisieren Sie den Eintrag Ihres Projekts
+	bei <a class="ulink" href="http://freshmeat.net/">http://freshmeat.net/</a> (siehe <a class="xref" href="ch02s04.html" title="Bekanntgabe">„Bekanntgabe“</a> in dem es darum geht diesen Eintrag 
+	überhaupt erst anzulegen). Jedes mal, wenn Sie einen 
+        Freshmeat-Eintrag aktualisieren, geht dieser Eintrag auf die 
+	Änderungsliste von Freashmeat für den Tag. Die Änderungsliste
+	wird nicht nur auf Freashmeat selber aktualisiert, sondern auf
+	verschiedenen anderen Portalen (inklusive <a class="ulink" href="slashdot.org">slashdot.org</a>) welches erwartungsvoll von einer Horde
+	Menschen beobachtet wird. Freshmeat bietet auch die gleichen
+	Daten mittels eines RSS-Feed an, damit Leute die den RSS-Feed
+	von Ihrem projekt aboniert haben, die Ankündigung trotzdem
+	durch den von Freshmeat sehen.</p></li><li class="listitem"><p>Schreiben Sie eine E-Mail an den Verteiler für
+	Ankündigungen (en. announcement) ihres Projekts. Der Name von
+	diesem Verteiler sollte wirklich "announce" sein, d.h. 
+	<code class="literal">announce@ihrprojekt.org</code>, weil das 
+	mittlerweile so ziemlich zum Standard geworden ist, und Ihr
+	Projekt sollte klarstellen, dass es einen sehr geringen
+	Betrieb hat, ausschließlich für Projekt Ankündigunen. Die
+	meisten dieser Ankündigunen werden sich um neue Versionen der
+	Software drehen, gelegentlich aber andere Ereignisse, wie eine
+	Spendaktion, die Entdeckung einer Sicherheitslücke (siehe 
+	<a class="xref" href="ch06s06.html#security" title="Bekanntgabe von Sicherheitslücken">„Bekanntgabe von Sicherheitslücken“</a>)<span> später
+	in diesem Kapitel</span>, oder eine größere Änderung in der
+	Richtung des Projekts können dort auch gemeldet werden. Da es
+	ein Verteiler mit geringem Betrieb ist und nur für wichige
+	Sachen benutzt wird, hat der <code class="literal">announce</code> 
+	Verteiler typischerweise die höchste Anzahl an Anmeldungen von
+	allen Verteilern in Ihrem Projekt (das bedeutet natürlich, dass
+	Sie es nicht missbrauchen sollten – überlegen Sie genau vor
+	Sie etwas schreiben). Um zu vermeiden, dass jeder beliebige,
+	oder schlimmer noch, Spam durchkommt, muss der
+	<code class="literal">announce</code> Verteiler immmer moderiert werden.
+	</p></li></ol></div><p>Versuchen Sie die Ankündigunen an all diesen Stellen zur gleichen
+Zeit zu machen, so nahe wie möglich. Manche werden vielleicht verwirrt,
+wenn Sie eine Ankündigung auf dem Verteiler sehen, aber keinen 
+entsprechenden Eintrag auf der Webseite des Projekts oder seinen
+Pressemitteilungen, welches dem entspricht. Wenn Sie die die 
+verschiedenen Änderungen (E-Mails, Bearbeitung der Webseite, usw.)
+aufreihen und alle in einem Zug abschicken, können Sie das Fenster der
+inkonsistenz sehr klein halten.</p><p>Bei einem weniger wichtigen Ereignis, können Sie manche oder
+alle obigen Kanäle ausschließen. Das Ereignis wird immer noch von
+der Öffentlichkeit entsprechend seiner Wichtigkeit bemerkt werden.
+Während zum Beispiel eine neue Version der Software ein großes
+Ereignis ist, ist lediglich das Datum für eine neue Version 
+festzulegen, wenn auch einigermaßen Berichtenswert, nich annähernd so
+wichtig wie die neue Version selbst. Ein Datum festzulegen ist eine
+E-Mail an die täglichen Mailverteiler wert (nicht an den "announce"
+Verteiler), und eine aktualisierung der Zeitplan oder der Status-Seite,
+aber nicht mehr.</p><p>Sie werden vielleicht trotzdem dieses Datum in anderen 
+Diskussionen im Internet auftauchen sehen, überall dort, wo Leute an
+dem Projekt interesiert sind. Leute die auf Ihren Verteilern
+herumschleichen, lediglich horchen und nie etwas sagen, sind nicht
+unbedingt an andern Stellen still. Mundpropaganda sorgt für eine sehr
+weite Verbreitung; Sie sollten darauf zählen, und selbst kleine
+Ankündigunen sorgfältig ausarbeiten, derart, dass eine korrekte
+übertragung der Informationen ermutigt wird. Insbesondere Nachrichten,
+von denen Sie erwarten, dass sie zitiert werden, sollten einen klaren
+für die Zitierung gedachten Anteil haben, genau so, als ob Sie eine
+formale Pressemitteilung schreiben würden. Zum Beispiel:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Nur eine Information über den aktuellen Stand:
+	Wir planen die Version 2.0 von Scanley mitte August 2005 zu
+	veröffentlichen. Sie können immer 
+	http://www.scanley.org/status.html auf Aktualisierungen 
+	überprüfen. Die große neue Funtion wird die Suche mit
+	Regulären Ausdrücken sein.</em></span></p><p><span class="emphasis"><em>Andere neue Funktionen sind unter anderem: ... 
+	Es wird auch verschiedene Bugfixes geben, unter 
+	anderem: ...</em></span></p></blockquote></div><p>Der erste Absatz ist kurz, gibt die zwei wichtigsten Informationen
+(Datum der Veröffentlichung und die wichtige neue Funktion), und eine
+URL die man für weitere Nachrichten besuchen kann. Wenn dieser Absatz
+das einzige ist, was über den Bildschirm von jemanden läuft, sind Sie
+immer noch auf einem guten Weg. Die übrige E-Mail könnte verloren gehen
+ohne das wesentlich am Ihnalt zu beeinflussen. Manchmal werden Leute
+sowieso auf die ganze E-Mail verlinken, aber genau so oft, werden Sie
+nur einen kleinen Teil zitieren. Wenn man letztere Möglichkeit bedenkt,
+können Sie es ihnen auch genau so gut einfach machen, und bei dem
+Geschäft etwas Einfuss darüber haben, was zitiert wird.</p><div class="sect2" title="Bekanntgabe von Sicherheitslücken"><div class="titlepage"><div><div><h2 class="title"><a id="security"/>Bekanntgabe von Sicherheitslücken</h2></div></div></div><p>Eine Sicherheitslücke zu handhaben ist anders, als jede andere Art
+von Bug-Meldung zu handhaben. Bei freier Software, ist es fast schon
+eine religiöse Überzeugung alles offen zu machen. Jeder Schritt der im
+Ablauf der normalen Bug handhabung ist für alle sichtbar, denen es
+interesiert: Das Eintreffen einer ersten Meldung, die darauf folgende
+Diskussion, und die letztendliche Behebung.</p><p>Sicherheitslücken sind anders. Sie können die Daten und 
+möglicherweise die Rechner von Nutzer kompromitieren. Solche Probleme
+offen zu diskutieren käme dem weltweiten Bewerben ihrer Existenz gleich
+– inklusive gegenüber allen Parteien, die vielleicht einen
+böswilligen Nutzen aus dem Bug ziehen könnten. Selbst den Fix zu 
+commiten, kündigt effektiv die Existenz des Bugs an (es gibt potentielle
+Angreifer, welche die Commit-Kommentare öffentlicher Projekte
+verfolgen, systematisch auf der Suche nach Änderungen, die auf
+Sicherheitsprobleme in dem noch nicht geänderten Code hinweisen). Die
+meisten Projekte haben sich auf ungefär die gleichen Schritte
+festgelegt, um diesen Konflikt zwischen Offenheit und Geheimhaltung
+zu handhaben, basierend auf folgende Richtlinien:</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Reden Sie nicht öffentlich über den Bug bis ein Fix
+	verfügbar ist; stellen Sie dann den Fix zu genau der selben 
+	Zeit zur Verfügung wie Sie den Bug bekanntgeben.</p></li><li class="listitem"><p>Denken Sie sich diesen Fix so schnell wie möglich
+	aus – insbesondere wenn jemand von außerhalb des Projekts
+	den Bug gemeldet hat, denn dann wissen Sie, dass es zumindest
+	eine Person außerhalb des Projekts gibt, der in der Lage ist
+	die Lücke auszunutzen.</p></li></ol></div><p>In der Praxis, führen diese Prinzipien zu einer ziemlich 
+standardisierte reihe an Schritten, welche in den Abschnitten weiter
+unten beschrieben werden.</p><div class="sect3" title="Empfang der Meldung"><div class="titlepage"><div><div><h3 class="title"><a id="security-receiving"/>Empfang der Meldung</h3></div></div></div><p>Ein Projekt muss offensichtlich die Möglichkeit habem Meldungen
+über Sicherheitslücken von jedem zu bekommen. Die gewöhnlichen Adressen
+für Bug-Meldungen reichen aber nicht aus, da sie auch von jedem
+beobachtet werden können. Führen Sie desshalb einen getrennten 
+Mailverteiler um Bug-Meldungen über Sicherheitslücken zu bekommen. Dieser
+Verteiler darf keine öffentlich zugänglichen Archive haben, und
+seine Anmeldungen müssen strengstens überwacht werden – nur
+langjährige, vertrauenswürdige Entwickler dürfen auf den Verteiler 
+sein. Wenn Sie eine formale Definition darüber haben wollen was
+"vertrauenswürdig" ist, können Sie "jeder der seit zwei oder mehr 
+Jahren commit Zugriff hat" verwenden, um Bevorzugung zu vermeiden.
+Das ist die Gruppe die Sicherheitslücken handhaben wird.</p><p>Im Idealfall sollte der Sicherheits-Verteiler nicht vor Spam
+geschützt oder moderiert werden, da Sie nicht wollen, dass eine 
+wichtige Meldung gefiltert oder verzögert wird, nur weil an dem
+Wochenende keine Moderatoren online waren. Wenn Sie doch Software zum
+automatischen Schutz vor Spam benutzen, versuchen Sie es mit einer
+hohen Toleranz zu konfigurieren; es ist besser ein paar Spam-Mails
+durchkommen zu lassen, als eine Meldung zu verpassen. Damit der
+Verteiler effektiv ist, müssen Sie natürlich seine Adresse bewerben;
+in anbetracht, dass er nicht moderiert wird, wenn überhaupt, nur leicht
+vor Spam geschützt wird, versuchen Sie nie seine Adresse ohne irgend
+eine Art verschleierung der Adresse zu verbreiten, wie in <a class="xref" href="ch03s02.html#address-hiding" title="Verschleierung von Adressen im Archiv">„Verschleierung von Adressen im Archiv“</a><span> im Kapitel <a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a></span> beschrieben. 
+Glücklicherweise, muss die Verschleierung der Adresse sie nicht
+unbedingt unleserlich machen; siehe <a class="ulink" href="http://subversion.tigris.org/security.html">http://subversion.tigris.org/security.html</a>, und schauen Sie
+sich den HTML Quellcode für die Seite als Beispiel an.</p></div><div class="sect3" title="Entwickeln Sie den Fix im stillen"><div class="titlepage"><div><div><h3 class="title"><a id="security-finding-a-fix"/>Entwickeln Sie den Fix im stillen</h3></div></div></div><p>Was macht der sicherheits Verteiler also wenn es eine Meldung 
+bekommt? Die erste Aufgabe ist zu evaluieren wie schwerwiegend und
+dringend es ist:</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Wie ernst ist die Lücke? Erlaubt es einen
+	böswilligen Angreifer den Computer von jemanden der Ihre 
+	Software benutzt zu übernehmen? Oder gibt es lediglich
+	Informationen darüber, wie groß manche ihrer Dateien sind?
+	</p></li><li class="listitem"><p>Wie leicht ist es die Lücke auszunutzen? Kann ein
+	Angriff automatisiert werden, oder erfordert es Wissen über
+	bestimmte Umstände, wohlbegründete Vermutungen und Glück?</p></li><li class="listitem"><p><span class="emphasis"><em>Wer</em></span> hat Ihnen das Problem
+	gemeldet? Die Antwort auf diese Frage ändert natürlich nichts an
+	der Natur der Lücke, aber es gibt Ihnen eine Idee davon, wie
+	viele andere darüber bescheid wissen könnten. Wenn die Meldung
+	von einem der eigenen Mitglieder des Projekts kommt, können Sie
+	es etwas gelassener nehmen (aber nur ein bisschen), da Sie
+	ihnen Vertrauen können, dass sie es keinen anderen gesagt 
+	haben. Wenn es andereseits in einer E-Mail von
+	<code class="literal">anonymer14@globalehacker.net</code> kam, dann 
+	sollten Sie lieber so schnell wie möglich etwas unternehmen.
+	Die Person hat Ihnen einen Gefallen getan, indem sie Ihnen
+	überhaupt über das Problem informiert hat, aber Sie haben
+	keine Ahnung wie viele weitere sie darüber bescheid gesagt hat,
+	oder wie lange sie warten wird, vor sie die schwachstelle in
+	einem laufenden System ausnutzen wird.</p></li></ol></div><p>Man merke an, dass die Unteschiede von denen wir hier reden oft
+nur eine enge Spanne zwischen <span class="emphasis"><em>dringend</em></span> und
+<span class="emphasis"><em>extrem dringend</em></span> ist. Selbst wenn die Meldung
+von einer bekannten, wohl gesinnten Quelle kommt, könnte es immer noch
+andere im Netz geben, die diesen Bug schon vor langem entdeckt haben,
+und es nur nicht gemeldet haben. Der einzige Fall bei dem es nicht
+dringen ist, ist wenn der Bug von sich aus die Sicherheit nicht
+ernsthaft Kompromitiert.</p><p>Das "<code class="literal">anonyer@globalehacker.net</code>" Beispiel
+ist im übrigen nicht schertzhaft gemeint. Es kann durchaus sein, dass
+Sie Bug-Meldungen von anonymen Personen bekommen, die mit Ihren Worten
+nie ganz klar stellen ob sie auf Ihrer Seite sind oder nicht. Es macht
+keinen Unterschied: Wenn Sie eine Sicherheitslücke an Sie gemeldet 
+haben, werden sie das gefühl haben Ihenen eine Gefallen getan zu haben,
+und Sie sollten entsprechend antworten. Danken Sie ihnen für die
+Meldung, geben Sie ein Datum an vor dem Sie vorhaben einen öffentlichen
+Fix freizugeben, und halten Sie sie den Kontakt. Manchmal werden sie
+<span class="emphasis"><em>Ihnen</em></span> ein Datum geben – das heißt, eine
+implizite Drohung den Bug an einem bestimmten Datum bekannt zu geben,
+ob Sie bereit sind oder nicht. Das mag sich nach einschüchterndem
+Machtspiel anfühlen, aber es ist wahrscheinlich eher eine vorsorgliche
+Maßnahme die sich aus vergangener Enttäschung mit nicht reagierenden
+Software-Produzenten, welche die Sicherheitsmeldungen nicht ernst
+genug nahmen. In jedem Fall, können Sie es sich nicht leisten, dieser
+Person auf die Nerven zu gehen. Wenn der Bug ernst ist, hat er
+schließlich Wissen, welches Ihren Nutzern ernste Probleme bereiten
+könnte. Behandeln Sie solche Personen gut, und hoffen Sie darauf, dass
+sie auch gut behandelt werden.</p><p>Eine weitere Person die häufig Bugs meldet, ist der Sicherheitsprofi, 
+jemand der davon lebt, Code zu überprüfen und sich auf dem
+Laufenden über die neusten Software-Schwachstellen hält. Diese Leute
+haben für gewöhnlich Erfahrung mit beiden Seiten des Zauns – sie
+haben sowohl Meldungen gemacht als auch bekommen, wahrscheinlich mehr
+als die meisten in Ihrem Projekt. Auch sie werden wahrscheinlich ein
+Frist setzen, vor dem eine Lücke geschlossen werden muss, vor sie an
+die öffentlichkeit gehen. Die Frist mag etwas verhandelbar sei, das
+hängt aber vom Meldenden ab; Fristen sind unter Sicherheitsexperten
+so ziemlich als die einzige Möglichkeit anerkannt worden, Organisationen 
+zuverlässig dazu zu bringen, sich um Sicherheitsprobleme zeitnah zu
+kümmern. Betrachten Sie die Frist also nicht als unhöflich, sie ist 
+eine altehrwürdige Tradition und es gibt gute Gründe dafür.</p><p>Sobald Sie wissen wie schwerwiegend und dringend eine Lücke ist,
+können Sie sich an dem Fix zu schaffen machen. Es gibt manchmal einen
+Kompromiss zwischen einen eleganten Fix und es schnell zu machen; das
+ist der Grund warum Sie sich vorher über die Dringlichkeit einigen
+müssen vor Sie anfangen. Halten Sie die Diskussion über den Fix 
+natürlich auf die Mitglieder des Sicherheitsverteilers beschränkt,
+sowie auf den ursprünglichen Meldenden (wenn die beteiligt sein möchte)
+und solche Entwickler die aus technischen Gründen herangezogen werden
+müssen.</p><p>Committen Sie den Fix nicht zum Projektarchiv. Halten Sie ihn als
+Patch bereit bis zum Datum der Bekanntgabe. Wenn Sie es committen
+würden, selbst mit einem unscheinbaren Kommentar, könnte jemand die
+Änderung bemerken und verstehen. Sie wissen nie, wer Ihr Projektarchiv im
+Auge behält und warum sie vielleicht interesiert sein könnten. 
+Commit-E-Mails 
+abzuschalten würde nichts bringen; erstens weil sich die Lücke
+in der Reihe der E-Mails verdächtig aussehen würde, und die Daten wären
+immer noch im Projektarchiv. Machen Sie einfach die ganze Entwicklung
+in einem Patch und halten Sie ihn an einem privaten Ort, vielleicht ein
+getrenntes privates Projektarchiv, das nur denjenigen bekannt ist, die
+schon über den Bug Bescheid wissen. (Wenn Sie eine dezentralisierte
+Versionsverwaltung benutzen wie Arch oder SVK, können Sie die Arbeit
+mit kompletter Versionsverwaltung machen und dieses Projektarchiv einfach
+vorm Zugriff für Ausenstehende schützen.)</p></div><div class="sect3" title="CAN/CVE-Nummer"><div class="titlepage"><div><div><h3 class="title"><a id="security-cve"/>CAN/CVE-Nummer</h3></div></div></div><p>Sie haben vielleicht eine <em class="firstterm">CAN-Nummer</em> oder
+eine <em class="firstterm">CVE-Nummer</em> im Zusammenhang mit 
+Sicherheitsproblemen gesehen. Diese Zahlen sehen für gewöhnlich zum
+Beispiel so "CAN-2004-0397" oder so "CVE-2002-0092" aus.</p><p>Beide Zahlenarten repräsentieren den gleichen Entitätstyp:
+Ein Eintrag in der Liste von "Common Vulnerabilities and Exposures" 
+(de. "Verbreitete Schwachstellen und Aufdeckungen") die bei
+<a class="ulink" href="http://cve.mitre.org/">http://cve.mitre.org/</a> gepflegt wird. Der Sinn dieser
+Liste ist es standardisierte Namen für alle bekannte 
+Sicherheitsprobleme zur verfügung zu stellen, damit jeder einen
+eindeutigen, kanonischen Namen bei der Diskussion eines solchen hat,
+und einen zentralen Ort zu haben, um mehr Informationen zu bekommen.
+Der einzige Unterschied zwischen einer "CAN"-Nummer und einer 
+"CVE"-Nummer ist, dass erstere einen Kandidaten-Eintrag repräsentiert, 
+welches noch nichtbestätigt wurde, und letzteres einen bestätigten
+Eintrag repräsentiert. Beide Typen sind jedoch für die Öffentlichkeit
+sichtbar, und die Nummer für einen Eintrag ändert sich nicht, wenn Sie
+bestätigt wird – der "CAN"-Prefix wird einfach mit "CVE" ersetzt.
+</p><p>Ein CAN/CVE-Eintrag entält selber nicht eine vollständige
+Beschreibung von dem Bug und wie Sie sich vor ihm schützen. 
+Stattdessen, enthält es eine kurze Beschreibung und eine Liste von
+Verweisen auf externe Ressourcen (wie die Archive des Verteilers) wo
+Leute detalliertere Infomationen nachschlagen können. Der wirkliche
+Sinn von <a class="ulink" href="http://cve.mitre.org/">http://cve.mitre.org/</a> ist einen wohl
+organisierten Ort zu haben, in dem jede Schwachstelle einen Namen 
+haben und eine klare Route zu weiteren Daten haben kann. Siehe
+<a class="ulink" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0092">http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002-0092</a>
+als Beispiel für einen Eintrag. Beachten Sie, dass Verweise sehr kurz
+gehalten sein können, mit Quellen die als kryptische Abkürzungen
+erscheinen. Ein Schlüssel zu diesen Abkürzungen befindet sich bei
+<a class="ulink" href="http://cve.mitre.org/cve/refs/refkey.html">http://cve.mitre.org/cve/refs/refkey.html</a>.</p><p>Wenn Ihre Schwachstelle die Kriterien für ein CVE erfüllt, kann
+es sein, dass Sie dafür eine CAN-Nummer bekommen wollen. Der Prozess
+dafür ist absichtlich umständlich gehalten: Im Prinzip müssen Sie
+jemanden kennen, oder jemanden kennen der jemand anderen kennt. Das ist
+nicht so verrückt wie es sich anhören mag. Damit die CVE-Redaktion
+es vermeiden kann von unechten oder schlecht geschriebenen Vorschlägen
+überwältigt wird, nehmen Sie nur Vorschläge von Quellen, die sie bereits 
+kennen und denen Sie vertrauen. Damit Ihre Lücke in der Liste aufgenommen
+wird, müssen Sie desshalb einen Pfad von Bekanntschaften von Ihrem
+Projekt hin zu der CVE-Redaktion finden. Fragen Sie bei Ihren 
+Entwicklern nach; einer von Ihnen wird wahrscheinlich jemand anderen
+kennen der bereits durch den CAN-Prozess gelaufen ist, oder der jemand
+kennt der es gemacht hat, usw. Der Vorteil dieser Methode ist auch,
+das irgendwo in der Kette jemand sein kann, der genug weiß, um Ihnen
+sagen zu können, dass a) es nicht als Lücke oder Aufdeckung nach den
+Kriterien von MITRE zählen würde, es also keinen Sinn hat es 
+vorzuschlagen, oder b) dass die Lücke bereits eine CAN- oder CVE-Nummer
+<span class="emphasis"><em>hat</em></span>. Letzteres kann passieren, wenn der Bug 
+bereits auf einer andern Liste für Sicherheitsberatung veröffentlicht
+wurde, zum Beispiel bei <a class="ulink" href="http://www.cert.org/">http://www.cert.org/</a> oder auf
+dem BugTraq-Mailverteiler bei 
+<a class="ulink" href="http://www.securityfocus.com/">http://www.securityfocus.com/</a>. (Wenn das passiert ist,
+ohne das Ihr Projekt davon erfahren hat, dann sollten Sie sich sorgen
+machen, was noch möglicherweise abläuft worüber Sie nichts wissen.)
+</p><p>Wenn Sie überhaupt eine CAN/CVE-Nummer bekommen, werden Sie sie
+wahrscheinlich im frühen Stadium Ihrer Bug-Untersuchung bekommen, damit
+alle weitere Kommunikation sich auf diese Nummer beziehen kann. 
+CAN-Einträge stehen unter einem Embargo bis zu dem 
+Veröffentlichungsdatum; Der Eintrag wird als leerer Platzhalter 
+existieren (damit Sie den Namen nicht verlieren), es wird aber keine
+Informationen über die Lücke enthüllen, bist zu dem Datum an dem Sie
+den Bug und den Fix bekanntgeben.</p><p>Weitere Informatione über den CAN/CVE-Prozess kann bei
+<a class="ulink" href="http://cve.mitre.org/about/candidates.html">http://cve.mitre.org/about/candidates.html</a> gefunden
+werden, und eine besonders klare Darstellung von dem Nutzen eines
+Open-Source-Projekts der CAN/CVE-Nummern befindet sich auf <a class="ulink" href="http://www.debian.org/security/cve-compatibility">http://www.debian.org/security/cve-compatibility</a>.</p></div><div class="sect3" title="Vorankündigung"><div class="titlepage"><div><div><h3 class="title"><a id="security-prenotification"/>Vorankündigung</h3></div></div></div><p>Sobald Ihr Sicherheitsteam (also die Entwickler die auf dem
+sicherheits Verteiler sind, oder die zu einer bestimmten Meldung
+herangezogen wurden) eine Fix bereit hat, müssen Sie entscheiden
+wie Sie es Verbreiten wollen.</p><p>Wenn Sie den Fix einfach zu Ihrem Projektarchiv committen, oder
+sonstwie der Welt bekanntgeben, zwingen Sie effektiv alle die Ihre
+Software benutzen sofort zu aktualisieren oder das Risiko einzugehen,
+gehackt zu werden. Es ist deshalb manchmal angemessen, für bestimmte
+Nutzer eine <em class="firstterm">Vorankündigung</em> zu machen. Das gilt
+insbesondere bei Client-Server-Software, bei dem es wenige wohl
+bekannte Server geben kann, die verlockende Ziele für Angreifer sind.
+Die Administratoren dieser Server wären dankbar darüber einen
+zusetzlichen Tag oder zwei für die Aktualisierung zu haben, damit
+Sie bereits geschützt sind, wenn die Lücke öffentlich bekannt wird.
+</p><p>Vorankündigung bedeutet lediglich eine E-Mail an diese 
+Administratoren zu senden, vor dem Veröffentlichungsdatum, in dem Sie
+ihnen über die Lücke bescheid geben und wie sie es beheben können. Sie
+sollten eine Vorankündigung nur an Personen schicken, die Sie diese
+diskrete Information anvertrauen können. Die Qualifikation um eine
+Vorankündigung zu erhalten hat also zwei Bedingungen: Der Empfänger
+muss eine große Installation in Betrieb haben, wichtige Server bei dem
+eine Kompromitierung etwas ernstes wäre, <span class="emphasis"><em>und</em></span> der
+Empfänger muss jemanden sein, der sich über das Sicherheitsproblem vor
+dem Veröffentlichungsdatum verplappert.</p><p>Senden Sie jede E-Mail mit einer Vorankündigung einzeln (eines
+nach dem anderen) an jedem Empfänger. Senden Sie <span class="emphasis"><em>nicht
+</em></span> an die komplette Liste von Empfängern auf ein mal, da sie
+dann ihre gegenseitigen Namen sehen würden – was zur Folge hat,
+dass Sie im Grunde genommen jedem Empfänger über die Tatsache 
+aufmerksam machen, dass jeder <span class="emphasis"><em>andere</em></span> Empfänger
+möglicherweise die Sicherheitslücke auf seinem Empfänger hat. Es an
+alle mittels einem blinden CC (BCC) zu schicken ist auch keine gute
+Lösung, da manche Administratoren ihre Mail-Konten mit Spam-Filtern
+schützen, die entweder BCC-Mails blockieren, oder ihre Priorität
+reduzieren, da heutzutage sehr viel Spam mit BCC verschickt wird.
+</p><p>Hier ist ein Beispiel E-Mail für eine Vorankündigung:</p><pre class="screen">
+Von: Ihr Name hier
+An: admin@grosser-bekannter-server.de
+Antwort-an: Ihr Name hier (nicht die Adresse des Sicherheitsverteilers)
+Betreff: Vertrauliche Meldung einer Scanly-Sicherheitslücke.
+
+
+Diese E-Mail ist eine vertrauliche Vorankündigung einer 
+Sicherheitsmeldung zum Scanley-Server.
+
+Bitte leiten Sie keinen Teil dieser E-Mail an irgend jemand weiter. Die
+öffentliche Bekanntgabe wird nicht vor dem 19. Mai stattfinden, und
+wir würden die Information gerne bis dann unter Verschluss halten.
+
+Sie erhalten diese E-Mail, da (wir denken, dass) Sie einen Scanley-Server
+betreiben, und wir ihn lieber gepatcht hätten, bevor die Sicherheitslücke
+am 19ten Mai bekannt gegeben wird.
+
+Verweise:
+===========
+
+   CAN-2004-1771: Scanley Speicherüberlauf in Abfragen
+
+Sicherheitslücke:
+==============
+
+   Der Server kann dazu gebracht werden, beliebige Befehle auszuführen,
+   wenn die Locale des Servers falsch konfiguriert ist und der Client
+   eine fehlerhafte Abfrage macht.
+
+Sicherheitsgrad:
+=========
+
+   Sehr ernst, kann die Ausführung von beliebigen Code auf dem Server
+   zur Folge haben.
+
+Provisorische Lösungen:
+============
+
+   Die 'natural-language-processing'-Einstellung in der 
+   scanley.conf auf 'off' zu stellen, schließt die Sicherheitslücke.
+
+Patch:
+======
+
+   Der folgende Patch gilt für Scanley 3.0, 3.1, und 3.2.
+
+   Eine neu Version (Scanley 3.2.1) wird am oder kurz vor dem 19. Mai
+   veröffentlicht werden, damit es zur gleichen Zeit verfügbar istm wie
+   die Bekanntgabe der Lücke. Sie können dem Patch jetzt anwenden oder
+   einfach auf die neue Version warten. Der einzige Unterschied 
+   zwischen 3.2 und 3.2.1 wird diese Patch sein.
+
+[...Patch folgt hier...]
+</pre><p>Wenn Sie eine CAN-Nummer haben, geben Sie sie bei der 
+Vorankündigung mit an (wie oben gezeigt), selbst wenn die Information
+unter Verschluss steht und die MITRE Seite desshalb leer sein wird. Die
+CAN-Nummer erlaubt es dem Empfänger mit sicherheit zu wissen, dass der
+Bug über den sie eine Vorankündigung bekommen haben, der gleiche ist
+von dem sie später durch öffentliche Kanäle erfahren, also müssen sie
+sich keine Sorgen darüber machen, ob weitere Schritte notwendig sind,
+was genau der Sinn einer CAN/CVE-Nummer ist.</p></div><div class="sect3" title="Verteilen Sie den Fix öffentlich"><div class="titlepage"><div><div><h3 class="title"><a id="security-announcing"/>Verteilen Sie den Fix öffentlich</h3></div></div></div><p>Der letzte Schritt bei der Handhabung einer Sicherheitslücke, ist
+den fix öffentlich zu verteilen. Sie sollten in einer einzigen, 
+umfangreichen Meldung, das Problem beschreiben, die CAN/CVE-Nummer
+angeben, falls vorhanden, beschreiben wie das Problem zu umgehen ist,
+und wie es permanent 'gefixed' werden kann. 'Fix' bedeutet für
+gewöhnlich auf eine neuere Version der Software zu aktualisieren,
+obwohl es manchmal die Anwendung von einem Patch bedeuten kann,
+insbesondere wenn die Software sowieso meistens vom Quellcode-Format
+aus betrieben wird. Wenn Sie doch eine neue Version machen, sollte
+es sich von einer existierenden Version durch genau diesen
+sicherheits-Patch unterscheiden. So können konservative 
+Administratoren, aktualisieren, ohne sich sorgen zu machen, was sie
+noch beeinflussen könnten; sie müssen sich also keine Sorgen über
+zukünftige Upgrades machen, da der sicherheits Patch als Folge in
+allen zukünftigen Versionen enthalten sein wird. (Details der
+Abläufe für neue Versionen werden in 
+<a class="xref" href="ch07s06.html#security-releases" title="Sicherheitsupdates">„Sicherheitsupdates“</a><span> im Kapitel
+<a class="xref" href="ch07.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <em>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</em></a></span> behandelt.)</p><p>Ob der öffentliche Fix eine neue Version zur Folge hat oder 
+nicht, machen Sie die Meldung mit ungefähr der der gleichen Priorität
+wie Sie eine neue Version machen würden: Senden Sie eine E-Mail an den
+<code class="literal">announce</code> Verteiler des Projekts, machen Sie eine
+neue Pressemitteilung, aktualisieren Sie den Freshmeat-Eintrag, usw.
+Während Sie nie versuchen sollten, die Existenz einer Sicherheitslücke
+herunterzuspielen, aus Sorge um den Ruf des Projekts, können Sie
+durchaus den Ton und die Gewichtung der Sicherheitsmeldung anpassen,
+um den Ernst des Problems zu entsprechen. Wenn die Sicherheitslücke
+nur eine kleine Offenlegung von Informationen ist, nicht eine Lücke
+die es erlaubt den kompletten Computer des Anwenders zu übernehmen,
+mag es keinen all zu großen Wirbel gerechtfertigen. Sie können sich
+sogar Entscheiden den <code class="literal">announce</code> Verteiler damit
+abzulenken. Wenn das Projekt schließlich jedes mal Wolf schreit, 
+werden sich die Nutzer denken, dass die Software weniger sicher ist,
+als das tatsächlich der Fall ist, und es möglicherweise nicht glauben
+wenn Sie wirklich ein riesiges Problem ankündigen müssen. Siehe
+<a class="ulink" href="http://cve.mitre.org/about/terminology.html">http://cve.mitre.org/about/terminology.html</a> als eine
+gute Einführung zu dem Problem der Beurteilung wie schwerwiegend eine
+Sicherheitslücke ist.</p><p>Im Allgemeinen, wenn Sie sich nicht sicher sind, wie Sie ein
+Sicherheitsproblem behandeln sollen, suchen Sie sich jemand Erfahrenen
+und reden Sie darüber. Lücken zu handhaben und zu bewerten, ist 
+größtenteils eine angelernte Fähigkeit und es ist leicht, die ersten 
+paar Male Fehler zu machen.</p></div><p>Zum Umgang mit Sicherheitslücken siehe auch die 
+Richtlinien der Apache Software Foundation unter
+<a class="ulink" href="http://www.apache.org/security/committers.html">http://www.apache.org/security/committers.html</a>.  Sie 
+bieten eine ausgezeichnete Checkliste, anhand derer Sie prüfen können,
+ob Sie alle Punkte sorgfältig bedacht haben.</p></div></div></body></html>

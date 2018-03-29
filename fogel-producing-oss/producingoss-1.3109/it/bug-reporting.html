@@ -1,0 +1,81 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Appendice D. Istruzioni di Esempio per Segnalare un Bug</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="index.html" title="Produrre Software Open Source"><link rel="prev" href="bikeshed-full.html" title="Appendice C. Perchè dovrebbe importarmi di che colore sia la rastrelliera?"><link rel="next" href="copyright.html" title="Appendice E. Copyright"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Appendice D. Istruzioni di Esempio per Segnalare un Bug</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bikeshed-full.html">Indietro</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="copyright.html">Avanti</a></td></tr></table><hr></div><div class="appendix" title="Appendice D. Istruzioni di Esempio per Segnalare un Bug"><div class="titlepage"><div><div><h2 class="title"><a name="bug-reporting"></a>Appendice D. Istruzioni di Esempio per Segnalare un Bug</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Questa è una versione alleggerita delle istruzioni online del progetto Subversion
+per i nuovi utenti su come segnalare bug. Vedi
+<a class="xref" href="managing-volunteers.html#users-to-volunteers" title="Trattate Ogni Utilizzatore Come un Potenziale Volontario">sezione chiamata «Trattate Ogni Utilizzatore Come un Potenziale Volontario»</a><span> in
+<a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span> sul perchè è importante che un progetto
+abbia tali istruzioni. Il documento originale è qui
+<a class="ulink" href="http://svn.collab.net/repos/svn/trunk/www/bugs.html" target="_top">http://svn.collab.net/repos/svn/trunk/www/bugs.html</a>.</p><pre class="screen">
+                       Segnalare Bug in Subversion
+
+Questo documento dici come e dove segnalare i bug. (Non è na lista dei bug mportanti - puoi invece trovarla qui)
+
+Dove Segnalare un Bug
+---------------------
+
+    * Se il bug è di Subversion stesso, manda una mail a
+      users@subversion.tigris.org. Una volta che è stato confermato come bug,
+      qualcuno, possibilmente tu, può entrare nel tracciatore dei problemi (O
+      se sei abbastanza sicuro del bug, vai avanti e scrivi direttamente alla mailing
+      list di sviluppo, dev@subversion.tigris.org. Ma se non sei sicuro, è meglio scrivere prima
+      a users@ ; lì qualcuno può dirti se il comportamento che hai riscontrato è atteso o meno.)
+
+    * Se il bug è nelle libreria APR library, per favore segnalalo ad entrambe queste
+      mailing lists: dev@apr.apache.org, dev@subversion.tigris.org.
+
+    * Se il bug è nella libreria Neon HTTP, per favore segnalalo a:
+      neon@webdav.org, dev@subversion.tigris.org.
+
+    * Se il bug è in Apache HTTPD 2.0, per favore segnalalo ad entrambe queste
+      mailing lists: dev@httpd.apache.org,
+      dev@subversion.tigris.org. La mailing list di sviluppo di Apache httpd è molto trafficata,
+      quindi il tuo messaggio di segnalazione di bug può essere sovrastato. Puoi anche creare una segnalazione a
+      http://httpd.apache.org/bug_report.html.
+
+    * Se il bug è nel tuo orticello, per favore dagli un abbraccio e tienilo stretto.
+
+Come Segnalare un Bug
+-------------------
+
+Primo, verificate che sia un bug. Se Subversion non si comporta nel modo atteso, guarda nella documentazione
+e negli archivi di mailing list per una prova che si debba comportare nel modo che pensate. Certo, se è una cosa
+di buon senso, tipo Subversion ha appena distrutto i tuoi dati e fatto uscire del fumo dal monitor, allora puoi
+fidarti del tuo giudizio. Ma se non sei sicuro, vai avanti e chiedi agli utenti della mailing list prima,
+ users@subversion.tigris.org, o chiedi in IRC, irc.freenode.net, channel #svn.
+
+Una volta che hai stabilito che è un bug, la cosa più importante che 
+puoi fare è tirare fuori una semplice descrizione e istruzioni di riproduzione. Per esempio, se il bug, come
+avevi trovato all'inizio, coinvolge cinque file su dieci commit, cerca di farlo succedere con solo un file ed
+un commit. Più facili le istruzioni di riproduzione, più facilmente uno sviluppatore potrà ricrearsi il bug e metterlo a posto.
+
+Quando scrivi le istruzioni di riproduzione, non scrivere solo una descrizione in prosa di quanto hai fatto per far succedere
+il bug. Dai invece una trascrizione letterale dell'esatta serie di comandi che hai richiamato, stando sicuro di includere i nomi
+dei file, e anche il loro contenuto se pensi che possa essere rilevante. La cosa veramente migliore da fare è impacchettare
+la ricetta di riproduzione come uno script, il che ci aiuta molto.
+
+<span class="emphasis"><em>Veloce test di sanità mentale: *stai* usando la più recente versione di SUbversion vero? :-)
+Magari il bug è già stato messo a posto; dovresti testare di nuovo la tua ricetta di riproduzione sulla
+versione più recente di Subversion.</em></span>
+
+Oltre alla ricetta di riproduzione, avremo anche bisogno di una completa descrizione
+dell'ambiente in cui hai riprodotto il bug. Questo significa:
+
+    * il tuo sistema operativo
+    * il rilascio e/o la revisione di Subversion
+    * il compilatore e le opzioni di configurazione con cui hai compilato Subversion
+    * ogni modifica privata che hai fatto al tuo Subversion
+    * la versione di Berkeley DB con cui stai facendo andare Subversion, se c'è
+    * ogni altra cosa che potrebbe essere rilevante. Sbaglia nel dare troppe informazioni piuttosto che troppo poche.
+
+Una volta che hai tutto questo, sei pronto a scrivere il rapporto. Inizia con una chiara descrizione di cosa sia il bug.
+Cioè, di come di aspettavi che Subversion si comportasse, e confrontalo con come si è comportato veramente. Mentre
+il bug ti sembra ovvio, potrebbe non essere così ovvio a qualcun altro. così è meglio evitare gli indovinelli.
+A questo fai seguire la descrizione dell'ambiente e la ricetta di riproduzione. Se vuoi includere commenti sulla causa,
+e persino la patch per mettere a posto il bug, va benissimo - vedi
+http://subversion.apache.org/docs/community-guide/#patches per le istruzioni su come mandare patch.
+
+Manda tutte queste informazioni a dev@subversion.tigris.org, o se sei già stato lì e ti è stato chiesto
+di segnalare un problema, allora vai al Issue Tracker e lì segui le istruzioni.
+
+Grazie. Sappiamo che è un gran lavoro fare una segnalazione di bug efficace, ma una buona
+segnalazione può far risparmiare ore del tempo di uno sviluppatore, e rendere più possibile
+che il bug venga messo a posto.
+</pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bikeshed-full.html">Indietro</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="copyright.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Appendice C. Perchè dovrebbe importarmi di che colore sia la rastrelliera? </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> Appendice E. Copyright</td></tr></table></div></body></html>

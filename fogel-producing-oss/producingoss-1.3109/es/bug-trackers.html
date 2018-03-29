@@ -1,0 +1,91 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Apéndice B. Gestor de fallos libres</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="index.html" title="Producir Software de Código Abierto"><link rel="prev" href="vc-systems.html" title="Apéndice A. Sistemas de Control de Versiones Libres"><link rel="next" href="bikeshed-full.html" title="Apéndice C. Why Should I Care What Color the Bikeshed Is?"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Apéndice B. Gestor de fallos libres</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="vc-systems.html">Anterior</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="bikeshed-full.html">Siguiente</a></td></tr></table><hr></div><div class="appendix" title="Apéndice B. Gestor de fallos libres"><div class="titlepage"><div><div><h2 class="title"><a name="bug-trackers"></a>Apéndice B. Gestor de fallos libres</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Da igual que gestor de fallos se usa en un proyecto, a algunos desarrolladores
+siempre les gusta quejarse de ellos. Esto es, inclusive, más cierto para
+gestores de fallos que para cualquier otra herramienta estándar de desarrollo.
+Creo que es porque los gestores de fallos son tan visuales y tan interactivos
+que es fácil imaginar las mejoras que uno mismo haría (si solamente tuviera tiempo),
+y describirlas en voz alta. Toma las inevitables quejas con excepticismo&#8212;
+muchos de los gestores que se describen más tarde son bastante buenos.</p><p>A lo largo de estos listados, la palabra ejemplar se usa para referirse
+a elementos que el gestor gestiona. Pero recuerda que cada sistema
+puede tener su propia terminología, en la cual el término correspondiente
+podría ser "artefacto" o "fallo" o cualquier otra cosa.</p><div class="sect2" title="Bugzilla &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-bugzilla"></a><span class="bold"><strong>Bugzilla</strong></span> &#8212; <a class="ulink" href="http://www.bugzilla.org/" target="_top">http://www.bugzilla.org/</a></h3></div></div></div><p>Bugzilla es muy popular, es mantenido activamente, y parece que
+hace a sus usuarios muy felices. Yo he estado usando una variante modificada
+de él en mi trabajo desde hace cuatro años, y me gusta. No es altamente
+personalizable, pero esa puede ser, de una manera curiosa, una de sus
+características:
+Las instalaciones de Bugzilla tienden a parecer la misma sea donde sea
+que se encuentren, lo que significa que muchos desarrolladores estén
+ya acostumbrados a su interfaz y se sentirán en un territorio familiar.</p></div><div class="sect2" title="GNATS &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-gnats"></a><span class="bold"><strong>GNATS</strong></span> &#8212; <a class="ulink" href="http://www.gnu.org/software/gnats/" target="_top">http://www.gnu.org/software/gnats/</a></h3></div></div></div><p>GNU GNATS es uno de los gestores de fallos de código abierto
+más antiguos, y se usa extensamente. Su mayor fortaleza reside en la 
+diversidad de interfaces (no solamente puede ser usado a través de un
+navegador WEB, sino que también a través de correo electrónico o
+utilidades de línea de comandos), y el almacenamiento de los ejemplares
+en texto plano. El hecho de que los datos de todos los ejemplares se almacenen
+en ficheros de texto en el disco hace que sea más fácil escribir herramientas
+a medida para buscar y analizar sintácticamente los datos (por ejemplo, 
+para generar informes estadísticos). GNATS también puede absorber correos
+electrónicos de muchas maneras, y añadirlos a los ejemplares apropiados basados
+en patrones dentro de las cabeceras del correo electrónico, lo que hace
+que el registro de las conversaciones del usuario/desarrollador sean muy fáciles.</p></div><div class="sect2" title="RequestTracker (RT) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-rt"></a><span class="bold"><strong>RequestTracker (RT)</strong></span> &#8212; <a class="ulink" href="http://www.bestpractical.com/rt/" target="_top">http://www.bestpractical.com/rt/</a></h3></div></div></div><p>El sitio Web de RT dice que "RT es un sistema de etiquetado
+de niveles de seguridad que permite a un grupo de gente manejar tareas, ejemplares, 
+y peticiones enviadas por una comunidad de usuarios de una manera inteligente y eficiente, 
+y todo eso en resumen. RT posee una interfaz web bastante pulida, 
+y parece tener una base ampliamente instalada. La interfaz es un poco 
+compleja en términos visuales, pero que llega a ser menos molesto
+a medida que se utiliza. RT tiene una licencia GNU GPL (por alguna razón, 
+su sitio web no deja esto claro).</p></div><div class="sect2" title="Trac &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-trac"></a><span class="bold"><strong>Trac</strong></span> &#8212; <a class="ulink" href="http://trac.edgewall.com/" target="_top">http://trac.edgewall.com/</a></h3></div></div></div><p>Trac es un poco más que un gestor de fallos: realmente es un sistema
+wiki y gestor de fallos integrado. Usa el enlace Wiki para conectar
+ejemplares, ficheros, grupos de cambios de control de versión, y
+simples páginas wiki. Es bastante simple de configurar, y se integra
+con Subversion (ver <a class="xref" href="vc-systems.html" title="Apéndice A. Sistemas de Control de Versiones Libres">Apéndice A, <i>Sistemas de Control de Versiones Libres</i></a>).</p></div><div class="sect2" title="Roundup &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-roundup"></a><span class="bold"><strong>Roundup</strong></span> &#8212; <a class="ulink" href="http://roundup.sourceforge.net/" target="_top">http://roundup.sourceforge.net/</a></h3></div></div></div><p>Roundup es bastante fácil de instalar (sólo se necesita
+Python 2.1 o superior), y simple de usar. Tiene interfaces web,
+para correo electrónico y de línea de comandos. Las plantillas de datos
+de ejemplares y las interfaces web son parametrizables, al igual que
+alguna de su lógica de transición de estados.</p></div><div class="sect2" title="Mantis &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-mantis"></a><span class="bold"><strong>Mantis</strong></span> &#8212; <a class="ulink" href="http://www.mantisbt.org/" target="_top">http://www.mantisbt.org/</a></h3></div></div></div><p>Mantis es un sistema de gestión de fallos basado en web, escrito en PHP,
+y que usa la base de datos MySQL como almacenaje. Posee las características
+que se esperarían de él. Personalmente, encuentro la interfaz web limpia, intuituva, 
+y visualmente fácil.</p></div><div class="sect2" title="Scarab &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-scarab"></a><span class="bold"><strong>Scarab</strong></span> &#8212; <a class="ulink" href="http://scarab.tigris.org/" target="_top">http://scarab.tigris.org/</a></h3></div></div></div><p>Scarab está pensado para ser un gestor de fallos altamente parametizable y 
+con todas las características, ofreciendo más o menos el conjunto total de las características
+ofrecidas por otros gestores de fallos: entradas de datos, consultas, informes, 
+notificaciones a grupos interesados, acumulación colaborativa de comentarios, 
+y gestión de dependencias.</p><p>
+Se parametriza a través de páginas web administrativas. Se puede tener
+múltiples "módulos" (proyectos) activos en una única instalación de Scarab.
+Dentro de un módulo dado, se puede crear nuevos tipos de ejemplares
+(defectos, mejoras, tareas, peticiones de apoyo, etc.), y añadir
+atributos arbitrarios, para afinar el gestor a los requisitos
+específicos de tu proyecto.</p><p>Para finales de 2004, Scarab se acercaba a su versión liberada 1.0.</p></div><div class="sect2" title="Sistema de Gestión de Fallos de Debian (Debian Bug Tracking System (DBTS)) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-dbts"></a><span class="bold"><strong>Sistema de Gestión de Fallos de Debian (Debian Bug Tracking System (DBTS))</strong></span> &#8212; <a class="ulink" href="http://www.chiark.greenend.org.uk/~ian/debbugs/" target="_top">http://www.chiark.greenend.org.uk/~ian/debbugs/</a></h3></div></div></div><p>El Sistema de Gestión de Fallos de Debian (Debian Bug Tracking System) es inusual en el
+sentido que todas las entradas y manipulaciones de ejemplares se hace vía correo
+electrónico: cada ejemplar obtiene su propia dirección de correo electrónico 
+dedicada. El DBTS escala bastante bien: <a class="ulink" href="http://bugs.debian.org/" target="_top">http://bugs.debian.org/</a> tiene 227.741 ejemplares, por ejemplo.</p><p>Ya que la interacción se hace vía clientes de correo normales, 
+un entorno que es familiar y fácilmente accesible para la mayoría de gente, 
+el DBTS es bueno para manejar grandes volúmenes de informes entrantes que
+necesitan una rápida clasificación y respuesta. Por supuesto, también
+existen desventajas. Los desarrolladores deben dedicar el tiempo necesario
+a aprender el sistema de comando del correo electrónico, y los usuarios 
+deben escribir sus informes de fallos sin un formulario web que los guíe
+en la elección de la información que hay que escribir. Hay algunas herramientas
+disponibles para ayudar a los usuarios a enviar mejor sus informes de fallos, 
+tales como el programa de línea de comandos <span class="command"><strong>reportbug</strong></span> o
+el paquete <code class="systemitem">debbugs-el</code> para Emacs. Pero la mayoría de la 
+gente no usará estas herramientas; sólo escribirán correos electrónicos
+a mano, y podrán o no seguir las pautas para reportar fallos 
+publicadas por su proyecto.</p><p>El DBTS tiene una interfaz web de sólo lectura, para ver y 
+consultar ejemplares.</p></div><div class="sect2" title="Gestores de Etiquetado de Problema"><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-trouble-ticket-trackers"></a><span class="bold"><strong>Gestores de Etiquetado de Problema</strong></span></h3></div></div></div><p>Estos están más orientados hacia la gestión de etiquetas del 
+escritorio de ayuda que a la gestión de fallos de software. Probablemente 
+sería mejor con un gestor de fallos habitual, pero estos se han listado
+por completitud, y porque posiblemente podría tener proyectos poco comunes para los cuales
+un sistema de etiquetado de problemas podría ser más apropiado que un gestor 
+de fallos tradicional.</p><p>
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>WebCall</strong></span> &#8212; <a class="ulink" href="http://myrapid.com/webcall/" target="_top">http://myrapid.com/webcall/</a></p></li><li class="listitem"><p><span class="bold"><strong>Teacup</strong></span> &#8212; <a class="ulink" href="http://www.altara.org/teacup.html" target="_top">http://www.altara.org/teacup.html</a></p><p>(Teacup no parece estar activo bajo desarrollo, pero
+            			los ficheros para descargar están todavía accesibles.
+            			Nota que tiene tanto interfaz web como por correo
+            			electrónico.)</p></li></ul></div><p>
+</p></div><div class="sect2" title="Bluetail Ticket Tracker (BTT) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-bluetail"></a><span class="bold"><strong>Bluetail Ticket Tracker (BTT)</strong></span> &#8212; <a class="ulink" href="http://btt.sourceforge.net/" target="_top">http://btt.sourceforge.net/</a></h3></div></div></div><p>El BTT se situa en algún lugar entre un gestor de etiquetas de problema
+y un gestor de fallos. Ofrece características de privacidad que son algo inusuales
+entre los gestores de fallos de código abierto: los usuarios del sistema se 
+clasifican como Plantilla (Staff), Amigo (Friend), Cliente (Customer), o Anónimo (Anonymous), 
+y más o menos los datos son accesibles según la categoría de uno mismo. Ofrece 
+algo de integración con el correo electrónico, una interfaz por línea de comandos, y un 
+mecanismo para convertir correos electrónicos en etiquetas. También posee utilidades 
+para mantener la información no asociada con una etiqueta específica, tal como documentación
+interna o FAQs.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="vc-systems.html">Anterior</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="bikeshed-full.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Apéndice A. Sistemas de Control de Versiones Libres </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Apéndice C. Why Should I Care What Color the Bikeshed Is?</td></tr></table></div></body></html>

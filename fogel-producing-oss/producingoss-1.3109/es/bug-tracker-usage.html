@@ -1,0 +1,53 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Sin conversaciones en el bug tracker</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="communications.html" title="Capítulo 6. Comunicaciones"><link rel="prev" href="growth.html" title="Manejando el crecimiento"><link rel="next" href="publicity.html" title="Publicidad"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Sin conversaciones en el bug tracker</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="growth.html">Anterior</a> </td><th width="60%" align="center">Capítulo 6. Comunicaciones</th><td width="20%" align="right"> <a accesskey="n" href="publicity.html">Siguiente</a></td></tr></table><hr></div><div class="sect1" title="Sin conversaciones en el bug tracker"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bug-tracker-usage"></a>Sin conversaciones en el bug tracker</h2></div></div></div><p>En cualquier proyecto que haga un uso activo del Bug Tracker (sistema de seguimiento
+de errores), siempre existe peligro de que este sistema se convierta en un foro de discusión
+en sí mismo, incluso aunque las listas de correo sean mejor para ello.
+Normalmente empieza de una manera demasiado inocente, alguien anota un tema con, digamos,
+una propuesta de solución, o un parche parcial. Otro ve esto, y se da cuenta de que existen
+problemas en esa solución, y añade otro punto anotando los problemas. La primera persona 
+entonces responde otra vez añadiéndolo al tema, y así sucesivamente...</p><p>El problema con esto es, primero que el bug tracker es un lugar bastante pesado
+para tener una discusión, y segundo, que otras personas pueden no estar prestando atención,
+después de todo, se espera que la discusión sobre desarrollo ocurra en la lista de correo
+de desarrollo, por lo que será ahí donde buscarán. Puede que la gente no esté subscrita a
+la lista de cambios de tickets despues de todo, y aunque lo estén, puede que no la sigan
+muy de cerca.</p><p>Pero exactamente, ¿en que parte del proceso se cometió el error?  ¿Fue cuando la persona
+original envío su solución al tema?, ¿debería haberla enviado a la lista de correo mejor? ¿O quizá
+fue cuando la segunda persona respondió al tema, en vez de a la lista?</p><p>No hay una respuesta correcta, pero hay un principio general:
+sí simplemente vas a añadir un apunte, hazlo en el tracker, pero si vas
+a empezar una <span class="emphasis"><em>conversacion</em></span>, entonces hazlo en la lista de correo.
+Puede que a veces no seas capaz de saber cual es el caso, simplemente usa el juicio.
+Por ejemplo, cuando añadas un parche que contiene una solución potencialmente controvertida,
+puedes anticiparte  de que la gente tendrá preguntas sobre ella. Así que aunque normalmente
+añadas el parche al ticket (asumiendo que no quieres o no puedas realizar el cambio directamente),
+en este caso puedes elegir enviarlo a la lista de correo. En todo caso, eventualmente vendrá un punto
+donde una parte o la otra indicarán sobre ir desde un simple añadido de datos a la conversación actual;
+en el ejemplo que iniciaba esta sección, este sería el segundo que responde, quién dándose cuenta
+de que había problemas con el parche, pudo predecir que iba a darse una conversación sobre ello, y de ahí
+que debiera hacerse en el medio apropiado.</p><p>Para usar una analogía matemática, si la información parece que será rápidamente convergente, entonces
+ponla directamente en el bug tracker; si parece que será divergente, entonces el mejor sitio serán una lista
+de correo o el canal de IRC.</p><p>Esto no significa que nunca debe haber intercambios en el bug tracker. Preguntar sobre más
+detalles de la reproducción del fallo al informador original tiende a ser un proceso altamente
+convergente. Es poco probable que la respuesta de la persona genere nuevos tickets;
+simplemente rellenará información que ya ha sido añadida. No hay necesidad  de distrare a la lista
+de correo con este proceso; esto significa que; tengas cuidado con una serie de comentarios en el
+tracker. Así mismo, si estás demasiado seguro de que el bug ha sido reportado erróneamente (por ejem.,
+no es un bug), entonces simplemente puedes decirlo correctamente en el ticket. Incluso apuntandolo
+como un problema menor con una solución propuesta está bien, asumiendo que el problema no va a
+ser un problema a toda la solución.</p><p>Por otra parte, si estás lanzando razones filosóficas sobre el alcance del
+bug o el comportamiento apropiado del software, puedes estar seguro de que otros 
+desarrolladores querrán involucrarse. La discusión tenderá a discrepar por momentos
+antes de convergir, así que mejor hacerlo en la lista de correo.</p><p>Cuando decidas hacerlo en la lista de correo, enlaza siempre al hilo
+de la lista del correo con el ticket. Todavía será importante para alguien
+que siga el ticket, ser capáz de alcanzar la discusión, aunque el ticket en si
+mismo no esté en el foro de discusión. La persona que empieza el hilo puede  
+puede encontrar esto muy difícil, pero el open source es fundamentalmente una
+cultura de responsabilidad de escribir: es mucho más importante hacer las cosas
+fáciles para cientos de miles de personas que pueden leer el bug que para las
+tres o cinco personas que pueden escribir sobre él.</p><p>Es correcto tomar conclusiones importantes o sumarios de la lista de discusión
+y copiarlas en el ticket, si esto hace las cosas más faciles para los lectores.  Un punto
+común es empezar una lista de discusión, poner un enlace al hilo en el ticket, y entonces
+cuando la discusión finalice, copiar el sumario final en el ticket (junto con un enlace al mensaje
+conteniendo el sumario), de tal manera que alguien que navegue por este ticket pueda fácilmente
+ver a que conclusiones se llegaron  sin tener que hacer click en ningún otro sitio.
+Date cuenta de que el problema usual de duplicación de datos "dos maestros" no tiene lugar
+aquí, porque ambos archivos y comentarios de tickets son normalmente estáticos, datos intercambiables.
+</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="growth.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="communications.html">Subir</a></td><td width="40%" align="right"> <a accesskey="n" href="publicity.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Manejando el crecimiento </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Publicidad</td></tr></table></div></body></html>

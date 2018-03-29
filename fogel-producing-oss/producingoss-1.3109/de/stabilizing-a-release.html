@@ -1,0 +1,240 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Stabilisierung einer neuen Version</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><link rel="prev" href="release-branches.html" title="Versionszweige"><link rel="next" href="packaging.html" title="Erstellung der Pakete"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Stabilisierung einer neuen Version</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="release-branches.html">Zurück</a> </td><th width="60%" align="center">Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</th><td width="20%" align="right"> <a accesskey="n" href="packaging.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Stabilisierung einer neuen Version"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="stabilizing-a-release"></a>Stabilisierung einer neuen Version</h2></div></div></div><p><em class="firstterm">Stabilisierung</em> ist der Vorgang, den Zweig
+einer neue Version in einem Zustand zu bringen, der für die
+Veröffentlichung geeignet ist; mit anderen Worten, zu entscheiden,
+welche Änderungen in der Version sein werden, welche nicht, und den
+Inhalt vom Zweig entsprechend zu gestalten.</p><p>Es gibt eine menge möglichen Kummer in diesem Wort "entscheiden".
+Der Ansturm neuer Funktionen in der letzten Minute ist ein bekanntes
+Phänomen bei gemeinschaftlichen Software-Projekten: Sobald Entwickler
+sehen, dass eine neue Version gleich gemacht wird, beeilen sie sich
+ihre derzeitigen Änderungen fertig zu bekommen, um den Zug nicht zu
+verpassen. Das ist natürlich genau das Gegenteil, von dem was Sie
+zum Zeitpunkt einer neuen Version haben wollen. Es wäre viel besser,
+wenn Leute in einem gemütlichen Tempo an neue Funktionen arbeiten,
+und sich nicht all zu viele sorgen darüber machen ob Ihre Änderungen
+es in diese Version oder die nächste schaffen. Je mehr Änderungen man
+versucht in eine neue Version in der letzten Minute zu quetschen, 
+desto mehr Code wird instabil gemacht, und (für gewöhnlich) desto mehr
+neue Bugs werden erzeugt.</p><p>Die meisten Programmierer sind sich theoretisch über grobe
+Kriterien einig, welche Änderungen in eine Versionsreihe hereingelassen
+werden sollten, währen der Stabilisierungsphase. Offensichtlich, können
+Fixes für schwerwiegende Bugs reingehen, insbesondere wenn es keine
+Möglichkeit gibt sie zu umgehen. Aktualisierungen der Dokumentation 
+sind in Ordnung, genau so wie der Text von Fehlermeldungen (außer wenn
+man sie als einen Teil der Schnittstelle betrachtet und stabil bleiben
+müssen). Viele Projekte erlauben also bestimmte Arten risikoarmer
+nicht grundsätzlicher Änderungen während der Stabilisierungsphase
+einzubinden, und können formale Richtlinien darüber haben, um das 
+Risiko einzustufen. Keine Maß der Formalisierung kann jedoch die
+Notwendigkeit menschlichen Urteils obsolet machen. Es wird immer
+Fälle geben, bei dem das Projekt eine Entscheidung treffen muss, ob
+eine bestimmte Änderung in eine neue Version gehen kann. Die Gefahr
+ist, dass da jede Person ihre eigen Lieblingsängerungen aufgenommen
+haben will, wird es eine Menge Leute geben, die motiviert sind
+Änderungen zu erlauben, und nicht genügend die motiviert sind, sie
+zu verhindern.</p><p>Der Ablauf, eine neue Version zu stabilisieren dreht sich deshalb
+größtenteils darum, "nein" zu sagen. Der Trick insbesondere für 
+Open-Source-Projekte ist, sich Wege auszudenken "nein" zu sagen, 
+die nicht mit allzu vielen verletzten Gefühlen oder enttäuschten 
+Entwicklern enden und die es dennoch ermöglichen, dass Änderungen
+in neue Versionen aufgenommen werden, die es verdienen.
+Es gibt viele verschiedene Wege das zu erreichen. 
+Es ist ziemlich leicht Systeme zu entwerfen, welche
+diesen Kriterien gerecht werden, nachdem sich das Team auf sie
+als die wichtigsten Kriterien konzentriert hat. Ich werde hier knapp
+zwei der verbreitetsten Systeme beschreiben, die an den extremen Enden
+des Spektrums liegen, lassen Sie Ihr Projekt hiervon aber nicht abhalten,
+kreativ zu sein. Eine Menge anderer Reglungen sind möglich;
+diese sind lediglich zwei von denen ich gesehen habe, dass sie in der
+Praxis funktionieren.</p><div class="sect2" title="Diktatur durch den Versionsherrn"><div class="titlepage"><div><div><h3 class="title"><a name="release-owner"></a>Diktatur durch den Versionsherrn</h3></div></div></div><p>Die Gruppe einigt sich darauf, dass eine Person der 
+<em class="firstterm">Versionsherr </em> (en. release owner) sein wird.
+Diese Person hat das letzte Wort darüber, welche Änderungen es in die
+neue Version schaffen. Es ist natürlich normal und wird erwartet, dass
+es Diskussionen und Auseinandersetzungen gibt, letztendlich muss die
+Gruppe der Person die nötige Autorität geben um endgültige 
+Entscheidungen zu treffen. Damit dieses System funktioniert, ist es
+nötig, jemand zu wählen, der die nötige technische Kompetenz hat um
+alle Änderungen zu verstehen, und den sozialen Stand und Fähigkeiten
+im Umgang mit Menschen um die Diskussionen zu führen, die einer neuen
+Version vorausgehen, ohne zu viele verletzte Gefühle zu verursachen.
+</p><p>Ein häufiges Muster ist, dass der Versionsherr sagt "Ich denke
+nicht, dass es irgend etwas an dieser Änderung auszusetzen gibt, aber
+wir haben noch nicht genug Zeit gehabt, um es zu testen, also sollte
+es nicht in diese Version gehen". Es hilft eine Menge wenn der
+Versionsherr ein breites technisches Wissen über das Projekt hat, und
+Gründe angeben kann, warum eine Änderung möglicherweise 
+destabilisierend sein könnte (zum Beispiel seine Wechselwirkung mit
+andern Teilen der Software oder Bedenken im Bezug auf die 
+Kompatibilität). Manche werden nach einer Rechtfertigung für solche
+Entscheidungen fragen, oder argumentieren, dass eine Änderung nicht so
+gefährlich ist wie sie aussieht. Diese Unterhaltungen müssen nicht
+konfrontierend sein, so lange der Versionsherr alle Argumente objektiv
+in Erwägung ziehen kann, und nicht aus reflex auf seinen Standpunkt
+beharrt.</p><p>Beachten Sie, dass der Versionsherr nicht die gleiche Person sein
+muss, wie der Projektleiter (bei solchen Fällen wo es überhaupt einen
+Projektleiter gibt; siehe <a class="xref" href="social-infrastructure.html#benevolent-dictator" title="Gütige Diktatoren">&#8222;Gütige Diktatoren&#8220;</a><span> im Kapitel
+<a class="xref" href="social-infrastructure.html" title="Kapitel 4. Soziale und politische Infrastruktur">Kapitel 4, <i>Soziale und politische Infrastruktur</i></a></span>). Manchmal ist es
+sogar gut, wenn sie <span class="emphasis"><em>nicht</em></span> ein und die selbe
+Person sind. Die Fähigkeiten die einen gute Projektleiter ausmachen,
+sind nicht unbedingt die gleichen, die einen guten Versionsherr
+ausmachen. Bei etwas derart wichtigem wie die Veröffentlichung neuer
+Versionen, kann es klug sein, jemanden zu haben, der ein Gegengewicht
+zu dem Urteil vom Projektleiter bildet.</p><p>Vergleichen Sie die Rolle des Versionsverwalters mit der weniger
+diktatorischen Rolle beschrieben in <a class="xref" href="stabilizing-a-release.html#release-manager" title="Release-Verwalter">&#8222;Release-Verwalter&#8220;</a>
+<span> später in diesem Kapitel</span>.</p></div><div class="sect2" title="Abstimmung über Änderungen"><div class="titlepage"><div><div><h3 class="title"><a name="release-voting"></a>Abstimmung über Änderungen</h3></div></div></div><p>Bei dem anderen extrem, von der Diktatur durch den Versionsherr,
+können Entwickler einfach darüber abstimmen, welche Änderungen in einer
+neun Version aufgenommen werden. Da die wichtigste Aufgabe bei der
+stabilisierung einer neun Version der <span class="emphasis"><em>Ausschluss</em></span>
+von Änderungen ist, ist es wichtig, das Wahlsystem so zu gestalten,
+dass eine Änderung in eine Version zu bekommen die Zustimmung mehrerer
+Entwickler bedarf. Eine Änderung aufzunehmen, sollte mehr als eine
+einfache Mehrheit erfordern (siehe <a class="xref" href="consensus-democracy.html#electorate" title="Wahlberechtigung">&#8222;Wahlberechtigung&#8220;</a><span> im Kapitel <a class="xref" href="social-infrastructure.html" title="Kapitel 4. Soziale und politische Infrastruktur">Kapitel 4, <i>Soziale und politische Infrastruktur</i></a>
+</span>). Andererseits würde eine Stimme für eine Änderung und keine
+dagegen ausreichen, es in die Version zu bekommen und eine unglückliche
+Dynamik würde einsetzen, bei dem jeder Entwickler für seine eigenen
+Änderungen stimmen würde, jedoch widerwillig gegen die Änderungen
+anderer stimmen würde, aus Angst vor einer möglichen Vergeltung. Um das
+zu vermeiden, sollte das System derart ausgelegt sein das Untergruppen
+von Entwickler zusammen agieren müssen um irgend eine Änderung in eine
+Version zu bekommen. Das bedeutet nicht nur, dass mehr Personen jede
+Änderung überprüfen, es macht auch jeden Entwickler weniger zögerlich
+gegen eine Änderung zu stimmen, da kein bestimmter Entwicklern der
+dafür gestimmt hat, seine Gegenstimme es als einen persönlichen Angriff
+betrachten würde. Je mehr Leute beteiligt sind, desto mehr dreht sich 
+die Entscheidung um die Änderung und weniger um die Individuen.</p><p>Das System welches wir beim Subversion-Projekt benutzen, scheint
+ein gutes Gleichgewicht getroffen zu haben, also werde ich es hier
+empfehlen. Damit eine Änderung auf einen Versionszweig angewandt werden
+kann, müssen mindestens drei Entwickler dafür stimmen, und keiner 
+dagegen. Eine einzige Gegenstimme reicht aus, um zu verhindern, dass 
+eine Änderung angewandt wird; in dem Kontext einer neuen Version heißt
+das also, dass eine Gegenstimme gleichbedeutend mit einem Veto ist
+(siehe <a class="xref" href="consensus-democracy.html#veto" title="Vetos">&#8222;Vetos&#8220;</a>). Jede solche Gegenstimme muss natürlich
+von einer Rechtfertigung begleitet werden, und theoretisch kann das
+Veto aufgehoben werden, wenn genügend der Meinung sind, dass 
+unvernünftig ist und eine besondere Abstimmung darüber erzwingen. In
+der Praxis, ist das nie vorgekommen und ich erwarte nicht, dass es das
+jemals wird. Bei einer neuen Version sind sowieso alle schon konservativ
+eingestellt, und wenn jemand es als dringend genug erachtet, ein Veto
+einzulegen, dann gibt es für gewöhnlich einen guten Grund dafür.</p><p>Da da der Ablauf eine neue Version zu erstellen, absichtlich eine
+konservative Voreingenommenheit hat, sind die Rechtfertigungen die bei
+Vetos angeboten werden manchmal eher formal als technisch orientiert.
+Eine Person kann zum Beispiel das Gefühl haben, dass eine Änderung gut
+geschrieben ist und wahrscheinlich keine neuen Fehler verursachen wird,
+aber gegen die Aufnahme der Änderung in einer micro Version stimmt,
+einfach weil es zu groß ist &#8211; vielleicht fügt es eine neue Funktion
+hinzu, oder auf irgend eine subtile Art, die Kompatibilitätsrichtlinien
+nicht befolgt. Ich habe gelegentlich sogar Entwickler gesehen, die ein
+Veto eingelegt haben, einfach nur aus einem Bauchgefühl heraus, dass
+die Änderung mehr getestet werden musste, auch wenn sie bei der
+Überprüfung keine Fehler entdecken konnten. Leute murrten ein wenig,
+aber die Vetos blieben in Kraft, und die Änderung wurde bei der Version
+nicht aufgenommen (ich kann mich allerdings nicht daran erinnern ob bei
+den weiteren Tests irgend welche Fehler gefunden wurden oder nicht).</p><div class="sect3" title="Gemeinschaftlichen Stabilisierung neuer Versionen"><div class="titlepage"><div><div><h4 class="title"><a name="release-stabilization-collaboration"></a>Gemeinschaftlichen Stabilisierung neuer Versionen</h4></div></div></div><p>Wenn Ihr Projekt sich für ein System entscheidet bei dem über
+Änderungen abgestimmt wird, ist es unabdingbar, dass die physikalischen
+Mechanismen, die Wahl zusammen zu stellen und Stimmen, so bequem wie
+möglich ist. Obwohl es eine menge Open-Source-Software für 
+elektronische Wahlen zur Verfügung steht, ist in der Praxis, am
+einfachsten, eine Textdatei im Versionszweig zu erstellen, mit dem
+Namen <code class="filename">STATUS</code> oder <code class="filename">VOTES</code> oder
+etwas ähnliches. Diese Datei listet jede vorgeschlagene Änderung auf
+ &#8211; alle Entwickler können eine neue Änderung für die Aufnahme
+vorschlagen &#8211; zusammen mit allen Stimmen dafür oder dagegen, mit
+zusätzlichen Anmerkungen oder Kommentare. (Eine Änderung vorzuschlagen
+bedeutet im übrigen nicht unbedingt dafür zu stimmen, auch wenn die
+beiden oftmals hand in hand gehen.) Ein Eintrag in einer solchen Datei,
+könnte wie folgt aussehen:</p><pre class="screen">
+* r2401 (Meldung #49)
+  Verhindern, dass der client/server handshake zwei mal durchgeführt
+  wird.
+  
+  Rechtfertigung:
+    Vermeidet überflüssigen Netzwerkverkehr; kleine Änderung und leicht
+    zu überprüfen.
+  Anmerkungen:
+    Wurde in http://.../mailing-lists/message-7777.html und anderen
+    Nachrichten in dem Thread besprochen.
+  Stimmen:
+    +1: jsmith, kimf
+    -1: tmartin (Bricht die Kompatibilität mit manchen pre-1.0 Server;
+                 zugegeben, diese Server sind Buggy, aber warum sollen
+                 wird inkompatibel sein, wenn es nicht sein muss?)
+</pre><p>In diesem Fall, erhielt die Änderung zwei positive Stimmen, 
+wurde aber durch den Veto von tmartin aufgehalten, der den Grund für
+seinen Einspruch in Klammern angegeben hat. Das genau Format von diesem
+Eintrag macht keinen Unterschied; egal worauf sich Ihr Projekt einigt,
+es ist in Ordnung &#8211; vielleicht sollte die Erklärung von tmartin für
+seinen Einspruch in den "Anmerkungen:" Bereich gehen, oder vielleicht
+sollte die Beschreibung der Änderung eine "Beschreibung:" Überschrift 
+bekommen um den anderen Abschnitten zu entsprechen. Dass wichtige ist,
+dass alle Information, die nötig ist, um die Änderung zu evaluieren
+zur Verfügung stehen und dass die Mechanismen um Stimmen abzugeben, so
+einfach wie möglich sind. Die vorgeschlagene Änderung wird anhand 
+seiner Revisionsnummer im Projektarchiv gekennzeichnet (in diesem
+Fall eine einzige Revision, r2401, obwohl eine vorgeschlagene Änderung
+genau so gut aus mehreren Änderungen bestehen könnte). Von der Revision
+wird angenommen, dass sie sich auf den Stamm bezieht; wenn die Änderung
+bereits im Versionszweig wäre, gäbe es keinen Grund darüber 
+abzustimmen. Wenn Ihr Versionsverwaltungssystem keine offensichtliche
+Syntax hat, um auf einzelne Revisionen zu verweisen, sollte das Projekt
+eins erfinden. Damit Abstimmungen durchgeführt werden können, müssen
+Änderungen die in Frage stehen, eindeutig zu identifizieren sein.
+</p><p>Diejenigen die einen Vorschlag einreichen, oder dafür abstimmen,
+sind dafür verantwortlich, dass es sauber auf den Versionszweig
+angewandt werden kann, d.h. ohne Konflikte (siehe <a class="xref" href="vc.html#vc-vocabulary-conflict"><em class="firstterm">Konflikt</em></a>) angewandt werden kann. Wenn es
+Konflikte gibt, sollte der Eintrag entweder auf einen angepassten
+Zweig verweisen, auf dem sich der Patch sauber anwenden lässt, oder
+auf einen temporären Zweig welcher eine angepasste Version der
+Änderung beinhaltet, zum Beispiel:</p><pre class="screen">
+* r13222, r13223, r13232
+  Überarbeitung vom auto-merge Algorithmus in libsvn_fs_fs
+  Rechtfertigung:
+    Nicht akzeptable Performance (&gt;50 Minuter für einen kleinen 
+    commit) bei einem Projektarchiv mit 300,000 Revisionen
+  Zweig:
+    1.1.x-r13222@13517
+  Stimmen:
+    +1: epg, ghudson
+</pre><p>Dieses Beispiel stammt aus dem echten Leben; es stammt aus der
+<code class="filename">STATUS</code> Datei für Version 1.1.4 von Subversion.
+Beachten Sie, wie es die ursprünglichen Revisionen als kanonische
+Verweise auf die Änderung benutzt obwohl es auch einen Zweig gibt,
+indem die aufgrund von Konflikten angepasste Version der Änderung 
+enthalten ist (der Zweig kombiniert auch die drei Revisionen im
+Stamm zu einer, r13517, um dem Merge zum Zweig der neuen Version
+zu erleichtern, sollte ihm zugestimmt werden). Die ursprünglichen
+Revisionen werden angegeben, da sie trotzdem noch am einfachsten zu
+überprüfen sind, da sie die ursprünglichen commit Kommentare enthalten.
+Der vorübergehende Zweig hätte diese Kommentar nicht; um eine
+Verdopplung der Informationen zu vermeiden (siehe <a class="xref" href="vc.html#vc-singularity" title="Eindeutigkeit von Informationen">&#8222;Eindeutigkeit von Informationen&#8220;</a><span> im Kapitel
+<a class="xref" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <i>Technische Infrastruktur</i></a></span>), der Commit
+Kommentar für r13517 einfach sagen "Anpassung von r13222, r13223,
+und r13232 für die Portierung auf den 1.1.x Zweig." Alle anderen
+Information über die Änderung kann bei ihren ursprünglichen
+Revisionen gefunden werden.</p></div><div class="sect3" title="Release-Verwalter"><div class="titlepage"><div><div><h4 class="title"><a name="release-manager"></a>Release-Verwalter</h4></div></div></div><p>Der eigentliche Merge-Vorgang (siehe <a class="xref" href="vc.html#vc-vocabulary-merge"><em class="firstterm">Merge<sup>[<a name="idp4780864" href="#ftn.idp4780864" class="footnote">27</a>]</sup></em></a>) angenommener Änderungen in den
+Versionszweig kann von jedem Entwickler durchgeführt werden. Es muss
+keine bestimmte Person geben, deren Aufgabe es ist, die Änderungen zu
+mergen; wenn es eine große Menge von Änderungen gibt, kann es besser sein, die
+Bürde zu verteilen.</p><p>Obwohl sowohl Wahlen als auch die Merges auf eine 
+dezentralisierte Art passieren, gibt es in der Praxis ein oder zwei
+Personen welche die Veröffentlichung vorantreiben. Diese Rolle wird
+manchmal als <em class="firstterm">Releaseverwalter</em> (en. release
+manager) bezeichnet, sie ist aber sehr verschieden von einem
+Versionsherr (siehe <a class="xref" href="stabilizing-a-release.html#release-owner" title="Diktatur durch den Versionsherrn">&#8222;Diktatur durch den Versionsherrn&#8220;</a><span> früher in diesem Kapitel</span>) der das letzte
+Wort über die Änderungen hat. Versionsverwalter halten einen
+Überblick darüber, wie viele Änderungen derzeit in Betracht gezogen
+werden, wie vielen zugestimmt wurde, und wie vielen wahrscheinlich
+zugestimmt wird, usw. Wenn sie das Gefühl bekommen, dass wichtige
+Änderungen nicht die nötige Aufmerksamkeit bekommen, und aus einer
+Version gelassen werden könnten, aufgrund von Stimmenmangel, werden
+sie sanft andere Entwickler nerven, damit sie die Änderungen 
+überprüfen und darüber abzustimmen. Wenn ein Satz von Änderungen
+Zustimmung erhalten haben, werden diese Personen es oft auf sich
+nehmen, sie in den Versionszweig aufzunehmen; es ist in Ordnung wenn
+andere ihnen die Aufgabe überlassen, so lange jeder versteht, dass sie
+keiner Obligation unterliegen, die ganze Arbeit zu übernehmen, es sei
+denn sie haben sich explizit dazu verpflichtet. Wenn die Zeit kommt,
+die neue Version zu veröffentlichen (siehe <a class="xref" href="testing-and-releasing.html" title="Tests und Veröffentlichung">&#8222;Tests und Veröffentlichung&#8220;</a><span> später
+in diesem Kapitel</span>), kümmern sich die Versionsverwalter auch um
+die logistische Arbeit, die Erstellung der Pakete, das sammeln der 
+digitalen Signaturen, das Hochladen der Pakete, und die öffentliche
+Bekanntgabe.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="release-branches.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="packaging.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Versionszweige </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Erstellung der Pakete</td></tr></table></div></body></html>

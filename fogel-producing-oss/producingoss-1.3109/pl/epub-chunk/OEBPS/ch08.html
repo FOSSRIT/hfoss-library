@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Rozdział 8. Zarządzanie ochotnikami</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Rozdział 8. Zarządzanie ochotnikami"><div class="titlepage"><div><div><h1 class="title"><a id="managing-volunteers"/>Rozdział 8. Zarządzanie ochotnikami</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Osiąganie konsensu co do potrzeb projektu oraz doprowadzanie do 
+wspólnej pracy nad ich zaspokajaniem wymaga więcej niż tylko świetnej 
+atmosfery i braku oczywistej dysfunkcji. Wymaga to jednej lub kilku 
+osób świadomie zarządzających wszystkimi zaangażowanymi ludźmi. 
+Zarządzanie ochotnikami nie jest może technicznym rzemiosłem w takim 
+sensie jak programowanie komputera, ale jest rzemiosłem w tym sensie, 
+że można je ulepszać przez naukę i praktykę.</p><p>Ten rozdział jest zbiorem specyficznych technik zarządzania 
+ochotnikami. Czerpie on, zapewne mocniej niż poprzednie rozdziały, z 
+doświadczeń projektu Subversion jako studium przypadku, po części 
+dlatego, że pracowałem nad nim w trakcie pisania tej książki i miałem 
+wszystkie pierwotne źródła pod ręką, a częściowo dlatego, że bardziej 
+akceptowalne jest wrzucanie kamyków krytyki do własnego ogródka niż do 
+cudzych. Jednak widziałem też w rozmaitych innych projektach zalety 
+stosowania - oraz konsekwencje nie stosowania - podanych poniżej 
+zaleceń; tam, gdzie będzie politycznie możliwe przedstawienie 
+przykładów z niektórych tych projektów, uczynię to.</p><p>Skoro już mowa o polityce, to warto w tym miejscu spojrzeć z 
+bliska na to wieloznaczne słowo. Wielu inżynierów lubi myśleć, że 
+politykowanie to coś, co robią inni. "<span class="emphasis"><em>Ja</em></span> tylko 
+dbam o dobro projektu, a <span class="emphasis"><em>on</em></span> uprawia politykę." 
+Wydaje mi się, że ta niechęć do polityki (lub tego, co się uważa za 
+politykę) jest szczególnie silna wśród inżynierów, ponieważ wierzą oni, 
+że niektóre rozwiązania są obiektywnie lepsze niż inne. Jeśli więc ktoś 
+działa z pobudek, które wyglądają na pozamerytoryczne - na przykład 
+dbanie o swoją pozycję, zmniejszanie cudzego wpływu, wyraźne paktowanie 
+lub unikanie ranienia cudzych uczuć - inni uczestnicy projektu mogą się 
+poczuć poirytowani. Naturalnie to rzadko powstrzymuje ich przed 
+zachowywaniem się w ten sam sposób, gdy chodzi o ich własne żywotne 
+interesy.</p><p>Jeżeli uważasz "politykowanie" za coś wstrętnego i masz nadzieję, 
+że utrzymasz swój projekt z dala od tego, to lepiej od razu daj sobie 
+spokój. Polityka jest nieunikniona wszędzie tam, gdzie tylko ludzie 
+muszą razem zarządzać wspólnymi zasobami. Jest absolutnie racjonalne, 
+że jednym z czynników wpływających na proces decyzyjny każdego z 
+uczestników jest kwestia jak dane wydarzenie może wpłynąć na jego 
+przyszłe wpływy w projekcie. Ostatecznie jeśli wierzysz w swoje 
+przekonania i umiejętności, jak czyni to większość programistów, to 
+potencjalna utrata wpływu musi być uważana za - w pewnym sensie - 
+rezultat techniczny. Podobne rozumowanie tyczy się też innych zachowań, 
+które z wierzchu mogą się wydawać "czystą" polityką. W rzeczywistości 
+coś takiego jak czysta polityka w ogóle nie istnieje: przede wszystkim 
+dokładnie z tego powodu, że wydarzenia mają wielorakie konsekwencje w 
+realnym świecie i ludzie stają się ich politycznie świadomi. Polityka 
+to w końcu zwyczajne uznanie faktu, że trzeba brać pod uwagę 
+<span class="emphasis"><em>wszystkie</em></span> konsekwencje danej decyzji. Jeśli 
+decyzja taka prowadzi do stanu, który większość uczestników uważa za 
+technicznie satysfakcjonujący, ale wymaga zmian w relacjach władzy, 
+która pozostawi najważniejsze osoby w poczuciu izolacji, to to drugie 
+jest równie istotne jak to pierwsze. Ignorowanie tego nie jest 
+wielkoduszne tylko krótkowzroczne.</p><p>Czytając więc poniższe rady i pracując w swoim projekcie 
+pamiętaj, że <span class="emphasis"><em>nikt</em></span> nie jest ponad polityką. 
+Sprawianie wrażenia, że jest się ponad nią, jest jedynie szczególną 
+strategią polityczną, czasem bardzo użyteczną, ale nigdy nie jest to 
+prawda. Polityka to po prostu to, co zachodzi gdy ludzie się nie 
+zgadzają, a projekty, które odnoszą sukcesy, to te, które wykorzystują 
+mechanizmy polityczne do konstruktywnego załatwiania problemów.</p></div><div class="sect1" title="Najlepsze wykorzystywanie ochotników"><div class="titlepage"><div><div><h1 class="title"><a id="volunteers"/>Najlepsze wykorzystywanie ochotników</h1></div></div></div><p>Dlaczego ochotnicy pracują nad projektami wolnego oprogramowania?
+<sup>[<a id="idp8658640" href="#ftn.idp8658640" class="footnote">23</a>]</sup></p><p>Gdy się ich o to zapyta, wielu ochotników twierdzi, że robi to, bo 
+chce tworzyć dobre oprogramowanie lub mieć osobisty udział w naprawianiu
+błędów, które im przeszkadzają. Ale to zwykle nie jest cała prawda. W 
+końcu czy potrafilibyście sobie wyobrazić sobie kogoś, kto pozostaje w 
+projekcie nawet jeśli nikt nigdy ani słowem nie docenił jego pracy ani 
+nie wysłuchał jego głosu w dyskusji? Oczywiście, że nie. Jest jasne, że 
+ludzie poświęcają czas na wolne oprogramowanie z powodów wykraczających 
+poza abstrakcyjną chęć tworzenia dobrego kodu. Rozumienie rzeczywistych 
+motywacji ochotników pomoże ci tak zorganizować projekt, aby ich 
+przyciągać i utrzymywać. Pragnienie tworzenia dobrych programów może 
+być jedną z tych motywacji, wraz z wyzwaniami i edukacyjną wartością 
+pracy nad trudnymi problemami. Ale ludzie mają też wbudowaną potrzebę 
+współpracy z innymi ludźmi oraz wyrażania i zdobywania szacunku poprzez 
+wspólne działania. Grupy zaangażowane we współpracę muszą wytworzyć 
+takie normy zachowania, które zapewniają zdobywanie i utrzymywanie 
+statusu w wyniku działań, które pomagają w osiąganiu celów grupy.</p><p>Te normy nie zawsze powstają same z siebie. Na przykład w 
+niektórych projektach - doświadczeni twórcy otwartego oprogramowania 
+potrafią prawdopodobnie bez zastanowienia wskazać kilka z nich - ludzie
+najwyraźniej czują, że podnoszą swój status pisząc często i obszernie.
+Nie dochodzą do tego wniosku przez przypadek; dochodzą do tego ponieważ
+są nagradzani szacunkiem za wysuwanie długiej i rozbudowanej 
+argumentacji, niezależnie od tego, czy to faktycznie w czymś pomaga. 
+Oto niektóre techniki tworzenia atmosfery, w której działania mające na 
+celu zdobywanie szacunku są jednocześnie konstruktywne.</p><div class="sect2" title="Delegacja"><div class="titlepage"><div><div><h2 class="title"><a id="delegation"/>Delegacja</h2></div></div></div><p>Delegacja nie jest jedynie sposobem rozdzielania zadań; to także
+narzędzie polityczne i społeczne. Kiedy prosisz kogoś o zrobienie 
+czegoś, zastanów się nad wszelkimi tego skutkami. Najbardziej 
+oczywistym skutkiem jest to, że jeśli się zgodzi, to on się tym zajmuje, 
+a nie ty. Ale jednocześnie otrzymuje komunikat o twoim zaufaniu, że 
+wykona to zadanie. Ponadto, jeśli przekazałeś tę prośbę na forum 
+publicznym, to wie również, że inni członkowie grupy także dowiedzieli 
+się o tym, że mu zaufałeś. Może też odczuwać pewną presję żeby się 
+zgodzić, co oznacza, że musisz pytać w taki sposób, aby pozwolić mu 
+łagodnie odmówić jeśli naprawdę nie chce tego zrobić. Jeśli zadanie 
+wymaga koordynacji z innymi uczestnikami projektu, to w praktyce 
+proponujesz, aby zwiększył swoje zaangażowanie, stworzył więzy, które w 
+innym wypadku mogłyby wcale nie powstać, i zapewne stał się autorytetem 
+w jakiejś części projektu. To dodatkowe zaangażowanie może go zniechęcić 
+lub sprawić, że w wyniku ogólnego wzrostu poczucia zaangażowania stanie 
+się bardziej aktywny także w innych sprawach.</p><p>Z powodu wszystkich tych efektów często jest sens poprosić kogoś
+innego, aby coś zrobił, nawet jeśli wiesz, że sam zrobiłbyś to szybciej 
+lub lepiej. Oczywiście czasem jest na to także ścisły argument związany 
+z wydajnością ekonomiczną: prawdopodobnie koszt skorzystania z okazji do 
+wykonania tego samodzielnie byłby zbyt wysoki - może być do zrobienia 
+coś jeszcze ważniejszego, czym mógłbyś się zająć w tym czasie. Ale nawet 
+kiedy ten argument nie wchodzi w grę, to <span class="emphasis"><em>i tak</em></span> 
+możesz zechcieć poprosić kogoś innego o zajęcie się tym zadaniem, 
+ponieważ na dłuższą metę chcesz wciągnąć tę osobę głębiej w projekt, 
+nawet jeśli oznacza to poświęcenia na początku dodatkowego czasu na 
+opiekowanie się nim. Sprawdza się także technika odwrotna: jeśli czasem
+zgodzisz się wziąć za pracę, na którą ktoś inny nie ma ochoty lub czasu,
+to uzyskasz jego dobrą wolę oraz szacunek. Delegacja i zastępstwo nie
+ograniczają się tylko do wykonywania konkretnych zadań; służą także do
+zachęcania ludzi do silniejszego zaangażowania się w projekt.</p><div class="sect3" title="Wyraźnie odróżniaj prośby od wyznaczania"><div class="titlepage"><div><div><h3 class="title"><a id="delegation-assignment"/>Wyraźnie odróżniaj prośby od wyznaczania</h3></div></div></div><p>Czasem można słusznie oczekiwać, że dana osoba zgodzi się przyjąć
+zadanie. Na przykład jeśli ktoś wprowadził do kodu błąd lub nadesłał 
+kod, który jest w oczywisty sposób niezgodny z zasadami projektu, to 
+wystarczy wskazać problem i odtąd zachowywać się tak, jakbyś zakładał, 
+że ta osoba się nim zajmie. Ale są też inne sytuacje, w których wcale 
+nie jest jasne, czy masz prawo oczekiwać działania. Ta osoba może zrobić
+to, o co prosisz, albo nie. Ponieważ nikt nie lubi być lekceważony, to
+musisz uważać na różnicę między tymi dwoma typami sytuacji i odpowiednio
+wyrażać swoje oczekiwania.</p><p>
+Rzeczą, która niemal zawsze wzbudza u ludzi natychmiastową irytację, 
+jest prośba o wykonanie czegoś wyrażona w taki sposób, jakbyś uważał, że 
+należy to do czyichś obowiązków, podczas gdy ta osoba wcale tak nie 
+myśli. Na przykład przypisanie komuś obsługi zgłoszeń jest szczególnie 
+podatnym gruntem dla tego rodzaju zadrażnień. Uczestnicy projektu zwykle
+wiedzą, kto jest w danej dziedzinie ekspertem, więc gdy napływa 
+zgłoszenie błędu, to jest najczęściej jedna lub dwie osoby, o których
+wszyscy wiedzą, że zapewne szybko to naprawi. Jeśli jednak przydzielisz 
+jednej z tych osób zadanie bez jej uprzedniej zgody, to może się poczuć 
+postawiona w niewygodnej pozycji. Odczuwa wówczas nacisk związany z 
+oczekiwaniami, ale może też mieć wrażenie, że jest w efekcie ukarana za 
+swoje umiejętności. W końcu umiejętności zdobywa się przez naprawianie 
+błędów, więc może ktoś inny by się tym zajął! (Zauważ, że systemy 
+śledzenia zgłoszeń, które automatycznie przypisują zgłoszenia konkretnym 
+osobom na podstawie informacji w raporcie błędu, są mniej podatne na 
+wywoływanie urazów, bo wszyscy wiedzą, że to przypisanie nastąpiło w 
+ramach automatycznego procesu i nie jest wskaźnikiem ludzkich 
+oczekiwań.)</p><p>Chociaż byłoby miło rozdzielać zadania tak równo, jak to tylko 
+możliwe, to w niektórych przypadkach zależy nam po prostu na tym, żeby
+namówić osobę, która może naprawić błąd, aby zrobiła to jak najszybciej. 
+Ponieważ nie można sobie pozwolić na stratę czasu, żeby za każdym razem
+kontaktować się w sprawie takiego przydziału ("Czy mógłbyś spojrzeć na 
+ten błąd?" "Tak." "W porządku, wobec tego przydzielam go tobie." 
+"Dobrze."), powinieneś po prostu przydzielać zadania w formie prośby, 
+nie wywierając presji. Praktycznie wszystkie systemy śledzenia zgłoszeń
+umożliwiają dodanie komentarza do zlecenia. W takim komentarzu można
+napisać coś w rodzaju:</p><div class="blockquote"><blockquote class="blockquote"><p>Przydzielam go tobie, jkowalski, ponieważ najlepiej znasz się 
+   na tym kodzie. Nie miej jednak oporów przed odrzuceniem tego, jeśli
+   nie masz czasu na to spojrzeć. (I daj mi znać jeśli nie chcesz 
+   dostawać takich zadań w przyszłości.)</p></blockquote></div><p>To wyraźnie oddziela <span class="emphasis"><em>zgłoszenie</em></span> zlecenia od 
+<span class="emphasis"><em>przyjęcia</em></span> tego zgłoszenia przez odbiorcę. W tym
+wypadku publicznością jest nie tylko on, ale wszyscy: cała grupa widzi
+publiczne potwierdzenie jego umiejętności, ale zarazem jest jasne, że 
+ma on prawo przyjąć lub odmówić przyjęcia tego obowiązku.</p></div><div class="sect3" title="Pilnuj swojego delegata"><div class="titlepage"><div><div><h3 class="title"><a id="delegation-followup"/>Pilnuj swojego delegata</h3></div></div></div><p>Kiedy poprosisz kogoś o zrobienie czegoś, to pamiętaj o tym i 
+pilnuj go, cokolwiek by się nie działo. Większość próśb zgłasza się na 
+forach publicznych, zwykle mają one mniej więcej taką formę: "Czy możesz 
+się zająć sprawą X? Tak czy owak daj nam znać; nie będzie problemu jeśli 
+nie możesz, chcemy tylko wiedzieć." Możesz otrzymać na to odpowiedź lub 
+nie. Jeśli dostaniesz odzew, a odpowiedź jest negatywna, to kółko się 
+zamyka - musisz spróbować innej strategii poradzenia sobie z tym X. 
+Jeśli odpowiedź jest pozytywna, to miej oko na rozwój sprawy i komentuj 
+czy widzisz postępy, czy nie (każdy pracuje lepiej kiedy wie, że ktoś 
+docenia jego pracę). Jeśli przez kilka dni nie otrzymujesz żadnej 
+odpowiedzi, to zapytaj znowu lub wyślij wiadomość, że nie otrzymałeś 
+odpowiedzi i szukasz kogoś innego do wykonania tego zadania. Albo zrób 
+to sam, ale i tak upewnij się, że nie dostałeś odpowiedzi na swoje 
+zapotrzebowanie.</p><p>Celem publicznego poinformowania o braku odpowiedzi 
+<span class="emphasis"><em>nie</em></span> jest upokarzanie, powinieneś więc zadbać o 
+takie sformułowanie twoich uwag, żeby nie sprawiały takiego wrażenia. 
+Chodzi tylko o pokazanie, że zwracasz uwagę na to o co prosiłeś, i że 
+odnotowałeś reakcję jaką na to otrzymałeś. To zwiększa szanse, że 
+następnym razem ktoś się zgodzi, ponieważ ludzie spostrzegą (nawet jeśli 
+tylko nieświadomie), że raczej zauważysz to co zrobią, ponieważ 
+zauważyłeś znacznie drobniejszy fakt, że ktoś nie odpowiedział.</p></div><div class="sect3" title="Zwracaj uwagę kto jest zainteresowany"><div class="titlepage"><div><div><h3 class="title"><a id="delegation-interest"/>Zwracaj uwagę kto jest zainteresowany</h3></div></div></div><p>Inną rzeczą, która sprawia ludziom przyjemność, jest dostrzeganie 
+ich zainteresowań - ogólnie mówiąc im więcej aspektów czyjejś osobowości 
+zauważysz i zapamiętasz, tym bardziej komfortowo się ta osoba poczuje i 
+tym chętniej będzie chciała pracować w grupach, do których należysz.
+</p><p>Na przykład w projekcie Subversion pojawił się ostry podział 
+między ludźmi, którzy chcieli ukończyć ostateczną wersję 1.0 (co 
+faktycznie zrobiliśmy), a tymi, którzy chcieli przede wszystkim dodawać 
+nowe funkcje i pracować nad interesującymi problemami, ale nie 
+interesowało ich zanadto kiedy pojawi się wydanie 1.0. Żadne z tych 
+stanowisk nie jest lepsze ani gorsze niż to drugie; to tylko dwa różne 
+typy twórców i oba wykonują w projekcie wiele pracy. Ale natychmiast 
+dowiedzieliśmy się jak ważne jest aby <span class="emphasis"><em>nie</em></span> zakładać, 
+że wszyscy podzielają entuzjazm z pogoni za wersją 1.0. Media 
+elektroniczne bywają bardzo zwodnicze: możesz odczuwać atmosferę 
+wspólnego celu, gdy w rzeczywistości jest on podzielany tylko przez 
+ludzi z którymi akurat rozmawiałeś, a pozostali mają zupełnie inne 
+priorytety.</p><p>Im lepsze masz rozeznanie w tym, czego ludzie oczekują od 
+projektu, tym bardziej efektywnie możesz ich o coś prosić. Nawet zwykłe 
+okazanie zrozumienia czego chcą, bez wiązania tego z żadnymi prośbami,
+jest użyteczne, ponieważ utwierdza każdego w przekonaniu, że nie jest 
+jedynie kolejnym elementem jednolitej masy.</p></div></div><div class="sect2" title="Pochwały i krytyka"><div class="titlepage"><div><div><h2 class="title"><a id="praise-and-criticism"/>Pochwały i krytyka</h2></div></div></div><p>Pochwały i krytyka nie są przeciwieństwami; pod wieloma względami 
+są do siebie bardzo podobne. Oba te zjawiska są przede wszystkim formami 
+okazywania uwagi i są najbardziej efektywne, gdy odnoszą się raczej do 
+konkretów niż gdy dotyczą ogółów. Oba powinny być stosowane w 
+konkretnych celach. Oba może dotknąć inflacja: zbyt wiele zbyt częstych 
+pochwał obniża ich wartość; to samo dotyczy krytykowania, chociaż w 
+praktyce krytyka zwykle występuje w reakcji na coś i dlatego jest nieco 
+bardziej odporna na dewaluację.</p><p>Istotną cechą kultury technicznej jest to, że szczegółowa, 
+pozbawiona emocji krytyka jest często traktowana jako rodzaj pochwały 
+(jak to zostało omówione w sekcji 
+<a class="xref" href="ch06.html#rudeness" title="Recognizing Rudeness">„Recognizing Rudeness”</a><span>,
+<a class="xref" href="ch06.html" title="Rozdział 6. Communications">Rozdział 6, <em>Communications</em></a></span>), ponieważ jest skutkiem 
+uznania, że praca jej adresata jest warta czasu poświęconego na jej 
+analizę. Aby jednak tak się stało, muszą być spełnione oba warunki: 
+<span class="emphasis"><em>szczegółowość</em></span> i <span class="emphasis"><em>brak emocji</em></span>.
+Na przykład jeśli ktoś wprowadzi do kodu niedbałą zmianę, to jest 
+bezużyteczne (i wręcz szkodliwe) komentowanie tego słowami "To jest 
+niedbałe". W końcu niedbałość jest charakterystyką 
+<span class="emphasis"><em>osoby</em></span>, nie jej pracy, a jest istotne aby skupiać 
+swoje reakcje właśnie na pracy. Znacznie bardziej efektywne jest 
+opisanie wszystkiego, co jest złego w tej zmianie, taktownie i bez 
+napastliwości. Jeśli to trzecia lub czwarta pod rząd niestaranna zmiana 
+autorstwa tej samej osoby, to należy o tym napisać - nadal bez złości - 
+na końcu swojej krytyki, aby dać znać, że została odnotowana taka 
+prawidłowość.</p><p>Jeśli ktoś pod wpływem krytyki nie poprawia się, to rozwiązaniem 
+nie jest silniejsza krytyka. Wyjściem dla grupy jest usunięcie tej osoby 
+z pozycji niekompetencji w sposób, który minimalizuje urażenie uczuć tak
+bardzo, jak to tylko możliwe; przykłady na to znajdziesz w sekcji
+<a class="xref" href="ch08s03.html" title="Przekazywanie obowiązków">„Przekazywanie obowiązków”</a><span> dalej w tym 
+rozdziale</span>. Taka sytuacja jest mimo wszystko rzadkością. 
+Większość ludzi całkiem nieźle reaguje na krytykę, która jest konkretna,
+szczegółowa i zawiera jasne (nawet jeśli nie wypowiedziane) oczekiwania 
+na temat poprawy.</p><p>Pochwały oczywiście nie ranią niczyich uczuć, ale to nie znaczy, 
+że powinny być stosowane mniej rozważnie niż krytyka. Pochwała to 
+narzędzie: zanim go użyjesz, spytaj sam siebie 
+<span class="emphasis"><em>dlaczego</em></span> chcesz go użyć. Co do zasady, nie jest 
+dobrym pomysłem chwalić ludzi za to co robią zazwyczaj, lub za takie
+działania, które stanowią normalną i oczekiwaną część uczestnictwa w 
+grupie. Gdybyś tak robił, nie wiedziałbyś gdzie się zatrzymać: czy 
+należy chwalić <span class="emphasis"><em>wszystkich</em></span> za robienie zwyczajnych 
+rzeczy? Ostatecznie jeśli pominiesz niektórych ludzi, to będą się 
+zastanawiać dlaczego. Znacznie lepiej jest wypowiadać pochwały i wyrażać 
+wdzięczność oszczędnie, jako reakcję na niezwykły lub nieoczekiwany 
+wysiłek, w ramach zachęty do dalszych takich działań. Gdy widać, że 
+uczestnik projektu na stałe wszedł na wyższy poziom produktywności, to 
+odpowiednio podnieś swój próg pochwał dla tej osoby. Powtarzanie pochwał 
+za normalne zachowanie i tak stopniowo staje się bezwartościowe. Taka 
+osoba powinna zamiast tego odczuć, że jej nowy poziom produktywności 
+jest teraz uznawany za normalny i naturalny, a tylko praca wykraczająca 
+ponad ten poziom powinna zostać specjalnie zauważona.</p><p>To oczywiście wcale nie znaczy, że wkład tej osoby nie powinien 
+zostać odnotowany. Pamiętaj jednak, że jeśli projekt jest zbudowany 
+prawidłowo, to wszystko co ta osoba robi już i tak jest widoczne, więc 
+grupa o tym wszystkim wie (i ta osoba wie, że reszta grupy to wie). Poza 
+tym istnieją także inne sposoby zauważania cudzej pracy niż bezpośrednia 
+pochwała. Możesz na przykład przelotnie wspomnieć w trakcie rozmowy na 
+związany temat, że wykonała ona wiele pracy w danym zakresie i jest w 
+tych sprawach ekspertem; możesz publicznie konsultować się z nią w 
+pewnych kwestiach dotyczących kodu; lub, zapewne najbardziej efektywnie, 
+możesz w widoczny sposób wykorzystać wykonaną przez nią pracę, aby 
+wiedziała, że inni bez obaw polegają na owocach jej pracy. Zapewne nie 
+trzeba tego wszystkiego robić w żaden planowy sposób. Ktoś, kto 
+regularnie dostarcza dużego wkładu do projektu, będzie o tym wiedział i 
+domyślnie zajmie wpływową pozycję. Zazwyczaj nie potrzeba podejmować
+specjalnych kroków, aby to zapewnić, chyba że poczujesz, że z jakiegoś 
+powodu jest on niedoceniany.</p></div><div class="sect2" title="Zapobiegaj terytorializmowi"><div class="titlepage"><div><div><h2 class="title"><a id="territoriality"/>Zapobiegaj terytorializmowi</h2></div></div></div><p>Uważaj na uczestników, którzy próbują zasadzać się na wyłączność 
+w pewnych obszarach projektu, i którzy - jak się zdaje - chcą tam robić 
+wszystko, posuwając się aż do agresywnego przejmowania pracy rozpoczętej 
+przez innych. Takie zachowanie z początku może się wydawać nawet zdrowe. 
+W końcu na pierwszy rzut oka wygląda na to, że bierze na siebie większą 
+odpowiedzialność i wykazuje zwiększoną aktywność w danym obszarze. Ale 
+na dłuższą metę jest to destrukcyjne. Kiedy ludzie wyczuwają znak "zakaz 
+wstępu", trzymają się z daleka. To powoduje spadek przeglądów w tej 
+części projektu i jej zwiększoną podatność na defekty, ponieważ samotny 
+programista staje się najsłabszym ogniwem. Co gorsza, następuje też 
+pęknięcie ducha równości i współpracy w projekcie. Teoretycznie zawsze 
+powinno być tak, że dowolny uczestnik może pomagać w każdym zadaniu 
+kiedy tylko zechce. Oczywiście w praktyce dzieje się nieco inaczej: w 
+niektórych obszarach ludzie mają większe lub mniejsze wpływy, a osoby 
+nie będące ekspertami często mają wzgląd na ekspertów w pewnych 
+częściach projektu. Jednak wszystko to polega na dobrowolności: 
+nieformalna władza jest przyznawana na podstawie kompetencji i 
+sprawdzonego osądu, ale nigdy nie powinna być aktywnie 
+<span class="emphasis"><em>zdobywana</em></span>. Nawet gdy osoba chcąca mieć władzę 
+naprawdę jest kompetentna, to i tak kluczową sprawą jest to, że sprawuje 
+ją nieformalnie, poprzez konsensus w grupie, i że nigdy nie powoduje to 
+wykluczania innych z pracy na tym obszarze.</p><p>Odrzucanie lub modyfikowanie czyjejś pracy z powodów technicznych 
+to oczywiście zupełnie co innego. W tym wypadku decyduje jej zawartość, 
+a nie osoba, która akurat zachowuje się jak strażnik. Może się zdarzyć, 
+że ta sama osoba wykonuje akurat najwięcej przeglądów w danym obszarze,
+ale dopóki nie próbuje powstrzymywać kogoś innego przed robieniem tego 
+samego, to prawdopodobnie wszystko jest w porządku.</p><p>W celu zwalczania zalążków terytorializmu, lub nawet jego pozorów, 
+wiele projektów zabroniło umieszczania nazwisk autorów lub opiekunów w 
+plikach źródłowych. Z całego serca popieram tę praktykę: stosujemy ją w 
+projekcie Subversion i jest to mniej lub bardziej oficjalna reguła w 
+Apache Software Foundation. Członek ASF, Sander Striker, mówi o tym w 
+ten sposób:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>W Apache Software Foundation odradzamy używania 
+   oznaczeń autorstwa w kodzie źródłowym. Są ku temu różne powody, 
+   niezależnie od wątków prawnych. Zbiorowa produkcja polega na pracy 
+   nad projektami jako grupa i dbaniu o nie jako grupa. Uznawanie zasług 
+   jest dobre i powinno mieć miejsce, ale w taki sposób, który nie 
+   pozwala na fałszywe przypisywanie zasług, nawet przez skojarzenie. 
+   Nie ma jasnych wytycznych kiedy dodawać lub usuwać oznaczenia 
+   autorstwa. Czy dodajesz swoje nazwisko gdy zmienisz komentarz? Gdy 
+   wstawisz poprawkę o wielkości jednego wiersza? Czy usuwasz oznaczenia 
+   innych autorów kiedy zreorganizujesz kod i w 95% wygląda on inaczej? 
+   Co zrobić z ludźmi którzy dotykają niemal każdego pliku, zmieniając 
+   tam tylko tyle by zwiększyć wirtualny udział autora, po to, żeby 
+   wszędzie było ich nazwisko?</em></span></p><p><span class="emphasis"><em>Istnieją lepsze sposoby uznawania zasług i wolimy 
+   korzystać właśnie z nich. Z technicznego punktu widzenia znaczniki 
+   autorstwa są niepotrzebne; jeśli chcesz wiedzieć, kto napisał 
+   konkretny fragment kodu, to wystarczy się odwołać do zapisów w 
+   systemie kontroli wersji. Znaczniki autorstwa łatwo też tracą na 
+   aktualności. Czy na pewno chcesz dostawać prywatną korespondencję na 
+   temat kawałka kodu, który napisałeś pięć lat temu i miałeś szczęście 
+   już o nim zapomnieć?</em></span></p></blockquote></div><p>Pliki z kodem źródłowym są rdzeniem tożsamości projektu programu 
+komputerowego. Powinny one odzwierciedlać fakt, że społeczność twórców 
+jest za nie odpowiedzialna jako całość, a nie podzielona na małe lenna.
+</p><p>Ludzie czasem obstają za oznaczeniem autorów lub opiekunów w 
+plikach z kodem źródłowym argumentując, że daje to widoczne dowody 
+uznania osobom, które wykonały najwięcej pracy. Z tym argumentem wiążą 
+się dwa problemy. Po pierwsze, oznaczenia nieuchronnie wywołują 
+kłopotliwe pytanie o to, ile pracy trzeba włożyć, aby można było 
+umieścić tam także swoje nazwisko. Po drugie, mieszają oni uznawanie 
+zasług z władzą: z wykonania pracy w przeszłości nie wynika własność 
+obszaru, na którym została ona wykonana, a trudno - jeśli to w ogóle 
+możliwe - uniknąć tego skojarzenia, kiedy nazwiska konkretnych osób 
+znajdują się na początku plików z kodem źródłowym. W każdym przypadku 
+wiadomości o zasługach można i tak uzyskać z zapisów systemu kontroli 
+wersji oraz innymi drogami, na przykład przez archiwa list dyskusyjnych, 
+więc żadne informacje nie giną z powodu wykluczenia ich z plików 
+źródłowych.</p><p>Jeśli twój projekt zdecyduje się zabronić umieszczania nazwisk 
+w plikach z kodem źródłowym, to upewnij się, żeby nie przesadzić. Na 
+przykład wiele projektów ma dział <code class="filename">contrib/</code>, gdzie 
+znajdują się drobne narzędzia i skrypty pomocnicze, często pisane przez 
+osoby nie związane z projektem w żaden inny sposób. Nie ma problemu z 
+umieszczaniem nazwisk autorów w tych plikach, ponieważ tak naprawdę 
+projekt jako całość nie opiekuje się nimi. Z drugiej strony jeśli inni 
+ludzie z projektu zaczynają modyfikować takie narzędzie, to możesz 
+ostatecznie zechcieć przenieść je do do mniej izolowanego miejsca i, 
+zakładając że pierwotny autor wyrazi na to zgodę, usunąć jego nazwisko,
+aby ten kod wyglądał tak jak pozostałe zasoby, którymi opiekuje się 
+społeczność. Jeśli autor jest wrażliwy na tym punkcie, to dopuszczalne 
+są kompromisy, na przykład:</p><div class="blockquote"><blockquote class="blockquote"><pre class="programlisting">
+# indexclean.py: Usuwa stare dane z indeksu Scanley.
+#
+# Pierwotny autor: K. Maru &lt;kobayashi@yetanotheremailservice.com&gt;
+# Obecny opiekun: Projekt Scanley &lt;http://www.scanley.org/&gt;
+#                    i K. Maru.
+# 
+# ...
+</pre></blockquote></div><p>Jeśli to możliwe, to lepiej jednak unikać takich kompromisów, a 
+większość autorów daje się do tego przekonać, ponieważ są zadowoleni, że 
+ich wkład staje się bardziej integralną częścią projektu.</p><p>Najważniejsze jest aby pamiętać, że pomiędzy rdzeniem a 
+peryferiami każdego projektu rozciąga się continuum. Główne pliki z 
+kodem źródłowym programu oczywiście należą do rdzenia i powinno się 
+uznawać, że opiekuje się nimi społeczność. Z kolei narzędzia 
+towarzyszące lub fragmenty dokumentacji mogą być dziełem pojedynczych 
+osób, które opiekują się nimi samodzielnie, nawet jeśli są powiązane z 
+projektem lub wręcz są rozpowszechniane razem z nim. Nie ma potrzeby 
+stosowania reguły "jeden rozmiar dla wszystkich" do każdego pliku dopóki 
+utrzymywana jest zasada, że zasoby, którymi opiekuje się społeczność, 
+nie mogą stać się czyimś wyłącznym terytorium.</p></div><div class="sect2" title="Współczynnik automatyzacji"><div class="titlepage"><div><div><h2 class="title"><a id="automation"/>Współczynnik automatyzacji</h2></div></div></div><p>Staraj się nie dopuszczać do tego, aby ludzie wykonywali 
+czynności, które mogłyby wykonać maszyny. Generalna zasada brzmi, że 
+automatyzacja częstego zadania ma wartość przynajmniej dziesięć razy 
+większą od wysiłku włożonego w pojedyncze ręczne wykonanie tego zadania. 
+W przypadku zadań bardzo częstych lub bardzo złożonych ten współczynnik 
+może z łatwością wynieść dwadzieścia lub nawet jeszcze więcej.</p><p>Może się tu przydać potraktowanie siebie raczej jako "menedżera 
+projektu" niż po prostu jednego ze współtwórców projektu. Czasami 
+poszczególni uczestnicy są zbyt zajęci pracą u podstaw aby zobaczyć 
+szerszą perspektywę i zdać sobie sprawę, że wszyscy marnują mnóstwo 
+energii wykonując ręcznie zadania, które da się zautomatyzować. Nawet 
+ci, którzy zdają sobie sprawę z tego problemu, mogą nie mieć czasu na 
+jego rozwiązanie: ponieważ każdorazowe wykonanie danego zadania nie 
+wydaje się dużym wysiłkiem, nikt nigdy nie zirytuje się na tyle, aby coś 
+z tym zrobić. Automatyzacja staje się atrakcyjna, kiedy ten drobny 
+wysiłek przemnoży się przez ilość razy, gdy ponosi go każdy z twórców, a 
+następnie <span class="emphasis"><em>tę</em></span> liczbę pomnoży się przez liczbę 
+twórców.</p><p>Używam tu pojęcia "automatyzacja" w szerokim znaczeniu, 
+obejmującym nie tylko powtarzające się działania, które za każdym razem 
+modyfikują zawartość jednej lub dwóch zmiennych, ale także dowolny 
+rodzaj infrastruktury technicznej, która wspomaga ludzi. Minimum 
+standardowej automatyzacji, niezbędnej do prowadzenia współczesnego 
+projektu, prezentuje <a class="xref" href="ch03.html" title="Rozdział 3. Infrastruktura techniczna">Rozdział 3, <em>Infrastruktura techniczna</em></a>, ale 
+każdy projekt może mieć także własne szczególne problemy. Na przykład 
+grupa pracująca nad dokumentacją może chcieć założyć stronę internetową, 
+na której będą zawsze dostępne najbardziej aktualne wersje dokumentów. 
+Ponieważ dokumentacja jest często pisana w języku znaczników w rodzaju 
+XML, to można dodać do tego etap kompilacji, zwykle dość zawiły, który 
+będzie konwertować dokumenty do formatu odpowiedniego do ich 
+przeglądania lub pobierania. Przygotowanie strony, która wykonuje taką 
+kompilację automatycznie po każdej zmianie może być skomplikowane i 
+czasochłonne - ale jest warte wykonania, nawet jeśli będzie cię to 
+kosztować dzień lub więcej pracy. Suma korzyści z posiadania aktualnych 
+stron dostępnych przez cały czas jest ogromna, nawet mimo tego, że koszt 
+<span class="emphasis"><em>nie</em></span> posiadania ich może się wydawać w danej chwili 
+i dla danego człowieka jedynie drobną niedogodnością.</p><p>Przedsięwzięcie takich kroków eliminuje nie tylko straty czasu, 
+ale także przeszkody i frustracje pojawiające się w sytuacji, kiedy 
+ludzie błądzą, a dzieje się tak zawsze wtedy, gdy próbują wykonywać 
+skomplikowane procedury ręcznie. Ściśle określone ciągi operacji są 
+dokładnie tym, do czego stworzono komputery; oszczędzaj swoich ludzi do 
+bardziej interesujących zadań.</p><div class="sect3" title="Automatyczne testowanie"><div class="titlepage"><div><div><h3 class="title"><a id="automated-testing"/>Automatyczne testowanie</h3></div></div></div><p>Przeprowadzanie automatycznych testów jest przydatne w każdym
+projekcie oprogramowania, ale szczególnie w projektach wolnego 
+oprogramowania, ponieważ automatyczne testowanie (zwłaszcza testowanie 
+regresji) pozwala programistom czuć się pewnie podczas wprowadzania 
+zmian w obszarach kodu, których nie znają, i przez to zachęca do 
+bardziej odkrywczego rozwoju. Ponieważ powstawanie usterek jest tak 
+trudne do ręcznego wykrywania - trzeba właściwie zgadywać gdzie ktoś 
+mógł coś popsuć i próbować wykonywać różne eksperymenty, aby sprawdzić, 
+że tego nie zrobił - używanie automatycznych metod znajdowania takich 
+usterek oszczędza projektowi <span class="emphasis"><em>mnóstwo</em></span> czasu. Daje to 
+również poczucie bezpieczeństwa ludziom reorganizującym duże połacie 
+kodu i w ten sposób przyczynia się do długoterminowej zdolności do 
+opieki nad oprogramowaniem.</p><div class="sidebar" title="Testowanie regresji"><a id="regression-testing"/><div class="titlepage"><div><div><p class="title"><strong>Testowanie regresji</strong></p></div></div></div><p><em class="firstterm">Testowanie regresji</em> oznacza sprawdzanie, 
+  czy nie nastąpił nawrót już naprawionych usterek. Celem testowania 
+  regresji jest zmniejszanie szans na to, że zmiany w kodzie wywołają 
+  nieprzewidziane błędy w oprogramowaniu. W miarę jak projekt programu 
+  rozrasta się i komplikuje, prawdopodobieństwo występowania takich 
+  niespodziewanych efektów ubocznych stale rośnie. Dobre planowanie może 
+  obniżyć tempo jego wzrostu, ale nie da się wyeliminować tego problemu 
+  całkowicie.</p><p>W rezultacie wiele projektów posiada swój <em class="firstterm">zestaw 
+  testów</em>, osobny program, który wywołuje oprogramowanie 
+  projektu na takie sposoby, o których wiadomo że w przeszłości 
+  ujawniały konkretne błędy. Jeśli temu programowi uda się powtórzyć
+  jeden z takich błędów, to nastąpiła <em class="firstterm">regresja</em>,
+  innymi słowy czyjaś zmiana niespodziewanie zniweczyła zaaplikowaną 
+  wcześniej poprawkę.</p><p>Zobacz też 
+  <a class="ulink" href="http://pl.wikipedia.org/wiki/regresja_(informatyka)">http://pl.wikipedia.org/wiki/regresja_(informatyka)</a>.
+  </p></div><p>Testowanie regresji nie jest lekiem na wszystko. W szczególności 
+najlepiej sprawdza się w tych programach, które działają w trybie 
+wsadowym. Programy, które wykorzystują głównie graficzne interfejsy 
+użytkownika, są znacznie trudniejsze do opracowania programistycznie. 
+Inny problem z mechanizmem testowania regresji polega na tym, że sam 
+zestaw testów jest zwykle dość złożony i ma swoją własną krzywą uczenia 
+się oraz swoje problemy związane z opieką nad nim. Redukcja tej 
+złożoności jest jedną z najbardziej pożytecznych rzeczy, które możesz 
+zrobić, nawet jeśli zajmuje to wiele czasu. Im łatwiej dodaje się nowe 
+testy do zestawu, tym więcej programistów będzie to robić i tym mniej 
+błędów przetrwa do chwili wydania. Każdy wysiłek poświęcony na 
+upraszczanie pisania testów zaprocentuje wielokrotnie w trakcie 
+istnienia projektu.</p><p>Wiele projektów kieruje się zasadą <em class="firstterm">"Nie psuj procesu 
+budowania!"</em>, czyli: nie wprowadzaj zmian, które powodują że 
+programu nie można skompilować lub uruchomić. Osoba, która to zrobi, 
+zwykle odczuwa umiarkowane zażenowanie i staje się obiektem docinków. 
+Projekty posiadające zestaw testów regresji zwykle stosują też dodatkową 
+regułę: nie wprowadzaj zmian, przez które testy kończą się 
+niepowodzeniem. Takie problemy są najłatwiejsze do wykrycia, gdy cały 
+zestaw testów wykonywany jest co noc, a informacje o wynikach są 
+przesyłane na roboczą listę dyskusyjną lub na osobną listę, przeznaczoną 
+specjalnie do wyników testowania; to kolejny przykład cennej 
+automatyzacji.</p><p>Większość ochotników chętnie poświęci dodatkową ilość czasu na 
+napisanie testów regresji, jeżeli system testów jest zrozumiały i 
+wygodny w użyciu. Tworzenie testów towarzyszących zmianom kodu jest 
+uważane za odpowiedzialne zachowanie, jest to także wyjątkowa okazja do 
+współpracy: zazwyczaj dwóch programistów dzieli się pracą przy 
+naprawianiu błędów, przy czym jeden pisze łatkę, a drugi test. Często 
+okazuje się, że tego drugiego czeka więcej pracy, a ponieważ już samo 
+pisanie testów daje mniej satysfakcji niż faktyczne naprawienie błędów, 
+to nakazem jest, aby zestaw testów nie był bardziej męczący niż to 
+konieczne.</p><p>Niektóre projekty idą w tym jeszcze dalej, wymagając aby 
+<span class="emphasis"><em>każdej</em></span> poprawce lub nowej funkcji towarzyszył nowy 
+test. To, czy jest to dobry pomysł, czy nie, zależy od kilku czynników: 
+od natury danego oprogramowania, organizacji zespołu oraz od stopnia 
+trudności pisania nowych testów. Projekt CVS (<a class="ulink" href="http://www.cvshome.org/">http://www.cvshome.org/</a>) ma takie wymogi od dawna. Teoretycznie 
+jest to dobra zasada, ponieważ CVS to system kontroli wersji i z tego 
+powodu stara się unikać ryzyka zamazania lub niewłaściwego potraktowania 
+danych użytkownika. W praktyce problem z zestawem testów regresji w CVS 
+polega na tym, że jest to jeden ogromny skrypt powłoki (jak na ironię 
+nazwany <code class="filename">sanity.sh</code>, czyli "rozsądek"), który trudno 
+jest rozczytać, modyfikować czy rozszerzać. Trudność w dodawaniu nowych 
+testów w połączeniu z wymaganiem, aby do łatek były dołączane nowe 
+testy, powoduje że CVS praktycznie zniechęca twórców łatek. Kiedy 
+pracowałem nad CVS, czasem byłem świadkiem tego jak ludzie zaczynali, a 
+nawet ukończali łatki do kodu projektu, ale rezygnowali gdy dowiedzieli 
+się o konieczności dodania nowego testu do 
+<code class="filename">sanity.sh</code>.</p><p>To normalne, że więcej czasu spędza się na pisaniu nowego testu 
+regresji, niż na poprawianiu pierwotnego błędu. Ale CVS doprowadziło to 
+zjawisko do absurdu: można spędzić wiele godzin na właściwym 
+przygotowanie swoich testów, a i tak nie osiągnąć celu, ponieważ zmiany 
+w skrypcie Basha o długości 35 tysięcy wierszy wywołują po prostu zbyt 
+wiele nieprzewidywalnych skutków. Nawet doświadczeni programiści CVS 
+zwykle narzekali, kiedy musieli dodać nowy test.</p><p>Taka sytuacja jest wynikiem nie uwzględnienia współczynnika 
+automatyzacji we wszystkich naszych działaniach. To prawda, że 
+przejście do prawdziwego systemu testów - czy to własnej produkcji, czy 
+też już przez kogoś napisanego - byłoby trudnym zadaniem.
+<sup>[<a id="idp8767600" href="#ftn.idp8767600" class="footnote">24</a>]</sup> Ale odmowa wykonania go 
+kosztuje projekt o wiele więcej, i to przez całe lata. Jak wiele 
+poprawek i nowych funkcji <span class="emphasis"><em>nie ma</em></span> dziś w CVS z 
+powodu zawalidrogi w postaci niewygodnego zestawu testów? Nie wiemy tego 
+dokładnie, ale na pewno jest to wielokrotnie więcej niż liczba poprawek 
+lub nowych funkcji, bez których programiści musieliby się się obyć w 
+celu stworzenia nowego systemu testów (lub integracji jakiegoś gotowego 
+systemu). To zadanie zabrałoby tylko skończoną ilość czasu, podczas gdy 
+negatywne konsekwencje używania obecnego zestawu testów nie ustaną 
+nigdy, jeśli się tego nie zrobi.</p><p>Problem nie w tym, że posiadanie ścisłych wymagań co do pisania 
+testów jest złe, ani w tym, że pisanie systemu testów w postaci skryptu
+Basha jest zawsze niewłaściwe. Może to być dobre wyjście, w zależności 
+od tego jak go zaprojektujesz i co chcesz testować. Rzecz po prostu w 
+tym, że gdy system testów staje się znaczącą przeszkodą w rozwoju kodu, 
+to trzeba coś z tym zrobić. Odnosi się to do wszystkich rutynowych 
+czynności, które stają się barierą lub wąskim gardłem projektu.</p></div></div><div class="sect2" title="Traktuj każdego użytkownika jako potencjalnego ochotnika"><div class="titlepage"><div><div><h2 class="title"><a id="users-to-volunteers"/>Traktuj każdego użytkownika jako potencjalnego ochotnika</h2></div></div></div><p>Każdy kontakt z użytkownikiem jest okazją do pozyskania nowego 
+ochotnika. Kiedy użytkownik poświęca czas na napisanie wiadomości do 
+jednej z list dyskusyjnych projektu lub na wypełnienie raportu błędu, to 
+automatycznie sygnalizuje, że ma większy potencjał zaangażowania niż 
+większość innych użytkowników (o których projekt nigdy nawet się nie 
+dowie). Wykorzystaj ten potencjał: jeśli opisał błąd, to podziękuj mu za 
+zgłoszenie i zapytaj, czy chciałby spróbować go naprawić. Jeśli dał 
+znać, że w FAQ brakuje czegoś istotnego, lub że dokumentacja programu 
+jest w jakiś sposób niekompletna, to potwierdź istnienie problemu (jeśli 
+on naprawdę występuje) i zapytaj, czy interesuje go samodzielne 
+dopisanie brakujących materiałów. Oczywiście w większości wypadków 
+użytkownik odmówi. Ale pytanie nie kosztuje wiele, a za każdym razem 
+kiedy to robisz, przypominasz innym osobom na forum, że każdy może się 
+zaangażować w projekt.</p><p>Nie ograniczaj swoich celów tylko do pozyskiwania nowych 
+programistów i twórców dokumentacji. Na przykład samo uczenie ludzi jak 
+prawidłowo wypełniać zgłoszenia błędów na dłuższą metę się opłaci, o ile 
+tylko nie poświęcisz <span class="emphasis"><em>zbyt wiele</em></span> czasu każdej takiej 
+osobie, i o ile zamierzają oni przesyłać w przyszłości kolejne 
+zgłoszenia - co jest bardziej prawdopodobne jeżeli otrzymali 
+konstruktywną reakcję po swoim pierwszym zgłoszeniu. Konstruktywna 
+reakcja nie musi polegać na naprawieniu błędu, choć jest to zawsze 
+mile widziane; może to być prośba o więcej informacji lub nawet 
+potwierdzenie, że opisane działanie faktycznie <span class="emphasis"><em>jest</em></span> 
+błędne. Ludzie chcą być wysłuchani. W następnej kolejności chcą pozbyć 
+się błędu. Nie zawsze będziesz w stanie zapewnić im na czas to drugie, 
+ale możesz (ty, lub raczej projekt jako całość) dać im to pierwsze.
+</p><p>Wynika z tego, że uczestnicy projektu nie powinni wyrażać złości 
+wobec osób, które wypełniły raporty błędów z jak najlepszymi intencjami, 
+ale kiepsko. To jeden z moich ulubionych irytujących drobiazgów; widzę 
+jak deweloperzy robią to bez przerwy na rozmaitych listach dyskusyjnych 
+otwartych projektów, a szkody jakie w ten sposób czynią są namacalne. 
+Pechowy nowicjusz wysyła bezwartościowe zgłoszenie:</p><div class="blockquote"><blockquote class="blockquote"><p>Cześć, nie mogę zmusić Scanleya do działania. Za każdym razem, 
+   gdy go uruchamiam, pokazuje mi błąd. Czy ktoś jeszcze ma ten sam 
+   problem?</p></blockquote></div><p>Deweloper - który widział takie zgłoszenia tysiące razy i nie 
+zastanowił się nad tym, że nowicjusz ich dotąd nie widział - odpowiada w 
+ten sposób:</p><div class="blockquote"><blockquote class="blockquote"><p>I co niby mamy zrobić z taką skromną informacją? Rany. Podaj 
+   nam przynajmniej jakieś szczegóły, takie jak wersję Scanleya, jaki 
+   masz system operacyjny i co to jest za błąd.</p></blockquote></div><p>Ten programista nie spojrzał na problem z punktu widzenia 
+użytkownika, a także nie zastanowił się nad efektem jaki ta reakcja 
+wywoła na <span class="emphasis"><em>innych</em></span> osobach przyglądających się 
+tej wymianie zdań. Naturalnie użytkownik bez wcześniejszych doświadczeń 
+z programowaniem i zgłaszaniem błędów nie wie jak się to robi. Jak 
+należy prawidłowo postępować wobec takich osób? Nauczyć je! I zrobić to 
+w taki sposób, żeby chciały wrócić po więcej:</p><div class="blockquote"><blockquote class="blockquote"><p>Przykro nam, że miałeś taki problem. Potrzebujemy więcej 
+   informacji aby zorientować się co się stało. Podaj nam swoją wersję 
+   Scanleya, jaki masz system operacyjny i dokładną treść komunikatu o 
+   błędzie. Najlepiej jeśli możesz nam wysłać dokładny zapis poleceń, 
+   jakie uruchamiałeś, i tego, co one wypisywały. Więcej informacji na 
+   ten temat znajdziesz pod adresem 
+   http://www.scanley.org/jak_zglaszac_bledy.html.</p></blockquote></div><p>Taki rodzaj odpowiedzi jest znacznie bardziej efektywny przy 
+zdobywaniu potrzebnych informacji, ponieważ jest ona pisana z punktu 
+widzenia użytkownika. Po pierwsze, wyraża współczucie: <span class="emphasis"><em>Masz 
+problem; czujemy twój ból</em></span>. (Nie w każdej odpowiedzi na 
+zgłoszenie jest to konieczne; zależy to od wagi problemu i od tego, jak 
+bardzo użytkownik jest zdenerwowany.) Po drugie, zamiast lekceważyć go 
+za brak wiedzy o zgłaszaniu błędów, instruuje jak ma to robić tak 
+szczegółowo, aby rzeczywiście było to użyteczne - na przykład wielu 
+użytkowników nie zdaje sobie sprawy z tego, że "pokaż nam błąd" oznacza 
+"podaj nam dokładny komunikat błędu, bez pomijania i skracania tekstu." 
+Kiedy kontaktujesz się z takim użytkownikiem po raz pierwszy, musisz to 
+wyraźnie powiedzieć. Wreszcie otrzymuje też odnośnik do znacznie 
+bardziej szczegółowej i kompletnej instrukcji zgłaszania błędów. Jeśli 
+nawiązałeś odpowiedni kontakt z użytkownikiem, to zwykle poświęci on 
+czas na przeczytanie tego dokumentu i wykonanie tego, co jest tam 
+napisane. Oczywiście oznacza to, że taki dokument musi zostać wcześniej 
+przygotowany. Powinien on dawać zrozumiałe instrukcje na temat tego, 
+jakich informacji oczekuje zespół w każdym zgłoszeniu. W idealnym 
+przypadku taki dokument powinien z czasem ewoluować w odpowiedzi na 
+konkretne typy braków i błędów w zgłoszeniach, które użytkownicy 
+nadsyłają do twojego projektu.</p><p>Instrukcje zgłaszania błędów w projekcie Subversion są dość 
+standardowe (zobacz <a class="xref" href="apd.html" title="Dodatek D. Example Instructions for Reporting Bugs">Dodatek D, <em>Example Instructions for Reporting Bugs</em></a>). Zwróć uwagę 
+na zakończenie, gdzie znajduje się zaproszenie do wysyłania łatek 
+naprawiających błąd. Nie chodzi o to, że takie zaproszenie doprowadzi do 
+zwiększenia ilości łatek załączanych do zgłoszeń - większość 
+użytkowników, którzy potrafią naprawiać błędy, zdaje sobie sprawę, że 
+łatki są mile widziane, więc nie trzeba im tego uświadamiać. Faktycznym 
+przesłaniem tego zaproszenia jest podkreślenie dla wszystkich 
+czytających, zwłaszcza nowicjuszy w projekcie lub w ogóle w ruchu 
+wolnego oprogramowania, że projekt opiera się na wkładzie ochotników. W 
+pewnym sensie obecni uczestnicy nie są bardziej odpowiedzialni za 
+naprawianie błędów niż osoby, które nadsyłają zgłoszenia. To istotna 
+kwestia, która nowym użytkownikom może być często nieznana. Gdy już to 
+zrozumieją, to rosną szanse, że pomogą naprawić błąd, jeżeli nie 
+nadsyłając kod, to podając bardziej dokładną procedurę odtworzenia błędu 
+lub oferując sprawdzanie poprawek nadesłanych przez kogoś innego. 
+Ostatecznym celem jest uświadomienie każdemu użytkownikowi, że nie 
+istnieje <span class="emphasis"><em>zasadnicza</em></span> różnica między nim a ludźmi 
+pracującymi nad projektem - że jest to tylko kwestia ile czasu i wysiłku 
+się poświęca, a nie tego kim się jest.</p><p>Przestroga przed nerwowymi reakcjami nie ma zastosowania wobec 
+nieuprzejmych użytkowników. Czasami ludzie wysyłają zgłoszenia błędów 
+lub skargi, które, niezależnie od ich zawartości merytorycznej, 
+zawierają wyrazy szyderczej pogardy w stosunku do projektu z powodu jego 
+braków. Często takie osoby zachowują się na przemian wyzywająco i 
+uniżenie, jak ten człowiek, który napisał na listę dyskusyjną 
+Subversion:</p><div class="blockquote"><blockquote class="blockquote"><p>Czemu od 6 dni nadal nie ma żadnych binarek na platformę 
+windows?!? Ciągle się to powtarza i jest dosyć frustrujące. Dlaczego to 
+nie jest zautomatyzowane tak, żeby były dostępne natychmiast?? Kiedy 
+wychodzi wersja "RC", to rozumiem że chodzi o to, aby użytkownicy ją
+przetestowali, ale przecież nie dajecie sposobu, żeby to zrobić. Po co w 
+ogóle wyznaczać okres na testy, jeśli nie dajecie żadnej okazji do 
+testowania??</p></blockquote></div><p>Pierwsze reakcje na tę raczej zaczepną wiadomość były zaskakująco 
+wstrzemięźliwe: ludzie wskazywali na to, że projekt opublikował zasadę
+nie przygotowywania oficjalnych binariów, i odpowiadali z różną dozą 
+irytacji, że powinien ochotniczo zająć się przygotowywaniem ich samemu, 
+jeśli są dla niego aż tak ważne. Wierzcie lub nie, ale następnym razem 
+zaczął swoją wypowiedź słowami:</p><div class="blockquote"><blockquote class="blockquote"><p>Przede wszystkim pozwólcie mi powiedzieć, że moim zdaniem 
+Subversion jest wspaniałe i naprawdę doceniam wysiłki wszystkich osób 
+zaangażowanych w ten projekt. [...]</p></blockquote></div><p>...po czym <span class="emphasis"><em>znów</em></span> zaczął krytykować projekt za 
+nie publikowanie binariów, a jednocześnie nadal nie zamierzał sam 
+niczego robić w tej sprawie. W tej sytuacji około 50 osób po prostu na 
+niego wsiadło i nie mogę powiedzieć, żeby mnie to wzruszyło. Zasada 
+"zero tolerancji" wobec agresji, zalecana w sekcji <a class="xref" href="ch02s03.html#prevent-rudeness" title="Nip Rudeness in the Bud">„Nip Rudeness in the Bud”</a><span> 
+(<a class="xref" href="ch02.html" title="Rozdział 2. Zaczynamy">Rozdział 2, <em>Zaczynamy</em></a></span>), dotyczy osób, z którymi 
+projekt ma (lub chciałby mieć) stały kontakt. Ale jeśli po kimś od 
+razu widać, że będzie się z niego wylewać żółć, to nie ma sensu sprawiać 
+wrażenia, że jest mile widziany.</p><p>Takie sytuacje zdarzają się na szczęście dość rzadko i występują 
+dużo rzadziej w projektach, które podejmują wysiłki konstruktywnego i 
+uprzejmego włączania użytkowników do pracy już od pierwszego 
+kontaktu.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp8658640" href="#idp8658640" class="para">23</a>] </sup>Nad tym pytaniem szczegółowo zastanawiali się, z 
+interesującymi wynikami, Karim Lakhani i Robert G. Wolf w tekście pod 
+tytułem <em class="citetitle">Why Hackers Do What They Do: Understanding
+Motivation and Effort in Free/Open Source Software Projects</em>.  
+Zobacz <a class="ulink" href="http://freesoftware.mit.edu/papers/lakhaniwolf.pdf">http://freesoftware.mit.edu/papers/lakhaniwolf.pdf</a>
+.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp8767600" href="#idp8767600" class="para">24</a>] </sup>Zauważ, że nie trzeba by było konwertować istniejących 
+testów do nowego systemu; oba mogłyby spokojnie istnieć obok siebie, 
+stare testy byłyby przenoszone tylko wtedy, gdy zachodziłaby potrzeba 
+dokonania w nich zmian.</p></div></div></div></body></html>

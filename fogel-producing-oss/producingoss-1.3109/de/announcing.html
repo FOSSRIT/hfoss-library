@@ -1,0 +1,88 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Bekanntgabe</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="getting-started.html" title="Kapitel 2. Der Einstieg"><link rel="prev" href="setting-tone.html" title="Den Ton angeben"><link rel="next" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Bekanntgabe</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="setting-tone.html">Zurück</a> </td><th width="60%" align="center">Kapitel 2. Der Einstieg</th><td width="20%" align="right"> <a accesskey="n" href="technical-infrastructure.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Bekanntgabe"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="announcing"></a>Bekanntgabe</h2></div></div></div><p>Sobald das Projekt in einem vorzeigbarem Zustand ist &#8211; nicht 
+perfekt, lediglich vorzeigbar &#8211; ist es bereit, der Welt
+bekannt gemacht zu werden. Tatsächlich geht das relativ einfach: Gehen
+Sie auf <a class="ulink" href="http://freshmeat.net/" target="_top">http://freshmeat.net/</a>, klicken Sie in der oberen 
+Navigationsleiste auf <span class="guimenuitem">Submit</span> und füllen Sie
+das Formular aus, um Ihr Projekt bekanntzumachen. Freshmeat ist der Ort, 
+auf dem alle nach Ankündigungen neuer Projekte Ausschau halten. Sie müssen 
+dort nur ein paar Augen erwischen und ihre Nachricht wird sich von da
+an über Mundpropaganda weiterverbreiten.</p><p>Wenn Sie Mailinglisten oder Newsgroups kennen, auf denen eine
+Ankündigung Ihres Projekts thematisch passen würde und von Interesse
+wäre. Sollten Sie dort einen Eintrag machen, achten Sie aber darauf,
+genau <span class="emphasis"><em>einen</em></span> Eintrag pro Forum zu machen, und 
+verweisen Sie dabei auf Ihre eigenen Foren für weitere anschließende 
+Diskussionen (indem Sie den <code class="systemitem">Reply-to</code>
+Header setzen). Die Einträge sollten kurz und prägnant sein:</p><pre class="screen">
+An: discuss@lists.example.org
+Betreff: [ANN] Das Scanley-Projekt für Volltext-Indizierung 
+Antwort-An: dev@scanley.org
+
+Diese Nachricht ist die einmalige Bekanntgabe über die Gründung des 
+Scanley-Projekts, eine Open-Source-Volltextindizierungs- und Suchmaschine, 
+mit einer reichen API für Programmierer, die Suchfunktionen für große 
+Mengen an Text implementieren wollen. Der Code von Scanley läuft, wird 
+aktiv entwickelt, und wir suchen sowohl nach Entwickler als auch Nutzern 
+die testen wollen.
+
+Webseite: http://www.scanley.org/
+
+Funktionen:
+   - Durchsucht Klartext, HTML, und XML
+   - Suche nach Wörtern oder Ausdrücken
+   - (geplant) Unscharfe Suche
+   - (geplant) Inkrementelle Aktualisierung der Indizes
+   - (geplant) Indizierung von Webseiten
+
+Voraussetzungen:
+   - Python 2.2 oder neuer 
+   - Genügend Festplattenplatz für die Indizes (ca. 2x die Größe der 
+     ursprünglichen Daten)
+
+Weiteres finden Sie auf scanley.org.
+
+Vielen Dank,
+-H. Mustermann
+</pre><p>(Siehe <a class="xref" href="publicity.html" title="Öffentlichkeit">&#8222;Öffentlichkeit&#8220;</a><span>
+im Kapitel <a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a></span> für Ratschläge
+über die Bekanntmachung neuer Versionen und anderer Ereignisse im
+Projekt.)</p><p>Es gibt eine anhaltende Diskussion in der 
+Open-Source-Gemeinschaft darüber, 
+ob ein Projekt schon am Anfang laufenden Code haben muss,
+oder ob es einem Projekt hilft, selbst in den frühen Phasen des 
+Entwurfs offen zu sein. Ich dachte früher, dass es am allerwichtigsten
+sei, mit laufendem Code anzufangen, dass man so erfolgreiche Projekte 
+vom Spielzeug unterscheiden könnte, und ernstzunehmende Entwickler nur 
+etwas anfassen würden, was auch schon etwas Handfestes machte.</p><p>Wie es sich herausstellte, war das nicht der Fall. Beim 
+Subversion-Projekt, fingen wir mit einem Entwurf an, ein Kern 
+interessierter und miteinander vertrauter Entwickler, viel Fanfare und
+<span class="emphasis"><em>keine einzige Zeile</em></span> lauffähigen Codes. Zu meiner
+völligen Überraschung, schaffte es das Projekt von Anfang an, aktive
+Freiwillige anzulocken und bis wir tatsächlich etwas Laufendes hatten,
+waren bereits eine ziemliche Menge freiwilliger Entwickler beteiligt.
+Subversion ist nicht das einzige Beispiel; das Mozilla-Projekt fing
+auch ohne laufenden Code an und bietet heute einen erfolgreichen und
+beliebten Web-Browser.</p><p>Angesichts solcher Beweise muss ich von meiner ursprünglichen
+Behauptung zurücktreten, dass laufender Code absolut notwendig ist, um 
+ein Projekt anzufangen. Trotzdem ist laufender Code immer noch eines 
+der besten Grundlagen für Erfolg, und eine gute Grundregel wäre es, mit
+der Bekanntgabe zu warten, bis Sie solchen haben. Es mag allerdings 
+Umstände geben, unter denen eine frühere Bekanntmachung Sinn macht. Ich 
+denke, dass zumindest ein gut ausgearbeiteter Entwurf oder irgend 
+ein Grundgerüst für den Code notwendig ist &#8211; dieser kann natürlich
+wegen öffentlicher Rückmeldungen überarbeitet werden müssen, aber es
+muss etwas Handfestes und Greifbares geben, etwas mehr als gute 
+Absichten, von dem aus Leute ausgehen und weiterarbeiten können.</p><p>Wenn Sie die Ankündigung machen, sollten Sie jedoch nicht gleich 
+darauf ein Schar Freiwilliger erwarten. Für gewöhnlich ist das Resultat
+einer Bekanntmachung, dass Sie nebenbei ein paar Anfragen bekommen, es
+melden sich ein paar Leute auf der Mailingliste an, abgesehen davon geht
+so ziemlich alles weiter wie bisher. Mit der Zeit werden Sie aber eine 
+stete Zunahme von Beiträgen neuen Mitarbeiter und Benutzer bemerken. 
+Die Ankündigung ist lediglich das Pflanzen eines Samenkorns. 
+Es braucht Zeit, bis die Nachricht sich fortpflanzt. Wenn 
+das Projekt beständig diejenigen honoriert, die sich beteiligen, wird 
+sich die Nachricht verbreiten, denn Menschen teilen einander mit, wenn
+sie etwas Gutes entdecken. Wenn alles gut läuft, wird die Dynamik der 
+exponenziellen Kommunikationsnetze das Projekt langsam in eine komplexe 
+Gemeinschaft verwandeln, in der Sie nicht unbedingt jeden Namen 
+kennen und nicht länger jede Unterhaltung mitverfolgen können. Die 
+nächsten Kapitel handeln vom Arbeiten in einer solchen Umgebung.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="setting-tone.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="getting-started.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="technical-infrastructure.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Den Ton angeben </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 3. Technische Infrastruktur</td></tr></table></div></body></html>

@@ -1,0 +1,110 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Escogiendo una licencia y Aplicándola</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="getting-started.html" title="Capítulo 2. Primeros Pasos"><link rel="prev" href="getting-started.html" title="Capítulo 2. Primeros Pasos"><link rel="next" href="setting-tone.html" title="Ajustar el tono"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Escogiendo una licencia y Aplicándola</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="getting-started.html">Anterior</a> </td><th width="60%" align="center">Capítulo 2. Primeros Pasos</th><td width="20%" align="right"> <a accesskey="n" href="setting-tone.html">Siguiente</a></td></tr></table><hr></div><div class="sect1" title="Escogiendo una licencia y Aplicándola"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="license-quickstart"></a>Escogiendo una licencia y Aplicándola</h2></div></div></div><p>Esta sección está concebida para ser una guía rápida y amplia
+sobre como escoger una licencia. Leed el <a class="xref" href="legal.html" title="Capítulo 9. Licencias, Copyrights y Patentes">Capítulo 9, <i>Licencias, Copyrights y Patentes</i></a> para entender
+en detalle las implicaciones legales de diferentes licencias y como la
+licencia escogida puede afectar la capacidad de otras personas
+de mezclar el programa con otro software.</p><div class="sidebar" title='Sinónimos: "licencia de software libre", "aprobadas por la FSF", "licencia de fuente abierta", y "aprobadas por la OSI"'><a name="fsf-and-osi-approved"></a><div class="titlepage"><div><div><p class="title"><b>Sinónimos: "licencia de software libre", "aprobadas por la
+  FSF", "licencia de fuente abierta", y "aprobadas por la OSI"</b></p></div></div></div><p>Los términos "licencia de software libre" y "licencia de
+  fuente abierta" son esencialmente sinónimos, y los trato así a lo
+  largo de este libro.</p></div><p>Técnicamente, el primer término se refiere a las licencias
+  confirmadas por la Free Software Foundation como las que ofrecen las
+  "cuatro libertades" necesarias para el software libre (vea <a class="ulink" href="http://www.gnu.org/philosophy/free-sw.html" target="_top">gnu.org/philosophy/free-sw.html</a>), mientras que el segundo
+  término se refiere a las licencias aprobadas por el Open Source
+  Initiative como las que cumplen la Definición de Open Source (<a class="ulink" href="http://opensource.org/osd" target="_top">opensource.org/osd</a>). Sin
+  embargo, si usted lee la definición de la FSF de software libre, y
+  la definición de la OSI del software de código abierto, se hace
+  evidente que las dos definiciones delinean las mismas
+  libertades &#8212; no es sorprendente, como lo
+  explica <a class="xref" href="introduction.html#free-vs-open-source" title='"Libre" vs "Abierto"'>&#8220;"Libre" vs "Abierto"&#8221;</a><span>
+  en el <a class="xref" href="introduction.html" title="Capítulo 1. Introducción">Capítulo 1, <i>Introducción</i></a></span>. El resultado inevitable,
+  y en cierto sentido deliberado, es que las dos organizaciones han
+  aprobado el mismo conjunto de licencias.<sup>[<a name="idp651" href="#ftn.idp651" class="footnote">19</a>]</sup></p><p>Existen muchas licencias libres de donde escoger. Muchas de ellas
+no necesitamos tenerlas en consideración aquí, ya que han sido escritas
+para satisfacer las necesidades legales específicas de alguna corporación
+o persona, así que no serian apropiadas para nuestro proyecto. Por ello nos vamos a
+restringir a las más usadas. En la mayoría de los casos, querrás escoger
+una de ellas.</p><div class="sect2" title='Las licencias "Haz lo que quieras"'><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-non-gpl"></a>Las licencias "Haz lo que quieras"</h3></div></div></div><p><span class="emphasis"><em>29 August 2013: If you're reading this note, then
+you've encountered this subsection while it's undergoing substantial
+revision; see <a class="ulink" href="http://producingoss.com/v2.html" target="_top">producingoss.com/v2.html</a> for details.</em></span>  TODO: is
+MIT or BSD still really the best default, given the modern patent
+landscape?  Would Apache-2.0 be better &#8212; but then what
+about the FSF's claim of GPL-incompatibility?  Need to get some advice
+here.</p><p>Si se está conforme con que el código del proyecto sea potencialmente
+usado en programas propietarios, entonces se puede utilizar una licencia estilo
+<em class="firstterm">MIT/X</em>. Es la más sencilla de muchas licencias mínimas
+que no hacen más que declarar un copyright nominal (sin restringir la copia)
+y especificar que el código viene sin ninguna garantía. Id a
+<a class="xref" href="license-choosing.html#license-choosing-mit-x" title="La MIT / X Window System License">&#8220;La MIT / X Window System License&#8221;</a> para más detalles.</p></div><div class="sect2" title="La GPL"><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-gpl"></a>La GPL</h3></div></div></div><p>Si no desea que el código sea utilizado en aplicaciones propietarias
+utilice la Licencia Pública General o GPL, versión 3 (<a class="ulink" href="http://www.gnu.org/licenses/gpl.html" target="_top">gnu.org/licenses/gpl.html</a>). La GPL es
+probablemente la licencia para software libre más reconocida a nivel
+mundial hoy en día. Esto es en si mismo una gran ventaja, ya que muchos
+usuarios potenciales y voluntarios ya estarán familiarizados con ella,
+por lo cual, no tendrán que invertir tiempo extra en leer y entender
+la licencia utilizada. Más detalles en 
+<a class="xref" href="license-choosing.html#license-choosing-gpl" title="La GNU General Public License">&#8220;La GNU General Public License&#8221;</a><span>
+en el <a class="xref" href="legal.html" title="Capítulo 9. Licencias, Copyrights y Patentes">Capítulo 9, <i>Licencias, Copyrights y Patentes</i></a></span>.</p><div class="sidebar"><div class="titlepage"></div><p>Si los usuarios interactúan con tu código, principalmente a
+través de una red&#8212;es decir, el software es generalmente parte de
+un servicio alojado, en lugar de ser distribuido como binario, entonces
+considera el uso de la <em class="firstterm">GNU Affero GPL</em> en su lugar.
+La AGPL es sólo la GPL con una cláusula adicional en la que se establece
+la accesibilidad en la red como una forma de distribución a los efectos
+de la licencia. Ver <a class="xref" href="">???</a><span> en el <a class="xref" href="legal.html" title="Capítulo 9. Licencias, Copyrights y Patentes">Capítulo 9, <i>Licencias, Copyrights y Patentes</i></a></span> para más
+información.</p></div></div><div class="sect2" title="Cómo aplicar una licencia a nuestro software"><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-applying"></a>Cómo aplicar una licencia a nuestro software</h3></div></div></div><p>Una vez que hayas elegido una licencia, tendrás que aplicarla
+al software.</p><p>Lo primero que debes hacer es presentar la licencia claramente
+en la primera página del proyecto. No es necesario incluir el texto
+real de la licencia allí; sólo dar su nombre y hacer que enlace con el
+texto de la licencia completa en otra página. Eso le dice al público
+bajo cuál licencia <span class="emphasis"><em>pretende</em></span> distribuirse el
+software&#8212;pero esto no es suficiente para los efectos legales. El
+otro paso es que el propio software debe incluir la licencia.</p><p>La manera estándar de hacer esto es poner el texto de la licencia
+completa en un archivo llamado <code class="filename">COPYING</code> (o 
+<code class="filename">LICENSE</code>) incluido con el código fuente, y luego
+poner un pequeño anuncio en un comentario en la parte superior de cada
+archivo fuente, mencionando la fecha de copyright, titular, y la licencia,
+y diciendo dónde encontrar el texto completo de la licencia.</p><p>Hay muchas variaciones de éste patrón, así que miraremos a un
+sólo ejemplo. La GPL de GNU indica que se debe colocar un aviso como
+éste al principio de cada fichero con código fuente:</p><pre class="screen">
+Copyright (C) &lt;year&gt;  &lt;name of author&gt;
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre><p>No dice específicamente que la copia de la licencia que recibió
+junto con el programa se encuentra en el archivo
+<code class="filename">COPYING</code>, o <code class="filename">LICENSE</code>, pero ahí
+es donde se suele poner. (Puede cambiar el aviso anterior para
+indicarlo directamente, pero no hay necesidad real de hacerlo)</p><p>En general, el aviso que se coloca en cada archivo fuente no tiene
+que ser exactamente como la de arriba, siempre que se inice con el mismo
+aviso de titular del copyright y fecha<sup>[<a name="idp689" href="#ftn.idp689" class="footnote">20</a>]</sup>,
+indicar el nombre de la licencia, y dejar claro donde ver los términos
+completos de la licencia. Siempre es mejor consultar a un abogado, por
+supuesto, si es posible costear uno.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp651" href="#idp651" class="para">19</a>] </sup>En realidad,
+  hay algunas diferencias menores entre los grupos de las licencias
+  aprobadas, pero no son significativos para nuestros
+  propósitos &#8212; o de hecho, a efectos prácticos. En
+  algunos casos, una u otra organización simplemente no ha llegado a
+  considerar una licencia determinada, por lo general una licencia que
+  que no se utiliza ampliamente de todos modos. Y al parecer
+  (eso me han dicho) hubo históricamente una licencia que, al menos,
+  una de las organizaciones, y posiblemente ambas, acordó que encajaba
+  una definición pero no la otra. Siempre que trato de obtener los
+  detalles sobre esto, sin embargo, me parece que obtengo una
+  respuesta diferente en cuanto a cuál era esa licencia, salvo que la
+  licencia mencionada es siempre una que no tenía mucha gente
+  utilizandola de todos modos. Así que hoy, para cualquier licencia
+  que probablemente sea utilizada, los términos "aprobada por OSI" y
+  "aprobada por la FSF" pueden ser tratados como que una implica la
+  otra.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp689" href="#idp689" class="para">20</a>] </sup>La fecha debe
+mostrar la fecha en que el archivo se modificó, para los propósitos de
+derechos de autor. En otras palabras, para un archivo modificado en 2008,
+2009 y 2013, podrías escribir "2008, 2009, 2013" &#8212; 
+<span class="emphasis"><em>no</em></span> "2008-2013", ya que el archivo no ha sido
+modificado en la mayoría de los años en ese rango.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="getting-started.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="getting-started.html">Subir</a></td><td width="40%" align="right"> <a accesskey="n" href="setting-tone.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Capítulo 2. Primeros Pasos </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Ajustar el tono</td></tr></table></div></body></html>

@@ -1,0 +1,261 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Phát tri&#7875;n ph&#7847;n m&#7873;m mã m&#7903;"><link rel="up" href="index.html" title="Phát tri&#7875;n ph&#7847;n m&#7873;m mã m&#7903;"><link rel="prev" href="publicity.html" title="Publicity"><link rel="next" href="release-branches.html" title="Nhánh phát hành"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="publicity.html">Tr&#432;&#7899;c &#273;ó</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="release-branches.html">K&#7871; ti&#7871;p</a></td></tr></table><hr></div><div class="chapter" title="Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày"><div class="titlepage"><div><div><h2 class="title"><a name="development-cycle"></a>Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày</h2></div></div></div><div class="toc"><p><b>M&#7909;c l&#7909;c</b></p><dl><dt><span class="sect1"><a href="development-cycle.html#release-numbering">&#272;ánh s&#7889; phát hành</a></span></dt><dd><dl><dt><span class="sect2"><a href="development-cycle.html#release-number-components">Các thành ph&#7847;n c&#7911;a s&#7889; phiên b&#7843;n</a></span></dt><dt><span class="sect2"><a href="development-cycle.html#release-number-simple-strategy">Chi&#7871;n l&#432;&#7907;c &#273;&#417;n gi&#7843;n</a></span></dt><dt><span class="sect2"><a href="development-cycle.html#release-number-even-odd-strategy">Chi&#7871;n l&#432;&#7907;c ch&#7861;n/l&#7867;</a></span></dt></dl></dd><dt><span class="sect1"><a href="release-branches.html">Nhánh phát hành</a></span></dt><dd><dl><dt><span class="sect2"><a href="release-branches.html#release-branch-mechanics">Nguyên lý phát hành r&#7869; nhánh</a></span></dt></dl></dd><dt><span class="sect1"><a href="stabilizing-a-release.html">Stabilizing a Release</a></span></dt><dd><dl><dt><span class="sect2"><a href="stabilizing-a-release.html#release-owner">Dictatorship by Release Owner</a></span></dt><dt><span class="sect2"><a href="stabilizing-a-release.html#release-voting">Change Voting</a></span></dt><dd><dl><dt><span class="sect3"><a href="stabilizing-a-release.html#release-stabilization-collaboration">Managing collaborative release stabilization</a></span></dt><dt><span class="sect3"><a href="stabilizing-a-release.html#release-manager">Release manager</a></span></dt></dl></dd></dl></dd><dt><span class="sect1"><a href="packaging.html">Packaging</a></span></dt><dd><dl><dt><span class="sect2"><a href="packaging.html#packaging-format">Format</a></span></dt><dt><span class="sect2"><a href="packaging.html#packaging-name-and-layout">Name and Layout</a></span></dt><dd><dl><dt><span class="sect3"><a href="packaging.html#release-capitalization">To capitalize or not to capitalize</a></span></dt><dt><span class="sect3"><a href="packaging.html#release-prereleases">Pre-releases</a></span></dt></dl></dd><dt><span class="sect2"><a href="packaging.html#packaging-build-install">Compilation and Installation</a></span></dt><dt><span class="sect2"><a href="packaging.html#binary-packages">Binary Packages</a></span></dt></dl></dd><dt><span class="sect1"><a href="testing-and-releasing.html">Testing and Releasing</a></span></dt><dd><dl><dt><span class="sect2"><a href="testing-and-releasing.html#candidate-releases">Candidate Releases</a></span></dt><dt><span class="sect2"><a href="testing-and-releasing.html#release-announcement">Announcing Releases</a></span></dt></dl></dd><dt><span class="sect1"><a href="release-lines.html">Maintaining Multiple Release Lines</a></span></dt><dd><dl><dt><span class="sect2"><a href="release-lines.html#security-releases">Security Releases</a></span></dt></dl></dd><dt><span class="sect1"><a href="releases-and-daily-development.html">Releases and Daily Development</a></span></dt><dd><dl><dt><span class="sect2"><a href="releases-and-daily-development.html#planning">Planning Releases</a></span></dt></dl></dd></dl></div><div class="simplesect"><div class="titlepage"></div><p>Ch&#432;&#417;ng này trình bày v&#7873; v&#7845;n &#273;&#7873; &#273;óng gói d&#7921; án ph&#7847;n m&#7873;m 
+và phát hành ph&#7847;n m&#7873;m, và nh&#7919;ng lo&#7841;i phát tri&#7875;n chung xung quanh 
+m&#7909;c &#273;ích d&#7921; án.</p><p>S&#7921; khác bi&#7879;t gi&#7919;a ph&#7847;n m&#7873;m mã m&#7903; và ph&#7847;n m&#7873;m b&#7843;n quy&#7873;n là s&#7921; qu&#7843;n lý
+t&#7853;p trung &#273;&#7889;i v&#7899;i &#273;&#7897;i ng&#361; phát tri&#7875;n.</p><p>Khi chu&#7849;n b&#7883; m&#7897;t phiên b&#7843;n m&#7899;i, s&#7921; khác bi&#7879;t này là &#273;&#7863;c bi&#7879;t
+rõ r&#7879;t: m&#7897;t công ty có th&#7875; yêu c&#7847;u toàn b&#7897; &#273;&#7897;i ng&#361; phát tri&#7875;n t&#7853;p trung vào
+m&#7897;t b&#7843;n phát hành s&#7855;p t&#7899;i, &#273;&#7863;t sang m&#7897;t bên tính n&#259;ng m&#7899;i và phát tri&#7875;n
+không quan tr&#7885;ng s&#7917;a l&#7895;i cho &#273;&#7871;n khi phát hành xong.</p><p>Nhóm tình nguy&#7879;n viên không ph&#7843;i là m&#7897;t "kh&#7889;i" c&#7913;ng. 
+M&#7885;i ng&#432;&#7901;i tham gia d&#7921; án vì nhi&#7873;u lý do khác nhau, 
+và nh&#7919;ng ng&#432;&#7901;i quan tâm t&#7899;i m&#7897;t b&#7843;n phát hành cho
+v&#7851;n mu&#7889;n ti&#7871;p t&#7909;c công vi&#7879;c phát tri&#7875;n th&#432;&#7901;ng xuyên, liên ti&#7871;p dù b&#7843;n &#273;ó &#273;ã ra &#273;&#7901;i. 
+Vì tính phát tri&#7875;n không ng&#7915;ng c&#7911;a d&#7921; án mã ngu&#7891;n m&#7903;, phát hành mã ngu&#7891;n m&#7903;
+quy trình có xu h&#432;&#7899;ng t&#7889;n nhi&#7873;u th&#7901;i gian, nh&#432;ng ít gây r&#7889;i, 
+so v&#7899;i các quy trình phát hành th&#432;&#417;ng m&#7841;i. 
+&#272;i&#7873;u &#273;ó c&#361;ng gi&#7889;ng nh&#432; vi&#7879;c s&#7917;a &#273;&#432;&#7901;ng cao t&#7889;c. 
+Có hai cách &#273;&#7875; s&#7917;a ch&#7919;a m&#7897;t con &#273;&#432;&#7901;ng: b&#7841;n có th&#7875; ch&#7863;n hoàn toàn &#273;&#432;&#7901;ng, 
+s&#7917;a ch&#7919;a h&#7871;t công su&#7845;t cho &#273;&#7871;n khi v&#7845;n &#273;&#7873; &#273;&#432;&#7907;cgi&#7843;i quy&#7871;t, 
+ho&#7863;c b&#7841;n có th&#7875; làm vi&#7879;c trên m&#7897;t s&#7889; tuy&#7871;n &#273;&#432;&#7901;ng t&#7841;i m&#7897;t th&#7901;i &#273;i&#7875;m, 
+tuy v&#7851;n m&#7903; các &#273;o&#7841;n &#273;&#432;&#7901;ng khác</p><p>Cách &#273;&#7847;u tiên là r&#7845;t hi&#7879;u qu&#7843; <span class="emphasis"><em> v&#7899;i &#273;&#7897;i th&#7907; </em></span>, 
+nh&#432;ng nó không cho b&#7845;t c&#7913; ai khác s&#7917; d&#7909;ng &#273;&#432;&#7901;ng cho &#273;&#7871;n khi vi&#7879;c s&#7917;a hoàn thành. 
+Cách làm th&#7913; hai c&#7847;n
+nhi&#7873;u th&#7901;i gian và r&#7855;c r&#7889;i cho &#273;&#7897;i th&#7907; (bây gi&#7901; h&#7885; ph&#7843;i làm vi&#7879;c
+ít ng&#432;&#7901;i h&#417;n và trang thi&#7871;t b&#7883; ít h&#417;n, trong &#273;i&#7873;u ki&#7879;n ch&#7853;t h&#7865;p,
+ti&#7871;n hành ch&#7853;m do l&#432;u l&#432;&#7907;ng truy c&#7853;p tr&#7921;c ti&#7871;p, vv), nh&#432;ng ít nh&#7845;t thì &#273;&#432;&#7901;ng
+v&#7851;n s&#7917; d&#7909;ng &#273;&#432;&#7907;c, m&#7863;c dù không h&#7871;t công su&#7845;t.</p><p>
+D&#7921; án mã ngu&#7891;n m&#7903; có xu h&#432;&#7899;ng làm vi&#7879;c theo cách th&#7913; hai. Trong th&#7921;c t&#7871;, 
+cho m&#7897;t &#273;o&#7841;n mã ngu&#7891;n &#7893;n &#273;&#7883;nh &#273;&#7921;oc duy trì &#273;&#7891;ng th&#7901;i, 
+d&#7921; án s&#7869; r&#417;i vào tình tr&#7841;ng luôn ph&#7843;i 
+s&#7917;a ch&#7919;a nh&#7919;ng &#273;o&#7841;n &#273;&#432;&#7901;ng nh&#7887;. Luôn luôn có m&#7897;t vài làn b&#7883; ch&#7863;n 
+phù h&#7907;p nh&#432;ng m&#7913;c &#273;&#7897; b&#7845;t ti&#7879;n th&#7845;p. Vi&#7879;c s&#7917;a ch&#7919;a &#273;ó &#273;&#432;&#7907;c
+ch&#7845;p nh&#7853;n b&#7903;i nhóm phát tri&#7875;n nói chung sao cho có &#273;&#432;&#7907;c b&#7843;n phát hành
+theo &#273;úng l&#7883;ch trình.
+</p><p>
+Mô hình mà làm này có th&#7875; t&#7893;ng quát hóa t&#7915; vi&#7879;c
+phát hành. &#272;ó là nguyên t&#7855;c làm vi&#7879;c song song không
+làm hai bên ph&#7909; thu&#7897;c l&#7851;n nhau-m&#7897;t nguyên t&#7855;c là không có ngh&#297;a là duy nh&#7845;t
+&#273;&#7875; phát tri&#7875;n ngu&#7891;n m&#7903;. T&#7845;t nhiên, nh&#432;ng d&#7921; án ngu&#7891;n m&#7903;
+&#273;&#432;&#7907;c th&#7921;c hi&#7879;n theo cách &#273;&#7863;c bi&#7879;t c&#7911;a riêng nó. H&#7885; không th&#7875;
+gây phi&#7873;n toái quá nhi&#7873;u t&#7899;i lu&#7891;ng giao thông, 
+nh&#432;ng h&#7885; c&#361;ng không th&#7875; &#273;&#7913;ng ch&#7855;n &#273;&#432;&#7901;ng
+và làm lu&#7891;ng giao thông suy gi&#7843;m theo. Do &#273;ó, h&#7885; t&#7841;o ra m&#7897;t 
+quy trình ph&#7859;ng v&#7899;i các c&#7845;p &#273;&#7897; qu&#7843;n lý &#273;&#7891;ng c&#7845;p, không có ng&#432;&#7901;i h&#417;n, ng&#432;&#7901;i kém.
+Các tình nguy&#7879;n viên nói chung s&#7869; s&#7861;n sàng
+làm vi&#7879;c v&#7899;i s&#7921; b&#7845;t ti&#7879;n nh&#7887; nh&#432;ng thích h&#7907;p; 
+tính có th&#7875; d&#7921; báo cho phép h&#7885; &#273;i &#273;&#7871;n &#273;ích mà không lo l&#7855;ng v&#7873;
+l&#7883;ch trình và nh&#7919;ng khúc m&#7855;c x&#7843;y ra trong
+d&#7921; án. 
+Nh&#432;ng n&#7871;u các d&#7921; án &#273;&#432;&#7907;c &#273;&#7863;t d&#432;&#7899;i m&#7897;t lình trình c&#7913;ng trong &#273;ó
+m&#7897;t s&#7889; ho&#7841;t &#273;&#7897;ng không cho phép m&#7897;t s&#7889; h&#7885;at &#273;&#7897;ng khác ti&#7871;n hành, k&#7871;t qu&#7843; s&#7869; là m&#7897;t hay 
+r&#7845;t nhi&#7873;u nhà phát tri&#7875;n không có vi&#7879;c gì làm (ph&#7843;i &#273;&#7907;i), làm phí ph&#7841;m th&#7901;i gian-&#273;i&#7873;u 
+&#273;ó không nh&#7919;ng không hi&#7879;u qu&#7843; mà còn nhàm chán, và do &#273;ó là nguy hi&#7875;m. 
+Và m&#7897;t khi m&#7897;t l&#7853;p trình viên c&#7843;m th&#7845;y nhàm chán, h&#7885; s&#7869; b&#7887; d&#7921; án
+</p><p>
+Công vi&#7879;c phát hành th&#432;&#7901;ng không ph&#7843;i là công vi&#7879;c &#273;áng chú ý nh&#7845;t trong quy trình phát tri&#7875;n ph&#7847;n m&#7873;m.
+&#272;i&#7873;u &#273;ó x&#7843;y ra song song v&#7899;i s&#7921; phát tri&#7875;n, do &#273;ó, các ph&#432;&#417;ng pháp mô t&#7843; trong
+các ph&#7847;n sau ch&#7911; y&#7871;u h&#432;&#7899;ng t&#7899;i s&#7921; phát hành liên t&#7909;c suôn s&#7867;.
+Tuy nhiên, l&#432;u ý r&#7857;ng nh&#7919;ng &#273;i&#7873;u này c&#361;ng áp d&#7909;ng cho các nhi&#7879;m v&#7909; son song khác, 
+ch&#7859;ng h&#7841;n nh&#432; b&#7843;n d&#7883;ch hay qu&#7889;c t&#7871; hóa, thay &#273;&#7893;i API di&#7879;n r&#7897;ng s&#7869; 
+d&#7847;n d&#7851;n t&#7899;i s&#7921; thay &#273;&#7893;i toàn b&#7897; mã ngu&#7891;n...
+</p></div><div class="sect1" title="&#272;ánh s&#7889; phát hành"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="release-numbering"></a>&#272;ánh s&#7889; phát hành</h2></div></div></div><p>Tr&#432;&#7899;c khi nói v&#7873; vi&#7879;c làm th&#7871; làm &#273;&#7875; phát hành,
+chúng ta hãy xem tên b&#7843;n phát hành có ý ngh&#297;a nh&#432; th&#7871; nào &#273;&#7889;i v&#7899;i ng&#432;&#7901;i dùng cu&#7889;i.
+Phát hành bao g&#7891;m:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>S&#7917;a l&#7895;i c&#361;. &#272;ây là &#273;i&#7873;u mà ng&#432;&#7901;i dùng mong &#273;&#7907;i &#7903; m&#7885;i phiên b&#7843;n phát hành.</p></li><li class="listitem"><p>Thêm l&#7895;i m&#7899;i. Phát hành bao g&#7891;m c&#7843; nh&#7919;ng l&#7895;i kèm theo tr&#7915; nh&#7919;ng phiên b&#7843;n phát 
+                  hành m&#7897;t l&#7847;n duy nh&#7845;t vì lý do b&#7843;o m&#7853;t(xem
+            <a class="xref" href="release-lines.html#security-releases" title="Security Releases">ph&#7847;n &#8220;Security Releases&#8221;</a><span> trong ch&#432;&#417;ng sau.</span>).</p></li><li class="listitem"><p>Thêm ch&#7913;c n&#259;ng m&#7899;i.</p></li><li class="listitem"><p>Thêm ch&#7913;c n&#259;ng c&#7845;u hình m&#7899;i, ho&#7863;c có s&#7921; thay &#273;&#7893;i ý ngh&#297;a c&#7911;a c&#7845;u hình c&#361;.
+   Có th&#7875; có c&#7843; s&#7921; thay &#273;&#7893;i th&#7913; t&#7921; cài &#273;&#7863;t nh&#432;ng nói chung nên tránh &#273;i&#7873;u này.</p></li><li class="listitem"><p>Nh&#7919;ng thay &#273;&#7893;i phá v&#7905; s&#7921; t&#432;&#417;ng thích,
+   ví d&#7909; nh&#432; thay &#273;&#7893;i c&#7845;u trúc d&#7919; li&#7879;u làm cho phiên b&#7843;n c&#361; và m&#7899;i không th&#7875; s&#7917; d&#7909;ng &#273;&#7891;ng th&#7901;i n&#7871;u không
+   hoán chuy&#7875;n &#273;&#7883;nh d&#7841;ng d&#7919; li&#7879;u.</p></li></ul></div><p>
+Nh&#432; b&#7841;n th&#7845;y, không ph&#7843;i t&#7845;t c&#7843; nh&#7919;ng &#273;i&#7873;u này là t&#7889;t &#273;&#7865;p. &#272;ây là lý do t&#7841;i sao nh&#7919;ng
+ng&#432;&#7901;i dùng có kinh nghi&#7879;m ti&#7871;p c&#7853;n phiên b&#7843;n m&#7899;i v&#7899;i m&#7897;t s&#7889; lo l&#7855;ng,
+&#273;&#7863;c bi&#7879;t là khi ph&#7847;n m&#7873;m là tr&#432;&#7903;ng thành và &#273;ã th&#7887;a mãn nh&#7919;ng yêu c&#7847;u
+h&#7885; mu&#7889;n mong mu&#7889;n (ho&#7863;c ngh&#297; r&#7857;ng h&#7885; mu&#7889;n). Ngay c&#7843; s&#7921; xu&#7845;t hi&#7879;n c&#7911;a m&#7899;i
+tính n&#259;ng là m&#7897;t tín hi&#7879;u h&#7895;n h&#7907;p, trong &#273;ó nó có th&#7875; có ngh&#297;a là các ph&#7847;n m&#7873;m
+bây gi&#7901; s&#7869; c&#432; x&#7917; m&#7897;t cách không th&#7875; l&#432;&#7901;ng tr&#432;&#7899;c.
+</p><p>
+M&#7909;c &#273;ích c&#7911;a vi&#7879;c &#273;ánh s&#7889; phát hành, do &#273;ó, g&#7891;m hai ph&#7847;n:
+rõ ràng là nh&#7919;ng con s&#7889; rõ ràng nên giao ti&#7871;p th&#7913; t&#7921; c&#7911;a
+phát hành (t&#7913;c là, b&#7857;ng cách nhìn vào con s&#7889; b&#7845;t k&#7923; hai phiên b&#7843;n, ng&#432;&#7901;i ta có th&#7875; bi&#7871;t
+&#273;âu là b&#7843;n m&#7899;i, c&#361;), ngoài ra, s&#7889; phiên b&#7843;n còn th&#7875; hi&#7879;n
+m&#7913;c &#273;&#7897; và tính ch&#7845;t c&#7911;a nh&#7919;ng thay &#273;&#7893;i trong vi&#7879;c phát hành.
+</p><p>Th&#7875; hi&#7875;n t&#7845;t c&#7843; nh&#7919;ng &#273;i&#7873;u &#273;ó trong s&#7889; phiên b&#7843;n?
+C&#361;ng &#273;&#432;&#7907;c, và ch&#7881; là v&#7853;y thôi. &#272;ánh s&#7889; phiên b&#7843;n là m&#7897;t trong nh&#7919;ng ch&#7911; &#273;&#7873;
+nh&#7887; nh&#7863;t nh&#432;ng &#273;&#432;&#7907;c tranh lu&#7853;n nhi&#7873;u nh&#7845;t t&#7915; tr&#432;&#7899;c t&#7899;i nay
+(xem <a class="xref" href="common-pitfalls.html#bikeshed" title="The Softer the Topic, the Longer the Debate">ph&#7847;n &#8220;The Softer the Topic, the Longer the Debate&#8221;</a><span> trong
+<a class="xref" href="communications.html" title="Ch&#432;&#417;ng 6. Communications">Ch&#432;&#417;ng 6, <i>Communications</i></a></span>), 
+và hi&#7879;n nay, th&#7871; gi&#7899;i v&#7851;n ch&#432;a th&#7889;ng nh&#7845;t v&#7873; m&#7897;t chu&#7849;n &#273;ánh s&#7889; duy nh&#7845;t.
+Tuy nhiên, có m&#7897;t s&#7889; chi&#7871;n l&#432;&#7907;c &#273;ánh s&#7889; &#273;&#432;&#7907;c s&#7889; &#273;ông &#273;&#7891;ng tình theo nguyên t&#7855;c:
+<span class="emphasis"><em>Th&#7889;ng nh&#7845;t</em></span>.
+Hãy ch&#7885;n m&#7897;t chi&#7871;n l&#432;&#7907;c &#273;ánh s&#7889;, v&#259;n b&#7843;n hóa nó,
+tuân th&#7911; ch&#7863;t ch&#7869; theo nó và ng&#432;&#7901;i dùng s&#7869; c&#7843;m &#417;n b&#7841;n.</p><div class="sect2" title="Các thành ph&#7847;n c&#7911;a s&#7889; phiên b&#7843;n"><div class="titlepage"><div><div><h3 class="title"><a name="release-number-components"></a>Các thành ph&#7847;n c&#7911;a s&#7889; phiên b&#7843;n</h3></div></div></div><p>
+Ph&#7847;n này mô t&#7843; các quy &#432;&#7899;c chính th&#7913;c phát hành
+m&#7897;t cách c&#7909; th&#7875;. Chúng ta gi&#7843; &#273;&#7883;nh chúng ta có r&#7845;t ít thông tin v&#7873; cách &#273;ánh s&#7889;. 
+&#272;i&#7873;u này ch&#7911; y&#7871;u có tính tham kh&#7843;o. N&#7871;u b&#7841;n &#273;ã quen thu&#7897;c v&#7899;i các
+quy &#432;&#7899;c, b&#7841;n có th&#7875; b&#7887; qua ph&#7847;n này.
+</p><p>S&#7889; phiên b&#7843;n theo ch&#7919; s&#7889;, phân cách b&#7857;ng d&#7845;u ch&#7845;m:</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3<br>
+Singer 5.11.4</p></div></div><p> D&#7845;u ch&#7845;m <span class="emphasis"><em>không</em></span> ph&#7843;i là d&#7845;u ng&#259;n cách gi&#7919;a 
+ch&#7919; s&#7889; th&#7853;p phân và ch&#7919; s&#7889; &#273;&#417;n v&#7883;.
+Nó ch&#7881; &#273;&#417;n thu&#7847;n là s&#7921; phân cách, "5.3.9" và ti&#7871;p theo là
+"5.3.10". M&#7897;t vài d&#7921; án có &#273;ôi khi g&#7907;i ý khác, nh&#7845;t
+h&#7841;t nhân Linux n&#7893;i ti&#7871;ng v&#7899;i nó "0.95", "0.96" ... "0.99" và sau &#273;ó 
+là Linux 1.0, nh&#432;ng các quy &#432;&#7899;c r&#7857;ng các d&#7845;u ch&#7845;m không
+s&#7889; th&#7853;p phân hi&#7879;n &#273;ã &#273;&#432;&#7907;c và c&#7847;n &#273;&#432;&#7907;c xem xét m&#7897;t
+tiêu chu&#7849;n. Không có gi&#7899;i h&#7841;n v&#7873; s&#7889; l&#432;&#7907;ng các thành ph&#7847;n (ch&#7919; s&#7889;
+ph&#7847;n không ch&#7913;a d&#7845;u ch&#7845;m), nh&#432;ng h&#7847;u h&#7871;t các d&#7921; án không v&#432;&#7907;t quá ba
+ho&#7863;c b&#7889;n. Nh&#7919;ng lý do t&#7841;i sao s&#7869; tr&#7903; nên rõ ràng sau &#273;ó.</p><p>Ngoài cách dùng ch&#7919; s&#7889; thành ph&#7847;n,
+m&#7897;t vài d&#7921; án còn dùng ch&#7919; &#273;&#7875; phân bi&#7879;t nh&#432;
+"Alpha" hay "Beta" (xem
+<a class="xref" href="getting-started.html#alpha-and-beta" title="Alpha and Beta">Alpha and Beta</a>), ví d&#7909;:</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3.0 (Alpha)<br>
+Singer 5.11.4 (Beta)</p></div></div><p>
+M&#7897;t b&#7843;n "Alpha" hay "Beta" có ngh&#297;a r&#7857;ng &#273;ây là m&#7897;t b&#7843;n 
+<span class="emphasis"><em>ti&#7873;n chính th&#7913;c</em></span>, và r&#7857;ng m&#7897;t b&#7843;n phát hành trong t&#432;&#417;ng lai s&#7869; có
+cùng m&#7897;t s&#7889; phiên b&#7843;n nh&#432;ng không kèm theo "Alpha" hay "Beta". 
+Nh&#432; v&#7853;y, sau "2.3.0 (Alpha)" s&#7869; là "2.3.0". &#272;&#7875; cho phép m&#7897;t s&#7889; &#7913;ng viên nh&#432; v&#7853;y
+phát hành liên ti&#7871;p, có th&#7875; &#273;&#7863;t tên các phiên b&#7843;n ti&#7873;n-chính-th&#7913;c và ti&#7873;n-ti&#7873;n-chính-th&#7913;c.
+Ví d&#7909;, &#273;ây là m&#7897;t lo&#7841;t các b&#7843;n phát hành theo th&#7913; t&#7921; mà h&#7885; s&#7869;
+&#273;&#432;&#7907;c &#273;óng gói s&#7861;n có cho công chúng:
+</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3.0 (Alpha 1)<br>
+Scanley 2.3.0 (Alpha 2)<br>
+Scanley 2.3.0 (Beta 1)<br>
+Scanley 2.3.0 (Beta 2)<br>
+Scanley 2.3.0 (Beta 3)<br>
+Scanley 2.3.0</p></div></div><p>Chú ý r&#7857;ng khi phiên b&#7843;n ch&#7913;a "Alpha", Scanley "2.3" &#273;&#432;&#7907;c vi&#7871;t là "2.3.0".  
+Hai phiên b&#7843;n này là t&#432;&#417;ng &#273;&#432;&#417;ng&#8212; và &#273;&#7875; &#273;&#417;n gi&#7843;n, các s&#7889; không 
+th&#432;&#7901;ng &#273;&#432;&#7907;c b&#7887; qua&#8212;.</p><p>Các h&#7841;n &#273;&#7883;nh t&#7915; khác &#273;&#432;&#7907;c dùng bán chính th&#7913;c là "Stable" (&#7893;n &#273;&#7883;nh),
+"Unstable" (không &#7893;n &#273;&#7883;nh), "Development" (phát tri&#7875;n), và "RC" (for "Release Candidate").  
+H&#7841;n &#273;&#7883;nh t&#7915; hay &#273;&#432;&#7907;c dùng nh&#7845;t là "Alpha" và "Beta", ti&#7871;p &#273;ó là "RC"
+&#273;&#7913;ng v&#7883; trí th&#7913; ba. Tuy nhiên chú ý r&#7857;ng "RC" luôn ch&#7913;a m&#7897;t ch&#7919; s&#7889; bán h&#7841;n &#273;&#7883;nh t&#7915;
+Ngh&#297;a là, b&#7841;n s&#7869; không phát hành phiên b&#7843;n 
+"Scanley 2.3.0 (RC)", mà là
+"Scanley 2.3.0 (RC 1)", ti&#7871;p &#273;ó là RC2, ...</p><p>Tác gi&#7843; khuy&#7871;n ngh&#7883; s&#7917; d&#7909;ng các t&#7915; thông d&#7909;ng nh&#432;, "Alpha", "Beta", and "RC", are pretty widely
+vì nó &#273;&#432;&#7907;c s&#7917; d&#7909;ng r&#7897;ng rãi và tránh không dùng các t&#7915; khác
+vì nh&#7919;ng t&#7915; này không ph&#7843;i là "t&#7915; lóng" &#273;&#432;&#7907;c m&#7885;i ng&#432;&#7901;i khác s&#7917; d&#7909;ng.</p><p>
+D&#7845;u ch&#7845;m &#7903; &#273;ây không ph&#7843;i là ký hi&#7879;u phân cách gi&#7919;a s&#7889; th&#7853;p phân và 
+ch&#7919; s&#7889; sau d&#7845;y ph&#7843;y. Các phiên b&#7843;n "0.X.Y" s&#7869; là ti&#7873;n thân c&#7911;a 
+"1.0" (t&#432;&#417;ng &#273;&#432;&#417;ng v&#7899;i "1.0.0").  "3.14.158" là ti&#7873;n thân k&#7873; c&#7911;a 
+"3.14.159", và không ph&#7843;i là ti&#7873;n thân k&#7873; c&#7911;a 
+"3.14.160" hay "3.15.'s&#7889; nào &#273;o'".</p><p>
+C&#7847;n ph&#7843;i có m&#7897;t quy &#273;&#7883;nh v&#7873; &#273;ánh s&#7889; phiên b&#7843;n vì qua con s&#7889; này,
+ng&#432;&#7901;i dùng bi&#7871;t &#273;&#432;&#7907;c s&#7921; khác nhau quan tr&#7885;ng gi&#7919;a hai phiên b&#7843;n
+ch&#7881; c&#7847;n nhìn qua s&#7889; phiên b&#7843;n.
+Trong h&#7879; th&#7889;ng &#273;ánh s&#7889; ba thành ph&#7847;n, thành ph&#7847;n th&#7913; nh&#7845;t là 
+<em class="firstterm">major number</em> (s&#7889; phiên b&#7843;n chính), thành ph&#7847;n th&#7913; hai là
+<em class="firstterm">minor number</em>, (s&#7889; phiên b&#7843;n ph&#7909;) và thành ph&#7847;n th&#7913; ba là
+<em class="firstterm">micro number</em> (s&#7889; micro).  
+Ví d&#7909;, "2.10.17" là phiên b&#7843;n micro th&#7913; 17 c&#7911;a chu&#7895;i phiên b&#7843;n ph&#7909; th&#7913; 10 
+trong dòng phiên b&#7843;n chính s&#7889; 2. T&#7915; "dòng" (line) và "chu&#7895;i" (series) &#7903; 
+&#273;ây &#273;&#432;&#7907;c dùng không chính th&#7913;c, nh&#432;ng ý ngh&#297;a c&#7911;a nó gi&#7889;ng nh&#432; b&#7841;n &#273;ang &#273;&#7885;c.
+M&#7897;t chu&#7895;i phiên b&#7843;n chính &#273;&#417;n gi&#7843;n là các phiên b&#7843;n có cùng s&#7889; phiên b&#7843;n chính,
+m&#7897;t chu&#7895;i (phiên b&#7843;n) ph&#7909; bao g&#7891;m các phiên b&#7843;n có cùng s&#7889; phiên b&#7843;n ph&#7909; <span class="emphasis"><em>và</em></span>
+s&#7889; phiên b&#7843;n chính. Ngh&#297;a là, "2.4.0" và "3.4.1" không cùng s&#7889; phiên b&#7843;n chính
+m&#7863;c dù s&#7889; phiên b&#7843;n ph&#7909; gi&#7889;ng nhau ("4").
+"2.4.0" và "2.4.2" n&#7857;m cùng dòng phiên b&#7843;n chính và phiên b&#7843;n ph&#7909; m&#7863;c dù chúng
+không n&#7855;m k&#7871; ti&#7871;p nhau (2.4.1 là k&#7871; ti&#7871;p c&#7911;a 2.4.0).</p><p>Ý ngh&#297; c&#7911;a các con s&#7889; này gi&#7889;ng nh&#432; nh&#7919;ng gì b&#7841;n &#273;&#7885;c d&#432;&#7907;c:
+N&#7871;u s&#7889; phiên b&#7843;n chính t&#259;ng m&#7897;t ngh&#297;a là có thay &#273;&#7889;i l&#7899;n;
+n&#7871;u s&#7889; phiên b&#7843;n ph&#7909; t&#259;ng m&#7897;t, ngh&#297;a là có thay &#273;&#7893;i ph&#7909; (nh&#7887;);
+và s&#7889; phiên b&#7843;n micro là
+<em class="firstterm">patch number</em> (s&#7889; b&#7843;n vá),
+Chú ý r&#7857;ng m&#7897;t s&#7889; d&#7921; án dùng s&#7889; b&#7843;n gi&#7889;ng nh&#432; s&#7889; micro,
+&#273;i&#7873;u này &#273;ôi khi gây nh&#7847;m l&#7851;n. M&#7897;t s&#7889; d&#7921; án khác l&#7841;i dùng s&#7889; micro là 
+<em class="firstterm">build number</em> (s&#7889; xây d&#7921;ng), t&#259;ng m&#7895;i l&#7847;n
+khi d&#7921; án &#273;&#432;&#7907;c "build" (ngh&#297;a là biên d&#7883;ch l&#7841;i). 
+&#272;i&#7873;u này có ý ngh&#297;a phân bi&#7879;t các phiên b&#7843;n &#273;óng gói c&#7847;n khi thông báo l&#7895;i.</p><p>
+M&#7863;c dù có khá nhi&#7873;u quy &#273;&#7883;nh và thói quen s&#7917; d&#7909;ng các thành ph&#7847;n trong s&#7889; phiên b&#7843;n,
+nh&#432;ng s&#7921; khác bi&#7879;t này là khá ti&#7875;u ti&#7871;t. Hai ph&#7847;n ti&#7871;p theo s&#7869; trình bày v&#7873; 
+m&#7897;t s&#7889; quy &#432;&#7899;c &#273;&#432;&#7907;c s&#7917; d&#7909;ng r&#7897;ng rãi.</p></div><div class="sect2" title="Chi&#7871;n l&#432;&#7907;c &#273;&#417;n gi&#7843;n"><div class="titlepage"><div><div><h3 class="title"><a name="release-number-simple-strategy"></a>Chi&#7871;n l&#432;&#7907;c &#273;&#417;n gi&#7843;n</h3></div></div></div><p>
+H&#7847;u h&#7871;t các d&#7921; án có lu&#7853;t v&#7873; vi&#7879;c cho phép lo&#7841;i thay &#273;&#7893;i vào vào m&#7897;t
+l&#7847;n xu&#7845;t b&#7843;n n&#7871;u nó ch&#7881; ch&#7913;a m&#7897;t s&#7889; micro và có lu&#7853;t khác cho s&#7889; minor, 
+và th&#7853;m chí khác h&#417;n n&#7919;a cho s&#7889; phiên b&#7843;n chính. 
+Không có "chu&#7849;n" chung &#273;&#7863;t cho các lu&#7853;t này nh&#432;ng &#7903; &#273;ây, chúng tôi 
+s&#7869; mô t&#7843; chính sách &#273;&#432;&#7907;c dùng thành m&#7897;t &#7903; nhi&#7873;u d&#7921; án.
+B&#7841;n có th&#7875; c&#7843;i ti&#7871;n chính sách này cho phù h&#7907;p v&#7899;i d&#7921; án c&#7911;a mình.
+Chính sách d&#432;&#7899;i &#273;ây &#273;&#432;&#7907;c s&#7917;a &#273;&#7893;i t&#7915; d&#7921; án APR, xem 
+<a class="ulink" href="http://apr.apache.org/versioning.html" target="_top">http://apr.apache.org/versioning.html</a>.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+  
+  Ch&#7881; thay &#273;&#7893;i s&#7889; micro (ngh&#297;a là, thay &#273;&#7893;i trong cùng dòng) ph&#7843;i t&#432;&#417;ng thích v&#7899;i 
+  phiên b&#7843;n tr&#432;&#7899;c và sau nó. Ngh&#297;a là, thay &#273;&#7893;i này có th&#7875; là bug fix, 
+  ho&#7863;c thay &#273;&#7893;i r&#7845;t nh&#7887; t&#7899;i các ch&#7913;c n&#259;ng s&#7861;n có. Và, ch&#7913;c n&#259;ng m&#7899;i không &#273;&#432;&#7907;c
+  &#273;&#432;a vào phiên b&#7843;n micro. 
+			</p></li><li class="listitem"><p>
+  
+  
+  Thay &#273;&#7893;i t&#7899;i s&#7889; minor (ngh&#297;a là, thay &#273;&#7893;i trong dòng chính), ph&#7843;i th&#7887;a mãn
+  tính t&#432;&#417;ng tích v&#7899;i phiên b&#7843;n tr&#432;&#7899;c &#273;ó, nh&#432;ng không c&#7847;n thi&#7871;t t&#432;&#417;ng thích v&#7899;i
+  phiên b&#7843;n sau nó. Th&#432;&#7901;ng ng&#432;&#7901;i ra thêm các ch&#7913;c n&#259;ng m&#7899;i vào phiên b&#7843;n minor,
+  			</p></li><li class="listitem"><p>
+  Thay &#273;&#7893;i s&#7889; phiên b&#7843;n chính là ranh gi&#7899;i &#273;ánh d&#7845;u s&#7921; t&#432;&#417;ng thích.
+  M&#7897;t phiên b&#7843;n chính có th&#7875; không t&#432;&#417;ng thích v&#7899;i b&#7843;n c&#361; và m&#7899;i. 
+  M&#7897;t phiên b&#7843;n chính th&#432;&#7901;ng có nhi&#7873;u ch&#7913;c n&#259;ng m&#7899;i, &#273;&#432;&#7907;c g&#7897;p thành m&#7897;t b&#7897;.
+			</p></li></ol></div><p><em class="firstterm">T&#432;&#417;ng thích ng&#432;&#7907;c (backward-compatible)</em> là gì
+ph&#7909; thu&#7897;c vào vi&#7879;c b&#7843;n thân ph&#7847;n m&#7873;m &#273;ó làm gì nh&#432;ng thông th&#432;&#7901;ng, nó không 
+nói lên nhi&#7873;u &#273;i&#7873;u. Ví d&#7909;, n&#7871;u ch&#432;&#417;ng trình c&#7911;a b&#7841;n &#7903; d&#7841;ng máy tr&#7841;m/máy ch&#7911;,
+"t&#432;&#417;ng thích ng&#432;&#7907;c" s&#7869; có ngh&#297;a là, n&#7871;u nâng c&#7845;p máy ch&#7911; lên 2.6.0
+không &#273;&#432;&#7907;c glàm cho phiên b&#7843;n 2.5.4 &#7903; máy tr&#7841;m m&#7845;t m&#7897;t ch&#7913;c n&#259;ng b&#7845;t k&#7923;
+ho&#7863;c ch&#7841;y khác v&#7899;i phiên b&#7843;n tr&#432;&#7899;c &#273;ó (tr&#7915; tr&#432;&#7901;ng h&#7907;p s&#7917;a l&#7895;i!)
+M&#7863;t khác, n&#7871;u nâng c&#7845;p máy tr&#7841;m lên 2.6.0 cùng v&#7899;i máy ch&#7911;, thì máy tr&#7841;m
+s&#7869; có thêm ch&#7913;c n&#259;n m&#7899;i nh&#432;ng b&#7843;n 2.5.4 l&#7841;i không s&#7917; d&#7909;ng &#273;&#432;&#7907;c ch&#7913;c n&#259;ng m&#7899;i này.
+N&#7871;u &#273;i&#7873;u &#273;ó x&#7843;y ra, chúng ta g&#7885;i b&#7843;n nâng c&#7845;p là <span class="emphasis"><em>không</em></span>
+"t&#432;&#417;ng thích xuôi": Hi&#7875;n nhiên, b&#7841;n không th&#7875; h&#7841; phiên b&#7843;n c&#7911;a máy tr&#7841;m v&#7873; 
+2.5.4 và gi&#7919; m&#7885;i ch&#7913;c n&#259;ng mà nó có &#7903; 2.6.0, vì m&#7897;t s&#7889; ch&#7913;c n&#259;ng &#273;ó &#273;ã &#273;u&#7907;c
+thêm m&#7899;i &#7903; 2.6.0.
+</p><p>
+&#272;i&#7873;u này ngh&#297;a là b&#7843;n nâng c&#7845;p micro ch&#7881; c&#7847;n thi&#7871;t ch&#7881; trong tr&#432;&#7901;ng h&#7907;p s&#7917;a l&#7895;i.
+Nó ph&#7843;i gi&#7919; tính t&#432;&#417;ng thích c&#7843; hai h&#432;&#7899;ng: N&#7871;u nâng c&#7845;p t&#7915; 2.5.3 lên 2.5.4 và sau &#273;ó
+quay ng&#432;&#7907;c tr&#7903; l&#7841;i 2.5.3 thì v&#7851;n không m&#7845;t ch&#7913;c n&#259;ng nào. 
+T&#7845;t nhiên, nh&#7919;ng b&#7843;n s&#7917;a l&#7895;i v&#7899;i 2.5.4 xu&#7845;t hi&#7879;n sau khi h&#7841; phiên b&#7843;n, nh&#432;ng b&#7841;n không
+m&#7845;t b&#7845;t kì s&#7913;c n&#259;ng nào, ngo&#7841;i tr&#7915; nh&#7919;ng l&#7895;i &#273;ã &#273;&#432;&#7907;c s&#7917;a làm &#7843;nh h&#432;&#7903;ng &#273;&#7871;n 
+m&#7897;t s&#7889; ch&#7913;c n&#259;ng có s&#7861;n.
+</p><p>
+Mô hình máy ch&#7911;/máy tr&#7841;m và m&#7897;t trong nh&#7919;ng  ví d&#7909; v&#7873; tính t&#432;&#417;ng thích.
+M&#7897;t ví d&#7909; khác là &#273;&#7883;nh d&#7841;ng d&#7919; li&#7879;u: D&#7919; li&#7879;u c&#7847;n ghi v&#297;nh c&#7917;u hay không?
+N&#7871;u c&#7847;n, ph&#7843;i có m&#7897;t h&#432;&#7899;ng d&#7851;n và chính sách c&#7909; th&#7875; &#273;&#7875; &#273;&#7843;m b&#7843;o tính t&#432;&#417;ng thích
+sao cho phiên b&#7843;n &#273;&#7883;nh d&#7841;ng 2.6.0 và 2.5.4 t&#432;&#417;ng thích v&#7899;i nhau.
+N&#7871;u m&#7897;t ch&#432;&#417;ng trình cung c&#7845;p API d&#432;&#7899;i d&#7841;ng m&#7897;t framework, nó c&#361;ng c&#7847;n tính t&#432;&#417;ng
+thích gi&#7919;a các th&#432; vi&#7879;n c&#361; và m&#7899;i.</p><p>
+Trong nh&#7919;ng h&#7879; th&#7889;ng nh&#432; v&#7853;y, chúng ta không có c&#417; h&#7897;i &#273;&#7853;p b&#7887; t&#7845;t c&#7843;
+và b&#7855;t &#273;&#7847;u l&#7841;i t&#432; &#273;&#7847;u tr&#7915; khi b&#7855;t &#273;&#7847;u phát tri&#7875;n v&#7899;i 
+m&#7897;t dòng phiên b&#7843;n m&#7899;i. &#272;i&#7873;u này khá ti&#7879;n l&#7907;i:
+Chúng ta s&#7869; thi&#7871;t k&#7871; l&#7841;i, thêm ch&#7913;c n&#259;ng, thay &#273;&#7893;i giao th&#7913;c
+so v&#7899;i phiên b&#7843;n c&#361;. Th&#7921;c ra không có gi&#7843;i pháp nhanh chóng nhi&#7879;m màu nào
+cho bài toán này tr&#7915; khi chúng ta thi&#7871;t k&#7871; m&#7903; r&#7897;ng l&#7841;i t&#7915; &#273;&#7847;u (&#273;ây là m&#7897;t 
+&#273;&#7873; tài r&#7897;ng, &#273;áng &#273;&#7875; vi&#7871;t riêng m&#7897;t quy&#7875;n sách). 
+Chúng ta c&#361;ng c&#7847;n công b&#7889; m&#7897;t chính sách v&#7873; t&#432;&#417;ng thích (ngay c&#7843; v&#7899;i
+nh&#7919;ng ng&#432;&#7901;i &#273;ã quen thu&#7897;c v&#7899;i khái ni&#7879;m này) khi công b&#7889; 
+ph&#7847;n m&#7873;m, &#273;i&#7873;u này không th&#7875; tránh kh&#7887;i. 
+
+</p><p>
+Cá quy &#273;&#7883;nh trên &#273;&#432;&#7907;c ng&#7847;m &#273;&#7883;nh r&#7857;ng nó không &#273;&#432;&#7907;c áp d&#7909;ng cho 
+nh&#7919;ng phiên b&#7843;n tr&#432;&#7899;c 1.0, ví d&#7909; nh&#432; 0.1, 0.2, 0.3...
+S&#7921; thay &#273;&#7893;i gi&#7919;a các phiên b&#7843;n  tr&#432;&#7899;c 1.0 là tùy ý. S&#7889; phiên b&#7843;n
+tr&#432;&#7899;c 1.0 &#273;&#432;&#7907;c &#273;ánh s&#7889; b&#7845;t k&#7923; tùy theo tác gi&#7843;, ví d&#7909; 0.1.0, 0.1.1 vân vân...
+ho&#7863;c c&#361;ng có th&#7875; không &#273;ánh s&#7889;. 
+Các quy &#273;&#7883;nh v&#7873; &#273;ánh s&#7889; phiên b&#7843;n tr&#432;&#7899;c 1.0 khá l&#7887;ng l&#7867;o và ng&#432;&#7901;i ta ng&#7847;m
+hi&#7875;u r&#7857;ng &#273;ây là b&#7843;n tr&#432;&#7899;c-chính-th&#7913;c và h&#7885; "tha th&#7913;" cho s&#7921;
+thay &#273;&#7893;i l&#7899;n nh&#7887; hay không t&#432;&#417;ng thích ng&#432;&#7907;c hay xuôi.</p><p>
+Xin l&#432;u ý r&#7857;ng nh&#7919;ng &#273;i&#7873;u trên ch&#7881; áp d&#7909;ng cho h&#7879; s&#7889; &#273;ánh s&#7889; ba thành ph&#7847;n c&#7909; th&#7875;.
+Cách &#273;ánh s&#7889; s&#7869; khác v&#7899;i m&#7897;t h&#7879; th&#7889;ng ba thành ph&#7847;n khác và khác n&#7919;a
+v&#7899;i h&#7879; th&#7889;ng &#273;ánh s&#7889; hai thành ph&#7847;n. 
+&#272;i&#7873;u quan tr&#7885;ng là c&#7847;n ph&#7843;i xác &#273;&#7883;nh xem ý ngh&#297;a c&#7911;a t&#7915;ng thành ph&#7847;n là gì,
+&#273;&#7863;t ra quy &#273;&#7883;nh và th&#7921;c hi&#7879;n ch&#7863;t ch&#7869; theo quy &#273;&#7883;nh &#273;ó.</p></div><div class="sect2" title="Chi&#7871;n l&#432;&#7907;c ch&#7861;n/l&#7867;"><div class="titlepage"><div><div><h3 class="title"><a name="release-number-even-odd-strategy"></a>Chi&#7871;n l&#432;&#7907;c ch&#7861;n/l&#7867;</h3></div></div></div><p>
+M&#7897;t s&#7889; d&#7921; án dùng s&#7889; ch&#7861;n/l&#7867; &#273;&#7875; &#273;ánh d&#7845;u: S&#7889; ch&#7861;n là &#7893;n &#273;&#7883;nh và s&#7893; l&#7867;
+là không &#7893;n &#273;&#7883;nh. Các con s&#7889; này ch&#7881; áp d&#7909;ng cho s&#7889; phiên b&#7843;n minor ch&#7913;
+không áp d&#7909;ng cho s&#7889; phiên b&#7843;n chính và macro. 
+T&#259;ng s&#7889; micro ngh&#297;a là s&#7917;a l&#7895;i (không thêm ch&#7913;c n&#259;ng m&#7899;i).
+T&#259;ng s&#7889; phiên b&#7843;n chính ngh&#297;a là thêm ch&#7913;c n&#259;ng m&#7899;i, nh&#7919;ng thay &#273;&#7893;i l&#7899;n.</p><p>
+D&#7921; án nhân Linux là m&#7897;t ví d&#7909; v&#7873; cách s&#7917; d&#7909;ng chi&#7871;n l&#432;&#7907;c ch&#7861;n l&#7867;.
+V&#7899;i cách làm này, h&#7885; &#273;&#432;a ra hai dòng s&#7843;n ph&#7849;m &#7893;n &#273;&#7883;nh và không &#7893;n &#273;&#7883;nh
+cho ng&#432;&#7901;i c&#7847;n ki&#7875;m ch&#7913;ng ch&#7913;c n&#259;ng m&#7899;i v&#7899;i mã ngu&#7891;n m&#7899;i. 
+Ví d&#7909; "2.4.21" là phiên b&#7843;n &#7893;n &#273;&#7883;nh và có th&#7875; &#273;&#432;&#7907;c khuy&#7871;n ngh&#7883; dùng
+làm máy ch&#7911; web trong khi "2.5.1" là b&#7843;n không chính th&#7913;c và ch&#7881; nên
+cài vào máy th&#7917; nghi&#7879;m. Nhóm phát tri&#7875;n x&#7917; lý các b&#7843;n báo l&#7895;i và t&#259;ng d&#7847;n
+s&#7889; micro cho t&#7899;i khi &#273;&#7841;t &#273;&#432;&#7907;c &#273;&#7897; bão hòa nh&#7845;t &#273;&#7883;nh h&#7885; s&#7869; t&#259;ng s&#7889; minor
+và &#273;&#7863;t l&#7841;i s&#7889; micro là 0; hàm ý r&#7857;ng &#273;ây là phiên b&#7843;n &#7893;n &#273;&#7883;nh.</p><p>
+H&#7879; s&#7889; &#273;ánh s&#7889; này ít nh&#7845;t là không xung &#273;&#7897;ng v&#7899;i h&#432;&#7899;ng d&#7851;n v&#7873; tính t&#432;&#417;ng thích
+&#273;ã trình bày t&#7915; tr&#432;&#7899;c. Nó &#273;&#417;n thu&#7847;n ch&#7881; làm overload s&#7889; minor b&#7857;ng m&#7897;t s&#7889;
+thông tin khác. Nó b&#7855;t s&#7889; minor t&#259;ng g&#7845;p hai l&#7847;n so v&#7899;i s&#7889; l&#7847;n c&#7847;n thi&#7871;t. 
+Chi&#7871;n l&#432;&#7907;c ch&#7861;n/l&#7867; phù h&#7907;p v&#7899;i nh&#7919;ng d&#7921; án có vòng &#273;&#7901;i phát hành dài 
+và h&#432;&#7899;ng t&#7899;i ng&#432;&#7901;i dùng c&#7847;n s&#7921; &#7893;n &#273;&#7883;nh h&#417;n là ch&#7913;c n&#259;ng m&#7899;i. 
+Tuy nhiên, &#273;ây không là cách duy nh&#7845;t &#273;&#7875; ph&#7847;n m&#7873;m c&#7911;a chúng ta &#273;&#432;&#7907;c
+c&#7897;ng &#273;&#7891;ng ki&#7875;m th&#7843;o giúp. 
+<a class="xref" href="stabilizing-a-release.html" title="Stabilizing a Release">ph&#7847;n &#8220;Stabilizing a Release&#8221;</a><span>
+Trong ph&#7847;n sau c&#7911;a ch&#432;&#417;ng này </span> chúng ta s&#7869; &#273;&#7873; c&#7853;p t&#7899;i m&#7897;t 
+cách &#273;ánh s&#7889; khác, có th&#7875; là ph&#7893; bi&#7871;n h&#417;n, sao cho mã ngu&#7891;n ch&#432;a-&#7893;n-&#273;&#7883;nh
+&#273;&#432;&#7907;c c&#7897;ng &#273;&#7891;ng &#273;ón chào h&#417;n. </p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="publicity.html">Tr&#432;&#7899;c &#273;ó</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="release-branches.html">K&#7871; ti&#7871;p</a></td></tr><tr><td width="40%" align="left" valign="top">Publicity </td><td width="20%" align="center"><a accesskey="h" href="index.html">&#272;&#7847;u</a></td><td width="40%" align="right" valign="top"> Nhánh phát hành</td></tr></table></div></body></html>

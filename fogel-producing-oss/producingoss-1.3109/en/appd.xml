@@ -1,0 +1,30 @@
+<appendix id="bikeshed-full">
+<title>Obsolete Appendix: (was: Why Should I Care What Color the Bikeshed Is?)</title>
+
+<simplesect>
+
+<para>This appendix used to contain the complete text of Poul-Henning
+Kamp's famous "bikeshed" post, an excerpt from which appears in <xref
+linkend="communications"/>).  It is an eloquent disquisition on what
+tends to go wrong in group discussions, but to save space I no longer
+include it as an appendix in this book.  You can view the entire 
+post at <ulink
+url="http://www.bikeshed.org/"
+>bikeshed.org</ulink>.  You can also point
+people to <ulink url="http://bikeshed.com">bikeshed.com</ulink>.  Or
+<ulink url="http://blue.bikeshed.com/" >blue.bikeshed.com</ulink>, or
+<ulink url="http://yellow.bikeshed.com/" >yellow.bikeshed.com</ulink>,
+or <ulink url="http://teal.bikeshed.com/" >teal.bikeshed.com</ulink>,
+or <ulink url="http://mauve.bikeshed.com/"
+>mauve.bikeshed.com</ulink>, or <ulink url="http://tope.bikeshed.com/"
+>tope.bikeshed.com</ulink>, or...</para>
+
+</simplesect>
+
+</appendix>
+
+<!--
+local variables: 
+sgml-parent-document: ("book.xml" "appendix")
+end:
+-->

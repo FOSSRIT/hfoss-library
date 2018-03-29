@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Website</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Website"><div class="titlepage"><div><div><h1 class="title"><a id="web-site"/>Website</h1></div></div></div><p>Es gibt aus technischer Sicht nicht viel darüber zu sagen, wie man
+die Website für das Projekt einrichtet: Einen Webserver aufzubauen 
+und Webseiten zu schreiben, sind relativ einfache Aufgaben, und das 
+wichtigste im Bezug auf das Layout und die Anordnung wurde bereits im 
+vorherigen Kapitel abgedeckt. Die Hauptfunktion der Website ist, das
+Projekt klar und einladend zu präsentieren und die anderen Werkzeuge
+einzubinden (Versionsverwaltung, Bugtracker, usw.). Wenn Ihnen die
+Kenntnisse dazu fehlen, selbst einen Webserver aufzusetzen, ist es
+normalerweise nicht schwer, jemanden zu finden, der es kann und
+bereit ist zu helfen. Trotzdem ziehen es viele vor, bestehende
+Hosting-Pakete zu nutzen, um sich Zeit und Mühe zu sparen.</p><div class="sect2" title="Hosting-Pakete"><div class="titlepage"><div><div><h2 class="title"><a id="canned-hosting"/>Hosting-Pakete</h2></div></div></div><p>Es gibt zwei Hauptvorteile bei der Nutzung von Hosting-Paketen. 
+Der erste ist die Kapazität ihrer Server und ihre Bandbreite: Ihre
+Server sind schnelle Kisten mit dicken Leitungen. Egal wie erfolgreich
+Ihr Projekt wird, Ihnen wird niemals der Plattenplatz oder
+die Bandbreite ausgehen. Der zweite Vorteil ist seine Einfachheit. Sie
+haben bereits einen Bugtracker, eine Versionsverwaltung, ein
+Malinglisten-System, ein Archiv-System und alles was Sie sonst benötigen,
+um eine Site zu betreiben. Sie haben die Programme konfiguriert, und 
+kümmern sich um die Sicherung aller Daten dieser Programme. Sie müssen
+nicht viele Entscheidungen treffen. Sie müssen lediglich ein Formular
+ausfüllen, einen Knopf drücken und plötzlich haben Sie eine Website
+für Ihr Projekt .</p><p>Das sind ziemlich schwerwiegende Vorteile. Der Nachteil ist 
+natürlich, dass Sie sich mit der <span class="emphasis"><em>angebotenen</em></span> 
+Auswahl und
+Konfiguration abfinden müssen, selbst wenn etwas anderes für Ihr
+Projekt besser wäre. Meistens lassen sich diese Sites innerhalb enger
+Grenzen konfigurieren, aber Sie werden niemals die feingranulare
+Kontrolle haben wie bei einer selbstgebauten Site mit vollem 
+administrativen Zugriff auf den Server.</p><p>Ein perfektes Beispiel hierfür ist der Umgang mit generierten
+Dateien. Bestimmte Webseiten des Projekts können generierte Dateien
+sein – es gibt z.B. Systeme, um die Daten für eine FAQ in ein
+einfaches Quellformat zu schreiben, von dem aus HTML, PDF und andere 
+Darstellungsformate generiert werden können. Wie in 
+<a class="xref" href="ch03s03.html#version-everything" title="Versioniere alles">„Versioniere alles“</a><span> früher 
+in diesem Kapitel</span> beschrieben, wollen Sie nicht die
+generierten Formate in der Versionsverwaltung haben, sondern nur die
+Quellen. Wenn Ihre Website aber auf den Server von jemand anderem
+betrieben wird, kann es unmöglich sein, ein eigenes Script einzubinden,
+um die HTML-Version automatisch zu erzeugen, gleich nachdem etwas an 
+der Quelldatei geändert wurde. Die einzige Abhilfe ist hier, die
+generierten Formate zusätzlich in der Versionsverwaltung abzulegen,
+damit sie auch in der Website auftauchen.</p><p>Es kann auch schwerwiegendere Folgen geben. Sie werden vielleicht
+nicht so viel Kontrolle über die Präsentation haben, wie Sie es sich wünschen
+würden. Manche Hosting-Sites erlauben es Ihnen, Ihre Webseiten 
+anzupassen, der vorgegebene Aufbau hinterlässt aber aber meistens an 
+verschiedenen Stellen erkennbare Spuren. Manche auf SourceForge
+gehosteten Projekte haben ausgefeilte eigene Webseiten, verweisen 
+Entwickler aber immer noch auf ihre "SourceForge Seite" für weitere 
+Informationen. Die SourceForge-Seite ist, was die Webseite des Projekts
+gewesen wäre, wenn das Projekt keine angepasste Seite benutzt hätte. Auf
+der SourceForge-Seite sind Verweise auf den Bugtracker, zum 
+CVS-Repository, Downloads, usw. Eine SourceForge-Seite beinhaltet
+unglücklicherweise auch eine ganze Menge belanglosen Rauschens. Oben ist
+ein Werbebanner, oftmals eine Animation. Links ist eine vertikale
+Anordnung verschiedener Verweise die für jemandem, der am Projekt 
+interessiert ist, kaum von Bedeutung sein dürften. Rechts ist meistens
+noch mehr Werbung. Lediglich der mittlere Bereich der Seiten ist dem 
+Material des Projekts gewidmet und selbst dieser ist verwirrend 
+angeordnet, so dass Benutzer unsicher sind, auf was sie als nächstes 
+klicken sollen.</p><p>Hinter jedem einzelnen Aspekt von SourceForge's Design steht 
+zweifellos ein guter Grund – gut für SourceForge, wie z.B. 
+die Werbung. Für das einzelne Projekt kann das Ergebnis aber eine nicht 
+ganz optimale Website sein. Es ist nicht meine Absicht, auf SourceForge 
+herumzuhacken; ähnliche Bedenken lassen sich auf viele andere Sites 
+übertragen, die Hosting-Pakete anbieten. Das Wesentliche ist hierbei, 
+den Kompromiss zu erkennen den man eingeht. Es wird Ihnen die technische 
+Bürde abgenommen, eine eigene Website zu betreiben, dafür müssen Sie 
+akzeptieren, dass jemand anderes bestimmt, wie sie betrieben wird.</p><p>Sie allein können entscheiden, ob ein Hosting-Paket für Ihr
+Projekt das Beste ist. Wenn Sie eine solche Seite wählen, halten Sie
+sich die Möglichkeit offen, im nachhinein auf Ihre eigenen Server zu 
+wechseln, indem Sie einen gesonderten Domain-Namen als Adresse 
+verwenden. Sie können diese URL für komplizierte Funktionen auf die 
+Hosting-Seite leiten. Ordnen Sie aber unbedingt alles so, dass 
+Sie die die Adresse des Projekts nicht ändern müssen, sollten Sie sich 
+später umentscheiden.</p><div class="sect3" title="Die Wahl des Hosting-Anbieters"><div class="titlepage"><div><div><h3 class="title"><a id="canned-hosting-choosing"/>Die Wahl des Hosting-Anbieters</h3></div></div></div><p>Derzeit (Anfang 2011) dominieren Drei Große den Markt freier 
+Hosting-Angebote. Alle drei hosten Open-Source-lizenzierte Projekte 
+kostenlos. Sie bieten Versionskontrolle, Bugtracking und Wikis an (manche
+sogar mehr, wie z.B. Downloadmöglichkeiten für Binärpakete):</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><a class="ulink" href="http://github.com/">GitHub</a>
+     Die Versionskontrolle ist auf Git beschränkt – aber falls Sie 
+     ohnehin Git benutzen, ist das vermutlich genau der richtige Ort
+     für Ihr Projekt. GitHub hat sich für Git-Projekte zum Zentrum
+     des Universums entwickelt und integriert all seine Dienste mit
+     Git. GitHub bietet auch eine vollständige
+     <a class="ulink" href="http://develop.github.com/">API</a>, um seine
+     Dienste aus Programmen heraus zu nutzen. Es bietet keine
+     Mailinglisten; allerdings werden diese von so vielen anderen
+     geboten, dass dies kein allzu großes Problem sein dürfte.</p></li><li class="listitem"><p><a class="ulink" href="http://code.google.com/hosting/">Google Code Hosting</a>
+     Bietet Subversion und Mercurial zur Versionkontrolle (kein Git,
+     zumindest noch nicht), Wikis, einen Downloadbereich, und einen 
+     ziemlich schicken Bugtracker. Es hat auch APIs zu bieten: die 
+     Versionskontollsysteme sind naturgemäß ihre eigene API; der 
+     Bugtracker hat 
+     <a class="ulink" href="http://code.google.com/p/support/wiki/IssueTrackerAPI">eine eigene API</a>; der Wiki-Inhalte ist <a class="ulink" href="http://code.google.com/p/support/wiki/WikiFAQ#How_do_I_edit_a_wiki_page_directly_through_subversion?">direkt durch die Versionsverwaltun</a> zugänglich und ist 
+     so auch durch Scripts bearbeitbar; der Downloadbereich bietet
+     <a class="ulink" href="http://code.google.com/p/support/wiki/ScriptedUploads">gescriptete Uploads</a>, sprich: eine API. Mailinglisten werden
+     über <a class="ulink" href="http://groups.google.com/">Google Groups</a> 
+     geboten (diese Aussage freilich lässt sich auch auf alle anderen
+     Hostinganbieter übertragen).</p></li><li class="listitem"><p><a class="ulink" href="http://sourceforge.net/">SourceForge</a>
+     Dies ist der älteste und in vielerlei Hinsicht auch der größte
+     Anbieter für freies Hosting von Projekten. Es bietet alle Features, 
+     die auch die anderen bieten, und seine Benutzerschnittstelle ist 
+     gut benutzbar; Allerdings empfinden viele Menschen die Werbeblöcke 
+     auf den Projektseiten als abstoßend. Es scheint der einzige der 
+     drei Großen, der im Moment alle wichtigen Versionskontrollsysteme
+     bietet (Git, Subversion, Mercurial, und CVS). SourceForge bietet 
+     eigene Mailinglisten, aber natürlich können Sie dafür auch einen
+     anderen Anbieter nutzen.</p></li></ul></div><p>Einige Organisationen, wie z.B. die <a class="ulink" href="http://www.apache.org/">Apache Software Foundation</a>,
+bieten auch freies Hosting für solche Open-Source-Projekte, die ihrer
+Mission entsprechen und sich gut in den Bestand der dort bereits 
+existierenden Projekte eingliedern.</p><p>Falls Sie im Zweifel sind, wo Sie Ihr Projekt unterbringen sollen,
+empfehle ich Ihnen dringend, sich an einen der großen drei Anbieter 
+zu halten. Wenn Sie noch mehr Anleitung wünschen: nutzen Sie GitHub, 
+falls Ihr Projekt Git zur Verionierung benutzt, ansonsten nutzen Sie 
+Google Code. Natürlich ist auch SourceForge akzeptabel, aber es bietet 
+keinen Vorteil gegenüber den anderen, und die Werbung kann 
+schon nerven.</p><p>Viele Menschen haben beobachtet, dass freie Projekt-Hosting-Sites
+oftmals die Software, die sie benutzen, um diesen Service zu bieten,
+selbst nicht unter eine freie Software-Lizenz stellen. (einige, die es
+tun sind
+<a class="ulink" href="http://launchpad.net">Launchpad</a>,
+<a class="ulink" href="http://gitorious.org/">Gitorious</a> and
+<a class="ulink" href="http://savannah.gnu.org/">GNU Savannah</a>).
+Aus meiner Sicht wäre es zwar ideal, Zugriff auf all den Code zu haben,
+der die Site ausmacht, aber der entscheidende Punkt ist einen Weg zu
+haben, die eigenen Daten zu exportieren und die Möglichkeit, mit den
+Daten automatisiert zu interagieren. Eine solche Site würde Sie nie
+wirklich einsperren können und würde durch die programmgesteuerte
+Anbindung sogar zu einem gewissen Grade erweiterbar sein.
+Während es einen gewissen Wert darstellen würde, den Code, auf dem eine 
+Hosting-Site beruht, unter Open-Source-Bedingungen zur Verfügung zu haben,
+würden die praktischen Anforderung, diesen Code in eine produktive 
+Umgebung zu verwandeln, die meisten Benutzer völlig überfordern.
+Diese Sites benötigen etliche Server, angepasste Netzwerke, in Vollzeit
+beschäftigte Angestellte, die diese warten; allein den Code zu haben,
+würde nicht ausreichen, den Service zu kopieren oder zu "forken".
+Die Hauptsache ist sicherzustellen, dass Ihre Daten nicht in die
+Gefangenschaft geraten.</p><p>Wikipedia enthält einen ausführlichen <a class="ulink" href="http://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_facilities">Vergleich von Open-Source-Hosting-Angeboten</a>; es ist
+der erste Ort, den Sie bezüglich aktueller umfangreicher Informationen
+über Hosting-Optionen für Open-Source-Projekte konsultieren sollten.
+Auch Haggen So unternahm eine Evaluierung der vielfältigen 
+Hosting-Angebote im Rahmen seiner Dr. Phil. Dissertation 
+<em class="citetitle">Construction of an Evaluation Model for Free/Open Source
+Project Hosting (FOSPHost) sites</em>. Auch wenn diese aus dem
+Jahre 2005 stammt, scheint er sie zuletzt 2007 aktualisiert zu haben und
+seine Kriterien scheinen langfristig gültig. Seine Ergebnisse finden Sie
+unter <a class="ulink" href="http://www.ibiblio.org/fosphost/">http://www.ibiblio.org/fosphost/</a>, siehe insb. auch
+die sehr lesbare Vergleichstabelle unter
+<a class="ulink" href="http://www.ibiblio.org/fosphost/exhost.htm">http://www.ibiblio.org/fosphost/exhost.htm</a>.</p></div><div class="sect3" title="Anonymität und Beteiligung"><div class="titlepage"><div><div><h3 class="title"><a id="anonymity"/>Anonymität und Beteiligung</h3></div></div></div><p>Ein Problem, das nicht allein auf Seiten beschränkt ist,
+die Hosting-Pakete benutzen, dort aber am häufigsten auftritt, ist der 
+Missbrauch der Login-Funktion. Die Funktion selbst ist relativ einfach:
+Die Seite erlaubt jedem Besucher, sich mit Benutzernamen und Passwort
+zu registrieren. Von da an speichert sie ein Profil für diesen Nutzer und
+die Administratoren der Projekte können dem Nutzer bestimmte Rechte
+einräumen, z.B. Schreibzugriff auf das Projektarchiv.</p><p>Das kann äußerst nützlich sein und es ist tatsächlich eines der
+wesentlichen Argumente für fertige Hosting-Pakete. Das Problem ist, dass 
+Nutzer sich manchmal für Aufgaben anmelden müssen, die eigentlich auch
+ohne Anmeldung möglich sein sollten, z.B. ein Ticket im Bugtracker
+zu erstellen. Indem man eine Anmeldung für solche Aufgaben voraussetzt,
+hebt das Projekt die Einstiegshürden für Angelegenheiten, die
+möglichst schnell und einfach sein sollten. Natürlich möchte man
+jemanden erreichen können, der Daten in den Bugtracker eingetragen hat,
+dazu reicht aber ein Feld, in dem er seine E-Mail-Adresse eingeben kann
+(falls er möchte). Wenn ein neuer Benutzer einen Bug findet und ihn
+melden möchte, wird er durch die Anforderung verärgert sein, ein 
+Konto erstellen zu müssen, nur um dem Bugtracker einen Eintrag 
+hinzuzufügen: leicht könnte er sich entscheiden, es gleich
+ganz zu lassen.</p><p>Die Vorteile der Nutzerverwaltung wiegen im Allgemeinen
+ihre Nachteile auf. Wenn Sie es sich aussuchen können, welche
+Aufgaben Sie anonym erlauben wollen, stellen Sie sicher nicht nur 
+<span class="emphasis"><em>alle</em></span> Abläufe einzubeziehen, die nur Lesezugriff
+erfordern, sondern nehmen Sie auch bestimmte Eingabe-Aktionen hinzu,
+insbesondere im Bugtracker sowie, falls vorhanden,
+auf den Seiten des Wikis.</p></div></div></div></body></html>

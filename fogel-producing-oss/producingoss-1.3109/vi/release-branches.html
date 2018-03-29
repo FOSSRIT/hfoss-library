@@ -1,0 +1,100 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Nhánh phát hành</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Phát tri&#7875;n ph&#7847;n m&#7873;m mã m&#7903;"><link rel="up" href="development-cycle.html" title="Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày"><link rel="prev" href="development-cycle.html" title="Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày"><link rel="next" href="stabilizing-a-release.html" title="Stabilizing a Release"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Nhánh phát hành</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="development-cycle.html">Tr&#432;&#7899;c &#273;ó</a> </td><th width="60%" align="center">Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày</th><td width="20%" align="right"> <a accesskey="n" href="stabilizing-a-release.html">K&#7871; ti&#7871;p</a></td></tr></table><hr></div><div class="sect1" title="Nhánh phát hành"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="release-branches"></a>Nhánh phát hành</h2></div></div></div><p>
+T&#7915; cái nhìn c&#7911;a ng&#432;&#7901;i phát tri&#7875;n, d&#7921; án ph&#7847;n m&#7873;m mi&#7877;n phí luôn &#7903; trong
+tr&#7841;ng thái phát hành liên t&#7909;c. Ng&#432;&#7901;i phát tri&#7875;n luôn s&#7917; d&#7909;ng mã ngu&#7891;n m&#7899;i nh&#7845;t,
+vì h&#7885; mu&#7889;n th&#7917; nghi&#7879;m và tìm l&#7895;i, theo dõi sát sao d&#7921; án và &#273;&#7875; ý t&#7899;i 
+nh&#7919;ng ch&#7913;c n&#259;ng ch&#432;a hoàn thi&#7879;n. H&#7885; th&#432;&#7901;ng xuyên c&#7853;p nh&#7853;t kho c&#7911;a h&#7885; hàng ngày,
+th&#7853;m chí vài l&#7847;n m&#7897;t ngày, ki&#7875;m tra các thay &#273;&#7893;i và luôn k&#7923; v&#7885;ng r&#7857;ng
+nh&#7919;ng ng&#432;&#7901;i phát tri&#7875;n khác có &#273;&#432;&#7907;c b&#7843;n copy trong vòng 24 ti&#7871;ng</p><p>
+Sau &#273;ó, làm th&#7871; làm &#273;&#7875; phát hành phiên b&#7843;n chính th&#7913;c? Chúng ta ch&#7881; c&#7847;n
+l&#7845;y m&#7897;t phiên b&#7843;n b&#7845;t k&#7923; trong cây, ví d&#7909; 3.5.0 và công b&#7889; v&#7899;i th&#7871; gi&#7899;i?
+Thông th&#432;&#7901;ng ng&#432;&#7901;i ta không làm nh&#432; v&#7853;y. &#272;àu tiên, &#273;i&#7873;u ki&#7879;n tiên quy&#7871;t
+ph&#7843;i là: toàn b&#7897; cây d&#7921; án "s&#7841;ch" (ngh&#297;a là không còn l&#7895;i). Nh&#7919;ng ch&#7913;c n&#259;ng
+m&#7899;i có th&#7875; &#7903; m&#7913;c &#273;&#7897; hoàn thành khác nhau. Ai &#273;ó có th&#7875; s&#7869; ki&#7875;m tra nh&#7919;ng thay &#273;&#7893;i
+l&#7899;n &#273;&#7875; tìm l&#7895;i và s&#7917;a, nh&#432;ng &#273;i&#7873;u này ph&#7843;i làm trong quá trình phát tri&#7875;n,
+ngh&#297;a là tr&#432;&#7899;c khi b&#7843;n chính th&#7913;c phát hành. N&#7871;u làm v&#7853;y, snapshot s&#7869; t&#7891;n t&#7841;i
+cho t&#7899;i khi m&#7885;i tranh lu&#7853;n v&#7873; nó k&#7871;t thúc. Nh&#7919;ng trao &#273;&#7893;i không liên quan
+có th&#7875; di&#7877;n ra &#273;&#7891;ng th&#7901;i và chúng ta ph&#7843;i ch&#7901; nó k&#7871;t thúc.
+Tuy nhiên, trong th&#7921;c t&#7871;, nh&#7919;ng tranh lu&#7853;n nh&#432; v&#7853;y có th&#7875; không k&#7871;t thúc.</p><p>
+Trong c&#7843; hai tr&#432;&#7901;ng h&#7907;p dùng snapshot cho toàn b&#7897; cây d&#7921; án s&#7869; &#7843;nh h&#432;&#7903;ng
+&#273;&#7871;n nh&#7919;ng ch&#7913;c n&#259;ng &#273;ang &#273;&#432;&#7907;c phát tri&#7875;n ngay c&#7843; khi snapshot này &#273;ã
+s&#7861;n sàng phát hành. Gi&#7843; s&#7917; snapshot này là 3.5.0; snapshot ti&#7871;p theo s&#7869; 
+là 3.5.1 ch&#7913;a nh&#7919;ng b&#7843;n s&#7917;a l&#7895;i c&#7911;a 3.5.0. N&#7871;u c&#7843; hai phiên b&#7843;n này &#273;&#7873;u 
+n&#7857;m trên m&#7897;t cây c&#7911;a kho phát tri&#7875;n, ng&#432;&#7901;i phát tri&#7875;n s&#7869; nhìn nh&#7853;n th&#7871; nào?
+&#272;âu là b&#7843;n "phát tri&#7875;n" và &#273;âu là b&#7843;n "chính th&#7913;c"? H&#7885; không th&#7875; thêm
+ch&#7913;c n&#259;ng m&#7899;i vào c&#7843; hai phiên b&#7843;n và x&#7843;y ra s&#7921; không t&#432;&#417;ng thích v&#7873; 
+phiên b&#7843;n. Không ph&#7843;i t&#7845;t c&#7843; m&#7885;i ng&#432;&#7901;i &#273;&#7873;u chú ý t&#7899;i nh&#7919;ng b&#7843;n vá cho 3.5.0,
+h&#7885; &#273;ành ph&#7843;i th&#7909; &#273;&#7891;ng ch&#7901; cho c&#7843; hai phiên b&#7843;n hoàn thành.</p><p>
+Gi&#7843;i pháp cho v&#7845;n &#273;&#7873; trên là s&#7917; d&#7909;ng 
+<em class="firstterm">phát hành r&#7869; nhánh</em>.  
+M&#7897;t b&#7843;n "phát hành r&#7869; nhánh" trong m&#7897;t h&#7879; th&#7889;ng qu&#7843;n lý phiên b&#7843;n 
+<a class="xref" href="vc.html#vc-vocabulary-branch"><em class="firstterm">branch</em></a>)
+là lu&#7891;ng phát tri&#7875;n &#273;&#7897;c l&#7853;p v&#7899;i lu&#7891;ng phát tri&#7875;n chính..
+Khái ni&#7879;m này c&#361;ng &#273;u&#7907;c dùng khá r&#7897;ng rãi trong phát tri&#7875;n ph&#7847;n m&#7873;m th&#432;&#417;ng m&#7841;i.
+Tuy nhiên, trong môi tr&#432;&#7901;ng th&#432;&#417;ng m&#7841;i, "r&#7869; nhánh" &#273;ôi khi &#273;&#432;&#7907;c coi là hoang phí
+tài nguyên và h&#7885; b&#7883; ép b&#7903;i h&#7841;n n&#7897;p hàng và &#273;ành ph&#7843;i s&#7917; d&#7909;ng m&#7897;t hay ít cây phát tri&#7875;n. </p><p>
+Tuy nhiên, phát hành nhánh là &#273;i&#7873;u b&#7855;t bu&#7897;c trong các d&#7921; án mã m&#7903;. 
+M&#7897;t s&#7889; d&#7921; án không phát hành nhánh và h&#7879; qu&#7843; là l&#7853;p trình viên ph&#7843;i
+"ng&#7891;i ch&#417;i x&#417;i n&#432;&#7899;c" ch&#7901; t&#7899;i khi phát hành xong. Tóm l&#7841;i, h&#7853;u qu&#7843; là x&#7845;u
+vì vòng phát tri&#7875;n b&#7883; &#273;ình tr&#7879;. Th&#7913; hai, ch&#7845;t l&#432;&#7907;ng c&#7847;n &#273;&#7841;t m&#7913;c t&#7889;t h&#417;n
+nó hi&#7879;n có, vì khá ít ng&#432;&#7901;i làm vi&#7879;c trên m&#7897;t nhánh và h&#7885; ph&#7843;i làm g&#7845;p
+&#273;&#7875; nh&#7919;ng ng&#432;&#7901;i khác có th&#7875; ti&#7871;n hành ti&#7871;p công vi&#7879;c c&#7911;a h&#7885;. Th&#7913; ba, &#273;i&#7873;u 
+này phân rã &#273;&#7897;i phát tri&#7875;n v&#7873; m&#7863;t tâm lý và h&#7885; r&#417;i vào trình tr&#7841;ng ph&#7843;i
+t&#432;&#417;ng tác v&#7899;i nhau m&#7897;t cách không c&#7847;n thi&#7871;t. Ng&#432;&#7901;i phát tri&#7875;n, cho dù
+không có vi&#7879;c gì làm, v&#7851;n ph&#7843;i theo dõi các b&#7843;n phát hành và t&#7921; h&#7887;i
+"không rõ nó có liên quan t&#7899;i tôi và tôi có ph&#7843;i làm gì không?"</p><div class="sect2" title="Nguyên lý phát hành r&#7869; nhánh"><div class="titlepage"><div><div><h3 class="title"><a name="release-branch-mechanics"></a>Nguyên lý phát hành r&#7869; nhánh</h3></div></div></div><p>
+Nguyên lý &#273;&#7875; t&#7841;o b&#7843;n phát hành r&#7869; nhánh ph&#7909; thu&#7897;c vào t&#7915;ng h&#7879; th&#7889;ng
+qu&#7843;n lý phiên b&#7843;n. Tuy nhiên, có nh&#7919;ng khái ni&#7879;m chung cho m&#7885;i h&#7879; th&#7889;ng.
+M&#7897;t r&#7869; nhánh nói chung &#273;&#432;&#7907;c tri&#7871;t t&#7915; nhánh chính (trunk). &#7902; &#273;ây, thông th&#432;&#7901;ng,
+"trunk" là cành chính, không b&#7883; ràng bu&#7897;c b&#7903;i các phát hành. B&#7843;n phát 
+hành r&#7869; nhánh &#273;&#7847;u tiên b&#7855;t &#273;&#7847;u b&#7857;ng "1.0" &#273;&#432;&#7907;c tri&#7871;t t&#7915; nhánh chính. 
+V&#7899;i CVS, l&#7879;nh nhánh ch&#7841;y nh&#432; sau</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b RELEASE_1_0_X
+</pre><p>v&#7899;i Subversion</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.0.x
+</pre><p>(All these examples assume a three-component release numbering
+system.  While I can't show the exact commands for every version
+control system, I'll give examples in CVS and Subversion and hope that
+the corresponding commands in other systems can be deduced from those
+two.)</p><p>Notice that we created branch "1.0.x" (with a literal "x")
+instead of "1.0.0".  This is because the same minor line&#8212;i.e.,
+the same branch&#8212;will be used for all the micro releases in that
+line.  The actual process of stabilizing the branch for release is
+covered in
+<a class="xref" href="stabilizing-a-release.html" title="Stabilizing a Release">ph&#7847;n &#8220;Stabilizing a Release&#8221;</a><span>
+later in this chapter</span>.  Here we are
+concerned just with the interaction between the version control system
+and the release process.  When the release branch is stabilized and
+ready, it is time to tag a snapshot from the branch:</p><pre class="screen">
+$ cd RELEASE_1_0_X-working-copy
+$ cvs tag RELEASE_1_0_0
+</pre><p>or</p><pre class="screen">
+$ svn copy http://.../repos/branches/1.0.x http://.../repos/tags/1.0.0
+</pre><p>That tag now represents the exact state of the project's source
+tree in the 1.0.0 release (this is useful in case anyone ever needs to
+get an old version after the packaged distributions and binaries have
+been taken down).  The next micro release in the same line is likewise
+prepared on the 1.0.x branch, and when it is ready, a tag is made for
+1.0.1.  Lather, rinse, repeat for 1.0.2, and so on.  When it's time to
+start thinking about a 1.1.x release, make a new branch from
+trunk:</p><pre class="screen">
+$ cd trunk-working-copy
+$ cvs tag -b RELEASE_1_1_X
+</pre><p>or</p><pre class="screen">
+$ svn copy http://.../repos/trunk http://.../repos/branches/1.1.x
+</pre><p>Maintenance can continue in parallel along both 1.0.x and 1.1.x,
+and releases can be made independently from both lines.  In fact, it
+is not unusual to publish near-simultaneous releases from two
+different lines.  The older series is recommended for more
+conservative site administrators, who may not want to make the big
+jump to (say) 1.1 without careful preparation.  Meanwhile, more
+adventurous people usually take the most recent release on the highest
+line, to make sure they're getting the latest features, even at the
+risk of greater instability.</p></div><p>This is not the only release branch strategy, of course.  In
+some circumstances it may not even be the best, though it's worked out
+pretty well for projects I've been involved in.  Use any strategy that
+seems to work, but remember the main points: the purpose of a release
+branch is to isolate release work from the fluctuations of daily
+development, and to give the project a physical entity around which to
+organize its release process.  That process is described in detail in
+the next section.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="development-cycle.html">Tr&#432;&#7899;c &#273;ó</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Lên</a></td><td width="40%" align="right"> <a accesskey="n" href="stabilizing-a-release.html">K&#7871; ti&#7871;p</a></td></tr><tr><td width="40%" align="left" valign="top">Ch&#432;&#417;ng 7. &#272;óng gói, Phân ph&#7889;i và Phát tri&#7875;n hàng ngày </td><td width="20%" align="center"><a accesskey="h" href="index.html">&#272;&#7847;u</a></td><td width="40%" align="right" valign="top"> Stabilizing a Release</td></tr></table></div></body></html>

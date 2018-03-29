@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Rozdział 3. Infrastruktura techniczna</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Rozdział 3. Infrastruktura techniczna"><div class="titlepage"><div><div><h1 class="title"><a id="technical-infrastructure"/>Rozdział 3. Infrastruktura techniczna</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Projekty wolnego oprogramowania wykorzystują technologie wspierające
+gromadzenie i integrację informacji. Im więcej doświadczenia posiadasz w ich
+użyciu, i przekonywaniu do tego innych, tym większe szanse, że twój projekt
+będzie udany. Ta zasada jest tym ważniejsza, im bardziej projekt rośnie.
+Dobre zarządzanie informacjami sprawia, że projekt nie zapada się pod
+ciężarem prawa Brooksa<sup>[<a id="idp5961104" href="#ftn.idp5961104" class="footnote">12</a>]</sup>, które
+mówi, że dodanie ludzi do projektu programistycznego, który jest opóźniony,
+sprawia jedynie, że będzie on jeszcze bardziej opóźniony. Fred Brooks
+zauważył, że złożoność projektu zwiększa się z
+<span class="emphasis"><em>kwadratem</em></span> liczby uczestników. Gdy zaangażowanych jest
+jedynie kilka osób, każdy może porozumieć się z każdym, ale gdy nad
+projektem pracują setki osób, nikt nie jest w stanie ogarnąć tego, co robią
+wszyscy inni. Jeśli dobrym zarządzaniem wolnymi projektami nazwiemy takie,
+które sprawia, że wszyscy mają wrażenie wspólnej pracy w jednym pokoju,
+nasuwa się pytanie, co gdy w zatłoczonym pokoju wszyscy usiłują mówić w tym
+samym czasie?</p><p>To nie nowy problem. W dosłownie rozumianych zatłoczonych pokojach,
+rozwiązaniem jest <em class="firstterm">proces parlamentarny</em>: formalne
+wytyczne regulujące dyskusje w dużych grupach, uniemożliwiające zagubienie
+istotnych uwag w zalewie głupich komentarzy, opisujące jak tworzyć komisje,
+kiedy decyzje można uznać za podjęte, i tak dalej. Istotnym elementem
+procesu parlamentarnego jest ustalenie, jak grupa korzysta ze swojego
+systemu gromadzenia informacji. Niektóre uwagi są wpisywane "do stenogramu",
+inne nie. Sam zapis może ulec zmianie, nie jest traktowany jako dosłowny
+ślad tego, co się faktycznie wydarzyło, ale jako deklaracja tego, co
+wydarzyło się według <span class="emphasis"><em>decyzji</em></span> grupy. Taki zapis nie jest
+jednorodny, dla różnych celów przyjmuje różną postać. Mogą to być notatki z
+poszczególnych spotkań, zbiór notatek wszystkich spotkań, podsumowania,
+agendy i komentarze do nich, raporty komitetów, raporty od nieobecnych
+korespondentów, listy zadań, i tak dalej.</p><p>Tak naprawdę Internet to nie pokój, więc nie musimy matwić się o te
+elementy procesu parlamentarnego, które zapewniają ciszę, gdy inni mówią.
+Jednak gdy chodzi o techniki zarządzania informacjami, dobrze prowadzone
+projekty otwartego oprogramowania to "procedura parlamentarna na sterydach".
+Jako że praktycznie cała komunikacja w projektach wolnego oprogramowania
+odbywa się na piśmie, stworzone zostały skomplikowane systemy ułatwiające
+przekazywanie i etykietowanie informacji, minimalizowanie powtórzeń i
+niepotrzebnych rozbieżności, przechowywanie i odzyskiwanie danych,
+korygowanie złych i przestarzałych informacji, łączenie poszczególnych
+informacji pomiędzy sobą. Aktywni uczestnicy sami zdają sobie sprawę z
+użyteczności tych technik, i potrafią poradzić sobie z nimi ręcznie. Jednak
+na dłuższą metę jedyną drogą jest użycie odpowiedniego oprogramowania. Jeśli
+to tylko możliwe, samo medium wymiany informacji powinno zapewniać jej
+przekazywanie, etykietowanie czy rejestrowanie, i udostępniać informacje
+ludziom w najdogodniejszej dla nich postaci. W praktyce interwencja
+człowieka w tym procesie wciąż będzie czasem konieczna, a więc samo
+oprogramowanie powinno ułatwiać taką interwencję. Jednak w większości
+wypadków jeśli człowiek odpowiednio opisze informację wprowadzając ją do
+systemu, oprogramowanie powinno skorzystać z tych metadanych tak dobrze, jak
+to tylko możliwe.</p><p>Porady w tym rozdziale są mocno praktyczne, oparte na doświadczeniach
+z opisanym oprogramowaniem i różnymi scenariuszami użycia. Jednak głównym
+celem nie jest jedynie przekazanie pewnego zestawu technik. Chodzi także o
+wskazanie (na wielu małych przykładach) dobrego podejścia, który zachęci do
+skutecznego zarządzania informacjami w projekcie. To podejście składa się
+zarówno z umiejętności technicznych, jak i tych miękkich. Umiejętności
+techniczne są konieczne, ponieważ oprogramowanie do zarządzania informacjami
+zawsze wymaga konfiguracji, a także pewnego wysiłku w utrzymaniu i
+dostosowywaniu do nowych potrzeb (na przykład patrz dyskusja o tym, jak
+radzić sobie z wzrostem projektu w <a class="xref" href="ch03s04.html#bug-filtering" title="Pre-Filtering the Bug Tracker">„Pre-Filtering the Bug Tracker”</a><span> dalej w tym rozdziale</span>). Umiejętności miękkie są
+niezbędne, ponieważ ludzka społeczność także wymaga opieki. Nie zawsze
+oczywiste jest, jak w pełni wykorzystać stosowane narzędzia, a czasem
+projekty stosują sprzeczne konwencje (na przykład patrz dyskusja o nagłówku
+<code class="systemitem">Reply-to</code> w wiadomościach na listach dyskusyjnych, w
+<a class="xref" href="ch03s02.html" title="Listy dyskusyjne">„Listy dyskusyjne”</a>). Każdy uczestnik projektu powinien być
+zachęcany, w odpowiednim czasie i w odpowiedni sposób, do dbania o porządek
+w informacjach projektu. Im większe zaangażowanie uczestnika w projekt, tym
+bardziej złożonych i wyspecjalizowanych technik będzie musiał się
+nauczyć.</p><p>Zarządzanie informacjami to problem, na który nie ma podręcznikowej
+odpowiedzi. Występuje tu zbyt wiele zmiennych. Może się zdarzyć, że wszystko
+jest skonfigurowane tak, jak sobie tego życzysz, a większość społeczności
+współpracuje, ale rozwój projektu sprawi, że niektóre praktyki przestaną się
+skalować. W projekcie, którego wzrost osiągnął stabilny poziom, a
+programiści i użytkownicy przywykli do stosowanej infrastruktury, nowi
+uczestnicy mogą dziwić się, dlaczego nie stosuje się jakiegoś nowopowstałego
+systemu zarządzania informacjami. To obecnie dość powszechne zjawisko w
+projektach, które powstały przed wynalezieniem wiki (patrz <a class="ulink" href="http://en.wikipedia.org/wiki/Wiki">http://en.wikipedia.org/wiki/Wiki</a>). Odpowiedź na wiele pytań to
+sprawa względna, zależna od kompromisu pomiędzy wygodą tych, którzy
+wprowadzają informację, a tych, do których jest ona kierowana, lub pomiędzy
+czasem koniecznym na skonfigurowanie systemu zarządzania informacjami, a
+jego pożytkiem dla projektu.</p><p>Wystrzegaj się pokusy nadmiernej automatyzacji, czyli automatyzacji
+procesów, które w rzeczywistości wymagają ludzkiej uwagi. Infrastruktura
+techniczna jest istotna, ale tym co sprawia, że projekty wolnego
+oprogramowania żyją, jest troska ludzi w nie zaangażowanych. Infrastruktura
+techniczna powinna przede wszystkim być w tym pomocą dla człowieka.</p></div><div class="sect1" title="Czego projekt potrzebuje"><div class="titlepage"><div><div><h1 class="title"><a id="tools-needed"/>Czego projekt potrzebuje</h1></div></div></div><p>Większośc projektów otwartego oprogramowania posiada przynajmniej
+następujący minimalny, standardowy zestaw narzędzi zarządzania
+informacjami:</p><div class="variablelist"><dl><dt><span class="term">Strona WWW</span></dt><dd><p>To przede wszystki scentralizowany, jednokierunkowy kanał
+     przekazu informacji z projektu do opinii publicznej. Strona WWW może
+     też stanowić panel administracyjny dla pozostałych narzędzi
+     projektu.</p></dd><dt><span class="term">Listy dyskusyjne</span></dt><dd><p>Na ogół to najbardziej aktywne forum komunikacyjne projektu,
+       pełniące rolę "stenogramu".</p></dd><dt><span class="term">Kontrola wersji</span></dt><dd><p>Pozwala programistom na wygodne zarządzanie zmianami w kodzie,
+       włączając odwracanie zmian i ich "portowanie". Pozwala wszystkim
+       śledzić, co dzieje się w kodzie.</p></dd><dt><span class="term">Śledzenie błędów</span></dt><dd><p>Pozwala programistom śledzić nad czym akutualnie pracują,
+       koordynować się wzajemnie i planować wydania. Udostępnia wszystkim
+       informacje o stanie zgłoszeń i dodatkowych informacjach (np. jak
+       odtworzyć błąd) o nich. Może zostać wykorzystany do śledzenia nie
+       tylko błędów, ale i informacji o zadaniach, wydaniach, nowych
+       pomysłach, itd.</p></dd><dt><span class="term">Czat na żywo</span></dt><dd><p>Miejsce na szybkie, mniej istotne dyskusje oraz wymianę pytań i
+       odpowiedzi. Nie zawsze w pełni archiwizowane.</p></dd></dl></div><p>Każde narzędzie w tym zestawie zaspokaja inne potrzeby, ale ich
+działanie jest ze sobą powiązane, powinny więc dobrze za sobą współpracować.
+Poniżej opiszemy, jak tego dokonać i, co ważniejsze, jak zachęcić ludzi do
+korzystania z nich. Strona WWW zostanie omówiona na końcu, gdyż stanowi
+raczej klej dla wszystkich pozostałych elementów, niż narzędzie samo w
+sobie.</p><p>Można uniknąć wielu problemów z wyborem i konfiguracją tych narzędzi,
+korzystając z serwisów oferujących <em class="firstterm">pakiet hostingowy</em>:
+serwer z preinstalowanymi wszystkim narzędziami, przydatnymi w projekcie
+wolnego oprogramowania. Patrz
+<a class="xref" href="ch03s07.html#canned-hosting" title="Canned Hosting">„Canned Hosting”</a><span> dalej
+w tym rozdziale</span> aby poczytać o zaletach i wadach pakietów
+hostingowych.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp5961104" href="#idp5961104" class="para">12</a>] </sup>Z książki <em class="citetitle">Mityczny
+osobomiesiąc - eseje o inżynierii oprogramowania</em>, 1975. Patrz
+<a class="ulink" href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month">http://en.wikipedia.org/wiki/The_Mythical_Man-Month</a> i <a class="ulink" href="http://en.wikipedia.org/wiki/Brooks_Law">http://en.wikipedia.org/wiki/Brooks_Law</a>.</p></div></div></div></body></html>

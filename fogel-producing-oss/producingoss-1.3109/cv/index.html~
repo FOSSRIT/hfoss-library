@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Karl Fogel</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <link rev="made" href="mailto:kfogel@red-bean.com" />
+  <meta name="Author" content="Karl Fogel" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Resumé / Curriculum Vitae for Karl Fogel" />
+</head>
+
+<body>
+
+<script type="text/javascript">
+    <!-- Make sure we don't get stuck someone else's frameset. -->
+    if (top.location != self.location) {
+            top.location = self.location
+    }
+</script>
+
+<p class="announcement">I used to keep my résumé here, but now it's
+split it into different pages since I work in a few different areas.
+Please contact me if you have this obsolete link and you need a recent
+copy for a specific purpose.</p>
+
+<p style="text-align: center;">
+    <strong>Karl Fogel</strong><br/>
+    <a href="http://www.red-bean.com/kfogel/contact.html"
+      >kfogel&nbsp;&nbsp;{AT}&nbsp;&nbsp;producingoss.com</a><br/>
+    +1&nbsp;(773)&nbsp;351-1729<br/>
+    Personal home page: <a href="http://www.red-bean.com/kfogel/"
+                                           >red-bean.com/kfogel</a>
+</p>
+
+</body>
+</html>

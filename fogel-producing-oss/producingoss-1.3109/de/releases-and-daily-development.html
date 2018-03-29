@@ -1,0 +1,173 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Neue Versionen und tägliche Entwicklung</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><link rel="prev" href="release-lines.html" title="Wartung mehrerer Versionszweige"><link rel="next" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Neue Versionen und tägliche Entwicklung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="release-lines.html">Zurück</a> </td><th width="60%" align="center">Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</th><td width="20%" align="right"> <a accesskey="n" href="managing-volunteers.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Neue Versionen und tägliche Entwicklung"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="releases-and-daily-development"></a>Neue Versionen und tägliche Entwicklung</h2></div></div></div><p>Parallele Versionen gleichzeitig zu pflegen, hat Auswirkungen
+darauf, wie die tägliche Entwicklung vonstatten geht. Es macht
+insbesondere etwas praktisch zur Pflicht, was sowieso empfohlen wird:
+Jeder Commit sollte eine einzige logische Änderung sein, und nicht 
+zusammenhängende Änderungen sollten niemals in dem gleichen Commit
+gemacht werden. Wenn eine Änderung zu groß ist oder zu störend ist, um
+sie in einem Commit zu machen, verteilen Sie es über N Commits, wobei
+jeder Commit eine wohl aufgeteilte Untermenge der gesamten Änderung ist,
+und nichts beinhaltet, das keinen Bezug zu der Gesamtänderung hat.</p><p>Hier ist ein Beispiel eines schlecht überdachten Commit:</p><pre class="screen">
+------------------------------------------------------------------------
+r6228 | hmustermann | 2004-06-30 22:13:07 -0500 (Wed, 30 Jun 2004) | 8 Zeilen
+
+Fehler #1729 behoben: Sorge dafür, dass die Indexierung dem Nutzer
+elegant eine Warnung gibt, wenn eine Datei die sich ändert, indexiert
+wird.
+
+* ui/repl.py
+  (ChangingFile): Neue Ausnahme-Klasse. 
+  (DoIndex): Verarbeite die neue Ausnahme.
+
+* indexer/index.py
+  (FollowStream): Werfen einer neuen Ausnahme, wenn eine Datei sich
+  wärend der Indexierung ändert.
+  (BuildDir): In einem anderen Zusammenhang, Entfernung von veralteten
+  Komentaren, Neuformatierung vom Code, und Behebung der Fehlerprüfung
+  wenn ein Verzeichnis erzeugt wird.
+
+Andere nicht verwandte Aufräumarbeiten:
+
+* www/index.html: Ein paar Vertipper behoben, das Datum der nächsten
+Version gesetzt.
+------------------------------------------------------------------------
+</pre><p>Das Problem dabei wird offensichtlich, wenn jemand die Änderung
+der Fehlerprüfung in <code class="function">BuildDir</code> für einen bald 
+anstehende Micro-Version in einen anderen Zweig portieren muss. Der
+Portierende will nicht irgendwelche der anderen Änderungen &#8211; 
+vielleicht wurde der Fix für die Meldung #1729 überhaupt nicht für den
+Stabilen Zweig genemigt, und die Verbesserungen an <code class="filename">
+index.html</code> wären dort einfach irrelevant. Mittels der 
+Merge-Funktion kann er aber die Änderung an <code class="function">BuildDir</code>
+nicht einfach übernehmen, weil dem Versionsverwaltungssytem gesagt wurde,
+dass diese Änderung mit den anderen nicht zusammenhängenden Dingen 
+logisch gruppiert ist. Tatsächlich würde das Problem
+sogar vor dem Merge offensichtlich werden. Alleine schon die Auflistung
+der Änderung zur Abstimmung würde problematisch werden: statt nur die
+Revisionsnummer anzugeben, müsste der Antragsteller einen besonderen
+Patch oder Änderungszweig erstellen, nur um den Anteil der Änderung,
+welcher vorgeschlagen wird, zu isolieren. Das wäre eine Menge Arbeit,
+unter der die Anderen leiden müssten, und alles nur weil der 
+ursprüngliche Committer keine Lust hatte, die Änderungen logisch zu 
+gruppieren.</p><p>Dieser Commit hätte in Wirklichkeit sogar aus <span class="emphasis"><em>vier
+</em></span> einzelnen Commits bestehen sollen: Einen um den Fehler #1729 
+zu beheben, einen weiteren um die veralteten Komentare zu 
+entfernen und den Code in <code class="function">BuildDir</code> neu zu
+formatieren, noch einen für die Fehlerprüfung in <code class="function">BuildDir
+</code>, und zuletzt einen, um die Datei <code class="filename">index.html</code>
+zu überarbeiten.</p><p>Die Stabilisierung der neuen Version ist natürlich nicht der
+einzige Grund für den Wunsch danach, dass jeder Commit eine 
+einzige logische Änderung ist. Psychologisch ist ein semantisch 
+eindeitiger Commit leichter zu überprüfen und leichter
+rückgängig zu machen falls nötig (in manchen Versionsverwaltungsystemen
+ist sowieso eine besondere Art von Merge, wenn man etwas rückgängig
+macht). Etwas vorausschauende Disziplin der Beteiligten kann dem 
+Projekt später eine Menge Kopfschmerzen ersparen.</p><div class="sect2" title="Planung neuer Versionen"><div class="titlepage"><div><div><h3 class="title"><a name="planning"></a>Planung neuer Versionen</h3></div></div></div><p>Ein Bereich, in dem Open-Source-Projekte sich historisch von 
+proprietären Projekten 
+differenziert haben, ist die Planung neuer Versionen. Proprietäre
+Projekte haben gewöhnlich strengere Fristen. Manchmal weil einem
+Kunden zu einem bestimmten Datum ein Upgrade versprochen wurde, da die
+neue Version mit einer anderen Absicht aus Marketing-Gründen 
+koordiniert werden muss, oder weil die Risikokapitalgeber die in die
+ganze Sache investiert haben, Ergebnisse sehen müssen, bevor sie weitere
+Finanzierungsmittel hineinstecken. Freie Software-Projekte 
+hingegen waren bis zuletzt meistens durch Amateurhaftigkeit im
+wörtlichsten Sinne motiviert: Sie wurden aus Liebe geschrieben. Keiner
+hatte ein Drang, etwas zu veröffentlichen, bevor alle Funktionen fertig waren, 
+und warum sollten sie auch? Es war ja nicht so, dass hier der Arbeitsplatz
+von jemandem auf den Spiel stand.</p><p>Heutzutage werden viele Open-Source-Projekte durch Firmen
+finanziert, und werden entsprechen mehr und mehr durch fristbewusste
+Unternehmenskulturen beeinflusst. Das mag in vielerlei Hinsicht etwas
+Gutes sein, kann aber auch Konflikte verursachen zwischen den
+Prioritäten der Entwickler, die bezahlt werden, von denen der Entwickler,
+die ihre Zeit freiwillig investieren. Diese Konflikte kommen oft bei
+der Frage auf, wann und wie die neuen Versionen geplant werden. Die
+angestellten Entwickler, die unter Druck stehen, werden natürlich 
+einfach irgendein Datum wählen wollen, an dem die Veröffentlichung
+stattfinden soll, und alle anderen Aktivitäten entsprechend einordnen.
+Die freiwilligen Entwickler können jedoch andere Pläne haben &#8211; 
+vieleicht Funktionen, die sie fertig stellen wollen, oder Tests, die sie
+gemacht haben wollen &#8211; worauf ihrer Meinung nach die 
+Veröffentlichung warten soll.</p><p>Es gibt keine allgemeine Lösung für dieses Problem, außer 
+natürlich zu diskutieren und Kompromisse zu schließen. Sie können 
+jedoch den Grad und die Menge an Reibung die verursacht wird 
+minimieren, indem Sie die <span class="emphasis"><em>Existenz</em></span> der
+vorgeschlagenen Version von dem Datum entkoppeln, an dem sie
+veröffentlicht werden soll. Das heißt, versuchen Sie die Diskussion
+in Richtung des Themas zu lenken, welche Versionen das Projekt in der
+nächsten bis mittelfristigen Zeit machen wird, und welche Funktionen
+sie haben werden, zunächst ohne über Termine zu sprechen, abgesehen von
+groben Schätzungen mit einer Menge Spielraum. 
+<sup>[<a name="idp6046976" href="#ftn.idp6046976" class="footnote">39</a>]</sup>
+Indem Sie frühzeitig den
+Funktionsumfang festlegen, reduzieren Sie die Komplexität der Diskussion,
+die sich um irgend eine bestimmte Version dreht, und verbessern dadurch
+die Berechenbarkeit. Das verursacht auch eine Art träger Voreinstellung,
+auf Leute, die vorschlagen die Definition einer Version mit neuen
+Funktionen oder andere Komplikationen zu erweitern. Wenn der Inhalt der
+Version relativ gut definiert ist, obliegt die Rechtfertigungspflicht für
+Erweiterungen dem Vorschlagenden, auch wenn das Datum
+der Version noch nicht festgelegt wurde.</p><p>In seiner mehrbändigen Thomas-Jefferson-Biographie, 
+<em class="citetitle">Jefferson and His Time</em>, erzählt Dumas
+Malone die Geschichte, wie Jefferson das erste Treffen handhabte, 
+das abgehalten wurde, um über die Organization der zukunftigen
+Universität von Virginia zu entscheiden. Die Universität war von Anfang
+an die Idee von Jefferson gewesen, aber (wie es überall der Fall ist,
+nicht nur in Open-Source-Projekten) waren sehr schnell viele andere
+Parteien an Bord, jede mit eigenen Interessen und
+Anliegen. Als sie sich zu diesem ersten Treffen versammelten, um alles
+auszuarbeiten, erschien Jefferson mit minuziös vorbereiteten Bauplänen,
+detaillierten Budgets für die Konstruktion und den Betrieb, einem
+Lehrplanentwurf, und den Namen der einzelnen Fakultäten die
+er aus Europa importieren wollte. Kein anderer im Raum war nur
+annähernd so gut vorbereitet; die Gruppe musste im wesentlichen vor
+der Vision von Jefferson kapitulieren und die Universität wurde
+letztlich mehr oder weniger entsprechend seinen Plänen gegründet.
+Die Tatsachen, dass die Konstruktion weit über sein Budget ging, und
+viele seiner Ideen aus verschieden Gründen am Ende nicht 
+funktionierten, waren Dinge, von denen Jefferson wahrscheinlich
+anfangs genau wusste, dass sie passieren würden. Sein Vorhaben war
+strategisch: Bei der Versammlung mit etwas derart Stichhaltigem
+aufzutauchen, dass jeder ander in die Rolle verfallen müsste, lediglich
+Änderungen daran vorzuschlagen, damit die allgemeine Gestalt, und
+dadurch der Terminplan des Projekts, ungefähr so bliebe, wie er es
+wollte.</p><p>Im Falle eines freien Software-Projekts, gibt es kein einzelnes
+"Treffen", sondern stattdessen eine Reihe kleiner Vorschläge die
+meistens durch den Bugtracker gemacht werden. Wenn Sie aber von
+Anfang an etwas Ansehen im Projekt haben, und anfangen 
+verschiedene Funktionen, Verbesserungen, und Fehler für bestimmte
+Versionen im Bugtracker festzulegen, entsprechend irgend einem
+erklärten Gesamtplan, werden die Leute meistens mitmachen. Wenn Sie
+erst alles mehr oder weniger so ausgelegt haben, wie Sie es wollen,
+werden die Unterhaltungen über echte <span class="emphasis"><em>Termine</em></span> für
+neue Versionen sehr viel glatter verlaufen.</p><p>Es ist natürlich äußerst wichtig, dass Sie niemals irgend eine
+einzelne Entscheidung als in Stein gemeißelt präsentieren. Zeigen Sie
+in den Kommentaren anlässlich der Zuordnung von Bugs zu bestimmten 
+Versionen wenn möglich stets Bereitschaft zu Diskussionen,
+Meinungsverschiedenheiten und die allgemeine Bereitschaft, überredet zu
+werden. Üben Sie niemals Kontrolle alleine um ihrer
+Ausübung willen: Je mehr andere sich an der Planung einer neuen
+Version beteiligen (siehe <a class="xref" href="share-management.html" title="Teilen sie sowohl Verwaltungsaufgaben als auch technische Aufgaben">&#8222;Teilen sie sowohl Verwaltungsaufgaben als auch technische
+Aufgaben&#8220;</a>
+<span> im Kapitel <a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span>), desto leichter wird es
+sein sie zu überreden, Ihre Prioritäten bei Angelegenheiten zu teilen,
+die Ihnen wirklich wichtig sind.</p><p>Die andere Möglichkeit, Spannungen bei der Planung neuer Versionen
+des Projekts zu veringern ist, relativ häufig zu veröffentlichen.
+Wenn zwischen den Veröffentlichungen eine
+lange Zeit liegt, wird die Bedeutung von jeder einzenen in den Köpfen
+allern vergrößert; die Leute sind um so mehr betrübt, wenn ihr Code es
+nicht hinein schafft, weil sie wissen wie lange es dauern könnte, bis
+die nächste Gelegenheit kommt. Abhängig von der Komplexität des Ablaufs
+bei einer neuen Version und der Natur Ihres Projekts, liegt die 
+richtige Zeit zwischen den einzelnen Veröffentlichungen gewöhnlich
+irgendwo zwischen drei und sechs Monaten, obwohl in den Stabilen Zweigen
+Micro-Veröffentlichungen ein wenig schneller geschehen
+können, wenn dafür Bedarf besteht.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6046976" href="#idp6046976" class="para">39</a>] </sup>Einen alternativen Ansatz können Sie in Martin Michlmayrs
+Dr. phil. Dissertation nachlesen <em class="citetitle">Quality
+Improvement in Volunteer Free and Open Source Software Projects:
+Exploring the Impact of Release Management</em>
+(<a class="ulink" href="http://www.cyrius.com/publications/michlmayr-phd.html" target="_top">http://www.cyrius.com/publications/michlmayr-phd.html</a>).
+Sie behandelt einen zeitbasierten im Gegensatz zu einem Feature-basierten
+Herausgabe-Prozess für umfangreiche free Software-Projekte. Michlmayr 
+hielt auch einen Vortrag bei Google zu diesem Thema, verfügbar als Video unter
+<a class="ulink" href="http://video.google.com/videoplay?docid=-5503858974016723264" target="_top">http://video.google.com/videoplay?docid=-5503858974016723264</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="release-lines.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="managing-volunteers.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Wartung mehrerer Versionszweige </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Kapitel 8. Leitung von Freiwilligen</td></tr></table></div></body></html>

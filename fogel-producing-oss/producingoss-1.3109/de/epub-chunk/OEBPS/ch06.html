@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Kapitel 6. Kommunikation</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Kapitel 6. Kommunikation"><div class="titlepage"><div><div><h1 class="title"><a id="communications"/>Kapitel 6. Kommunikation</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Die Fähigkeit klar zu schreiben ist vielleicht die Wichtigste, die
+man in einer Open-Source-Umgebung haben kann. Auf lange Sicht ist sie 
+sogar wichtiger als Programmierbegabung. Ein sehr guter Programmierer
+mit schlechten Kommunikationsfähigkeiten kann nur eines nach dem
+anderen erledigen, und hat selbst dann vielleicht Schwierigkeiten, 
+andere zu überzeugen. Ein schlechter Programmierer, der aber gut
+kommuniziert, kann viele Leute koordinieren und überzeugen, viele
+verschiedene Dinge zu machen , und hat dadurch einen wesentlichen Einfluss
+auf die Richtung und Dynamik des Projekts.</p><p>Es scheint keinen großen Zusammenhang zu geben, in die eine oder andere
+Richtung, zwischen der Fähigkeit guten Code zu schreiben und der
+Fähigkeit mit seinen Mitmenschen zu kommunizieren. Es gibt einen
+gewissen Zusammenhang zwischen der Fähigkeit zu Programmieren und
+technische Angelegenheiten gut zu beschreiben, aber das ist nur ein
+winziger Teil der Kommunikation in einem Projekt. Viel wichtiger ist
+die Fähigkeit mit seinem Publikum einfühlsam umzugehen, seine 
+Nachrichten und Kommentare aus der Sicht anderer zu sehen, und andere
+dazu zu bringen ihre eigene Nachrichten mit einer ähnlichen 
+Objektivität zu sehen. Gleichermaßen ist es wichtig zu bemerken, wenn
+ein bestimmtes Nachrichtenmedium oder eine Kommunikationsmethode nicht
+mehr gut funktioniert, vielleicht weil es nicht mit einer zunehmenden 
+Anzahl an Nutzern skaliert, und sich dann die Zeit zu nehmen dagegen 
+etwas zu tun.</p><p>Hiervon ist alles in der Theorie offensichtlich – was in
+der Praxis schwierig macht, ist dass in Umgebungen der Entwicklung
+freier Software eine verblüffend viele verschiedene Mechanismen gibt,
+sowohl was das Publikum angeht als auch bei der Kommunikation. Soll
+eine gegebener Gedanke in einer E-Mail an den Verteiler verfasst
+werden, als Anmerkung in dem Bugtracker oder als Kommentar in dem
+Quellcode? Wenn man eine Frage in einem öffentlichem Forum
+beantwortet, wie viel Wissen kann man von "dem Lesenden" erwarten,
+vor dem Hintergrund das derjenige der die Frage gestellt hat nicht
+der einzige ist der die Rückmeldung lesen könnte? Wie können die
+Entwickler eine konstruktive Verbindung mit den Nutzern aufrecht
+erhalten, ohne von Anfragen für Funktionen, fälschliche Bug-Meldungen,
+und allgemeinem Geschwätz überschwemmt zu werden? Woran kann man
+erkennen, wann ein Medium die Grenzen seiner Kapazität erreicht hat,
+und was man dagegen machen kann?</p><p>Lösungen zu diesen Problemen sind für gewöhnlich nur Teillösungen,
+da jede bestimmte Lösung letztendlich durch Wachstum oder Änderungen
+an der Struktur des Projekts obsolet gemacht werden kann. Sie sind oftmals 
+auch <span class="foreignphrase"><em class="foreignphrase">ad hoc</em></span>, da sie improvisierte 
+Reaktionen auf dynamische Situationen sind. Alle Beteiligten müssen sich
+darüber im klaren sein, wann und wie Kommunikationen festgefahren werden
+können, und an Lösungen beteiligt sein. Leuten zu helfen das zu erreichen
+ist ein großer Teil der Verwaltung eines Open-Source-Projekts. Die folgenden
+Abschnitte handeln davon wie Sie Ihre eigene Kommunikation
+abwickeln, als auch wie Sie die Aufrechterhaltung der Kommunikationsmittel
+zur Priorität für alle im Projekt machen können.<sup>[<a id="idp8980240" href="#ftn.idp8980240" class="footnote">36</a>]</sup></p></div><div class="sect1" title="Du bist was du schreibst"><div class="titlepage"><div><div><h1 class="title"><a id="you-are-what-you-write"/>Du bist was du schreibst</h1></div></div></div><p>Bedenken Sie folgendes: Das einzige was irgend jemand über Sie
+im Internet weiß, kommt von dem was Sie schreiben, oder was andere
+über Sie schreiben. Es mag sein, dass Sie als Person geistreich, 
+scharfsinnig und charismatisch sind – wenn Ihre E-Mails aber
+ausschweifend und unstrukturiert sind, wird man von Ihnen annehmen,
+dass Sie wirklich so sind. Oder vielleicht sind Sie wirklich persönlich
+wirklich ausschweifend und unstrukturiert, aber keiner muss das je
+erfahren, wenn Ihre Nachrichten deutlich und informativ sind.</p><p>Ihrem Schreiben Mühe zu widmen kann sich in großem
+Maße auszahlen. Der langjährige Hacker an freier Software Jim Blandy
+erzählt folgende Geschichte:</p><div class="blockquote"><blockquote class="blockquote"><p>Damals 1993, arbeitete ich für die Free Software Foundation,
+  und wir machten gerade Beta-Tests der Version 19 von GNU Emacs.
+  Wir machten ungefähr jede Woche einen Release, und Leute probierten
+  es aus und reichten Bug-Meldungen bei uns ein. Es gab einen Kerl den
+  keiner von uns vorher persönlich getroffen hatte, der aber tolle 
+  Arbeit leistete: Seine Meldungen waren immer klar und brachten uns
+  direkt zum Problem, und wenn er selber einen Fix anbot, war er fast
+  immer richtig. Er war einfach erstklassig.</p><p>Bevor die FSF Code, der von jemand anderem geschrieben
+  wurde benutzen kann, lassen wir sie etwas Papierkram erledigen, um
+  ihre urheberrechtlichen Interessen an dem Code der FSF zuzuweisen.
+  Einfach den Code von komplett Fremden einzusetzen lädt geradezu auf
+  eine rechtliche Katastrophe ein.</p><p>Also sandte ich dem Kerl die Formulare per E-Mail zu und sagte
+  ihm: "Hier ist ein bisschen Papierkram den wir brauchen, es hat 
+  folgendes zu bedeuten, Du unterschreibst hier, dein Arbeitgeber den
+  hier, und dann können wir anfangen deine Fixes einzusetzen. Vielen
+  Dank."</p><p>Er sickte mir eine Antwort zurück, indem er sagte, "Ich habe
+  keinen Arbeitgeber."</p><p>Also sagte ich, "In Ordnung, das macht nichts, lass es einfach
+  von deiner Universität stempeln und schicke es zurück."</p><p>Nach einer gewissen Zeit, schrieb er mir wieder zurück und 
+  sagte, "Naja, eigentlich... bin ich dreizehn Jahre alt und lebe noch
+  bei meinen Eltern".</p></blockquote></div><p>Da der Junge nicht wie ein Dreizehnjähriger schrieb, wusste
+keiner, dass er einer war. Im Folgenden sind ein paar Möglichkeiten,
+mit denen Ihr Schriftverkehr auch einen guten Eindruck hinterlassen
+kann.</p><div class="sect2" title="Struktur und Formatierung"><div class="titlepage"><div><div><h2 class="title"><a id="structure-and-formatting"/>Struktur und Formatierung</h2></div></div></div><p>Tappen Sie nicht in die Falle alles so zu schreiben, als wäre es
+eine SMS. Schreiben Sie vollständige Sätze mit Punkt und Komma, und
+nutzen Sie wenn nötig einen Absatzwechsel. Am wichtigsten ist das bei 
+E-Mails und anderen ausformulierten Nachrichten. Im IRC oder anderen
+ähnliche flüchtigen Foren, ist es im allgemeinen in Ordnung wenn man
+nicht auf Groß- und Kleinschreibung achtet, sich komprimiert ausdrückt, usw.
+Achten Sie nur darauf, dass Sie diese Gewohnheiten nicht auf formalere,
+langlebigere Plattformen übertragen. E-Mails, Dokumentation, 
+Bug-Meldungen und andere Schriftstücke, für die eine längere Lebensdauer
+vorgesehen ist, sollten mit normaler Grammatik, Rechtschreibung
+und einer verständlichen Erzählstruktur geschrieben werden. Das heißt 
+nicht, dass es an und für sich gut wäre, irgendwelche
+Regeln zu befolgen, sondern dass diese Regeln eben 
+<span class="emphasis"><em>nicht</em></span> willkürlich sind: Sie haben sich zu ihrer
+heutigen Form entwickelt, weil sie Text lesbarer machen, und Sie sollten 
+sich aus diesem Grunde daran halten. Lesbarkeit ist nicht nur deshalb
+erwünscht, weil es mehr Menschen ermöglicht, Ihre Texte zu lesen, 
+sondern weil Sie sich damit als eine Person darstellen, die sich die
+Zeit nimmt, auf eine klare Art zu kommunizieren: sprich, jemand 
+der seinerseits Aufmerksamkeit verdient.</p><p>Insbesondere für E-Mail, haben sich erfahrene Open-Source-Entwickler
+auf folgende Konventionen geeinigt:</p><p>Schicken Sie E-Mails ausschließlich im Klartext, kein HTML,
+RichText, oder andere Formaten die nicht lesbar wären für 
+Mail-Programme die Klartext verarbeiten. Formatieren Sie Ihre Zeilen so,
+dass sie um die 72 Spalten breit sind. Überschreiten Sie nicht 80 Spalten,
+was <span class="foreignphrase"><em class="foreignphrase">de facto</em></span> zur Standardbreite für
+Terminals geworden ist (d.h. dass manche breitere Terminals benutzen
+werden, aber niemand schmalere). Indem Sie Ihre Zeilen
+auf etwas <span class="emphasis"><em>weniger</em></span> als 80 Spalten fassen, lassen
+Sie Platz für die Einfügung einige Stufen von Zitatkennzeichnungen in den
+Rückmeldungen anderer, ohne damit Zeilenumbrüche in Ihrem Text zu
+erzwingen.</p><p><span class="emphasis"><em>Benutzen Sie echte Zeilenumbrüche. </em></span>Manche
+Mail-Programme machen eine Art von scheinbarem Umbruch, bei dem Sie als
+Schreiber der E-Mail Zeilenumbrüche angezeigt bekommen, die nicht wirklich
+existieren. Wenn die E-Mail abgeschickt wird, kann es sein, dass sie nicht
+die Zeilenumbrüche aufweist, die Sie erwarten, und Ihr Text wird auf manchen 
+Bildschirmen an den unmöglichsten Stellen umgebrochen werden. Wenn Ihr 
+Mail-Programm solche Schein-Umbrüche bietet, suchen Sie nach der
+Einstellung, bei der Sie die echten Zeilenumbrüche sehen, während 
+Sie E-Mails verfassen.</p><p>Wenn Sie Bildschirm-Ausgaben, Code-Abschnitte, oder anderen
+vorformatierten Text mit einbeziehen, setzen Sie diese eindeutig von dem
+Rest Ihres Textes ab, sodass selbst ein träges Auge leicht die
+Grenzen zwischen dem was Sie schreiben und dem was Sie zitieren 
+erkennen können. (Ich hätte nie erwartet, je diesen Ratschlag zu schreiben,
+als ich mit diesem Buch anfing, ich habe aber eine gewisse Anzahl an 
+Open-Source-Malinglisten gesehen, auf denen Leute Texte aus
+verschiedenen Quellen miteinander vermischen, ohne klarzustellen, was
+was ist. Die Auswirkungen sind sehr frustrierend. Es macht ihre
+Nachrichten wesentlich schwerer zu verstehen, und offen gesagt lässt
+es diese Personen auch ein wenig schlecht organisiert aussehen.)</p><p>
+Wenn Sie E-Mails von anderen zitieren, fügen Sie Ihre 
+Stellungnahmen dort ein, wo sie am ehesten angemessen sind, an 
+verschiedenen Stellen falls nötig, und schneiden Sie die Teile heraus,
+die Sie nicht verwendet haben. Wenn Sie einen kurzen Kommentar
+schreiben, welcher sich auf die ganze vorherige E-Mail bezieht,
+ist es in Ordnung einen <em class="firstterm">top-post</em> zu machen
+(also Ihren Kommentar über den zitierten Text zu stellen); 
+ansonsten sollten Sie die relevanten Stellen des ursprünglichen
+Texts zitieren, gefolgt von Ihrer Rückmeldung.</p><p>
+Verfassen Sie die Betreff-Zeilen neuer E-Mails mit Sorgfalt.
+Es ist die wichtigste Zeile in Ihrer E-Mail, da es jeder anderen Person
+im Projekt erlaubt, zu entscheiden, ob sie mehr lesen soll oder nicht.
+Moderne Mailprogramme ordnen zusammenhängende E-Mails in Threads, die
+nicht nur durch die Überschrift definiert sein können, sondern auch 
+durch andere E-Mail-Header (welche manchmal nicht angezeigt werden).
+Daraus folgt, dass wenn das Thema des Threads zu sehr abschweift, Sie die
+Überschriften Ihrer E-Mails entsprechend anpassen können – und 
+sollten – wenn Sie antworten. Der Thread wird durch die anderen
+Header intakt bleiben, die neue Überschrift wird Leuten, die auf die
+Übersicht des Threads schauen, aber helfen zu erkennen, dass das Thema
+sich geändert hat. Genauso sollten Sie, wenn Sie wirklich ein neues
+Thema anreißen wollen, eine frische E-Mail schreiben, und nicht auf eine
+bereits vorliegende antworten, indem Sie die Überschrift ändern. 
+Ansonsten würde Ihre neue E-Mail in denselben Thread einsortiert werden,
+aus dem heraus Sie antworten, und dadurch Leuten vormachen, es ginge um
+etwas, um das es tatsächlich nicht geht. Wieder wäre die Strafe nicht 
+allein eine Verschwendung ihrer Zeit, sondern auch ein kleiner Kratzer
+in Ihrer Glaubwürdigkeit als jemand, der sicher im Umgang mit
+Kommunikationsmitteln ist.</p></div><div class="sect2" title="Inhalt"><div class="titlepage"><div><div><h2 class="title"><a id="writing-content"/>Inhalt</h2></div></div></div><p>Wohlformatierte E-Mails locken Leser an, aber erst Inhalte fesseln sie. 
+Natürlich kann kein Satz festgelegter Richtlinien für guten Inhalt
+garantieren, es gibt aber ein paar Prinzipien die ihn etwas 
+wahrscheinlicher machen.</p><p>Machen Sie Ihren Lesern die Sache leicht. Es gibt Unmengen an
+Information die in jedem beliebigen aktiven Open-Source-Projekt 
+herumschwirren, Sie können nicht erwarten dass Ihre Lesern mit den 
+meisten davon vertraut wären – tatsächlich können Sie von Ihren
+Lesern auch nicht erwarten, dass sie wüssten, wie sie sich über diese 
+Dingen informieren können. Wo immer möglich, 
+sollten Ihre Nachrichten Informationen so bereit 
+stellen, wie es für die Leser am bequemsten ist. Wenn Sie zwei 
+zusätzliche Minuten damit verbringen müssen, die URL zu einem 
+bestimmten Thread aus den Archiven der Mailingliste heraus zu graben, um
+es den Lesern Ihrer E-Mail zu ersparen, ist es das wert. Wenn Sie
+5 bis 10 zusätzliche Minuten damit verbringen, die Ergebnisse eines
+komplexen Threads zusammen zu fassen, um Leuten einen Kontext zu geben,
+in dem sie Ihre Nachricht verstehen können, dann tun Sie das. Sehen
+Sie es einmal so: Je erfolgreicher ein Projekt ist, desto höher ist 
+das Leser/Autoren-Verhältnis, egal auf welcher Plattform. Wenn jede
+Nachricht von Ihnen <span class="emphasis"><em>n</em></span> Personen gelesen
+wird, dann wird bei zunehmendem <span class="emphasis"><em>n</em></span> der Wert zunehmen, 
+sich dem zusätzlichen Zeitaufwand auszusetzen, um ihn anderen zu ersparen.
+Und wenn die Leute sehen, dass Sie sich selbst diese Regeln auferlegen,
+werden sie ihre eigene Kommunikationen dem anpassen. Das Ergebnis ist
+im Idealfall eine Zunahme der allgemeinen Effizienz des Projekts:
+Wenn es die Wahl gibt zwischen dem Aufwand von <span class="emphasis"><em>n</em></span>
+Personen und dem einer Person, wird das Projekt letzteren vorziehen.</p><p>Meiden sie Übertreibungen. Hochspielungen in Online-Nachrichten ist
+ein klassischer Fall von Wettrüsten. Zum Beispiel könnte eine Person,
+die einen Bug meldet, glauben, dass die Entwickler diesem nicht
+genügend Aufmerksamkeit aufbringen werden, und so wird sie den Bug als
+schwerwiegenden Fehler beschreiben, ein Problem welches sie
+(und all ihre Freunde/Mitarbeiter/Verwandte) daran hindert die
+Software produktiv zu nutzen, obwohl es in Wirklichkeit nur ein kleines
+Ärgernis ist. Übertreibungen beschränken sich aber nicht nur auf die
+Nutzer – Programmierer machen bei technischen Diskussionen oft das
+Gleiche, insbesondere wenn sich die Auseinandersetzung mehr um eine
+Geschmackssache dreht als um Korrektheit:</p><div class="blockquote"><blockquote class="blockquote"><p>"Das zu machen, würde den Code völlig unlesbar machen. Ihn
+	zu warten, würde zu einem Albtraum, im Vergleich dem Vorschlag
+	von H. Mustermann..."</p></blockquote></div><p>Der gleiche Gedanke wird sogar <span class="emphasis"><em>stärker</em></span> wenn
+man ihn weniger scharf formuliert:</p><div class="blockquote"><blockquote class="blockquote"><p>"Das geht, aber ich denke es ist bezüglich Lesbarkeit
+	und Wartbarkeit nicht so optimal. Der Vorschlag von
+	H. Mustermann vermeidet diese Probleme, da hier..."</p></blockquote></div><p>Sie werden Übertreibungen nicht völlig vermeiden können, und im
+Allgemeinen ist das auch nicht nötig. Im Vergleich zu anderen Formen
+der Fehlkommunikation, ist Übertreiben nicht für die Allgemeinheit
+schädlich – es schadet hauptsächlich den Ausübenden. Die Empfänger
+können kompensieren, es ist nur dass der Sender mit jeder Nachricht
+ein wenig an Glaubwürdigkeit verliert. Sie sollten deshalb im 
+Interesse von Ihrem Einfluss im Projekt versuchen in die moderatere
+Richtung zu gehen. Auf diese Art werden Leute Sie ernst nehmen, wenn Sie <span class="emphasis"><em>wirklich</em></span> einen wichtigen Hinweis machen müssen.</p><p>Bearbeiten Sie zwei mal. Bei jeder Nachricht, die länger ist als
+ein mittellanger Absatz, sollten Sie, nachdem Sie der Meinung sind, dass
+sie fertig ist, diese von oben bis unten erneut durchlesen, bevor Sie sie
+versenden. Dieser Ratschlag wird jedem bekannt vorkommen, der einmal
+an einem Schreibkurs teilgenommen hat, ist aber bei Online-Diskussionen
+besonders wichtig. Da das Verfassen von Online-Nachrichten
+von ständigen Unterbrechungen begleitet wird (während Sie schreiben,
+müssen Sie vielleicht in andere E-Mails nachschauen, bestimmte Webseiten
+besuchen, einen Befehl ausführen, um Diagnosmeldungen abzugreifen, usw.),
+passiert es besonders schnell, dass man den erzählerischen Faden verliert.
+Nachrichten, die mit Unterbrechungen verfasst und vor dem
+Versenden nicht überprüft wurden, sind, zum Verdruss der Autoren
+(möchte man zumindest hoffen), oft als solche erkennen. Nehmen Sie sich
+die Zeit zu überprüfen, was Sie abschicken. Je besser der 
+strukturelle Zusammenhalt Ihrer Nachrichten, desto mehr werden Sie
+gelesen.</p></div><div class="sect2" title="Tonfall"><div class="titlepage"><div><div><h2 class="title"><a id="writing-tone"/>Tonfall</h2></div></div></div><p>Nachdem Sie tausende Nachrichten geschrieben haben, werden Sie
+bemerken, dass Ihr Schreibstil zum knappen neigt. Das scheint in
+den meisten technischen Foren der Normalfall zu sein, und an und gibt
+es daran nichts falsches. Ein Grad an Knappheit, welcher im normalen
+sozialen Umgang unzumutbar wäre ist für Hacker freier Software einfach
+der Standard. Hier ist eine vollständig zitierte Reaktion, welche ich
+einmal von einem Mailverteiler über freie Content-Management-Software
+erhielt:</p><pre class="screen">
+Können Sie möglicherweise etwas näher auf die Probleme auf die Sie 
+gestoßen sind, usw. eingehen? 
+
+Desweiteren:
+
+Welche Version von Slash benutzen Sie? Das konnte ich aus Ihrer
+ursprünglichen Nachricht nicht erkennen.
+
+Wie genau haben Sie den Build des apache/mod_perl-Quellcode ausgeführt?
+
+Haben Sie den Apache-2.0-Patch ausprobiert, über den auf slashcode.com
+berichtet wurde?
+
+  Shane
+</pre><p><span class="emphasis"><em>Das</em></span> ist jetzt mal knapp! Keine Begrüßung, 
+abgesehen vom Namen keine Abmeldung, und die Nachricht selbst ist 
+lediglich eine Aneinanderreihung von Fragen die so kompakt wie
+möglich formuliert sind. Sein einziger Satz mit einer Aussage war eine
+implizite Kritik an meine ursprüngliche Nachricht. Trotzdem war ich
+glücklich darüber die Nachricht von Shane zu sehen, und ich fasste
+die Knappheit seiner Antwort nicht als ein Anzeichen für irgend etwas
+anderes als das er eine beschäftigte Person ist. Alleine die Tatsache,
+dass er Fragen stellte, anstatt meine Nachricht zu ignorieren 
+bedeutete, dass er bereit war etwas Zeit für meinem Problem 
+aufzubringen.</p><p>Werden alle Leser auf diesen Schreibstil positiv reagieren? 
+Nicht unbedingt; es kommt auf die Person und den Kontext an. Wenn
+Jemand zum Beispiel eben erst geschrieben hat das sie einen Fehler
+gemacht hat (vielleicht hat sie einen Bug geschrieben), und Sie aus
+vergangener Erfahrung wissen, dass diese Person dazu neigt etwas
+Unsicher zu sein, auch wenn Sie trotzdem noch eine knappe Antwort
+schreiben, sollten Sie es durch etwas aufwiegen was ihre Gefühle
+anerkennt. Der größte Teil Ihrer Antwort mag kurz gehalten sein,
+eine Analyse der Situation aus Sicht eines Ingenieurs, so kurz wie
+Sie wollen. Melden Sie sich aber zum Schluss mit etwas ab, dass es
+nicht als Kälte aufgefasst werden soll. Wenn Sie zum Beispiel der
+Person eben erst eine Unmenge an Ratschläge gegeben haben wie sie
+einen Bug beheben soll, dann melden Sie sich mit "Viel Glück, &lt;hier
+Ihr Name&gt;" um anzudeuten, dass Sie ihnen gutes wünschen und nicht
+Sauer sind. Ein strategisch platzierter Smiley oder ein anderer 
+Hinweis auf die Gefühlslage kann oft auch ausreichen um den 
+Gesprächspartner zu beruhigen.</p><p>Es mag komisch erscheinen derart auf die Gefühle des Beteiligten
+zu achten, als darauf was sie sagen, aber um es kahl zu sagen, 
+beeinflussen Gefühle die Produktivität. Gefühle sind auch aus anderen
+Gründen wichtig, selbst wenn wir uns aber ausschließlich auf nutzungsbezogene 
+Gebiete zu beschränken, können wir anmerken, dass unglückliche Menschen
+schlechtere Software schreiben, und weniger davon. Angesichts der 
+begrenzten Natur der meisten elektronischen Medien, wird es jedoch
+keinen offensichtlichen Hinweis darauf geben, in welcher
+Stimmung sich die Person befindet. Sie werden eine wohlbegründete 
+Vermutung darüber anstellen müssen basierend auf a) wie die meisten
+Menschen sich in einer solchen Situation fühlen, und b) was Sie über
+diese Person aus vergangenen Dialogen wissen. Manche Menschen
+bevorzugen eine eher unpersönliche Einstellung, und behandeln all
+gleichermaßen nach ihrer oberflächlichen Erscheinung, wobei die Idee
+die dahintersteckt ist, dass wenn die Beteiligte nicht offen sagt,
+dass sie sich irgendwie fühlt, hat man kein Recht sie so zu behandeln
+als ob das der Fall wäre. Ich mag diese Herangehensweise aus mehreren
+Gründen nicht. Erstens, verhalten sich Menschen im echten Leben nicht
+so, also warum sollten Sie es online machen? Zweitens, da die meisten
+Interaktionen in öffentlichen Foren stattfinden, neigen Leute dazu
+sich noch mehr zurück zu halten als das im privaten der Fall wäre.
+Um es genauer zu sagen, sie sind oft bereit auf andere gerichtete
+Gefühle auszudrücken, wie Dankbarkeit oder Unmut, nicht jedoch nach
+innen gerichtete Gefühle wie Unsicherheit oder Stolz. Trotzdem
+arbeiten die meisten Menschen besser, wenn sie wissen, dass andere
+über ihre Verfassung im klaren sind. Indem Sie auf kleine Hinweise
+achten, können Sie die meiste Zeit für gewöhnlich richtig raten,
+und andere Personen motivieren weiterhin in größerem Maße beteiligt zu
+bleiben als es sonst der Fall wäre.</p><p>Damit meine ich natürlich nicht, dass Sie die Rolle des
+Gruppentherapeuten einnehmen sollen, der andauernd jeden dabei helfen
+soll, sich über seine Gefühle im klaren zu sein. Indem Sie aber 
+sorgfältig auf Muster im langfristigen Verhalten von Personen achten,
+werden Sie ein Gespür für sie als Individuen bekommen, selbst wenn Sie
+nie von Angesicht zu Angesicht treffen. Und indem Sie auf den Ton Ihrer
+Nachrichten achten, können Sie einen überraschenden Einfluss darauf 
+haben wie sich andere fühlen, was letztendlich dem Projekt zugute 
+kommt.</p></div><div class="sect2" title="Unhöflichkeiten erkennen"><div class="titlepage"><div><div><h2 class="title"><a id="rudeness"/>Unhöflichkeiten erkennen</h2></div></div></div><p>Eine der bestimmenden Eigenschaften der Open-Source-Kultur ist
+ihre ausgeprägte Auffassung darüber, was unhöflich ist und was nicht.
+Obwohl die unten beschriebenen Grundsätze nicht alleine für die
+Entwicklung freier Software gelten, oder auch für Software im 
+allgemeinen – sie wären jedem bekannt der im Bereich der Mathematik,
+der technischen Wissenschaften oder im Ingenieurswesen arbeitet – 
+ist freie Software, mit seinen offenen Grenzen und ständigen Fluss an 
+Einwanderern, eine Umgebung in der diese Grundsätze besonders häufig von 
+Personen begegnet wird, die mit Ihnen nicht vertraut sind.</p><p>Lass uns damit anfangen, was <span class="emphasis"><em>nicht</em></span>
+unhöflich ist:</p><p>Technische Kritik, selbst direkte und ungepolsterte ist nicht
+unhöflich. Es kann sogar eine Art von Kompliment sein: Der Kritiker
+sagt implizit, dass die Zielperson es wert ist ernst genommen zu
+werden und Zeit mit auf zu bringen. Das heißt, je attraktiver es
+gewesen wäre die Nachricht von jemand zu ignorieren, desto eher ist es
+ein Kompliment sich die Zeit zu nehmen es zu kritisieren (natürlich
+ausgeschlossen ist wenn die Kritik zu einem persönlichen Angriff 
+oder einer anderen Form von Unhöflichkeit verfällt).</p><p>Knappe, ungeschminkte Fragen, wie die in der vorhin zitierten
+E-Mail von Shane an mich, sind auch nicht unhöflich. Fragen die in einem
+anderen Kontext kalt oder rhetorisch, selbst verspottend erscheinen
+könnten, sind oft ernst gemeint, und haben keinen Hintergedanken außer
+die Informationen so schnell wie möglich zu herauszulocken. Die
+berühmte Frage vom technischen Support "Ist Ihr Computer angeschlossen?"
+ist ein klassisches Beispiel hierfür. Die Person von Support muss
+wirklich wissen, ob Ihr Computer angeschlossen ist, und nach den ersten
+paar Tagen bei dieser Arbeit, ist sie müde geworden höflichen 
+Schmeicheleien ihren Fragen voranzustellen ("Entschuldigen Sie, ich
+möchte lediglich vorher ein paar einfache Fragen stellen, um ein paar
+Möglichkeiten aus dem Weg zu räumen. Manche davon mögen sich ziemlich
+einfach anhören, haben Sie aber bitte Nachsicht..."). Mittlerweile
+macht sie sich aber nicht mehr die Mühe mit der Höflichkeit, sie fragt
+einfach gerade heraus: Ist es angeschlossen oder nicht? Die gleichen 
+Fragen werden andauernd auf den Mailverteilern freier Software 
+gestellt. Die Absicht ist nicht, den Empfänger zu beleidigen, sondern
+schnell einige der offensichtlichsten (und möglicherweise häufigsten)
+Erklärungen auszuschließen. Empfänger die das verstehen und entsprechend 
+reagieren gewinnen Pluspunkte eine aufgeschlossene Sicht
+ohne Widerrede eingenommen zu haben. Es ist einfach ein 
+Aufeinandertreffen verschiedener Kulturen, und nicht die Schuld von
+irgendjemandem. Erklären Sie freundlich, dass Ihre Frage (oder Kritik)
+keine versteckte Bedeutung hatte; es war lediglich gedacht die
+Information so schnell und effizient wie möglich zu bekommen (oder
+übertragen) und sonst nichts.</p><p>Was ist als Unhöflich?</p><p>Nach dem gleichen Prinzip mit der detaillierte technische Kritik
+als Kompliment aufgefasst werden kann, kann das Weglassen von
+hochwertiger Kritik eine Art von Beleidigung bedeuten. Ich meine nicht 
+nur die Arbeit von jemandem zu ignorieren, sei es ein Vorschlag, eine Änderung
+am Code oder ein die Meldung von einem Issue oder sonst etwas. Wenn Sie
+nicht vorher explizit eine detaillierte Antwort versprochen haben, ist
+es gewöhnlich in Ordnung einfach überhaupt nicht zu reagieren. Man wird
+annehmen, dass Sie einfach keine Zeit hatten etwas zu sagen. Wenn Sie
+aber <span class="emphasis"><em>doch</em></span> eine Antwort geben, sollten Sie nicht knausern:
+nehmen Sie sich die Zeit die Sachen wirklich zu untersuchen, geben Sie
+konkrete Beispiele an wo angemessen, wühlen Sie in den Archiven herum
+um verwandte Nachrichten zu finden, usw. Oder wenn Sie nicht die Zeit
+haben eine solche Mühe aufzubringen, aber trotzdem irgend eine kurze
+Antwort geben müssen, dann erklären Sie den Defizit offen in Ihrer
+Nachricht ("Entschuldigung, ich denke es gibt hierzu eine Meldung, 
+hatte aber leider nicht die Zeit um danach zu suchen"). Die Hauptsache
+ist die kulturelle Norm anzuerkennen, entweder indem man sie erfüllt,
+oder offen zuzugeben, dass man ihr dieses mal nicht gerecht geworden
+ist. In beiden Fällen wird die Norm verstärkt. Der Norm aber nicht
+gerecht zu werden und gleichzeitig nicht zu erklären <span class="emphasis"><em>warum
+</em></span>, Sie es nicht geschafft haben Ihnen gerecht zu werden,
+ist das gleiche, als ob Sie sagen würden, dass das Thema (und die
+daran Beteiligten) nicht viel Ihrer Zeit wert war. Es ist besser zu
+zeigen, dass Ihre Zeit wertvoll ist, indem Sie sich kurz halten als
+indem Sie faul sind.</p><p>Es gibt viele andere Formen der Unhöflichkeit, die nicht nur
+auf Open Source Entwicklung zutrifft und der gesunde Menschenverstand 
+hilft in der Regel sie zu vermeiden. Siehe auch
+<a class="xref" href="ch02s03.html#prevent-rudeness" title="Unhöflichkeit im Keim ersticken">„Unhöflichkeit im Keim ersticken“</a><span> im Kapitel
+<a class="xref" href="ch02.html" title="Kapitel 2. Der Einstieg">Kapitel 2, <em>Der Einstieg</em></a></span>, wenn Sie es noch nicht
+gemacht haben.</p></div><div class="sect2" title="Gesicht zeigen"><div class="titlepage"><div><div><h2 class="title"><a id="face"/>Gesicht zeigen</h2></div></div></div><p>Es gibt einen Bereich im menschlichen Gehirn, der speziell
+der Erkennung von Gesichtern gewidmet ist. Es wird als "fusiformes 
+Gesichtsareal" (en. fusiform face area) bezeichnet und seine
+Fähigkeiten sind größtenteils angeboren und nicht angelernt. Es hat
+sich herausgestellt, dass die Erkennung von Gesichtern eine derart
+wichtige Fähigkeit ist um zu überleben, dass wir spezielle Hardware
+dafür entwickelt haben.</p><p>Internet basierende Zusammenarbeit ist deshalb psychologisch 
+etwas merkwürdig, da es eine enge Mitarbeit zwischen Menschen 
+erfordert, die fast nie die Gelegenheit bekommen sich gegenseitig mit den
+intuitivsten Methoden zu identifizieren: erstens durch Gesichter,
+aber auch durch Stimme, Haltung, usw. Um das zu kompensieren, sollten
+Sie versuchen, überall den selben <em class="firstterm">Bildschirm-Namen
+</em> verwenden. Es sollte der vordere Teil Ihrer E-Mail-Adresse
+sein (der Teil vor dem @-Zeichen), Ihr Nutzername im IRC,
+der Name Ihres Kontos im Projektarchiv, im Bug Tracker usw. Dieser
+Name ist Ihr online "Gesicht": Ein Kürzel um Sie zu identifizieren,
+welches manche der gleichen Funktionen erfüllt wie Ihr Gesicht,
+auch wenn es leider nicht die eingebaute Hardware im Gehirn anregt.
+</p><p>Der Bildschirm-Name sollte eine intuitive Permutation Ihres
+echten Namens sein (meiner, zum Beispiel ist "kfogel"). In manchen
+Situationen wird es sowieso von Ihrem kompletten Namen begleitet,
+zum Beispiel im Kopf einer E-Mail:</p><pre class="screen">
+Von: "Karl Fogel" &lt;kfogel@irgendeinedomain.com&gt;
+</pre><p>Tatsächlich gibt es zwei Sachen in dem Beispiel auf die man
+achten sollte. Wie vorhin erwähnt, gleicht der Bildschirm-Name dem 
+echten auf eine intuitive Art. Der echte Name ist aber auch 
+<span class="emphasis"><em>echt</em></span>. Also kein erfundener wie:</p><pre class="screen">
+Von: "Super Hacker" &lt;superhacker@irgendeinedomain.com&gt;
+</pre><p>Es gibt einen berühmten Cartoon von Paul Steiner, in der Ausgabe vom
+5 Juli 1993 der Zeitung <em class="citetitle">The New Yorker</em>, welches
+einen Hund an einem Terminal zeigt, der zu einem anderen 
+verschwörerisch herunterschaut und sagt: "Im Internet weiß keiner, dass
+du ein Hund bist". Diese Denkart ist es wahrscheinlich, die hinter
+einer Vielzahl an selbstverherrlichenden soll-wohl-cool-sein 
+Online-Identitäten liegen, die Leute sich selber geben – als ob 
+die Leute glauben würden man wäre <span class="emphasis"><em>tatsächlich</em></span> 
+ein toller Hacker wenn man sich "Super Hacker" nennt. Tatsache bleibt
+aber: Selbst wenn keiner weiß das Sie ein Hund sind, sind Sie immer
+noch ein Hund. Eine glorreiche Online-Identität beeindruckt nie die
+Leser. Statt dessen gibt es ihnen den Eindruck, als würden Sie eher
+auf das Erscheinungsbild achten als auf den Inhalt, oder dass Sie 
+einfach nur unsicher sind. Benutzen Sie Ihren echten Namen für alle
+Dialoge, oder wenn Sie aus irgend einem Grund anonym bleiben müssen,
+dann erfinden Sie einen Namen der sich wie ein gewöhnlicher anhört 
+und bleiben Sie ab da bei ihm.</p><p>Es gibt noch ein paar weitere Sachen die Sie machen können um
+Ihr Online-Gesicht attraktiver zu machen, abgesehen davon, dass Sie es
+konsistent halten. Wenn Sie einen Titel haben (wie "Doktor" oder 
+"Professor"), sollten Sie nicht mit Ihm herum stolzieren, oder auch nur
+erwähnen, außer wenn es direkt für die Diskussion bedeutend ist. Im
+Allgemeinen neigt die Kultur von Hacker und der freien Software dazu,
+das vorzeigen von Titel als etwas ausschließendes und ein Zeichen von
+Unsicherheit zu betrachten. Es ist in Ordnung wenn Ihr Titel als Teil
+Ihrer Signatur am ende jeder E-Mail die Sie abschicken erscheint,
+benutzen Sie es jedoch niemals als um Ihre Position in einer Diskussion
+zu verstärken – der Versuch wird garantiert zurückschlagen. Sie
+wollen, dass man die Person respektiert, nicht den Titel.</p><p>Wo wir gerade von Signaturen sprechen: halten Sie sie kurz und
+geschmackvoll, oder lassen Sie sie besser gleich weg. Vermeiden Sie
+lange rechtliche Klausel für den Haftungsausschluss die an jede E-Mail
+angehängt werden, insbesondere wenn Sie eine Stimmung ausdrücken die
+nicht mit der Beteiligung an einem freien Software-Projekt vereinbar
+sind. Der folgende Klassiker dieser Gattung erscheint zum Beispiel am
+Ende jeder Nachricht von einem bestimmten Nutzer auf einem 
+öffentlichen Verteiler bei dem ich angemeldet bin:</p><pre class="screen">
+WICHTIGER HINWEIS
+
+Wenn Sie diese E-Mail fehlerhafterweise erhalten haben oder den
+Haftungsausschluss unserer E-Mails lesen wollen, wenden Sie sich bitte
+an die folgende Erklärung under nehmen Sie mit dem Absender Kontakt
+auf.
+
+This communication is from Deloitte &amp; Touche LLP.  Deloitte &amp;
+Touche LLP is a limited liability partnership registered in England
+and Wales with registered number OC303675.  A list of members' names
+is available for inspection at Stonecutter Court, 1 Stonecutter
+Street, London EC4A 4TR, United Kingdom, the firm's principal place of
+business and registered office.  Deloitte &amp; Touche LLP is
+authorised and regulated by the Financial Services Authority.
+
+This communication and any attachments contain information which is
+confidential and may also be privileged.  It is for the exclusive use
+of the intended recipient(s).  If you are not the intended
+recipient(s) please note that any form of disclosure, distribution,
+copying or use of this communication or the information in it or in
+any attachments is strictly prohibited and may be unlawful.  If you
+have received this communication in error, please return it with the
+title "received in error" to IT.SECURITY.UK@deloitte.co.uk then delete
+the email and destroy any copies of it.
+
+E-mail communications cannot be guaranteed to be secure or error free,
+as information could be intercepted, corrupted, amended, lost,
+destroyed, arrive late or incomplete, or contain viruses.  We do not
+accept liability for any such matters or their consequences.  Anyone
+who communicates with us by e-mail is taken to accept the risks in
+doing so.
+
+When addressed to our clients, any opinions or advice contained in
+this e-mail and any attachments are subject to the terms and
+conditions expressed in the governing Deloitte &amp; Touche LLP client
+engagement letter.
+
+Opinions, conclusions and other information in this e-mail and any
+attachments which do not relate to the official business of the firm
+are neither given nor endorsed by it.
+</pre><p>Für jemanden der lediglich ab und an ein paar Fragen stellen möchte,
+erscheint dieser riesige Haftungsausschluss etwas albern aber verursacht 
+wahrscheinlich keinen dauerhaften Schaden. Wenn diese Person sich
+jedoch aktiv an dem Projekt beteiligen wollte, würde dieser Rechtliche
+Textblock eine heimtückischere Wirkung haben. Es würde mindestens zwei
+möglicherweise schädliche Signal aussenden: Erstens, dass diese Person
+nicht die komplette Kontrolle über seine Werkzeuge hat – er ist in
+irgend einem E-Mail-System von einem Unternehmen, welches an jede E-Mail
+eine nervige Botschaft anhängt, und er hat keine Möglichkeit es zu
+umgehen – und zweitens, dass er wenig oder keine Unterstützung von
+seiner Organisation für seine Aktivitäten bei freier Software hat.
+Zugegeben, die Organisation hat ihm ganz klar nicht direkt verboten an
+öffentliche Verteiler zu schreiben, aber sie lässt seine Nachrichten
+eindeutig unfreundlich aussehen, als ob das Risiko vertrauliche
+Informationen herauszulassen über allens anderen Prioritäten steht.</p><p>Wenn Sie für eine Organisation arbeiten, welche darauf besteht,
+solche Signaturen an alle abgehenden E-Mails anzuhängen, dann sollten
+Sie in Betracht ziehen, sich eine kostenlose E-Mail-Adresse anzulegen,
+zum Beispiel bei <a class="ulink" href="gmail.google.com">gmail.google.com</a>,
+<a class="ulink" href="www.hotmail.com">www.hotmail.com</a>, oder <a class="ulink" href="www.yahoo.com">www.yahoo.com</a>, und
+benutzen Sie diese Adresse für das Projekt.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idp8980240" href="#idp8980240" class="para">36</a>] </sup>Es hat
+im Bezug auf dieses Thema viele akademische Untersuchungen gegeben; siehe
+zum Beispiel <em class="citetitle">Group Awareness in Distributed Software
+Development</em> von Gutwin, Penner, und Schneider (diese waren
+ehemals online verfügbar, scheinen aber mittlerweile zumindest zeitweise
+verschwunden zu sein; benutzen Sie eine Suchmaschine um es zu finden).
+</p></div></div></div></body></html>

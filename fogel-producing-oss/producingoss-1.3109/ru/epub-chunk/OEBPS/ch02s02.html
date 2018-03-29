@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Выбор лицензии и ее применение</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Выбор лицензии и ее применение"><div class="titlepage"><div><div><h1 class="title"><a id="license-quickstart"/>Выбор лицензии и ее применение</h1></div></div></div><p>Этот раздел задуман как очень общее, очень поверхностное руководство по выбору лицензии.
+Прочитайте  <a class="xref" href="ch09.html" title="Глава 9. Licenses, Copyrights, and Patents">Глава 9, <em>Licenses, Copyrights, and Patents</em></a> для детального понимания законной силы различных лицензий,
+и того, как выбранная вами лицензия может затронуть возможности людей совместить ваше программное
+обеспечение с другими свободными программами.</p><p>Существует огромное множество лицензий на свободное программное обеспечение на ваш выбор.
+Большинство из них нет необходимости здесь рассматривать, так как они написаны для удовлетворения
+определенных юридических нужд некоторых корпораций или людей, и будут неподходящими для вашего
+проекта. Мы ограничимся только самыми частоиспользуемыми лицензиями; в большинстве случаев
+вы захотите выбрать одну из них.</p><div class="sect2" title="Лицензии &quot;Делай что угодно&quot;"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-non-gpl"/>Лицензии "Делай что угодно"</h2></div></div></div><p>Если вы спокойно относитесь к тому, что код вашего проекта потенциально будет использован
+в проприетарном программном обеспечении, тогда используйте лицензию семейства<em class="firstterm">MIT/X</em>.
+Она самая простая из нескольких минималистических лицензий, которая делает чуть больше, чем просто
+утверждает номинальное авторское право (в действительности не запрещая копирования) и указывает на
+то, что код поставляется без гарантии. Смотрите <a class="xref" href="ch09s04.html#license-choosing-mit-x" title="The MIT / X Window System License">«The MIT / X Window System License»</a> 
+для более подробной информации.</p></div><div class="sect2" title="GPL"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-gpl"/>GPL</h2></div></div></div><p>Если вы не хотите, чтобы ваш код был использован в проприетарных программах, используйте 
+Открытую лицензию GNU. (<a class="ulink" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>).  Открытая лицензия (GPL),
+возможно, является самой признанной в мире свободной лицензией на программы. Это само по себе большое
+преимущество, так как многие потенциальные пользователи и участники будут с ней знакомы, и, таким образом,
+не будут тратить дополнительное время на чтение и понимание вашей лицензии. Смотрите
+<a class="xref" href="ch09s04.html#license-choosing-gpl" title="The GNU General Public License">«The GNU General Public License»</a><span>
+в <a class="xref" href="ch09.html" title="Глава 9. Licenses, Copyrights, and Patents">Глава 9, <em>Licenses, Copyrights, and Patents</em></a></span> для подробного описания.</p><div class="sidebar"><div class="titlepage"/><p>Если пользователи работают с вашим кодом в первую очередь через сеть—то есть программа является
+частью сетевой службы — тогда рассмотрите возможность использования <em class="firstterm">GNU Affero GPL</em>вместо
+GNU. Смотрите <a class="xref" href="ch09s04.html#gnu-affero-gpl" title="The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code">The GNU Affero GPL: A Version of the GNU GPL for Server-Side
+  Code</a><span> в <a class="xref" href="ch09.html" title="Глава 9. Licenses, Copyrights, and Patents">Глава 9, <em>Licenses, Copyrights, and Patents</em></a></span> для подробного
+описания.</p></div></div><div class="sect2" title="Как применять лицензию к вашему программному обеспечению"><div class="titlepage"><div><div><h2 class="title"><a id="license-quickstart-applying"/>Как применять лицензию к вашему программному обеспечению</h2></div></div></div><p>Как только вы выбрали лицензию, вы должны заявить об этом на главной странице сайта проекта. Здень не нужно
+приводить полный текст лицензии; дайте только название лицензии и привяжите к нему ссылку на полный текст
+лицензии на другой странице.</p><p>Это укажет людям на то, под каким типом лицензии вы <span class="emphasis"><em>намерены</em></span> выпустить программное обеспечение,
+но этого не достаточно для соблюдения законных прав. Для этого, сама программа должна содержать лицензию. Обычным способом
+это сделать является помещение полного текста лицензии в файл с названием <code class="filename">COPYING</code> (или <code class="filename">LICENSE</code>),
+и наличие маленькой метки в начале каждого файла исходного кода, указывающей на дату, владельца прав и лицензию, и информирующего,
+где найти полный текст лицензии.</p><p>Существует множество вариантов этого шаблона, так что здесь мы рассмотрим только один пример. Открытая лицензия GNU
+предписывает поместить следующую метку в начале каждого файла исходного кода:</p><pre class="screen">
+Copyright (C) &lt;год&gt;  &lt;имя автора&gt;
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;
+</pre><p>Здесь специально не указывается, что копия лицензии, которую вы получили вместе с программой
+находится в файле <code class="filename">COPYING</code>, но обычно ее помещают именно туда. (Вы можете изменить
+приведенную выше метку, чтобы прямо указать на это.) Этот шаблон, также предоставляет географический
+адрес, по которому можно запросить копию лицензии. Другой часто используемый способ заключается в 
+размещении на веб-странице ссылки на лицензию. Решите сами и ссылайтесь на то место, которое вы считаете
+самым надежным хранилищем копии лицензии, и которое может находиться на сайте вашего проекта. 
+В общем, метка, которую вы помещаете в каждый файл с исходным кодом, не обязательно должна выглядеть точно
+также как указанная выше, пока она начинается с той же информации об обладателе авторского права и даты,
+указывает имя лицензии и четко определяет, где можно увидеть полную лицензию.</p></div></div></body></html>

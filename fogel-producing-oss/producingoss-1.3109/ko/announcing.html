@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Announcing</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producing Open Source Software"><link rel="up" href="getting-started.html" title="2&#51109;. Getting Started"><link rel="prev" href="setting-tone.html" title="Setting the Tone"><link rel="next" href="technical-infrastructure.html" title="3&#51109;. Technical Infrastructure"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Announcing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="setting-tone.html">&#51060;&#51204;</a> </td><th width="60%" align="center">2&#51109;. Getting Started</th><td width="20%" align="right"> <a accesskey="n" href="technical-infrastructure.html">&#45796;&#51020;</a></td></tr></table><hr></div><div class="sect1" title="Announcing"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="announcing"></a>Announcing</h2></div></div></div><p>Once the project is presentable&#8212;not perfect, just
+presentable&#8212;you're ready to announce it to the world.</p><p>This is a simpler process than you might expect.  There are two kinds
+of forums for making announcements: generic forums that display a
+constant stream of new project announcements, and topic-specific
+forums where your project would be appropriate news.</p><p>The most useful generic place is probably <a class="ulink" href="http://freecode.com/" target="_top">freecode.com</a> &#8212; just click on the
+<span class="guimenuitem">Submit new project</span> link in the top
+navigation bar.  Freecode's list of recent new projects is embedded on
+the front page of the popular <a class="ulink" href="http://slashdot.org/" target="_top">Slashdot.org</a>, which means someone interested is likely to
+notice it and help spread the news by word of mouth.  (Note that
+Freecode was known as Freshmeat.net until it was renamed in Oct 2011.)
+You might also want to register your project at <a class="ulink" href="http://OhLoh.net/" target="_top">OhLoh.net</a>, which is the closest thing
+there is to an integrated global database of free software projects
+and their contributors.  (Some projects also successfully climb the
+word-of-mouth / upvote tree to the point where they are featured on
+the front page of <a class="ulink" href="http://news.ycombinator.com/" target="_top">news.ycombinator.com</a>, one of the subreddit forums related to
+<a class="ulink" href="http://www.reddit.com/r/technology/" target="_top">reddit.com/r/technology</a>, or some similarly popular public
+page.  While it's good news for your project if you can get mentioned
+in a place like that, I hesitate to contribute to the marketing arms
+race by suggesting any concrete steps to accomplish this.  Use your
+judgement and try not to spam.)</p><p>The topic-specific forums are probably where you'll get the most
+interest.  Think about mailing lists or web frums where an
+announcement of your project would be on-topic and of
+interest &#8212; you might already be a member of some of
+them &#8212; and post there.  Be careful to make exactly
+<span class="emphasis"><em>one</em></span> post per forum, and to direct people to your
+project's own discussion areas for follow-up discussion (when posting
+by email, you can do this by setting the
+<code class="systemitem">Reply-to</code> header).  Your announcement should
+be short and get right to the point, and the Subject line should make
+it clear that it is an announcement of a new project:</p><pre class="screen">
+To: discuss@some.forum.about.search.indexers
+Subject: [ANN] Scanley, a new full-text indexer project.
+Reply-to: dev@scanley.org
+
+This is a one-time post to announce the creation of the Scanley
+project, an open source full-text indexer and search engine with a
+rich API, for use by programmers in providing search services for
+large collections of text files.  Scanley is now running code, is
+under active development, and is looking for both developers and
+testers.
+
+Home page: http://www.scanley.org/
+
+Features:
+   - Searches plain text, HTML, and XML
+   - Word or phrase searching
+   - (planned) Fuzzy matching
+   - (planned) Incremental updating of indexes
+   - (planned) Indexing of remote web sites
+   - (planned) Long-distance mind-reading
+
+Requirements:
+   - Python 3.2 or higher
+   - SQLite 3.8.1 or higher
+
+For more information, please come find us at scanley.org!
+
+Thank you,
+-J. Random
+</pre><p>(See <a class="xref" href="publicity.html" title="Publicity">&#8220;Publicity&#8221;</a><span> in
+<a class="xref" href="communications.html" title="6&#51109;. Communications">6&#51109;. <i>Communications</i></a></span> for advice on announcing
+subsequent releases and other project events.)</p><p>There is an ongoing debate in the free software world about
+whether it is necessary to begin with running code, or whether a
+project can benefit from being announced even during the
+design/discussion stage.  I used to think starting with running code
+was crucial, that it was what separated successful projects from toys,
+and that serious developers would only be attracted to software that
+already does something concrete.</p><p>This turned out not to be the case.  In the Subversion project,
+we started with a design document, a core of interested and
+well-connected developers, a lot of fanfare, and
+<span class="emphasis"><em>no</em></span> running code at all.  To my complete surprise,
+the project acquired active participants right from the beginning, and
+by the time we did have something running, there were quite a few
+volunteer developers already deeply involved.  Subversion is not the
+only example; the Mozilla project was also launched without running
+code, and is now a successful and popular web browser.</p><p>On the evidence of this and other examples, I have to back away
+from the assertion that running code is absolutely necessary for
+launching a project.  Running code is still the best foundation for
+success, and a good rule of thumb would be to wait until you have it
+before announcing your project<sup>[<a name="idp5853216" href="#ftn.idp5853216" class="footnote">24</a>]</sup>.  However, there may be circumstances where
+announcing earlier makes sense.  I do think that at least a
+well-developed design document, or else some sort of code framework,
+is necessary&#8212;of course it may be revised based on public
+feedback, but there has to be something concrete, something more
+tangible than just good intentions, for people to sink their teeth
+into.</p><p>Whenever you announce, don't expect a horde of volunteers to
+join the project immediately afterward.  Usually, the result of
+announcing is that you get a few casual inquiries, a few more people
+join your mailing lists, and aside from that, everything continues
+pretty much as before.  But over time, you will notice a gradual
+increase in participation from both new code contributors and users.
+Announcement is merely the planting of a seed.  It can take a long
+time for the news to spread.  If the project consistently rewards
+those who get involved, the news <span class="emphasis"><em>will</em></span> spread,
+though, because people want to share when they've found something
+good.  If all goes well, the dynamics of exponential communications
+networks will slowly transform the project into a complex community,
+where you don't necessarily know everyone's name and can no longer
+follow every single conversation.  The next chapters are about working
+in that environment.</p><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp5853216" href="#idp5853216" class="para">24</a>] </sup>Note that
+<span class="emphasis"><em>announcing</em></span> your project can come long after you
+have open sourced the code.  My advice to consider carefully the
+timing of your announcement should not be taken as advice to delay
+open sourcing the code &#8212; ideally, your project should
+be open source and publicly visible from the very first moment of its
+existence, and this is entirely independent of when you announce it.
+See <a class="xref" href="setting-tone.html#be-open-from-day-one" title="Be Open From Day One">&#8220;Be Open From Day One&#8221;</a> for
+more.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="setting-tone.html">&#51060;&#51204;</a> </td><td width="20%" align="center"><a accesskey="u" href="getting-started.html">&#50948;&#47196;</a></td><td width="40%" align="right"> <a accesskey="n" href="technical-infrastructure.html">&#45796;&#51020;</a></td></tr><tr><td width="40%" align="left" valign="top">Setting the Tone </td><td width="20%" align="center"><a accesskey="h" href="index.html">&#52376;&#51020;&#51004;&#47196;</a></td><td width="40%" align="right" valign="top"> 3&#51109;. Technical Infrastructure</td></tr></table></div></body></html>

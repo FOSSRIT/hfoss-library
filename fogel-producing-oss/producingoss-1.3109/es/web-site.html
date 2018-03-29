@@ -1,0 +1,221 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Sitio Web</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica"><link rel="prev" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica"><link rel="next" href="message-forums.html" title="Listas de Correo / Foros de Mensajes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Sitio Web</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="technical-infrastructure.html">Anterior</a> </td><th width="60%" align="center">Capítulo 3. Infraestructura Técnica</th><td width="20%" align="right"> <a accesskey="n" href="message-forums.html">Siguiente</a></td></tr></table><hr></div><div class="sect1" title="Sitio Web"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="web-site"></a>Sitio Web</h2></div></div></div><p><span class="emphasis"><em>possv2 24 March 2013: If you're reading this note, then
+you've encountered this chapter while it's undergoing substantial
+revision; see <a class="ulink" href="http://producingoss.com/v2.html" target="_top">producingoss.com/v2.html</a> for details.</em></span></p><p>Para nuestros propósitos, el <span class="emphasis"><em>sitio web</em></span>
+significa las páginas web dedicadas a ayudar a la gente a participar
+en el proyecto como desarrolladores, documentadores, etc. Tenga en
+cuenta que esto es diferente de la página web principal de cara al
+usuario. En muchos proyectos, los usuarios tienen necesidades
+diferentes y, a menudo (estadísticamente hablando) una mentalidad
+diferente de los desarrolladores. Los tipos de páginas web más
+útiles para los usuarios no son necesariamente las mismas que son
+útiles para los desarrolladores &#8212; no trate de hacer
+una sitio web de "talla única" sólo para ahorrar un poco de esfuerzo
+de escritura y mantenimiento: terminará con un sitio que no
+está del todo bien, para cualquiera de las audiencias.</p><p>Los dos tipos de sitios deben enlazados entre sí, por supuesto,
+y, en particular, es importante que el sitio orientado al usuario tenga,
+colocado de alguna manera en una esquina del agún lugar, una clara
+enlace con el sitio de los desarrolladores, ya que la mayoría de los
+nuevos desarrolladores darán sus primeros pasos en las páginas de
+usuario y buscarán un camino desde allí hacia la zona de los
+desarrolladores.</p><p>Un ejemplo puede aclarar esto. Al escribir estas líneas, en
+noviembre de 2013, la suite ofimática LibreOffice tiene su principal
+sitio web orientado al usuario en <a class="ulink" href="https://libreoffice.org/" target="_top">libreoffice.org</a>, como era de
+esperar. Si usted fuera un usuario que quiere descargar e instalar
+LibreOffice, usted comenzaría allí, iría directamente al enlace
+"Descargar", y así sucesivamente. Pero si usted fuera un desarrollador
+que busca (por ejemplo) corregir un error en LibreOffice, puede
+<span class="emphasis"><em>empezar</em></span> en <a class="ulink" href="https://libreoffice.org/" target="_top">libreoffice.org</a>, pero
+estaría buscando un enlace que diga algo así como "Desarrolladores",
+o "Desarrollo", o "Involúcrate" &#8212; en otras palabras,
+estaría buscando la puerta de entrada a la zona de desarrollo.</p><p>En el caso de LibreOffice, al igual que algunos otros grandes
+proyectos, en realidad tienen un par de diferentes pasarelas. Hay un
+enlace que dice <a class="ulink" href="https://www.libreoffice.org/get-involved/" target="_top">"Involúcrate"</a>,
+y otro que dice <a class="ulink" href="https://www.libreoffice.org/developers/" target="_top">"Desarrolladores"</a>.
+La página "Involúcrate" está dirigida a la más amplia gama de
+potenciales contribuyentes: desarrolladores, sí, pero también
+documentadores, los probadores de garantía de calidad,
+voluntarios de marketing, voluntarios de infraestructura web,
+financistas o alguna especie de donantes, diseñadores de interfaz,
+voluntarios para el foro de soporte, etc. Esto libera la página
+"Desarrolladores" para dirigirse a un público más bien estrecho de los
+programadores que deseen participar en la mejora del código de
+LibreOffice. El conjunto de enlaces y breves descripciones
+proporcionadas en ambas páginas es admirablemente claro y conciso: se
+puede saber de inmediato al mirar si usted está en el lugar correcto
+para lo que quiere hacer, y de esa manera, saber cuál es el siguiente
+lugar en que debe hacer clic. La página de "Desarrollo" da un poco de
+información acerca de dónde encontrar el código, cómo comunicarse con
+los otros desarrolladores, cómo presentar errores, y cosas por el
+estilo, pero, lo más importante, apunta a lo que los más experimentados
+colaboradores de código abierto reconocerían al instante como la
+<span class="emphasis"><em>verdadera</em></span> puerta de acceso a la información
+activamente mantenida sobre desarrollo: el wiki de desarrollo en <a class="ulink" href="http://wiki.documentfoundation.org/Development" target="_top">wiki.documentfoundation.org/Development</a>.</p><p>Esta división en dos pasarelas para los contribuidores, una para
+todo tipo de contribuciones y otra espacíficamente para los codificadores,
+es probable que tenga sentido para un proyecto grande y multifacético
+como LibreOffice. Tendrá que usar su juicio para determinar si ese
+tipo de subdivisión es apropiado para su proyecto; al menos al
+principio, probablemente no lo es. Es mejor empezar con una pasarela
+unificada para los colaboradores, dirigida a todos los tipos de
+contribuyentes que se pueden esperar, y si esa página nunca es lo
+suficientemente grande o lo suficientemente compleja como para sentir
+que es difícil de manejar &#8212; escucha con atención las
+quejas al respecto, ya que usted y otros participantes desde hace mucho
+tiempo estarán insensibilizados naturalmente a las debilidades de las
+páginas introductorias &#8212; entonces usted puede dividirla
+siempre y cuando parezca lo mejor.</p><p>Desde un punto de vista técnico no hay mucho que decir acerca de
+la creación de la página web del proyecto. La configuración de un
+servidor web y la creación de páginas web son tareas bastante simples,
+y la mayoría de las cosas importantes que decir sobre el diseño y la
+disposición fueron cubiertas en el capítulo anterior. La función
+principal del sitio web es presentar una visión general clara y
+acogedora del proyecto, y unir las otras herramientas (sistema de
+control de versiones, seguimiento de errores, etc.). Si usted no tiene
+los conocimientos necesarios para configurar un servidor web por ti
+mismo, por lo general no es difícil encontrar a alguien que lo haga y
+esté dispuesto a ayudar. Sin embargo, para ahorrar tiempo y esfuerzo,
+las personas a menudo prefieren usar uno de los sitios de hospedaje
+enlatados.</p><div class="sect2" title="Hosting Enlatado"><div class="titlepage"><div><div><h3 class="title"><a name="canned-hosting"></a>Hosting Enlatado</h3></div></div></div><p>Un sitio de <em class="firstterm">hosting enlatado</em> (hospedaje
+enlatado) es un servicio online que ofrece algunas o todas las
+herramientas de colaboración en línea necesarias para ejecutar un
+proyecto de software libre. Como mínimo, un sitio de hospedaje enlatado
+ofrece repositorios públicos de control de versiones y de seguimiento
+de fallos; La mayoría ofrecen también espacio de wiki, muchos ofrecen
+también hospedaje a la lista de correo, y algunos ofrecen pruebas de
+integración continua y otros servicios.</p><p>Hay dos ventajas principales de utilizar un sitio de hospedaje
+enlatado. La primera es la capacidad de los servidores y ancho de
+banda: sus servidores son cajas fornidas sentadas en tuberías realmente
+grandes. No importa que tan exitoso se vuelva su proyecto, usted no va
+a quedarse sin espacio en disco o a inundar la conexión de red. La
+segunda ventaja es la simplicidad. Ellos ya han elegido un gestor de
+fallos, un sistema de control de versiones, tal vez el software del
+foro de discusión, y todo lo que necesita para ejecutar un proyecto.
+Ya han configurado las herramientas, han dispuesto de una autenticación
+con un único inicio de sesión donde sea posible, se hace cargo de las
+copias de seguridad de todos los datos almacenados en las herramientas,
+etc. No es necesario tomar muchas decisiones. Todo lo que tienes que
+hacer es llenar un formulario de registro, pulse un botón y de pronto
+usted tiene un sitio web de desarrollo de proyectos.</p><p>Estos son beneficios muy significativos. La desventaja, por
+supuesto, es que usted debe aceptar <span class="emphasis"><em>sus</em></span> opciones
+y configuraciones, aunque sea mejor algo diferente para su proyecto.
+Por lo general, los sitios se pueden ajustar bajo ciertos parámetros
+estrechos, pero nunca se tiene el control de grano fino que usted
+tendría si usted configura el sitio usted mismo y tiene acceso
+administrativo completo al servidor.</p><p>Un ejemplo perfecto de esto es el manejo de los archivos
+generados. Algunas páginas web del proyecto pueden ser archivos
+generarados&#8212;por ejemplo, existen sistemas para mantener los
+datos del FAQ en un formato maestro fácil de editar, a partir del
+cual el HTML, PDF y otros formatos de presentación se pueden
+generar. Como se explica en <a class="xref" href="vc.html#version-everything" title="Versiones de todo">&#8220;Versiones de todo&#8221;</a><span>
+anteriormente en este capítulo</span>, a usted no le gustaría
+versionar los formatos generados, sólo el archivo maestro. Pero
+cuando su sitio web está alojado en el servidor de otra persona,
+puede ser difícil de preparar un hook (gancho) personalizado para
+regenerar la versión HTML en línea de la FAQ cada vez que se
+cambie el archivo maestro.</p><p>Si usted elige un sitio de hospedaje, deje abierta la opción de
+cambiar a un sitio diferente en el futuro, mediante el uso de un nombre
+de dominio personalizado como domicilio del desarrollo del proyecto.
+Usted puede redireccionar esa URL al sitio enlatado, o tener una página
+de inicio de desarrollo totalmente personalizada en la URL principal y
+enlazarla al sitio enlatado para funcionalidades específicas.
+Simplemente tratar de arreglar las cosas de tal manera que si más
+adelante decide utilizar una solución de alojamiento diferente, la
+dirección principal del proyecto no tiene por qué cambiar.</p><p>Y si usted no está seguro de si se debe usar un hosting
+enlatado, entonces probablemente debería utilizarlo. Estos sitios han
+integrado sus servicios en miles de formas (Sólo un ejemplo: si un
+commit menciona un número de ticket de fallo usando un formato
+determinado, entonces la gente navegando ese commit más tarde se
+encontrará con que se vincula automáticamente a ese ticket), cosa que
+sería laboriosa para usted reproducir, sobre todo si es la primera
+vez que lleva a cabo un proyecto de código abierto. El universo de
+posibles configuraciones de las herramientas de colaboración es vasto
+y complejo, pero el mismo conjunto de opciones ha enfrentado todo el
+mundo corriendo un proyecto de código abierto y hay algunas soluciones
+asentadas ahora. Cada uno de los sitios de hospedaje implementa un
+subconjunto razonable de ese espacio de soluciones, y al menos que
+tenga razones para creer que puedes hacerlo mejor, el proyecto
+funcionará probablemente mejor usando uno de esos sitios.</p><div class="sect3" title="Selección de un sitio de hosting enlatado"><div class="titlepage"><div><div><h4 class="title"><a name="canned-hosting-choosing"></a>Selección de un sitio de hosting enlatado</h4></div></div></div><p>En la actualidad hay tantos sitios que proporcionan hosting
+enlatados libre de cargos para proyectos liberados bajo licencias de
+código abierto que no hay espacio aquí para revisarlos todos.</p><p>Así que voy a hacerlo fácil: elige <span style="color: red">&lt;a&gt;GitHub&lt;/a&gt;</span>. Es, por mucho, el más popular y
+parece decidido a permanecer de esa manera, o incluso crecer en su
+predominio, por varios años en adelante. Tiene un buen conjunto de
+características e integraciones. Muchos desarrolladores ya están
+familiarizados con GitHub y tienen una cuenta allí. Tiene una <a class="ulink" href="http://develop.github.com/" target="_top">API</a> para una interacción
+mediante programación con los recursos del proyecto, y si bien no
+ofrece actualmente las listas de correo, hay un montón de otros
+lugares que pueden hospedarlas, como los <a class="ulink" href="http://groups.google.com/" target="_top">Grupos de Google</a>.</p><p>Si usted no se convence por GitHub (por ejemplo, porque el
+proyecto utiliza, por decir, Mercurial en lugar de Git), pero no
+está seguro de dónde alojar, eche un vistazo minucioso a <a class="ulink" href="http://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_facilities" target="_top">Comparación de los servicios de alojamiento para software de código
+abierto</a>; que es el primer lugar para buscar, hasta a la fecha,
+la información completa sobre las opciones de alojamiento de proyectos
+de código abierto. Actualmente los otros dos sitios de alojamiento más
+populares son <a class="ulink" href="http://code.google.com/hosting/" target="_top">Google Code
+Hosting</a>, <a class="ulink" href="http://sourceforge.net/" target="_top">SourceForge</a>, pero consulte la
+página de Wikipedia antes de tomar una decisión.</p></div><div class="sect3" title="Alojamiento en una infraestructura completamente de código abierto"><div class="titlepage"><div><div><h4 class="title"><a name="hosting-on-freedom"></a>Alojamiento en una infraestructura completamente de código
+abierto</h4></div></div></div><p>Aunque todos los sitios de hospedaje usan un montón de software
+libre, la mayoría de ellos también escribieron su propio software
+para unir todo, lo que significa que el medio ambiente de alojamiento
+no es fácilmente reproducible por otros. Por ejemplo, mientras que la
+propia Git es un software libre, GitHub es un servicio alojado
+corriendo en parte con el software propietario &#8212; si
+deja GitHub, no se la puede llevar con usted, por lo menos no
+toda.</p><p>Algunos proyectos prefieren un sitio de hospedaje que se
+ejecute en una infraestructura de software totalmente libre y que
+podría, en teoría, ser reproducida de forma independiente de llegar a
+ser necesario. Afortunadamente, existen tales sitios, el más conocido
+es <a class="ulink" href="http://gitorious.org/" target="_top">Gitorious</a>, <a class="ulink" href="http://savannah.gnu.org/" target="_top">GNU Savannah</a>, y <a class="ulink" href="http://gitlab.com/" target="_top">GitLab</a> (para la fecha de este escrito
+a principios de 2014). Por otra parte, cualquier servicio que ofrezca
+hospedaje para plataformas de colaboración de código como <a class="ulink" href="http://redmine.org/" target="_top">Redmine</a> o <a class="ulink" href="http://trac.edgewall.org" target="_top">Trac</a> ofrece efectivamente
+alojamiento que preserva plenamente la libertad, ya que estas
+plataformas incluyen la mayoría de las características que se
+necesitan para ejecutar un proyecto de código abierto; algunas
+empresas ofrecen este tipo de plataforma comercial de hosting con una
+tasa de costo cero o muy barato para los proyectos de código
+abierto.</p><p>¿Debería alojar su proyecto en una infraestructura completamente
+de código abierto? Si bien sería ideal tener acceso a todo el código
+que se ejecuta el sitio, mi opinión es que lo crucial es tener una
+forma de exportar los datos del proyecto, y ser capaz de
+interactuar con los datos de maneras automatizables. Un sitio que
+cumpla con estos criterios realmente nunca podrá encerrarte en él, e
+incluso será extensible, hasta cierto punto, a través de su interfaz
+de programación. Aunque hay algo de valor en tener todo el código que
+se ejecuta un sitio de alojamiento disponible bajo los términos de
+código abierto, de todas formas en la práctica las exigencias de la
+implementación real de ese código en un entorno de producción son
+prohibitivos para la mayoría de los proyectos. Estos sitios necesitan
+varios servidores, redes personalizadas, y el personal de tiempo
+completo para que sigan funcionando; el mero hecho de tener el código
+no sería suficiente para duplicar o "forkear" el servicio de todos
+modos. Lo principal es sólo asegurarse de que sus datos no se
+encuentran atrapados.</p><p>Por supuesto, todo lo anterior sólo se aplica a los
+servidores. Su proyecto no debe exigir a los participantes ejecutar
+software de colaboración privativos en sus propias máquinas.</p></div><div class="sect3" title="El anonimato y la participación"><div class="titlepage"><div><div><h4 class="title"><a name="anonymity"></a>El anonimato y la participación</h4></div></div></div><p>Un problema que no es exclusivo a los sitios enlatados, pero con
+mayor frecuencia se encuentra allí, es la sobre-exigencia de registro
+de usuario para participar en diversos aspectos del proyecto. El
+adecuado grado de exigencia es un poco una cuestión de criterio. El
+registro de usuarios ayuda a evitar el spam, por un lado, y aunque
+cada commit se revise es aún probable que usted no quiera extraños
+anónimos subiendo cambios al repositorio, por ejemplo.</p><p>Pero a veces el registro del usuario termina siendo requerido
+para tareas que deben ser autorizados a visitantes no registrados,
+especialmente la capacidad de registrar tickets en el gestor de fallos,
+y para comentar sobre los tickets existentes. Al requerir un nombre de
+usuario que haya iniciado sesión en tales acciones, el proyecto eleva
+la barra de compromiso de lo que deberían ser tareas rápidas y
+convenientes. También cambia la demografía de quienes registran errores,
+ya que los que se toman la molestia de crear una cuenta de usuario en
+el sitio del proyecto son apenas una muestra aleatoria incluso de entre
+los usuarios que están dispuestos a registrar errores (que a su vez ya
+son un subconjunto parcial de todos los usuarios del proyecto). Por
+supuesto, uno quiere ser capaz de ponerse en contacto con alguien que
+introdujo los datos en el gestor de tickets, pero teniendo un campo en
+el que se pueda introducir la dirección de correo electrónico (si
+quiere) es suficiente. Si un nuevo usuario ve un error y quiere
+denunciarlo, sólo se moslestará por tener que llenar un formulario de
+creación de su cuenta antes de poder entrar en el gestor de fallos.
+Él puede simplemente decidir no presentar el error en absoluto.</p><p>Si usted tiene el control sobre las acciones que se pueden hacer
+de forma anónima, asegúrese de que al menos <span class="emphasis"><em>todas</em></span>
+las acciones de sólo lectura se les permita a los visitantes que no han
+iniciado sesión, y si es posible que los portales de entrada de datos,
+como el gestor de fallos, que tienden a llevar la información de los
+usuarios a los desarrolladores, también se puedan utilizar de forma
+anónima, aunque, por supuesto, todavía pueden ser necesarias algunas
+técnicas anti-spam, como captchas.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="technical-infrastructure.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Subir</a></td><td width="40%" align="right"> <a accesskey="n" href="message-forums.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Capítulo 3. Infraestructura Técnica </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Listas de Correo / Foros de Mensajes</td></tr></table></div></body></html>

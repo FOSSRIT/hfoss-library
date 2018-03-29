@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung"><div class="titlepage"><div><div><h1 class="title"><a id="development-cycle"/>Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>In diesem Kapitel geht es darum, wie freie Software-Projekte
+ihre Software-Pakete erstellen und veröffentlichen, und wie sich
+allgemeine Entwicklungsmuster um diese Ziele herum organisieren.</p><p>Ein großer Unterschied zwischen Open Source und proprietären
+Projekten ist der Mangel einer zentralen Kontrolle über das
+Entwicklerteam. Wenn eine neue Version vorbereitet wird, ist der
+Unterschied besonders gravierend: Ein Unternehmen kann das gesamte
+Entwicklerteam darum bitten, sich auf die bevorstehenden Version
+zu konzentrieren und die Entwicklung neuer Funktionen und die Behebung
+unkritischer Bugs ruhen zu lassen, bis die neue Version
+fertig ist. Gruppen von Freiwilligen sind nicht derart monolitisch.
+Sie arbeiten aus allen möglichen Gründen an dem Projekt, und 
+diejenigen, die nicht daran interessiert sind, bei einer bestimmten
+Version zu helfen, wollen immer noch ihre normale Entwicklung 
+weiterführen, während die neue Version vorbereitet wird. Da die
+Entwicklung niemals aufhört, neigen der Herausgabe-Prozesse in
+Open-Source-Projekten dazu, länger zu dauern, verursachen aber weniger
+Unruhe, als die kommerziellen Herausgabe-Prozesse. Es ist
+ein wenig wie die Reparatur einer Autobahn. Es gibt zwei Möglichkeiten,
+eine Straße zu reparieren: Sie können sie komplett absperren, damit
+die Reparaturmannschaft in voller Kapazität ausschwärmen kann, bis
+das Problem gelöst ist, oder Sie können jeweils nur ein paar Spuren 
+gleichzeitig bearbeiten, während die anderen für den Verkehr
+offen bleiben. Die erste Methode ist sehr effizient <span class="emphasis"><em>für die
+Reparaturmannschaft</em></span>, aber für niemanden sonst – die
+Straße ist komplett blockiert, bis die Arbeit erledigt ist. Die
+zweite Methode verursacht mehr Arbeitszeit und Kopfschmerzen für die
+Reparaturmannschaft (jetzt müssen sie mit weniger Leuten und Mitteln,
+unter eingeengten Bedingungen arbeiten, mit Schildern um den
+Verkehr zu verlangsamen und zu lenken, usw.), allerdings bleibt die 
+Straße  weiterhin benutzbar, wenn auch nicht mit der vollen
+Kapazität.</p><p>Open-Source-Projekte tendieren dazu nach der zweiten Methode zu
+arbeiten. Bei einer ausgereiften Software ist es sogar so, dass mehrere
+verschiedene Versionslinien gleichzeitig gepflegt werden, das Projekt
+befindet sich in einer Art ständigen Straßenreparatur. Es sind immer
+ein paar Spuren geschlossen; beständige aber geringe Umstände im
+Hintergrund werden die ganze Zeit über von der Entwicklergemeinschaft
+toleriert, damit die neuen Version plangemäß fertig
+werden.</p><p>Das Modell, das dies ermöglicht, lässt sich auf mehr als nur
+neue Versionen verallgemeinern. Es ist das Prinzip, Aufgaben zu
+parallelisieren, die nicht von einander abhängen – ein Prinzip
+das natürlich keinesfalls auf Open-Source-Entwicklung 
+beschränkt ist, das jedoch von Open-Source-Projekten auf eine jeweils
+eigene bestimmte Art umgesetzt wird. Sie können es sich nicht leisten,
+ihre Straßenbau-Truppe oder den gewöhnlichen Verkehr zu sehr zu nerven,
+aber sie können es sich auch nicht leisten Leute dafür abzustellen,
+bei den orangen Kegeln zu stehen und den Verkehr zu dirigieren.
+Sie streben deshalb eher zu Abläufe die einen flachen, konstanten Grad
+an Mehraufwand haben, als Höhen und Tiefen. Freiwillige sind im
+Allgemeinen eher dazu bereit mit kleinen gleichbleibenden Mengen an
+Unbequemlichkeiten zu arbeiten; die Berechenbarkeit erlaubt es ihnen
+zu kommen und zu gehen, ohne sich darüber Sorgen zu machen, ob ihr
+Terminkalender mit dem was im Projekt passiert kollidiert. Wenn das
+Projekt aber eine einem Produktionsplan unterliegen würde, wäre das
+Ergebnis, eine Menge Entwickler die die meiste Zeit untätig
+herumsitzen – was nicht nur ineffizient wäre, sondern auch 
+langweilig und dadurch gefährlich, insofern, dass ein gelangweilter
+Entwickler wahrscheinlich bald ein Ex-Entwickler sein wird.</p><p>Arbeit an neuen Versionen ist für gewöhnlich die am ehesten
+bemerkbare Aufgabe die nicht zur Entwicklung gehört, welche neben der
+Entwicklung her läuft, also sind die Methoden die in den folgenden
+Abschnitten folgen meistens darauf ausgelegt neue Versionen zu
+ermöglichen. Beachten Sie jedoch, dass sie auch für andere Aufgaben
+gelten, die sich parallelisieren lassen, wie Übersetzungen und 
+Lokalisierung, weitgreifende Änderungen an den Schnittstellen die nach
+und nach über den gesamten Quellcode gemacht werden, usw.</p></div><div class="sect1" title="Versionszählung"><div class="titlepage"><div><div><h1 class="title"><a id="release-numbering"/>Versionszählung</h1></div></div></div><p>Vor wir uns darüber unterhalten, wie man eine neue Version macht,
+lasst uns anschauen, wie man diese Versionen benennt, wozu wir wissen
+müssen was eine neue Version für die Benutzer tatsächlich bedeutet. 
+Eine neue Version bedeutet, dass:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Alte Bugs behoben wurden. Das ist wahrscheinlich eines
+	der Sachen auf den sich die Benutzer für jede neue Version
+	verlassen können.</p></li><li class="listitem"><p>Neue Bugs wurden hinzugefügt. Darauf kann man sich
+	für gewöhnlich auch verlassen, außer in manchen Fällen, bei
+	der Behebung von Sicherheitslücken oder andere Einmalige
+	Änderungen (siehe <a class="xref" href="ch07s06.html#security-releases" title="Sicherheitsupdates">„Sicherheitsupdates“</a><span> später in diesem Kapitel</span>).</p></li><li class="listitem"><p>Neue Funktionen können hinzugefügt worden sein.</p></li><li class="listitem"><p>Neue Konfigurationseinstellung können hinzugefügt
+	worden sein, oder die Bedeutung alter Einstellungen sich ein
+	klein wenig geändert haben. Die Installationsabläufe können
+	sich auch seit der letzten Version leicht geändert haben,
+	auch wenn man immer hofft, dass das nicht der Fall ist.</p></li><li class="listitem"><p>Nicht kompatible Änderungen können eingeführt worden
+	sein, wie die Formatierung der Daten welche von älterer 
+	Software benutzt werden nicht weiter ohne irgend einer
+	(möglicherweise händischen) Einweg-Konvertierung benutzt werden
+	können.</p></li></ul></div><p>Wie sie sehen, ist nicht alles davon etwas gutes. Deshalb gehen
+erfahrene Benutzer immer mit ein wenig Angst an neue Versionen heran,
+ganz besonders, wenn die Software ausgereift ist und vorher schon
+zum größten Teil das gemacht hat, was sie wollten (oder dachten das
+sie wollten). Selbst der Einbau neuer Funktionen hat insofern nicht nur
+Vorteile, dass es bedeuten könnte, dass sich die Software jetzt 
+unerwartet verhält.</p><p>Der Sinn einer Versionsnummer ist deshalb zweifältig: 
+Offensichtlich sollte die Nummer unzweideutig die Reihenfolge der
+Versionen mitteilen (d.h. wenn man sich zwei Versionsnummern anschaut,
+kann man unterscheiden, welches die später kam), sie sollten aber auch
+so kompakt wie möglich den Grad und Art der Änderungen in der Version
+andeuten.</p><p>Das alles in einer Zahl? Nun, im Grunde genommen, ja. Die 
+Strategien für Versionsnummern sind eine der ältesten 
+Fahrradschuppen-Diskussionen, die es gibt (siehe <a class="xref" href="ch06s02.html#bikeshed" title="Je weicher das Thema, desto länger die Debatte">„Je weicher das Thema, desto länger die Debatte“</a><span> im Kapitel <a class="xref" href="ch06.html" title="Kapitel 6. Kommunikation">Kapitel 6, <em>Kommunikation</em></a></span>), und ist unwahrscheinlich, dass
+sich die Welt auf einen, vollständigen Standard in der irgendwann in 
+der nächsten Zeit einigt. Ein paar gute Strategien sind aber 
+entstanden, zusammen mit dem universell anerkannten Prinzip: <span class="emphasis"><em>
+konsistent zu sein</em></span>. Wählen Sie ein Nummerierungsschema und
+bleiben Sie dabei. Ihre Nutzer werden es Ihnen danken.</p><div class="sect2" title="Die Komponenten der Versionsnummer"><div class="titlepage"><div><div><h2 class="title"><a id="release-number-components"/>Die Komponenten der Versionsnummer</h2></div></div></div><p>Dieser Abschnitt beschreibt im Detail die formalen Konventionen
+der Nummerierung von Versionen, und geht von sehr wenig Vorwissen aus.
+Es ist hauptsächlich als eine Referenz gedacht. Wenn Sie bereits mit
+diesen Konventionen vertraut sind, können Sie diesen Abschnitt
+überspringen.</p><p>Eine Versionsnummer ist eine Gruppe von Zahlen die durch punkte
+getrennt sind:</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3<br/>
+Singer 5.11.4</p></div></div><p>...und so weiter. Die Punkte sind <span class="emphasis"><em>keine</em></span>
+Dezimalzeichen, sie sind lediglich Trennzeichen; nach "5.3.9" käme
+"5.3.10". Ein paar wenige Projekte haben ab und zu auf was anderes
+hingedeutet, am bekanntesten der Linux-Kernel mit seiner "0.95", 
+"0.96"... "0.99" Reihe die zu Linux 1.0 hinführte, die Konvention,
+dass die Punkte keine Dezimalzeichen sind, ist jetzt aber fest
+etabliert und sollte als Standard betrachtet werden. Es gibt keine
+Grenze bei der Anzahl der Komponenten (Ziffernsequenzen, die keine
+Punkte enthalten), aber die meisten Projekte gehen nicht über drei
+oder vier hinaus. Die Gründe dafür werden später klar.</p><p>Zusätzlich zu den numerischen Komponenten, hängen Projekte
+manchmal erläuternde Kennschrift wie "Alpha" oder "Beta" an (siehe
+<a class="xref" href="ch02.html#alpha-and-beta" title="Alpha und Beta">Alpha und Beta</a>), als Beispiel:</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3.0 (Alpha)<br/>
+Singer 5.11.4 (Beta)</p></div></div><p>Ein Alpha- oder Beta-Vermerk bedeutet, dass diese Version einer
+zukünftigen <span class="emphasis"><em>vorausgeht</em></span> welches die selbe Zahl 
+haben wird, jedoch ohne den Vermerk. Deshalb führt "2.3.0 (Alpha)"
+letztendlich zu "2.3.0". Um mehrere solche Kandidaten in einer
+Folge zu ermöglichen, können die Vermerke selber Meta-Vermerke haben.
+Hier ist als Beispiel eine Serie von Versionen, in der Reihenfolge
+mit der sie veröffentlicht werden würden:</p><div class="informalexample"><div class="literallayout"><p>Scanley 2.3.0 (Alpha 1)<br/>
+Scanley 2.3.0 (Alpha 2)<br/>
+Scanley 2.3.0 (Beta 1)<br/>
+Scanley 2.3.0 (Beta 2)<br/>
+Scanley 2.3.0 (Beta 3)<br/>
+Scanley 2.3.0</p></div></div><p>Beachten Sie, dass es mit dem "Alpha" Vermerk, Scanley "2.3" als
+"2.3.0" geschrieben wird. Die beiden Zahlen sind gleich – folgende
+Nullanteile können der Kürze halber immer weggelassen werden – wenn
+ein Vermerk aber vorhanden ist, ist die Kürze eh schon nicht gegeben,
+also kann man genau so gut vollständig ausschreiben.</p><p>Andere Vermerke die mehr oder weniger oft benutzt werden sind 
+"Stable" (de. stabil), "Unstable" (de. nicht stabil), "Development"
+(de. Entwicklerversion), und "RC" (für "Release Candidate")
+(de. Kandidat für eine finale Version). Die am weitesten verbreiteten
+sind immer noch "Alpha" und "Beta", mit "RC" nahe an dritter Stelle,
+beachten Sie aber, dass zu "RC" immer einen Meta-Vermerk gehört. Sie
+veröffentlichen als nicht
+"Scanley 2.3.0 (RC)", sondern 
+"Scanley 2.3.0 (RC 1)", gefolgt von RC2, usw.</p><p>Diese drei Vermerke, "Alpha", "Beta", und "RC", sind mittlerweile
+relativ gut bekannt, und ich empfehle nicht irgend welche andere zu
+benutzen, auch wenn andere auf dem ersten Blick passender erscheinen
+da sie normale Wörter sind, und kein Jargon. Diejenigen die neue
+Software-Versionen installieren, sind aber bereits mit den großen
+dreien vertraut, und es gibt keinen Grund die Sache grundlos anders von
+allen anderen zu machen.</p><p>Obwohl die Punkte in Versionsnummer keine Dezimalzeichen sind,
+deuten sie doch einen Stellenwert an. Alle "0.X.Y" Versionen
+gehen "1.0" voraus (was natürlich gleichbedeutend ist mit "1.0.0").
+"3.14.158" geht direkt "3.14.159" voraus, und indirekt "3.14.160",
+sowie "3.15.irgendwas" und ähnliches vorausgeht.</p><p>Eine konsistente Richtlinie für die Numerierung der Versionen
+ermöglicht es den Benutzer zwei Versionsnummern der selben Software
+anzuschauen und alleine durch die Zahlen, die wichtigen Unterschiede
+zwischen ihnen zu unterscheiden. Bei einer typischen System aus drei
+Komponenten, ist die erste Komponente die
+<em class="firstterm">major Nummer</em>, die zweite ist die 
+<em class="firstterm">minor Nummer</em>, und die dritte ist die
+<em class="firstterm">micro Nummer</em>. Version
+"2.10.17" ist zum Beispiel die siebzehnte Micro-Version in der zehnten
+Minor-Reihe innerhalb der zweiten Major-Versions-Serie. Die Worte
+"Reihe" (en. line) und "Serie" (en. series) werden hier informell
+verwendet, sie bedeuten aber was man erwarten würde. Eine Major-Serie
+ist lediglich alle Versionen die die gleich major Nummer teilen und
+eine minor Serie (oder Reihe) besteht aus allen Versionen welche die
+gleiche minor <span class="emphasis"><em>und</em></span> major Nummer teilen. "2.4.0" und
+"3.4.1" sind also nicht in der selben minor Reihe, obwohl sie beide "4"
+als minor Nummer haben; andererseits sind, "2.4.0" und "2.4.2" in der
+selben Reihe, obwohl sie nicht auf einander folgen, wenn "2.4.1" 
+zwischendurch veröffentlicht wurde.</p><p>Die Bedeutung dieser Zahlen ist genau das, was man erwarten 
+würde: Eine Erhöhung der major Nummer deutet auf große Änderungen hin;
+eine Erhöhung der minor Nummer deutet auf kleine Änderungen hin; und
+eine Erhöhung der micro Nummer deutet auf wirklich triviale Änderungen.
+Manche Projekte fügen eine vierte Komponente hinzu, gewöhnlich als
+<em class="firstterm">patch Nummer</em> bezeichnet, für besonders
+fein granulierte Kontrolle über die Unterschiede zwischen ihren 
+Versionen (verwirrenderweise, benutzen andere Projekte "patch" als
+synonym für "micro" bei einem System mit drei Komponenten). Es gibt
+auch Projekte, welche die letzte Komponente als 
+<em class="firstterm">build Nummer</em> verwenden, welches jedes mal
+hochgezählt wird, wenn ein neuer Build der Software gemacht wird und 
+keine andere Änderung außer diesen Build repräsentiert. Das hilft dem
+Projekt jede Bug-Meldung mit einem bestimmten Build in Verbindung zu
+bringen, und ist wahrscheinlich am nützlichsten wenn binären Pakete die
+übliche Methode der Verteilung ist.</p><p>Obwohl es viele verschiedene Konventionen gibt, wieviele
+Komponenten man verwenden soll, und was die Komponenten bedeutet,
+neigen die Unterschiede dazu unwesentlich zu sein – Sie haben
+ein wenig Spielraum aber nicht viel. Die nächsten beiden Abschnitte
+besprechen einige der am meisten benutzten Konventionen.</p></div><div class="sect2" title="Die einfache Strategie"><div class="titlepage"><div><div><h2 class="title"><a id="release-number-simple-strategy"/>Die einfache Strategie</h2></div></div></div><p>Die meisten Projekte haben Regeln darüber, welche Arten von
+Änderungen bei einer neuen Version erlaubt sind wenn man nur eine
+micro Nummer erhöht, andere wenn man die minor Nummer erhöht und
+wieder andere bei der major Nummer. Es gibt noch keinen Satz von Normen
+für diese Regeln, ich werde hier aber eine Regelung beschreiben, die
+schon bei mehreren Projekten erfolgreich verwendet worden ist. Sie
+können diese Regelung für Ihr Projekt einfach übernehmen, aber selbst
+wenn Sie das nicht tun, ist es trotzdem ein gutes Beispiel für 
+die Art von Informationen die Versionsnummern ausdrücken sollten.
+Diese Regelung basiert auf dem Nummernsystem, das vom
+APR-Projekt benutzt wird, siehe 
+<a class="ulink" href="http://apr.apache.org/versioning.html">http://apr.apache.org/versioning.html</a>.</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>Änderungen an der micro Nummer (d.h Änderungen
+	innerhalb der selben minor Reihe) müssen sowohl aufwärts,
+	als auch abwärtskompatibel sein. D.h. die Änderungen sollten
+	nur Bugfixes sein, oder sehr kleine Verbesserungen an
+	bestehenden Funktionen. Neue Funktionen sollten bei micro
+	Versionen nicht eingeführt werden.</p></li><li class="listitem"><p>Änderungen an der minor Nummer (d.h, innerhalb der
+	selben major Reihe) müssen abwärtskompatibel sein, aber nicht
+	unbedingt aufwärtskompatibel. Es ist normal neue Funktionen
+	in einer minor Version einzuführen, für gewöhnlich aber nicht
+	zu viele auf einmal.</p></li><li class="listitem"><p>Änderungen an der major Nummer kennzeichnen Grenzen
+	der Kompatibilität. Eine neue major Version kann zu 
+	vorhergehenden und folgenden Versionen inkompatibel sein. Von
+	einer major Version werden neue Funktionen erwartet, und sogar
+	ganze Sammlungen von Funktionen.</p></li></ol></div><p>Was <em class="firstterm">abwärtskompatibel</em> und <em class="firstterm">
+aufwärtskompatibel</em> genau bedeuten, hängt davon ab, was
+Ihre Software macht, im Kontext sind sie aber für gewöhnlich nicht
+sonderlich frei interpretierbar. Wenn Ihr Projekt zum Beispiel eine
+Client-Server-Anwendung ist, dann bedeutet "abwärtskompatibel", dass
+eine Aktualisierung auf 2.6.0 keine existierende 2.5.4 Clients 
+Funktionen verlieren oder sich anders als vorher verhalten (natürlich
+abgesehen von den Bugs die behoben wurden). Eine Aktualisierung einer
+dieser Clients auf 2.6.0 zu aktualisieren könnte ihm andererseits
+<span class="emphasis"><em>neue</em></span> Funktionen zur Verfügung stellen, bei dem
+die 2.5.4 Clients nicht wissen wie sie genutzt werden sollen. Wenn
+das passiert, dann ist die Aktualisierung <span class="emphasis"><em>nicht</em></span>
+"aufwärtskompatibel": Sie können diesen Client nicht zurück auf 
+2.5.4 setzen und alle Funktionen aus 2.6.0 behalten, da manche dieser
+Funktionen bei 2.6.0 neu waren.</p><p>Deshalb sind micro Versionen im wesentlichen ausschließlich zur
+Behebung von Fehler. Sie müssen in beiden Richtungen kompatibel bleiben:
+Wenn Sie von 2.5.3 auf 2.5.4 aktualisieren, Ihre Meinung dann ändern
+und wieder zurück auf 2.5.3 wechseln, sollten keine Funktionen
+verloren gehen. Die Fehler, die durch 2.5.4 behoben wurden, würden natürlich
+wieder auftauchen, aber Sie würden keine Funktionen verlieren, außer
+insofern, dass die wiederhergestellten Fehler die Nutzung
+existierender Funktionen verhindert.</p><p>Client-Server-Protokolle sind nur eines vieler möglicher
+Kompatibilitätsbereiche. Ein weiteres sind Datenformate: Schreibt die
+Software auf ein permanentes Speichermedium? Wenn ja, müssen die
+Formate die es liest und schreibt die Kompatibilitätsrichtlinien die
+von den durch die Versionsnumeriertung versprochenen Richtlinien 
+befolgen. Version 2.6.0 muss in der Lage sein die Dateien die von
+2.5.4 geschrieben wurden zu lesen, kann aber im Stillen das Format
+auf etwas erweitern, welches 2.5.4 nicht lesen kann, da die Fähigkeit
+auf eine vorherige Version zu wechseln, nicht über die Grenze einer
+major Nummer erforderlich ist. Wenn Ihr Projekt Code-Bibliotheken,
+für die Nutzung durch andere Anwendungen, vertreibt, dann sind die
+Schnittstellen auch Bereich indem die Kompatibilität gewahrt werden
+muss: Sie müssen dafür sorgen, dass die Regeln für die Kompatibilität
+von Quellcode und Binärdateien, derart formuliert sind, dass ein
+informierter Nutzer sich niemals fragen muss, ob es sicher ist zu
+aktualisieren. Er wird in der Lage sein die Zahlen anzusehen, und
+es sofort zu wissen.</p><p>Bei diesem System, bekommen Sie keine Gelegenheit für einen
+sauberen Neuanfang, bis sie die major Nummer hochzählen. Das kann oft
+lästig sein: Es mag Funktionen geben, die Sie hinzufügen wollen, oder
+Protokolle, die Sie neu entwerfen wollen, was einfach nicht gemacht
+werden können, während Sie die Kompatibilität wahren. Es gibt hierfür
+keine magische Lösung, außer zu versuchen alles von vorn herein so zu
+entwerfen, dass es sich leicht erweitern lässt (ein Thema welches man
+leicht ein ganzes Buch widmen könnte, und sicherlich außerhalb des
+Rahmens von diesem). Die Kompatibilitätsrichtlinien zu veröffentlichen
+und sich an ihnen zu halten, ist ein unausweichlicher Teil beim
+Vertrieb von Software. Eine böse Überraschung kann viele Nutzer
+abschrecken. Die eben beschriebene Richtlinie ist zum Teil deshalb gut,
+da sie bereits ziemlich weit verbreitet ist, aber auch weil sie leicht
+zu erklären und zu behalten ist, selbst solche, die noch nicht damit
+vertraut sind.</p><p>Ist ist allgemein anerkannt, das diese Regeln nicht für 
+Versionen vor 1.0 gelten (obwohl Ihre Versionsrichtlinien, um
+Missverständnisse zu vermeiden, das trotzdem explizit sagen sollte). 
+Ein Projekt, welches sich noch in der frühen Entwicklung befindet, kann
+0.1, 0.2, 0.3, usw. in einer Reihe veröffentlichen, bis es für 1.0
+bereit ist, und die Unterschiede zwischen den Versionen können
+beliebig groß sein. Micro-Nummern in einer pre-1.0 Version sind
+optional. Abhängig von der Natur Ihres Projekts, und die Unterschiede
+zwischen den Versionen, werden Sie es nützlich finden, 0.1.0, 0.1.1,
+usw. zu haben oder nicht. Konventionen für pre-1.0 Versionsnummern sind
+relativ locker, hauptsächlich deshalb, weil Leute verstehen, dass 
+strenge Einschränkungen für Kompatibilität die frühe Entwicklung zu 
+sehr behindern würde, und weil Personen die ein Produkte in ihren
+frühen Phasen benutzen, sowieso etwas nachsichtig sind.</p><p>Denken Sie daran, dass all diese Vorschriften nur für dieses
+bestimmte Drei-Komponenten-System gelten. Ihr Projekt kann sich ganz
+leicht ein anderes Drei-Komponenten-System ausdenken, oder sich gar 
+entscheiden, dass es keine derart feine Granularität benötigt und
+statt dessen ein Zwei-Komponenten-System verwenden. Das wichtige ist,
+sich frühzeitig zu entscheiden, genau zu veröffentlichen, was die
+Komponenten bedeuten, und dabei zu bleiben.</p></div><div class="sect2" title="Die Gerade/Ungerade-Strategie"><div class="titlepage"><div><div><h2 class="title"><a id="release-number-even-odd-strategy"/>Die Gerade/Ungerade-Strategie</h2></div></div></div><p>Manche Projekte benutzen die Parität der Minor-Nummer,
+um auf die Stabilität der Software zu deuten: gerade bedeutet stabil,
+ungerade bedeutet instabil. Das gilt nur für die Minor-Nummer, nicht
+für die Major- oder Micro-Nummern. Eine Erhöhung in der Micro-Nummer
+deutet immer noch auf Fehlerbehebungen hin (keine neuen Funktionen),
+und eine Erhöhung der Major-Nummer deutet auf große Änderungen,
+neue Funktionen, usw. hin.</p><p>Der Vorteil des Gerade/Ungerade-Systems, welches unter anderem vom
+Linux-Kernel-Projekt verwendet wurde ist, dass es eine Möglichkeit
+bietet, neue Funktionen zum Test anzubieten, ohne die Nutzer in
+Produktivsystemen möglicherweise instabilen Code auszusetzen. Die Leute
+können durch die Zahlen erkennen, dass es sicher ist, "2.4.21" auf ihren
+im Einsatz befindliche Webserver zu installieren, aber dass "2.5.1"
+besser für Experimente auf dem heimischen Rechner beschränkt bleiben
+sollten. Das Entwicklerteam befasst sich mit den Bug-Meldungen
+die aus der instabilen (ungerade numerierten) Reihe kommen, und wenn
+sich die Sache nach ein paar Micro-Versionen langsam legt, erhöhen sie
+die Minor-Nummer (wodurch sie gerade gemacht wird), setzen die 
+Micro-Nummer wieder auf "0", und veröffentlichen ein vermutlich stabiles 
+Paket.</p><p>Dieses System bewahrt die vorhin erwähnten Kompatibilitsrichtlinien,
+oder tritt zumindest nicht im Konflikt ihnen. Es fügt der 
+Minor-Nummer lediglich ein paar Informationen hinzu. Das zwingt die 
+Minor-Nummer dazu ungefähr doppelt so oft erhöht zu werden, als das sonst
+der Fall wäre, was aber kein großer schaden ist. Das 
+Gerade/Ungerade-System
+ist wahrscheinlich am besten für Projekte geeignet, die sehr
+lange Entwicklungszyklen haben, und von Natur aus einen großen Anteil
+konservativer Nutzer haben, die mehr Wert auf Stabilität als auf
+neue Funktionen setzen. Es ist jedoch nicht die einzige Möglichkeit,
+neue Funktionen im Feld getestet zu bekommen. <a class="xref" href="ch07s03.html" title="Stabilisierung einer neuen Version">„Stabilisierung einer neuen Version“</a><span> später in
+diesem Kapitel</span> beschreibt eine weitere, vielleicht 
+gebräuchlichere Art, potentiell instabilen Code zu veröffentlichen,
+der in einer Weise gekennzeichnet ist, die den Leuten bereits aus dem 
+Namen der Version eine Vorstellung von dem mit ihr verbundenen 
+Risiko/Nutzen-Kompromiss vermittelt.</p></div></div></div></body></html>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Seguimiento de errores</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Seguimiento de errores"><div class="titlepage"><div><div><h1 class="title"><a id="bug-tracker"/>Seguimiento de errores</h1></div></div></div><p>El seguimiento de errores es un tema muy amplio y varios
+aspectos de este son discutidos a lo largo de este libro. Aquí
+intentare concentrarme principalmente en las consideraciones técnicas
+y en la instalación, pero para llegar a esto, debemos empezar con
+una política de preguntas: exactamente ¿qué tipo de información
+va a ser mantenida en el sistema de seguimiento?.</p><p>El término <em class="firstterm">seguimiento de errores</em> puede
+generar confusión ya que estos sistemas se utilizan frecuentemente
+para seguir solicitudes para nuevas características, tareas que se
+efectúan sólo una vez, parches no solicitados—en realidad se
+utilizan para cualquier cosa que pueda tener estados distinguibles
+de comienzo y final, con estados opcionales de transición entre
+estos y que acumulan información a lo largo de su existencia. Por
+esta razón, los sistemas de seguimiento de fallos también son
+llamados <em class="firstterm">de seguimiento de temas</em>, 
+<em class="firstterm">de defectos</em>,
+<em class="firstterm">de solicitudes</em>, <em class="firstterm">trouble ticket 
+system</em>, etc. Más información en <a class="xref" href="apb.html" title="Apéndice B. Gestor de fallos libres">Apéndice B, <em>Gestor de fallos libres</em></a>
+donde hay una lista de programas.</p><p>En este libro continuare utilizando "gestor de fallos" para la
+aplicación que hace el seguimiento, porque es así como la mayoría
+de la gente lo llama y utilizare <em class="firstterm">issue</em> al
+referirme a un punto en particular en la base de datos del gestor
+de fallos. Esto nos permitirá distinguir entre los buenos y malos
+comportamientos que el usuario se puede encontrar (el fallo en si
+mismo) y el <span class="emphasis"><em>registro</em></span> en el gestor del
+descubrimiento, diagnostico y eventual resolución del fallo. Hay
+que recordar que aunque la mayoría de las entradas sean fallos,
+también pueden ser otras tareas.</p><p>El clásico ciclo de vida se parece al siguiente:
+
+</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>
+	Alguien crea una entrada. Ofrecen un resumen, una descripción
+	inicial (incluyendo como reproducir el fallo si es posible. En
+	<a class="xref" href="ch08.html#users-to-volunteers" title="Treat Every User as a Potential Volunteer">“Treat Every User as a Potential Volunteer”</a><span>
+	en <a class="xref" href="ch08.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <em>Coordinando a los Voluntarios</em></a></span> hay ejemplos
+	de como se puede animar la correcta creación de reportes de fallos)
+	y cualquier otra información que el gestor solicite. Quien crea
+	la entrada puede ser un desconocido al proyecto—los reportes
+	de fallos y las solicitudes de características provienen tanto
+	de los usuarios como de los desarrolladores.</p><p>Una vez enviada, la entrada entra en un estado llamado
+	<em class="firstterm">abierto</em> porque ninguna acción ha sido
+	tomada aun. Algunos gestores etiquetan las nuevas entradas
+	como <em class="firstterm">sin verificar</em> o como
+	<em class="firstterm">sin iniciar</em>. No está asignada a nadie,
+	o en algunos sistemas, es asignada a un usuario fantasma que
+	representa la falta de una asignación real. Llegado a este
+	punto, la entrada se encuentra en el área de espera: ha sido
+	registrada, pero aun no ha sido integrada en la conciencia
+	del proyecto.</p></li><li class="listitem"><p>
+	Otros leen la entrada, añaden comentarios y quizás soliciten
+	el esclarecimiento de algunos puntos a quien realizo la entrada.</p></li><li class="listitem"><p>
+	El fallo es <em class="firstterm">reproducido</em>. Este puede que
+	sea el momento más importante en su ciclo vital, ya que incluso
+	que el fallo aun no ha sido resuelto, el hecho de que alguien
+	haya podido reproducirlo además de quien creo la entrada prueba
+	que es genuino y, no menos importante, confirma al creador
+	de la entrada que ha contribuido al proyecto reportando un
+	fallo real.</p></li><li class="listitem"><p>
+	El fallo es <em class="firstterm">diagnosticado</em>: su causa
+	es identificada, y si es posible, es estimado el esfuerzo
+	requerido para repararlo. Hay que asegurarse de que todo esto
+	es registrado en la entrada, ya que en el case en que quien
+	haya hecho el diagnostico abandona el proyecto (lo cual
+	sucede a menudo con desarrolladores voluntarios), alguien más
+	debe ser capaz de continuar con su trabajo.</p><p>Llegados a este punto, o a veces en uno de los anteriores,
+	puede que algún programador ya se haya "adueñado" de la entrada y se
+	lo <em class="firstterm">asigne</em> a si mismo (el proceso es examinado
+	en mayor detalle en <a class="xref" href="ch08.html#delegation-assignment" title="Distingue claramente entre pedir y asignar">“Distingue claramente entre pedir y asignar”</a><span> en <a class="xref" href="ch08.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <em>Coordinando a los Voluntarios</em></a></span>).
+	La <em class="firstterm">prioridad</em> de la entrada puede que también
+	sea fijada en esta etapa. Por ejemplo, si el fallo es tan severo
+	que debería retrasar el próximo lanzamiento, debe ser identificado
+	desde el principio y el gestor debe proporcionar un mecanismo
+	para hacer esto.</p></li><li class="listitem"><p>
+	La entrada es programada para su resolución. Esto no implica
+	necesariamente fijar una fecha para cuando debe ser resuelta.
+	A veces sólo significa decidir para cual próximo lanzamiento (no
+	necesariamente la siguiente) el fallo debe estar corregido o
+	decidir si debe o no bloquear un lanzamiento en particular.
+	Incluso nos podemos olvidar de planificar la reparación del
+	fallo si es algo que se puede hacer rapidamente.</p></li><li class="listitem"><p>
+	El fallo es reparado (o la tarea es completada, o el
+	parche es aplicado o lo que sea). El cambio o conjunto de
+	cambios que arreglan el fallo deben ser registrados en un
+	comentario en la entrada, después de lo cual ésta es 
+	<em class="firstterm">cerrada</em> o marcada como
+	<em class="firstterm">resuelta</em>.</p></li></ol></div><p>
+
+</p><p>Existen variaciones en este ciclo. A veces el problema es cerrado
+seguidamente después de ser archivado, porque resulta que no es un fallo,
+sino que es un malentendido por parte del usuario. Mientras el proyecto
+vaya ganando usuarios, más y más de estas entradas invalidas aparecerán,
+y los desarrolladores las cerraran con respuestas cada vez menos
+respetuosas. Hay que intentar protegerse de ésta tendencia, pues no le
+hace ningún bien a nadie, porque el usuario en cada caso no es responsable
+de las entradas invalidas previas. Esta tendencia estadísticas sólo es
+divisada por los desarrolladores, no por los usuarios. (En 
+<a class="xref" href="ch03s05.html#bug-filtering" title="Pre-filtrado del gestor de fallos">“Pre-filtrado del gestor de fallos”</a><span> más adelante
+en este capítulo,</span> examinaremos algunas técnicas para reducir
+el número de entradas invalidas.) También puede suceder que varios
+usuarios estén experimentando el mismo malentendido una y otra vez,
+lo cual significa que algún aspecto de la aplicación necesita volver
+a ser diseñada. Este tipo de patrones son los más sencillos de ver
+cuando se utiliza un gestor de entradas que monitorice la base de 
+datos de fallos. Más en <a class="xref" href="ch08s02.html#issue-manager" title="Issue Manager">“Issue Manager”</a><span>
+en <a class="xref" href="ch08.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <em>Coordinando a los Voluntarios</em></a></span>.</p><p>Otra variación muy común de este ciclo de vida es cuando la entrada
+es cerrada al ser un <em class="firstterm">duplicado</em> poco después
+del paso 1. Un duplicado aparece cuando alguien crea una entrada para
+un problema ya conocido por el proyecto. Los duplicados no están
+limitados a entradas abiertas: es posible que un fallo haya reaparecido
+después de haberlo reparado (esto es conocido como <em class="firstterm">regresión</em>),
+por lo cual, la vía preferida es usualmente reabrir la entrada original y
+cerrar cualquier nuevo reporte como duplicado de este. El sistema
+de gestión de fallo debe mantener un seguimiento de esta relación
+bidimensional, de forma que la información en los duplicados este
+disponible en la entrada original y vice versa.</p><p>Una tercera variación es cuando los desarrolladores cierran la
+entrada pensando que ya ha sido resuelta y el usuario que la ha
+reportado rechaza esa reparación y es reabierta. Por lo general esto
+es porque el desarrollador no tiene la capacidad de reproducir
+el fallo o porque no han probado su reparación siguiendo
+la misma receta para la reproducción descrita por el usuario.</p><p>A parte de estas variaciones existen pequeños detalles de
+este ciclo de vida que pueden variar dependiendo de la aplicación
+de seguimiento. Pero la forma básica es la misma e incluso cuando
+el ciclo de vida no es sólo para el software open source, tiene
+implicaciones acerca de cómo los proyectos utilizan sus
+sistemas de control de fallos.</p><p>Implícito en el paso 1, el sistema es una cara tan publica
+del proyecto, como lo pueden ser las listas de correo o las paginas
+web. Cualquiera puede crear una entrada, cualquiera puede ver
+una entrada y cualquiera puede navegar la lista de entradas
+abiertas. De tal manera que nunca se sabe cuantas personas están
+interesadas en ver el progreso en una entrada en particular. Aunque
+el tamaño y la capacidad de la comunidad de desarrolladores constriñe
+la frecuencia con la que los problemas son atacados, el proyecto
+debe al menos intentar reconocer cada entrada mientras vayan
+llegando. Incluso si el problema persiste por un tiempo, una
+repuesta anima al usuario a mantenerse involucrado porque siente
+que un humano ha visto lo que ha hecho (recordad que rellenar
+una entrada requiere mucho más tiempo que un correo electrónico).
+Incluso mejor, una vez que una entrada es vista por un desarrollador,
+entra en la conciencia del proyecto, en el sentido en que este
+puede mantenerse al acecho de otras instancias del mismo problema,
+puede comentarlo con otros desarrolladores, etc.</p><p>La necesidad de reacciones oportunas implica dos cosas:
+
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>
+	El sistema de seguimiento debe conectarse a la lista de correos
+	de manera que cada cambio a una entrada, incluyendo su redacción
+	inicial, genere un correo describiendo lo sucedido. Esta lista
+	de correos es, a veces, diferente de la lista de desarrollo ya
+	que quizás, no todos los desarrolladores quieran recibir correos
+	automáticos con fallos, pero (al igual que con los correos con
+	cambios) la cabecera Reply-to debe ser fijada a la lista
+	de desarrollo.</p></li><li class="listitem"><p>
+	El formulario donde se rellena la entrada debe almacenar la
+	dirección de correo electrónico de quien la reporta, de forma
+	que pueda ser contactada para solicitar más información.
+	(No obstante, no debe <span class="emphasis"><em>requerir</em></span> la
+	dirección ya que algunas personas prefieren realizar el
+	reporte anónimamente. Más información sobre el anonimato
+	en <a class="xref" href="ch03s02.html#anonymity" title="El anonimato y la participación">“El anonimato y la participación”</a><span>
+	a continuación en este capítulo</span>.</p></li><li class="listitem"/></ul></div><p>
+
+</p><div class="sect2" title="Interacción con las Lista de Correo"><div class="titlepage"><div><div><h2 class="title"><a id="bug-tracker-email-interaction"/>Interacción con las Lista de Correo</h2></div></div></div><a id="bug-tracker-mailing-list-interaction"/><p>Hay que asegurarse de que el gestor de fallos no se convierte
+en un foro de discusiones. Aunque es importante mantener una presencia
+humana en el gestor, no está preparado para discusiones en tiempo
+real. Hay que pensar en éste como un archivador, una forma de
+organizar hechos y referencias a otras discusiones, principalmente
+aquellas que suceden en las listas de correo.</p></div><div class="sect2" title="Pre-filtrado del gestor de fallos"><div class="titlepage"><div><div><h2 class="title"><a id="bug-filtering"/>Pre-filtrado del gestor de fallos</h2></div></div></div><p>Muchas de las bases de datos de fallos sufren eventualmente del mismo
+problema: una cantidad devastadora de fallos duplicados o inválidos hechos
+por usuarios bien intencionados pero sin experiencia o poco informados. El
+primer paso para combatir esta tendencia es, por lo general, colocar un vistoso
+aviso en la página principal del gestor de fallos, explicando como saber si
+un bug es realmente un bug, como buscar si el bug ya está incluido y finalmente,
+como reportar efectivamente si aun se cree que es un nuevo fallo.</p><p>Esto reducirá el nivel de ruido por un tiempo, pero mientras el
+número de usuarios vaya creciendo, el problema regresara eventualmente.
+Ningún individuo puede ser culpado de esto, ya que cada uno está
+intentando contribuir en beneficio del proyecto e incluso cuando
+su primer reporte no sea de verdadera utilidad, se desea animarlos
+para que continúen involucrándose y para que puedan hacer mejores
+reportes en el futuro. Mientras tanto, el proyecto necesita mantener
+en lo posible la base de datos libre de basura.</p><p>Las dos cosas que tendrán el máximo efecto a la hora de prevenir
+este problema son: asegurarnos de que hay gente vigilando el gestor de fallos
+quienes tienen el conocimiento suficiente para cerrar problemas como
+inválidos o duplicados mientras vayan llegando y requiriendo (o fomentando
+duramente) a los usuarios que confirme su reporte con otras personas antes
+de reportarlos en el gestor.</p><p>La primera técnica parece ser utilizada universalmente. Incluso
+proyectos con gigantescas bases de datos de fallos (digamos, el gestor
+de Debian en 
+<a class="ulink" href="http://bugs.debian.org/">http://bugs.debian.org/</a>, el cual contenía 315,929 reportes
+al momento de escribir este libro) siguen ordenando todo de tal manera
+que <span class="emphasis"><em>todos</em></span> puedan ver los reportes mientras llegan.
+Puede que sea una persona diferente dependiendo de la categoría del
+problema. Por ejemplo, el proyecto Debian es una colección de paquetes
+de software, de manera que el proyecto automáticamente enruta cada
+reporte a la persona que mantiene el paquete específico. Por supuesto,
+a veces los usuarios no identifican bien la categoría a la que pertenece
+el problema, con el resultado de que el reporte es enviado a la persona
+equivocada, quien entonces deberá redireccionarlo. No obstante, lo
+importante es que la carga sigue siendo distribuida—cada vez que
+un usuario crea correcta o incorrectamente al reportar, la vigilancia
+de las entradas sigue siendo distribuida más o menos uniformemente entre los
+desarrolladores, de manera que cada reporte es respondido en un tiempo
+justo.</p><p>La segunda técnica esta menos extendida, probablemente sea porque
+es más difícil de automatizar. La idea esencial es que cada nuevo
+reporte es apadrinado hacia la base de datos. Cuando un usuario cree
+haber encontrado un bug, se le pide que lo describa en una de las
+listas de correo o en algún canal de IRC para que reciba confirmación
+de alguien de que en realidad es un fallo. Al introducir este segundo
+par de ojos puede prevenir muchos reportes falsos. A veces esta segunda
+persona puede identificar que este comportamiento no es un fallo o que
+ha sido resuelto recientemente. O puede que este familiarizado con los
+síntomas gracias a problemas anteriores, evitando un duplicado
+al señalar al usuario el viejo reporte. A veces es tan sencillo como
+preguntar al usuario "¿Has revisado el gestor de fallos para asegurarte
+de que no ha sido reportado ya?" Muchas personas no piensan en esto,
+pero se contentan con hacer la búsqueda sabiendo que hay alguien
+a la <span class="emphasis"><em>expectativa</em></span> de que lo hagan.</p><p>El sistema de apadrinamiento puede mantener la limpieza de
+los reportes en la base de datos, pero también tiene algunas
+desventajas. Muchas personas harán los reportes sin consultar,
+al no buscar o despreocupándose de las instrucciones de buscar a un
+padrino para el nuevo reporte. Aun así, es necesario que los
+voluntarios sigan vigilando las bases de datos y dado que la
+mayoría de los nuevos usuarios que reportan fallos no entienden
+la dificultad de mantenerlas, no es justo
+reprenderlos duramente por ignorar las directrices. Aun así, los
+voluntarios deben ser vigilantes y ejercitar restricciones en como
+se rechazan reportes sin apadrinar de vuelta a quien lo haya hecho.
+El objetivo es entrenar a cada reportero para que utilice el sistema
+de apadrinamiento en el futuro, de tal manera que haya una siempre
+creciente fondo de gente quienes entienden el sistema de filtrado
+de fallos. Al encontrarnos con un reporte sin padrino, los pasos
+ideales a tomar son:</p><div class="orderedlist"><ol class="orderedlist"><li class="listitem"><p>
+	Inmediatamente responder el reporte, agradeciendo al usuario
+	por hacerlo, pero dirigiéndolo a las directrices de apadrinamiento
+	(las cuales deberían, por supuesto, estar publicadas en un lugar
+	prominente del sitio web.)
+	</p></li><li class="listitem"><p>
+	Si el reportes es claramente valido y no un duplicado, hay que
+	aprobarlo de todas formas y de esta manera que inicie su
+	ciclo de vida normal. Después de todo, quien ha realizado el
+	reporte ya ha sido informado sobre el apadrinamiento, así que
+	no tiene sentido perder el trabajo ya hecho al cerrarlo como
+	invalido.</p></li><li class="listitem"><p>
+	Si el problema no es claramente valido, hay que cerrarlo, pero
+	solicitando que sea reabierto si reciben la confirmación por
+	parte de un padrino. Cuando lo hagan, deberán colocar una
+	referencia al hilo de confirmación (por ejemplo, una URL en
+	el archivo de la listas de correo).</p></li></ol></div><p>Hay que recordar que a pesar de que este sistema mejorara la proporción
+señal/ruido en la base de datos de problemas a lo largo del tiempo, nunca
+pondrá fin a los reportes inválidos. La única manera de evitar esto
+por completo es cerrar el gestor de fallos a todos quienes no sean
+desarrolladores—una cura que casi siempre es peor que la
+enfermedad. Es mejor aceptar que la limpieza de reportes inválidos siempre
+será una parte de la rutina de mantenimiento del proyecto e intentar obtener
+la mayor cantidad de ayuda para hacerlo.</p><p>Más en
+<a class="xref" href="ch08s02.html#issue-manager" title="Issue Manager">“Issue Manager”</a><span> en el  
+<a class="xref" href="ch08.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <em>Coordinando a los Voluntarios</em></a></span>.</p></div></div></body></html>

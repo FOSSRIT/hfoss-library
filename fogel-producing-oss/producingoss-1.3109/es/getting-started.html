@@ -1,0 +1,734 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Capítulo 2. Primeros Pasos</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="index.html" title="Producir Software de Código Abierto"><link rel="prev" href="today.html" title="La Situación de Hoy"><link rel="next" href="license-quickstart.html" title="Escogiendo una licencia y Aplicándola"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 2. Primeros Pasos</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="today.html">Anterior</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="license-quickstart.html">Siguiente</a></td></tr></table><hr></div><div class="chapter" title="Capítulo 2. Primeros Pasos"><div class="titlepage"><div><div><h2 class="title"><a name="getting-started"></a>Capítulo 2. Primeros Pasos</h2></div></div></div><div class="toc"><p><b>Tabla de contenidos</b></p><dl><dt><span class="sect1"><a href="getting-started.html#starting-from-what-you-have">Empezando Con lo Que se Tiene</a></span></dt><dd><dl><dt><span class="sect2"><a href="getting-started.html#choosing-a-name">Escoger un Buen Nombre</a></span></dt><dd><dl><dt><span class="sect3"><a href="getting-started.html#own-the-name">Poseer el nombre en los espacios de nombre importantes</a></span></dt></dl></dd><dt><span class="sect2"><a href="getting-started.html#mission-statement">Tener los objetivos claros</a></span></dt><dt><span class="sect2"><a href="getting-started.html#state-freedom">Declara Que el Proyecto es Libre</a></span></dt><dt><span class="sect2"><a href="getting-started.html#features-and-requirements">Lista de Características y Requerimientos</a></span></dt><dt><span class="sect2"><a href="getting-started.html#development-status">Estado del Desarrollo</a></span></dt><dd><dl><dt><span class="sect3"><a href="getting-started.html#development-status-honesty">El estado del desarrollo debe reflejar siempre la realidad.</a></span></dt></dl></dd><dt><span class="sect2"><a href="getting-started.html#downloads">Descargas</a></span></dt><dt><span class="sect2"><a href="getting-started.html#vc-and-bug-tracker-access">Control de versiones y Acceso al Bug Tracker</a></span></dt><dt><span class="sect2"><a href="getting-started.html#communications-channels">Canales de Comunicación</a></span></dt><dt><span class="sect2"><a href="getting-started.html#developer-guidelines">Pautas de Desarrollo</a></span></dt><dt><span class="sect2"><a href="getting-started.html#documentation">Documentación</a></span></dt><dd><dl><dt><span class="sect3"><a href="getting-started.html#documentation-availability">Disponibilidad de la documentación</a></span></dt><dt><span class="sect3"><a href="getting-started.html#developer-documentation">Documentación para Desarrolladores</a></span></dt></dl></dd><dt><span class="sect2"><a href="getting-started.html#examples-and-demos">Demos, Capturas de Pantalla, Videos y Ejemplos de Salidas</a></span></dt><dt><span class="sect2"><a href="getting-started.html#hosting">Hosting</a></span></dt></dl></dd><dt><span class="sect1"><a href="license-quickstart.html">Escogiendo una licencia y Aplicándola</a></span></dt><dd><dl><dt><span class="sect2"><a href="license-quickstart.html#license-quickstart-non-gpl">Las licencias "Haz lo que quieras"</a></span></dt><dt><span class="sect2"><a href="license-quickstart.html#license-quickstart-gpl">La GPL</a></span></dt><dt><span class="sect2"><a href="license-quickstart.html#license-quickstart-applying">Cómo aplicar una licencia a nuestro software</a></span></dt></dl></dd><dt><span class="sect1"><a href="setting-tone.html">Ajustar el tono</a></span></dt><dd><dl><dt><span class="sect2"><a href="setting-tone.html#avoid-private-discussions">Evitar discusiones privadas</a></span></dt><dt><span class="sect2"><a href="setting-tone.html#prevent-rudeness">Cortar de Raíz la Mala Educación</a></span></dt><dt><span class="sect2"><a href="setting-tone.html#code-review">Practicar Revisiones Visibles del Código</a></span></dt><dd><dl><dt><span class="sect3"><a href="setting-tone.html#subversion-commit-review">Caso de Estudio</a></span></dt></dl></dd><dt><span class="sect2"><a href="setting-tone.html#be-open-from-day-one">Se abierto desde el primer día</a></span></dt><dd><dl><dt><span class="sect3"><a href="setting-tone.html#avoid-exposure-events">Esperar sólo crea un evento de exposición</a></span></dt></dl></dd><dt><span class="sect2"><a href="setting-tone.html#opening-closed-projects">Al abrir un proyecto cerrado, hay que ser sensible acerca de
+la magnitud de los cambios</a></span></dt></dl></dd><dt><span class="sect1"><a href="announcing.html">Anunciando</a></span></dt></dl></div><div class="simplesect"><div class="titlepage"></div><p>El clásico modelo de cómo los proyectos de software libre deben iniciar fue propuesto
+por Eric Raymond, en un artículo ahora famoso sobre procesos de código abierto titulado
+<em class="citetitle">La catedral y el bazar</em>. Él escribió:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Todos los trabajos buenos en software comienzan tratando de paliar un problema personal de quien los programa</em></span></p><p>(de <span class="bold"><strong><a class="ulink" href="http://www.catb.org/~esr/writings/cathedral-bazaar/" target="_top">catb.org/~esr/writings/cathedral-bazaar/</a>
+      </strong></span>)</p></blockquote></div><p>Es de notar que Raymond no estaba diciendo que los proyectos de código abierto no sólo suceden
+cuando cierto individuo tiene una necesidad. En cambio, nos está diciendo que los 
+<span class="emphasis"><em>buenos</em></span> programas son resultado de que un programador tenga un interés personal
+en ver el problema resulto. La relevancia de esto para el software libre ha sido que ésta necesidad
+personal sea frecuentemente a motivación para iniciar un proyecto de software libre.</p><p>Esto sigue siendo la manera cómo muchos de los proyectos de software libre se inician, pero menos
+ahora que en 1997, cuando Raymond escribió esas palabras. Hoy, tenemos el fenómeno de organizaciones
+&#8212;incluidas corporaciones con fines de lucro, de gobierno, sin fines de lucro, etc&#8212;iniciando desde cero, proyectos Open Source
+centralizados y a gran escala. El desarrollador solitario, tecleando algo de código para
+resolver un problema local y luego dándose cuenta de que los resultados tienen un mayor
+aplicación, sigue siendo la fuente de muchos software libre, pero esa no es la única historia.</p><p>De todas formas, el objetivo de Raymond sigue siendo profundo. La condición esencial
+es que los productores de software libre tengan un interés directo en su éxito, usualmente porque ellos
+mismos lo utilizan o trabajan directamente con personas que lo usan. Si el software no hace lo que se supone debería hacer, la persona u
+organización que lo han producido sentirán insatisfacción en su labor diaria. Por ejemplo,
+el software libre desarrollado por la Fundación Kuali  (<a class="ulink" href="http://www.kuali.org/" target="_top">kuali.org</a>), utilizado por
+instituciones educativas para manejar sus finanzas, becas de
+investigación, sistemas de recursos humanos, información de estudiantes, etc,
+poco de esto puede ser considerado como un
+problema personal de un programador. En particular éste problema
+surge directamente de la experiencia de las instituciones interesada, por lo cual si el proyecto
+falla en satisfacerlos, ellos lo sabrán. Este arreglo produce buenos programas porque el bucle
+de críticas fluye en la dirección correcta. El programa no está siendo escrito para ser vendido
+a alguien más, es solo para que sean ellos quienes resuelvan <span class="emphasis"><em>sus</em></span> problemas. Está
+siendo desarrollado para resolver su <span class="emphasis"><em>propio</em></span> problema, luego compartiéndolo
+con todo el mundo como si el problema fuera una enfermedad y el software la medicina,
+la cual debe ser distribuida para erradicar la epidemia.</p><p>Este capítulo trata de cómo introducir un nuevo proyecto de software libre al mundo, pero
+muchas de sus recomendaciones sonarán familiares a una organización sanitaria distribuyendo
+medicinas. Los objetivos son muy similares: quieres dejar claro lo que hace la medicina,
+hacerla llegar a las manos correctas y asegurarte de que aquellos quienes
+la reciben saben como usarla. Pero con el software, también deseas incitar a algunos de los
+receptores a unirse al esfuerzo de investigación para mejorar la medicina.</p><p>La distribución del software libre es una tarea a dos bandas. El programa necesita
+usuarios y desarrolladores. Estas dos necesidades no tienen por que estar en conflicto, pero
+si que añaden cierta complejidad a la presentación inicial de un proyecto. Alguna información
+es útil para las dos audiencias, alguna sólo lo es para alguna u otra. Ambos tipos de información
+deben suscribirse al principio de las presentaciones en escala, esto es, el grado de detalle
+con el que se presenta cada etapa debe corresponder a la cantidad de tiempo y
+esfuerzo puesto por el lector. Un mayor esfuerzo debe tener siempre una mayor recompensa.
+Cuando los dos no se relacionan conjuntamente, las personas pueden perder rápidamente su fe
+y perder el impulso.</p><p>El corolario a esto es:<span class="emphasis"><em>las apariencias importan</em></span>. Los programadores
+en particular, no desean creer esto. Su amor por la sustancia sobre la forma es casi
+un punto de orgullo profesional. No es un accidente que tantos desarrolladores exhiban
+una antipatía hacia los trabajos en marketing y en relaciones públicas o que diseñadores
+gráficos profesionales usualmente se sientan horrorizados de los diseños
+que los desarrolladores hacen por su cuenta.</p><p>Esto es penoso, ya que hay situaciones en las que la forma <span class="emphasis"><em>es</em></span> la
+sustancia y la presentación de proyectos es una de estas. Por ejemplo, lo primero que un visitante
+descubre sobre un proyecto es como se ve su sitio web. Esta información es absorbida antes de que
+el contenido en si sea comprendido&#8212;antes de que cualquier línea haya sido leída o enlaces
+pulsados. Aunque parezca injusto, las personas no pueden evitar el formarse una opinión
+inmediatamente después de la primera impresión. La apariencia del sitio señala si se ha tomado
+cuidado en la organización de la presentación del proyecto. Los humanos tenemos una antena
+extremadamente sensible para detectar el empeño en el cuidado. Muchos de nosotros podemos
+decir con sólo un vistazo si un sitio web ha sido ensamblado rápidamente o ha sido diseñado
+con cuidado. Ésta es la primera pieza de información que el proyecto muestra y la impresión
+que cree será asociada al resto del proyecto por asociación.</p><p>Aunque mucho de éste capítulo habla acerca del contenido con el que se debería
+iniciar el proyecto, recuerde que la presentación también importa. Ya que el sitio web
+debe funcionar para dos tipos diferentes de visitantes&#8212;usuarios y desarrolladores&#8212;
+hay que ser directo y conciso. A pesar de que este no es el lugar para un tratado general acerca
+de diseño web, un principio es suficientemente importante para merecer nuestra atención,
+particularmente cuando sirve a múltiples audiencias: la gente debe tener una idea de a donde
+lleva un enlace antes de pulsar en el. Por ejemplo, debe ser obvio que <span class="emphasis"><em>con sólo
+ver el enlace</em></span> a la documentación para los usuarios, que les lleve a la documentación
+para los usuarios, sin mencionar la documentación para los desarrolladores. Dirigir un proyecto
+se basa parcialmente en suministrar información, pero también en suministrar comodidad.
+La mera presencia de ofrecer ciertos estándares, en lugares obvios, tranquiliza a usuarios
+y desarrolladores quienes están decidiendo si desean involucrarse. Dice que este proyecto
+funciona, ha anticipado las preguntas que la gente puede hacer y ha hecho un esfuerzo
+en responderlas sin la necesidad del más mínimo esfuerzo por parte del visitante. Al dar
+ésta aura de preparación, el proyecto envía un mensaje: "Su tiempo no será malgastado si
+se involucra", lo que es exactamente lo que la gente desea escuchar.</p><div class="sect2" title="Primero Investiga"><div class="titlepage"><div><div><h3 class="title"><a name="look-around"></a>Primero Investiga</h3></div></div></div><p>Antes de iniciar un proyecto Open Source hay un importante
+advertencia:</p><p>Siempre investiga si existe un proyecto que hace lo que deseas. Las posibilidades son
+muy buenas de que cualquier problema que desees resolver ahora alguien más lo haya deseado 
+resolver con anterioridad. Si han sido capaces de resolverlo y han liberado bajo una licencia libre 
+entonces hoy, no será necesario inventar la rueda. Existen excepciones claro: si deseas iniciar
+un proyecto como experiencia educativa, el código pre-existente no es de ayuda o quizás el
+proyecto que deseas iniciar es muy especializado y sabes que no existe la posibilidad de que
+alguien más lo haya hecho ya. Pero generalmente, no hay necesidad en no investigar ya que las
+ganancias pueden ser grandiosas. Si los buscadores más utilizados no muestran nada, intenta tus
+búsquedas directamente en: <a class="ulink" href="http://github.com/" target="_top">github.com</a>, <a class="ulink" href="http://ohloh.net/" target="_top">ohloh.net</a>, <a class="ulink" href="http://freecode.com/" target="_top">freecode.com</a>, <a class="ulink" href="http://code.google.com/" target="_top">code.google.com</a>, <a class="ulink" href="http://www.sourceforge.net/" target="_top">sourceforge.net</a>, y en el
+directorio de software libre de la Free Software Foundation en <a class="ulink" href="http://directory.fsf.org/" target="_top">directory.fsf.org</a>.</p><p>Incluso si no se encuentra exactamente lo que estamos buscando, podría encontrar
+algo parecido, a lo que tiene más sentido unirse a ese proyecto y añadir funcionalidad
+en lugar de empezar desde cero por si mismo.</p></div></div><div class="sect1" title="Empezando Con lo Que se Tiene"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="starting-from-what-you-have"></a>Empezando Con lo Que se Tiene</h2></div></div></div><p>Has investigado, sin encontrar nada que realmente se adapte a
+tus necesidades, y decides iniciar un nuevo proyecto.</p><p>¿Ahora qué?</p><p>Lo más difícil acerca de lanzar un proyecto de software libre es transformar una
+visión privada a una pública. Tú y tu organización quizás sepan exactamente lo que deseas
+pero expresar ese objetivo de una manera comprensiva al resto del mundo tiene su trabajo. 
+De hecho, es esencial, que te tomes tu tiempo para hacerlo. Tú y los otros fundadores deben decidir sobre qué va
+realmente el proyecto&#8212;eso es, decidir sus limitaciones, lo que <span class="emphasis"><em>no podrá</em></span>
+hacer como lo que sí&#8212;y escribir una declaración de objetivos. Ésta parte no suele ser
+usualmente difícil, aunque puede revelar afirmaciones y desacuerdos sobre la naturaleza del
+proyecto, lo cual esta bien: mejor resolver esto ahora que luego. El próximo paso es empaquetar
+el proyecto para el consumo público, y esto es, básicamente, trabajo puro y duro.</p><p>Lo que lo hace laborioso es porque consiste principalmente en organizar y documentar lo que
+ya todo el mundo sabe&#8212;todos aquellos involucrados en el proyecto hasta ahora. Así que, para
+las personas trabajando ya, no existen beneficios inmediatos. Estos no necesitan de un fichero
+<code class="filename">README</code> que resuma el proyecto ni de un documento de diseño o manual de usuario.
+No necesitan de un árbol de código cuidadosamente ordenado conforme a los estándares informales,
+ampliamente utilizados para las distribuciones de fuentes. De cualquier forma como esté 
+ordenado el código fuente estará bien, porque ya estarán acostumbrados de todas formas, y si el
+código funciona, saben cómo usarlo. Ni siquiera importa si las afirmaciones fundamentales
+sobre la arquitectura del proyecto siguen sin documentar, ya están familiarizados con lo que
+deben hacer.</p><p>En cambio, los recién llegados, necesitan de todas estas cosas. Afortunadamente, no las
+necesitan todas a la vez. No es necesario proporcionar todos los recursos posibles antes de
+tomar un proyecto público. Quizás en un mundo perfecto, todo nuevo proyecto open source
+empezaría su vida con un riguroso documento de diseño, un manual de usuario completo (marcando
+especialmente las características planeadas pero que aun no han sido implementadas), código
+empaquetado hermosamente y portable, capaz de ejecutar en cualquier plataforma y así sucesivamente.
+En realidad, cuidar de todos estos detalles consumiría demasiado tiempo, y de todas maneras,
+es trabajo con el que podrían ayudar otros una vez que el proyecto esté en marcha.</p><p>Por otro lado, lo que <span class="emphasis"><em>sí</em></span> es necesario, es que se realice una
+inversión apropiada en la presentación, de forma que los recién llegados puedan superar
+el obstáculo inicial de no estar familiarizados con el proyecto. Pensemos en ello
+como en el primer paso en un proceso de inicio (bootstrapping), llevar al proyecto a un tipo
+de activación de energía mínima. He escuchado llamar a este umbral como
+<em class="firstterm">hacktivation energy</em>: la cantidad de energía que debe aportar
+un recién llegado antes de recibir algo a cambio. Mientras menor sea ésta energía, mejor.
+La primera tarea es hacer descender ésta <span class="emphasis"><em>hacktivation energy</em></span> a niveles
+que animen a la gente a involucrarse.</p><p>Cada una de las siguientes secciones, describen un aspecto importante de iniciar
+un nuevo proyecto. Están presentadas casi en el mismo orden en el que un nuevo visitante
+las encontraría, aunque claro, el orden en el cual sean implementadas puede ser diferente.
+Incluso pueden ser tratadas como una lista de tareas. Cuando se inicie un proyecto,
+asegúrese de revisar la lista y de que cada uno de los elementos sean cubiertos, o al
+menos asegurar cierta comodidad con las posibles consecuencias de dejar alguna aparte.</p><div class="sect2" title="Escoger un Buen Nombre"><div class="titlepage"><div><div><h3 class="title"><a name="choosing-a-name"></a>Escoger un Buen Nombre</h3></div></div></div><p>Colócate en la posición de alguien que acaba de escuchar acerca
+de su proyecto, quizás por alguien quien fortuitamente tropezó con
+éste mientras buscaba por alguna aplicación para resolver un problema.
+Lo primero que encontraran será el nombre del proyecto.</p><p>Un nombre genial no hará que automáticamente el proyecto tenga
+éxito, y un nombre malo no significa que éste acabado&#8212;bueno, 
+en realidad un mal nombre probablemente podría hacer eso, pero empecemos
+asumiendo que nadie está activamente intentando hacer que su proyecto
+falle. De todos modos, un mal nombre puede desacelerar la adopción
+del programa porque la gente no se lo tome seriamente o porque
+simplemente les cueste recordarlos.</p><p>Un buen nombre:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Da cierta idea de lo que el proyecto hace,
+	o al menos está relacionado de una manera obvia, como si
+	alguien conoce el nombre y sabe lo que hace, después lo 
+	recordaran rápidamente.</p></li><li class="listitem"><p>Es fácil de recordar. Veamos, no hay nada
+	de falso en el hecho de que el ingles se a convertido en
+	el lenguaje por defecto de Internet: "fácil de recordar"
+	significa "fácil de recordar para alguien que sepa leer en ingles."
+    Los nombres que son juegos de palabras dependientes 
+	de la pronunciación en ingles nativo, por ejemplo, serán opacos
+	para muchos lectores no nativos en ingles. Si el juego de palabras
+	es particularmente llamativo y memorable, quizás sí valga
+	la pena. Sólo recuerde que muchas personas al ver el nombre
+	no lo escucharán en sus mentes de la misma manera que un
+	ingles nativo lo haría.</p></li><li class="listitem"><p>No tiene el mismo nombre que otro proyecto
+	y no infringe ninguna marca comercial. Esto es por 
+	buenos modales, y tener un buen sentido legal. No desea
+	crear confusiones de identidad. Ya es bastante difícil
+	mantenerse al día con todo lo que hay disponible en
+	la red, sin tener diferentes cosas con el mismo nombre.</p><p>Los enlaces mencionados anteriormente en <a class="xref" href="getting-started.html#look-around" title="Primero Investiga">&#8220;Primero Investiga&#8221;</a>
+	son muy útiles en descubrir si algún otro proyecto
+	ya tiene el mismo nombre en el que estábamos pensando.
+	Para los Estados Unidos, podemos encontrar buscadores gratuitos
+    de marcas registradas en <a class="ulink" href="http://www.uspto.gov/" target="_top">uspto.gov</a>.</p></li><li class="listitem"><p>Está disponible como un nombre de dominio
+            <code class="systemitem">.com</code>,
+            <code class="systemitem">.net</code>, y
+            <code class="systemitem">.org</code>.
+	Hay que escoger alguno, probablemente <code class="systemitem">.org</code>,
+	para promocionarse como el sitio oficial para el proyecto.
+	Los otros dos deben reenviar allí simplemente para evitar
+	que terceras partes creen una confusión de identidad sobre
+	el nombre del proyecto. Incluso si piensa en hospedar el
+	proyecto en otro sitio (vea <a class="xref" href="getting-started.html#starting-with-canned-hosting">&#8220;Hosting&#8221;</a>)
+	puede registrar los dominios específicos del proyecto y
+	direccionarlos al sitio del hospedaje. Ayuda mucho a los
+	usuarios tener que recordar sólo un URL.</p></li><li class="listitem"><p>Si es posible, está disponible como un nombre de
+            usuario en <a class="ulink" href="https://twitter.com/" target="_top">Twitter</a>
+            y otros sitios de microblog. Ver <a class="xref" href="getting-started.html#own-the-name" title="Poseer el nombre en los espacios de nombre importantes">&#8220;Poseer el nombre en los espacios de nombre importantes&#8221;</a>
+            para más información sobre esta y su relación con el nombre de
+            dominio.</p></li></ul></div><p>
+
+</p><div class="sect3" title="Poseer el nombre en los espacios de nombre importantes"><div class="titlepage"><div><div><h4 class="title"><a name="own-the-name"></a>Poseer el nombre en los espacios de nombre importantes</h4></div></div></div><p>Para los proyectos grandes, es una buena idea de poseer el
+nombre del proyecto en tantos espacios de nombre relevantes en
+Internet como puedas. Por espacios de nombres, me refiero no sólo al
+sistema de nombres de dominio, sino también a los servicios en línea
+en el que los nombres de la cuenta (nombres de usuario) son los
+manejadores visibles públicamente por el cual la gente se refiere al
+proyecto. Si tienes el mismo nombre en todos los lugares donde la
+gente te buscaría, haces fácil para las personas a mantener un leve
+interés en el proyecto hasta que estén listos para involucrarse
+más.</p><p>Por ejemplo, el proyecto de escritorio Gnome tiene el nombre de
+dominio <a class="ulink" href="http://gnome.org/" target="_top">gnome.org</a>
+<sup>[<a name="idp376" href="#ftn.idp376" class="footnote">12</a>]</sup>, el identificador de Twitter
+<a class="ulink" href="https://twitter.com/gnome" target="_top">@gnome</a>, el nombre de
+usuario <a class="ulink" href="https://identi.ca/gnome" target="_top">gnome</a> en
+Identi.ca<sup>[<a name="idp380" href="#ftn.idp380" class="footnote">13</a>]</sup>, el
+nombre de usuario <a class="ulink" href="https://github.com/gnome" target="_top">gnome</a>
+en GitHub.com<sup>[<a name="idp385" href="#ftn.idp385" class="footnote">14</a>]</sup>, y en la red freenode IRC
+(ver <a class="xref" href="irc.html" title="IRC / Sistemas de Chat en Tiempo Real">&#8220;IRC / Sistemas de Chat en Tiempo Real&#8221;</a>) tienen el canal <code class="code">#gnome</code>,
+aunque también mantienen sus propios servidores de IRC (donde, por
+supuesto, controlan el espacio de nombres de canal de todos
+modos).</p><p>Todo esto hace al proyecto Gnome espléndidamente fácil de
+encontrar: por lo general está justo donde un contribuyente potencial 
+esperaría que estuviera. Por supuesto, Gnome es un proyecto grande y
+complejo con miles de colaboradores y muchas subdivisiones; la ventaja
+para Gnome de sea fácil de encontrar es mayor de lo que sería para un
+proyecto nuevo, ya que por ahora hay muchas maneras de participar en
+Gnome. Pero, sin duda, nunca <span class="emphasis"><em>dañará</em></span> tu proyecto
+el poseer su nombre en la mayor cantidad de espacios de nombres
+relevantes como se pueda, y esto a veces puede ayudar. Así que cuando
+inicies un proyecto, piensa en cual debería ser su identificador en
+línea y registra ese identificador con los servicios de red que
+pienses que probablemente te interesan. Los mencionados anteriormente
+son probablemente una buena lista inicial, pero tu podrías conocer de
+otros que sean relevantes para el tema particular de tu
+proyecto.</p></div></div><div class="sect2" title="Tener los objetivos claros"><div class="titlepage"><div><div><h3 class="title"><a name="mission-statement"></a>Tener los objetivos claros</h3></div></div></div><p>Una vez que se ha encontrado el sitio del proyecto, lo siguiente
+que la gente hace es buscar una descripción rápida o una declaración
+de objetivos, para poder decidir (en menos de 30 segundos) si están o no
+interesados en aprender más. Esto debe estar en un lugar prioritario
+en la página principal, preferiblemente justo debajo del nombre del
+proyecto.</p><p>La descripción de los objetivos debe ser concreta, limitada y
+sobre todo, corta. Aquí tenemos un buen ejemplo, de <a class="ulink" href="http://hadoop.apache.org/" target="_top">hadoop.apache.org</a>:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>El proyecto Hadoop® de Apache&#8482; desarrolla software
+  de código abierto para una computación distribuida confiable y
+  escalable.</em></span></p><p><span class="emphasis"><em>La biblioteca de software Apache Hadoop es un framework
+  que permite el procesamiento distribuido de grandes conjuntos de datos
+  a través de grupos de ordenadores que utilizan modelos de programación
+  simples. Está diseñado para escalar de servidores individuales a miles
+  de máquinas, cada uno ofreciendo computación y almacenamiento local. En
+  lugar de confiar en el hardware para ofrecer alta disponibilidad, la
+  biblioteca en sí está diseñado para detectar y controlar los errores en
+  la capa de aplicación, de esa manera entregar un servicio de alta
+  disponibilidad en la parte superior de un grupo de computadoras, cada
+  una de las cuales puede ser propensa a fallas.</em></span></p></blockquote></div><p>En pocas palabras, han logrado la máxima puntuación, en gran
+parte recurriendo a los conocimientos previos del lector. Ese es un
+punto importante: que está bien asumir un lector mínimamente informado
+con un nivel básico de preparación. Un lector que no sabe lo que
+significa "grupos de computadora" y "alta disponibilidad" en este
+contexto probablemente no puede hacer mucho uso de Hadoop de todos
+modos, así que no hay razon de escribir para un lector que sabe menos
+que eso. La frase "diseñado para detectar y controlar los errores en
+la capa de aplicación" destacará ante los ingenieros que tienen
+experiencia con la informática a gran escala de grupos&#8212;cuando
+vean esas palabras, sabrán que la gente detrás de Hadoop entiende ese
+mundo, y en consecuencia, estarán más dispuestos a tomar en cuanta a
+Hadoop.</p></div><div class="sect2" title="Declara Que el Proyecto es Libre"><div class="titlepage"><div><div><h3 class="title"><a name="state-freedom"></a>Declara Que el Proyecto es Libre</h3></div></div></div><p><span class="emphasis"><em>La página principal debe poner claramente y sin ambigüedades
+que el proyecto es open source</em></span>. Esto puede parecer obvio,
+pero es sorprendente cuantos proyectos se olvidan de esto. He visto
+sitios de proyectos de software libre donde la página principal no sólo
+no decía bajo cual licencia libre se distribuía la aplicación sino
+que ni siquiera declaraban que el software fuese libre. A veces, estas
+piezas cruciales de información eran relegadas a la página de descargas o
+a la página de los desarrolladores o a algún otro lugar el cual requería
+más de un enlace para llegar. En casos extremos, la licencia no se mostraba
+en ninguna parte del sitio&#8212;la única forma de encontrarla era descargando
+la aplicación y buscar adentr un archivo de licencia.</p><p>No cometáis estos errores. Una omisión como ésta puede haceros
+perder muchos desarrolladores y usuarios potenciales. Declarad desde
+el principio, justo debajo de la declaración de objetivos, que el proyecto
+es "software libre" u "open source", y mostrad la licencia exacta. Una guía rápida
+para escoger una licencia se encuentra en <a class="xref" href="license-quickstart.html" title="Escogiendo una licencia y Aplicándola">&#8220;Escogiendo una licencia y Aplicándola&#8221;</a>
+<span>más adelante en éste capítulo</span>, y algunos
+detalles sobre las licencias serán discutidos en el <a class="xref" href="legal.html" title="Capítulo 9. Licencias, Copyrights y Patentes">Capítulo 9, <i>Licencias, Copyrights y Patentes</i></a>.</p><p>Llegados a este punto, nuestro visitante hipotético ha determinado&#8212;
+probablemente en un minuto o menos&#8212;que está interesado en utilizar,
+digamos, al menos cinco minutos más investigando el proyecto. La próxima
+parte describe qué debería encontrar durante esos cinco minutos.</p></div><div class="sect2" title="Lista de Características y Requerimientos"><div class="titlepage"><div><div><h3 class="title"><a name="features-and-requirements"></a>Lista de Características y Requerimientos</h3></div></div></div><p>Debería haber una breve lista de las características que el software
+soporta (si algo aun no ha sido completado, se puede listar de todas formas,
+pero señalando "<span class="emphasis"><em>planeado</em></span>" o "<span class="emphasis"><em>en progreso</em></span>")
+y el tipo de entorno necesario para ejecutar la aplicación. Hay que pensar
+en ésta lista como algo que daríamos a alguien que requiere un resumen de
+nuestro programa. Por ejemplo, la declaración de objetivos podría decir:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Crear un controlador y sistema de búsqueda con una API, para
+	ser utilizada por programadores suministrando servicios de búsqueda
+	para grandes colecciones de ficheros de texto.
+	</em></span></p></blockquote></div><p>La lista de características y requerimientos daría detalles
+que permitirían esclarecer el alcance de la declaración de objetivos:
+</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Características</em></span></p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Búsquedas en texto plano,
+                HTML y XML</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Búsqueda de palabras o frases</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planeado) Emparejando borroso (Fuzzy Matching)</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planeado) Actualización incremental de 
+                índices</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planeado) Indexado de sitios web
+                remotos</em></span></p></li></ul></div><p><span class="emphasis"><em>Requerimientos:</em></span></p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Python 2.2 o mayor</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Espacio en disco suficiente para contener los índices
+                (aproximadamente 2x el tamaño original de los datos)</em></span></p></li></ul></div></blockquote></div><p>Con ésta información, los lectores podrán rápidamente
+tener una idea de si éste programa tiene alguna esperanza de
+trabajar para ellos, y también pueden considerar involucrarse como
+desarrolladores.</p></div><div class="sect2" title="Estado del Desarrollo"><div class="titlepage"><div><div><h3 class="title"><a name="development-status"></a>Estado del Desarrollo</h3></div></div></div><p>La gente siempre quiere saber cómo va un proyecto. Para proyectos nuevos,
+desean saber la separación entre las promesas del proyecto y la realidad del momento. Para
+proyectos maduros, desean saber cuan activamente es mantenido, cuan seguido sacan nuevas
+versiones, la facilidad para reportar fallos, etc.</p><p>
+Hay un par vías de diferentes para dar respuestas a estas preguntas,
+se debe suministrar una página que muestre el estado
+del desarrollo, listando los objetivos a corto plazo del proyecto y las necesidades (por
+ejemplo, quizás se estén buscando desarrolladores con un expertos en un tema en particular).
+Ésta página también puede dar una historia de versiones anteriores, con listas de las
+características, de manera que los visitantes obtengan una idea de cómo el proyecto
+define su "progreso" y de cuan rápidamente se hacen progresos de acuerdo a esa
+definición. Algunos proyectos estructuran su página de estado de
+desarrollo como una hoja de ruta que incluye el futuro: los
+acontecimientos pasados &#8203;&#8203;se muestran en las fechas en que realmente
+sucedieron, los futuros sobre las fechas aproximadas en que el
+proyecto espera que vayan a pasar.</p><p>La otra manera &#8212; no mutuamente exclusiva con
+la primera, y de hecho, probablemente mejor realizarla en combinación
+con ella &#8212; es tener varios contadores e indicadores
+mantenidos de forma automática incrustados en la portada y/o la página
+destinada a desarrolladores del proyecto, que muestre varias piezas de
+información que, en conjunto, den una sensación del estado de
+desarrollo del proyecto y el progreso. Por ejemplo, un anuncio o grupo
+de noticias que muestran las noticias recientes, una cuenta de Twitter
+o de otro microblog mostrando avisos que coincidan con hashtags
+designados para el proyecto, una línea de tiempo de los últimos
+lanzamientos, un panel que muestra la actividad reciente en el gestor
+de fallos (fallos registrados, fallos respondidos), otro que muestre
+la actividad de la lista de correo o foro de discusión, etc. Cada uno
+de estos indicadores debería ser una puerta de entrada a más
+información de este tipo: por ejemplo, al hacer clic en el panel
+"fallos recientes" debe llevar al gestor de fallos completo, o por lo
+menos a una vista panorámica a la actividad de seguimiento de
+errores.</p><p>En realidad, hay dos significados ligeramente diferentes de
+"estado del desarrollo" que se confunden aquí. Uno de ellos es el
+sentido formal: ¿dónde se sitúa el proyecto en relación con sus
+objetivos declarados, y qué tan rápido está progresando. El otro es
+menos formal pero igual de útil: qué tan activo es este proyecto?
+¿Hay personas aquí, están haciendo cosas?, A menudo, esta última
+noción es en lo que un visitante está más interesado. Ya sea que un
+proyecto cumplia su último hito o no a veces no es tan interesante
+como la cuestión más fundamental de si tiene una comunidad activa
+de desarrolladores alrededor.</p><p>Las dos nociones de estado de desarrollo están, por supuesto,
+relacionadas, y un proyecto bien presentado muestra los dos tipos. La
+información se puede dividir entre la portada del proyecto (mostrar
+suficiente allí para dar una visión general de los dos tipos de estado
+de desarrollo) y una página más orientado al desarrollador.</p><div class="sidebar" title="Ejemplo: Indicadores de estado de Launchpad"><a name="launchpad-status-indicators"></a><div class="titlepage"><div><div><p class="title"><b>Ejemplo: Indicadores de estado de Launchpad</b></p></div></div></div><p>Un sitio que hace un muy buen trabajo de mostrar indicadores de
+estado orientado al desarrollador es Launchpad.net. Launchpad.net es
+un poco inusual, ya que es a la vez una plataforma de alojamiento
+principal para algunos proyectos, y en segundo lugar, un sitio
+orientado al empaquetado para los demás (o más bien, para los demás,
+es el sitio primario para el "proyecto" de conseguir que el programa
+en particular sea empaquetado para el sistema operativo Ubuntu
+GNU/Linux, al cual Launchpad fue diseñado para apoyar específicamente).
+En cualquier caso, la página de destino de un proyecto en Launchpad
+muestra una variedad de indicadores de estado mantenidos de forma
+automática para dar rápidamente una idea de donde se encuentra el
+proyecto. Aunque simplemente imitar una página de Launchpad no es
+probablemente una buena dea &#8212; su propio proyecto debe
+pensar cuidadosamente acerca de cuales son sus mejores indicadores del
+estado de desarrollo son &#8212; las páginas del proyecto de
+Launchpad proporcionan buenos ejemplos de las posibilidades. Empiece
+desde la parte superior de una página del proyecto allí y desplácese
+hacia abajo: <a class="ulink" href="https://launchpad.net/drizzle" target="_top">launchpad.net/drizzle</a>
+o <a class="ulink" href="https://launchpad.net/inkscape" target="_top">launchpad.net/inkscape</a>,
+por escoger dos al azar.</p></div><div class="sect3" title="El estado del desarrollo debe reflejar siempre la realidad."><div class="titlepage"><div><div><h4 class="title"><a name="development-status-honesty"></a>El estado del desarrollo debe reflejar siempre la realidad.</h4></div></div></div><p>No hay que asustarse por parecer no estar preparado y nunca caer en la tentación
+de inflar el estado del desarrollo. Todos saben que el software evoluciona por etapas;
+no hay que avergonzarse en decir "Esto es software alfa con fallos conocidos. Ejecuta, y
+funciona algunas veces, así que uselo bajo su responsabilidad." Este lenguaje no asustará
+el tipo de desarrolladores que son necesarios en esta etapa. En cuanto a los usuarios, una
+de las peores cosas que un proyecto puede hacer es atraer usuarios antes de que el
+software éste listo para estos. Una reputación por inestabilidad y fallos es muy difícil
+de hacer desaparecer una vez adquirida. La paciencia da sus frutos a largo plazo; siempre
+es mejor que el software sea <span class="emphasis"><em>más</em></span> estable de lo que espera el usuario
+ya que las sorpresas gratas producen el mejor boca a boca.</p><div class="sidebar" title="Alfa y Beta"><a name="alpha-and-beta"></a><div class="titlepage"><div><div><p class="title"><b>Alfa y Beta</b></p></div></div></div><p>El término <em class="firstterm">alfa</em> usualmente significa, la primera versión,
+  con lo que los usuarios pueden realizar todos el trabajo teniendo todas la funcionalidad
+  esperada, pero que se sabe tiene fallos. El principal propósito de el software alfa es 
+  generar una respuesta, de forma que los desarrolladores sepan en qué trabajar. La próxima
+  etapa, <em class="firstterm">beta</em>, significa que han sido resueltos todos los fallos
+  más importantes, pero que aun no ha sido intensivamente probado como para 
+  ser la versión oficial. El propósito de las betas es la de convertirse en la versión
+  oficial, asumiendo que nuevos fallos no sean encontrados, o de suministrar un feedback
+  para los desarrolladores para que logren la versión oficial más rápido. La diferencia
+  entre alfa y beta es más una cuestión de juicio.</p></div></div></div><div class="sect2" title="Descargas"><div class="titlepage"><div><div><h3 class="title"><a name="downloads"></a>Descargas</h3></div></div></div><p>EL software debe poder ser descargable como código fuente en formatos estándares,
+paquetes binarios (ejecutables) no son necesarios, a menos que el programa tenga requerimientos
+muy complicados para su compilado o dependencias que hagan hacerlo funcionar sea muy laborioso
+para la mayoría de las personas. (¡Aunque si es éste es el caso, el proyecto va a tenerlo muy
+difícil atrayendo programadores de todas maneras!)</p><p>El mecanismo de distribución debe de ser de lo más conveniente, estándar y sencillo posible.
+Si se estuviese intentando erradicar una enfermedad, no distribuiría la medicina tal que requiriese
+de una jeringuilla especial para administrarse. De igual manera, un programa debe ser conforme a métodos
+de compilación e instalación estándar; entre más se desvíe de estos estándares, mayor será la cantidad
+de usuarios y desarrolladores potenciales que se den por vencidos y abandonen el proyecto confundidos.</p><p>Esto parece obvio, pero muchos proyectos no se molestan en estandarizar sus procedimientos
+de instalación hasta mucho después, diciéndose a si mismos que esto lo pueden hacer en cualquier momento:
+<span class="emphasis"><em>"Ya resolveremos todas esas cosas cuando el código éste casi listo."</em></span> De lo que no
+se dan cuenta es de que al dejar de lado el trabajo aburrido de terminar los procedimientos de
+compilado e instalación, en realidad están ralentizando todo&#8212;porque desalientan a los programadores
+que de otra manera habrían contribuido al código, si tan sólo pudieran construir y probarlo. Más dañino aun, no <span class="emphasis"><em>saben</em></span> que están
+perdiendo a todos esos desarrolladores, porque el proceso es una acumulación de eventos que no suceden:
+alguien visita un sitios web, descarga el programa, intenta compilarlo, falla, deja de intentarlo y abandona.
+¿Quién sabrá que ocurrió exceptuando a ésta persona? Nadie en el proyecto se dará cuenta que el interés y
+la buena voluntad de alguien a sido silenciosamente malgastada.</p><p>Las tareas aburridas con un alto beneficio siempre deben ser hechos al principio y disminuyendo
+de manera significativa las barreras de entrada a un proyecto utilizando buenos paquetes brindan
+altos beneficios.</p><p>Cuando se lanza un paquete descargable, dale un número de versión único,
+de manera que la gente pueda comparar dos versiones cualquiera diferentes y saber cual reemplaza a cual.
+De esa manera pueden informar de los errores en contra de un lanzamiento
+en particular (que ayuda a los que responden a averiguar si el error ya
+está solucionado o no). Una
+discusión detallada sobre la numeración de versiones puede ser encontrada en <a class="xref" href="development-cycle.html#release-numbering" title="Numeración de liberación">&#8220;Numeración de liberación&#8221;</a>,
+y detalles sobre la estandarización de los procedimientos de compilado e instalación serán cubiertos
+en <a class="xref" href="packaging.html" title="Packaging">&#8220;Packaging&#8221;</a><span>, ambos en el <a class="xref" href="development-cycle.html" title="Capítulo 7. Empaquetado, Liberación, y Desarrollo diario">Capítulo 7, <i>Empaquetado, Liberación, y Desarrollo diario</i></a></span>.</p></div><div class="sect2" title="Control de versiones y Acceso al Bug Tracker"><div class="titlepage"><div><div><h3 class="title"><a name="vc-and-bug-tracker-access"></a>Control de versiones y Acceso al Bug Tracker</h3></div></div></div><p>Descargar paquetes con el código fuente está bien para aquellos que sólo desean instalar y utilizar un programa,
+pero no es suficiente para aquellos que desean buscar fallos o añadir nuevas mejoras. Instantáneas nocturnas del
+código fuente pueden ayudar, pero esto no es suficiente para una prospera comunidad de desarrollo. Estas personas
+necesitan de acceso en tiempo real a los últimos cambios, y una manera de enviar cambios basados en esas fuentes.</p><p>La solución es utilizar un sistema de control de
+versiones &#8212; en concreto, una repositorio controlado
+por versiones, en línea, de acceso público, del que cualquiera
+puede echar un vistazo al proyecto y, posteriormente, obtener
+actualizaciones. Un repositorio de control de versiones es una señal
+ &#8212; para usuarios y desarrolladores &#8212; de
+que este proyecto está haciendo un esfuerzo para dar a la gente lo que
+necesitan para participar. Al escribir estas líneas, muchos proyectos
+de código abierto usan <a class="ulink" href="https://github.com/" target="_top">GitHub.com</a>, que ofrece alojamiento
+ilimitado y gratuito de control de versiones públicas para proyectos de
+código abierto. Mientras GitHub no es la única opción, ni siquiera la
+única buena elección, es bastante razonable para la mayoría de los
+proyectos<sup>[<a name="idp489" href="#ftn.idp489" class="footnote">15</a>]</sup>.
+La infraestructura del control de versiones se discute detalladamente
+en <a class="xref" href="vc.html" title="Control de Versiones">&#8220;Control de Versiones&#8221;</a><span> en <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span>.</p><p>Lo mismo ocurre con rastreador de errores del proyecto. La
+importancia de un sistema de seguimiento de fallos no sólo radica en su
+utilidad en el día a día para los desarrolladores, sino en lo que
+significa para los observadores del proyecto. Para muchas personas, una
+base de datos de errores accesible es uno de los signos más fuertes de
+que un proyecto se debe tomar en serio: cuanto mayor sea el número de
+errores en la base de datos, <span class="emphasis"><em>mejor</em></span> se ve el
+proyecto. Esto puede parecer contrario a la intuición, pero recuerde
+que el número de informes de fallos archivados en realidad depende de
+tres cosas: el número absoluto de defectos de software reales presentes
+en el código, el número de personas que utilizan el software, y la
+comodidad con la que las personas pueden denunciar nuevos errores. De
+estos tres factores, los dos últimos son mucho más importante que el
+primero. Cualquier software de suficiente tamaño y complejidad tiene
+un número esencialmente arbitrario de fallos esperando a ser
+descubiertos. La verdadera pregunta es, ¿qué tan bien va a hacer el
+proyecto el registro y la priorización de esos fallos? Un proyecto con
+una base de datos de errores grandes y bien cuidada (que significa que
+los fallos sean atendidas sin demora, los errores duplicados están
+unificados, etc.), produce por lo tanto una mejor impresión que un
+proyecto con ninguna base de datos de errores, o de una base de datos
+casi vacía.</p><p>Claro está, que si un proyecto está empezando, que la base de datos de fallos
+contenga algunos pocos, y no hay mucho que se pueda hacer al respecto.
+Pero si la página de estado destaca la juventud del proyecto, y si la
+gente que busca en la base de datos de errores puede ver que la mayoría
+de los documentos presentados han tenido lugar recientemente, pueden
+extrapolar a partir de ahí que el proyecto sigue teniendo una
+<span class="emphasis"><em>tasa</em></span> saludable de incidencias, y no van a alarmarse
+indebidamente por el bajo número absoluto de errores
+registrados.<sup>[<a name="idp501" href="#ftn.idp501" class="footnote">16</a>]</sup></p><p>Hay que señalar que los bug trackers no sólo son usados para fallos en los programas sino también para
+peticiones de mejoras, cambios en la documentación, tareas pendientes y mucho más. Los detalles de ejecutar
+un sistema de seguimiento de fallos será cubierto en <a class="xref" href="bug-tracker.html" title="Seguimiento de errores">&#8220;Seguimiento de errores&#8221;</a><span> en
+el <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span>, así que no vamos a entrar en detalles. Lo importante desde la perspectiva
+de la presentación está en <span class="emphasis"><em>tener</em></span> un bug tracker y asegurarse de que es visible desde la
+página principal del proyecto.</p></div><div class="sect2" title="Canales de Comunicación"><div class="titlepage"><div><div><h3 class="title"><a name="communications-channels"></a>Canales de Comunicación</h3></div></div></div><p>Usualmente los visitantes desean saber cómo pueden contactar con los seres humanos detrás del proyecto.
+Hay que suministrar direcciones de listas de correo, salas de chat, canales en IRC (<a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a>), y cualquier otro foro
+donde aquellos involucrados puedan ser contactados. Hay que dejar claro que los autores del proyecto
+están suscritos a estas listas, de manera que la gente vea una forma de dar feedback a los desarrolladores. La
+presencia de estos en las listas no implica obligación alguna de responder a todas las preguntas que se formulan
+o de implementar todas las peticiones. A la larga, probablemente solo una fraccción de los usuarios se unan
+a los foros de todas maneras, pero los demás estarán conformes con saber que <span class="emphasis"><em>podrían</em></span> si fuese necesario.
+</p><p>En la primeras etapas de cualquier proyecto, no existe la necesidad de que haya una diferenciación entre
+los foros de los usuarios y los de los desarrolladores. Es mejor tener a todos los involucrados en el proyecto
+hablando en conjunto en una sala. Dentro de los primeros en adoptar el proyecto, la distinción entre usuario
+y desarrollador será muchas veces borrosa, hasta tal punto que la distinción no se puede hacer y la proporción
+entre programadores y usuarios usualmente es mayor al principio que al final. Mientras que no se puede asumir
+que todos quienes utilicen el programa sean programadores que quieren modificarlo, sí se puede asumir
+que al menos estan interesados en seguir las discusiones sobre el desarrollo y en obtener una visión de
+la dirección del proyecto.</p><p>Ya que éste capítulo es sólo sobre iniciar un proyecto, es suficiente decir que al menos
+estos foros de comunicación deben existir. Luego en <a class="xref" href="growth.html" title="Manejando el crecimiento">&#8220;Manejando el crecimiento&#8221;</a><span>
+en el <a class="xref" href="communications.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <i>Comunicaciones</i></a></span>, examinaremos dónde y cómo montar estos foros, cómo deben
+ser moderados o cualquier otro tipo de dirección y cómo separar los foros de usuarios de los foros
+de los desarrolladores, cuando llegue el momento, sin crear un espacio infranqueable.</p></div><div class="sect2" title="Pautas de Desarrollo"><div class="titlepage"><div><div><h3 class="title"><a name="developer-guidelines"></a>Pautas de Desarrollo</h3></div></div></div><p>Si alguien considera contribuir al proyecto, buscará por pautas de desarrollo. Estas pautas son más
+sociales que técnicas: explican como los desarrolladores interactúan entre ellos y con los usuarios, y 
+finalmente cómo hacer las cosas.</p><p>Este tema es tratado en detalle en <a class="xref" href="written-rules.html" title="Tomando Nota de Todo">&#8220;Tomando Nota de Todo&#8221;</a><span> en
+<a class="xref" href="social-infrastructure.html" title="Capítulo 4. Infraestructura Social y Política">Capítulo 4, <i>Infraestructura Social y Política</i></a></span>, pero los elementos básicos de unas pautas de desarrollo son:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>enlaces a los foros para la interacción de los desarrolladores
+            </p></li><li class="listitem"><p>instrucciones en cómo reportar fallos y enviar parches
+            </p></li><li class="listitem"><p>alguna indicación de <span class="emphasis"><em>cómo</em></span>
+	    el desarrollo es usualmente llevado a cabo y cómo se toman las decisiones&#8212;es el
+	    proyecto una dictadura benevolente, una democracia o algo más</p></li></ul></div><p>
+
+
+Ningún sentido peyorativo es intencional por lo de "dictadura" por cierto. Es perfectamente aceptable
+ser un tirano donde un desarrollador en particular tiene el poder de veto sobre todos los cambios. Muchos
+proyectos exitosos funcionan de ésta manera. Lo importante es que el proyecto sea consciente de esto y lo
+comunique. Una tiranía pretendiendo ser una democracia desalentara a las personas; una tiranía que dice serlo
+funcionará bien siempre que el tirano sea competente y de confianza.
+(Ver <a class="xref" href="social-infrastructure.html#forkability" title="Forkability">&#8220;Forkability&#8221;</a><span> en el <a class="xref" href="social-infrastructure.html" title="Capítulo 4. Infraestructura Social y Política">Capítulo 4, <i>Infraestructura Social y Política</i></a></span>
+para conocer por qué la dictadura en proyectos de código abierto
+no tiene las mismas implicaciones que dictadura en otras áreas de
+la vida.)</p><p><a class="ulink" href="http://subversion.apache.org/docs/community-guide/" target="_top">subversion.apache.org/docs/community-guide</a>
+es un ejemplo de pautas de desarrollo particularmente exhaustivas;
+las directrices de LibreOffice en <a class="ulink" href="https://wiki.documentfoundation.org/Development" target="_top">wiki.documentfoundation.org/Development</a> son también un
+buen ejemplo.</p><p>Proveer a los programadores una introducción a la aplicación es otro tema y será discutido en 
+<a class="xref" href="getting-started.html#developer-documentation" title="Documentación para Desarrolladores">&#8220;Documentación para Desarrolladores&#8221;</a><span> más adelante en éste capítulo
+</span>.</p></div><div class="sect2" title="Documentación"><div class="titlepage"><div><div><h3 class="title"><a name="documentation"></a>Documentación</h3></div></div></div><p>La documentación es esencial. Debe haber <span class="emphasis"><em>algo</em></span>
+para que la gente lea, aunque sea algo rudimentario e incompleto. Esto
+entra de lleno en la categoría antes referida y usualmente es la primera
+área donde un proyecto falla. Conseguir una declaración de objetivos y
+una lista de requerimientos, escoger una licencia, resumir el estado de
+desarrollo&#8212;son todas tareas relativamente pequeñas que pueden ser
+completadas y a las que usualmente no es necesario volver una vez
+terminadas. La documentación, por otra parte, nunca está terminada
+realmente, lo cual puede que sea una de las razones por las cuales se retrase 
+su inicio.</p><p>La cuestión más insidiosa sobre la utilidad de la documentación
+es que es inversamente proporcional para quienes la escriben y para
+quienes la leen. Lo más importante de la documentación para un usuario
+inicial es lo más básico: cómo configurar la aplicación, una introducción
+de cómo funciona y quizás algunas guías para realizar las tareas
+más comunes. Pero a la vez son estas cosas las más sabidas por 
+aquellos quienes <span class="emphasis"><em>escriben</em></span> la documentación&#8212;
+tan bien sabidas que puede ser difícil para estos ver las cosas desde
+el punto de vista de los lectores, dificultando listar los pasos
+que (para los escritores) parecen tan obvios que no merecen especial
+atención.</p><p>No existe una solución mágica para éste problema. Alguien debe
+sentarse y escribir todo esto, para luego, y lo más importante,
+incorporar los comentarios de los lectores
+nuevo tipo y probar la calidad. Hay que utilizar un formato simple y
+fácil de modificar como HTML, texto plano, Markdown, ReStructuredText, o alguna variante de
+XML&#8212;algo que sea conveniente para mejoras rápidas, ligeras e
+imprevisibles para el momento<sup>[<a name="idp552" href="#ftn.idp552" class="footnote">17</a>]</sup>.
+Esto no es sólo para eliminar cualquier trabajo innecesario
+a los escritores originales realizar cambios incrementales, sino
+que también para quienes se unan al proyecto después y desean
+trabajar en la documentación.</p><p>Una manera de asegurarse de que la documentación básica inicial
+se hace, es limitando su alcance. Al menos de ésta manera no parecerá que
+se está escribiendo una tarea sin fin. Una buena regla es seguir unos
+criterios mínimos:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Avisar al lector claramente el nivel técnico
+            que se espera que tenga.</p></li><li class="listitem"><p>Describir clara y extensivamente cómo configurar
+	    el programa y en alguna parte al inicio de la documentación
+	    comunicarle al usuario cómo ejecutar algún tipo de prueba
+	    de diagnóstico o un simple comando para confirmar que todo
+	    funciona correctamente. La documentación inicial es a veces
+	    más importante que la documentación de uso. Mientras mayor
+	    sea el esfuerzo invertido en instalar y tener funcionando
+	    la aplicación, mayor será la persistencia en descubrir
+	    funcionalidades avanzadas o no documentadas. Cuando alguien
+	    abandona, abandonan al principio; por ello, las primeras etapas
+	    como la instalación, necesiten la mayor ayuda.</p></li><li class="listitem"><p>Dar un ejemplo estilo tutorial de como realizar alguna
+	    tarea común. Obviamente, muchos ejemplos para muchas tareas
+	    sería mejor, pero si el tiempo es limitado, es mejor escoger
+	    una tarea en específico y llevar al usuario de la mano
+	    paso por paso. Una vez que se ve que la aplicación <span class="emphasis"><em>
+	    puede</em></span> ser utilizada , empezarán a explorar
+	    qué más es lo que puede hacer&#8212;y si se tiene suerte
+	    empezar a documentarlo ellos mismos. Lo que nos lleva
+	    al siguiente punto...</p></li><li class="listitem"><p>Indicar las áreas donde se sabe que la documentación
+	    es incompleta. Al mostrar a los lectores que se es consciente
+	    de las deficiencias, nos alineamos con su punto de vista. La empatía
+	    les da confianza en que no van a tener que luchar para convencer al
+	    proyecto de su importancia. Estas indicaciones no necesitan representar
+	    promesa alguna de completar los espacios en blanco en una fecha en
+	    particular&#8212;es igualmente legitimo tratarlas como requisitos
+	    abiertos para ayudantes voluntarios.</p></li></ul></div><p>Ese último criterio es de una especial importancia, y puede ser
+aplicado al proyecto entero, no sólo a la documentación. Una gestión
+exacta de las deficiencias conocidas es la norma en el mundo Open Source.
+No se debe exagerar en las faltas del proyecto, solo identificarlas
+escrupulosa y desapasionadamente cuando sea necesario (sea en la
+documentación, en la base de datos de fallos o en discusiones en la
+lista de correos). Nadie verá esto como derrotismo por parte del proyecto,
+ni como una responsabilidad explícita. Ya que cualquiera que utilice la
+aplicación descubrirá sus deficiencias por si mismos, es mejor que estén
+psicológicamente preparados&#8212;entonces parece que el proyecto tiene
+un sólido conocimiento acerca de como va progresando.</p><div class="sidebar" title="Manteniendo un FAQ (Preguntas Más Frecuentes)"><a name="starting-a-faq"></a><div class="titlepage"><div><div><p class="title"><b>Manteniendo un FAQ (Preguntas Más Frecuentes)</b></p></div></div></div><p>Un <em class="firstterm">FAQ</em> (del ingles "Frequently Asked Questions")
+  puede ser uno de las mejores inversiones que un proyecto puede hacer
+  en términos de beneficios educativos. Los FAQs están enfocados a las
+  preguntas que desarrolladores y usuarios podrían formular&#8212;opuesto
+  a aquellas que <span class="emphasis"><em>se espera</em></span> que hagan&#8212;por lo cual,
+  un FAQ bien cuidado tiende a dar a aquellos quienes lo consultan
+  exactamente lo que están buscando. Por lo general es el primer lugar
+  en el que se busca cuando se encuentran con un problema, incluso con
+  preferencia sobre el manual oficial y es probablemente el documento
+  más propenso a ser enlazado desde otros sitios.</p><p>Desafortunadamente, no se puede hacer un FAQ al principio del
+proyecto. Los buenos FAQs no son escritos, crecen. Son por definición
+documentos reactivos, evolucionando con el tiempo como respuesta
+a las preguntas que la gente hace. Ya que es imposible anticipar
+correctamente esas preguntas, es imposible sentarse a escribir
+un FAQ útil desde cero.</p><p>Así que, no hay que malgastar el tiempo en intentarlo. En cambio,
+  podría ser útil crear una plantilla casi en blanco del FAQ con sólo
+  algunas preguntas y respuestas, de forma que
+  haya un lugar obvio donde las personas contribuyan con preguntas y
+  respuestas después de que el proyecto esté en progreso. En ésta etapa
+  lo más importante no es tenerlo todo completo, sino <span class="emphasis"><em>la
+  conveniencia</em></span>:
+  si es sencillo agregar contenido al FAQ, la gente lo hará. (Un mantenimiento
+  correcto de un FAQ es un problema no trivial e intrigante: Ver <a class="xref" href="share-management.html#faq-manager" title="FAQ Manager">&#8220;FAQ Manager&#8221;</a><span> en el
+  <a class="xref" href="managing-volunteers.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <i>Coordinando a los Voluntarios</i></a></span>,
+  <a class="xref" href="q-and-a-forums.html">&#8220;&#8221;</a><span> en el
+  <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span>, y <a class="xref" href="growth.html#all-as-archives" title="Trata todos los recursos como archivos">&#8220;Trata todos los recursos como archivos&#8221;</a><span> en el <a class="xref" href="communications.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <i>Comunicaciones</i></a></span>.)</p></div><div class="sect3" title="Disponibilidad de la documentación"><div class="titlepage"><div><div><h4 class="title"><a name="documentation-availability"></a>Disponibilidad de la documentación</h4></div></div></div><p>La documentación debe ser accesible desde dos sitios:
+en línea (directamente desde el sitio web), <span class="emphasis"><em>y</em></span>
+en la distribución descargable de la aplicación (consultar
+<a class="xref" href="packaging.html" title="Packaging">&#8220;Packaging&#8221;</a><span> en el 
+<a class="xref" href="development-cycle.html" title="Capítulo 7. Empaquetado, Liberación, y Desarrollo diario">Capítulo 7, <i>Empaquetado, Liberación, y Desarrollo diario</i></a></span>). Debe estar
+en línea y navegable porque a menudo se lee la
+documentación <span class="emphasis"><em>antes</em></span> de descargar el
+programa por primera vez, como una ayuda en la decisión de
+descargarlo o no. Pero también debe acompañar al programa,
+bajo la premisa de que la descarga debe suministrar todo lo
+necesario para utilizar el paquete.</p><p>Para la documentación en línea, hay que asegurarse de que hay
+un enlace que muestra <span class="emphasis"><em>toda</em></span> la documentación
+en una página HTML (indicando algo como "monolito" o "todo-en-uno" o
+"sólo un gran fichero" al lado del enlace, de tal manera que se sepa
+que puede tardar un poco en cargar). Esto es muy útil porque a veces
+sólo desean buscar una sola palabra o frase en la documentación.
+Generalmente, las personas ya saben qué es lo que están buscando; sólo
+que no recuerdan en cual sección está. Para estas personas, nada es más
+frustrante que encontrar una página para la tabla de contenidos, luego
+otra diferente para la introducción, luego otra diferente para las
+instrucciones de instalación, etc. Cuando las páginas están divididas
+de esta manera, la función de búsqueda de sus navegadores es inútil. Este
+estilo de páginas separadas es útil para quienes ya saben cual es la
+sección que necesitan, o que desean leer toda la documentación de
+principio a fin en secuencia. Pero esta no es
+la forma más común en que la documentación es leída. Ocurre más a menudo
+que alguien que conoce algo básico de la aplicación vuelve para buscar
+una palabra o frase. Fallar al suministrarles un sólo documento
+en el que se puedan realizar búsquedas, es hacerles la vida más dura
+</p></div><div class="sect3" title="Documentación para Desarrolladores"><div class="titlepage"><div><div><h4 class="title"><a name="developer-documentation"></a>Documentación para Desarrolladores</h4></div></div></div><p>La documentación para los desarrolladores es escrita para ayudar
+a los programadores a entender el código y puedan arreglarlo o extenderlo.
+Esto es algo diferente a las <span class="emphasis"><em>pautas de desarrollo</em></span>
+discutidas anteriormente, que son más sociales que técnicas. Estas pautas
+para los desarrolladores le dicen a los programadores como deben
+desenvolverse entre ellos. La documentación les dice como deben
+desenvolverse con el código en si mismo. Por conveniencia
+las dos vienen juntas en un sólo documento (como sucede con el ejemplo
+anterior <a class="ulink" href="http://subversion.apache.org/docs/community-guide/" target="_top">subversion.apache.org/docs/community-guide</a>)
+pero no es obligatorio.</p><p>A pesar de que la documentación para los desarrolladores puede
+ser de mucha ayuda, no existe ninguna razón para retrasar un lanzamiento
+por hacerla. Es suficiente para empezar que los autores originales estén disponibles (y dispuestos)
+a responder a preguntas sobre el código. De hecho,
+tener que responder la misma pregunta varias veces es una motivación 
+muy común para escribir dicha documentación. Pero antes de que sea escrita,
+determinados contribuyentes serán capaces de desenvolverse con el código ya
+que la fuerza que hace que las persones utilicen su tiempo en leer
+el código base es que éste código les resulta útil. Si las personas tienen
+fé en ello, ninguna cantidad de documentación hará que vengan o los
+mantendrá.</p><p>Así que si hay tiempo para escribir documentación sólo para una
+audiencia, que sea para los usuarios. Toda la documentación para los
+usuarios es, en efecto, documentación para desarrolladores también. 
+Cualquier programador que vaya a trabajar en un proyecto
+necesita estar familiarizado con su uso. Luego, cuando se vea a
+los programadores preguntando las mismas preguntas una y otra vez,
+habrá que tomarse el tiempo de escribir algunos documentos aparte
+sólo para estos.</p><p>Algunos proyectos utilizan wikis para su documentación inicial o
+incluso para su documentación principal. En mi experiencia, esto es efectivo
+si y sólo si, el wiki es editado activamente por algunas personas que se
+ponen de acuerdo en como la documentación debe ser organizada y la voz
+que debe tener. Más en <a class="xref" href="wikis.html" title="Wikis">&#8220;Wikis&#8221;</a><span>
+en el <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span>.</p></div></div><div class="sect2" title="Demos, Capturas de Pantalla, Videos y Ejemplos de Salidas"><div class="titlepage"><div><div><h3 class="title"><a name="examples-and-demos"></a>Demos, Capturas de Pantalla, Videos y Ejemplos de Salidas</h3></div></div></div><a name="example-output"></a><a name="screenshots"></a><p>Si el proyecto incluye una interfaz gráfica de usuario, o si
+produce una salida gráfica o alguna salida peculiar, coloca algunas
+muestras en el sitio web del proyecto. En el caso de la interfaz, esto
+significa capturas o, mejor aún, un breve video (de 4 minutos o menos)
+con subtítulos o un narrador. Para la salida, podría ser capturas de
+pantalla o sólo archivos de ejemplo para descargar. Para el software
+basado en web, el patrón de oro es un sitio de demostración, por
+supuesto, asumiendo que el software se presta para eso.</p><p>Lo principal es atender el deseo de gratificación que tiene la
+gente de la manera más probable que ellos puedan esperar. Una sola
+pantalla o video pueden ser más convincente que párrafos de texto
+descriptivo y charlas en listas de correo, ya que es una prueba de
+que el software <span class="emphasis"><em>funciona</em></span>. El código todavía puede
+tener errores, puede ser difícil de instalar, puede estar documentado de
+forma incompleta, pero la evidencia basada en la imagen muestra a la
+gente que si uno pone en el esfuerzo suficiente, se puede conseguir que
+se ejecute.</p><div class="sidebar" title="Mantén Breves los Videos y Di Son Breves"><a name="video-brevity"></a><div class="titlepage"><div><div><p class="title"><b>Mantén Breves los Videos y <span class="emphasis"><em>Di</em></span> Son Breves</b></p></div></div></div><p>Si tienes un video de demostración de tu proyecto, mantén el
+  video de 4 minutos de duración, y asegurate de que la gente pueda ver
+  la duración <span class="emphasis"><em>antes</em></span> de que haga clic en él. Esto
+  va de acuerdo con el "principio de la presentación a escala"
+  mencionada anteriormente: tienes que hacer que tomar la decisión de
+  ver el video sea fácil, eliminando todos los riesgos. Los visitantes
+  son más propensos a hacer clic en un enlace que dice "Mira nuestro
+  video de 3 minutos" que en uno que sólo dice "Mira nuestro video",
+  porque en el primer caso saben en lo que se están metiendo antes de
+  hacer clic &#8212; y van a verlo mejor, porque han
+  preparado mentalmente de antemano la cantidad necesaria de
+  compromiso, por lo que no se cansan a mitad de camino.</p><p>En relación a el límite de cuatro minutos y de donde viene: es
+  un hecho científico, determinado a través de muchos intentos por parte
+  del mismo sujeto experimental (que permanecerá sin nombre) para ver
+  videos de proyectos. Este límite no se aplica a tutoriales u otros
+  materiales de instrucción, por supuesto; es sólo para los vídeos
+  introductorios.</p><p>En caso de que no tengas un software preferido para la grabación
+  de vídeos de interacción de escritorio: He tenido buena suerte
+  con <code class="filename">gtk-recordmydesktop</code> en Debian GNU/Linux, y
+  luego el editor de videos <code class="filename">OpenShot</code> para la edición
+  posterior a la captura.</p></div></div><p>Existen muchas otras cosas que se pueden poner en el sitio web
+del proyecto, si se tiene el tiempo, o si por alguna razón u otra
+son especialmente apropiadas: página de noticias, historia,
+enlaces relacionados, función de búsqueda, enlace para donaciones, etc.
+Ninguno de estos es necesarios al principio, pero hay que tenerlos en
+mente para el futuro.</p><div class="sect2" title="Hosting"><div class="titlepage"><div><div><h3 class="title"><a name="hosting"></a>Hosting</h3></div></div></div><a name="starting-with-canned-hosting"></a><p>¿Dónde en Internet hay que poner los materiales del proyecto?</p><p>Un sitio web, obviamente &#8212; pero la respuesta
+completa es un poco más complicada que esa.</p><p>Muchos proyectos distinguen entre su sitio web público primario de
+cara al usuario &#8212; el que tiene las fotos bonitas y la
+página "Acerca de..." y las presentaciones suaves y videos y visitas
+guiadas y todo eso &#8212; y sus sitio para desarrolladores,
+donde todo está sucio y lleno de texto estrechamente espaciado en fuentes
+de espacio sencillo y abreviaturas impenetrables.</p><p>Bueno, estoy exagerando. Un poco. En cualquier caso, en las
+primeras etapas de tu proyecto, no es tan importante distinguir entre
+estos dos tipos de público. La mayoría de los visitantes interesados
+que consigues son los desarrolladores, o por lo menos la gente que se
+sienten cómodos probando nuevo código. Con el tiempo, puede que tenga
+sentido tener un sitio de cara a los usuarios (por supuesto, si tu
+proyecto es una biblioteca de código, los "usuarios" podrían ser otros
+programadores) y un área de colaboración algo distinto para los
+interesados &#8203;&#8203;en participar en el desarrollo. El sitio de colaboración
+tendría el repositorio de código, gestor de fallos, wiki desarrollo,
+enlaces a listas de correo de desarrollo, etc. Los dos sitios deben
+unirse entre sí, y, en particular, es importante que el sitio
+orientado al usuario deje en claro que el proyecto es código abierto
+y dónde se puede encontrar la actividad de desarrollo de ese código
+abierto<sup>[<a name="idp629" href="#ftn.idp629" class="footnote">18</a>]</sup></p><p>En el pasado, muchos proyectos crearon su sitio de
+desarrolladores y la infraestructura por sí mismos. Durante la última
+década, sin embargo, la mayoría de los proyectos de código
+abierto &#8212; y casi todos los nuevos &#8212; sólo
+tienen que utilizar uno de los sitios de "alojamiento enlatado" que han
+surgido para ofrecer estos servicios de forma gratuita a proyectos de
+código abierto. Con mucho, el más popular de estos sitios, mientras
+escribo esto, a mediados de 2013, es <a class="ulink" href="https://github.com/" target="_top">GitHub.com</a>, y si usted no tiene una fuerte preferencia sobre
+dónde alojar, probablemente debería simplemente elegir GitHub; muchos
+desarrolladores ya están familiarizados con él y tienen cuentas
+personales allí. <a class="xref" href="web-site.html#canned-hosting" title="Hosting Enlatado">&#8220;Hosting Enlatado&#8221;</a><span>
+en <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span> tiene una discusión
+más detallada de las cuestiones a considerar al elegir un sitio de
+alojamiento enlatado, y un resumen de los más populares.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp376" href="#idp376" class="para">12</a>] </sup>Ellos no lograron obtener gnome.com o gnome.net, pero eso está
+bien &#8212; si sólo tienes uno, y es .org, está bien. Ese
+es por lo general el primero que la gente busca cuando está buscando
+un proyecto de código abierto con ese nombre. Si no podían conseguir
+"gnome.org" en sí, una solución típica sería la de obtener
+"gnomeproject.org" en su lugar, y muchos proyectos resuelven el
+problema de esa manera.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp380" href="#idp380" class="para">13</a>] </sup><a class="ulink" href="https://identi.ca/" target="_top">Identi.ca</a> es un microblog / red
+social que un número de desarrolladores de software libre usa; su
+código es de fuente abierta y está disponible en <a class="ulink" href="http://pump.io/" target="_top">pump.io</a>. Para los proyectos orientados a
+desarrolladores, recomiendo al menos hacer todas las micro
+actualizaciones de estado &#8212; coloquialmente conocidas
+como "tweets" &#8212; tanto en Identi.ca como en Twitter.
+Mientras que el número total de personas en Identi.ca es mucho menor
+que en Twitter, el porcentaje de ellos que son susceptibles de estar
+interesados &#8203;&#8203;en las noticias acerca de un proyecto de código abierto
+es mucho más alto, por lo menos a partir de este escrito en el año
+2013 y durante algunos años anteriores a este.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp385" href="#idp385" class="para">14</a>] </sup>Mientras que la copia maestra del
+código fuente de Gnome está en <a class="ulink" href="http://git.gnome.org/" target="_top">git.gnome.org</a>, ellos mantienen un
+espejo en GitHub, ya que muchos desarrolladores ya están
+familiarizados con GitHub</p></div><div class="footnote"><p><sup>[<a id="ftn.idp489" href="#idp489" class="para">15</a>] </sup>Aunque GitHub se basa en Git, un sistema de
+control de versiones de código abierto muy popular, el código que
+ejecuta los servicios web de GitHub no es en sí mismo fuente abierta.
+Si esto es importante para su proyecto es una cuestión compleja, y
+se aborda con mayor profundidad en <a class="xref" href="web-site.html#canned-hosting" title="Hosting Enlatado">&#8220;Hosting Enlatado&#8221;</a><span> en <a class="xref" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica">Capítulo 3, <i>Infraestructura Técnica</i></a></span></p></div><div class="footnote"><p><sup>[<a id="ftn.idp501" href="#idp501" class="para">16</a>] </sup>Para una discusión más a fondo de que los
+informes de fallos deben ser tratados como una buena noticia, consulte en
+<a class="ulink" href="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/" target="_top">rants.org/2010/01/10/bugs-users-and-tech-debt</a>,
+un artículo que escribí en 2010 sobre cómo los informes de error no
+<span class="emphasis"><em>no</em></span> representan una "<a class="ulink" href="http://en.wikipedia.org/wiki/Technical_debt" target="_top">deuda técnica</a>"
+sino más bien participación de los usuarios.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp552" href="#idp552" class="para">17</a>] </sup>No te preocupes demasiado
+por elegir el formato correcto la primera vez. Si cambias de opinión más
+tarde, siempre se puede hacer una conversión automatizada usando <a class="ulink" href="http://johnmacfarlane.net/pandoc/" target="_top">Pandoc</a>.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp629" href="#idp629" class="para">18</a>] </sup>A partir de agosto de 2013, un buen ejemplo
+de un proyecto con los sitios primarios y de desarrolladores
+independientes pero bien vinculados es el Ozone Widget Framework:
+comparar su sitio principal orientado al usuario en <a class="ulink" href="http://www.ozoneplatform.org/" target="_top">ozoneplatform.org</a>, con su
+área de desarrollo en <a class="ulink" href="https://github.com/ozoneplatform/owf" target="_top">github.com/ozoneplatform/spf</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="today.html">Anterior</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="license-quickstart.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">La Situación de Hoy </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Escogiendo una licencia y Aplicándola</td></tr></table></div></body></html>

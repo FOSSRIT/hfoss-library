@@ -1,0 +1,575 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Versionsverwaltung</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="prev" href="mailing-lists.html" title="Mailinglisten"><link rel="next" href="bug-tracker.html" title="Bugtracker"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Versionsverwaltung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="mailing-lists.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Technische Infrastruktur</th><td width="20%" align="right"> <a accesskey="n" href="bug-tracker.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Versionsverwaltung"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="vc"></a>Versionsverwaltung</h2></div></div></div><p>Eine <em class="firstterm">Versionsverwaltung<sup>[<a name="idp4519664" href="#ftn.idp4519664" class="footnote">20</a>]</sup></em>
+(en. Version Control) ist eine Kombination verschiedener Techniken
+und Verfahren um Änderung an den Dateien eines Projekts, insbesondere
+Quellcode, Dokumentation und Webseiten, zu verfolgen und verwalten. Wenn
+Sie Versionsverwaltung noch nie benutzt haben, sollten Sie sich als
+Erstes jemand suchen die es kennt und sie überreden dem Projekt
+beizutreten.  Heutzutage wird jeder erwarten, dass zumindest Ihr
+Quellcode unter Versionsverwaltung steht und keiner wird Ihr Projekt
+ernst nehmen, wenn es nicht zumindest halbwegs kompetent mit seiner 
+Versionsverwaltung umgeht.</p><p>Versionsverwaltung ist beim Betrieb eines Projekts allgegenwärtig,
+weile es in nahezu jedem Bereich hilft: Kommunikation unter den 
+Entwicklern, Veröffentlichung neuer Versionen, Bug-Verwaltung, 
+Code-Stabilität und experimentelle Entwicklungen sowie die Annahme von und
+Anerkennung für Änderungen durch bestimmte Entwickler. Die
+Versionsverwaltung kann all diese Bereiche zentral koordinieren. Der 
+Kern der Versionsverwaltung ist die Verwaltung von Änderungen (en.
+<em class="firstterm">change management</em>: Sie identifiziert jede 
+einzelne Änderung an den Dateien eines Projekts, fügt ihnen Metadaten 
+bei, wie das Datum der Änderung, den Namen des Autors und kann jedem der
+danach sucht, diese auf die gewünschte Art aufbereiten. Sie ist eine
+Methode zur Kommunikation, bei dem eine Änderung die grundlegende 
+Einheit der Information ist.</p><p>Dieser Abschnitt behandelt nicht alle Aspekte der Bedienung 
+einer Versionsverwaltung. Dieses Thema ist derart umfassend, dass es im
+Verlaufe des Buchs immer wieder angesprochen werden muss. Hier werden 
+wir uns darauf konzentrieren ein Versionsverwaltung auszuwählen und 
+einzurichten, die später die gemeinschaftliche Entwicklung 
+unterstützt.</p><div class="sect2" title="Vokabular der Versionsverwaltung"><div class="titlepage"><div><div><h3 class="title"><a name="vc-vocabulary"></a>Vokabular der Versionsverwaltung</h3></div></div></div><p>Dieses Buch kann Ihnen die Bedienung einer Versionsverwaltung 
+nicht beibringen ohne vorherige Erfahrung, es wäre aber unmöglich das 
+Thema zu behandeln, ohne ein paar Begriffe zu klären. Diese sind 
+unabhängig von der eingesetzten Versionsverwaltung: Sie sind die
+grundsätzlichen Nomen und Verben der gemeinsamen Arbeit im Netzwerk
+und sie werden immer wieder im Verlaufe des Buches aufkommen. Selbst
+wenn es keine Versionsverwaltung gäbe, bestünde das Problem der
+Verwaltung von Änderungen und diese Wörter geben uns eine Sprache um
+präzise und prägnant über das Problem zu reden.
+
+</p><div class="variablelist"><div class="sidebar" title='"Version" kontra "Revision"'><a name="version-vs-revision"></a><div class="titlepage"><div><div><p class="title"><b>"Version" kontra "Revision"</b></p></div></div></div><p>Das Wort <em class="firstterm">Version</em> wird manchmal als
+  Synonym für "Revision" benutzt, ich werde es jedoch in diesem Buch 
+  nicht auf diese Art verwenden da es zu leicht mit "Version" im 
+  Sinne einer bestimmten Version einer Software &#8211; also eine
+  Veröffentlichung, mit einer Versionsnummer wie "Version 1.0", zu 
+  verwechseln ist . Da der Begriff Versionsverwaltung bereits geläufig 
+  ist, werden ich diesen trotzdem weiterhin verwenden.</p></div><dl><dt><a name="vc-vocabulary-commit"></a><span class="term"><em class="firstterm">Commit</em></span></dt><dd><p>Eine Änderung an dem Projekt vornehmen; formeller
+  gesagt, eine Änderung in die Versionsverwaltung zu speichern, sodass
+  es in zukünftige Versionen des Projekts eingebunden werden kann.
+  "Commit" (de. festlegen) kann als Nomen oder als Verb benutzt werden.
+  Als Nomen ist es im wesentlichen ein Synonym für Änderung. Beispiel:
+  "Ich habe eben einen Bugfix der bei Nutzern von Max OS X, Abstürze
+  ihrer Server verursacht hat committed, Jay könntest du dir bitte den
+  Commit anschauen und überprüfen, dass ich dort mit der Speicher
+  Zuweisung nicht falsch umgehe?"</p></dd><dt><a name="vc-vocabulary-log-message"></a><span class="term"><em class="firstterm">Commit-Log</em></span></dt><dd><p>Ein Kommentar der an jedem Commit angehängt wird,
+  mit einer Beschreibung über die Änderung und sein Nutzen.
+  Commit-Kommentare sind mitunter die wichtigsten Dokumente in einem
+  Projekt: Sie sind die Brücke zwischen der äußerst technischen 
+  Sprache der einzelnen Änderungen am Code und der eher Nutzer 
+  orientierten Sprache der Funktionen, Bugfixes und dem 
+  Projektfortschritt. Später in diesem Abschnitt werden wir uns
+  Möglichkeiten anschauen, Commit-Logs für das entsprechend
+  angemessene Publikum zu veröffentlichen; ebenso sind in  
+  <a class="xref" href="growth.html#codifying-tradition" title="Festschreiben von Traditionen">&#8222;Festschreiben von Traditionen&#8220;</a><span> im 
+  Kapitel <a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a></span> Methoden 
+  beschrieben, Beteiligte dazu anzuregen, kurze prägnante und nützliche 
+  Commit-Kommentare zu schreiben.</p></dd><dt><a name="vc-vocabulary-update"></a><span class="term"><em class="firstterm">Update</em></span></dt><dd><p>Eine Anfrage die Änderungen (Commits) anderer
+  Teilnehmer in die eigenen lokalen Kopie des Projekts einzubinden; 
+  bzw. Ihre Kopie zu aktualisieren. Dies ist ein sehr häufiger 
+  Vorgang; die meisten Entwickler aktualisieren ihren Code mehrmals 
+  am Tag um sicherzustellen, dass sie ungefähr das Gleiche benutzen, 
+  wie die anderen Entwickler und beim Auffinden eines Fehlers sicher
+  sein zu können, dass er noch nicht behoben wurde. z.B.: "Hallo, ich 
+  habe bemerkt, dass der Code für die Indexierung immer das letzte 
+  Byte fallen lässt. Ist das ein neuer Bug?". "Ja, aber er wurde letzte
+  Woche behoben &#8211; versuch mal ein Update zu machen, dann sollte 
+  er verschwinden."</p></dd><dt><a name="vc-vocabulary-repository"></a><span class="term"><em class="firstterm">Projektarchiv</em></span></dt><dd><p>Die Datenbank der Versionsverwaltung in der 
+  Änderungen gespeichert werden. Manche Systeme sind zentralisiert: Es 
+  gibt ein Projektarchiv, in dem alle Änderungen am Projekt gespeichert
+  werden. Andere sind dezentralisiert: dort hat jeder Entwickler sein 
+  eigenes Projektarchiv, und Änderungen können beliebig hin und her 
+  getauscht werden. Die Versionsverwaltung verfolgt die Abhängigkeiten 
+  zwischen den Änderungen und wenn es Zeit wird, eine neue Version zu 
+  herauszugeben, bekommt ein bestimmter Satz von Änderungen den Zuspruch als
+  neue Version. Die Frage welche der beiden besser ist, ist ein weiterer
+  der andauernden heiligen Kriege der Softwareentwicklung; versuchen
+  Sie nicht in die Falle zu tappen, auf Ihrer Mailingliste darüber zu
+  streiten.</p></dd><dt><a name="vc-vocabulary-checkout"></a><span class="term"><em class="firstterm">Checkout</em></span></dt><dd><p>Sich eine Kopie des Projekts aus dem Projektarchiv zu 
+  beschaffen. Ein Checkout produziert meistens eine Verzeichnisstruktur,
+  auch als Arbeitsverzeichnis (siehe unten) bekannt, von dem aus 
+  Änderungen wieder zurück ins Projektarchiv übertragen werden können.
+  Bei manchen dezentralisierten Versionsverwaltungen ist jedes
+  Arbeitsverzeichnis selbst ein eigenes Projektarchiv, von dem
+  aus Änderungen an jedes Projektarchiv hoch- oder heruntergeladen werden
+  können, das sie annehmen möchte.</p></dd><dt><a name="vc-vocabulary-working-copy"></a><span class="term"><em class="firstterm">Arbeitkopie<sup>[<a name="idp4769408" href="#ftn.idp4769408" class="footnote">21</a>]</sup></em></span></dt><dd><p>Der private Verzeichnisbaum eines Entwicklers, 
+  mit dem Quellcode des Projekts und möglicherweise seine Webseite 
+  oder andere Dokumente. Eine Arbeitskopie enthält auch ein paar 
+  Metadaten, die von der Versionsverwaltung benutzt werden um zu 
+  Kennzeichen, von welchem Projektarchiv sie kommt, welche "Revision" 
+  (siehe unten) der Dateien vorliegen, usw. Im allgemeinen hat jeder 
+  Entwickler seine eigenes Arbeitskopie, indem er seine 
+  Änderungen macht, prüft und anschließend als Commit an das
+  Projektarchiv schickt.</p></dd><dt><a name="vc-vocabulary-revision"></a><span class="term"><em class="firstterm">Revision</em><sup>[<a name="idp4756784" href="#ftn.idp4756784" class="footnote">22</a>]</sup></span></dt><dd><p>Eine "Revision" ist für gewöhnlich eine bestimmte
+  Version einer Datei oder einem Verzeichnis. Wenn das Projekt z.B.
+  mit der Revision 6 der Datei D anfängt und dann jemand eine Änderung
+  an D committed, entsteht die Revision 7 von D. Manche Systeme
+  benutzen "Revision" auch als Bezeichnung für einen ganzen Satz an 
+  Änderungen die zusammen als Einheit committed wurden.</p><p>Diese Begriffe haben ab und zu eine Bestimmte technische 
+  Bedeutung abhängig von der Versionsverwaltung, im Allgemeinen ist 
+  die Idee jedoch immer die gleiche: Sie ermöglichen es genau über 
+  bestimmte Zeitpunkte in der Geschichte einer Datei zu reden (wie, 
+  direkt vor und nachdem ein Fehler behoben wurde). Beispielsweise: 
+  "Ja, sie hat das in Revision 10 behoben" oder "Sie hat das in 
+  Revision 10 von foo.c behoben."</p><p>Wenn man von einer Datei oder einer Sammlung von Dateien 
+  spricht ohne eine bestimmte Revision anzugeben, geht man im 
+  Allgemeinen von der aktuellsten Revision aus.</p></dd><dt><a name="vc-vocabulary-diff"></a><span class="term"><em class="firstterm">Diff</em><sup>[<a name="idp4778416" href="#ftn.idp4778416" class="footnote">23</a>]</sup></span></dt><dd><p>Eine textuelle
+  Representation einer Änderung. Ein Diff zeigt wie und welche Zeilen
+  geändert wurden, sowie ein paar zusätzliche Zeilen um einen Kontext zu
+  geben. Ein Entwickler der bereits ein wenig mit dem Code vertraut ist,
+  kann für gewöhnlich ein Diff lesen und verstehen was die Änderung 
+  gemacht hat und sogar Fehler bemerken.</p></dd><dt><a name="vc-vocabulary-tag"></a><span class="term"><em class="firstterm">Tag<sup>[<a name="idp4776080" href="#ftn.idp4776080" class="footnote">24</a>]</sup></em></span></dt><dd><p>Eine Beschriftung einer bestimmen Menge an Dateien
+  ganz bestimmter Revisionen. Tags werden üblicherweise benutzt um 
+  interessante Revisionen des Projekts zu bewahren. Für jede neue 
+  veröffentlichte Version wird z.B. ein neuer "Tag" erstellt, um später
+  genau dieselben Dateien/Revisionen aus der Versionsverwaltung
+  herunterladen zu können. Häufige "Tag" Bezeichnungen sind 
+  <code class="literal">Version_X_Y</code>, 
+  <code class="literal">Auslieferung_00456</code>, usw.</p></dd><dt><a name="vc-vocabulary-branch"></a><span class="term"><em class="firstterm">Branch<sup>[<a name="idp4779376" href="#ftn.idp4779376" class="footnote">25</a>]</sup></em></span></dt><dd><p>Eine
+  Kopie des Projekts in der Versionsverwaltung, die aber vom Hauptzweig
+  isoliert ist, damit Änderungen nicht das Übrige Projekt beeinflussen
+  und umgekehrt, außer wenn Änderungen absichtlich von einer Seite zur
+  Anderen portiert werden (siehe unten). Ein Branch kann man auch als
+  Entwicklungszweig bezeichnen. Selbst wenn ein Projekt nicht explizit
+  irgendwelche Zweige hat, gibt es dennoch einen sogenannten 
+  "Hauptzweig"<sup>[<a name="idp4786128" href="#ftn.idp4786128" class="footnote">26</a>]</sup>als den
+  Zweig auf dem die Entwicklung stattfindet.</p><p>Zweige bieten bei der Entwicklung, die Möglichkeit verschiedene
+  Richtungen getrennt zu verfolgen. Ein Zweig kann z.B. für 
+  experimentelle Entwicklung benutzt werden, die für den Hauptzweig 
+  nicht stabil genug wären. Umgekehrt kann ein Zweig auch als Ort 
+  benutzt werden um eine neue Version zu stabil zu bekommen. Während der
+  Entwicklung kann die reguläre Entwicklung im Hauptzweig ohne
+  Unterbrechung weiterlaufen; währenddessen werden auf dem Zweig der 
+  neuen Version keine Änderungen mehr zugelassen, außer sie werden von
+  einem Versionsverwalter genehmigt. Auf diese Art, muss eine neue
+  Version die laufende Entwicklung nicht stören. Siehe 
+  <a class="xref" href="vc.html#branches" title="Benutze Zweige, um Engpässe zu vermeiden">&#8222;Benutze Zweige, um Engpässe zu vermeiden&#8220;</a><span>später in diesem 
+  Kapitel</span> für eine detailliertere Erörterung über 
+  Zweige.</p></dd><dt><a name="vc-vocabulary-merge"></a><span class="term"><em class="firstterm">Merge<sup>[<a name="idp4780864" href="#ftn.idp4780864" class="footnote">27</a>]</sup></em></span></dt><dd><p>Eine Änderung von einem Zweig in ein Anders 
+  übernehmen. Was auch portieren von Änderungen aus dem Hauptzweig in
+  einem anderen Zweig oder umgekehrt bedeuten kann. Tatsächlich ist
+  das sogar die häufigste Art zu mergen; man portiert selten eine
+  Änderung zwischen zwei Zweige, die nicht beide Hauptzweige sind. 
+  Siehe <a class="xref" href="vc.html#vc-singularity" title="Eindeutigkeit von Informationen">&#8222;Eindeutigkeit von Informationen&#8220;</a> für mehr zu dieser Art zu
+  portieren.</p><p>"Merge" hat eine zweite, verwandte Bedeutung: Die 
+  Versionsverwaltung macht einen Merge, wenn zwei Leute die gleiche 
+  Datei bearbeitet haben, sodass die Änderungen sich nicht überlappen.
+  Da die Änderungen nicht miteinander kollidieren, werden die 
+  Änderungen in die eigenen Kopie (mit eigenen Änderungen) übertragen,
+  bzw. die Kopie wird aktualisiert. Das kommt sehr häufig vor, 
+  besonders in Projekten bei dem mehrere Entwickler am gleichen Code 
+  arbeiten. Wenn zwei verschiedene Änderungen <span class="emphasis"><em>doch</em></span> 
+  überlappen, gibt es einen "Konflikt"; siehe unten.</p></dd><dt><a name="vc-vocabulary-conflict"></a><span class="term"><em class="firstterm">Konflikt</em></span></dt><dd><p>Was geschieht wenn zwei Personen gleichzeitig 
+  unterschiedliche Änderungen vornehmen, an der gleichen Stelle im Code.
+  Jede Versionsverwaltung erkennt Konflikte automatisch, und 
+  benachrichtigt mindestens einen der Beteiligten, dass ihre 
+  Änderungen mit denen von anderen kollidieren. Der Konflikt muss 
+  dann von einem Menschen bereinigt (engl. <em class="firstterm">resolve</em>)
+  und an die Versionsverwaltung übermittelt werden.</p></dd><dt><a name="vc-vocabulary-lock"></a><span class="term"><em class="firstterm">Lock</em></span></dt><dd><p>(de. Schloss/Sperre) Eine Möglichkeit eine exklusive
+  Absicht auf eine Datei oder ein Verzeichnis zu erklären. z.B.: "Ich 
+  kann gerade keine Änderungen an der Webseite machen. Es scheint das 
+  Alfred alles gesperrt hat während er die Hintergrundbilder
+  korrigiert". Nicht jede Versionsverwaltung bieten überhaupt die 
+  Möglichkeit Dateien zu sperren, und solche die es tun erfordern 
+  nicht alle, dass sie auch benutzt wird. Das liegt daran, dass 
+  parallele, gleichzeitige Entwicklung der Normalfall ist und Sperren
+  auf Dateien, diesem Ideal (üblicherweise) widersprechen.</p><p>Eine Versionsverwaltung die einen Lock erfordert um einen 
+  Commit zu machen, benutzt das sogenannte 
+  <em class="firstterm">lock-modify-unlock</em> Verfahren. Solche die es 
+  nicht erfordern, nutzen das <em class="firstterm">copy-modify-merge</em>
+  Verfahren. Eine ausgezeichnete tiefgehende Erklärung und Vergleich 
+  der beiden Methoden ist auf
+  <a class="ulink" href="http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html" target="_top">http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html</a>
+  zu finden. Im allgemeinen ist die copy-modify-merge Methode besser
+  für die Open-Source-Entwicklung und jede Versionsverwaltung in 
+  diesem Buch unterstützen sie.</p></dd></dl></div><p>
+
+</p></div><div class="sect2" title="Wahl einer Versionsverwaltung"><div class="titlepage"><div><div><h3 class="title"><a name="vc-choosing"></a>Wahl einer Versionsverwaltung</h3></div></div></div><p>Zum Zeitpunkt dieses Schreibens sind die beiden verbreitetsten 
+Systeme für Versionsverwaltung in der Welt der freien Software das 
+<em class="firstterm">Concurrent Versions System</em> oder auch 
+<em class="firstterm">CVS</em> (<a class="ulink" href="http://www.cvshome.org/" target="_top">http://www.cvshome.org/</a>)
+und <em class="firstterm">Subversion</em> (<em class="firstterm">SVN</em>,
+<a class="ulink" href="http://subversion.tigris.org/" target="_top">http://subversion.tigris.org/</a>).</p><p>CVS gibt es schon lange. Die meisten erfahrenen Entwickler sind
+bereits damit vertraut, es erledigt die Aufgabe mehr oder weniger gut
+und da es die Norm ist, werden Sie keine lange Debatten darüber führen
+müssen, ob es die richtige Wahl war. CVS hat jedoch einige Nachteile.
+Es bietet keine einfache Möglichkeit an, Änderungen über mehrere
+Dateien abzufragen; es erlaubt nicht, Dateien im Projektarchiv
+umzubenennen oder zu kopieren (was besonders nervt, wenn Sie Ihren Code 
+neu organisieren wollen, nachdem Sie das Projekt gestartet haben); es 
+bietet nur dürftige Merge-Unterstützung; es kann nicht sonderlich 
+gut mit großen oder binären Dateien umgehen; und manche Vorgänge sind
+bei vielen Dateien sehr langsam.</p><p>Kein Fehler von CVS ist fatal und es ist immer noch ziemlich 
+beliebt. In den vergangenen Jahren hat das neuere Subversion an Boden
+gewonnen, inbesondere bei neuen Projekten.<sup>[<a name="idp4801808" href="#ftn.idp4801808" class="footnote">28</a>]</sup>. Wenn Sie ein neues
+Projekt anfangen, empfehle ich Ihnen Subversion.</p><p>Da ich andererseits selbst an dem Subversion-Projekt arbeite,
+könnte man meine Objektivität berechtigt in Frage stellen. In den
+letzden Jahren sind ein paar neue Versionsverwaltungssysteme 
+erschienen. <a class="xref" href="vc-systems.html" title="Anhang A. Systeme zur Versionsverwaltung">Anhang A, <i>Systeme zur Versionsverwaltung</i></a> listet alle mir bekannten 
+auf. Wie diese Liste klar macht kann die Entscheidung für eine 
+Versionsverwaltung zu einem lebenslangen Forschungsprojekt werden. 
+Möglicherweise wird Ihnen die Entscheidung erspart bleiben weil sie 
+von Ihrer Hosting-Seite bereits getroffen wurde. Wenn Sie sich aber 
+für eines entscheiden müssen, fragen Sie andere Entwickler, finden 
+Sie heraus womit Andere bereits Erfahrung haben, suchen Sie sich 
+eines aus und bleiben Sie dabei. Jede stabile, ausgereifte 
+Versionsverwaltung reicht aus; Sie müssen sich keine Sorgen darüber 
+machen, dass Sie eine furchtbar schlechte Entscheidung treffen werden.
+Wenn Sie sich einfach nicht entscheiden können, dann nehmen Sie CVS. 
+Es ist immer noch die Norm und wird es auch wahrscheinlich ein paar 
+Jahre lang bleiben. Viele andere Systeme unterstützen auch die 
+Konvertierung in eine Richtung von einem CVS Archiv, Sie können sich 
+also später auch umentscheiden.</p></div><div class="sect2" title="Nutzung einer Versionsverwaltung"><div class="titlepage"><div><div><h3 class="title"><a name="vc-using"></a>Nutzung einer Versionsverwaltung</h3></div></div></div><p>Die Empfehlungen in diesem Abschnitt sind nicht auf eine
+bestimmte Versionsverwaltung abgestimmt und sollten in allen Systemen
+einfach zu implementieren sein. Für weitere Details, schlagen Sie in 
+der Dokumentation Ihrer Versionsverwaltung nach.</p><div class="sect3" title="Versioniere alles"><div class="titlepage"><div><div><h4 class="title"><a name="version-everything"></a>Versioniere alles</h4></div></div></div><p>Benutzen Sie die Versionsverwaltung nicht nur für den Quellcode 
+Ihres Projekts, sondern auch die Webseite, Dokumentation, FAQ, 
+Entwurfsskizen und alles andere, was jemand vielleicht bearbeiten
+möchte. Behalten Sie alles direkt neben dem Quellcode, im selben
+Projektarchiv. Jede Information, die sich lohnt niederzuschreiben, ist es 
+auch Wert im Projektarchiv zu sein &#8211; also jede Information die
+sich ändern könnte. Sachen die sich nicht ändern, sollten archiviert 
+und nicht versioniert werden. Eine E-Mail ändert sich beispielsweise
+nicht, wenn sie einmal abgeschickt wurde; deshalb würde es keinen 
+Sinn machen sie zu versionieren (es sei denn sie wird zu einem Teil 
+eines größeren, sich entwickelnden Dokuments).</p><p>Der Grund warum es wichtig ist alles an einem Ort zu 
+versionieren ist, dass Personen nur eine Methode lernen müssen um 
+Änderungen einzureichen. Oftmals, wird ein Beteiligter damit anfangen 
+Änderungen an der Webseite oder der Dokumentation zu machen, und gehen
+später dazu über kleine Beiträge am Quellcode zu machen. Wenn das 
+Projekt dasselbe System für alle Beiträge verwendet, müssen Beteiligte
+nur eine Methode lernen. Alles zusammen zu versionieren, bedeutet 
+auch, dass neue Funktionen gleich zusammen mit ihrer zugehörigen 
+Aktualisierungen an der Doku eingereicht werden können, sodass ein 
+Zweig für den Code auch ein Zweig für die Doku mit sich bringt, 
+usw.</p><p>Behalten Sie keine <em class="firstterm">generierte Dateien</em> im
+Projektarchiv. Sie sind nicht wirklich bearbeitbare Daten, da sie aus
+anderen Daten erzeugt werden. Manche Build-Systeme erzeugen
+beispielsweise <code class="filename">configure</code> aus der Vorlage
+<code class="filename">configure.in</code>. Um eine Änderung an 
+<code class="filename">configure</code> vorzunehmen, würde man 
+<code class="filename">configure.in</code> bearbeiten und es daraus neu 
+erzeugen lassen; weßhalb lediglich die Vorlage 
+<code class="filename">configure.in</code> "bearbeitbar" ist. Versionieren Sie 
+lediglich die Vorlage &#8211; wenn Sie die erzeugten Dateien auch 
+versionieren, wird man zwangsläufig vergessen sie neu zu erzeugen
+nachdem man eine Änderung an einer Vorlagen eingespielt hat. Die 
+daraus resultierende Inkonsistenz wird endlose Verwirrung 
+stiften.<sup>[<a name="idp4643568" href="#ftn.idp4643568" class="footnote">29</a>]</sup></p><p>Zu der Regel, dass alle bearbeitbare Dateien im Projektarchiv
+sein sollten, gibt es eine Ausnahme: den Bugtracker. Eine 
+Bug-Datenbank enthält eine Menge bearbeitbarer Daten, kann aber aus
+technischen Gründen diese Daten im allgemeinen nicht im Projektarchiv
+speichern. (Manche Tracker haben eigene primitive Funktionen zur
+Versionierung, die allerdings von der Versionsverwaltung des Projekts 
+getrennt ist.)</p></div><div class="sect3" title="Zugang per Browser"><div class="titlepage"><div><div><h4 class="title"><a name="vc-browsing"></a>Zugang per Browser</h4></div></div></div><p>Das Projektarchiv eines Projekts sollte per Browser erreichbar sein.
+Das bedeutet nicht nur die neuste Version der 
+einzelnen Dateien einsehen zu können, sondern auch in der Zeit zurück 
+zu gehen und frühere Revisionen der Dateien zu sehen, die Unterschiede
+zwischen den verschiedenen Versionen der Dateien sehen zu können, die 
+commit-logs bestimmter Änderungen lesen zu können, usw.</p><p>Der Browser-Zugang ist wichtig, denn er bietet ein
+leichtgewichtiges Portal zu den Projekt-Daten. Ist der Zugriff
+per Browser nicht möglich, dann würde jemand, nur um
+eine bestimmte Datei zu untersuchen (sagen wir, um nachzuschauen
+ob ein bestimmter Bugfix es in den Code geschafft hat), zuerst
+lokal eine Versionsverwaltungs-Software installieren müssen, was eine
+einfache zweiminutige Anfrage zu einer halbstündigen Aufgabe macht.</p><p>Der Browser-Zugang erlaubt auch normale URLs auf bestimmte Revisionen 
+von Dateien oder die jeweils aktuellste Revisionen. Das 
+kann bei technischen Diskussionen sehr nützlich sein, oder falls man jemanden 
+auf die Dokumentation verweisen will. Man könnte zum Beispiel anstatt 
+"Eine ausführliche Anleitungen zum Fehlermanagement enthält die Datei
+community-guide/index.html deiner lokalen Arbeitskopie." folgendes schreiben:
+"Eine ausführliche Anleitungen zum Fehlermanagement kannst du unter
+<span class="emphasis"><em>http://subversion.apache.org/docs/community-guide/</em></span>
+nachlesen.", wobei die URL auf die aktuelle Version der Datei zeigt. 
+Die URL ist überlegen: sie ist eindeutig und erübrigt die Frage,
+ob der Angesprochene wirklich eine aktuelle Arbeitskopie verwendet.</p><p>Manche Versionsverwaltungssysteme haben eine eingebaute Funktion
+um das Projektarchiv online zu durchsuchen, andere verlassen sich hierfür
+auf zusätzliche Software. Drei Beispiele hierfür sind 
+<em class="firstterm">ViewCVS</em> 
+(<a class="ulink" href="http://viewcvs.sourceforge.net/" target="_top">http://viewcvs.sourceforge.net/</a>), 
+<em class="firstterm">CVSWeb</em> 
+(<a class="ulink" href="http://www.freebsd.org/projects/cvsweb.html" target="_top">http://www.freebsd.org/projects/cvsweb.html</a>), und
+<em class="firstterm">WebSVN</em> 
+(<a class="ulink" href="http://websvn.tigris.org/" target="_top">http://websvn.tigris.org/</a>). Ersteres funktioniert 
+sowohl mit CVS als auch Subversion, das Zweite nur mit CVS und 
+Letzteres nur mit Subversion.</p></div><div class="sect3" title="Commit-E-Mails"><div class="titlepage"><div><div><h4 class="title"><a name="commit-emails"></a>Commit-E-Mails</h4></div></div></div><p>Jeder Commit an das Projektarchiv sollte eine E-Mail erzeugen, die
+zeigt, wer den Commit gemacht hat, wann er gemacht wurde, welche 
+Dateien und Verzeichnisse sich geändert haben und was sich an ihnen
+geändert hat. Die E-Mail sollte auf eine bestimmte Mailingliste gehen, 
+eine andere als die Liste der Entwickler. Diese und andere 
+interessierte Beteiligte sollten ermutigt werden, sich auf der Commit-Liste 
+anzumelden, da es die effektivste Art ist sich über die 
+Ereignisse auf Code-Ebene des Projekts auf dem Laufenden zu halten.
+Abgesehen von den offensichtlichen technischen Vorteilen der 
+Überprüfung durch andere Entwickler (siehe 
+<a class="xref" href="setting-tone.html#code-review" title="Code Review">&#8222;Code Review&#8220;</a>), können die Commit E-Mails dazu 
+beitragen eine Gemeinschaft aufzubauen, da sie eine gemeinsame 
+Umgebung schaffen indem Personen auf Ereignisse (Commits) reagieren 
+können von denen sie wissen das Andere sie auch wahrnehmen.</p><p>Wie man Commit E-Mails einrichtet, hängt von Ihrer 
+Versionsverwaltung ab, meistens gibt es aber hierfür einen Script oder
+eine andere Einrichtung bei ihrer Software. Wenn Sie Schwierigkeiten 
+bekommen es zu finden, schlagen Sie in Ihrer Dokumentation den Begriff
+<em class="firstterm">hooks</em>, insbesondere auch 
+<em class="firstterm">post-commit hook</em> nach, bei CVS auch 
+<em class="firstterm">loginfo hook</em> genannt. Diese Commit-Hooks sind 
+eine allgemeine Möglichkeit, Befehle nach jedem Commit zu schalten.
+Der Hook wird von einem Commit ausgelöst, ihm werden alle 
+Informationen über den Commit übergeben, mit denen er dann vordefinierte 
+Aufgaben ausführen kann, wie z.B. eine E-Mail abschicken.</p><p>Bei fertig eingerichteten Systemen für Commit E-Mails werden 
+Sie möglicherweise das übliche Verhalten ändern wollen:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Manchmal beinhalten die Commit E-Mails nicht die tatsächlichen
+  Diffs und geben stattdessen eine URL an, bei dem man die Änderungen 
+  über das Web-Portal des Projektarchivs einsehen kann. Obwohl es gut ist 
+  eine URL anzugeben, auf der man später verweisen kann, ist es auch 
+  <span class="emphasis"><em>sehr</em></span> wichtig, dass die Diffs in den
+  Nachrichten enthalten sind. E-Mails zu lesen gehört schon zum 
+  Alltag der Leute, wenn also die Änderungen gleich in der E-Mail zu 
+  lesen sind, werden Entwickler sie auf der Stelle untersuchen, ohne 
+  ihre E-Mail-Anwendung verlassen zu müssen. Wenn sie erst auf eine 
+  URL klicken müssen werden es die Meisten bleiben lassen, da es eine 
+  weitere Aktion erfordert anstatt fortzusetzen was sie bereits 
+  angefangen hatten. Desweiteren geht es bei Fragen über die Änderung 
+  viel schneller einfach auf die E-Mail zu antworten und eine 
+  Bemerkung an entsprechender Stelle zu schreiben als eine Webseite 
+  zu besuchen und mühselig den Diff aus dem Webbrowser heraus in die
+  E-Mail zu kopieren.</p><p>(Wenn der Diff natürlich riesig ist, wie z.B. wenn eine große 
+  Menge neuer Code im Projektarchiv eingefügt wurde, macht es 
+  natürlich Sinn den Diff wegzulassen und nur die URL anzubieten. Die 
+  meisten Systeme für Commit E-Mails können diese Art der Verkürzung 
+  automatisch. Wenn Ihres es nicht kann, ist es immer noch besser, die
+  Diffs mitzuschicken und gelegentlich mit riesigen E-Mails zu leben, 
+  als die Diffs komplett auszuschalten. Bequeme Möglichkeiten zur 
+  Überprüfung und Bewertung sind ein Eckstein der gemeinschaftlichen 
+  Entwicklung und deshalb unerlässlich.)</p></li><li class="listitem"><p>Der Reply-to-Header der Commit-E-Mails sollte auf
+  die Mailingliste der Entwickler eingestellt sein, nicht auf die 
+  Commit-Liste. Wenn also jemand eine Commit-E-Mail durchgelesen und 
+  bewertet hat und daraufhin eine Antwort schreibt, sollte die Antwort
+  an die Liste der Entwickler gehen auf dem technische 
+  Angelegenheiten üblicherweise stattfinden. Es gibt hierfür ein paar 
+  Gründe. Erstens wollen Sie alle technischen Diskussionen auf einer 
+  Liste behalten, Leute erwarten nämlich, dass sie dort gehalten 
+  werden und so auch nur ein Archiv durchsucht werden muss. Zweitens
+  könnte es interessierte Parteien geben, die nicht bei der Commit-Liste
+  angemeldet sind. Drittens wird die Commit-Liste als 
+  Dienst verstanden um Commits zu verfolgen und nicht um Commits zu 
+  verfolgen <span class="emphasis"><em>und</em></span> gelegentlich auch technische 
+  Diskussionen zu führen. Wer sich auf den Commit-Liste angemeldet hat, 
+  will nichts anderes als Commit-E-Mails; wenn Ihnen also anderes 
+  Material über diese Liste zugesandt wird, bricht das ein 
+  ungesprochenes Übereinkommen. Viertens schreiben Beteiligte oft 
+  Programme um die Commit-E-Mails zu lesen und zu verarbeiten (z.B. um
+  sie auf einer Webseite anzuzeigen). Diese Programme sind auf eine 
+  konsistente Formatierung ausgelegt, nicht jedoch auf inkonsistente 
+  von Menschen geschriebene E-Mails.</p><p>Beachten Sie dass dieser Ratschlag, Reply-to umzuschreiben 
+  nicht den Empfehlungen aus <a class="xref" href="mailing-lists.html#reply-to" title='Die große "reply-to"-Debatte'>&#8222;Die große "reply-to"-Debatte&#8220;</a> 
+  <span> in einem früheren Abschnitt dieses Kapitels
+  </span> widerspricht. Es ist immer in Ordnung, wenn der 
+  <span class="emphasis"><em>Absender</em></span> einer Nachricht Reply-to setzt. In 
+  diesem Fall ist der Absender die Versionsverwaltungs selber und es 
+  setzt Reply-to um anzudeuten, dass der angemessene Ort für Antworten
+  die Entwickler-Liste ist und nicht die Commit-Liste.</p></li></ol></div><div class="sidebar" title="CIA: Eine weitere Möglichkeit für Commit-Benachrichtigungen"><a name="cia"></a><div class="titlepage"><div><div><p class="title"><b>CIA: Eine weitere Möglichkeit für Commit-Benachrichtigungen</b></p></div></div></div><p>Commit E-Mails sind nicht die einzige Möglichkeit um Nachrichten
+über Änderungen zu verbreiten. Vor kurzem wurde eine weitere
+Möglichkeit namens CIA (<a class="ulink" href="http://cia.navi.cx/" target="_top">http://cia.navi.cx/</a>) 
+entwickelt. CIA fasst Commit-Statistiken zusammen und verbreitet sie 
+in Echtzeit. Die verbreitetste Verwendung von CIA ist Commit 
+Benachrichtigungen an IRC-Kanäle zu senden, damit die Leute dort in 
+Echtzeit mitbekommen, wann Änderungen gemacht werden. Obwohl diese
+Methode nicht ganz so nützlich ist wie Commit E-Mails, da Beteiligte 
+unter Umständen nicht während einem Commit im IRC anwesend sind, hat
+diese Methode trotzdem einen immensen <span class="emphasis"><em>sozialen</em></span>
+Wert. Leute bekommen das Gefühl ein Teil von etwas lebendigem und
+aktivem zu sein und der Fortschritt vor ihren Augen
+geschieht.</p><p>Es funktioniert indem Sie die CIA Anwendung automatisch nach 
+jedem Commit aufrufen. Es formatiert die Information über den Commit
+in eine XML Nachricht, und sendet es an einen zentralen Server 
+(typischerweise <code class="literal">cia.navi.cx</code>). Der Commit-Server 
+verteilt diese Information dann an andere Foren.</p><p>CIA kann auch konfiguriert werden um einen
+<a class="ulink" href="http://www.xml.com/pub/a/2002/12/18/dive-into-xml.html" target="_top">RSS</a>
+feed zu erzeugen. Weiteres dazu können Sie in der Dokumentation bei
+<a class="ulink" href="http://cia.navi.cx/" target="_top">http://cia.navi.cx/</a> nachlesen.</p><p>Sie können sich von CIA einen Eindruck verschaffen, indem Sie 
+sich mit Ihrem IRC-Client bei <code class="literal">#commits</code> auf dem 
+Server <code class="literal">irc.freenode.net</code> einloggen.</p></div></div><div class="sect3" title="Benutze Zweige, um Engpässe zu vermeiden"><div class="titlepage"><div><div><h4 class="title"><a name="branches"></a>Benutze Zweige, um Engpässe zu vermeiden</h4></div></div></div><p>Laien im Umgang mit Versionsverwaltung scheuen sich manchmal 
+vorm Verzweigen und Zusammenführen. Das ist wahrscheinlich ein 
+Nebeneffekt des Erfolgs von CVS: Die Schnittstellen von CVS um Zweige
+zu machen und wieder zusammenzuführen sind nicht ganz eingängig, 
+weshalb viele sich angeeignet haben diese Operationen komplett zu 
+vermeiden.</p><p>Wenn Sie zu diesen Leuten gehören, nehmen Sie sich vor alle
+Ängste die Sie haben mögen zu besiegen und nehmen Sie sich die Zeit 
+um zu lernen, wie man Zweige macht und wieder zusammenführt. Es sind 
+keine schwierigen Vorgänge, wenn man sich erst einmal daran gewöhnt 
+hat und sie werden mit der Zeit immer wichtiger, sowie ein Projekt 
+immer mehr Entwickler aufnimmt.</p><p>Zweige sind wichtig da sie eine knappe Ressource &#8211; den Platz
+im Code des Projekts &#8211; im Überfluss bereitstellt. Normalerweise 
+arbeiten alle Entwickler im gleichen Sandkasten und bauen an der 
+gleichen Burg. Wenn jemand eine neue Zugbrücke anbauen will, jedoch
+nicht alle überzeugen kann, dass es eine Verbesserung wäre, ermöglicht
+ein Zweig mit ihr in einer eigenen isolierte Ecke zu experimentieren. 
+Wenn es funktioniert kann sie die anderen Entwickler einladen, sich 
+das Ergebnis anzuschauen. Wenn alle zustimmen, dass das Ergebnis gut 
+ist können sie mittels der Versionsverwaltung die Zugbrücke aus dem 
+Burgflügel in die Haupt-Burg übernehmen (einen "Merge" machen).</p><p>Es ist einfach zu erkennen, wie diese Fähigkeit die 
+gemeinschaftliche Entwicklung fördert. Menschen brauchen die Freiheit 
+Neues auszuprobieren ohne das Gefühl zu bekommen andere bei der Arbeit
+zu stören. Gleichermaßen gibt es Zeiten an denen es wichtig ist,
+bestimmten Code von der alltäglichen Entwicklung zu isolieren, um 
+einen Fehler zu beheben oder eine neue Version stabil zu machen (siehe
+<a class="xref" href="stabilizing-a-release.html" title="Stabilisierung einer neuen Version">&#8222;Stabilisierung einer neuen Version&#8220;</a> und 
+<a class="xref" href="release-lines.html" title="Wartung mehrerer Versionszweige">&#8222;Wartung mehrerer Versionszweige&#8220;</a><span> im Kapitel
+<a class="xref" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <i>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</i></a></span>) ohne sich über ein
+bewegliches Ziel Gedanken zu machen.</p><p>Seien Sie großzügig bei der Nutzung von Zweigen und ermutigen Sie 
+andere, ebenso zu verfahren.
+Achten Sie aber auch darauf, dass jeder Zweig nur so lange 
+aktiv bleibt wie nötig. Jeder aktive Zweig beansprucht die Aufmerksamkeit
+der Gemeinschaft ein klein wenig. Selbst diejenigen die nicht an 
+einem Zweig arbeiten, behalten noch einen groben Überblick über die
+Ereignisse darin. Diese Aufmerksamkeit ist natürlich wünschenswert 
+und Commit-Nachrichten sollten auch für Zweige eingeschaltet sein, 
+genau wie für jeden anderen Commit. Zweige sollten jedoch nicht zu 
+einer Methode werden, die Gemeinschaft zu spalten. Mit seltenen 
+Ausnahmen sollte jeder Zweig das Ziel haben, irgendwann wieder zurück 
+in den Hauptzweig überzugehen und zu verschwinden.</p></div><div class="sect3" title="Eindeutigkeit von Informationen"><div class="titlepage"><div><div><h4 class="title"><a name="vc-singularity"></a>Eindeutigkeit von Informationen</h4></div></div></div><p>Merges haben eine wichtige Konsequenz: Dieselbe Änderung
+sollte niemals doppelt committet werden. D.h. eine bestimmte Änderung
+sollte durch das Versionsverwaltungssystem nur genau einmal übernommen
+werden. Die Revision (oder die Gruppe von Revisionen) in dem diese
+Änderung eingebracht wurde, ist von da an seine eindeutige Kennung.
+Wenn sie auf weitere Zweige angewendet werden soll, sollte sie von ihrem
+ursprünglichen Eintrittspunkt aus in diese anderen Ziele portiert
+werden &#8211; man sollte also nicht mehrere textgleiche Änderungen 
+committen, was zwar die gleiche Wirkung auf den Code haben würde,
+aber eine genaue Buchführung unmöglich machen würden.</p><p>Die praktische Auswirkung dieser Empfehlung sind unterschiedlich,
+je nach Versionsverwaltungssystem. Manche Systeme erfassen einen Merge 
+als besonderes Ereignis, grundsätzlich unterschiedlich zu einem normalen
+Commit, mit eigenen Metadaten. Bei anderen wird das Ergebnis eines Merges
+genau wie jeder andere Commit übernommen, in solchen Fällen sollte man 
+dafür sorgen, dass sich ein "Merge-Commit" im Commit-Log klar von einem 
+"Änderungs-Commit" unterscheidet. In dem Commit-Log von einem Merge 
+sollte nicht die Nachricht der ursprünglichen Änderung wiederholt 
+werden. Stattdessen sollten Sie lediglich angeben, dass es sich um 
+einen Merge handelt, und die Revisionsnummer der Ursprünglichen 
+Änderung angeben und höchstens einen Satz, um die Auswirkungen der 
+Änderung zusammenzufassen. Wenn jemand den kompletten Commit-Log sehen 
+will, kann er die ursprünglichen Revisionen aufsuchen.</p><p>Es ist wichtig zu vermeiden, die Commit-Logs zu wiederholen, da
+Log-Nachrichten manchmal nach dem Commit geändert werden. Wenn die Log-
+Nachricht einer Änderung bei jedem Merge wiederholt würde, blieben 
+selbst bei einer Korrektur der ursprünglichen Nachricht alle Kopien 
+unverändert &#8211; was später unweigerlich zu Verwirrung führen 
+kann.</p><p>Dasselbe Prinzip gilt beim Rückgängigmachen einer Änderung. Wenn 
+eine Änderung wieder vom Code entfernt wird, sollte sein Commit-Log
+lediglich festhalten, dass die Änderung einer bestimmten Revision 
+rückgängig gemacht wird und <span class="emphasis"><em>nicht</em></span> eine 
+Beschreibung der tatsächlichen Änderungen am Code, da diese 
+Information aus der ursprünglichen Änderungen und sein Log ersichtlich
+ist. Selbstverständlich sollte der Log auch den Grund für die 
+Entfernung nennen, jedoch nichts aus dem ursprünglichen Log 
+wiederholen. Wenn möglich gehen Sie zurück und Ändern Sie den Log der 
+ursprünglichen Änderung und weisen Sie darauf hin, dass sie
+zurückgedreht wurde.</p><p>Die vorhergehenden Passagen implizieren die Verwendenung einer
+konsistenten und gleichbleibende Syntax um auf Revisionen Bezug zu
+nehmen. Das ist nicht nur in den Logs hilfreich, sondern auch in 
+E-Mails, dem Bugtracker und anderswo. Wenn Sie CVS verwenden, schlage
+ich "<code class="literal">path/to/file/in/project/tree:REV</code>" als Format
+vor, wobei REV eine CVS Revisionsnummer wie "1.76" darstellt. Wenn Sie
+Subversion verwenden, ist die übliche Syntax für die Revision 1729
+"r1729" (Datei-Pfade sind bei Subversion nicht nötig, da es globale 
+Revisionsnummern verwendet). Andere Systemen haben meistens ihre
+eigene übliche Syntax um Änderungen zu kenzeichnen. Konsistente 
+Bezeichnungen erleichtern die Buchhaltung eines Projekts ungemein (was
+wir in <a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a> und 
+<a class="xref" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <i>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</i></a>) sehen werden und da ein großer 
+Teil der Buchhaltung von Freiwilligen erledigt wird, muss es so 
+einfach wie Möglich sein.</p><p>Siehe auch
+<a class="xref" href="releases-and-daily-development.html" title="Neue Versionen und tägliche Entwicklung">&#8222;Neue Versionen und tägliche Entwicklung&#8220;</a><span>
+im Kapitel <a class="xref" href="development-cycle.html" title="Kapitel 7. Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung">Kapitel 7, <i>Paket-Erstellung, Veröffentlichung, und tägliche Entwicklung
+</i></a></span>.</p></div><div class="sect3" title="Autorisierung"><div class="titlepage"><div><div><h4 class="title"><a name="vc-authz"></a>Autorisierung</h4></div></div></div><p>Die meistene Versionsverwaltungen bieten Funktionen, um 
+bestimmten Personen Schreibzugriff auf einzelne Bereiche des Projektarchivs
+zu erlauben oder zu verwehren. Nach dem Grundsatz, dass jemand, sobald man ihm
+einen Hammer in die Hand gibt, anfangen wird, überall Nägel zu sehen, wird 
+diese Funktion von vielen Projekten benutzt, um den Beteiligten lediglich 
+Schreibzugriff auf Bereiche zu geben mit denen sie sich offensichtlich auskennen 
+und so sichergestellt ist, dass sie nirgendwo sonst Schreibzugriff haben. (Siehe 
+<a class="xref" href="committers.html" title="Committer">&#8222;Committer&#8220;</a><span> im Kapitel
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span> indem beschrieben ist,
+wie Projekte entscheiden wer wo Änderungen machen kann.)</p><p>Mit einer solch scharfen Kontrolle können Sie wahrscheinlich kaum
+Schaden anrichten, eine lockerere Haltung ist aber auch in Ordnung.
+Manche Projekte benutzen einfach ein Vertrauenssystem: Wenn
+einer Person Commit-Zugriff gewährt wird, wenn auch nur für einen
+Teilbereich des Projektarchivs, erhält diese in Wirklichkeit den Schlüssel,
+um überall im Projekt zu Änderungen vorzunehmen. Sie wird einfach 
+darum gebeten, sich auf ihren Bereich zu beschränken. Denken Sie daran,
+dass hierin keine echte Gefahr besteht: In einem aktiven Projekt
+wird sowieso jeder Commit überprüft. Wenn jemand in einem Bereich etwas
+ändert, in dem er nichts zu suchen hat, werden es andere bemerken und etwas sagen.
+Wenn eine Änderung rückgängig gemacht werden muss, ist das auch kein 
+Problem &#8211; es ist sowieso alles in der Versionsverwaltung, also kann man
+es einfach rückgängig machen.</p><p>Die Sache locker anzugehen hat mehrere Vorteile. Erstens gibt es
+keinen weiteren Aufwand um Entwickler zusätzliche Rechte einzuräumen, 
+sobald sie sich auf andere Bereiche ausweiten (was meistens irgendwann
+passiert, wenn sie länger beim Projekt bleiben). Sobald die 
+Entscheidung getroffen wurde, kann die Person gleich anfangen 
+Änderungen im neuen Bereich zu machen.</p><p>Zweitens kann die Erweiterung viel feiner granuliert werden. 
+Allgemein wird ein Commit-Berechtigter im Bereich X der auch im Bereich
+Y arbeiten will, anfangen Patches für Y einzureichen und darum bitten,
+dass sie überprüft werden. Wenn jemand der bereits Zugriff auf dem 
+Bereich Y hat solch einen Patch sieht und ihm zustimmt, können sie dem
+Autor einfach sagen, dass sie die Änderung gleich selber einspielen
+können(natürlich mit Namensangabe vom Überprüfenden bzw, Zustimmenden 
+im Commit-Log). Auf diese Art stammt der Commit von dem, der ihn auch 
+geschrieben hat, was sowohl aus Sicht der Informationsverwaltung als 
+auch der Anerkennung vorzuziehen ist.</p><p>Schließlich, und das ist vielleicht das Wichtigste, regt ein System,
+das auf Ehre basiert, eine Atmosphäre des Vertrauens und des gegenseitigen
+Respekts an. Jemandem Commit-Zugriff auf einem Teilbereich zu geben, ist
+eine Aussage über ihre fachliche Vorbereitung &#8211; es sagt: "Wir 
+sehen, dass du die Kenntnisse hast, um auf einem Gebiet Änderungen zu 
+machen, also leg los". Strikte Autorisierung aufzuerlegen, sagt aber: 
+"Wir behaupten nicht nur, dass deine Kenntnisse begrenzt sind, wir 
+sind auch ein wenig skeptisch im Bezug auf deine 
+<span class="emphasis"><em>Absichten</em></span>". Das ist keine Behauptung, die Sie in
+den Raum stellen wollen, wenn es sich vermeiden lässt. Jemanden an dem 
+Projekt als commit-berechtigt zu beteiligen, ist eine Gelegenheit, ihn 
+in einen Kreis vertrauter Personen aufzunehmen. Das erreicht man am
+besten, indem man ihm mehr Macht gibt als er letztlich braucht, und ihn
+darüber informiert, dass es an ihm ist, sich innerhalb der genannten 
+Grenzen zu bewegen.</p><p>Das Subversion-Projekt arbeitet schon seit vier Jahren nach dem
+Ehren-Prinzip, mit 33 voll -und 43 teil-berechtigten Entwicklern zum
+Zeitpunkt dieses Schreibens. Der einzige Unterschied, den das System
+macht, ist zwischen Commit-Berechtigten und nicht Commit-Berechtigten; 
+weitere Unterteilungen bestehen allein auf zwischenmenschlicher Ebene.
+Dennoch hatte man dort nie Probleme mit den Grenzen der Berechtigungen. Es
+gab ein oder zwei Missverständnisse über das Ausmaß der 
+Commit-Berechtigungen, die jedoch immer schnell und freundlich gelöst
+wurden.</p><p>Offensichtlich muss man sich auf strikte Autorisierung verlassen
+können, wenn Selbstkontrolle nicht sinnvoll ist. Solche Situationen
+sind jedoch selten. Selbst bei Unmengen Code und hunderten oder tausenden
+Entwicklern, sollte ein Commit zu jedem beliebigen Modul von denen 
+zuständigen Personen überprüft werden, die auch erkennen können ob 
+jemand an eine Stelle etwas geändert hat die er nicht sollte. Wenn 
+Änderungen <span class="emphasis"><em>nicht</em></span> regelmäßig überprüft werden, 
+dann hat das Projekt ohnehin größere Probleme als die
+Commit-Berechtigung.</p><p>Insgesamt sollte man nicht allzuviel Zeit damit verbringen, die 
+Berechtigungen der Versionsverwaltung auszutüfteln, es sei denn Sie 
+haben einen ganz bestimmten Grund dazu. Es wird für meistens wenig
+handfesten Nutzen bringen und es hat seine Vorteile sich stattdessen
+auf menschliche Kontrolle zu verlassen.</p><p>Natürlich sollte man nichts hiervon so auffassen, dass die 
+Beschränkungen an und für sich unwichtig sind. Es wäre schlecht für 
+das Projekt, Teilnehmer anzuregen Bereiche zu ändern, für die sie
+nicht qualifiziert sind. Desweiteren geben viele Projekte dem vollen 
+(uneingeschränkten) Zugriff auf das Projektarchiv einen besonderen 
+Status: Es impliziert, dass der Teilnehmer das Recht hat, über Fragen 
+die das ganze Projekt betreffen abzustimmen. Dieser politische 
+Aspekt der Commit-Berechtigung wird weiter in 
+<a class="xref" href="consensus-democracy.html#electorate" title="Wahlberechtigung">&#8222;Wahlberechtigung&#8220;</a><span> im Kapitel 
+<a class="xref" href="social-infrastructure.html" title="Kapitel 4. Soziale und politische Infrastruktur">Kapitel 4, <i>Soziale und politische Infrastruktur</i></a></span> behandelt.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp4519664" href="#idp4519664" class="para">20</a>] </sup>im Deutschen
+auch manchmal "Versionskontrolle" genannt.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4769408" href="#idp4769408" class="para">21</a>] </sup>engl. "working
+  copy"</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4756784" href="#idp4756784" class="para">22</a>] </sup> im engl. auch
+  <em class="firstterm">change</em> oder 
+  <em class="firstterm">changeset</em> (de. Satz von 
+  Änderungen)</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4778416" href="#idp4778416" class="para">23</a>] </sup>kurz für
+  <span class="foreignphrase"><em class="foreignphrase">difference</em></span>(de.
+  Unterschied)</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4776080" href="#idp4776080" class="para">24</a>] </sup>de. 
+  Etikett</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4779376" href="#idp4779376" class="para">25</a>] </sup>de. 
+  Zweig/Ast</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4786128" href="#idp4786128" class="para">26</a>] </sup>engl. "main branch" auch "main line" oder 
+  "<em class="firstterm">trunk</em>" de. "Stamm"</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4780864" href="#idp4780864" class="para">27</a>] </sup>im engl. auch "port" de. 
+  Zusammenführung/Portierung</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4801808" href="#idp4801808" class="para">28</a>] </sup>Siehe
+<a class="ulink" href="http://cia.vc/stats/vcs" target="_top">http://cia.vc/stats/vcs</a> und <a class="ulink" href="http://subversion.tigris.org/svn-dav-securityspace-survey.html" target="_top">http://subversion.tigris.org/svn-dav-securityspace-survey.html</a>
+für beweise für dieses Wachstum.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4643568" href="#idp4643568" class="para">29</a>] </sup>Eine andere Meinung im Bezug auf die 
+Versionierung von <code class="filename">configure</code> Dateien, kann man in 
+"<em class="citetitle">configure.in and version control</em>" bei 
+<a class="ulink" href="http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/" target="_top">http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/</a>
+von Alexey Makhotkin nachlesen.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="mailing-lists.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="bug-tracker.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Mailinglisten </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Bugtracker</td></tr></table></div></body></html>

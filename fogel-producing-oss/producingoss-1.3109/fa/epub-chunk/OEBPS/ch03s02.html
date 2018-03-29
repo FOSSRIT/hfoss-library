@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Web Site</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Web Site"><div class="titlepage"><div><div><h1 class="title"><a id="web-site"/>Web Site</h1></div></div></div><p><span class="emphasis"><em>possv2 24 March 2013: If you're reading this note, then
+you've encountered this chapter while it's undergoing substantial
+revision; see <a class="ulink" href="http://producingoss.com/v2.html">producingoss.com/v2.html</a> for details.</em></span></p><p>For our purposes, <span class="emphasis"><em>the web site</em></span> means web
+pages devoted to helping people participate in the project as
+developers, documenters, etc.  Note that this is different from the
+main user-facing web site.  In many projects, users have different
+needs and often (statistically speaking) a different mentality from
+the developers.  The kinds of web pages most helpful to users are not
+necessarily the same as those helpful for
+developers — don't try to make a "one size fits all"
+web site just to save some writing and maintenance effort: you'll end
+up with a site that is not quite right for either audience.</p><p>The two types of sites should cross-link, of course, and in
+particular it's important that the user-oriented site have, tucked a
+way in a corner somewhere, a clear link to the developers' site, since
+most new developers will start out at the user-facing pages and look
+for a path from there to the developers' area.</p><p>An example may make this clearer.  As of this writing in
+November 2013, the office suite LibreOffice has its main user-oriented
+web site at <a class="ulink" href="https://libreoffice.org/">libreoffice.org</a>, as you'd expect.  If you were a user wanting
+to download and install LibreOffice, you'd start there, go straight to
+the "Download" link, and so on.  But if you were a developer looking
+to (say) fix a bug in LibreOffice, you might
+<span class="emphasis"><em>start</em></span> at <a class="ulink" href="https://libreoffice.org/">libreoffice.org</a>, but you'd be looking for a link that says
+something like "Developers", or "Development", or "Get
+Involved" — in other words, you'd be looking for the
+gateway to the development area.</p><p>In the case of LibreOffice, as with some other large projects,
+they actually have a couple of different gateways.  There's one link
+that says <a class="ulink" href="https://www.libreoffice.org/get-involved/">"Get Involved"</a>, and another that says <a class="ulink" href="https://www.libreoffice.org/developers/">"Developers"</a>.
+The "Get Involved" page is aimed at the broadest possible range of
+potential contributors: developers, yes, but also documenters,
+quality-assurance testers, marketing volunteers, web infrastructure
+volunteers, financial or in-kind donors, interface designers, support
+forum volunteers, etc.  This frees up the "Developers" page to target
+the rather narrower audience of programmers who want to get involved
+in improving the LibreOffice code.  The set of links and short
+descriptions provided on both pages is admirably clear and concise:
+you can tell immediately from looking whether you're in the right
+place for what you want do, and if so what the next thing to click on
+is.  The "Development" page gives some information about where to find
+the code, how to contact the other developers, how to file bugs, and
+things like that, but most importantly it points to what most seasoned
+open source contributors would instantly recognize as the
+<span class="emphasis"><em>real</em></span> gateway to actively-maintained development
+information: the development wiki at <a class="ulink" href="http://wiki.documentfoundation.org/Development">wiki.documentfoundation.org/Development</a>.</p><p>This division into two contributor-facing gateways, one for all
+kinds of contributions and another for coders specifically, is
+probably right for a large, multi-faceted project like LibreOffice.
+You'll have to use your judgement as to whether that kind of
+subdivision is appropriate for your project; at least at the
+beginning, it probably isn't.  It's better to start with one unified
+contributor gateway, aimed at all the types of contributors you
+expect, and if that page ever gets large enough or complex enough to
+feel unwieldy — listen carefully for complaints about
+it, since you and other long-time participants will be naturally
+desensitized to weaknesses in introductory
+pages! — then you can divide it up however seems
+best.</p><p>From a technical point of view there is not much to say about
+setting up the project web site.  Configuring a web server and writing
+web pages are fairly simple tasks, and most of the important things to
+say about layout and arrangement were covered in the previous chapter.
+The web site's main function is to present a clear and welcoming
+overview of the project, and to bind together the other tools (the
+version control system, bug tracker, etc.).  If you don't have the
+expertise to set up a web server yourself, it's usually not hard to
+find someone who does and is willing to help out.  Nonetheless, to
+save time and effort, people often prefer to use one of the canned
+hosting sites.</p><div class="sect2" title="Canned Hosting"><div class="titlepage"><div><div><h2 class="title"><a id="canned-hosting"/>Canned Hosting</h2></div></div></div><p>A <em class="firstterm">canned hosting</em> site is an online
+service that offers some or all of the online collaboration tools
+needed to run a free software project.  At a minimal, a canned hosting
+site offers public version control repositories and bug tracking; most
+also offer wiki space, many offer mailing list hosting too, and some
+offer continuous integration testing and other services.</p><p>There are two main advantages to using a canned site.  The first
+is server capacity and bandwidth: their servers are beefy boxes
+sitting on really fat pipes.  No matter how successful your project
+gets, you're not going to run out of disk space or swamp the network
+connection.  The second advantage is simplicity.  They have already
+chosen a bug tracker, a version control system, perhaps discussion
+forum software, and everything else you need to run a project.
+They've configured the tools, arranged single-sign-on authentication
+where appropriate, are taking care of backups for all the data stored
+in the tools, etc.  You don't need to make many decisions.  All you
+have to do is fill in a registration form, press a button, and
+suddenly you've got a project development web site.</p><p>These are pretty significant benefits.  The disadvantage, of
+course, is that you must accept <span class="emphasis"><em>their</em></span> choices and
+configurations, even if something different would be better for your
+project.  Usually canned sites are adjustable within certain narrow
+parameters, but you will never get the fine-grained control you would
+have if you set up the site yourself and had full administrative
+access to the server.</p><p>A perfect example of this is the handling of generated files.
+Certain project web pages may be generated files—for example,
+there are systems for keeping FAQ data in an easy-to-edit master
+format, from which HTML, PDF, and other presentation formats can be
+generated.  As explained in
+<a class="xref" href="ch03s04.html#version-everything" title="Version everything">
+      بخشی بنام
+      “Version everything”
+    </a><span>
+earlier in this chapter</span>,
+you wouldn't want to version the generated formats, only the master
+file.  But when your web site is hosted on someone else's server, it
+may be difficult to set up a custom hook to regenerate the online
+HTML version of the FAQ whenever the master file is changed.</p><p>If you choose a canned site, leave open the option of switching
+to a different site later, by using a custom domain name as the
+project's development home address.  You can forward that URL to the
+canned site, or have a fully customized development home page at the
+main URL and link to the canned site for specific functionality.  Just
+try to arrange things such that if you later decide to use a different
+hosting solution, the project's main address doesn't need to
+change.</p><p>And if you're not sure whether to use canned hosting, then you
+should probably use canned hosting.  These sites have integrated their
+services in myriad ways (just one example: if a commit mentions a bug
+ticket number using a certain format, then people browsing that commit
+later will find that it automatically links to that ticket), ways that
+would be laborious for you to reproduce, especially if it's your first
+time running an open source project.  The universe of possible
+configurations of collaboration tools is vast and complex, but the
+same set of choices has faced everyone running an open source project
+and there are some settled solutions now.  Each of the canned hosting
+sites implements a reasonable subset of that solution space, and
+unless you have reason to believe you can do better, your project will
+probably run best just using one of those sites.</p><div class="sect3" title="Choosing a canned hosting site"><div class="titlepage"><div><div><h3 class="title"><a id="canned-hosting-choosing"/>Choosing a canned hosting site</h3></div></div></div><p><span class="emphasis"><em>possv2 todo 26 September 2014: If you're reading this
+note, then you've encountered this section while it's undergoing
+revision; see <a class="ulink" href="http://producingoss.com/v2.html">producingoss.com/v2.html</a> for details.  The specific todo item
+here is: update this to talk more about <a class="ulink" href="https://about.gitlab.com/">GitLab.com</a> (and similarly
+well-integrated and easy-to-use services that are themselves open
+source).  I'm not sure that the recommendation toward GitHub below
+should be as strong as it is.  GitHub is still dominant, but that is
+not the important question; the important question is the degree to
+which choosing GitHub is in itself a factor in your project's
+success — that is, would some developers be slower to
+contribute if one is hosted somewhere other than GitHub?  I'm not sure
+it makes that much of a difference anymore.  All the good forge sites
+are looking basically alike now.  And GitLab is open source, whereas
+GitHub is not.</em></span></p><p>There are now so many sites providing free-of-charge canned
+hosting for projects released under open source licenses that there is
+not space here to review the field.</p><p>So I'll make this easy: choose <a class="ulink" href="http://github.com/">GitHub</a>.  It's by far the most popular and appears set to stay
+that way, or even grow in dominance, for some years to come.  It has a
+good set of features and integrations.  Many developers are already
+familiar with GitHub and have an account there.  It has an <a class="ulink" href="http://develop.github.com/">API</a> for interacting
+programmatically with project resources, and while it does not
+currently offer mailing lists, there are plenty of other places you
+can host those, such as <a class="ulink" href="http://groups.google.com/">Google
+Groups</a>.</p><p>If you're not convinced by GitHub (for example because your
+project uses, say, Mercurial instead of Git), but you aren't sure
+where to host, take a look at Wikipedia's thorough <a class="ulink" href="http://en.wikipedia.org/wiki/Comparison_of_open_source_software_hosting_facilities">comparison of open source software hosting facilities</a>; it's
+the first place to look for up-to-date, comprehensive information on
+open source project hosting options.  Currently the two most popular
+other hosting sites are <a class="ulink" href="http://code.google.com/hosting/">Google Code Hosting</a>, <a class="ulink" href="http://sourceforge.net/">SourceForge</a>, but consult the Wikipedia page before making a
+decision.</p></div><div class="sect3" title="Hosting on fully open source infrastructure"><div class="titlepage"><div><div><h3 class="title"><a id="hosting-on-freedom"/>Hosting on fully open source infrastructure</h3></div></div></div><p>Although all the canned hosting sites use plenty of free
+software in their stack, most of them also wrote their own proprietary
+software to glue it all together, which means the hosting environment
+is not easily reproducible by others.  For example, while Git itself
+is free software, GitHub is a hosted service running partly with
+proprietary software — if you leave GitHub, you can't
+take it with you, at least not all of it.</p><p>Some projects prefer a canned hosting site that runs an entirely
+free software infrastructure and that could, in theory, be reproduced
+independently were that ever to become necessary.  Fortunately, there
+are such sites, the most well-known being <a class="ulink" href="http://gitlab.com/">GitLab</a>, <a class="ulink" href="http://gitorious.org/">Gitorious</a>, and <a class="ulink" href="http://savannah.gnu.org/">GNU Savannah</a> (as of this
+writing in 2014).  Furthermore, any service that offers hosting
+of the <a class="ulink" href="http://redmine.org/">Redmine</a> or <a class="ulink" href="http://trac.edgewall.org">Trac</a> code collaboration
+platforms effectively offers fully freedom-preserving project hosting,
+because those platforms include most of the features needed to run an
+open source project; some companies offer that kind of commercial
+platform hosting with a zero-cost or very cheap rate for open source
+projects.</p><p>Should you host your project on fully open source
+infrastructure?  While it would be ideal to have access to all the
+code that runs the site, my opinion is that the crucial thing is to
+have a way to export project data, and to be able to interact with the
+data in automatable ways.  A site that meets these criteria can never
+truly lock you in, and will even be extensible, to some degree,
+through its programmatic interface.  While there is some value in
+having all the code that runs a hosting site available under open
+source terms, in practice the demands of actually deploying that code
+in a production environment are prohibitive for most projects anyway.
+These sites need multiple servers, customized networks, and full-time
+staffs to keep them running; merely having the code would not be
+sufficient to duplicate or "fork" the service anyway.  The main thing
+is just to make sure your data isn't trapped.</p><p>Of course, all the above applies only to the servers.  Your
+project should never require participants to run proprietary
+collaboration software on their own machines.</p></div><div class="sect3" title="Anonymity and involvement"><div class="titlepage"><div><div><h3 class="title"><a id="anonymity"/>Anonymity and involvement</h3></div></div></div><p>A problem that is not strictly limited to the canned sites, but
+is most often found there, is the over-requirement of user
+registration to participate in various aspects of the project.  The
+proper degree of requirement is a bit of a judgement call.  User
+registration helps prevent spam, for one thing, and even if every
+commit gets reviewed you still probably don't want anonymous strangers
+pushing changes into your repository, for example.</p><p>But sometimes user registration ends up being required for tasks
+that ought to be permitted to unregistered visitors, especially the
+ability to file tickets in the bug tracker, and to comment on existing
+tickets.  By requiring a logged-in username for such actions, the
+project raises the involvement bar for what should be quick,
+convenient tasks.  It also changes the demographics of who files bugs,
+since those who take the trouble to set up a user account at the
+project site are hardly a random sample even from among users who are
+willing to file bugs (who in turn are already a biased subset of all
+the project's users).  Of course, one wants to be able to contact
+someone who's entered data into the ticket tracker, but having a field
+where she can enter her email address (if she wants to) is sufficient.
+If a new user spots a bug and wants to report it, she'll only be
+annoyed at having to fill out an account creation form before she can
+enter the bug into the tracker.  She may simply decide not to file the
+bug at all.</p><p>If you have control over which actions can be done anonymously,
+make sure that at least <span class="emphasis"><em>all</em></span> read-only actions are
+permitted to non-logged-in visitors, and if possible that data entry
+portals, such as the bug tracker, that tend to bring information from
+users to developers, can also be used anonymously, although of course
+anti-spam techniques, such as captchas, may still be necessary.</p></div></div></div></body></html>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Karl Fogel -- Professional Biography</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <meta name="Author" content="Karl Fogel" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Professional Biography for Karl Fogel" />
+</head>
+
+<body>
+
+<script type="text/javascript">
+    <!-- Make sure we don't get stuck someone else's frameset. -->
+    if (top.location != self.location) {
+            top.location = self.location
+    }
+</script>
+
+<div id="mainbody">
+
+<h1 style="text-align: center;" >Karl Fogel</h1>
+<h4 style="text-align: center;" >Professional Biography</h4>
+
+<p style="margin-left: 3%; margin-right: 3%; margin-top: 3%; margin-bottom: 3%;" >Karl Fogel is an open source software developer, author, and copyright reform activist.  In 1999 he wrote <cite>"Open Source Development With CVS"</cite> (Coriolis OpenPress, online at <a href="http://cvsbook.red-bean.com" >cvsbook.com</a>), and in 2005 <cite>"Producing Open Source Software: How to Run a Successful Free Software Project"</cite> (O'Reilly Media, online at <a href="http://producingoss.com/" >producingoss.com</a>), based partly on his experiences in the <a href="http://subversion.apache.org/" >Subversion</a> project.  He has worked at <a href="http://collab.net/" >CollabNet</a>, <a href="http://google.com/" >Google</a>, <a href="http://canonical.com/" >Canonical</a>, <a href="http://oreilly.com/" >O'Reilly Media</a>, and <a href="http://codeforamerica.org/" >Code for America</a> / <a href="http://civiccommons.org/" >Civic Commons</a>, all as an open source specialist.  He is now a partner at <a href="http://opentechstrategies.com/" >Open Tech Strategies, LLC</a>, where he helps organizations launch and engage with open source projects, is an <a href="http://openitp.org/" >Open Internet Tools Project Fellow</a> at the <a href="http://newamerica.net" >New America Foundation</a>, is a member of the board of directors of the <a href="http://opensource.org/" >Open Source Initiative</a>, and serves on the Advisory Board of the <a href="http://c4sif.org/about/" >Center for the Study of Innovative Freedom</a>.  In 2007 he founded <a href="http://questioncopyright.org" >Question Copyright</a> and continues to serve as its President and Executive Director.  He writes and speaks regularly on open source, copyright reform, and the application of open source principles to areas outside software.  His home page is <a href="http://www.red-bean.com/kfogel/" >red-bean.com/kfogel</a>, and he is @kfogel on <a href="http://identi.ca/kfogel" >Identi.ca</a> and <a href="http://twitter.com/#!/kfogel" >Twitter</a>.</p>
+
+<center><img style="border: 1px solid grey;" src="http://red-bean.com/kfogel/photos/kfogel/kfogel-barcelona-2009-cropped-150x187.jpg" alt="Karl Fogel" /></center>
+
+<p style="margin-left: 3%;">(<a href="kfogel.html" >Résumé</a>)</p>
+
+</div>
+</body>
+</html>

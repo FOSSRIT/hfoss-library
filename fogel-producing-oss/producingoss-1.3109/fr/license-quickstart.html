@@ -1,0 +1,67 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Choisir une licence et la mettre en oeuvre</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produire un Logiciel Libre"><link rel="up" href="getting-started.html" title="Chapitre 2. Genèse d'un projet"><link rel="prev" href="getting-started.html" title="Chapitre 2. Genèse d'un projet"><link rel="next" href="setting-tone.html" title="Donner le ton"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Choisir une licence et la mettre en oeuvre</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="getting-started.html">Précédent</a> </td><th width="60%" align="center">Chapitre 2. Genèse d'un projet</th><td width="20%" align="right"> <a accesskey="n" href="setting-tone.html">Suivant</a></td></tr></table><hr></div><div class="sect1" title="Choisir une licence et la mettre en oeuvre"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="license-quickstart"></a>Choisir une licence et la mettre en oeuvre</h2></div></div></div><p>Ce paragraphe est un guide très court et basique sur le choix
+    d'une licence. Consultez <a class="xref" href="legal.html" title="Chapitre 9. Licenses, Copyrights, and Patents">Chapitre 9, <i>Licenses, Copyrights, and Patents</i></a> pour saisir les
+    implications légales des différentes licences et l'impact qu'une
+    licence peut avoir pour fusionner votre logiciel avec du code issue
+    d'autres projets.</p><p>Il existe de nombreuses licences pouvant être choisies. La
+    plupart, que nous omettrons, ne seraient probablement pas
+    appropriées à votre projet, couvrant des besoins spécifiques de
+    sociétés ou individus . Nous nous restreindrons simplement aux
+    licences les plus courantes, étant fort probable que l'une d'entre
+    elle vous conviendra.</p><div class="sect2" title='Les licences "Faites ce que vous voulez"'><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-non-gpl"></a>Les licences "Faites ce que vous voulez"</h3></div></div></div><p>Si vous ne voyez pas d'objections à ce que votre code soit
+      potentiellement utilisé dans les logiciels propriétaires, utilisez
+      une licence <span class="emphasis"><em>MIT/X</em></span> ou dérivées. Il s'agit de
+      la plus simple de plusieurs licences minimalistes qui n'apporte
+      pas grand chose de plus que la mention du copyright (sans
+      restriction du droit de copie) et la spécification explicite que
+      le produit est utilisé sans garantie d'aucune sorte. Voir <a class="xref" href="license-choosing.html#license-choosing-mit-x" title="The MIT / X Window System License">la section intitulée « The MIT / X Window System License »</a> pour plus de détail.</p></div><div class="sect2" title="La GPL"><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-gpl"></a>La GPL</h3></div></div></div><p>Si vous ne désirez pas que votre code puisse être utilisé
+      dans des programmes propriétaires, utilisez la GNU General Public
+      License (<a class="ulink" href="http://www.gnu.org/licenses/gpl.html" target="_top">http://www.gnu.org/licenses/gpl.html</a>). La
+      GPL est assurément la licence libre la plus largement reconnue
+      dans le monde actuellement. C'est un net avantage, puisque les
+      utilisateurs et contributeurs y sont familiarisés, et ne
+      dépenseront donc pas de temps supplémentaire à lire et comprendre
+      votre licence. Voir <a class="xref" href="license-choosing.html#license-choosing-gpl" title="The GNU General Public License">la section intitulée « The GNU General Public License »</a><span> du <a class="xref" href="legal.html" title="Chapitre 9. Licenses, Copyrights, and Patents">Chapitre 9, <i>Licenses, Copyrights, and Patents</i></a></span> pour
+      davantage de précisions.</p></div><div class="sect2" title="Comment mettre en oeuvre cette licence au projet"><div class="titlepage"><div><div><h3 class="title"><a name="license-quickstart-applying"></a>Comment mettre en oeuvre cette licence au projet</h3></div></div></div><p>Une fois la licence choisie, vous devez la préciser sur la
+      page Web de garde du projet. Nul besoin d'inclure le texte de la
+      licence à cet endroit; fournissez simplement le nom de la licence,
+      et prévoyez un lien vers la licence complète située sur une autre
+      page.</p><p>Vous explicitez ainsi quelle licence vous <span class="emphasis"><em>prévoyez
+      </em></span>d'utiliser pour le logiciel, mais c'est insuffisant en
+      terme juridique. Le logiciel lui même doit en effet contenir la
+      licence. La façon standard de le mettre en oeuvre et d'incorporer
+      un fichier texte de licence nommé <code class="filename">COPYING</code> (ou
+      <code class="filename">LICENSE</code>), et d'ajouter une courte notice dans
+      l'entête de chaque fichier source, fournissant la date du
+      copyright, le détenteur, la licence et pour finir l'endroit ou le
+      texte complet de la licence peut être obtenu.</p><p>Il y a bien des variantes possibles, nous fournissons donc
+      un unique exemple ici. La licence GNU GPL requiert d'ajouter une
+      telle notice en entête de chaque fichier source :</p><pre class="screen">
+Copyright (C) &lt;année&gt;  &lt;nom de l'auteur&gt;
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+</pre><p>Cette notice ne spécifie pas explicitement que la copie de
+      la licence que l'utilisateur reçoit avec le logiciel se trouve
+      dans le fichier COPYING, mais c'est en général l'endroit utilisé
+      (vous pouvez modifier l'entête pour le spécifier directement).
+      Elle fournit également une adresse géographique à partir de
+      laquelle demander une copie de la licence. Une autre méthode
+      commune est de fournir un lien vers une page Web comprenant le
+      texte de la licence. Utilisez simplement votre jugement et pointez
+      vers l'endroit le plus adéquat pour obtenir une copie de façon
+      permanente, ce qui peut être n'importe où sur votre site Web. En
+      général, la notice que vous utilisez n'aura pas exactement le
+      contenu de l'exemple plus haut. L'important est d'y faire figurer
+      les données obligatoires : détenteur du copyright, date, nom de la
+      licence et moyen d'accès au texte de la licence.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="getting-started.html">Précédent</a> </td><td width="20%" align="center"><a accesskey="u" href="getting-started.html">Niveau supérieur</a></td><td width="40%" align="right"> <a accesskey="n" href="setting-tone.html">Suivant</a></td></tr><tr><td width="40%" align="left" valign="top">Chapitre 2. Genèse d'un projet </td><td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td><td width="40%" align="right" valign="top"> Donner le ton</td></tr></table></div></body></html>

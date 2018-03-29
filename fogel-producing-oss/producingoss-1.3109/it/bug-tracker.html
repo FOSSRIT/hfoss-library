@@ -1,0 +1,219 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Tracciamento dei bug</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="technical-infrastructure.html" title="Capitolo 3. L'Infrastruttura Tecnica"><link rel="prev" href="vc.html" title="Controllo di versione"><link rel="next" href="irc.html" title="IRC / Sistemi di Chat in tempo reale"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Tracciamento dei bug</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="vc.html">Indietro</a> </td><th width="60%" align="center">Capitolo 3. L'Infrastruttura Tecnica
+</th><td width="20%" align="right"> <a accesskey="n" href="irc.html">Avanti</a></td></tr></table><hr></div><div class="sect1" title="Tracciamento dei bug"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bug-tracker"></a>Tracciamento dei bug</h2></div></div></div><p>Il tracciamento dei bug è un argomento ampio; vari suoi aspetti sono discussi
+lungo questo libro. Qui cercherò di concentrarmi principalmente su setup e considerazioni
+tecniche, ma per arrivarci, dobbiamo iniziare con una domanda di politica: esattamente
+quale tipo di informazione deve essere mantenuta in un tracciatore di bug?</p><p>Il termine <em class="firstterm">tracciatore di bug</em> (bug tracker) è fuorviante.
+Sistemi di tracciamento di bug sono anche usati frequentemente per tenere traccia
+delle richieste di nuove funzionalità, one-time task, patch non sollecitate&#8212; veramente ogni cosa
+che abbia stati di inizio e di fine distinti, con stati di transizione opzionali nel mezzo,
+e che accumuli informazioni durante il suo tempo di vita. Per questa ragione, i bug tracker 
+sono anche chiamati <em class="firstterm">tracciatori di problemi</em> (issue trackers), 
+<em class="firstterm">tracciatori di difetti</em> (defect trackers),
+<em class="firstterm">artifact trackers</em>, <em class="firstterm">tracciatori di richieste</em> 
+(request trackers), <em class="firstterm">sistemi di segnalazione di problemi</em>, 
+(trouble ticket systems) eccetera. Vedi <a class="xref" href="bug-trackers.html" title="Appendice B. Bug Tracker Liberi">Appendice B, <i>Bug Tracker Liberi</i></a> 
+per un elenco di software. </p><p>In questo libro continuerò ad usare "bug tracker" per il software che fa il tracciamento,
+perchè è come la maggior parte della gente lo chiama, ma userò <em class="firstterm">problema</em>  
+(issue) per riferirmi ad un singolo elemento nel database del bug tracker.
+Questo ci permette di distinguere tra l'aspetto, anche sbagliato, che l'utente ha riscontrato 
+(cioè il bug stesso) e gli <span class="emphasis"><em>elementi</em></span> (record) del tracker della scoperta
+del bug, della diagnosi e dell'eventuale soluzione. Ricordate che anche sono la maggior
+parte dei problemi sono veramente bug, possono essere usati per tracciare anche
+altri tipi di attività.</p><p>Il tipico ciclo di vita di un problema è tipo:
+
+</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Qualcuno identifica il problema. Fornisce un'introduzione, una
+  descrizione iniziale (includendo se possibile, una descrizione di come riprodurlo; vedi
+            <a class="xref" href="managing-volunteers.html#users-to-volunteers" title="Trattate Ogni Utilizzatore Come un Potenziale Volontario">sezione chiamata «Trattate Ogni Utilizzatore Come un Potenziale Volontario»</a><span> in
+            <a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span> per come incoraggiare
+            delle buone segnalazioni di bug). e qualsiasi altra informazione il tracker
+            richieda. La persona che scopre il bug potrebbe essere completamente sconosciuta
+            al progetto &#8212;le segnalazioni di bug e le richieste di funzionalità plausibilmente
+            arrivano dalla comunità degli utenti così come dagli sviluppatori.</p><p>Una volta scoperto, il problema entra nel cosiddetto stato
+            <em class="firstterm">aperto</em>. Dato che nessuna azione è ancora
+            stata intrapresa, alcuni tracker lo marcano come 
+            <em class="firstterm">non verificato</em> (unverified) e/o
+            <em class="firstterm">non iniziato</em> (unstarted). Non è
+            assegnato a nessuno; o, in alcuni sistemi è assegnato ad un
+            qualche utente fittizio che rappresenta la mancanza di una vera
+            assegnazione. A questo punto, è in un'area controllata: il problema
+            è stato memorizzato, ma non ancora integrato nella coscienza del progetto.</p></li><li class="listitem"><p>Altri leggono il problema, ci aggiungono commenti, e magari chiedono
+  chiarimenti su alcuni punti allo scopritore.</p></li><li class="listitem"><p>Il bug viene <em class="firstterm">reprodotto</em>. 
+  Questo potrebbe essere il momento più importante nel suo ciclo di vita. Anche se
+  il bug non è stato riparato, il fatto che qualcuno diverso dallo scopritore è stato
+  in grado di riprodurlo prova che è genuino e, non meno importante, conferma al primo
+  scopritore che ha contribuito al progetto riportando un vero bug.</p></li><li class="listitem"><p>Il bug viene <em class="firstterm">diagnosticato</em>: la sua 
+  causa viene identificata e se possibile, viene estimato lo sforzo per ripararlo.
+  Siate certi che queste cose vengano registrate nel problema; se la persona che l'ha diagnosticato
+  deve improvvisamente uscire dal progetto per un po' (come spesso accade con sviluppatori
+  volontari), qualcun altro dovrebbe essere in grado di considerare il problema quando se
+  ne va.</p><p>In questo stato, o in qualche momento prima, uno sviluppatore
+            può prendere "possesso" del problema e
+            <em class="firstterm">assegnare</em> tale problema a se stesso (<a class="xref" href="managing-volunteers.html#delegation-assignment" title="Distinguere chiaramente fra richiesta e assegnazione">sezione chiamata «Distinguere chiaramente fra richiesta e assegnazione»</a><span> in
+            <a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span>
+            esamina il processo di assegnamento in maggior dettaglio). La
+            <em class="firstterm">priorità</em> del problema può anche essere impostata
+            a questo punto. Per esempio, se così grave che potrebbe ritardare il 
+            prossimo rilascio, questo fatto ha bisogno di essere identificato presto e 
+            il tracker deve avere qualche modo di notarlo.</p></li><li class="listitem"><p>Viene pianificata la soluzione del problema.
+  		Pianificare non significa necessariamente menzionare una data entro cui
+  		sarò risolto. A volte significa solo decidere in quale futuro rilascio
+  		(non necessariamente il prossimo) il bug deve essere risolto, o decidere che 
+  		non ha bisogno di bloccare nessuna release particolare. Ci si può risparmiare 
+  		la pianificazione, se il bug è veloce da riparare.</p></li><li class="listitem"><p>Il bug viene riparato (o il task completato, o la patch applicata o qualsiasi altra cosa).
+  	La modifica o l'insieme di modifiche che l'hanno riparato devono essere registrate in un commento nel
+  	problema, dopo di che il problema è <em class="firstterm">chiuso</em> (closed) e/o marcato come
+            <em class="firstterm">risolto</em> (resolved).</p></li></ol></div><p>
+
+</p><p>Ci sono alcune comuni variazioni a questo ciclo di vita. A volte un problema
+è chiuso molto presto dopo essere stato scoperto, perchè viene fuori che non è per niente
+un bug ma piuttosto un equivoco dalla parte dell'utente. Quando un progetto acquista più
+utenti, falsi problemi arriveranno sempre in maggior numero, e gli sviluppatori li chiuderanno con
+tempi di risposta sempre più brevi. Non fa bene a nessuno, dato che il singolo utente in ogni caso non 
+è responsabile per tutti i falsi problemi precedenti; l'andamento statistico è visibile solo dal
+punto di vista degli sviluppatori, non da quello degli utenti. (In
+<a class="xref" href="bug-tracker.html#bug-filtering" title="Pre-Filtraggio del Bug Tracker">sezione chiamata «Pre-Filtraggio del Bug Tracker»</a><span> più avanti in questo capitolo,</span> 
+affronteremo le tecniche per ridurre il numero dei falsi problemi.) 
+Inoltre, se utenti diversi sperimentano continuamente lo stesso equivoco , potrebbe voler dire che
+tale aspetto del software ha bisogno di essere ridisegnato. Questo tipo di tendenza è più facile da
+notare quando c'è un manager dei problemi che tiene d'occhio il database dei bug; vedi
+<a class="xref" href="share-management.html#issue-manager" title="Il Manager di Problemi">sezione chiamata «Il Manager di Problemi»</a><span> in
+<a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span>.</p><p>Un'altra tipica variazione è la chiusura di un problema perchè <em class="firstterm">duplicato</em> 
+subito dopo il primo stato. Un duplicato è quando qualcuno registra un problema che è già
+noto al progetto. I duplicati non sono confinati nei problemi aperti: è possibile per un bug
+ritornare dopo essere stato riparato (ciò è noto con il nome di 
+<em class="firstterm">regressione</em>), nel qual caso la soluzione preferita è
+solitamente riaprire il problema originale e chiudere ogni nuova segnalazione
+come duplicato di quello originale. Il sistema di tracciamento di bug deve
+tenere traccia di questa relazione in modo bidirezionale, così che l'informazione
+della rifattorizzazione nei duplicati è disponibile al problema originale e
+viceversa.</p><p>Una terza variazione è per gli sviluppatori di chiudere il problema, pensando
+di averlo riparato, solo per fare in modo che il segnalatore originale rifiuti
+la riparazione e lo riapra. Questo accade solitamente perchè gli sviluppatori semplicemente
+non hanno accesso all'ambiente necessario per riprodurre il bug, o perchè non hanno
+testato la riparazione usando esattamente la stessa procedura di generazione del bug del segnalatore.</p><p>Oltre a queste variazioni, ci possono essere altri piccoli dettagli di
+ciclo di vita che cambiano a seconda del software di tracking. Ma la forma di base
+è la stessa, e mentre il ciclo di vita in sè non è specifica al software open source,
+ha implicazioni su come i progetti open source usano i loro bug tracker.</p><p>Come il primo stato implica, il tracker è un aspetto pubblico del progetto
+tanto quanto le mailing list o le pagine web. Chiunque può registrare un problema,
+ognuno può guardare un problema, e chiunque può esaminare la lista dei problemi
+aperti al momento. Ne consegue che non potete mai sapere quanta gente sta aspettando
+di vedere il progresso di un certo problema. Mentre la grandezza e la capacità della
+comunità di sviluppo limita la velocità a cui i problemi sono risolti, il progetto deve
+almeno prendere coscienza del problema nel momento in cui compare. Anche se il problema
+sta fermo per un po', una risposta incoraggia chi l'ha segnalato a rimanere coinvolto, 
+perchè sente che un qualche umano ha preso nota di quello che ha fatto (ricordate che 
+registrare un problema solitamente comporta maggiore sforzo di, per esempio, mandare
+una mail). Inoltre, una volta che il problema è visto da uno sviluppatore, entra nella
+coscienza del progetto, nel senso che lo sviluppatore può essere all'erta per altre
+istanze del problema, parlarne con altri sviluppatori eccetera.</p><p>Il bisogno di pronte risposte implica due cose:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Il tracker deve essere collegato con una mailing list, in modo che ogni cambiamento
+    di un problema, includendo la sua registrazione iniziale, causa la spedizione di una email 
+    che descrive cosa è successo. Questa mailing list è solitamente diversa rispetto a quella
+    normale di sviluppo, dato che non tutti gli sviluppatori potrebbero voler ricevere email
+    automatiche di bug, ma (proprio come con le email di commit) l'header di Reply-to deve essere
+    impostato alla mailing list di sviluppo.</p></li><li class="listitem"><p>Il form per la registrazione dei problemi deve poter captare l'indirizzo email di chi fa la
+    segnalazione, così che possa essere contattato per maggiori informazioni. (Comunque, non
+    deve <span class="emphasis"><em>richiedere</em></span> l'indirizzo, dato che alcune persone preferiscono segnalare
+    i problemi in maniera anonima. Vedi
+    <a class="xref" href="web-site.html#anonymity" title="Anonimità e coinvolgimento">sezione chiamata «Anonimità e coinvolgimento»</a><span> più avanti in questo capitolo </span> 
+    per maggiori informazioni sull'importanza dell'anonimato.)</p></li></ul></div><p>
+
+</p><div class="sect2" title="Interazione con le mailing list"><div class="titlepage"><div><div><h3 class="title"><a name="bug-tracker-mailing-list-interaction"></a>Interazione con le mailing list</h3></div></div></div><p>Fate in modo che il bug tracker non diventi un forum di discussione.
+Anche se è importante mantenere una presenza umana nel bug tracker, non è
+fondamentalmente fatto per le discussioni in tempo reale. Pensatelo piuttosto
+come un archiviatore, un modo per organizzare fatti e riferimenti ad altre
+discussioni, principalmente quelli che avvengono sulle mailing list.</p><p>Ci sono due motivi per fare questa distinzione. Primo, il bug tracker 
+è più difficoltoso da usare rispetto alla mailing list ( o rispetto ai forum
+di chat in tempo reale, per questo ambito). Questo non è solo perchè i bug
+tracker hanno un cattivo design dell'interfaccia grafica, è solo che le loro
+interfacce sono state disegnate per catturare e presentare stati discreti, non
+discussioni in libera espansione. Secondo, non tutti quelli che dovrebbero essere coinvolti
+nella discussione su un particolare problema sta necessariamente guardando il bug
+tracker. Parte di una buona gestione del problema (vedi
+<a class="xref" href="share-management.html" title="Suddividete i Compiti di Management e i Compiti Tecnici">sezione chiamata «Suddividete i Compiti di Management e i Compiti Tecnici»</a><span> in
+<a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span>) è fare in modo che
+ogni problema sia portato all'attenzione delle giuste persone, piuttosto che 
+richiedere ad ogni sviluppatore di controllare tutti i problemi. In
+<a class="xref" href="bug-tracker-usage.html" title="Nessuna Conversazione nel Tracciatore di Bug">sezione chiamata «Nessuna Conversazione nel Tracciatore di Bug»</a><span> in <a class="xref" href="communications.html" title="Capitolo 6. Comunicazione">Capitolo 6, <i>Comunicazione</i></a>,
+</span> vedremo i modi per fare in modo che le persone non incappino accidentalmente in discussioni
+al di fuori degli appropriati forum e nel bug tracker.</p><p>Alcuni bug tracker possono controllare le mailing list e fare il log automatico di 
+tutte le email che riguardano un problema noto.Tipicamente lo fanno riconoscendo il numero
+identificativo del problema nell'oggetto della email, da che è parte di una stringa particolare;
+gli sviluppatori imparano ad includere queste stringhe nelle loro email per attrarre l'attenzione
+del bug tracker. Il bug tracker può o salvare la email per intero o (ancora meglio) solo registrare
+un riferimento alla mail nel normale archivio della mailing list. In entrambi i modi, questa
+è una funzionalità molto utile; se il vostro tracker ce l'ha, fate in modo sia di attivarla e sia
+di ricordare alla gente di sfruttarla.</p></div><div class="sect2" title="Pre-Filtraggio del Bug Tracker"><div class="titlepage"><div><div><h3 class="title"><a name="bug-filtering"></a>Pre-Filtraggio del Bug Tracker</h3></div></div></div><p>La maggior parte dei database dei problemi alla fine soffre
+dello stesso problema: un distruttivo carico di problemi duplicati
+o non validi registrati da ben intenzionati ma inesperti o malinformati
+utenti. Il primo passo nel combattere questa tendenza è solitamente
+mettere un messaggio in evidenza sulla pagina iniziale del bug tracker,
+spiegando come dire se un bug è davvero tale, come fare ricerche per 
+vedere se è già stato registrato, e infine, come effettivamente riportarlo
+se si è ancora convinti che sia un nuovo bug.</p><p>Questo abbasserà il livello del rumore per un po', ma non appena
+il numero di utenti crescerà, il problema infine ritornerà. Nessun
+singolo utente può essere incolpato di questo. Ognuno sta solo provando
+a contribuire alla buona riuscita del progetto, e anche se la sua prima 
+segnalazione di bug non è di grande aiuto, volete comunque ancora incorraggiare
+il coinvolgimento e la segnalazione di problemi migliori in futuro. Nel frattempo,
+comunque, il progetto ha bisogno di tenere il database dei problemi il più
+possibile libero da spazzatura.</p><p>Le due cose che faranno il massimo per prevenire questo problema
+sono: essere certi che ci sia gente a guardare il bug tracker che abbia
+abbastanza competenze per chiudere i problemi perchè invalidi o duplicati
+al momento in cui arrivano, e richiedendo (o incoraggiando fortemente) agli 
+utenti di confrontare i loro bug con altra gente prima di aggiungerli
+al tracker.</p><p>La prima tecnica pare essere universalmente impiegata. Anche progetti
+con database di problemi enormi (per dire, il bug tracker di Debian a
+<a class="ulink" href="http://bugs.debian.org/" target="_top">http://bugs.debian.org/</a>, che conteneva 315,929 problemi
+nel momento di questa scrittura) ancora fa in modo che 
+<span class="emphasis"><em>qualcuni</em></span> veda ogni problema che arriva. Potrebbe
+essere una persona differente a seconda della categoria del problema.
+Per esempio, il progetto Debian è una collezione di pacchetti di software,
+quindi Debian instrada automaticamente ogni problema ai manutentori del 
+pacchetto appropriato. Certo, gli utenti possono a volte identificare
+male la categoria di un problema, con il risultato che il problema è inizialmente
+inviato alla persona sbagliata, che deve poi reinstradarla. Comunque,
+la cosa importante è che tale fardello è ancora condiviso&#8212;sia
+che l'utente sia nel giusto o nel torto quando segnala, il controllo del
+problema è ancora più o meno equamente distribuito tra gli sviluppatori,
+così che ogni problema sia in grado di ricevere una pronta risposta.</p><p>La seconda tecnica è meno diffusa, probabilmente perchè è più difficile
+da automatizzare. L'idea fondamentale è che ogni nuovo problema viene "affiancata"
+nel database. Quando un utente pensa di aver trovato un problema, gli è richiesto
+di descriverlo su una delle mailing list, o in un canale IRC, e di ottenere una
+conferma da qualcuno che si tratti davvero di un bug.
+Coinvolgere subito questo secondo paio di occhi può prevenire molte segnalazioni
+non genuine. A volte la seconda parte riesce a capire che non si tratta di un bug
+o che è stato riparato in un rilascio recente. O può essere familiare con i sintomi
+di un problema precedente, e può prevenire una duplicazione di segnalazioni indicando
+all'utente il vecchio problema. A volte è sufficiente solo chiedere all'utente "Hai cercato
+nel bug tracker per vedere se è già stato segnalato?" Molta gente semplicemente
+non ci pensa, e comunque sono contenti di fare la ricerca una volta che sanno che
+qualcuno si <span class="emphasis"><em>aspetta</em></span> che lo facciano.</p><p>Il sistema di affiancamento può davvero tenere il database dei problemi pulito,
+ma ha anche alcuni svantaggi. Molto gente registrerà da sola comunque, o non guardando
+o infrangendo le istruzioni per trovare un compagno per il nuovo problema. Quindi è
+comunque necessario per i volontari guardare il database dei problemi. Inoltre, siccome
+la maggior parte dei nuovi segnalatori non capisce quanto sia difficile il compito di
+mantenere il database dei problemi, non è giusto rimproverarli troppo duramente per
+avere ignorato le linee guida. Quindi i volontari devono essere vigili, e comunque
+praticare influenza su come rimbalzano indietro i problemi non affiancati ai loro
+segnalatori. Lo scopo è di educare ogni segnalatore ad usare il sistema di affiancamento
+nel futuro, così che ci sia un insieme sempre in crescita di persone che capiscono
+il sistema di filtraggio dei problemi. Vedendo un problema non affiancato, i passi
+ideali sono:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Rispondere immediatamente al problema, ringraziando educatamente l'utente
+    per la segnalazione, ma rimandandolo alle linee guida per l'affiancamento (che devono,
+    certamente, essere visibilmente messe sul sito web).</p></li><li class="listitem"><p>Se il problema è chiaramente valido e non un duplicato, approvatelo comunque,
+    e iniziatene il normale ciclo di vita. Dopo tutto, il segnalatore è stato ora informato
+    dell'affiancamento, quindi non c'è motivo nello sprecare il lavoro fatto finora
+    chiudendo un problema valido.</p></li><li class="listitem"><p>Altrimenti, se il problema non è chiaramente valido, chiudetelo, 
+    ma chiedete al segnalatore di riaprirlo se riceve conferma da chi lo
+    affianca. Quando ciò accade, deve mettere un riferimento al thread di conferma
+    (ad esempio, la URL nell'archivio della mailing list).</p></li></ol></div><p>Ricordate che anche se questo sistema migliorerà il rapporto tra segnale 
+e rumore nel database dei problemi nel tempo, non fermerà completamente le segnalazioni
+non corrette. L'unico modo per prevenirle del tutto è di limitare l'accesso al bug
+tracker ai soli programmatori&#8212;una cura che è quasi sempre peggio della malattia.
+E' meglio accettare che la pulizia di problemi non validi sarà sempre parte della periodica
+manutenzione del progetto, cercare di avere il maggior numero possibile di persone
+che diano una mano.</p><p>Vedi anche
+<a class="xref" href="share-management.html#issue-manager" title="Il Manager di Problemi">sezione chiamata «Il Manager di Problemi»</a><span> in
+<a class="xref" href="managing-volunteers.html" title="Capitolo 8. Gestire i Volontari">Capitolo 8, <i>Gestire i Volontari</i></a></span>.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="vc.html">Indietro</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Risali</a></td><td width="40%" align="right"> <a accesskey="n" href="irc.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Controllo di versione </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> IRC / Sistemi di Chat in tempo reale</td></tr></table></div></body></html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Contributor Agreements</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Contributor Agreements"><div class="titlepage"><div><div><h1 class="title"><a id="contributor-agreements"/>Contributor Agreements</h1></div></div></div><a id="copyright-assignment"/><a id="copyright-assignment-transfer"/><p>There are three ways to handle copyright ownership for free code
+and documentation that were contributed to by many people.  The first
+is to ignore the issue of copyright entirely (I don't recommend this).
+The second is to collect a <em class="firstterm">contributor license
+agreement</em> (<em class="firstterm">CLA</em>) from each person
+who works on the project, explicitly granting the project the right to
+use that person's contributions.  This is usually enough for most
+projects, and the nice thing is that in some jurisdictions, CLAs can
+be sent in by email.  The third way is to get actual
+<em class="firstterm">copyright assignment</em> (<em class="firstterm">CA</em>
+from contributors, so that the project (i.e., some legal entity,
+usually a nonprofit) is the copyright owner for everything.  This way
+is the most burdensome for contributors, and some contributors simply
+refuse to do it; only a few projects still ask for assignment, and I don't
+recommend that any project require it these days.<sup>[<a id="idm4286" href="#ftn.idm4286" class="footnote">102</a>]</sup></p><p>Note that even under centralized copyright ownership, the
+code<sup>[<a id="idm4289" href="#ftn.idm4289" class="footnote">103</a>]</sup> remains free, because
+open source licenses do not give the copyright holder the right to
+retroactively proprietize all copies of the code.  So even if the
+project, as a legal entity, were to suddenly turn around and start
+distributing all the code under a restrictive license, that wouldn't
+necessarily cause a problem for the public community.  The other
+developers can start a fork based on the latest free copy of the code,
+and continue as if nothing had happened.</p><div class="sect2" title="Doing Nothing"><div class="titlepage"><div><div><h2 class="title"><a id="copyright-assignment-none"/>Doing Nothing</h2></div></div></div><p>Some projects never collect CLAs or CAs from
+their contributors.  Instead, they accept code whenever it seems
+reasonably clear that the contributor intended it to be incorporated
+into the project.</p><p>This can seem to work for a long time, as long as the project
+has no enemies.  But I don't recommend it.  Someone may eventually
+decide to sue for copyright infringement, alleging that they are the
+true owner of the code in question and that they never agreed to its
+being distributed by the project under an open source license.  For
+example, the SCO Group did something like this to the Linux project, see
+<a class="ulink" href="https://en.wikipedia.org/wiki/SCO-Linux_controversies">https://en.wikipedia.org/wiki/SCO-Linux_controversies</a>
+for details.  When this happens, the project will have no
+documentation showing that the contributor formally granted the right
+to use the code, which could make some legal defenses more
+difficult.</p></div><div class="sect2" title="Contributor License Agreements"><div class="titlepage"><div><div><h2 class="title"><a id="copyright-assignment-cla"/>Contributor License Agreements</h2></div></div></div><p>CLAs probably offer the best tradeoff between safety and
+convenience.  A CLA is typically an electronic form that a developer
+fills out and sends in to the project, or even a web-based checkbox
+that the developer checks before completing their first contribution
+to the project.  In many jurisdictions, such email
+submission or an online form is enough, though you should consult with
+a lawyer to see what method would be best for your project.</p><p>Some projects use two slightly different CLAs, one for
+individuals, and one for corporate contributors.  But in both types,
+the core language is the same: the contributor grants the
+project a <span class="emphasis"><em>"...perpetual, worldwide, non-exclusive, no-charge,
+royalty-free, irrevocable copyright license to reproduce, prepare
+derivative works of, publicly display, publicly perform, sublicense,
+and distribute [the] Contributions and such derivative
+works."</em></span> Again, you should have a lawyer approve any CLA,
+but if you get all those adjectives into it, you're off to a good start.</p><p>When you request CLAs from contributors, make sure to emphasize
+that you are <span class="emphasis"><em>not</em></span> asking for actual copyright
+assignment.  In fact, many CLAs start out by reminding the reader of
+this, for example like so:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>This is a license agreement only; it does not transfer
+copyright ownership and does not change your rights to use your own
+Contributions for any other purpose.</em></span></p></blockquote></div><div class="sect3" title="Developer Certificates of Origin (DCO): A Simpler Style of CLA"><div class="titlepage"><div><div><h3 class="title"><a id="developer-certificate-of-origin"/>Developer Certificates of Origin (DCO): A Simpler Style of CLA</h3></div></div></div><p>More and more projects are now using a particularly convenient
+style of simple CLA known as a <em class="firstterm">Developer Certificate of
+Origin</em> (<em class="firstterm">DCO</em>).</p><p>A DCO is essentially an attestation that the contributor intends
+to contribute the enclosed code under the project's license, and that
+the contributor has the right to do so.  The contributor indicates her
+understanding of the DCO once, early on, for example by emailing its
+text from her usual contribution address to a special archive at the
+project<sup>[<a id="idm4312" href="#ftn.idm4312" class="footnote">104</a>]</sup>.
+Thereafter, the contributor includes a "Signed-Off-By:" line in her
+patches or commits, using the same identity, to indicate that the
+corresponding contribution is certified under the DCO.  This gives the
+project the legal cover it needs, while giving contributors a
+low-bureaucracy process for submitting their contributions.  The DCO
+relies on the project's native open source license for any trademark
+or patent provisions, which in most cases is fine.</p><p>The simplification that makes DCOs work so well is that they set
+the inbound license of the contribution to be the same as the outbound
+license of the project.  This avoids the sticky issues that a more
+complex CLA can create, whereby the recipient of the CLA might reserve
+the right to relicense the project (and thus all the past
+contributions) under some different license in the future, possibly
+even a proprietary license.  DCOs are probably the minimum amount of
+CLA a free software project should adopt, but for some circumstances a
+more complex CLA may still be the better course.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm4286" href="#idm4286" class="para">102</a>] </sup>Also,
+actual copyright transferral is subject to national law, and licenses
+designed for the United States may encounter problems elsewhere (e.g.,
+in Germany, where it's apparently not possible to transfer
+copyright).</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4289" href="#idm4289" class="para">103</a>] </sup>I'll use "code" to refer to both code and
+documentation, from now on.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4312" href="#idm4312" class="para">104</a>] </sup>The DCO text is provided by the project, but
+you don't have to write your own from scratch; see <a class="ulink" href="http://developercertificate.org/">http://developercertificate.org/</a> for example.</p></div></div></div></body></html>

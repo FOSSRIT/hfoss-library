@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Anerkennung</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Anerkennung"><div class="titlepage"><div><div><h1 class="title"><a id="credit"/>Anerkennung</h1></div></div></div><p>Anerkennung ist die hauptsächliche Währung in der Welt der freien
+Software. Was immer Leute über ihre Motive für die Beteiligung an einem
+Projekt sagen, ich kenne keine Entwickler die glücklich damit wären,
+ihre ganze Arbeit anonym zu verrichten, oder unter dem Namen von jemand
+anderem. Es gibt hierfür konkrete Gründe: Der Ruf innerhalb eines
+Projekts diktiert ungefähr wieviele Einfluss man hat, und die Beteiligung
+an einem Open-Source-Projekt kann auch einen indirekten finanziellen
+Wert haben, weil manche Arbeitgeber bei einer Bewerbung mittlerweile
+danach Ausschau halten. Es gibt auch vielleicht sogar noch stärkere 
+immaterielle Gründe: Menschen wollen einfach geschätzt werden, und
+suchen instinktiv nach Zeichen, dass ihre Arbeit von anderen anerkannt
+wird. Das Versprechen von Anerkennung ist desshalb eines der besten
+Motivationen, die ein Projekt hat. Wenn kleine Beiträge anerkennung
+finden, kommen Leute zurück um mehr zu machen.</p><p>Einer der wichtigsten Funktionen von Software für die
+gemeinschaftliche Entwicklung (siehe <a class="xref" href="ch03.html" title="Kapitel 3. Technische Infrastruktur">Kapitel 3, <em>Technische Infrastruktur</em></a>) ist dass es genaue Protokolle
+darüber führt, wer was wann gemacht hat. Überall wo es möglich ist,
+sollten Sie bereits vorhandene Mechanismen benutzen um sicher zu
+stellen, dass diese Anerkennung genau verteilt wird, und seien Sie
+spezifisch, über die Natur des Beiträgs. Schreiben Sie nicht einfach
+"Danke an H. Mustermann &lt;hmustermann@beispiel.de&gt;" wenn Sie statt
+dessen "Danke an H. Mustermann&lt;hmustermann@beispiel.de&gt; für die
+Bug-Meldung und die Anleitung zur Reproduktion" in einem Kommentar
+schreiben könnten.</p><p>Bei Subversion haben wir eine informelle aber stetige Richtlinie,
+denjenigen der den Bug gemeldet hat entweder in dem zugehörigen Ticket
+zu würdigen oder wenn nicht, in dem Commit-Kommentar der Änderung die
+den Bug behebt. Eine kurze Betrachtung der Kommentare im Subversion-Projektarchiv
+ergibt, dass mit 14525 ungefähr 10% der Änderungen jemanden
+bei Namen und E-Mail-Adresse würdigt, üblicherweise die Person, welche
+den Bug gemeltet oder untersucht hat, der durch die Änderung behoben
+wurde. Achten Sie darauf, dass diese Person eine andere ist als der
+Entwickler, der den Commit gemacht hat, dessen Name
+bereits automatisch vom Versionsverwaltungssystem erfasst wird. Von den
+ca. 80 Voll- und Teil-Commit-Berechtigten, die Subversion heute hat, 
+wurden 55 in den Commit-Kommentaren (meistens mehrere Male) gewürdigt, bevor
+sie selber Committer wurden. Das beweist natürlich nicht, dass
+die Anerkennung ein Grund für die weitere Beteiligung war, baut aber
+zumindest eine Atmosphäre auf, in der Leute darauf zählen können, dass
+ihre Beiträge gewürdigt werden.</p><p>Es ist wichtig zu unterscheiden, zwischen gewöhnliche Anerkennung
+und besondere Danksagungen. Wenn ein bestimmter Codeteil, oder irgend
+ein anderer Beitrag den jemand geleistet hat, diskutiert wird, ist es in
+Ordnung, ihre Arbeit zu würdigen. Wenn Sie zum Beispiel sagen "Die
+kürzlichen Änderungen von Daniel an dem Delta-Code bedeuten, dass wir
+jetzt Funktion X implementieren können" hilft den Leuten zu erkennen, um 
+welche Änderungen es sich handelt, und es würdigt gleichzeitig die Arbeit
+von Daniel. Es dient andererseits keinen direkten praktischen Zweck,
+Daniel nur für seine Änderungen an dem Delta-Code zu danken. Es fügt
+keine Informationen hinzu, da das Versionsverwaltungssystem und andere
+Mechanismen die Tatsache aufgezeichnet hat, wer die Änderungen gemacht
+hat. Jeden für alles zu danken, wäre ablenkend und würde letztendlich
+frei von Informationen, da Danksagungen in so weit effektiv sind, wie
+sehr sie aus den üblichen positiven Kommentaren herausragen, welche die
+ganze Zeit ablaufen. Das bedeutet natürlich nicht, dass Sie niemals
+Leuten danken sollten. Sorgen Sie einfach dafür, dass Sie es auf Arten
+tun, die nicht zu einer Inflation der Anerkennung führen. Diese 
+Richtlinien zu folgen, wird helfen:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Je flüchtiger das Forum, desto freier sollten Sie
+            Ihren Dank ausdrücken. Jemandem zum Beispiel im Vorbeigehen,
+            während einer Unterhaltung im IRC, für seinen Bugfix zu
+            danken, ist in Ordnung, genau so wie eine beiläufige
+            Erwähnung in einer E-Mail die hauptsächlich anderen Themen
+            gewidmet ist. Schreiben Sie aber keine E-Mail alleine um
+            jemanden zu danken, es sei denn es ist für eine wirklich
+            ausergewöhnliche Leistung. Sie sollten gleichermaßen nicht
+            die Webseiten des Projekts mit Ausdrücken von Dankbarkeit
+            verunstalten. Wenn Sie erst einmal damit anfangen, wird
+            nie klar sein, wann oder wo man aufhören soll. Und schreiben
+            Sie <span class="emphasis"><em>niemals</em></span> Danksagungen in die
+            Kommentare des Codes; das wäre nichts als eine Ablenkung vom
+            Hauptzweck der Kommntare, der darin besteht dem Leser beim  
+            Verständnis des Codes zu helfen.</p></li><li class="listitem"><p>Je weniger jemand mit dem Projekt zu tun hat, desto
+            angemessener ist es sich für etwas zu danken, was er
+            geleistet hat. Das mag sich nicht eingängig anhören, passt
+            aber mit der Einstellung zusammen, dass Sie Lob ausdrücken
+            sollten, wenn jemand mehr beiträgt als Sie erwartet
+            hätten. Es würde deshalb eine geringere Erwartung an
+            Personen ausdrücken, als sie selber an sich haben, wenn Sie
+            sich ständig für regelmäßige Beiträge bedanken, die sie
+            normerweise machen. Wenn überhaupt, wollen Sie das 
+            engegengesetzte Ergebnis erzielen!</p><p>Es gibt ab und zu Ausnahmen zu dieser Regel. Man kann
+            jemanden dafür danken seine Rolle zu erfüllen, wenn diese 
+            Rolle von Zeit zu Zeit temporäre, intensive Anstrengungnen 
+            erfordert. Das Paradebeispiel hierfür ist der Versionsverwalter,
+            der in Zeiten der Veröffentlichung einer neuen Version
+            in einen Gang hochschaltet, ansonsen aber
+            untätig ist (zumindest in seiner Rolle  als
+            Versionsverwalter – er kann auch als Entwickler aktiv
+            sein, aber das ist eine andere Angelegenheit).</p></li><li class="listitem"><p>Genau so wie Kritik und Anerkennung, sollte
+            Dankbarkeit so spezifisch wie möglich sein. Danken Sie Leuten
+            nicht einfach dafür, dass sie toll sind, selbst wenn das der
+            Fall ist. Danken Sie sie für etwas, dass außergewöhnlich war
+            und es gibt zusätzliche Punkte, wenn Sie auch noch genau 
+            sagen, warum das was sie gemacht haben, so toll war.</p></li></ul></div><p>Im allgemeinen, gibt es immer eine Spannung dazwischen zu
+gewärleiten, dass die einzelnen Beiträge anerkannt werden, und sicher zu
+stellen, dass das Projekt eher eine gemeinsame Anstrenung ist als eine
+Ansammlung einzelner Prachten ist. Bleiben Sie einfach im Klaren über
+diese Spannung und versuchen Sie sich auf die Seite der Gruppe zu
+halten, und Sachen werden nicht ausarten.</p></div></body></html>

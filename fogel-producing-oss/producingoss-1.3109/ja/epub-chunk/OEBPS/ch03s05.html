@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>IRC / リアルタイムに行なわれるチャットシステム</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="IRC / リアルタイムに行なわれるチャットシステム"><div class="titlepage"><div><div><h1 class="title"><a id="irc"/>IRC / リアルタイムに行なわれるチャットシステム</h1></div></div></div><p>
+    多くのプロジェクトでは、<em class="firstterm">Internet Relay Chat</em> (<em class="firstterm">IRC</em>) を使ったリアルタイムのチャットルームを提供しています。
+    そこではユーザーと開発者が質問を出し合い、すぐに返事を貰うことができます。
+    自前のIRCサーバを動かすことも <span class="emphasis"><em>可能です</em></span> が、
+    普通はそこまで頑張る必要はありません。むしろみんながやっていることを真似てみましょう。
+    つまり、Freenode (<a class="ulink" href="http://freenode.net/">http://freenode.net/</a>) で自分のIRCチャンネルを開設するのです。
+    Freenodeは、IRCサーバを自分で管理する苦労からあなたを解放すると同時に、
+    <sup>[<a id="idm1311" href="#ftn.idm1311" class="footnote">20</a>]</sup>
+    プロジェクトのIRCチャンネルを管理するために必要な規制を行っています。
+</p><p>
+    まずやるべきことはチャンネルの名前を決めることです。
+    もっともわかりやすいのはプロジェクトの名前です。
+    — Freenode で使える名前なら使ってください。
+    もし使えないのなら、
+    プロジェクトの名前に近い名前で、
+    できるだけ覚えやすい名前を選ぶようにしてみてください。
+    質問に素早く答えて欲しいユーザーがすぐにわかるように、
+    プロジェクトのウェブサイトでIRCチャンネルが利用できることを知らせましょう。
+    たとえばSubversion のホームページでは、
+    ページ上部の目立つボックス部分に次のような情報を表示しています。
+</p><div class="blockquote"><blockquote class="blockquote"><p>
+        <span class="emphasis"><em>Subversionをお使いなら、メーリングリスト</em></span>
+        <code class="literal">users@subversion.tigris.org</code>
+        <span class="emphasis"><em>を購読し、
+        <a class="ulink" href="http://svnbook.red-bean.com/index.ja.html">Subversionによるバージョン管理</a> と 
+        <a class="ulink" href="http://subversion.tigris.org/faq.html">FAQ</a>
+        を読むことを勧めます。</em></span> 
+        <span class="emphasis"><em>IRCの</em></span>
+        <code class="literal">irc.freenode.net</code>
+        <span class="emphasis"><em>上のチャンネル</em></span>
+         <code class="literal">#svn</code> 
+        <span class="emphasis"><em>でも質問することができます。</em></span>
+    </p></blockquote></div><p>
+    プロジェクトによっては複数のチャンネルを持つものもあり、
+    ひとつひとつが副次的なトピックを扱っています。
+    たとえばあるチャンネルはインストール時の問題を扱い、
+    別のチャンネルでは使い方の問題、開発に関するチャット、等です。
+    (<span><a class="xref" href="ch06.html" title="第6章 コミュニケーション">6章<em>コミュニケーション</em></a> の <a class="xref" href="ch06s04.html" title="巨大化への対応">「巨大化への対応」</a> では</span>、チャンネルを複数に分割する方法について議論しています。)
+    プロジェクトが始まって間もないなら、皆が一緒にお喋りできるようにチャンネルの数はひとつにすべきでしょう。
+    後に開発者ひとりに対するユーザーの数が増えるのに応じて、
+    チャンネルの分割が必要になるかもしれません。
+</p><p>
+    どのチャンネルで喋ればよいかは言うまでもなく、
+    利用できる全てのチャンネルを知らせるにはどうしたらよいでしょうか?
+    そしてチャットをするとき、
+    プロジェクトに特有の決まりごとを知らせるにはどうすればよいでしょうか?
+</p><p>
+    答えは <em class="firstterm">チャンネルトピック</em>
+    <sup>[<a id="idm1333" href="#ftn.idm1333" class="footnote">21</a>]</sup>
+    を設定して知らせることです。
+    チャンネルトピックは、初めてチャンネルに入ったときにユーザーが見るメッセージです。
+    これは新顔のユーザーに簡単な案内をすると同時に、
+    さらに詳しい情報へのポインタを提供します。
+    たとえば以下のようなものです。:
+</p><pre class="screen">
+あなたは #svn で喋っています。
+
+#svn のトピックは以下の通りです。Subversionユーザーの質問を受け付ける
+フォーラムです。http://subversion.tigris.org も参照してください。 || 
+開発に関する議論は、#svn-dev で行われています。 || 長い Subversion の
+トランザクションを貼り付けないでください。http://pastebin.ca/ のような
+貼り付け用のサイトを使ってください。 || ニュース: Subversion 1.1.0 が
+リリースされました。詳しくは http://svn110.notlong.com/ を参照してくだ
+さい。
+</pre><p>
+    これは簡単ですが、新顔のユーザーが知る必要がある情報を伝えています。
+    チャンネルの目的を正確に伝え、
+    プロジェクトのホームページを示し(ユーザーによっては、
+    プロジェクトのウェブサイトを訪れたことがないとチャンネル内で迷子になってしまいます。)
+    関連するチャンネルに言及し、貼り付けに関する案内もあります。
+</p><div class="sidebar" title="貼り付け用のサイト"><a id="paste-sites"/><div class="titlepage"><div><div><p class="title"><strong>貼り付け用のサイト</strong></p></div></div></div><p>
+    IRCチャンネルは共有スペースです。誰でも他人の発言を見ることができます。
+    これは貢献したいと思うときに会話に割って入れますし、
+    他のメンバーはやりとりを見て学ぶことができるので普段はよい状態です。
+    しかしデバッグセッションのコピーのように、
+    大量の情報を一度に流さなければならない場合は問題になります。
+    なぜなら、チャンネルにあまりに多くの行を貼り付けると他の会話をぶち壊してしまうからです。
+</p><p>
+    こうした問題の解決策は、
+    <em class="firstterm">ペーストビン</em> または <em class="firstterm">ペーストボット</em> サイトを使うことです。
+    大量のデータを他人から見てほしいと頼まれる時は、
+    チャンネルに貼り付けないで、
+    (たとえば) <a class="ulink" href="http://pastebin.ca/">http://pastebin.ca/</a> に行き、
+    フォームにデータを入力して生成されたURLをチャンネルに伝えるように頼みましょう。
+    そうすれば、そのURLを誰でも訪れてデータを見ることができます。
+</p><p>
+    今ではたくさんの貼り付けサイトが無料で利用できますし、
+    まとめて示すには数が多すぎますが、
+    私が使われているのを見たことがあるサイトをいくつか以下に示します:
+<a class="ulink" href="http://www.nomorepasting.com/">http://www.nomorepasting.com/</a>,
+<a class="ulink" href="http://pastebin.ca/">http://pastebin.ca/</a>,
+<a class="ulink" href="http://nopaste.php.cd/">http://nopaste.php.cd/</a>,
+<a class="ulink" href="http://rafb.net/paste/">http://rafb.net/paste/</a>,
+<a class="ulink" href="http://sourcepost.sytes.net/">http://sourcepost.sytes.net/</a>,
+<a class="ulink" href="http://extraball.sunsite.dk/notepad.php">http://extraball.sunsite.dk/notepad.php</a>,
+<a class="ulink" href="http://www.pastebin.com/">http://www.pastebin.com/</a></p></div><div class="sect2" title="ボット"><div class="titlepage"><div><div><h2 class="title"><a id="bots"/>ボット</h2></div></div></div><p>
+    多くの技術指向なIRCチャンネルには、
+    いわゆる <em class="firstterm">ボット</em> と呼ばれる人間でないメンバーがいます。
+    これは特定のコマンドに反応して情報を保存したり、
+    表示したりできます。
+    通常は、ボットはチャンネルにいる他のメンバーと同じように扱います。
+    つまり、コマンドはボットに "話しかける" ことで伝えます。
+    たとえば次のようなものです :
+</p><pre class="screen">
+&lt;kfogel&gt; ayita: learn diff-cmd = http://subversion.tigris.org/faq.html#diff-cmd
+&lt;ayita&gt;  Thanks!
+</pre><p>
+    これはボット(ayita としてチャンネルにログインしています)に "diff-cmd" という問い合わせの答えとしてあるURLを覚えておくように伝えています。
+    では、ayita に話しかけて、他のユーザーに diff-cmd に関する情報を伝えるように頼んでみましょう :
+</p><pre class="screen">
+&lt;kfogel&gt; ayita: tell jrandom about diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>
+    便利な短縮コマンドを使っても同じことが実現できます。
+</p><pre class="screen">
+&lt;kfogel&gt; !a jrandom diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>
+    正確なコマンドとそれに対する振舞いはボットによって異なります。
+    上の例は Freenode の <code class="literal">#svn</code> で通常動いている <code class="literal">ayita</code>(<a class="ulink" href="http://hix.nu/svn-public/alexis/trunk/">http://hix.nu/svn-public/alexis/trunk/</a>) のものです。
+    他にも Dancer(<a class="ulink" href="http://dancer.sourceforge.net/">http://dancer.sourceforge.net/</a>) や Supybot(<a class="ulink" href="http://supybot.com/">http://supybot.com/</a>) といったボットがいます。
+    ボットを動かすのに特別なIRCサーバ上の権限は必要ないということを覚えておいてください。
+    ボットはクライアントプログラムなので、誰でもセットアップして特定の IRCサーバ/チャンネル 上で待機させることができます。
+</p><p>
+    あなたのチャンネルで同じ質問が繰り返される傾向があるなら、
+    ボットをセットアップすることを強くお勧めします。
+    ボットの操作方法を身に付けるのはほんの一握りのメンバーですが、
+    ボットが効率的に反応してくれるので、
+    少ない人数で繰り返される質問に答えられるのです。
+</p></div><div class="sect2" title="IRCの会話を保存する"><div class="titlepage"><div><div><h2 class="title"><a id="irc-archiving"/>IRCの会話を保存する</h2></div></div></div><p>
+    IRCチャンネルで起こったことは全て保存できますが、
+    必ずしもそれが期待されているわけではありません。
+    IRCでの会話は建前上は公なものかもしれませんが、
+    非公式なもの、もしくは半ばプライベートな会話だと考える人も多くいます。
+    IRC上ではユーザーは文法に無頓着ですし、
+    オンライン上で絶対に保存されたくない意見(たとえば、
+    他のソフトウェアやプログラマーに関するもの)を言ったりするかもしれません。
+</p><p>
+    もちろん、<span class="emphasis"><em>会話のまとめ</em></span> を保存すべき時もあるでしょう。
+    その場合はよいのです。
+    ほとんどのIRCクライアントはユーザーの要求に応じて会話を保存することが出来ますし、
+    それができなくても会話をフォーラム(ほとんどの場合はバグ追跡システム)に貼り付けるだけならいつでもできます。
+    しかし、節操なく会話を保存すると不安になるユーザーもいるかもしれません。
+    全ての会話を保存するのなら、必ずその旨をチャンネルトピックで明示的に宣言し、保存先のURLを示すようにしましょう。
+</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm1311" href="#idm1311" class="para">20</a>] </sup>Freenode への寄付を要求されたり、
+    期待されたりすることはありませんが、
+    あなた個人やプロジェクトに余裕があるなら寄付することを考えてみてください。
+    アメリカ国内からだと税金が控除される寄付金として扱われますし、
+    寄付されたお金を使って価値のあるサービスが提供されるのです。</p></div><div class="footnote"><p><sup>[<a id="ftn.idm1333" href="#idm1333" class="para">21</a>] </sup>
+    チャンネルトピックを設定するには <code class="literal">/topic</code> コマンドを使います。
+    IRCコマンドは全て "<code class="literal">/</code>" で始まります。
+    IRCの使い方やチャンネルの管理に慣れていないのであれば、
+    <a class="ulink" href="http://www.irchelp.org/">http://www.irchelp.org/</a> を参照してください。:
+    特に <a class="ulink" href="http://www.irchelp.org/irchelp/irctutorial.html">http://www.irchelp.org/irchelp/irctutorial.html</a> は優れたチュートリアルです。
+    </p></div></div></div></body></html>

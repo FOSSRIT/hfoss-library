@@ -1,0 +1,105 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Web Site</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produir Software de Codi Obert"><link rel="up" href="technical-infrastructure.html" title="Capítol 3. Technical Infrastructure"><link rel="prev" href="wikis.html" title="Wikis"><link rel="next" href="social-infrastructure.html" title="Capítol 4. Social and Political Infrastructure"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Web Site</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="wikis.html">Anterior</a> </td><th width="60%" align="center">Capítol 3. Technical Infrastructure</th><td width="20%" align="right"> <a accesskey="n" href="social-infrastructure.html">Següent</a></td></tr></table><hr></div><div class="sect1" title="Web Site"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="web-site"></a>Web Site</h2></div></div></div><p>There is not much to say about setting up the project web site
+from a technical point of view: setting up a web server and writing
+web pages are fairly simple tasks, and most of the important things to
+say about layout and arrangement were covered in the previous chapter.
+The web site's main function is to present a clear and welcoming
+overview of the project, and to bind together the other tools (the
+version control system, bug tracker, etc.).  If you don't have the
+expertise to set up a web server yourself, it's usually not hard to
+find someone who does and is willing to help out.  Nonetheless, to
+save time and effort, people often prefer to use one of the canned
+hosting sites.</p><div class="sect2" title="Canned Hosting"><div class="titlepage"><div><div><h3 class="title"><a name="canned-hosting"></a>Canned Hosting</h3></div></div></div><p>There are two main advantages to using a canned site.  The first
+is server capacity and bandwidth: their servers are beefy boxes sitting
+on really fat pipes.  No matter how successful your project gets,
+you're not going to run out of disk space or swamp the network
+connection.  The second advantage is simplicity.  They have already
+chosen a bug tracker, a version control system, a mailing list manager,
+an archiver, and everything else you need to run a site.  They've
+configured the tools, and are taking care of backups for all the data
+stored in the tools.  You don't need to make many decisions.  All you
+have to do is fill in a form, press a button, and suddenly you've got
+a project web site.</p><p>These are pretty significant benefits.  The disadvantage, of
+course, is that you must accept <span class="emphasis"><em>their</em></span> choices and
+configurations, even if something different would be better for your
+project.  Usually canned sites are adjustable within certain narrow
+parameters, but you will never get the fine-grained control you would
+have if you set up the site yourself and had full administrative
+access to the server.</p><p>A perfect example of this is the handling of generated files.
+Certain project web pages may be generated files&#8212;for example,
+there are systems for keeping FAQ data in an easy-to-edit master
+format, from which HTML, PDF, and other presentation formats can be
+generated.  As explained in
+<a class="xref" href="vc.html#version-everything" title="Version everything">&#8220;Version everything&#8221;</a><span>
+earlier in this chapter</span>,
+you wouldn't want to version the generated formats, only the master
+file.  But when your web site is hosted on someone else's server, it
+may be impossible to set up a custom hook to regenerate the online
+HTML version of the FAQ whenever the master file is changed.  The only
+workaround is to version the generated formats too, so that they show
+up on the web site.</p><p>There can be larger consequences as well.  You may not have as
+much control over presentation as you would wish.  Some of the canned
+hosting sites allow you to customize your web pages, but the site's
+default layout usually ends up showing through in various awkward
+ways.  For example, some projects that host themselves at SourceForge
+have completely customized home pages, but still point developers to
+their "SourceForge page" for more information.  The SourceForge page
+is what would be the project's home page, had the project not used a
+custom home page.  The SourceForge page has links to the bug tracker,
+the CVS repository, downloads, etc.  Unfortunately, a SourceForge page
+also contains a great deal of extraneous noise.  The top is a banner
+ad, often an animated image.  The left side is a vertical arrangement
+of links of little relevance to someone interested in the project.
+The right side is often another advertisement.  Only the center of the
+page is devoted to truly project-specific material, and even that is
+arranged in a confusing way that often makes visitors unsure of what
+to click on next.</p><p>Behind every individual aspect of SourceForge's design, there is
+no doubt a good reason&#8212;good from SourceForge's point of view,
+such as the advertisements.  But from an individual project's point of
+view, the result can be a less-than-ideal web page.  I don't mean to
+pick on SourceForge; similar concerns apply to many of the canned
+hosting sites.  The point is that there's a tradeoff.  You get relief
+from the technical burdens of running a project site, but only at the
+price of accepting someone else's way of running it.</p><p>Only you can decide whether canned hosting is best for your
+project.  If you choose a canned site, leave open the option of
+switching to your own servers later, by using a custom domain name for
+the project's "home address".  You can forward the URL to the canned
+site, or have a fully customized home page at the public URL and hand
+users off to the canned site for sophisticated functionality.  Just
+make sure to arrange things such that if you later decide to use a
+different hosting solution, the project's address doesn't need to
+change.</p><div class="sect3" title="Choosing a canned hosting site"><div class="titlepage"><div><div><h4 class="title"><a name="canned-hosting-choosing"></a>Choosing a canned hosting site</h4></div></div></div><p>The largest and most well-known hosting site is <a class="ulink" href="http://www.sourceforge.net/" target="_top">SourceForge</a>.  Two other
+sites providing the same or similar services are <a class="ulink" href="http://savannah.gnu.org/" target="_top">savannah.gnu.org</a> and <a class="ulink" href="http://www.berlios.de/" target="_top">BerliOS.de</a>.  A few organizations,
+such as the <a class="ulink" href="http://www.apache.org/" target="_top">Apache Software
+Foundation</a> and <a class="ulink" href="http://www.tigris.org/" target="_top">Tigris.org</a><sup>[<a name="idp6970480" href="#ftn.idp6970480" class="footnote">19</a>]</sup>, give free
+hosting to open source projects that fit well with their missions and
+their community of existing projects.</p><p>Haggen So did a thorough evaluation of various canned hosting
+sites, as part of the research for his Ph.D. thesis,
+<em class="citetitle">Construction of an Evaluation Model for Free/Open Source
+Project Hosting (FOSPHost) sites</em>.  The results are at
+<a class="ulink" href="http://www.ibiblio.org/fosphost/" target="_top">http://www.ibiblio.org/fosphost/</a>, and see especially
+the very readable comparison chart at <a class="ulink" href="http://www.ibiblio.org/fosphost/exhost.htm" target="_top">http://www.ibiblio.org/fosphost/exhost.htm</a>.</p></div><div class="sect3" title="Anonymity and involvement"><div class="titlepage"><div><div><h4 class="title"><a name="anonymity"></a>Anonymity and involvement</h4></div></div></div><p>A problem that is not strictly limited to the canned sites, but
+is most often found there, is the abuse of user login functionality.
+The functionality itself is simple enough: the site allows each
+visitor to register herself with a username and password.  From
+then on it keeps a profile for that user, and project administrators
+can assign the user certain permissions, for example, the right to
+commit to the repository.</p><p>This can be extremely useful, and in fact it's one of the prime
+advantages of canned hosting.  The problem is that sometimes user
+login ends up being required for tasks that ought to be permitted to
+unregistered visitors, specifically the ability to file issues in the
+bug tracker, and to comment on existing issues.  By requiring a
+logged-in username for such actions, the project raises the
+involvement bar for what should be quick, convenient tasks.  Of
+course, one wants to be able to contact someone who's entered data
+into the issue tracker, but having a field where she can enter her
+email address (if she wants to) is sufficient.  If a new user spots a
+bug and wants to report it, she'll only be annoyed at having to fill
+out an account creation form before she can enter the bug into the
+tracker.  She may simply decide not to file the bug at all.</p><p>The advantages of user management generally outweigh the
+disadvantages.  But if you can choose which actions can be done
+anonymously, make sure not only that <span class="emphasis"><em>all</em></span>
+read-only actions are permitted to non-logged-in visitors, but also
+some data entry actions, especially in the bug tracker and, if you
+have them, wiki pages.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6970480" href="#idp6970480" class="para">19</a>] </sup>Disclaimer:
+I am employed by <a class="ulink" href="http://www.collab.net/" target="_top">CollabNet</a>, which sponsors
+Tigris.org, and I use Tigris regularly.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="wikis.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Pujar</a></td><td width="40%" align="right"> <a accesskey="n" href="social-infrastructure.html">Següent</a></td></tr><tr><td width="40%" align="left" valign="top">Wikis </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inici</a></td><td width="40%" align="right" valign="top"> Capítol 4. Social and Political Infrastructure</td></tr></table></div></body></html>

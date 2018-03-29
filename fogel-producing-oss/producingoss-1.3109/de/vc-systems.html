@@ -1,0 +1,205 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Anhang A. Systeme zur Versionsverwaltung</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="index.html" title="Produktion von Open-Source-Software"><link rel="prev" href="licensing-further-resources.html" title="Weitere Quellen"><link rel="next" href="bug-trackers.html" title="Anhang B. Freie Bugtracker"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Anhang A. Systeme zur Versionsverwaltung</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="licensing-further-resources.html">Zurück</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="bug-trackers.html">Weiter</a></td></tr></table><hr></div><div class="appendix" title="Anhang A. Systeme zur Versionsverwaltung"><div class="titlepage"><div><div><h2 class="title"><a name="vc-systems"></a>Anhang A. Systeme zur Versionsverwaltung</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Dies sind alle Open-Source-Versionsverwaltungssysteme, die mir 
+Mitte 2007 bekannt waren sowie einige, die ich Ende 2011 hinzugefügt habe.
+Diejenigen, die ich regelmäßig nutze, sind Subversion und Git; aber auch 
+Bazaar und CVS nutzte ich in großem Maße. Mit den anderen habe ich kaum
+oder keine Erfahrung, und die hier aufgeführten Informationen habe ich
+von ihren Websites übernommen. Siehe auch
+<a class="ulink" href="http://en.wikipedia.org/wiki/List_of_revision_control_software" target="_top">http://en.wikipedia.org/wiki/List_of_revision_control_software</a>.
+</p><div class="sect2" title="Subversion &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-subversion"></a><span class="bold"><strong>Subversion</strong></span> &#8211; <a class="ulink" href="http://subversion.tigris.org/" target="_top">http://subversion.tigris.org/</a></h3></div></div></div><p>Subversion wurde vor allem als Ersatz für CVS
+geschrieben &#8211; d.h. seine Herangehensweise an die Versionsverwaltung
+ist ungefähr die gleiche wie bei CVS, aber ohne die Probleme und
+fehlende Funktionen, welche die meisten Nutzer von CVS verärgern. Eines
+der Ziele von Subversion ist, dass der Übergang nach Subversion von 
+Leuten, die bereits mit CVS vertraut sind, als relativ glatt empfunden 
+wird. Es ist hier nicht genug Platz, um detalliert die Funktionen von
+Subversion zu behandeln; besuchen Sie die Webseite des Projekts für
+weitere Informationen. <span class="emphasis"><em>[Disclaimer: Ich bin an der
+Entwicklung von Subversion beteiligt, und es ist das einzige System
+welches ich regelmäßig benutze.]</em></span></p></div><div class="sect2" title="GIT &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-git"></a><span class="bold"><strong>GIT</strong></span> &#8211; <a class="ulink" href="http://git.or.cz/" target="_top">http://git.or.cz/</a></h3></div></div></div><p>GIT ist ein Projekt, welches von Linus Torvalds gestartet wurde, um
+den Quellcode des Linux-Kernels zu verwalten. GIT war zunächst
+relativ auf die Bedürfnisse der Kernel-Entwicklung konzentriert, ist
+aber darüber hinaus gewachsen und wird mittlerweile von anderen
+Projekten als dem Linux-Kernel benutzt. Auf der Webseite steht
+"...entwickelt um sehr große Projekte schnell und effizient zu
+verwalten; es wird hauptsächlich von verschiedenen Open-Source-Projekten
+benutzt, insbesondere vom Linux-Kernel. Git gehört zu der Kategorie
+der verteilten Verwaltungssysteme für Quellcode, ähnlich wie z.B. GNU
+Arch oder Monotone (oder BitKeeper aus der proprietären Welt). Jedes
+Arbeitsverzeichnis von GIT ist ein vollwertiges Repository mit der
+Möglichkeit Revisionen zu verfolgen, unabhängig von der Verfügbarkeit
+des Netzwerks oder einem Server."</p></div><div class="sect2" title="Mercurial &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-mercurial"></a><span class="bold"><strong>Mercurial</strong></span> &#8211; <a class="ulink" href="http://www.selenic.com/mercurial/" target="_top">http://www.selenic.com/mercurial/</a></h3></div></div></div><p>Mercurial ist ein verteiltes Versionsverwaltungssystem, welches
+unter anderem "vollständige Kreuzindexierung von Dateien sowie
+Änderungen an mehreren Dateien; Bandbreite und Prozessor sparende HTTP-
+und SSH-Protokolle für die Synchronisierung; beliebige Merges zwischen
+den Zweigen von Entwicklern; integrierte autonome webbasierte
+Benutzeroberfläche; [unterstützung für] UNIX, MacOS X, und Windows" und
+mehr (die vorangehende Liste von Funktionen stammt von der Webseite von
+Mercurial).</p></div><div class="sect2" title="Bazaar &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-bazaar"></a><span class="bold"><strong>Bazaar</strong></span> &#8211; <a class="ulink" href="http://bazaar.canonical.com/" target="_top">http://bazaar.canonical.com/</a></h3></div></div></div><p>Bazaar (oder bzr) ist ein verteiltes Versionsverwaltungssystem mit 
+Schwerpunkt auf einfacher Benutzbarkeit und flexiblem Datenmodel. Es ist
+ein offizielles GNU-Projekt und das ursprüngliche Versionsverwaltungssystem
+der freien Software-Projekt-Hosting-Site Launchpad.net. Bazaar unterstützt
+verteilte Versionsverwaltung vollständig: sämtliche Arbeit findet in
+Zweigen statt, und jedem Entwickler steht üblicherweise die vollständige
+Änderungsgeschichte des Zweiges zur Verfügung. Zweige können auf 
+dezentralisierte Weise miteinander gemergt werden, aber Bazaar kann auch
+so konfiguriert werden, dass es zentralisiert arbeitet. Bazaar nahm seinen
+Anfang aus einem Fork von GNU Arch, wurde dann jedoch von Grund auf neu
+geschrieben und hat nun zu GNU Arch keine direkte Beziehung mehr.</p></div><div class="sect2" title="SVK &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-svk"></a><span class="bold"><strong>SVK</strong></span> &#8211; <a class="ulink" href="http://svk.elixus.org/" target="_top">http://svk.elixus.org/</a></h3></div></div></div><p>Auch wenn es auf Subversion aufbaut, ähnelt SVK wahrscheinlich
+eher einigen der dezentralisierten Systeme weiter unten als Subversion.
+SVK unterstützt verteilte Entwicklung, lokale Commits, ausgeklügelte
+Zusammenführung von Änderungen, und die Fähigkeit, Bäume aus
+Versionsverwaltungssystemen außer SVK zu spiegeln. Siehe seine Webseite
+für weitere Details.</p></div><div class="sect2" title="Veracity &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-veracity"></a><span class="bold"><strong>Veracity</strong></span> &#8211; <a class="ulink" href="http://veracity-scm.com/" target="_top">http://veracity-scm.com/</a></h3></div></div></div><p>Veracity ist ein verteiltes Versionsverwaltungssystem; Genau wie bei
+Git, Mercurial, Bazaar usw. arbeitet jeder Entwickler auf einem
+vollständigen lokalen Projektarchiv und Änderungen werden auf Bedarf 
+zwischen den Projektarchiven per Push und Pull übertragen. Von den Befehlen
+her ist es diesen System sehr ähnlich, aber Veracity beinhaltet zusätzlich 
+zum Versionieren von Dateien eine verteilte Fehlerdatenbank, die 
+gemeinsam mit den Dateien versioniert wird. In anderen Worten: Veracity
+versucht, alle Artefakte aufzunehmen, die tatsächlich zur Entwicklung 
+benötigt werden &#8212; nicht allein den Quelltext-Baum, sondern
+auch die Fehlerberichte &#8212; und sie durch das 
+Versionsverwaltungssystem verfügbar zu machen. Das ist ein ehrgeiziges 
+Ziel, und solange ich noch nicht die Gelegeneit hatte, es zu benutzen, 
+bin ich an Erfahrungsberichten sehr interessiert. Es wird hauptsächlich 
+von SourceGear, Inc. entwickelt, einem Unternehmen mit einer langen 
+Geschichte im Hinblick auf Versionsverwaltung und 
+Softwarekonfigurationsmanagement.</p><p>Siehe auch <a class="xref" href="vc-systems.html#vc-fossil" title="Fossil &#8211; ">Fossil</a> für ein ähnliches System.</p></div><div class="sect2" title="Fossil &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-fossil"></a><span class="bold"><strong>Fossil</strong></span> &#8211; <a class="ulink" href="http://www.fossil-scm.org/" target="_top">http://www.fossil-scm.org/</a></h3></div></div></div><p>Fossil ähnelt <a class="xref" href="vc-systems.html#vc-veracity" title="Veracity &#8211; ">Veracity</a> dahin gehend,
+dass es ein verteiltes Versionsverwaltungssystem ist, das mehr als nur
+Quelltextdateien versioniert: es versioniert die Fehlerdatenbank, aber 
+auch ein verteiltes Wiki, und ein verteiltes Blog.  Die weiteren Features
+umfassen einen standardmäßigen "autosync"-Modus, um nicht-konfligierende
+Änderungen automatisch zusammenzuführen (d.h. Fossil kann sowohl auf 
+zentralisierte als auch auf dezentralisierte Weise arbeiten, was 
+theoretisch auch für andere dezentralisierte Systeme gilt, aber es scheint
+so, als ob Fossil den zentralisierten Arbeitsablauf besser unterstützt).
+Auch wird es mit einem Web-Interface ausgeliefert, mit dem die Benutzer
+durch das Projektarchiv navigieren können.</p><p>Fossil wird hauptsächlich durch Dr. Richard Hipp entwickelt, der 
+möglicherweise besser bekannt ist als Autor der SQLite Datenbank-Engine.
+Genau wie Veracity, habe ich Fossil bislang nicht benutzt; sollten Sie 
+es benutzen, dann lassen Sie mich bitte wissen, wie es läuft.</p></div><div class="sect2" title="CVS &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-cvs"></a><span class="bold"><strong>CVS</strong></span> &#8211; <a class="ulink" href="http://www.nongnu.org/cvs/" target="_top">http://www.nongnu.org/cvs/</a></h3></div></div></div><p>CVS gibt es schon seit langem, und viele Entwickler sind bereits
+damit vertraut. Zu seiner Zeit war es revolutionär: Es war das erste
+Open-Source-Versionsverwaltungssystem, das Entwicklern Zugang über
+weite Netze anbot (so weit ich weiß), und es erlaubte erstmals anonyme,
+rein lesende Checkouts, was neuen Entwicklern einen einfachen
+Weg bot, sich an Projekten zu beteiligen. CVS verwaltet lediglich
+Dateien, keine Verzeichnisse; es bietet Verzweigung an, Tags und gute 
+Geschwindigkeit auf Client-Seite, kann aber nicht so gut mit großen
+oder binären Dateien umgehen. Es unterstützt auch keine atomaren
+Commits.<span class="emphasis"><em>[Disclaimer: Ich war ca. fünf Jahre lang
+aktiver Entwickler bei CVS, bevor ich dabei half, das Subversion-Projekt
+zu starten, um es zu ersetzen.]</em></span></p></div><div class="sect2" title="Darcs &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-darcs"></a><span class="bold"><strong>Darcs</strong></span> &#8211; <a class="ulink" href="http://abridgegame.org/darcs/" target="_top">http://abridgegame.org/darcs/</a></h3></div></div></div><p>"David's Advanced Revision Control System ist noch ein weiterer
+Ersatz für CVS. Es wurde in Haskell geschrieben, und wurde schon auf
+Linux, MacOS X, FreeBSD, OpenBSD und Microsoft Windows benutzt. Darcs
+beinhaltet auch ein cgi script, mit dem man sich den Ihnhalt des 
+Repositorys anschauen kann."</p></div><div class="sect2" title="Arch &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-arch"></a><span class="bold"><strong>Arch</strong></span> &#8211; <a class="ulink" href="http://www.gnu.org/software/gnu-arch/" target="_top">http://www.gnu.org/software/gnu-arch/</a></h3></div></div></div><p>GNU Arch unterstützt sowohl verteilte als auch die zentralisierte
+Entwicklung. Entwickler committen ihre Änderungen zu einem "Archiv",
+welches lokal sein kann, und die Änderungen können zu anderen Archiven
+geschoben oder gezogen werden, wie es die Verwalter der Archive für
+richtig halten. Wie solch eine Methodik impliziert, hat Arch feinere
+Unterstützung für Merges als CVS. Arch erlaubt es auch einfach Zweige
+von Archiven zu erstellen, auf denen man keinen Commit-Zugriff hat; siehe
+die Webseiten von Arch für weitere Details.</p></div><div class="sect2" title="monotone &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-monotone"></a><span class="bold"><strong>monotone</strong></span> &#8211; <a class="ulink" href="http://www.venge.net/monotone/" target="_top">http://www.venge.net/monotone/</a></h3></div></div></div><p>"monotone ist ein freies verteiltes Versionsverwaltungssystem. Es
+bietet einen einfachen, aus einer Datei bestehenden auf Transaktionen
+basierenden Speicher, mit vollständig entkoppeltem Betrieb und einem
+effizienten Peer-to-Peer-Synchronisationsprotokoll. Es versteht
+historisch abhängige Merges, leichtgewichtige Zweige, integrierte
+Überprüfung und Tests durch Dritte. Es benutzt kryptographische
+Benennung von Versionen sowie Client-seitige RSA-Zertifikate. Es bietet
+gute Unterstützung für Internationalisierung, hat keine externen
+Abhängigkeiten, läuft unter Linux, Solaris, OSX, und Windows, und ist
+unter der GNU GPL lizenziert."</p></div><div class="sect2" title="Codeville &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-codeville"></a><span class="bold"><strong>Codeville</strong></span> &#8211; <a class="ulink" href="http://codeville.org/" target="_top">http://codeville.org/</a></h3></div></div></div><p>"Warum noch ein weiteres Versionsverwaltungssystem? Alle anderen
+Versionsverwaltungssysteme erfordern, dass Sie genau auf die Beziehungen
+zwischen Zweigen achthaben, um nicht wiederholt die selben Konflikte
+zusammenführen zu müssen. Codeville ist sehr viel freizügiger. Es erlaubt
+Ihnen ein Commit von oder zu einem Repository zu machen, jederzeit und
+ohne unnötige wiederholte Merges."</p><p>"Codeville arbeitet, indem es für jede Änderung, die gemacht
+wird, eine Kennung erstellt, und sich eine Liste aller Änderungen die je
+auf einer Datei angewandt wurden behält, sowie die letzte Änderung die
+jede Zeile in jeder Datei geändert hat. Wenn es einen Konflikt gibt,
+überprüft es, ob eine der beiden Seiten bereits auf die andere angewandt
+wurde, und wenn das der Fall ist, gewinnt die andere Seite automatisch.
+Wenn es einen Konflikt gibt, der wirklich nicht automatisch 
+zusammengeführt werden kann, verhält sich fast genau wie CVS."</p></div><div class="sect2" title="Vesta &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-vesta"></a><span class="bold"><strong>Vesta</strong></span> &#8211; <a class="ulink" href="http://www.vestasys.org/" target="_top">http://www.vestasys.org/</a></h3></div></div></div><p>"Vesta ist ein portables SCM [Software Configuration Management]
+System dessen Ziel es ist, die Entwicklung fast jeder Größe zu
+unterstützen, von ziemlich klein (unter 10.000 Codezeilen) bis
+sehr groß (10.000.000 Codezeilen)."</p><p>"Vesta ist ein ausgereiftes System. Es ist das Ergebnis von über
+10 Jahren Forschungs- und Entwicklungsarbeit an dem Compaq/Digital 
+Systems Forschungszentrum, und wurde von der Compaq-Gruppe für den
+Alpha Processor über zweieinhalb Jahre lang produktiv genutzt.
+Die Alpha-Gruppe hatte über 150 aktive Entwickler an zwei Standorten die
+tausende Meilen auseinaner lagen, an den Ost- und Westküsten der USA.
+Die Gruppe hat Vesta genutzt, um Quellcode-Daten von einer Größe bis zu
+130MB zu kompilieren, die je 1.5 abgeleitete Daten produzierten. Die
+Kompilierungen die an der Ostküste gemacht wurden, haben an einem
+durchschnittlichen Tag 10-15 GB an Daten produziert, die alle von Vesta
+verwaltet wurden. Obwohl Vesta mit Softwareentwicklung im Sinn
+entworfen wurde, hat die Alpha-Gruppe die Flexibilität des System
+demonstriert, indem sie es für die Hardwareentwicklung benutzte,
+Commits mit den Dateien der Beschreibungssprache für die Hardware
+machten, sowie ihre Simulationen und andere abgeleitete Objekte Builds
+mit dem System von Vesta gemacht haben. Die Mitglieder der ehemaligen
+Alpha-Gruppe, jetzt ein Teil von Intel, benutzen heute weiterhin Vesta
+bei einem neuen Mikroprozessor-Projekt."</p></div><div class="sect2" title="Aegis &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-aegis"></a><span class="bold"><strong>Aegis</strong></span> &#8211; <a class="ulink" href="http://aegis.sourceforge.net/" target="_top">http://aegis.sourceforge.net/</a></h3></div></div></div><p>"Aegis ist ein Software-Configuration-Management-System,
+basierend auf Transaktionen. Es bietet einen Rahmen, in dem ein Team von
+Entwicklern an vielen Änderungen unabhängig voneinander arbeiten können,
+und Aegis koordiniert die Integration dieser Änderungen zurück in die
+zentralen Quellcode-Dateien der Anwendung, mit so wenig Störungen wie
+möglich."</p></div><div class="sect2" title="CVSNT &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-cvsnt"></a><span class="bold"><strong>CVSNT</strong></span> &#8211; <a class="ulink" href="http://cvsnt.org/" target="_top">http://cvsnt.org/</a></h3></div></div></div><p>"CVSNT ist ein fortgeschrittenes Versionsverwaltungssystem welches
+auf mehreren Platforment läuft. Es ist mit der Industrienorm des 
+CVS-Protokolls kompatibel und unterstützt viele weitere Funktionen. ... 
+CVSNT ist Open Source, freie Software und unter der GNU GPL lizenziert." 
+Seine Funktionen sind unter anderem die Authentifikation mit allen
+üblichen CVS-Protokollen, sowie das Windows eigene SSPI und Active
+Directory; Unterstützung für secure transport, mittels sserver oder 
+verschlüsseltem SSPI; es ist plattformübergreifend (läuft in Windows-
+oder Unix-Umgebungen); NT version ist vollständig mit dem Win32 System
+integriert; MergePoint-Verarbeitung bedeutet, dass Sie keine Tags mehr
+brauchen, um einen Merge zu machen; es wird aktiv entwickelt.</p></div><div class="sect2" title="META-CVS &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-meta-cvs"></a><span class="bold"><strong>META-CVS</strong></span> &#8211; <a class="ulink" href="http://users.footprints.net/~kaz/mcvs.html" target="_top">http://users.footprints.net/~kaz/mcvs.html</a></h3></div></div></div><p>"Meta-CVS ist ein Versionsverwaltungssystem, welches um CVS gebaut
+wurde. Obwohl es die meisten Funktionen von CVS behält, inklusive
+aller Netzwerk-Unterstützung, ist es mächtiger als CVS, und einfacher zu
+benutzen". META-CVS listet auf seiner Webseite unter anderem folgende
+Funktionen: Versionierung von Verzeichnisstrukturen, verbesserte
+Handhabung verschiedener Dateitypen, einfachere und benutzerfreundlichere
+Erzeugung von und Zusammenführung von Zweigen, Unterstützung für
+symbolische Verweise, Listen von Attributen für versionierte Daten,
+verbesserter Import von Daten dritter Parteien, sowei einfache
+Aufrüstung bereits bestehender CVS-Archive.</p></div><div class="sect2" title="OpenCM &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-opencm"></a><span class="bold"><strong>OpenCM</strong></span> &#8211; <a class="ulink" href="http://www.opencm.org/" target="_top">http://www.opencm.org/</a></h3></div></div></div><p>"OpenCM wurde als ein sicherer, hoch integrierter Ersatz für CVS
+entworfen. Eine Liste der wesentlichen Funktionen kann auf seiner
+Webseite gefunden werden. Auch wenn es nicht so viele Funktionen wie 
+CVS hat, unterstützt es einige nützliche Dinge, die CVS fehlen. In
+Kürze bietet OpenCM erstklassige Unterstützung für die Umbenennung und
+Konfiguration, kryptographische Authentifizierung, Kontrolle der
+Zugriffsberechtigung, und erstklassige Verzweigung."</p></div><div class="sect2" title="PRCS &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-prcs"></a><span class="bold"><strong>PRCS</strong></span> &#8211; <a class="ulink" href="http://prcs.sourceforge.net/" target="_top">http://prcs.sourceforge.net/</a></h3></div></div></div><p>"PRCS, das Project Revision Control System, ist das Frontend für
+einen Satz von Programmen, die es (wie CVS) ermöglichen mit Gruppen von
+Dateien und Verzeichnessen als Entitäten umzugehen, und dabei
+kohärente Versionen der gesamten Gruppe zu bewahren. ... Sein Sinn ist
+ähnlich dem von SCCS, RCS, und CVS, ist aber (zumindest laut seinen
+Entwicklern) sehr viel einfacher als irgend eines dieser Systeme."
+</p></div><div class="sect2" title="ArX &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-arx"></a><span class="bold"><strong>ArX</strong></span> &#8211; <a class="ulink" href="http://www.nongnu.org/arx/" target="_top">http://www.nongnu.org/arx/</a></h3></div></div></div><p>ArX ist ein verteiltes Versionsverwaltungssystem, welches
+Funktionen für Verzweigung und Zusammenführung anbietet,
+kryptographische Prüfung der Integrität von Daten, sowie die Fähigkeit,
+Archive einfach auf jedem HTTP-Server zu veröffentlichen.</p></div><div class="sect2" title="SourceJammer &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-sourcejammer"></a><span class="bold"><strong>SourceJammer</strong></span> &#8211; <a class="ulink" href="http://sourcejammer.org/" target="_top">http://sourcejammer.org/</a></h3></div></div></div><p>"SourceJammer ist ein Verwaltungssystem für Versionen und
+Quellcode welches in Java geschrieben ist. Es besteht aus einer 
+Server-seitigen
+Komponente, welche die Dateien und die Historie der Versionen,
+Commits und Checkouts usw. und andere Befehle verarbeitet sowie einer
+Client-seitigen Komponente die Anfragen an den Server sendet und die
+Dateien auf dem Dateisystem des Clients verwaltet."</p></div><div class="sect2" title="FastCST &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-fastcst"></a><span class="bold"><strong>FastCST</strong></span> &#8211; <a class="ulink" href="http://www.zedshaw.com/projects/fastcst/index.html" target="_top">http://www.zedshaw.com/projects/fastcst/index.html</a></h3></div></div></div><p>"Ein 'modernes' System welches Gruppen von Änderungen über
+Revisionen von Dateiein benutzt und verteilt arbeitet anstatt
+zentralisiert. Sobald Sie eine E-Mail-Adresse haben, können Sie FastCST
+benutzen. Für breitere Verteilung brauchen Sie lediglich einen FTP-
+und/oder HTTP-Server oder Sie können den 'server' Befehl benutzen um
+direkt Ihre Inhalte zu verteilen. Alle Änderungen sind universell
+eindeutig, und haben eine Menge Metadaten, also können Sie alles
+ablehnen, was Sie nicht wollen, bevor Sie es ausprobieren. Merges werden
+realisiert, indem die Zusammenführung eines Satzes von Änderungen mit 
+dem derzeitigen Inhalt des entsprechenden Verzeichnisses verglichen wird,
+nicht, indem der Versuch unternommen wird, es mit einem anderen Satz 
+von Änderungen zusammen zu führen."</p></div><div class="sect2" title="Superversion &#8211; "><div class="titlepage"><div><div><h3 class="title"><a name="vc-superversion"></a><span class="bold"><strong>Superversion</strong></span> &#8211; <a class="ulink" href="http://www.superversion.org/" target="_top">http://www.superversion.org/</a></h3></div></div></div><p>"Superversion ist ein verteiltes Versionsverwaltungssystem für
+mehrere Benutzer welches auf Changesets basiert. Sein Ziel ist eine 
+professionelle Open-Source-Alternative zu kommerziellen Lösungen an die
+Seite zu stellen, die gleich einfach bedienbar ist (oder sogar einfacher) 
+und gleich leistungsfähig. Tatsächlich ist intuitive und effiziente
+Bedienbarkeit bereits seit dem Anfang seiner Entwicklung eines der
+vorrangigen Ziele von Superversion."</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="licensing-further-resources.html">Zurück</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="bug-trackers.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Weitere Quellen </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Anhang B. Freie Bugtracker</td></tr></table></div></body></html>

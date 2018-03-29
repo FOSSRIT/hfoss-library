@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 2. Getting Started</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="chapter" title="Chapter 2. Getting Started"><div class="titlepage"><div><div><h1 class="title"><a id="getting-started"/>Chapter 2. Getting Started</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>Starting a free software project is a twofold task.  The
+software needs to acquire users, and to acquire developers.  These two
+needs are not necessarily in conflict, but the interaction between
+them adds some complexity to a project's initial presentation.  Some
+information is useful for both audiences, some is useful only for one
+or the other.  Both kinds of information should subscribe to the
+principle of scaled presentation: the degree of detail presented at
+each stage should correspond to the amount of time and effort put in
+by the reader at that stage.  More effort should always result in more
+reward.  When effort and reward do not correlate reliably, most people
+will lose faith and stop investing effort.</p><p>The corollary to this is that <span class="emphasis"><em>appearances
+matter</em></span>.  Programmers, in particular, often don't like to
+believe this.  Their love of substance over form is almost a point of
+professional pride.  It's no accident that so many programmers exhibit
+an antipathy for marketing and public relations work, nor that
+professional graphic designers are often horrified at the designs
+programmers come up with on their own.</p><p>This is a pity, because there are situations where form
+<span class="emphasis"><em>is</em></span> substance, and project presentation is one of
+them.  For example, the very first thing a visitor learns about a
+project is what its home page looks like.  This information is
+absorbed before any of the actual content on the site is
+comprehended — before any of the text has been read or links
+clicked on.  However unjust it may be, people cannot stop themselves
+from forming an immediate first impression.  The site's appearance
+signals whether care was taken in organizing the project's
+presentation.  Humans have extremely sensitive antennae for detecting
+the investment of care.  Most of us can tell in one glance whether a
+home page was thrown together quickly or was given serious thought.
+This is the first piece of information your project puts out, and the
+impression it creates will carry over to the rest of the project by
+association.</p><p>Thus, while much of this chapter talks about the content your
+project should start out with, remember that its look and feel matter
+too.  Because the project web site has to work for two different types
+of visitors — users and developers — special attention
+must be paid to clarity and directedness.  Although this is not the
+place for a general treatise on web design, one principle is important
+enough to deserve mention, particularly when the site serves multiple
+(if overlapping) audiences: people should have a rough idea where a
+link goes before clicking on it.  For example, it should be obvious
+<span class="emphasis"><em>from looking at the links</em></span> to user documentation
+that they lead to user documentation, and not to, say, developer
+documentation.  Running a project is partly about supplying
+information, but it's also about supplying comfort.  The mere presence
+of certain standard offerings, in expected places, reassures users and
+developers who are deciding whether they want to get involved.  It
+says that this project has its act together, has anticipated the
+questions people will ask, and has made an effort to answer them in a
+way that requires minimal exertion on the part of the asker.  By
+giving off this aura of preparedness, the project sends out a message:
+"Your time will not be wasted if you get involved," which is exactly
+what people need to hear.</p><div class="sidebar" title="What We Mean by Users and Developers"><a id="user-vs-developer"/><div class="titlepage"><div><div><p class="title"><strong>What We Mean by Users and Developers</strong></p></div></div></div><p>The terms <em class="firstterm">user</em> and
+<em class="firstterm">developer</em> here refer to someone's relationship
+to the open source software project in question, not to her identity
+in the world at large.</p><p>For example, if the open source project is a Javascript library
+intended for use in web development, and someone is using the library
+as part of her work building web sites, then she is a "user" of the
+library (even though professionally her title might be "software
+developer").  But if she starts contributing bugfixes and enhancements
+back <em class="firstterm">upstream</em> -- that is, back into the project
+-- then, to the extent that she becomes involved in the project's
+maintenance, she is also a "developer" of the project.</p><p>It's common for developers in an open source projects to be
+users as well, but it's not always the case.  Especially with large
+projects started by organizations to meet enterprise-scale software
+needs, the developers may not always be direct users of the software,
+although they are still usually part of the team that uses that
+software within their organization.</p><p>In projects meant primarily for programmers, the boundary
+between user and developer is very porous: <span class="emphasis"><em>every</em></span>
+user is a potential developer.  But even in projects meant for
+non-technical people, some percentage of the users are potential
+developers.  Open source projects should be run in such a way as to
+make that transition welcoming to anyone who's interested.</p></div><p>If you use a "canned hosting" site (see <a class="xref" href="ch03s02.html#canned-hosting" title="Canned Hosting">the section called “Canned Hosting”</a><span> in <a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span>), one advantage of that
+choice is that those sites have a default layout that is similar from
+project to project and is pretty well-suited to presenting a project
+to the world.  That layout can be customized, within certain
+boundaries, but the default design prompts you to include the
+information visitors are most likely to be looking for.</p><div class="sect2" title="But First, Look Around"><div class="titlepage"><div><div><h2 class="title"><a id="look-around"/>But First, Look Around</h2></div></div></div><p>Before starting an open source project, there is one important
+caveat:</p><p>Always look around to see if there's an existing project that
+does what you want.  The chances are pretty good that whatever problem
+you want solved now, someone else wanted solved before you.  If they
+did solve it, and released their code under a free license, then
+there's no reason for you to reinvent the wheel today.  There are
+exceptions, of course: if you want to start a project as an
+educational experience, pre-existing code won't help; or maybe the
+project you have in mind is so specialized that you know there is zero
+chance anyone else has done it.  But generally, there's no point not
+looking, and the payoff can be huge.  If the usual Internet search
+engines don't turn up anything, try searching directly on <a class="ulink" href="https://github.com/">https://github.com/</a>, <a class="ulink" href="https://freshcode.club/">https://freshcode.club/</a>, <a class="ulink" href="https://openhub.net/">https://openhub.net/</a>, and in the
+Free Software Foundation's directory of free software at <a class="ulink" href="https://directory.fsf.org/">https://directory.fsf.org/</a>.</p><p>Even if you don't find exactly what you were looking for, you
+might find something so close that it makes more sense to join that
+project and add functionality than to start from scratch yourself.
+See <a class="xref" href="ch05s13.html" title="Evaluating Open Source Projects">the section called “Evaluating Open Source Projects”</a><span> in <a class="xref" href="ch05.html" title="Chapter 5. Participating as a Business, Non-Profit, or Government Agency">Chapter 5, <em>Participating as a Business, Non-Profit, or Government Agency</em></a></span> for a
+discussion of how to evaluate an existing open source project
+quickly.</p></div></div><div class="sect1" title="Starting From What You Have"><div class="titlepage"><div><div><h1 class="title"><a id="starting-from-what-you-have"/>Starting From What You Have</h1></div></div></div><p>You've looked around, found that nothing out there really fits
+your needs, and decided to start a new project.</p><p>What now?</p><p>The hardest part about launching a free software project is
+transforming a private vision into a public one.  You or your
+organization may know perfectly well what you want, but expressing
+that goal comprehensibly to the world is a fair amount of work.  It is
+essential, however, that you take the time to do it.  You and the
+other founders must decide what the project is really about — that
+is, decide its limitations, what it <span class="emphasis"><em>won't</em></span> do as
+well as what it will — and write up a mission statement.  This
+part is usually not too hard, though it can sometimes reveal unspoken
+assumptions and even disagreements about the nature of the project,
+which is fine: better to resolve those now than later.  The next step
+is to package up the project for public consumption, and this is,
+basically, pure drudgery.</p><p>What makes it so laborious is that it consists mainly of
+organizing and documenting things everyone already
+knows — "everyone", that is, who's been involved in the project so 
+far.  Thus, for the people doing the work, there is no immediate
+benefit.  They do not need a <code class="filename">README</code> file giving
+an overview of the project, nor a design document.
+They do not need a carefully arranged code tree conforming to the
+informal but widespread standards of software source distributions.
+Whatever way the source code is arranged is fine for them, because
+they're already accustomed to it anyway, and if the code runs at all,
+they know how to use it.  It doesn't even matter, for them, if the
+fundamental architectural assumptions of the project remain
+undocumented; they're already familiar with that too.</p><p>Newcomers, on the other hand, need all these things.  Fortunately,
+they don't need them all at once.  It's not necessary for you to
+provide every possible resource before taking a project public.  In a
+perfect world, perhaps, every new open source project would start out
+life with a thorough design document, a complete user manual (with
+special markings for features planned but not yet implemented),
+beautifully and portably packaged code, capable of running on any
+computing platform, and so on.  In reality, taking care of all these
+loose ends would be prohibitively time-consuming, and anyway, it's
+work that one can reasonably hope others will help with once the
+project is under way.</p><p>What <span class="emphasis"><em>is</em></span> necessary, however, is that enough
+investment be put into presentation that newcomers can get past the
+initial obstacle of unfamiliarity.  Think of it as the first step in a
+bootstrapping process, to bring the project to a kind of minimum
+activation energy.  I've heard this threshold called the
+<em class="firstterm">hacktivation energy</em>: the amount of energy a
+newcomer must put in before she starts getting something back.  The
+lower a project's hacktivation energy, the better.  Your first task is
+bring the hacktivation energy down to a level that encourages people
+to get involved.</p><p>Each of the following subsections describes one important aspect
+of starting a new project.  They are presented roughly in the order
+that a new visitor would encounter them, though of course the order in
+which you actually implement them might be different.  You can treat
+them as a checklist.  When starting a project, just go down the list
+and make sure you've got each item covered, or at least that you're
+comfortable with the potential consequences if you've left one
+out.</p><div class="sect2" title="Choose a Good Name"><div class="titlepage"><div><div><h2 class="title"><a id="choosing-a-name"/>Choose a Good Name</h2></div></div></div><p>Put yourself in the shoes of someone who's just heard about your
+project, perhaps by having stumbled across it while searching for
+software to solve some problem.  The first thing they'll encounter is
+the project's name.</p><p>A good name will not automatically make your project successful,
+and a bad name will not doom it — well, a
+<span class="emphasis"><em>really</em></span> bad name probably could do that, but we
+start from the assumption that no one here is actively trying to make
+their project fail.  However, a bad name can slow down adoption of the
+project, either because people don't take it seriously, or because
+they simply have trouble remembering it.</p><p>A good name:
+
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Gives some idea what the project does, or at least
+            is related in an obvious way, such that if one knows the
+            name and knows what the project does, the name will come
+            quickly to mind thereafter.</p></li><li class="listitem"><p>Is easy to remember.  Here, there is no getting
+            around the fact that English has become the default
+            language of the Internet: "easy to remember" usually means
+            "easy for someone who can read English to remember."  Names that
+            are puns dependent on native-speaker pronounciation, for
+            example, will be opaque to the many non-native English
+            readers out there.  If the pun is particularly compelling
+            and memorable, it may still be worth it; just keep in mind
+            that many people seeing the name will not hear it in their
+            head the way a native speaker would.</p></li><li class="listitem"><p>Is not the same as some other project's name, and
+            does not infringe on any trademarks.  This is just good
+            manners, as well as good legal sense.  You don't want to
+            create identity confusion.  It's hard enough to keep track
+            of everything that's available on the Net already, without
+            different things having the same name.</p><p>The resources mentioned earlier in
+            <a class="xref" href="ch02.html#look-around" title="But First, Look Around">the section called “But First, Look Around”</a> are useful in
+            discovering whether another project already has the name
+            you're thinking of.  For the U.S., trademark searches are
+            available at <a class="ulink" href="http://www.uspto.gov/">http://www.uspto.gov/</a>.</p></li><li class="listitem"><p>If possible, is available as a domain name in the
+            <code class="systemitem">.com</code>,
+            <code class="systemitem">.net</code>, and
+            <code class="systemitem">.org</code> top-level domains.  You
+            should pick one, probably <code class="systemitem">.org</code>,
+            to advertise as the official home site for the project;
+            the other two should forward there and are simply to
+            prevent third parties from creating identity confusion
+            around the project's name.  Even if you intend to host the
+            project at some other site (see
+            <a class="xref" href="ch02.html#hosting" title="Hosting">the section called “Hosting”</a>), you
+            can still register project-specific domains and forward
+            them to the hosting site.  It helps users a lot to have a
+            simple URL to remember.<sup>[<a id="idm369" href="#ftn.idm369" class="footnote">13</a>]</sup></p></li><li class="listitem"><p>If possible, is available as a username on <a class="ulink" href="https://twitter.com/">https://twitter.com/</a> and other
+            microblog sites.  See <a class="xref" href="ch02.html#own-the-name" title="Own the Name in the Important Namespaces">the section called “Own the Name in the Important Namespaces”</a> for
+            more on this and its relationship to the domain name.</p></li></ul></div><p>
+
+</p><div class="sect3" title="Own the Name in the Important Namespaces"><div class="titlepage"><div><div><h3 class="title"><a id="own-the-name"/>Own the Name in the Important Namespaces</h3></div></div></div><p>For large projects, it is a good idea to own the project's name
+as many of the relevant namespaces on the Internet as you can.  By
+namespaces, I mean not just the domain name system, but also online
+services in which account names (usernames) are the publicly visible
+handle by which people refer to the project.  If you have the same
+name in all the places where people would look for you, you make it
+easier for people to sustain a mild interest in the project until
+they're ready to become more involved.</p><p>For example, the Gnome free desktop project has the <a class="ulink" href="https://gnome.org/">https://gnome.org/</a> domain
+name<sup>[<a id="idm384" href="#ftn.idm384" class="footnote">14</a>]</sup>, the <a class="ulink" href="https://twitter.com/gnome">https://twitter.com/gnome</a> Twitter handle, the <a class="ulink" href="https://identi.ca/gnome">https://identi.ca/gnome</a> username at
+Identi.ca<sup>[<a id="idm388" href="#ftn.idm388" class="footnote">15</a>]</sup>, the <a class="ulink" href="https://github.com/gnome">https://github.com/gnome</a> username at
+GitHub.com<sup>[<a id="idm392" href="#ftn.idm392" class="footnote">16</a>]</sup>, and on the freenode IRC
+network (see <a class="xref" href="ch03s06.html" title="IRC / Real-Time Chat Systems">the section called “IRC / Real-Time Chat Systems”</a>) they have the channel
+<code class="code">#gnome</code>, although they also maintain their own IRC servers
+(where they control the channel namespace anyway, of course).</p><p>All this makes the Gnome project splendidly easy to find: it's
+usually right where a potential contributor would expect it to be.  Of
+course, Gnome is a large and complex project with thousands of
+contributors and many subdivisions; the advantage to Gnome of being
+easy to find is greater than it would be for a newer project, since by
+now there are so many ways to get involved in Gnome.  But it will
+certainly never <span class="emphasis"><em>harm</em></span> your project to own its name
+in as many of the relevant namespaces as it can, and it can sometimes
+help.  So when you start a project, think about what its online handle
+should be and register that handle with the online services you think
+you're likely to care about.  The ones mentioned above are probably a
+good initial list, but you may know others that are relevant for the
+particular subject area of your project.</p></div></div><div class="sect2" title="Have a Clear Mission Statement"><div class="titlepage"><div><div><h2 class="title"><a id="mission-statement"/>Have a Clear Mission Statement</h2></div></div></div><p>Once they've found the project's home site, the next thing people
+will look for is a quick description or mission statement, so they can
+decide (within 30 seconds) whether or not they're interested in
+learning more.  This should be prominently placed on the front page,
+preferably right under the project's name.</p><p>The description should be concrete, limiting, and above all,
+short.  Here's an example of a good one, from <a class="ulink" href="https://hadoop.apache.org/">https://hadoop.apache.org/</a>:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>The Apache™ Hadoop® project develops open-source
+  software for reliable, scalable, distributed computing.</em></span></p><p><span class="emphasis"><em>The Apache Hadoop software library is a framework
+  that allows for the distributed processing of large data sets across
+  clusters of computers using simple programming models. It is
+  designed to scale up from single servers to thousands of machines,
+  each offering local computation and storage. Rather than rely on
+  hardware to deliver high-availability, the library itself is
+  designed to detect and handle failures at the application layer, so
+  delivering a highly-available service on top of a cluster of
+  computers, each of which may be prone to failures.</em></span></p></blockquote></div><p>In just four sentences, they've hit all the high points, largely
+by drawing on the reader's prior knowledge.  That's an important
+point: it's okay to assume a minimally informed reader with a baseline
+level of preparedness.  A reader who doesn't know what "clusters" and
+"high-availability" mean in this context probably can't make much use
+of Hadoop anyway, so there's no point writing for a reader who knows
+any less than that.  The phrase "designed to detect and handle
+failures at the application layer" will stand out to engineers who
+have experience with large-scale computing clusters — when they
+see those words, they'll know that the people behind Hadoop understand
+that world, and the first-time visitor will thus be likely to give
+Hadoop further consideration.</p><p>Those who remain interested after reading the mission statement
+will next want to see more details, perhaps some user or developer
+documentation, and eventually will want to download something.  But
+before any of that, they'll need to be sure it's open source.</p></div><div class="sect2" title="State That the Project is Free"><div class="titlepage"><div><div><h2 class="title"><a id="state-freedom"/>State That the Project is Free</h2></div></div></div><p><span class="emphasis"><em>The front page must make it unambiguously clear that
+the project is open source.</em></span> This may seem obvious, but you
+would be surprised how many projects forget to do it.  I have seen
+free software project web sites where the front page not only did not
+say which particular free license the software was distributed under,
+but did not even state outright that the software was free at all.
+Sometimes the crucial bit of information was relegated to the
+Downloads page, or the Developers page, or some other place that
+required one more mouse click to get to.  In extreme cases, the
+license was not given anywhere on the web site at all — the only
+way to find it was to download the software and look at a license file
+inside.</p><p>Please don't make this mistake.  Such an omission can lose many
+potential developers and users.  State up front, right below the
+mission statement, that the project is "free software" or "open source
+software", and give the exact license.  A quick guide to choosing a
+license is given in
+<a class="xref" href="ch02s02.html" title="Choosing a License and Applying It">the section called “Choosing a License and Applying It”</a><span>
+later in this chapter</span>, and
+licensing issues are discussed in detail in <a class="xref" href="ch09.html" title="Chapter 9. Legal Matters: Licenses, Copyrights, Trademarks and Patents">Chapter 9, <em>Legal Matters: Licenses, Copyrights, Trademarks and Patents</em></a>.</p><p>By this point, our hypothetical visitor has
+determined — probably in a minute or less — that she's
+interested in spending, say, at least five more minutes investigating
+this project.  The next sections describe what she should encounter in
+those five minutes.</p></div><div class="sect2" title="Features and Requirements List"><div class="titlepage"><div><div><h2 class="title"><a id="features-and-requirements"/>Features and Requirements List</h2></div></div></div><p>There should be a brief list of the features the software
+supports (if something isn't completed yet, you can still list it, but
+put "<span class="emphasis"><em>planned</em></span>" or
+"<span class="emphasis"><em>in progress</em></span>" next to it), and the kind of
+computing environment required to run the software.  Think of the
+features/requirements list as what you would give to someone asking
+for a quick summary of the software.  It is often just a logical
+expansion of the mission statement.  For example, the mission
+statement might say:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>To create a full-text indexer and search engine
+  with a rich API, for use by programmers in providing search
+  services for large collections of text files.</em></span></p></blockquote></div><p>The features and requirements list would give the details,
+clarifying the mission statement's scope:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Features:</em></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="emphasis"><em>Searches plain text, HTML, and
+                XML</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Word or phrase searching</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planned) Fuzzy matching</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planned) Incremental updating of
+                indexes</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>(planned) Indexing of remote web
+                sites</em></span></p></li></ul></div><p><span class="emphasis"><em>Requirements:</em></span></p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="emphasis"><em>Python 3.2 or higher</em></span></p></li><li class="listitem"><p><span class="emphasis"><em>Enough disk space to hold the indexes
+                (approximately 2x original data size)</em></span></p></li></ul></div></blockquote></div><p>With this information, readers can quickly get a feel for
+whether this software has any hope of working for them, and they can
+consider getting involved as developers too.</p></div><div class="sect2" title="Development Status"><div class="titlepage"><div><div><h2 class="title"><a id="development-status"/>Development Status</h2></div></div></div><p>Visitors usually want to know how a project is doing.  For new
+projects, they want to know the gap between the project's promise and
+current reality.  For mature projects, they want to know how actively
+it is maintained, how often it puts out new releases, how responsive
+it is likely to be to bug reports, etc.</p><p>There are a couple of different avenues for providing answers to
+these questions.  One is to have a development status page, listing
+the project's near-term goals and needs (for example, it might be
+looking for developers with a particular kind of expertise).  The page
+can also give a history of past releases, with feature lists, so
+visitors can get an idea of how the project defines "progress", and
+how quickly it makes progress according to that definition.  Some
+projects structure their development status page as a roadmap that
+includes the future: past events are shown on the dates they actually
+happened, future ones on the approximate dates the project hopes they
+will happen.</p><p>The other way — not mutually exclusive with the
+first, and in fact probably best done in combination with
+it — is to have various automatically-maintained
+counters and indicators embedded in the projects's front page and/or
+its developer landing page, showing various pieces of information
+that, in the aggregate, give a sense of the project's development
+status and progress.  For example, an Announcements or News panel
+showing recent news items, a Twitter or other microblog stream showing
+notices that match the project's designated hashtags, a timeline of
+recent releases, a panel showing recent activity in the bug tracker
+(bugs filed, bugs responded to), another showing mailing list or
+discussion forum activity, etc.  Each such indicator should be a
+gateway to further information of its type: for example, clicking on
+the "recent bugs" panel should take one to the full bug tracker, or at
+least to an expanded view into bug tracker activity.</p><p>Really, there are two slightly different meanings of
+"development status" being conflated here.  One is the formal sense:
+where does the project stand in relation to its stated goals, and how
+fast is it making progress.  The other is less formal but just as
+useful: how active is this project?  Is stuff going on?  Are there
+people here, getting things done?  Often that latter notion is what a
+visitor is most interested in.  Whether or not a project met its most
+recent milestone is sometimes not as interesting as the more
+fundamental question of whether it has an active community of
+developers around it.</p><p>The two notions of development status are, of course, related,
+and a well-presented project shows both kinds.  The information can be
+divided between the project's front page (show enough there to give an
+overview of both types of development status) and a more
+developer-oriented page.</p><div class="sidebar" title="Example: Launchpad Status Indicators"><a id="launchpad-status-indicators"/><div class="titlepage"><div><div><p class="title"><strong>Example: Launchpad Status Indicators</strong></p></div></div></div><p>One site that does a pretty good job of showing
+developer-oriented status indicators is Launchpad.net.  Launchpad.net
+is a bit unusual in that it is both a primary hosting platform for
+some projects, and a secondary, packaging-oriented site for others (or
+rather, for those others it is the primary site for the "project" of
+getting that particular program packaged for the Ubuntu GNU/Linux
+operating system, which Launchpad was specifically designed to
+support).  In either case, a project's landing page on Launchpad shows
+a variety of automatically-maintained status indicators that quickly
+give an idea of where the project stands.  While simply imitating a
+Launchpad page is probably not a good idea — your own
+project should think carefully about what its best development status
+indicators are — Launchpad project pages do provide
+some good examples of the possibilities.  Start from the top of a
+project page there and scroll down: <a class="ulink" href="https://launchpad.net/drizzle">https://launchpad.net/drizzle</a>
+or <a class="ulink" href="https://launchpad.net/inkscape">https://launchpad.net/inkscape</a>, to pick two at random.</p></div><div class="sect3" title="Development Status Should Always Reflect Reality"><div class="titlepage"><div><div><h3 class="title"><a id="development-status-honesty"/>Development Status Should Always Reflect Reality</h3></div></div></div><p>Don't be afraid of looking unready, and never give in to the
+temptation to inflate or hype the development status.  Everyone knows that
+software evolves by stages; there's no shame in saying "This is alpha
+software with known bugs.  It runs, and works at least some of the
+time, but use at your own risk."  Such language won't scare away the
+kinds of developers you need at that stage.  As for users, one of the
+worst things a project can do is attract users before the software is
+ready for them.  A reputation for instability or bugginess is very
+hard to shake, once acquired.  Conservativism pays off in the long
+run; it's always better for the software to be
+<span class="emphasis"><em>more</em></span> stable than the user expected than less, and
+pleasant surprises produce the best kind of word-of-mouth.</p><div class="sidebar" title="Alpha and Beta"><a id="alpha-and-beta"/><div class="titlepage"><div><div><p class="title"><strong>Alpha and Beta</strong></p></div></div></div><p>The term <em class="firstterm">alpha</em> usually means a first
+  release, with which users can get real work done and which has all
+  the intended functionality, but which also has known bugs.  The main
+  purpose of alpha software is to generate feedback, so the developers
+  know what to work on.  Alpha releases are generally free to change
+  APIs and functionality.</p><p>The next stage, <em class="firstterm">beta</em>, means the
+  software's APIs are finalized and its serious known bugs fixed, but
+  it has not yet been tested enough to certify for production release.
+  The purpose of beta software is to either become the official
+  release, assuming no bugs are found, or provide detailed feedback to
+  the developers so they can reach the official release quickly.  In a
+  series of beta releases, APIs and functionality should not change
+  except when absolutely necessary.</p></div></div></div><div class="sect2" title="Downloads"><div class="titlepage"><div><div><h2 class="title"><a id="downloads"/>Downloads</h2></div></div></div><p>The software should be downloadable as source code in standard
+formats.  When a project is first getting started, binary (executable)
+packages are not necessary, unless the software has such complicated
+build requirements or dependencies that merely getting it to run would
+be a lot of work for most people.  (But if this is the case, the
+project is going to have a hard time attracting developers
+anyway!)</p><p>The distribution mechanism should be as convenient, standard,
+and low-overhead as possible.  If you were trying to eradicate a
+disease, you wouldn't distribute the medicine in such a way that it
+requires a non-standard syringe size to administer.  Likewise,
+software should conform to standard build and installation methods;
+the more it deviates from the standards, the more potential users and
+developers will give up and go away confused.</p><p>That sounds obvious, but many projects don't bother to
+standardize their installation procedures until very late in the game,
+telling themselves they can do it any time: <span class="emphasis"><em>"We'll sort all
+that stuff out when the code is closer to being ready."</em></span>
+What they don't realize is that by putting off the boring work of
+finishing the build and installation procedures, they are actually
+making the code take longer to get ready — because they
+discourage developers who might otherwise have contributed to the
+code, if only they could build and test it.  Most insidiously, the
+project won't even <span class="emphasis"><em>know</em></span> it's
+losing all those developers, because the process is an accumulation of
+non-events: someone visits a web site, downloads the software, tries
+to build it, fails, gives up and goes away.  Who will ever know it
+happened, except the person themselves?  No one working on the project
+will realize that someone's interest and good will have been silently
+squandered.</p><p>Boring work with a high payoff should always be done early, and
+significantly lowering the project's barrier to entry through good
+packaging brings a very high payoff.</p><p>When you release a downloadable package, give it a unique
+version number, so that people can compare any two releases and know
+which supersedes the other.  That way they can report bugs against a
+particular release (which helps respondents to figure out if the bug
+is already fixed or not).  A detailed discussion of version
+numbering can be found in <a class="xref" href="ch07.html#release-numbering" title="Release Numbering">the section called “Release Numbering”</a>, and the
+details of standardizing build and installation procedures are covered
+in <a class="xref" href="ch07s04.html" title="Packaging">the section called “Packaging”</a><span>, both in <a class="xref" href="ch07.html" title="Chapter 7. Packaging, Releasing, and Daily Development">Chapter 7, <em>Packaging, Releasing, and Daily Development</em></a></span>.</p></div><div class="sect2" title="Version Control and Bug Tracker Access"><div class="titlepage"><div><div><h2 class="title"><a id="vc-and-bug-tracker-access"/>Version Control and Bug Tracker Access</h2></div></div></div><p>Downloading source packages is fine for those who just want to
+install and use the software, but it's not enough for those who want
+to debug or add new features.  Nightly source snapshots can help, but
+they're still not fine-grained enough for a thriving development
+community.  People need real-time access to the latest sources, and a
+way to submit changes based on those sources.</p><p>The solution is to use a version control
+system — specifically, an online, publicly-accessible
+version controlled repository, from which anyone can check out the
+project's materials and subsequently get updates.  A version control
+repository is a sign — to both users and developers — that
+this project is making an effort to give people what they need to
+participate.  As of this writing, many open source projects use <a class="ulink" href="https://github.com/">https://github.com/</a>, which offers unlimited
+free public version control hosting for open source projects.  While
+GitHub is not the only choice, nor even the only good choice, it's a
+reasonable one for most projects<sup>[<a id="idm498" href="#ftn.idm498" class="footnote">17</a>]</sup>.
+Version control infrastructure is discussed in detail in <a class="xref" href="ch03s04.html" title="Version Control">the section called “Version Control”</a><span> in <a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span>.</p><p>The same goes for the project's bug tracker.  The importance of
+a bug tracking system lies not only in its day-to-day usefulness to
+developers, but in what it signifies for project observers.  For many
+people, an accessible bug database is one of the strongest signs that
+a project should be taken seriously — and the higher
+the number of bugs in
+the database, the <span class="emphasis"><em>better</em></span> the project looks.  That
+might seem counterintuitive, but remember that the number of bug
+reports filed really depends on three things: the absolute number of
+actual software defects present in the code, the number of people
+using the software,
+and the convenience with which those people can report new bugs.  Of
+these three factors, the latter two are much more significant than the
+first.  Any software of sufficient size and complexity has an
+essentially arbitrary number of bugs waiting to be discovered.  The
+real question is, how well will the project do at recording and
+prioritizing those bugs?  A project with a large and well-maintained
+bug database (meaning bugs are responded to promptly, duplicate bugs
+are unified, etc.) therefore makes a better impression than a project
+with no bug database, or a nearly empty database.</p><p>Of course, if your project is just getting started, then the bug
+database will contain very few bugs, and there's not much you can do
+about that.  But if the status page emphasizes the project's youth,
+and if people looking at the bug database can see that most filings
+have taken place recently, they can extrapolate from that the project
+still has a healthy <span class="emphasis"><em>rate</em></span> of filings, and they
+will not be unduly alarmed by the low absolute number of bugs
+recorded.<sup>[<a id="idm510" href="#ftn.idm510" class="footnote">18</a>]</sup></p><p>Note that bug trackers are often used to track not only software
+bugs, but enhancement requests, documentation changes, pending tasks,
+and more.  The details of running a bug tracker are covered in
+<a class="xref" href="ch03s05.html" title="Bug Tracker">the section called “Bug Tracker”</a><span> in
+<a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span>, so I won't
+go into them here.  The important thing from a presentation point of
+view is just to <span class="emphasis"><em>have</em></span> a bug tracker, and to make
+sure that fact is visible from the front page of the project.</p></div><div class="sect2" title="Communications Channels"><div class="titlepage"><div><div><h2 class="title"><a id="communications-channels"/>Communications Channels</h2></div></div></div><p>Visitors usually want to know how to reach the human beings
+involved with the project.  Provide the addresses of mailing lists,
+chat rooms, IRC channels (<a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a>),
+and any other forums where others
+involved with the software can be reached.  Make it clear that you and
+the other authors of the project are subscribed to these mailing
+lists, so people see there's a way to give feedback that will reach
+the developers.  Your presence on the lists does not imply a
+committment to answer all questions or implement all feature requests.
+In the long run, probably only a fraction users will use the forums
+anyway, but the others will be comforted to know that they
+<span class="emphasis"><em>could</em></span> if they ever needed to.</p><p>In the early stages of a project, there's no need to have
+separate user and developer forums.  It's much better to have everyone
+involved with the software talking together, in one "room."  Among
+early adopters, the distinction between developer and user is often
+fuzzy; to the extent that the distinction can be made, the ratio of
+developers to users is usually much higher in the early days of the
+project than later on.  While you can't assume that every early
+adopter is a programmer who wants to hack on the software, you can
+assume that they are at least interested in following development
+discussions and in getting a sense of the project's direction.</p><p>As this chapter is only about getting a project started, it's
+enough merely to say that these communications forums need to exist.
+Later, in <a class="xref" href="ch06s05.html" title="Handling Growth">the section called “Handling Growth”</a><span> in
+<a class="xref" href="ch06.html" title="Chapter 6. Communications">Chapter 6, <em>Communications</em></a></span>, we'll examine where
+and how to set up such forums, the ways in which they might need
+moderation or other management, and how to separate user forums from
+developer forums, when the time comes, without creating an
+unbridgeable gulf.</p></div><div class="sect2" title="Developer Guidelines"><div class="titlepage"><div><div><h2 class="title"><a id="developer-guidelines"/>Developer Guidelines</h2></div></div></div><p>If someone is considering contributing to the project, she'll
+look for developer guidelines.  Developer guidelines are not so much
+technical as social: they explain how the developers interact with
+each other and with the users, and ultimately how things get
+done.</p><p>This topic is covered in detail in
+<a class="xref" href="ch04s04.html" title="Writing It All Down">the section called “Writing It All Down”</a><span> in
+<a class="xref" href="ch04.html" title="Chapter 4. Social and Political Infrastructure">Chapter 4, <em>Social and Political Infrastructure</em></a></span>, but the basic
+elements of developer guidelines are:
+
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>pointers to forums for interaction with other
+            developers</p></li><li class="listitem"><p>instructions on how to report bugs and submit
+            patches</p></li><li class="listitem"><p>some indication of <span class="emphasis"><em>how</em></span>
+            development is usually done and how decisions are
+            made — is the project a benevolent dictatorship, a
+            democracy, or something else</p></li></ul></div><p>
+
+No pejorative sense is intended by "dictatorship", by the way.  It's
+perfectly okay to run a tyranny where one particular developer has
+veto power over all changes.  Many successful projects work this way.
+The important thing is that the project come right out and say so.  A
+tyranny pretending to be a democracy will turn people off; a tyranny
+that says it's a tyranny will do fine as long as the tyrant is
+competent and trusted.  (See <a class="xref" href="ch04.html#forkability" title="Forkability">the section called “Forkability”</a><span> in <a class="xref" href="ch04.html" title="Chapter 4. Social and Political Infrastructure">Chapter 4, <em>Social and Political Infrastructure</em></a></span>
+for why dictatorship in open source projects doesn't have the same
+implications as dictatorship in other areas of life.)</p><p><a class="ulink" href="http://subversion.apache.org/docs/community-guide/">http://subversion.apache.org/docs/community-guide/</a>
+is an example of particularly thorough developer guidelines; the
+LibreOffice guidelines at <a class="ulink" href="https://wiki.documentfoundation.org/Development">https://wiki.documentfoundation.org/Development</a> are also a good
+example.</p><p>If the project has a written Code of Conduct (see <a class="xref" href="ch02s03.html#code-of-conduct" title="Codes of Conduct">the section called “Codes of Conduct”</a>), then the developer guidelines should
+link to it.</p><p>The separate issue of providing a programmer's introduction to
+the software is discussed in <a class="xref" href="ch02.html#developer-documentation" title="Developer Documentation">the section called “Developer Documentation”</a><span>
+later in this chapter</span>.</p></div><div class="sect2" title="Documentation"><div class="titlepage"><div><div><h2 class="title"><a id="documentation"/>Documentation</h2></div></div></div><p>Documentation is essential.  There needs to be
+<span class="emphasis"><em>something</em></span> for people to read, even if it's
+rudimentary and incomplete.  This falls squarely into the "drudgery"
+category referred to earlier, and is often the first area where a new
+open source project falls down.  Coming up with a mission statement
+and feature list, choosing a license, summarizing development
+status — these are all relatively small tasks, which can be
+definitively completed and usually need not be revisited once done.
+Documentation, on the other hand, is never really finished, which may
+be one reason people sometimes delay starting it at all.</p><p>The most insidious thing is that documentation's utility to
+those writing it is the reverse of its utility to those who will read
+it.  The most important documentation for initial users is the basics:
+how to quickly set up the software, an overview of how it works,
+perhaps some guides to doing common tasks.  Yet these are exactly the
+things the <span class="emphasis"><em>writers</em></span> of the documentation know all
+too well — so well that it can be difficult for them to see
+things from the reader's point of view, and to laboriously spell out
+the steps that (to the writers) seem so obvious as to be unworthy of
+mention.</p><p>There's no magic solution to this problem.  Someone just needs
+to sit down and write the stuff, and then, most importantly,
+incorporate feedback from readers.  Use a simple, easy-to-edit format
+such as HTML, plain text, Markdown, ReStructuredText, or some
+variant of XML — something that's convenient for lightweight,
+quick improvements on the spur of the moment<sup>[<a id="idm563" href="#ftn.idm563" class="footnote">19</a>]</sup>.  This is not only to remove any
+overhead that might impede the original writers from making
+incremental improvements, but also for those who join the project
+later and want to work on the documentation.</p><p>One way to ensure basic initial documentation gets done is to
+limit its scope in advance.  That way, writing it at least won't feel
+like an open-ended task.  A good rule of thumb is that it should meet
+the following minimal criteria:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Tell the reader clearly how much technical
+            expertise they're expected to have.</p></li><li class="listitem"><p>Describe clearly and thoroughly how to set up
+            the software, and somewhere near the beginning of the
+            documentation, tell the user how to run some sort of
+            diagnostic test or simple command to confirm that
+            they've set things up correctly.  Startup
+            documentation is in some ways more important than
+            actual usage documentation.  The more effort someone has
+            invested in installing and getting started with the
+            software, the more persistent she'll be in figuring out
+            advanced functionality that's not well-documented.
+            When people abandon, they abandon early; therefore,
+            it's the earliest stages, like installation, that need
+            the most support.</p></li><li class="listitem"><p>Give one tutorial-style example of how to do a
+            common task.  Obviously, many examples for many tasks
+            would be even better, but if time is limited, pick one
+            task and walk through it thoroughly.  Once someone
+            sees that the software <span class="emphasis"><em>can</em></span> be
+            used for one thing, they'll start to explore what else
+            it can do on their own — and, if you're lucky,
+            start filling in the documentation themselves.  Which
+            brings us to the next point...</p></li><li class="listitem"><p>Label the areas where the documentation is known
+            to be incomplete.  By showing the readers that you are
+            aware of its deficiencies, you align yourself with
+            their point of view.  Your empathy reassures them that
+            they don't face a struggle to convince the project of
+            what's important.  These labels needn't represent
+            promises to fill in the gaps by any particular date
+            — it's equally legitimate to treat them as open
+            requests for help.</p></li></ul></div><p>The last point is of wider importance, actually, and can be
+applied to the entire project, not just the documentation.  An
+accurate accounting of known deficiencies is the norm in the open
+source world.  You don't have to exaggerate the project's
+shortcomings, just identify them scrupulously and dispassionately when
+the context calls for it (whether in the documentation, in the bug
+tracking database, or on a mailing list discussion).  No one will
+treat this as defeatism on the part of the project, nor as a
+commitment to solve the problems by a certain date, unless the project
+makes such a commitment explicitly.  Since anyone who uses the
+software will discover the deficiencies for themselves, it's much
+better for them to be psychologically prepared — then the
+project will look like it has a solid knowledge of how it's
+doing.</p><div class="sidebar" title="Maintaining a FAQ"><a id="faq-maintenance"/><div class="titlepage"><div><div><p class="title"><strong>Maintaining a FAQ</strong></p></div></div></div><a id="starting-a-faq"/><p>A <em class="firstterm">FAQ</em> ("Frequently Asked Questions"
+  document) can be one of the best investments a project makes in
+  terms of educational payoff.  FAQs are highly tuned to the questions
+  users and developers actually ask — as opposed to the questions
+  you might have <span class="emphasis"><em>expected</em></span> them to ask — and
+  therefore, a well-maintained FAQ tends to give those who consult it
+  exactly what they're looking for.  The FAQ is often the first place
+  users look when they encounter a problem, often even in preference
+  to the official manual, and it's probably the document in your
+  project most likely to be linked to from other sites.</p><p>Unfortunately, you cannot make the FAQ at the start of the
+  project.  Good FAQs are not written, they are grown.  They are by
+  definition reactive documents, evolving over time in response to
+  the questions people ask about the software.  Since it's impossible
+  to correctly anticipate those questions, it is impossible to sit
+  down and write a useful FAQ from scratch.</p><p>Therefore, don't waste your time trying to.  You may, however,
+  find it useful to set up a mostly blank FAQ template with just a few
+  questions and answers, so there will
+  be an obvious place for people to contribute questions and answers
+  after the project is under way.  At this stage, the most important
+  property is not completeness, but <span class="emphasis"><em>convenience</em></span>:
+  if the FAQ is easy to
+  add to, people will add to it.  (Proper FAQ maintenance is a
+  non-trivial and intriguing problem: see <a class="xref" href="ch08s02.html#manager-is-not-owner" title="&quot;Manager&quot; Does Not Mean &quot;Owner&quot;">the section called “"Manager" Does Not Mean "Owner"”</a><span> in
+  <a class="xref" href="ch08.html" title="Chapter 8. Managing Participants">Chapter 8, <em>Managing Participants</em></a></span>,
+  <a class="xref" href="ch03s08.html" title="Q&amp;A Forums">the section called “Q&amp;A Forums”</a><span> in
+  <a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span>, and <a class="xref" href="ch06s05.html#all-as-archives" title="Treat All Resources Like Archives">the section called “Treat All Resources Like Archives”</a><span> in <a class="xref" href="ch06.html" title="Chapter 6. Communications">Chapter 6, <em>Communications</em></a></span>.)</p></div><div class="sect3" title="Availability of Documentation"><div class="titlepage"><div><div><h3 class="title"><a id="documentation-availability"/>Availability of Documentation</h3></div></div></div><p>Documentation should be available from two places: online
+(directly from the web site), <span class="emphasis"><em>and</em></span> in the
+downloadable distribution of the software (see
+<a class="xref" href="ch07s04.html" title="Packaging">the section called “Packaging”</a><span> in
+<a class="xref" href="ch07.html" title="Chapter 7. Packaging, Releasing, and Daily Development">Chapter 7, <em>Packaging, Releasing, and Daily Development</em></a></span>).  It needs to be
+online, in browsable form, because people often read documentation
+<span class="emphasis"><em>before</em></span> downloading software for the first time,
+as a way of helping them decide whether to download at all.  But it
+should also accompany the software, on the principle that downloading
+should supply (i.e., make locally accessible) everything one needs to
+use the package.</p><p>For online documentation, make sure that there is a link that
+brings up the <span class="emphasis"><em>entire</em></span> documentation in one HTML
+page (put a note like "monolithic" or "all-in-one" or "single large
+page" next to the link, so people know that it might take a while to
+load).  This is useful because people often want to search for a
+specific word or phrase across the entire documentation.  Generally,
+they already know what they're looking for; they just can't remember
+what section it's in.  For such people, nothing is more frustrating
+than encountering one HTML page for the table of contents, then a
+different page for the introduction, then a different page for
+installation instructions, etc.  When the pages are broken up like
+that, their browser's search function is useless.  The separate-page
+style is useful for those who already know what section they need, or
+who want to read the entire documentation from front to back in
+sequence.  But this is not necessarily the most common way
+documentation is accessed.  Often, someone who is basically
+familiar with the software is coming back to search for a specific
+word or phrase, and to fail to provide them with a single, searchable
+document would only make their lives harder.</p></div><div class="sect3" title="Developer Documentation"><div class="titlepage"><div><div><h3 class="title"><a id="developer-documentation"/>Developer Documentation</h3></div></div></div><p>Developer documentation is written by programmers to help other
+programmers
+understand the code, so they can repair and extend it.  This is
+somewhat different from the <span class="emphasis"><em>developer guidelines</em></span>
+discussed earlier, which are more social than technical.  Developer
+guidelines tell programmers how to get along with each other;
+developer documentation tells them how to get along with the code
+itself.  The two are often packaged together in one document for
+convenience (as with the <a class="ulink" href="http://subversion.apache.org/docs/community-guide/">http://subversion.apache.org/docs/community-guide/</a> example given
+earlier), but they don't have to be.</p><p>Although developer documentation can be very helpful, there's no
+reason to delay a release to do it.  As long as the original authors
+are available (and willing) to answer questions about the code, that's
+enough to start with.  In fact, having to answer the same questions
+over and over is a common motivation for writing documentation.  But
+even before it's written, determined contributors will still manage to
+find their way around the code.  The force that drives people to spend
+time learning a codebase is that the code does something useful for
+them.  If people have faith in that, they will take the time to figure
+things out; if they don't have that faith, no amount of developer
+documentation will get or keep them.</p><p>So if you have time to write documentation for only one
+audience, write it for users.  All user documentation is, in effect,
+developer documentation as well; any programmer who's going to work on
+a piece of software will need to be familiar with how to use it too.
+Later, when you see programmers asking the same questions over and
+over, take the time to write up some separate documents just for
+them.</p><p>Some projects use wikis for their initial documentation, or even
+as their primary documentation.  In my experience, this works best
+if the wiki is actively maintained by a few people who agree on how
+the documentation is to be organized and what sort of "voice" it
+should have.  See
+<a class="xref" href="ch03s07.html" title="Wikis">the section called “Wikis”</a><span> in
+<a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span> for
+more.</p><p>If the infrastructure aspects of documentation workflow seem
+daunting, consider using <a class="ulink" href="https://readthedocs.org/">https://readthedocs.org/</a>.  Many projects now depend on it to automate
+the process of presenting their documentation online.  The site takes
+care of format conversion, integration with the project's version
+control repository (so that documentation rebuilds happen
+automatically), and various other mundane tasks, so that you and your
+contributors can focus on content.</p></div></div><div class="sect2" title="Demos, Screenshots, Videos, and Example Output"><div class="titlepage"><div><div><h2 class="title"><a id="examples-and-demos"/>Demos, Screenshots, Videos, and Example Output</h2></div></div></div><a id="example-output"/><a id="screenshots"/><p>If the project involves a graphical user interface, or if it
+produces graphical or otherwise distinctive output, put some samples
+up on the project web site.  In the case of interface, this means
+screenshots or, better yet, a brief (4 minutes or fewer) video with
+subtitles or a narrator.  For output, it might be screenshots or just
+sample files to download.  For web-based software, the gold standard
+is a demo site, of course, assuming the software is amenable to
+that.</p><p>The main thing is to cater to people's desire for instant
+gratification in the way they are most likely to expect.  A single
+screenshot or video can be more convincing than paragraphs of
+descriptive text and mailing list chatter, because it is proof
+that the software <span class="emphasis"><em>works</em></span>.  The code may still be
+buggy, it may be hard to install, it may be incompletely documented,
+but image-based evidence shows people that if one puts in enough effort,
+one can get it to run.</p><div class="sidebar" title="Keep Videos Brief, and Say They're Brief"><a id="video-brevity"/><div class="titlepage"><div><div><p class="title"><strong>Keep Videos Brief, and <span class="emphasis"><em>Say</em></span> They're
+  Brief</strong></p></div></div></div><p>If you have a video demonstration of your project, keep the
+  video under 4 minutes long, and make sure people can see the
+  duration <span class="emphasis"><em>before</em></span> they click on it.  This is in
+  keeping with the "principle of scaled presentation" mentioned
+  earlier: you want to make the decision to watch the video an easy
+  one, by removing all the risk.  Visitors are more likely to click on
+  a link that says "Watch our 3 minute video" than on one that just
+  says "Watch our video", because in the former case they know what
+  they're getting into before they click — and they'll
+  watch it better, because they've mentally prepared the necessary
+  amount of commitment beforehand, and so won't tire mid-way
+  through.</p><p>As to where the four-minute limit came from: it's a scientific
+  fact, determined through many attempts by the same experimental
+  subject (who shall remain unnamed) to watch project videos.  The
+  limit does not apply to tutorials or other instructional material,
+  of course; it's just for introductory videos.</p><p>In case you don't already have preferred software for
+  recording desktop interaction videos: If you use the GNOME 3 desktop
+  manager, you can use its built-in screen recording capability (see
+  <a class="ulink" href="https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast">https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en#screencast</a> — essentially,
+  do
+  <span class="keycap"><strong>Ctl</strong></span>+<span class="keycap"><strong>Alt</strong></span>+<span class="keycap"><strong>Shift</strong></span>+<span class="keycap"><strong>R</strong></span>
+  to start recording, and then do
+  <span class="keycap"><strong>Ctl</strong></span>+<span class="keycap"><strong>Alt</strong></span>+<span class="keycap"><strong>Shift</strong></span>+<span class="keycap"><strong>R</strong></span>
+  again to stop).  There are many open source video editors; <code class="filename">OpenShot</code>
+  has been fine for post-capture editing in my experience.</p></div></div><p>There are many other things you could put on the project web
+site, if you have the time, or if for one reason or another they are
+especially appropriate: a news page, a project history page, a related
+links page, a site-search feature, a donations link, etc.  None of
+these are necessities at startup time, but keep them in mind for the
+future.</p><div class="sect2" title="Hosting"><div class="titlepage"><div><div><h2 class="title"><a id="hosting"/>Hosting</h2></div></div></div><a id="starting-with-canned-hosting"/><p>Where on the Internet should you put the project's materials?</p><p>A web site, obviously — but the full answer
+is a little more complicated than that.</p><p>Many projects distinguish between their primary public user-facing
+web site — the one with the pretty pictures and the
+"About" page and the gentle introductions and videos and guided tours
+and all that stuff — and their developers' site, where
+everything's grungy and full of closely-spaced text in monospace fonts
+and impenetrable abbreviations.</p><p>Well, I exaggerate.  A bit.  In any case, in the early stages of
+your project it is not so important to distinguish between these two
+audiences.  Most of the interested visitors you get will be
+developers, or at least people who are comfortable trying out new
+code.  Over time, you may find it makes sense to have a user-facing
+site (of course, if your project is a code library, those "users"
+might be other programmers) and a somewhat separate collaboration area
+for those interested in participating in development.  The
+collaboration site would have the code repository, bug tracker,
+development wiki, links to development mailing lists, etc.  The two
+sites should link to each other, and in particular it's important that
+the user-facing site make it clear that the project is open source and
+where the open source development activity can be
+found.</p><p>In the past, many projects set up the developer site and
+infrastructure themselves.  Over the last decade or so, however, most
+open source projects — and almost all the new
+ones — just use one of the "canned hosting" sites that
+have sprung up to offer these services for free to open source
+projects.  By far the most popular such site, as of early 2018,
+is GitHub (<a class="ulink" href="https://github.com/">https://github.com/</a>), and
+if you don't have a strong preference about where to host, you should
+probably just choose GitHub; Many developers are already familiar with
+it and have personal accounts there.  See <a class="xref" href="ch03s02.html#canned-hosting" title="Canned Hosting">the section called “Canned Hosting”</a><span> in <a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span> for a more detailed
+discussion of the questions to consider when choosing a canned hosting
+site and for an overview of the most popular ones.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm369" href="#idm369" class="para">13</a>] </sup>The importance of
+            top-level domain names seems to be declining.  A number of
+            projects now have just their name in the
+            <code class="systemitem">.io</code> TLD, for example, and don't
+            bother with <code class="systemitem">.com</code>,
+            <code class="systemitem">.net</code>, or
+            <code class="systemitem">.org</code>.  I can't predict what the
+            brand psychology of domain names will be in the future, so
+            just use your judgement, and if you can get the name in
+            all the important TLDs, do so.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm384" href="#idm384" class="para">14</a>] </sup>They didn't manage to get gnome.com or gnome.net,
+but that's okay — if you only have one, and it's .org,
+it's fine.  That's usually the first one people look for when they're
+seeking the open source project of that name.  If they couldn't get
+"gnome.org" itself, a typical solution would be to get
+"gnomeproject.org" instead, and many projects solve the problem that
+way.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm388" href="#idm388" class="para">15</a>] </sup><a class="ulink" href="https://identi.ca/">https://identi.ca/</a> is an open source microblog / social
+networking that a number of free software developers use.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm392" href="#idm392" class="para">16</a>] </sup>While the master copy of Gnome's source code
+is at <a class="ulink" href="https://git.gnome.org/">https://git.gnome.org/</a>, they
+maintain a mirror at GitHub, since so many developers are already
+familiar with GitHub</p></div><div class="footnote"><p><sup>[<a id="ftn.idm498" href="#idm498" class="para">17</a>] </sup>Although GitHub is
+based on Git, a popular open source version control system, the code
+that runs GitHub's web services is not itself open source.  Whether
+this matters for your project is a complex question, and is addressed
+in more depth in <a class="xref" href="ch03s02.html#canned-hosting" title="Canned Hosting">the section called “Canned Hosting”</a><span> in <a class="xref" href="ch03.html" title="Chapter 3. Technical Infrastructure">Chapter 3, <em>Technical Infrastructure</em></a></span></p></div><div class="footnote"><p><sup>[<a id="ftn.idm510" href="#idm510" class="para">18</a>] </sup>For a more thorough argument that bug reports
+should be treated as good news, see <a class="ulink" href="http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/">http://www.rants.org/2010/01/10/bugs-users-and-tech-debt/</a>,
+which is about how the accumulation of bug reports does
+<span class="emphasis"><em>not</em></span> represent technical debt (in the sense of
+<a class="ulink" href="https://en.wikipedia.org/wiki/Technical_debt">https://en.wikipedia.org/wiki/Technical_debt</a>) but rather
+user engagement.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm563" href="#idm563" class="para">19</a>] </sup>Don't
+worry too much about choosing the right format the first time.  If you
+change your mind later, you can always do an automated conversion
+using <a class="ulink" href="http://johnmacfarlane.net/pandoc/">http://johnmacfarlane.net/pandoc/</a>.</p></div></div></div></body></html>

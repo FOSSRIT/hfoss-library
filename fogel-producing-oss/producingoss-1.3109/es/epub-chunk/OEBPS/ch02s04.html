@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Anunciando</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Anunciando"><div class="titlepage"><div><div><h1 class="title"><a id="announcing"/>Anunciando</h1></div></div></div><p>Una vez que el proyecto está presentable—no perfecto,
+sólo presentable—se está listo para anunciarlo al mundo.</p><p>Este es un proceso tan simple como se podría esperar. Hay dos
+tipos de foros para hacer anuncios: foros genéricos que muestran un
+flujo constante de nuevos anuncios de proyectos, y foros sobre temas
+específicos donde su proyecto sería una noticia apropiada.</p><p>El lugar genérico más útil es probablemente <a class="ulink" href="http://freecode.com/">freecode.com</a> — simplemente haga clic en el
+enlace <span class="guimenuitem">Enviar nuevo proyecto</span> en la barra
+de navegación superior. La lista los nuevos proyectos de Freecode está
+incrustado en la página principal de la popular <a class="ulink" href="http://slashdot.org/">Slashdot.org</a>, lo cual significa
+que es probable que alguien interesado lo note y ayude a difundir la
+noticia de boca en boca. (Ten en cuenta que Freecode era conocido como
+Freshmeat.net hasta que fue rebautizado en octubre de 2011) También
+puede ser que desee registrar su proyecto en <a class="ulink" href="http://OhLoh.net/">OhLoh.net</a>, que es lo más cercano que
+hay a una base de datos mundial integrada de proyectos de software
+libre y sus colaboradores. (Algunos proyectos también suben con
+éxito el árbol del boca a boca y votos positivos hasta el punto en que
+se presentan en la página principal de <a class="ulink" href="http://news.ycombinator.com/">news.ycombinator.com</a>, uno
+de los foros subreddit relacionados con <a class="ulink" href="http://www.reddit.com/r/technology/">reddit.com/r/technology/</a>, o alguna página pública similar que
+sea popular. Aunque es una buena noticia para tu proyecto si puedes
+conseguir ser mencionado en un lugar como ese, me niego a contribuir
+a la carrera armamentista del marketing al sugerir alguna medida
+concreta para lograr esto. Utilice su juicio y evite hacer spam.)</p><p>Los foros sobre temas específicos son, probablemente, donde se
+obtendrá el máximo interés. Piensa en las listas de correo o frums
+web donde el anuncio de tu proyecto sea un tema a tratar y sea de
+interés — es posible que ya seas miembro de alguna
+de ellos — y publícalo allí. Ten el cuidado de hacer
+exactamente <span class="emphasis"><em>un</em></span> mensaje por cada foro, y de
+dirigir a la gente a las propias áreas de discusión de tu proyecto
+para continuar la discusión (al publicar por correo electrónico,
+puedes hacer esto mediante el establecimiento de la
+cabecera <code class="systemitem">Reply-To</code>). Tu anuncio debe ser
+corto y dejar claro el punto, y la línea de asunto debe dejar en claro
+que se trata de un anuncio de un nuevo proyecto:</p><pre class="screen">
+
+To: discusion@algun.foro.sobre.indexadores
+Subject: [ANUNCIO] Scanley, un nuevo proyecto de indexado full-text
+Reply-to: dev@scanley.org
+
+Este es un sólo mensaje para anunciar la creación del proyecto
+Scanley, un indexador y buscador de texto open source con
+un extenso API para el uso de programadores quienes desean
+crear servicios de búsqueda en grandes colecciones de
+ficheros de texto. Scanley ejecuta, está siendo desarrollado
+activamente y buscamos nuevos desarrolladores y testers.
+
+Sitio Web: http://www.scanley.org/
+
+Características:
+   - Busca texto plano, HTML y XML
+   - Búsqueda de palabras o frases
+   - (planeado) Búsquedas difusas
+   - (planeado) Actualización incremental de los índices
+   - (planeado) Indexación de sitios web remotos
+   - (planeado) Lectura de la mente a largas distancia
+
+Requerimientos:
+   - Python 3.2 o mayor
+   - SQLite 3.8.1 o mayor
+
+Para más información, ¡visitanos en scanley.org!
+
+Gracias,
+-J. Random
+</pre><p>(Más información <a class="xref" href="ch06s06.html" title="Publicidad">“Publicidad”</a><span>
+en <a class="xref" href="ch06.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <em>Comunicaciones</em></a></span> para consejos sobre como
+anunciar lanzamientos subsiguientes y otros eventos.)</p><p>Existe un debate en el mundo del software libre sobre si es
+necesario empezar con código funcional o si el proyecto puede
+empezar a beneficiarse de ser abierto aun cuando está en la fase de diseño y discusión.
+Solía pensar que empezar con código funcional era el factor más importante,
+que esto es lo que separaba proyectos exitosos de los juguetes y que
+solo desarrolladores serios se verían atraídos que hacia algo
+concreto ya.</p><p>Esto resulto no ser del todo cierto. En el proyecto Subversion,
+empezamos con un documento de diseño, un núcleo de desarrolladores
+interesados e interconectados, mucha fanfarria y <span class="emphasis"><em>nada</em></span>
+de código funcional. Para mi completa sorpresa, el proyecto recibió
+participantes activos desde el principio y para el momento en que
+teníamos algo funcional ya habían unos cuantos desarrolladores
+voluntarios involucrados profundamente. Subversion no es el único
+ejemplo; el proyecto Mozilla también fue iniciado sin código
+funcional y ahora es un navegador exitoso y popular.</p><p>En vista de ésta evidencia debo retirar mi afirmación sobre que
+es necesario tener código funcional para lanzar un proyecto. EL código
+funcional sigue siendo la mejor base para el éxito y una buena regla
+del pulgar sería esperar a tener el código antes de anunciar el proyecto
+<sup>[<a id="idm839" href="#ftn.idm839" class="footnote">24</a>]</sup>.
+Por otra parte, pueden haber circunstancias cuando un anuncio temprano
+puede tener sentido. Si creo que al menos un documento de diseño bien
+desarrollado o algún otro tipo de marco de trabajo, es necesario—
+claro que puede ser modificado en base a las respuestas publicas, pero
+debe haber algo tangible, en el que las personas puedan hincar sus dientes.
+</p><p>Cuando sea que se anuncie un proyecto, no hay que esperar una horda
+de voluntarios listos para unirse inmediatamente. Usualmente, el resultado
+de anunciar es que se obtiene algunas preguntas casuales, algunas otras
+personas se unen a la lista de correos y aparte de esto, todo continua
+como antes. Pero con el tiempo, podréis notar un incremento gradual en
+la participación tanto de usuarios como de nuevo código de voluntarios.
+Anunciar es solo plantar una semilla, puede tomar un largo tiempo para
+que la noticia se extienda. Si el proyecto recompensa constantemente
+a quienes se involucran, las noticias se extenderán, pues la gente
+desea compartir algo cuando han encontrado algo bueno. Si todo va bien,
+la dinámica de las redes exponenciales de comunicación lentamente
+transformaran el proyecto en una compleja comunidad donde no se conoce
+el nombre de todos y no se puede seguir cada una de las conversaciones.
+Los próximos capítulos son acerca de como trabajar en éste ambiente.</p><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm839" href="#idm839" class="para">24</a>] </sup>Ten en cuenta que <span class="emphasis"><em>el anuncio</em></span>
+tu proyecto puede venir mucho después de que has abierto el código
+fuente. Mi consejo de considerar cuidadosamente el tiempo de su
+anuncio no debe ser tomado como consejo para retrasar la liberación del
+código fuente — idealmente, tu proyecto debe ser de
+código abierto y visible públicamente desde el primer momento de su
+existencia, y esto es totalmente independiente de si lo anuncias. Ver
+<a class="xref" href="ch02s03.html#be-open-from-day-one" title="Se abierto desde el primer día">“Se abierto desde el primer día”</a> para más.</p></div></div></div></body></html>

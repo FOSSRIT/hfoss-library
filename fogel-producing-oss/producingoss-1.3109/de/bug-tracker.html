@@ -1,0 +1,289 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Bugtracker</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="prev" href="vc.html" title="Versionsverwaltung"><link rel="next" href="irc.html" title="IRC / Echtzeit-Nachrichtendienste"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Bugtracker</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="vc.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Technische Infrastruktur</th><td width="20%" align="right"> <a accesskey="n" href="irc.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Bugtracker"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="bug-tracker"></a>Bugtracker</h2></div></div></div><p>Bugtracking ist ein weites Feld, von dem viele Aspekte im 
+Verlauf dieses Buchs besprochen werden. Ich werde versuchen, mich hier
+auf Einrichtung und technische Erwägungen zu konzentrieren. 
+Zuvor müssen wir jedoch eine politische Frage stellen: 
+Welche Informationen sollen im Bugtracker gehalten werden?</p><p>Der Begriff <em class="firstterm">Bugtracker</em> ist irreführend.
+Diese Systeme werden häufig auch verwendet, um Anfragen für neue 
+Funktionen, einmalige Aufgaben, unaufgeforderte Patches &#8211; im
+Prinzip alles zu verfolgen (engl. to track), was einen eindeutigen 
+Anfangs- und Endzustand sowie optionale Übergangszuständen hat und
+über dessen Lebenszyklus Informationen anfallen. Aus diesem Grund 
+haben Bugtracker auch häufig Namen<sup>[<a name="idp4802592" href="#ftn.idp4802592" class="footnote">30</a>]</sup> wie <em class="firstterm">Issue 
+Tracker</em>, <em class="firstterm">Defect 
+Tracker</em>, <em class="firstterm">Artifact Tracker</em>, 
+<em class="firstterm">Request Tracker</em>, <em class="firstterm">Trouble Ticket 
+System</em>, usw. Eine Liste verfügbarer Software finden Sie im
+Anhang <a class="xref" href="bug-trackers.html" title="Anhang B. Freie Bugtracker">Anhang B, <i>Freie Bugtracker</i></a>.</p><p>In diesem Buch werde ich weiterhin "Bugtracker" für Software 
+benutzen, die jegliche der vorher erwähnten Angelegenheiten verfolgt, 
+da es weithin so bezeichnet wird, ein einzelnes Element in der 
+Datenbank des Bugtracker werde ich jedoch als 
+<em class="firstterm">Ticket</em> (im engl. auch "issue") bezeichnen. So 
+können wir zwischen Verhalten oder Fehlverhalten unterscheiden, die ein
+Nutzer beobachtet hat, (also einen Fehler) und die 
+<span class="emphasis"><em>Erfassung</em></span> seiner Entdeckung, Diagnose und Lösung 
+im Tracker. Behalten Sie im Hinterkopf, dass auch wenn es bei den 
+meisten Tickets um Fehler handelt, sie auch benutzt werden können um 
+andere Aufgaben zu verfolgen.</p><p>Der klassische Verlauf eines Tickets sieht wie folgt aus:
+
+</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Jemand reicht das Ticket ein. Sie machen eine 
+            Zusammenfassung, eine anfängliche Beschreibung 
+            (einschließlich dessen wie man den Fehler reproduziert, falls 
+            anwendbar, siehe <a class="xref" href="managing-volunteers.html#users-to-volunteers" title="Behandeln Sie jeden Nutzer wie einen möglichen Freiwilligen">&#8222;Behandeln Sie jeden Nutzer wie einen möglichen Freiwilligen&#8220;</a><span> 
+            im Kapitel <a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span> 
+            in der beschrieben wird, wie man gute Bug-Meldungen fördert
+            ermutigen kann), und sonstige Informationen. die der Tracker
+            verlangt. Die Person die den Fehler meldet, kann dem 
+            Projekt völlig unbekannt sein &#8211; Bug-Meldungen und 
+            Anfragen für Funktion können genau so aus der 
+            Nutzer-Gemeinschaft kommen, wie von den Entwicklern.</p><p>Sobald das Ticket gemeldet wurde sagt man, dass es 
+            <em class="firstterm">offen</em> ist. Da bisher nichts 
+            unternommen wurde, kennzeichnen manche Tracker diese auch
+            als <em class="firstterm">unbestätigt</em> (engl. "unverified")
+            oder <em class="firstterm">nicht angefangen</em> (engl. 
+            "unstarted"). Er wurde noch niemandem zugewiesen; oder, 
+            in manchen Systemen, wird es einem fiktiven Benutzer 
+            zugewiesen um anzudeuten, dass es nicht wirklich jemandem 
+            zugewiesen wurde. Zu diesem Zeitpunkt steht es in einer
+            Warteschlange: Das Ticket wurde erfasst, ist jedoch nicht 
+            im Bewusstsein des Projekts aufgenommen.</p></li><li class="listitem"><p>Andere lesen den Ticket, sie fügen Kommentare hinzu,
+            und bitten vielleicht dem Meldenden einige Punkte zu 
+            klären.</p></li><li class="listitem"><p>Der Fehler wird <em class="firstterm">reproduziert</em>.
+            Dieser Augenblick mag der Wichtigste in seinem 
+            Lebenszyklus sein. Auch wenn der Bug noch nicht behoben 
+            wurde ist die Tatsache, dass jemand außer dem der ihn 
+            gemeldet hat, es geschafft hat selbst den Fehler zu finden.
+            Dies beweist, dass der Bug valide ist und bestätigt nicht 
+            zuletzt den Berichtenden, dass sie durch die Meldung
+            eines echten Fehlers etwas zum Projekt beigetragen 
+            haben.</p></li><li class="listitem"><p>Der Fehler wird <em class="firstterm">untersucht</em>: 
+            seine Ursache wird identifiziert und wenn möglich, wird 
+            der nötige Aufwand geschätzt um ihn zu beheben. Stellen Sie
+            sicher, dass diese Sachen in dem Ticket erfasst werden; 
+            wenn die Person die den Bug untersucht hat, plötzlich eine
+            längere Zeit vom Projekt wegtreten muss (was bei 
+            freiwilligen Entwicklern häufig passieren kann), sollte 
+            jemand anders in der Lage sein, seine Arbeit wieder 
+            aufzunehmen.</p><p>In dieser Phase oder manchmal schon vorher, kann ein
+            Entwickler das Ticket in Besitz nehmen, und es sich
+            selber <em class="firstterm">zuweisen</em> (In
+            <a class="xref" href="managing-volunteers.html#delegation-assignment" title="Unterscheiden Sie eindeutig zwischen Anfrage und Anweisung">&#8222;Unterscheiden Sie eindeutig zwischen Anfrage und Anweisung&#8220;</a><span> im Kapitel
+            <a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span> wird der
+            diese Zuweisung genauer untersucht. Die
+            <em class="firstterm">Priorität</em> kann in dieser Phase auch
+            bestimmt werden. Wenn er z.B. derart schwerwiegend ist,
+            dass er die nächste Version verzögern würde, muss diese
+            Tatsache frühzeitig erkannt werden und der Tracker sollte
+            eine Möglichkeit bieten das zu erfassen.</p></li><li class="listitem"><p>Es wird geplant wann das Ticket aufgelöst werden
+            soll, wobei dabei nicht unbedingt ein bestimmtes Datum
+            gemeint ist an dem es behoben sein soll. Manchmal bedeutet
+            es einfach ein Entscheiden bis zu welcher Version (nicht 
+            unbedingt die Nächste) der Bug behoben sein soll, oder 
+            dass er keine bestimmte Version blockieren muss. Wenn der 
+            Bug schnell behoben werden kann, ist die Planung
+            wahrscheinlich überflüssig.
+	</p></li><li class="listitem"><p>Der Bug wird behoben (oder die Aufgabe wird erledigt,
+            oder der Patch angewandt, oder was auch immer). Die 
+            Änderung die ihn beheben sollten in einem Kommentar des
+            Tickets protokolliert werden, worauf er 
+            <em class="firstterm">geschlossen</em> wird und/oder als 
+            <em class="firstterm">gelöst</em> markiert wird.
+	</p></li></ol></div><p>
+
+</p><p>Dieser Lebenszyklus variiert häufig. Manchmal wird ein Ticket
+frühzeitig nach seiner Meldung geschlossen, da sich herausstellt, dass
+es sich nicht um einen Fehler handelt, sondern um ein Missverständnis
+seitens des Anwenders. Sowie ein Projekt immer mehr Benutzer aufnimmt,
+werden immer mehr dieser ungültigen Tickets aufkommen und Entwickler 
+werden sie zunehmend gereizt schließen. Versuchen Sie der letzteren
+Neigung entgegenzuwirken. Sie hilft keinem, da der einzelne Nutzer in
+jedem Einzelfall nicht für alle vorhergehenden ungültigen Tickets
+verantwortlich ist; die statistische Zunahmen ist lediglich für die
+Entwickler sichtbar, nicht für die Nutzer. (In
+<a class="xref" href="bug-tracker.html#bug-filtering" title="Vor-Filterung des Bugtrackers">&#8222;Vor-Filterung des Bugtrackers&#8220;</a><span> später in 
+diesem Kapitel,</span> werden wir die Methoden untersuchen, um die 
+Anzahl der ungültigen Tickets zu verringern). Wenn verschiedene Nutzer
+immer wieder dasselbe Missverständnis haben, kann das ein Hinweis 
+sein, dass ein bestimmter Bereich der Software überdacht werden muss.
+Diese Muster können am einfachsten von einem Ticket-Verwalter bemerkt
+werden, der die Bug-Datenbank überwacht; siehe 
+<a class="xref" href="share-management.html#issue-manager" title="Ticketverwalter">&#8222;Ticketverwalter&#8220;</a><span> im Kapitel 
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span>.</p><p>Eine weitere häufige Abweichung zu diesem Lebenszyklus ist, dass
+das Ticket als <em class="firstterm">Duplikat</em> gleich nach dem ersten
+Schritt geschlossen wird. Ein Duplikat erscheint wenn jemand ein Ticket
+meldet der dem Projekt bereits bekannt ist. Duplikate beschränken sich 
+nicht auf offene Tickets: Es ist auch möglich, dass ein Bug 
+wiederkehrt, nachdem er behoben wurde (auch als 
+<em class="firstterm">Regression</em> bekannt). In solchen Fällen öffnet
+man Vorzugsweise wieder das ursprüngliche Ticket und alle neuen 
+Meldungen werden als Duplikate des Originals geschlossen. Der 
+Bugtracker sollte diese Beziehung in beiden Richtungen verfolgen 
+können, um Informationen wie man den Bug reproduziert dem 
+ursprünglichen Ticket verfügbar zu machen und umgekehrt.</p><p>Eine dritte Variante ist, dass Entwickler ein Ticket schließen,
+in der Annahme, der Fehler wurde bereits behoben, was der Meldende
+allerdings abweist und es erneut öffnet. Meistens geschieht das, 
+wenn die Entwickler nicht die nötige Umgebung haben, um den Fehler zu 
+reproduzieren oder nicht mit genau derselben Anleitung zur 
+Reproduktion beim Testen genutzt haben wie der Meldende.</p><p>Abgesehen von diesen Abweichungen, kann es andere kleine Details
+im Lebenszyklus geben, die sich abhängig von der Software des 
+Bugtrackers unterscheiden. Die grundsätzliche Form ist jedoch bei
+allen die gleiche, und obwohl der Lebenszyklus nicht eigen zu 
+Open-Source-Software ist, hat es Auswirkungen darauf wie 
+Open-Source-Projekte ihre Bugtracker benutzen.</p><p>Wie der erste Schritt andeutet, bietet ein Bugtracker der 
+Öffentlichkeit genau so sehr ein Bild des Projekts wie seine Mailinglisten
+oder seine Webseite. Jeder kann ein Ticket aufmachen, jeder kann
+sich ein Ticket anschauen und jeder kann die Liste der offenen Tickets
+anschauen. Daraus folgt, dass Sie niemals wissen können, wieviele Leute
+darauf warten, Fortschritte für ein bestimmtes Ticket zu sehen. 
+Auch wenn die Größe und Erfahrung der Entwicklergemeinschaft die 
+Geschwindigkeit einschränken kann, mit der Tickets abgearbeitet 
+werden, sollte das Projekt zumindest versuchen, jedes Ticket gleich
+nach seiner Meldung zu bestätigen. Selbst wenn es eine Weile lang 
+liegen bleibt, ermutigt eine Reaktion dem Melder gegenüber, sich weiterhin
+an seiner Lösung zu beteiligen, da er das Gefühl bekommt, dass ein Mensch
+sich seiner Mühe bewusst ist (bedenken Sie, dass ein Ticket aufzumachen
+für gewöhnlich einen größeren Aufwand bedeutet, als sagen wir eine 
+E-Mail zu schreiben). Desweiteren tritt das Ticket, sobald es von 
+einem Entwickler bemerkt wird, in das Bewusstsein des Projekts, womit 
+gemeint ist, dass dieser Entwickler darauf achten kann, ob das Ticket
+an anderer Stelle irgendwo auftaucht, mit anderen Entwicklern darüber 
+reden kann, usw.</p><p>Die Notwendigkeit zeitnaher Reaktionen, impliziert zweierlei:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Der Tracker muss mit einer Mailingliste verbunden sein,
+    damit jede Änderung an einem Ticket, inklusive seine erste Meldung,
+    eine E-Mail erzeugt die beschreibt was passiert ist. Diese 
+    Liste ist normalerweise eine andere als die gewöhnliche 
+    Entwickler-Liste, da nicht alle Entwickler automatisierte Bug-Mails 
+    empfangen wollen, der Reply-to-Header sollte aber (genau 
+    wie bei Commit-Mails) auf die Entwickler-Liste 
+    weisen.</p></li><li class="listitem"><p>Das Formular um Tickets zu melden sollte die E-Mail-Adresse
+    der Berichterstatter erfassen, damit sie für weitere Informationen 
+    erreicht werden können. (Die E-Mail-Adresse sollte jedoch nicht 
+    <span class="emphasis"><em>erzwungen</em></span> werden, da manche Leute es 
+    vorziehen, Fehler anonym zu melden. Siehe 
+    <a class="xref" href="web-site.html#anonymity" title="Anonymität und Beteiligung">&#8222;Anonymität und Beteiligung&#8220;</a><span> später in 
+    diesem Kapitel</span> in dem die Bedeutung von Anonymität 
+    behandelt wird.)</p></li></ul></div><p>
+
+</p><div class="sect2" title="Interaktion mit Mailinglisten"><div class="titlepage"><div><div><h3 class="title"><a name="bug-tracker-mailing-list-interaction"></a>Interaktion mit Mailinglisten</h3></div></div></div><p>Sorgen Sie dafür, dass der Bugtracker nicht zu einem
+Diskussionsforum wird. Obwohl die menschliche Mitwirkung im 
+Bugtracker wichtig ist, ist er nicht wirklich für Diskussionen
+geeignet. Betrachten Sie ihn eher als Archiv, eine Möglichkeit 
+Tatsachen und Verweise auf andere Diskussionen zu organisieren, die
+hauptsächlich auf Mailinglisten stattfinden.</p><p>Es gibt Zwei Gründe diese Unterscheidung zu machen. Erstens ist
+die Bedienung des Bugtrackers umständlicher als die einer Mailingliste
+(oder, wo wir gerade dabei sind, IRC oder andere Echtzeit-Foren). Das liegt 
+nicht an der schlechten Benutzeroberfläche im Bugtracker, sondern an
+seiner Ausrichtung auf die Erfassung und Darstellung getrennter 
+Zustände und nicht auf offene Diskussionen. Zweitens beobachtet nicht 
+jeder den Bugtracker, der auch an der Diskussion eines Tickets 
+beteiligt sein sollte. Ein Teil guter Ticker-Verwaltung (siehe 
+<a class="xref" href="share-management.html" title="Teilen sie sowohl Verwaltungsaufgaben als auch technische Aufgaben">&#8222;Teilen sie sowohl Verwaltungsaufgaben als auch technische
+Aufgaben&#8220;</a><span> im Kapitel
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span>) besteht darin 
+sicherzustellen, dass jedes Ticket eher die Aufmerksamkeit der 
+richtigen Leute erhält, als dass jeder Entwickler über jedes Ticket
+Beischeid wissen muss. In
+<a class="xref" href="bug-tracker-usage.html" title="Keine Unterhaltungen im Bugtracker">&#8222;Keine Unterhaltungen im Bugtracker&#8220;</a><span> im Kapitel
+<a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a>,</span> werden wir Wege untersuchen,
+Benutzer davon abzuhalten, versehentlich Diskussionen von den ihnen
+angemessenen Foren auf den Bugtracker auszulagern.</p><p>Manche Bugtracker können Mailinglisten überwachen und 
+automatisch alle E-Mails protokollieren, die sich um ein bekanntes
+Ticket drehen. Typischerweise erkennen sie das anhand der 
+Identifikationsnummer des Tickets in der Betreffzeile der E-Mail, als 
+Teil einer bestimmten Zeichenfolge; Entwickler lernen diese 
+Zeichenfolgen in ihren E-Mails zu benutzen, um die Aufmerksamkeit des 
+Bugtrackers anzulocken. Der Tracker kann entweder die E-Mail als 
+ganzes speichern oder (besser noch) einen Link zu dem Archiv der
+Liste. So oder so ist diese Funktion sehr nützlich; wenn Ihr 
+Tracker sie hat, sollten Sie sie unbedingt einschalten und Teilnehmer
+erinnern sie zu nutzen.</p></div><div class="sect2" title="Vor-Filterung des Bugtrackers"><div class="titlepage"><div><div><h3 class="title"><a name="bug-filtering"></a>Vor-Filterung des Bugtrackers</h3></div></div></div><p>Die meisten Bugtracker leiden irgendwann an demselben Problem: 
+Eine erstickende Anzahl doppelter oder ungültiger Einträge die
+mit guter Absicht, aber von unerfahrenen oder schlecht informierten
+Nutzern gemeldet werden. Der erste Schritt dieser Entwicklung 
+entgegenzuwirken ist üblicherweise, einen deutlichen Hinweis auf 
+der Hauptseite des Bugtrackers anzubringen, der erklärt woran man 
+erkennen kann, ob ein Bug wirklich ein Bug ist, wie man nach bereits
+gemeldete Fehler suchen kann und letztendlich, wie man seine 
+Meldung effektiv gestaltet, wenn man immer noch der Meinung ist,
+dass sie einen neuen Bug beinhaltet.</p><p>Der Geräuschpegel sollte danach eine Weile reduziert sein, sowie
+die Anzahl der Nutzer zunimmt, wird das Problem jedoch wiederkehren. 
+Kein einzelner Nutzer ist daran Schuld. Jeder versucht nur zum Wohl 
+des Projekts beizutragen und auch wenn ihre erste Meldung nicht 
+hilfreich ist, sollten Sie dennoch dazu ermutigen sich weiterhin zu 
+beteiligen und zukünftig bessere Tickets zu schreiben. In der 
+Zwischenzeit muss das Projekt die Ticket-Datenbank so frei von Müll 
+halten wie möglich.</p><p>Die zwei größten Abhilfen sind: Sicherzustellen, dass Leute den 
+Bugtracker beobachten, die genügend wissen um ungültige oder doppelte
+Tickets gleich nach ihrer Meldung zu schließen und von Nutzern 
+erfordern (oder nachdrücklich dazu anregen) ihre Bugs von anderen 
+bestätigen zu lassen bevor sie eine Meldung im Tracker eintragen.</p><p>Die erste Methode scheint universelle Anwendung zu finden. Selbst
+Projekte mit riesigen Ticket-Datenbanken (wie der Debian-Bugtracker
+bei <a class="ulink" href="http://bugs.debian.org/" target="_top">http://bugs.debian.org/</a>, mit 315,929 Tickets zum
+Zeitpunkt dieses Schreibens) organisieren sich so, dass
+<span class="emphasis"><em>irgendjemand</em></span> jedes eintreffende Ticket sieht. Es
+können verschiedene Personen sein, abhängig von der Kategorie des
+Tickets. Das Debian-Projekt ist z.B. eine Sammlung verschiedener
+Software-Pakete, also leitet Debian automatisch jedes Ticket an die
+entsprechend Zuständigen für das Paket. Natürlich kann es manchmal 
+vorkommen, dass Nutzer ein Ticket falsch einordnen mit dem Ergebnis, 
+dass das Ticket zunächst an die falsche Person geleitet wird die es
+dann möglicherweise wieder umleiten muss. Wichtig dabei ist, dass 
+diese Last trotzdem verteilt wird &#8211; ob der Nutzer beim Ausfüllen
+des Formulars richtig oder falsch rät, die Beobachtung der Tickets
+sollte dennoch mehr oder weniger gleichmäßig auf die Entwickler 
+aufgeteilt sein, damit jedes Ticket eine zeitige Antwort erhalten 
+kann.</p><p>Die zweite Technik ist weniger verbreitet, wahrscheinlich da
+sie sich schwerer automatisieren lässt. Der Grundgedanke ist jedem
+Ticket einen "Buddy" zuzuordnen. Wenn ein Nutzer denkt er hat ein
+Problem gefunden, wird er darum gebeten, es auf einer der Mailinglisten
+oder im IRC zu beschreiben und sich von jemandem bestätigen
+zu lassen, dass es sich auch wirklich um einen Bug handelt. Ein zweites
+Augenpaar frühzeitig einzubeziehen kann viele störende Meldungen
+verhindern. Manchmal kann die zweite Partei erkennen, dass das 
+Verhalten kein Fehler ist, oder dass er in einer neuen Version 
+behoben wurde. Sie kann auch mit den Symptomen aus einem früheren
+Ticket vertraut sein und einen doppelten Eintrag verhindern, indem sie
+den Nutzer auf das ältere Ticket hinweist. Oftmals reicht es auch
+den Nutzer zu fragen, "Haben Sie im Bugtracker geschaut ob er bereits 
+gemeldet wurde?" Viele denken einfach nicht daran, haben jedoch kein 
+Problem es zu tun wenn sie wissen, dass jemand es von ihnen 
+<span class="emphasis"><em>erwartet</em></span>.</p><p>Das Buddy-System kann die Ticket-Datenbank wirklich sauber
+halten, hat aber auch einige Nachteile. Viele machen trotzdem alleine
+Meldungen, entweder weil sie die Anweisungen, sich für neue Tickets
+einen Buddy zu suchen, nicht sehen oder ignorieren. Von daher 
+ist es immer noch nötig, die Ticket-Datenbank von Freiwilligen 
+überwachen zu lassen. Desweiteren ist es nicht gerechtfertigt, sie für
+ihre Ignoranz gegenüber den Richtlinien allzusehr zurechtzuweisen, da 
+die meisten die ihre erste Meldung machen, nicht verstehen wie schwer 
+es ist, die Ticket-Datenbank in Stand zu halten. Die Freiwilligen 
+müssen deshalb wachsam sein und dennoch Zurückhaltung üben wenn sie 
+Tickets ohne einen Buddy wieder an seinen Autor zurückweisen. Das Ziel
+ist jedem beizubringen, dass er zukünftig das Buddy-System verwenden
+soll, um eine wachsende Gemeinschaft entstehen zu lassen, die das 
+Filter-System für die Tickets verstehen. Bei der Sichtung eines Tickets
+ohne einen Buddy ist dies das idealisierte Vorgehen:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Antworten Sie sofort auf das Ticket, bedanken Sie sich bei
+          dem Nutzer für die Meldung, weisen Sie dabei aber auf die
+          Buddy-Richtlinien (die natürlich auf der Webseite deutlich
+          dargestellt sein sollten).</p></li><li class="listitem"><p>Falls das Ticket eindeutig gültig und kein Duplikat ist, 
+          bestätigen Sie es und und starten den normalen Lebenszyklus.
+          So ist der Berichterstatter über die Zuordnung informiert und es
+          gibt keinen Grund die investierte Arbeit zu verschwenden, indem
+          man einen gültigen Bug wegen eines Formfehlers schließt.</p></li><li class="listitem"><p>Wenn andererseits das Ticket nicht klar berechtigt ist,
+          schließen Sie es und bitten Sie den Autor darum, ihn 
+          wiederzueröffnen, sobald er eine Buddy-Bestätigung bekommt,
+          dann jedoch zusammen mit einem Verweis auf den Thread der
+          Mailingliste, der die Bestätigung enthält (z.B. per URL in
+          das Archiv der Mailingliste).</p></li></ol></div><p>Denken Sie daran, obwohl dieses System mit der Zeit das
+Signal-/Rauschverhältnis in der Ticket-Datenbank verbessern wird, es 
+niemals alle Falschmeldungen unterbinden kann. Der einzige Weg 
+Falschmeldungen komplett zu verhindern, ist den Bugtracker komplett
+für alle außer die Entwickler abzuschalten &#8211; eine Medizin die
+meistens schlimmer ist als die Krankheit. Es ist besser sich damit
+abzufinden, dass die Entfernung ungültiger Tickets immer ein Teil der
+üblichen Wartungsarbeiten am Projekt bleiben wird und so viele Leute
+wie möglich dazu zu überreden, dabei zu helfen.</p><p>Siehe auch
+<a class="xref" href="share-management.html#issue-manager" title="Ticketverwalter">&#8222;Ticketverwalter&#8220;</a><span> im Kapitel 
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span>.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp4802592" href="#idp4802592" class="para">30</a>] </sup>Im Deutschen Raum
+sind die Begriffe <em class="firstterm">Bugtracker</em> und 
+<em class="firstterm">Ticket-System</em> am weitesten 
+verbreitet.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="vc.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="irc.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Versionsverwaltung </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> IRC / Echtzeit-Nachrichtendienste</td></tr></table></div></body></html>

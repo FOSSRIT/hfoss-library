@@ -1,0 +1,69 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Appendice B. Bug Tracker Liberi</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="index.html" title="Produrre Software Open Source"><link rel="prev" href="vc-systems.html" title="Appendice A. Sistemi di Controllo di Versione Liberi"><link rel="next" href="bikeshed-full.html" title="Appendice C. Perchè dovrebbe importarmi di che colore sia la rastrelliera?"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Appendice B. Bug Tracker Liberi</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="vc-systems.html">Indietro</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="bikeshed-full.html">Avanti</a></td></tr></table><hr></div><div class="appendix" title="Appendice B. Bug Tracker Liberi"><div class="titlepage"><div><div><h2 class="title"><a name="bug-trackers"></a>Appendice B. Bug Tracker Liberi</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Non importa quale bug tracker il progetto usi, ad alcuni sviluppatori piace sempre
+lamentarsene. Questo sembra essere più vero nei bug tracker che in ogni altro strumento
+di sviluppo standard. Pensa che sia perchè i bug tracker sono così visuali e così interattivi
+che è facile immaginare i miglioramenti che uno farebbe (se solo ne avesse il tempo), e di descrivere
+ad alta voce i miglioramenti. Prendete le inevitabili lamentele cum grano salis&#8212;molti
+dei bug tracker in seguito sono abbastanza buoni.</p><p>Lungo questo elenco, la parola "problema" [orig. "issue", ndt] è usata per riferirsi
+a cosa trova il tracker. Ma ricordate che ogni sistema può avere la sua peculiare terminologia.
+in cui il corrispondente termine potrebbe essere "artefatto"["artifact"] o "baco" ["bug"] o qualcos'altro.</p><div class="sect2" title="Bugzilla &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-bugzilla"></a><span class="bold"><strong>Bugzilla</strong></span> &#8212; <a class="ulink" href="http://www.bugzilla.org/" target="_top">http://www.bugzilla.org/</a></h3></div></div></div><p>Bugzilla è molto conosciuto, attivamente mantenuto,
+e sembra rendere gli utenti abbastanza felici. Ne ho usato una variante modificata
+nel mio lavoro per quattro anni ormai, e mi piace. Non è altamente personalizzabile, ma
+in un modo strano, che può essere una delle sue funzionalità: le installazioni di Bugzilla
+tendono a sembrare abbanstanza simili ovunque le si trovi, il che significa che molti sviluppatori
+sono già abituati alla sua interfaccia e si sentiranno di essere in territorio familiare.</p></div><div class="sect2" title="GNATS &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-gnats"></a><span class="bold"><strong>GNATS</strong></span> &#8212; <a class="ulink" href="http://www.gnu.org/software/gnats/" target="_top">http://www.gnu.org/software/gnats/</a></h3></div></div></div><p>GNU GNATS è uno dei più vecchi bug tracker open source, ed è ampiamente usato. I suoi punti di 
+forza sono la diversità di interfaccia (può essere usato non solo attraverso un browser, ma anche in
+strumenti email e linea di comando), e memorizzazione dei problemi come plaintext. Il fatto che
+tutti i dati dei problemi sono memorizzati in file di testo su disk rende più facile scrivere strumenti
+personalizzati per pescare e gestire i dati (per esempio, per generare rapporti statistici). GNATS
+può anche assorbire le email in modo automatico in vari modi, e può aggiungerle ai problemi appropriati basandosi
+su pattern nell'intestazione della email, che rende la memorizzazione delle conversazioni utente/sviluppatore 
+molto facile.</p></div><div class="sect2" title="RequestTracker (RT) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-rt"></a><span class="bold"><strong>RequestTracker (RT)</strong></span> &#8212; <a class="ulink" href="http://www.bestpractical.com/rt/" target="_top">http://www.bestpractical.com/rt/</a></h3></div></div></div><p>Il sito web di RT dice "RT è un sistema di segnalazione di livello enterprise che permette
+ad un gruppo di persone di gestire compiti, problemi, e richieste sottomesse
+da una comunità di utenti in modo intelligente ed efficiente," e questo riassume abbastanza.
+RT ha una interfaccia web abbastanza pulita, e sembra avere un base di installazione abbastanza
+vasta. L'interfaccia è un po' troppo visualmente complessa, ma diventa meno distraente quando 
+vi ci abituate. RT ha licenza GNU GPL (per qualche ragione, il loro sito web non lo dice chiaramente).</p></div><div class="sect2" title="Trac &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-trac"></a><span class="bold"><strong>Trac</strong></span> &#8212; <a class="ulink" href="http://trac.edgewall.com/" target="_top">http://trac.edgewall.com/</a></h3></div></div></div><p>Trac è un po' di più di un bug tracker: è veramente un sistema con wiki integrata e bug tracker.
+Usa i collegamenti tra wiki per mettere in relazione problemi, file, insiemi di modifiche di controllo
+di versione, e pagine wiki normali. E' abbastanza semplici da tirare su, e si integra con Subversion 
+(vedi <a class="xref" href="vc-systems.html" title="Appendice A. Sistemi di Controllo di Versione Liberi">Appendice A, <i>Sistemi di Controllo di Versione Liberi</i></a>).</p></div><div class="sect2" title="Roundup &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-roundup"></a><span class="bold"><strong>Roundup</strong></span> &#8212; <a class="ulink" href="http://roundup.sourceforge.net/" target="_top">http://roundup.sourceforge.net/</a></h3></div></div></div><p>Roundup è molto facile da installare (è richiesto solo Python 2.1 o superiore)
+e facile da usare. Ha interfacce web, email e linea di comando. I template dei dati dei problemi
+e l'interfaccia web sono personalizzabili, così come una parte della sua logica di transizione di
+stati.</p></div><div class="sect2" title="Mantis &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-mantis"></a><span class="bold"><strong>Mantis</strong></span> &#8212; <a class="ulink" href="http://www.mantisbt.org/" target="_top">http://www.mantisbt.org/</a></h3></div></div></div><p>Mantis è un sistema di bug tracker basato su web, scritto in PHP, che usa il database
+MySQL per la memorizzazione. Ha le funzionalità che vi aspettereste. Personalmente, trovo
+l'interfaccia web pulita, intuitiva, e gradevole agli occhi.</p></div><div class="sect2" title="Flyspray &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-flyspray"></a><span class="bold"><strong>Flyspray</strong></span> &#8212; <a class="ulink" href="http://www.flyspray.org/" target="_top">http://www.flyspray.org/</a></h3></div></div></div><p>Flyspray è un sistema di bug tracker basato su web scritto in PHP. Le sue
+pagine web lo descrivono come "non complicato", e la lista di funzionalità include:
+supporto a diversi database (al momento (MySQL e PGSQL); progetti multipli; attività
+di monitoraggio, con notifica di cambiamenti (via email o Jabber); storia completa delle
+attività; temi CSS, allegati ai file, funzionalità avanzate di ricerca (anche facili da usare);
+feed RSS/Atom; wiki o semplice testo come input; votazioni; grafi di dipendenza.</p></div><div class="sect2" title="Scarab &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-scarab"></a><span class="bold"><strong>Scarab</strong></span> &#8212; <a class="ulink" href="http://scarab.tigris.org/" target="_top">http://scarab.tigris.org/</a></h3></div></div></div><p>Scarab è concepito per essere un bug tracker altamente personalizzabile, completamente
+accessoriato, che offre più o meno la somma delle funzionalità offerte dagli altri bug tracker:
+acquisizione dati, interrogazioni, rapporti, notifiche alle parti interessate, accumulo
+collaborativo dei commenti, e tracciamento delle dipendenze.</p><p>E' personalizzabile attraverso le pagine web di amministrazione. Potete avere "moduli" (progetti) multipli 
+attivi in una singola installazione di Scarab. All'interno di un dato modulo, potete creare nuovi tipi
+di problemi (difetti, soluzioni, attività, richieste di supporto, eccetera), e aggiungere attributi
+arbitrari, per regolare il tracker alle specifiche necessità del vostro progetto.</p><p>Nel tardo 2004, Scarab stava arrivando vicino alla sua release 1.0.</p></div><div class="sect2" title="Debian Bug Tracking System (DBTS) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-dbts"></a><span class="bold"><strong>Debian Bug Tracking System (DBTS)</strong></span> &#8212; <a class="ulink" href="http://www.chiark.greenend.org.uk/~ian/debbugs/" target="_top">http://www.chiark.greenend.org.uk/~ian/debbugs/</a></h3></div></div></div><p>Il sistema di tracciamento di bug di Debian è inusuale nel fatto che tutti gli input e le manipolazioni
+dei problemi sono fatti via email: ogni problema ha il suo indirizzo email dedicato. Il DBTS scala molto bene:
+<a class="ulink" href="http://bugs.debian.org/" target="_top">http://bugs.debian.org/</a> ha 277,741 problemi, per esempio.</p><p>Dato che l'interazione avviene attraverso normali client email, un ambiente che è familiare
+e facilmente accessibile alla maggior parte della gente, il DBTS va bene per trattare grandi volumi
+di segnalazioni in arrivo che hanno bisogno di una veloce classificazione e risposta.
+Ci sono anche degli svantaggi,certo. Gli sviluppatori devono investire il tempo necessario ad
+imparare il sistema di comandi email, e gli utenti devono scrivere le loro segnalazioni di bug
+senza un modello web a guidarli nella scelta dell'informazione da scrivere. Sono disponibili
+strumenti per aiutare gli utenti a mandare segnalazioni di bug migliori, come il programma da riga di comando
+ <span class="command"><strong>reportbug</strong></span> o il pacchetto per Emacs <code class="systemitem">debbugs-el</code>. Ma la
+ maggior parte delle persone non useranno questi strumenti; semplicemente scriveranno le email a mano, 
+ e potranno seguire o meno le linee guida per la segnalazione di bug pubblicate dal vostro progetto.</p><p>The DBTS ha una interfaccia web di sola lettura, per vedere e interrogare i problemi.</p></div><div class="sect2" title="Tracker di problemi e segnalazioni"><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-trouble-ticket-trackers"></a><span class="bold"><strong>Tracker di problemi e segnalazioni</strong></span></h3></div></div></div><p>Questi sono più orientati verso il tracciamento di segnalazioni di help desk piuttosto
+che al tracciamento di bug nel software. Probabilmente farete di meglio con un normale bug
+tracker, ma questi sono elencati per completezza, e perchè ci potrebbero essere progetti inusuali
+per cui un sistema di tracciamento di problemi e segnalazioni potrebbe essere più adeguato che 
+un bug tracker tradizionale.</p><p>
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>WebCall</strong></span> &#8212; <a class="ulink" href="http://myrapid.com/webcall/" target="_top">http://myrapid.com/webcall/</a></p></li><li class="listitem"><p><span class="bold"><strong>Teacup</strong></span> &#8212; <a class="ulink" href="http://www.altara.org/teacup.html" target="_top">http://www.altara.org/teacup.html</a></p><p>(Teacup non sembra essere più sotto attivo svilupo, ma i 
+            download sono tuttora disponibili. Da notare che ha interfaccia
+            sia web che email.)</p></li></ul></div><p>
+</p></div><div class="sect2" title="Bluetail Ticket Tracker (BTT) &#8212; "><div class="titlepage"><div><div><h3 class="title"><a name="bugtrackers-bluetail"></a><span class="bold"><strong>Bluetail Ticket Tracker (BTT)</strong></span> &#8212; <a class="ulink" href="http://btt.sourceforge.net/" target="_top">http://btt.sourceforge.net/</a></h3></div></div></div><p>BTT è qualcosa tra un tracker standard di problemi e un bug tracker.
+Offre funzionalità di privacy che sono qualcosa di inusuale tra i bug tracker open source:
+gli utenti del sistema sono classificati come Staff, Amico, Cliente, Anonimo, e più o meno dati
+sono disponibili a seconda della propria categoria. Offre un po' di integrazione email, una 
+interfaccia a riga di comando, e meccanismi per convertire email in segnalazioni. Ha anche funzionalità
+per mantenere informazione non associata con nessuna segnalazione specifica, come la documentazione
+interna o le FAQ [Frequently Asked Questions, domande poste di frequente; ndt].</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="vc-systems.html">Indietro</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="bikeshed-full.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Appendice A. Sistemi di Controllo di Versione Liberi </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> Appendice C. Perchè dovrebbe importarmi di che colore sia la rastrelliera?</td></tr></table></div></body></html>

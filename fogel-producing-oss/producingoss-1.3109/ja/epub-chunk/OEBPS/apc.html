@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>付録C フリーなバグ追跡システム</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="appendix" title="付録C フリーなバグ追跡システム"><div class="titlepage"><div><div><h1 class="title"><a id="bug-trackers"/>付録C フリーなバグ追跡システム</h1></div></div></div><div class="simplesect"><div class="titlepage"/><p>
+    プロジェクトでどのバグ追跡システムを採用していても、
+    文句を言う開発者は必ずいます。
+    この傾向は他の標準的な開発ツールよりも強いようです。
+    私は、バグ追跡システムが使う人の目に見えることと、
+    ユーザーと開発者がやりとりを双方向に行うツールであることから、
+    (時間があれば)改善したいと思う点が想像しやすいこと、
+    そしてそれを口に出して説明しやすいのが理由だと思っています。
+    こうした不平不満は話半分に聞いておきましょう —
+    以下に示すバグ追跡システムの多くはとても優れたソフトウェアです。
+</p><p>
+    以下の一覧では、バグ追跡システムが追跡するものとして「問題」という用語を使います。
+    しかし、それぞれのシステムは、
+    これに対応するものとして「欠陥」や「バグ」あるいは「チケット」などの独自の用語を使うこともあることに注意してください。
+</p><p>
+    <span class="emphasis"><em>
+        注意: この調査が最初に行われたのは 2005 年であり、
+        それ以降にもいくつか新たにオープンソースのバグ追跡システムが作られています。
+        2011 年後半に以下の記述を多少更新しましたが、調査自体の全体的な更新はできていません。
+        <a class="ulink" href="http://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems">Wikipedia での問題追跡システムの比較</a> や
+        <a class="ulink" href="http://www.dmoz.org/Computers/Software/Configuration_Management/Bug_Tracking/Free/">DMOZ によるバグ追跡システムの調査</a>、
+        <a class="ulink" href="http://ask.slashdot.org/story/12/07/12/1431210/ask-slashdot-how-do-you-track-bugs-for-personal-software-projects">Ask Slashdot: How do you track bugs for personal software projects?</a> の記事 (とコメント)、
+        あるいは
+        <a class="ulink" href="http://www.webresourcesdepot.com/9-free-and-open-source-bug-tracking-softwares/">WebResourcesDepot による一覧</a>
+        も参照ください。
+    </em></span>
+</p><div class="sect2" title="Redmine — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-redmine"/><span class="bold"><strong>Redmine</strong></span> — <a class="ulink" href="http://www.redmine.org/">http://www.redmine.org/</a></h2></div></div></div><p>
+    Redmine は (2011 年の時点で)、比較的最近に誕生した
+    非常に洗練されたプロジェクト管理システムです。
+    単なるバグ追跡システムにとどまらず、
+    Wiki やディスカッション用フォーラムなどの機能も備えています。
+    とはいえ、その主要な機能はやはりバグ管理でしょう。
+    極めて直感的なウェブベースのユーザーインターフェイス、柔軟な設定
+    (複数プロジェクトの管理やロールベースのアクセス制御、カスタムフィールドなど)、
+    ガントチャート、スケジュール調整、双方向のメールでのやりとりなどの機能を持っています。
+    新しいプロジェクトを立ち上げたときに何かバグ追跡システムが必要なら、
+    Redmine を選ぶとよいでしょう。
+</p></div><div class="sect2" title="Bugzilla — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-bugzilla"/><span class="bold"><strong>Bugzilla</strong></span> — <a class="ulink" href="http://www.bugzilla.org/">http://www.bugzilla.org/</a></h2></div></div></div><p>
+    Bugzilla はとても人気があり、活発に開発が行われていて、
+    ユーザーをとても満足させるソフトウェアのようです。
+    私はこれを改造したものを４年ほど使っていますが、満足しています。
+    Bugzilla は挙動を大きく変えられるわけではありませんが、奇妙なことに、
+    それがウリの一つでもあります。つまり、Bugzilla をインストールすると、
+    どこに行っても挙動や見た目が同じなのです。
+    これは多くの開発者がそのインターフェイスに既に慣れていて、
+    自分たちが親しんだ世界にいると感じるということです。
+</p></div><div class="sect2" title="GNATS — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-gnats"/><span class="bold"><strong>GNATS</strong></span> — <a class="ulink" href="http://www.gnu.org/software/gnats/">http://www.gnu.org/software/gnats/</a></h2></div></div></div><p>
+    GNU GNATS は、もっとも古いオープンソースなバグ追跡システムのうちのひとつであり、
+    広く使われています。もっとも大きな強みは、
+    インターフェイスが多様なこと (GNATS はウェブブラウザからだけでなく、
+    電子メールやコマンドライン経由でも使えます) と、
+    問題の情報がテキストで格納されることです。
+    全ての問題がテキストファイルでディスクに格納されるということは、
+    (統計レポートの生成のような)
+    データを走査したり解釈する独自のツールを書くのが簡単になるということです。
+    また、GNATS は電子メールを自動的にいろいろな手段で取り込むことができ、
+    電子メールのヘッダの形式に応じて、適切な問題に追加することができます。
+    これにより、ユーザーと開発者の対話がとても容易になります。
+</p></div><div class="sect2" title="RequestTracker (RT) — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-rt"/><span class="bold"><strong>RequestTracker (RT)</strong></span> — <a class="ulink" href="http://www.bestpractical.com/rt/">http://www.bestpractical.com/rt/</a></h2></div></div></div><p>
+    RT のウェブサイトはその概要として「企業レベルでも使えるチケットシステムで、
+    コミュニティーのユーザーが出してくる仕事や問題、要望を知的に、かつ効率的に管理できます」
+    と述べています。
+    RT は極めて洗練されたウェブインターフェイスを持ち、多くの環境にインストールできるようです。
+    インターフェイスはちょっと見た目複雑ですが、慣れれば気にならなくなるでしょう。
+    RT は GNU GPL でライセンスされています。(いくつか理由があって、
+    RT のウェブサイトではこのことを大っぴらには言っていないようです)
+</p></div><div class="sect2" title="Trac — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-trac"/><span class="bold"><strong>Trac</strong></span> — <a class="ulink" href="http://trac.edgewall.com/">http://trac.edgewall.com/</a></h2></div></div></div><p>
+    Trac はバグ追跡システム以上の役割を果たします。つまり、
+    Trac はバグ追跡システムと wiki が統合されたものです。
+    問題やファイル、バージョン管理の差分、そして wiki のページを結び付けながら wiki を使います。
+    Trac を使えるようにするための作業は簡単で、Subversion と統合されています。
+    (<a class="xref" href="apb.html" title="付録B フリーなバージョン管理システム">付録B <em>フリーなバージョン管理システム</em></a> も参照してください)
+</p></div><div class="sect2" title="Roundup — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-roundup"/><span class="bold"><strong>Roundup</strong></span> — <a class="ulink" href="http://roundup.sourceforge.net/">http://roundup.sourceforge.net/</a></h2></div></div></div><p>
+    Roundup はインストールがとても簡単
+    (必要なのはPython 2.1 以降だけです) で、使うのも容易です。
+    ウェブ、電子メール、コマンドラインのインターフェイスを持っています。
+    問題のデータの雛形と、ウェブのインターフェイスは変えられますし、
+    (保留中 → 診断済み → 修正済み → 完了 のような) 問題の状態遷移も変えられます。
+</p></div><div class="sect2" title="Mantis — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-mantis"/><span class="bold"><strong>Mantis</strong></span> — <a class="ulink" href="http://www.mantisbt.org/">http://www.mantisbt.org/</a></h2></div></div></div><p>
+    Mantis は、ウェブベースのバグ追跡システムで、PHPで書かれています。
+    そして、問題を格納する場所として、MySQL データベースを使います。
+    Mantis には、ユーザーが期待する機能が備わっています。個人的には、
+    ウェブインターフェイスが綺麗で、直感的で、見やすいと思っています。
+</p></div><div class="sect2" title="Flyspray — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-flyspray"/><span class="bold"><strong>Flyspray</strong></span> — <a class="ulink" href="http://www.flyspray.org/">http://www.flyspray.org/</a></h2></div></div></div><p>
+    Flyspray は、PHP で書かれたウェブベースのバグ追跡システムです。
+    Flyspray のウェブページには「複雑でない」と説明されていて、
+    次のような機能が含まれています: 複数のデータベースシステム
+    (現状は MySQL と PostgreSQL)のサポート、複数プロジェクトのサポート、
+    タスクを「見張る」機能、変更があれば (Jabber または電子メールで) 通知する機能、
+    タスクの履歴を包括的に見る機能、CSSによる外見の変更機能、ファイル添付機能、
+    高度な(使いやすい)検索機能、RSS/Atom フィード配信機能、
+    wiki とプレーンテキストによる入力機能、投票機能、タスクの依存グラフを表示する機能
+</p></div><div class="sect2" title="Scarab — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-scarab"/><span class="bold"><strong>Scarab</strong></span> — <a class="ulink" href="http://scarab.tigris.org/">http://scarab.tigris.org/</a></h2></div></div></div><p>
+    Scarab は多くの動作を変更でき、必要な機能がすべて揃ったバグ追跡システムで、
+    他のバグ追跡システムが提供している機能を多かれ少なかれ統合しています:
+    つまり、データ入力、問い合わせ、レポート、関心がある人々への通知、
+    コメントの収集、問題の依存グラフを表示する機能があります。
+</p><p>
+    Scarab は、ウェブ上の管理ページで動作を変更することができます。
+    複数の「モジュール(プロジェクト)」をひとつの Scarab で管理できます。
+    ひとつのモジュールで、問題の種類 (欠陥、機能追加、タスク、サポート要望など)
+    を新しく作ることができ、それに任意の属性を追加できます。こうすることで、
+    プロジェクトの特定の要求にバグ追跡システムを適応させることができます。
+</p><p>
+    2004 年の後半には、バージョン 1.0 のリリースが間近でした。
+</p></div><div class="sect2" title="Debian Bug Tracking System (DBTS) — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-dbts"/><span class="bold"><strong>Debian Bug Tracking System (DBTS)</strong></span> — <a class="ulink" href="http://www.chiark.greenend.org.uk/~ian/debbugs/">http://www.chiark.greenend.org.uk/~ian/debbugs/</a></h2></div></div></div><p>
+    Debian バグ追跡システム (DBTS) は、
+    問題の入力と管理すべてを電子メール経由で行うところが独特です。
+    つまり、すべての問題には専用の電子メールアドレスが割り当てられます。
+    DBTS は大規模化してもとてもうまくいきます。
+    たとえば、<a class="ulink" href="http://bugs.debian.org/">http://bugs.debian.org/</a> には 277,741件のバグが登録されています<sup>[<a id="idm3634" href="#ftn.idm3634" class="footnote">46</a>]</sup>。
+</p><p>
+    やりとりは普通の電子メールクライアントで行います。つまり、
+    ほとんどの人に馴染みがあり、簡単に使える環境で行うということです。
+    DBTS はたくさんの量の報告を素早く整理し、
+    応答しなければならない状況下で優れています。もちろん、欠点もあります。
+    開発者は電子メールのコマンドシステムを学ぶのに時間を使わなければいけませんし、
+    ユーザーは、どんな情報を書くべきかを選ぶガイドとなるウェブ上のフォームなしで
+    バグレポートを書かなければなりません。
+    Emacs 向けの <code class="systemitem">debbugs-el</code> パッケージ や、
+    <span class="command"><strong>reportbug</strong></span> コマンド のような、
+    ユーザーによりよいバグレポートを送ってもらうためのツールも利用できます。
+    しかし、ほとんどのユーザーはこれらのツールを使いません。
+    彼らは電子メールを手動で書くだけですし、
+    プロジェクトのバグ報告に関するガイドラインに従う人もいれば、従わない人もいるからです。
+</p><p>
+    DBTS は問題を参照したり、検索する目的であれば、
+    ブラウザで見ることができますが、読み取り専用になっています。
+</p></div><div class="sect2" title="Trouble-Ticket Trackers"><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-trouble-ticket-trackers"/><span class="bold"><strong>Trouble-Ticket Trackers</strong></span></h2></div></div></div><p>
+    ここに挙げる一連のソフトは、ソフトウェアのバグを追跡することよりは、
+    ヘルプデスクにあがってきた報告を追跡することを重視しています。
+    普通のバグ追跡システムの方が多分うまくいくでしょう。
+    しかし、これらは完全を期すために挙げておきます。
+    また、ひょっとしたら、
+    伝統的なバグ追跡システムよりはこうしたシステムの方がよく合う、
+    風変わりなプロジェクトがあるかもしれないからです。
+</p><p>
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p><span class="bold"><strong>WebCall</strong></span> — <a class="ulink" href="http://myrapid.com/webcall/">http://myrapid.com/webcall/</a></p></li></ul></div><p>
+</p></div><div class="sect2" title="Bluetail Ticket Tracker (BTT) — "><div class="titlepage"><div><div><h2 class="title"><a id="bugtrackers-bluetail"/><span class="bold"><strong>Bluetail Ticket Tracker (BTT)</strong></span> — <a class="ulink" href="http://btt.sourceforge.net/">http://btt.sourceforge.net/</a></h2></div></div></div><p>
+    BTT は、トラブルをチケットとして管理するシステムと、
+    バグ追跡システムの中間に位置するものです。
+    BTT は、オープンソースのバグ追跡システムの中では、
+    幾分変わったプライバシー機能を提供します。つまり、
+    BTT 内部のユーザーはスタッフ、友達、顧客、匿名ユーザーに分類され、
+    データは多かれ少なかれその分類に応じて表示されます。
+    電子メールとの統合や、コマンドラインインターフェイス、
+    そして電子メールをチケットに変換する仕組みも備えています。
+    また、チケットとは関係ない情報、たとえば内部文書や FAQ を管理する仕組みもあります。
+</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm3634" href="#idm3634" class="para">46</a>] </sup>この数は原著出版当時(2005年)のものと思われる。2009年3月現在では、登録されているバグの数は51万件を超えている</p></div></div></div></body></html>

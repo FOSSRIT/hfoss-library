@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>IRC / Sistemas de Chat en Tiempo Real</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="IRC / Sistemas de Chat en Tiempo Real"><div class="titlepage"><div><div><h1 class="title"><a id="irc"/>IRC / Sistemas de Chat en Tiempo Real</h1></div></div></div><p>Muchos proyectos ofrecen salas de chat utilizando <em class="firstterm">Internet
+Relay Chat</em> (<em class="firstterm">IRC</em>), foros donde los
+usuarios y desarrolladores pueden hacerse preguntas y obtener respuestas
+instantáneas. Mientras que se <span class="emphasis"><em>puede</em></span> llevar un
+servidor de IRC para nuestro sitio web, por lo general no vale la pena. En
+cambio podemos hacer lo que todo el mundo: crear canales de IRC en
+Freenode (<a class="ulink" href="http://freenode.net/">http://freenode.net/</a>). Freenode proporciona
+el control necesario para administrar los canales IRC del proyecto,
+<sup>[<a id="idm1507" href="#ftn.idm1507" class="footnote">31</a>]</sup>mientras que nos evita
+la molestia de tener que mantener un servidor de IRC.</p><p>Lo primero que hay que hacer es decidir un nombre para el canal. La
+opción más obvia es utilizar el nombre del proyecto—si es que se
+encuentra disponible en Freenode. Si no, se puede utilizar algo lo más
+parecido al nombre del proyecto y que sea en lo posible, fácil de recordar.
+Hay que publicitar la disponibilidad del canal en el sitio web del proyecto,
+de manera que un visitante con una duda pueda verlo rápidamente. Por ejemplo,
+esto aparece en un contenedor prominente en la parte de arriba de la página
+principal de Subversion:</p><p>La respuesta a todo esto es publicándolo en el <em class="firstterm">tópico
+del canal</em>.<sup>[<a id="idm1512" href="#ftn.idm1512" class="footnote">32</a>]</sup>
+El tópico del canal es un breve mensaje que ven todos los usuarios cuando
+entran en el canal. Da una guía rápida para los recién llegados y apunta a información
+necesaria. Por ejemplo:</p><pre class="screen">
+Ha entrado en #svn
+
+El tema para #svn es Foro para usuarios de Subversion. Más información en
+http://subversion.tigris.org/. || Las discusiones sobre el desarrollo
+están en #svn-dev. || Por favor, no pegue transcripciones muy largas,
+para ello utilice un sitio como http://pastebin.ca/ || Noticias:
+Subversion 1.1.0 ha salido, más en http://svn110.notlong.com/
+</pre><p>Es algo tosco, pero informa a quienes entran al canal lo que necesitan
+saber. Dice exactamente para lo que es el canal, muestra la página
+web del proyecto (en caso de que alguien entre al canal sin antes haber
+visitado el sitio web del proyecto), menciona canales relacionados y
+da algunas directivas sobre el pegado.</p><div class="sidebar" title="Sitios de pegado"><a id="paste-sites"/><div class="titlepage"><div><div><p class="title"><strong>Sitios de pegado</strong></p></div></div></div><p>Un canal de IRC es un espacio compartido: todos pueden ver lo que
+todos escriben. Normalmente esto es algo bueno, ya que permite que la
+gente entre en una conversación cuando creen que tienen algo para
+contribuir y permite a los espectadores aprender leyendo. Pero puede
+tornarse problemático cuando alguien suministra una gran cantidad
+de información a la vez, como la transcripción de una sesión de
+debugging, porque al pegar muchas lineas de texto en el canal
+se interrumpen las conversaciones de otros.</p><p>La solución a esto es el uso de los llamados sitios de pegado
+<em class="firstterm">pastebin</em> o <em class="firstterm">pastebot</em>.
+Al requerir una gran cantidad de datos de alguien, pida que no los pegue
+en el canal, sino que vayan a (por ejemplo) <a class="ulink" href="http://pastebin.ca">http://pastebin.ca</a>,
+peguen la información necesaria allí y suministren el nuevo URL resultante
+al canal de IRC. Así cualquiera puede visitar la URL y revisar los
+datos que allí se encuentran.</p><p>Existen muchos sitios gratuitos de pegado disponibles, demasiados
+para una lista comprensiva, pero aquí hay algunos que he utilizado:
+<a class="ulink" href="http://www.nomorepasting.com/">http://www.nomorepasting.com/</a>,
+<a class="ulink" href="http://pastebin.ca/">http://pastebin.ca/</a>,
+<a class="ulink" href="http://nopaste.php.cd/">http://nopaste.php.cd/</a>
+<a class="ulink" href="http://rafb.net/paste/">http://rafb.net/paste/</a>
+<a class="ulink" href="http://sourcepost.sytes.net/">http://sourcepost.sytes.net/</a>,
+<a class="ulink" href="http://extraball.sunsite.dk/notepad.php">http://extraball.sunsite.dk/notepad.php</a>,
+y
+<a class="ulink" href="http://www.pastebin.com/">http://www.pastebin.com/</a>.</p></div><div class="sect2" title="Bots de IRC"><div class="titlepage"><div><div><h2 class="title"><a id="irc-bots"/>Bots de IRC</h2></div></div></div><a id="bots"/><p>Muchos canales técnicos de IRC tienen un miembro no humano, un tal
+llamado <em class="firstterm">bot</em>, el cual es capaz de almacenar y 
+regurgitar información en respuesta a comandos específicos. El bot
+se parece a un miembro más del canal, esto es, los comandos se hacen llegar
+"hablándole" al bot. Por ejemplo:"</p><pre class="screen">
+&lt;kfogel&gt; ayita: learn diff-cmd = http://subversion.tigris.org/faq.html#diff-cmd
+&lt;ayita&gt;  Thanks!
+</pre><p>Esto le ha dicho al bot (el cual está en el canal como ayita)
+que recuerde cierto URL como la respuesta a la pregunta "diff-cmd". Ahora
+podemos dirigirnos a ayita pidiendole al bot que le diga a otro usuario
+acerca de diff-cmd:</p><pre class="screen">
+&lt;kfogel&gt; ayita: tell jrandom about diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>Lo mismo puede ser logrado con un comando más corto:</p><pre class="screen">
+&lt;kfogel&gt; !a jrandom diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>El conjunto exacto de comandos y conductas difieren entre bots. El
+ejemplo anterior utiliza <code class="literal">ayita</code>
+(<a class="ulink" href="http://hix.nu/svn-public/alexis/trunk/">http://hix.nu/svn-public/alexis/trunk/</a>), del cual
+existe una instancia en <code class="literal">#svn</code> en Freenode. Otros
+bots son Dancer
+(<a class="ulink" href="http://dancer.sourceforge.net/">http://dancer.sourceforge.net/</a>) y Supybot
+(<a class="ulink" href="http://supybot.com/">http://supybot.com/</a>). No son necesarios privilegios
+específicos en el servidor para ejecutar un bot. Un bot es un programa
+cliente; cualquiera puede fijar y dirigirlo para que escuche en un
+servidor/canal en particular.</p><p>Si el canal del proyecto tiende a recibir las mismas preguntas
+una y otra vez, recomiendo utilizar un bot. Sólo un pequeño porcentaje
+de usuarios del canal adquirirán la habilidad necesaria para manejar el
+bot, pero serán los que sí lo hagan quienes responderán a una cantidad
+desproporcionada de preguntas, porque el bot permite que sean respondidas
+con mayor eficiencia.</p><div class="sect3"><div class="titlepage"/><a id="cia"/></div></div><div class="sect2" title="Archivando IRC"><div class="titlepage"><div><div><h2 class="title"><a id="irc-archiving"/>Archivando IRC</h2></div></div></div><p>Aunque es posible archivar todo lo que sucede en los canales de
+IRC, no es algo necesario. Las conversaciones en IRC pueden ser
+públicas, por lo que muchas personas piensan en ellas como conversaciones
+informales semi-privadas. Los usuarios puede que no cuiden la gramática
+y a veces expresen opiniones (por ejemplo, acerca del software o sobre
+otros desarrolladores) que no querrán que sean preservadas eternamente
+en un archivo en línea.</p><p>Por supuesto que existen <span class="emphasis"><em>extractos</em></span> que deberían
+ser preservados. Muchos de los clientes de IRC pueden registrar conversaciones
+a un fichero bajo demanda por el usuario, o si esto falla, se puede
+copiar y pegar la conversación del IRC a otro foro permanente
+(a menudo, el bug tracker). Pero el registro indiscriminado puede incomodar
+a algunos usuarios. Si se archiva todo, hay que declararlo claramente en el
+tópico del canal y proporcionar una URL del archivo.</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm1507" href="#idm1507" class="para">31</a>] </sup>No es un requerimiento ni tampoco se espera ninguna donación
+a Freenode, pero si usted o el proyecto se lo pueden permitir, por favor
+considerelo. Son una caridad exenta de impuestos en EE.UU. y proveen
+de un servicio muy valioso.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm1512" href="#idm1512" class="para">32</a>] </sup>Para establecer el tópico del
+canal se utiliza el comando "<code class="literal">/topic</code>. Todos los comandos
+en IRC empiezan con el signo "<code class="literal">/</code>". Si no se está familiarizado
+con la utilización y administración de IRC id a <a class="ulink" href="http://www.irchelp.org">http://www.irchelp.org</a>.
+Hay un excelente tutorial en
+<a class="ulink" href="http://www.irchelp.org/irchelp/irctutorial.html">http://www.irchelp.org/irchelp/irctutorial.html</a>.</p></div></div></div></body></html>

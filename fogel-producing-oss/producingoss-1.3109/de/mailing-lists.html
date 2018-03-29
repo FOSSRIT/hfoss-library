@@ -1,0 +1,531 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Mailinglisten</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="prev" href="technical-infrastructure.html" title="Kapitel 3. Technische Infrastruktur"><link rel="next" href="vc.html" title="Versionsverwaltung"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Mailinglisten</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="technical-infrastructure.html">Zurück</a> </td><th width="60%" align="center">Kapitel 3. Technische Infrastruktur</th><td width="20%" align="right"> <a accesskey="n" href="vc.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Mailinglisten"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="mailing-lists"></a>Mailinglisten</h2></div></div></div><p>Mailinglisten sind im Projekt das tägliche Brot der 
+Kommunikation. Sieht der Nutzer irgend ein anderes Forum außer der 
+Webseite, wird es wahrscheinlich eine der Mailinglisten sein. Vorher
+werden sie sich aber mit der Anmeldung beschäftigen müssen. Das bringt 
+uns zur ersten Regel von Mailinglisten:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Versuchen Sie nicht, die Mailingliste händisch
+   zu verwalten &#8211; Besorgen Sie sich dazu die nötige 
+   Software.</em></span></p></blockquote></div><p>Es wird verlockend sein, diese Aufgabe hinauszuschieben. Am Anfang
+scheint es überflüssig diese Software einzurichten. Kleine Verteiler mit
+geringem Nachrichtenverkehr, scheinen verlockend einfach zu verwalten:
+Man richtet einfach eine Adresse für die Anmeldung ein, die Anmeldungen
+werden an Sie weiterleitet, worauf Sie seine Adresse in einer Text-Datei
+eintragen, indem alle Adressen enthalten sind. Was könnte einfacher 
+sein?</p><p>Es gibt allerdings einen Haken. Ein gut verwalteter Verteiler
+&#8211; was viele mittlerweile erwarten &#8211; ist alles andere als
+einfach. Es geht nicht nur darum Leute an- und abzumelden wenn sie eine
+entsprechende Anfrage stellen. Es geht u.a. darum Spam zu verhindern, 
+nicht einzelne Nachrichten, sondern Zusammenfassungen zu verteilen und 
+Informationen über den Verteiler und das Projekt mittels 
+automatisierter Antworten zu verschicken. Ein Mensch der die Adresse
+eines Verteilers beobachtet, bietet nur ein Mindestmaß an Funktionen,
+und selbst dann nicht so zuverlässig und schnell wie es eine Software
+könnte.</p><p>Moderne Mailinglisten-Software bietet für gewöhnlich
+mindestens folgende Funktionen:</p><div class="variablelist"><dl><dt><span class="term">Anmeldung sowohl per E-Mail als auch über die
+  Webseite.
+  </span></dt><dd><p>Wenn ein Nutzer sich bei der Mailingliste anmeldet, sollte er
+            <span class="emphasis"><em>umgehend</em></span> eine automatisierte 
+            Willkommensnachricht bekommen, in der beschrieben steht, 
+            wofür er sich angemeldet hat, wie man weiter mit der 
+            Mailingliste umgeht und (am wichtigsten) wie man sich 
+            abmeldet. Diese automatische E-Mail kann natürlich 
+            bearbeitet werden, um projektspezifische Informationen 
+            einzuschließen, wie z.B. die Webseite des Projekts, wo man 
+            die FAQ findet, usw.</p></dd><dt><span class="term">Nachrichten in Kurzform oder als 
+	              Einzelnachrichten</span></dt><dd><p>Im Digest-Modus wird einmal am Tag eine E-Mail verschickt.
+            Sie ist eine Zusammenfassung der gesamten Aktivität auf der
+            Mailingliste, die im Verlauf des Tages aufgekommen ist. Wer
+            die Liste nur nebenher verfolgt, ohne selbst beteiligt zu
+            sein, bevorzugt oft diese Form, da dies ihnen erlaubt, alle
+            Themen auf einmal durchzusehen und hat den Vorteil, die
+            Ablenkung durch ständig eintreffende E-Mails zu
+            vermeiden.</p></dd><dt><span class="term">Moderation</span></dt><dd><p>"Moderieren" bedeutet sicherzustellen, dass Nachrichten 
+            a) kein Spam sind und b) zum Thema
+            gehören, bevor sie verteilt werden. Moderation muss 
+            zwangsläufig von Menschen erledigt werden, aber Software
+            kann eine Menge dazu beitragen, die Aufgabe einfacher zu
+            gestalten. Zu diesem Thema später mehr.</p></dd><dt><span class="term">Administrative Schnittstellen</span></dt><dd><p>Diese ermöglichen es einem Administrator u.a. ohne Umstände 
+            veraltete Adressen zu löschen. Was dringend werden kann, 
+            wenn die Adresse eines Empfängers anfängt, Antworten wie "Ich bin nicht 
+            mehr bei dieser Adresse" auf jede Nachricht von der
+            Liste zu schicken. (Manche Listensoftware kann so etwas
+            automatisch erkennen und die Person abmelden.)</p></dd><dt><span class="term">Manipulieren der Header</span></dt><dd><p>Viele Leute haben ausgeklügelte Filter- und Antwort-Regeln für
+            ihre E-Mail-Programm eingerichtet. Mailinglisten-Software 
+            kann bestimmte Header hinzufügen und manipulieren, die die
+            Empfänger ausnutzen können (mehr dazu später).</p></dd><dt><span class="term">Archivierung</span></dt><dd><p>Alle Nachrichten an die Liste werden gespeichert und
+            im Netz bereitgestellt; alternativ bietet manche Software 
+            spezielle Schnittstellen an um externe Archivierungssoftware
+            einzubinden wie z.B. 
+            (<a class="ulink" href="http://www.mhonarc.org/" target="_top">http://www.mhonarc.org/</a>). Archivierung ist
+            unerlässlich, mehr dazu in
+            <a class="xref" href="growth.html#using-archives" title="Auffällige Nutzung der Archive">&#8222;Auffällige Nutzung der Archive&#8220;</a><span> im 
+            Kapitel <a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a></span>.</p></dd></dl></div><p>Der Sinn dieser Punkte ist lediglich zu betonen, dass die
+Verwaltung einer Mailingliste ein komplexes Problem ist, mit dem
+sich schon viele beschäftigt haben und weitestgehend gelöst haben. Sie 
+müssen sicherlich kein Experte auf diesem Gebiet werden. Aber Sie
+sollten sich bewusst machen, dass es immer mehr zu lernen gibt, und 
+dass die Verwaltung der Liste im Verlauf eines freien Software
+Projekts ab und zu etwas Zeit in Anspruch nehmen wird. Im weiteren
+werden wir ein paar der häufigsten Punkte beim Konfigurieren einer
+Antworten angehen.</p><div class="sect2" title="Schutz vor Spam"><div class="titlepage"><div><div><h3 class="title"><a name="spam-prevention"></a>Schutz vor Spam</h3></div></div></div><p>Seit ich diesen Satz schrieb, bis zu seiner Veröffentlichung,
+ist das Internet-weite Spam-Problem wahrscheinlich doppelt so schlimm 
+geworden &#8211; oder zumindest wird es einem so vorkommen. Es gab eine
+Zeit, nicht all zu lange her, in der man eine Liste betreiben
+konnte ohne überhaupt irgend welche Maßnahmen gegen Spam vornehmen zu
+müssen. Gelegentlich verirrte sich eine Nachricht, aber selten genug 
+um nur eine geringes Ärgernis zu sein. Diese Ära ist für immer vorbei.
+Heutzutage wird eine Mailingliste, die keine Maßnahmen gegen Spam
+unternimmt, schnell von Werbemüll überflutet und dadurch 
+unbenutzbar. Schutz vor Spam ist unerlässlich.</p><p>Wir unterteilen Schutz vor Spam in zwei Kategorien: Spam
+daran zu hindern auf Ihrer Liste aufzutauchen, und zu verhindern,
+dass Ihre Liste für Spam harvester zu einer Quelle von Adressen wird.
+Ersteres ist wichtiger also untersuchen wir es zuerst.</p><div class="sect3" title="Filterung von Nachrichten"><div class="titlepage"><div><div><h4 class="title"><a name="spam-filtering"></a>Filterung von Nachrichten</h4></div></div></div><p>Es gibt drei grundsätzliche Arten, Spam zu vermeiden und die
+meisten Mailinglisten bieten alle drei an. Gemeinsam arbeiten sie am
+effizientesten:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="bold"><strong>Es sollten nur Nachrichten von
+			angemeldeten Nutzern automatisch angenommen 
+			werden.</strong></span></p><p>Diese Einstellung ist weitestgehend effektiv und 
+            ist nicht besonders schwer einzurichten, da es für 
+            gewöhnlich nur eine kleine Änderung an der Konfiguration 
+            der Software des Verteilers bedeutet. Beachten Sie aber, 
+            dass Nachrichten, die nicht automatisch akzeptiert werden,
+            nicht einfach verworfen werden sollten. Es gibt zwei 
+            Gründe, warum sie stattdessen für weitere Moderation 
+            aufbewahrt werden sollten. Erstens wollen Sie auch
+            unangemeldeten Benutzer erlauben, Nachrichten an die Liste
+            zu senden, schließlich sollte eine Person mit einer Frage
+            oder einem Vorschlag sich nicht gleich anmelden müssen, um
+            eine einzige E-Mail zu senden. Zweitens kann es vorkommen,
+            dass auch angemeldete Benutzer eine anderen E-Mail-Adresse
+            benutzen als die, mit der sie angemeldet sind. E-Mail-Adressen
+            sind keine zuverlässige Möglichkeit, Menschen zu 
+            identifizieren und sollten nicht als solche behandelt 
+            werden.</p></li><li class="listitem"><p><span class="bold"><strong>Benutzen Sie einen Spam-Filter</strong></span></p><p>Wenn die Software des Verteilers es ermöglicht (was 
+            die meisten tun), können Sie Nachrichten durch einen Spam-Filter
+            laufen lassen. Automatisierte Spam-Filterung ist 
+            nicht perfekt und wird es aufgrund des andauernden 
+            Wettrüstes zwischen Spammern und den Autoren der
+            Filtersoftware auch nie sein. Es kann aber einen großen Teil des
+            Spams reduzieren, der bis zu den Moderatoren durchkommt.
+            Jede solche Filterung ist vorteilhaft, da die Moderatoren
+            weniger Zeit mit dem Untersuchen von Nachrichten verbringen
+            müssen, und deshalb sehr wünschenswert.</p><p>Hier ist nicht der Raum für eine detailierte
+            Anleitung, wie man einen Spam-Filter einrichtet. Sie werden 
+            hierzu die Dokumentation Ihrer Mailinglisten-Software lesen
+            müssen (siehe 
+            <a class="xref" href="mailing-lists.html#mailing-list-software" title="Mailinglisten-Software">&#8222;Mailinglisten-Software&#8220;</a><span>
+            später in diesem Kapitel</span>). E-Mail-Verteiler haben 
+            oft eingebaute Möglichkeiten um Spam zu verhindern, es kann
+            aber sein, dass Sie weitere Filter von einem dritten 
+            Anbieter hinzufügen wollen. Mit diesen Beiden habe ich gute
+            Erfahrungen gemacht: SpamAssassin 
+            (<a class="ulink" href="http://spamassassin.apache.org/" target="_top">http://spamassassin.apache.org/</a>) und 
+            SpamProbe 
+            (<a class="ulink" href="http://spamprobe.sourceforge.net/" target="_top">http://spamprobe.sourceforge.net/</a>). Das soll
+            allerdings kein Urteil über andere Open-Source-Filter sein, 
+            von denen einige scheinbar auch ziemlich gut sind. Ich habe
+            zufällig diese Beiden benutzt und war mit ihnen
+            zufrieden.</p></li><li class="listitem"><p><span class="bold"><strong>Moderation.</strong></span></p><p>Die Letzte Stufe für Nachrichten die nicht von einem 
+            angemeldeten Benutzer stammen und es durch den Spamfilter 
+            schaffen, ist die <em class="firstterm">Moderation</em>: Die 
+            E-Mail wird an eine bestimmte Adresse geleitet, wo es von 
+            einem Menschen untersucht wird, der sie entweder annimmt 
+            oder ablehnt.</p><p>Eine E-Mail zu akzeptieren, kann eine von zwei Formen 
+            annehmen: Sie können die E-Mail nur dieses eine Mal 
+            annehmen oder Sie können die Software anweisen, diese eine 
+            und alle weiteren Nachrichten von dieser Adresse anzunehmen.
+            Letzteres ist fast immer vorzuziehen, um die zukünftige Bürde
+            der Moderation zu verringern. Wie man Nachrichten annimmt, 
+            kann sich von System zu System unterscheiden, für gewöhnlich
+            reicht es aber eine E-Mail, an eine bestimmte Adresse zu
+            senden, mit einem Befehl wie "accept" (um nur diese eine 
+            E-Mail zu erlauben) oder "allow" (um diese und alle 
+            weiteren Nachrichten zu erlauben).</p><p>Um eine Nachricht abzulehnen reicht es meistens sie 
+            einfach zu ignorieren. Wenn der Verteiler niemals eine 
+            Bestätigung erhält, wird er die E-Mail auch nicht 
+            verteilen. Das erwünschte Ergebnis erreicht man also, indem 
+            man die E-Mail einfach ignoriert. Manchmal haben Sie auch
+            die Möglichkeit mit "reject" oder "deny" an den Verteiler
+            zu antworten, was dazu führt, dass alle weiteren Nachrichten
+            von dieser Adresse automatisch abgelehnt werden, ohne 
+            moderiert zu werden. Es gibt selten einen Grund dafür, da 
+            es bei der Moderation meistens darum geht, Spam zu vermeiden
+            und Spammer selten zwei mal die gleiche Adresse
+            benutzen.</p></li></ol></div><p>Die Moderierung sollte allerdings 
+<span class="emphasis"><em>ausschließlich</em></span> für Spam und Nachrichten benutzt
+werden, die eindeutig nicht auf die Liste gehören, wie z.B. wenn 
+jemand aus versehen eine Nachricht an die falsche Adresse schickt. Das 
+System wird Ihnen meistens eine Möglichkeit geben eine E-Mail direkt an 
+den Absender zu schicken, nutzen Sie diese aber nicht, um Fragen zu
+beantworten die eigentlich auf die Mailingliste gehören, selbst 
+wenn Ihnen sofort die Antwort einfällt. Das würde der Gemeinschaft des 
+Projekts nur die Möglichkeit entziehen sich ein klares Bild zu machen, 
+welche Fragen von der Öffentlichkeit gestellt werden und Sie der 
+Gelegenheit berauben, diese Fragen selber zu beantworten und/oder die 
+Antworten anderer zu sehen. Die Moderation einer Mailingliste 
+sollte sich ausschließlich auf Werbemüll und irrelevante Nachrichten 
+beschränken und sonst nichts.</p></div><div class="sect3" title="Verschleierung von Adressen im Archiv"><div class="titlepage"><div><div><h4 class="title"><a name="address-hiding"></a>Verschleierung von Adressen im Archiv</h4></div></div></div><p>Um zu verhindern, dass Ihr Verteiler zu einer Quelle von E-Mail-Adressen
+für Spammer wird gibt es die gebräuchliche Methode, Adressen in 
+den Archiven zu verschleiern indem man z.B.</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">hmustermann@einedomain.de</code></p></blockquote></div><p>mit</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">hmustermann_AT_einedomain.de</code></p></blockquote></div><p>oder</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">hmustermannKEINSPAM@einedomain.de</code></p></blockquote></div><p>oder irgendetwas (für Menschen) ähnlich offensichtliches ersetzt. 
+Da Spam-Harvester oft nach dem Prinzip funktionieren, Webseiten 
+abzugrasen &#8211; auch die Archive Ihres Verteilers &#8211; und nach
+Zeilen mit einem "@" suchen, ist diese Art der Verschleierung eine 
+effektive Methode E-Mail-Adressen vor Spammern zu verstecken oder
+unbrauchbar zu machen. Was natürlich nichts am Spam, der an die Liste 
+selbst geschickt wird ändert, aber es kann die Menge an Spam
+reduzieren, die direkt an die persönlichen Adressen der Nutzer des
+Verteilers gesandt wird.</p><p>Die Verschleierung von Adressen kann kontrovers sein. Manche
+finden, dass es eine gute Idee ist und werden sich wundern wenn Ihre 
+Archive es nicht automatisch machen. Andere denken es ist eine zu große 
+Unbequemlichkeit (da Menschen auch die Adresse wieder korrigieren 
+müssen, vor sie benutzt werden können). Manche behaupten, dass es nicht 
+effektiv sei, da Harvester theoretisch jede konsistente Verschleierung, 
+ausgleichen können. Es gibt jedoch empirische Beweise, dass die 
+Verschleierung von Adressen <span class="emphasis"><em>tatsächlich</em></span>
+funktioniert, siehe 
+<a class="ulink" href="http://www.cdt.org/speech/spam/030319spamreport.shtml" target="_top">http://www.cdt.org/speech/spam/030319spamreport.shtml</a>.</p><p>Im Idealfall würde die Listensoftware diese Entscheidung jedem 
+Benutzer überlassen, entweder durch einen zusätzlichen Header oder in
+den Einstellungen seines Listenkontos. Ich kenne allerdings
+keine Software, die diese Entscheidung für jede Nachricht oder jeden
+Nutzer ermöglicht, also wird vorerst der Administrator der Liste,
+diese Entscheidung für alle übernehmen müssen (angenommen die 
+Archivierungssoftware bietet diese Einstellung überhaupt an, was nicht 
+immer der Fall ist). Ich ziehe es vor die Verschleierung anzuschalten.
+Manche sind sehr vorsichtig Ihre Adresse nicht auf Webseiten oder 
+irgendwo anders zu platzieren, an dem ein Spam-Harvester sie finden 
+könnte und sie wären enttäuscht, wenn all ihre Mühe vom Archiv einer 
+Mailingliste zunichte gemacht würden; zudem ist der Aufwand der durch die
+Verschleierung den Nutzern auferlegt wird nur sehr gering, da es 
+trivial ist eine verschleierte Adresse zu korrigieren, sollte man die
+Person erreichen wollen. Behalten Sie aber das Wettrüsten im 
+Hinterkopf: Bis Sie diese Zeilen lesen kann es durchaus sein, dass die 
+Harvester sich so weit entwickelt haben, dass sie die häufigsten 
+Verschleierungen erkennen können und wir müssen uns wieder etwas neues 
+einfallen lassen.</p></div></div><div class="sect2" title="Umgang mit E-Mail-Headern"><div class="titlepage"><div><div><h3 class="title"><a name="header-management"></a>Umgang mit E-Mail-Headern</h3></div></div></div><p>Die Nutzer einer Mailingliste wollen oft die davon stammenden
+E-Mails in einem bestimmten Ordner sortieren, getrennt von ihren 
+anderen E-Mails. E-Mail-Software kann das automatisch übernehmen,
+indem sie die <em class="firstterm">Header</em> der E-Mails untersucht. 
+Header sind die Felder im Kopf einer E-Mail, wie Absender, Empfänger, 
+Betreff, Datum und verschiedenes andere das Informationen über die
+Nachricht enthält. Bestimmte Header sind weit verbreitet und im
+wesentlichen Pflichtangaben:</p><pre class="screen">
+
+Von: ...
+An: ...
+Betreff: ...
+Datum: ...
+</pre><p>Andere sind optional, wenn auch ziemlich üblich. E-Mails müssen
+z.B. genau genommen keinen</p><pre class="screen">
+
+Antwort An: absender@email.adresse.hier
+</pre><p>Header angeben, tun es aber trotzdem, da es den Empfängern eine 
+narrensichere Möglichkeit gibt den Autoren zu erreichen (was besonders 
+nützlich ist wenn der Autor die E-Mail von einer anderen Adresse 
+senden musste, als diejenige an die die Antworten gerichtet sein sollten).</p><p>In manchen E-Mail-Programmen ist es einfach, E-Mails anhand von 
+verschiedenen Mustern im Betreff unterschiedlich abzulegen. Das führt
+zum Bedarf, dass der Verteiler automatisch einen Präfix vor jeden 
+Betreff setzen soll, damit E-Mail-Programme danach suchen und 
+automatisch Nachrichten in den richtigen Ordnern ablegen können. Die 
+Idee ist, dass der Autor folgendes schreiben würde:</p><pre class="screen">
+
+Betreff: Erstelle die Version 2.5.
+</pre><p>die Nachricht aber wie folgt ankommen würde:</p><pre class="screen">
+
+Betreff: [diskussion@verteiler.beispiel.org] Erstelle die Version 2.5.
+</pre><p>Obwohl die meisten Listenlösungen diese Möglichkeit bieten, empfehle 
+ich diese Option nicht anzuschalten. Das Problem, kann viel einfacher 
+auf eine sehr viel weniger aufdringliche Art gelöst werden, und der 
+Preis den man durch verlorenen Platz im Betreff verliert ist viel zu 
+hoch. Erfahrene Nutzer von Mailinglisten, suchen die Betreffzeilen 
+ihrer im Laufe des Tages eingetroffenen E-Mails ab und entscheiden daran,
+ob sie eine Nachricht lesen oder auf sie antworten. Den Namen der
+Liste vor dem eigentlichen Betreff zu setzen, kann die rechte Seite 
+des Betreffs über den Bildschirmrand hinausschieben, wodurch er
+verschwindet. Die Informationen auf denen sich Leser verlassen um zu 
+entscheiden, welche Nachrichten Sie öffnen sollen gehen damit z.T. 
+verloren und der Nutzen der Liste wird dadurch insgesamt für alle
+verringert.</p><p>Anstatt die Betreffzeile zu verunstalten, sollten Sie Ihren 
+Nutzern beibringen, andere übliche Header zu verwenden, angefangen mit 
+dem To("An:")-Header indem die Adresse der Liste angeben werden
+sollte:</p><pre class="screen">
+
+An: &lt;diskussion@verteiler.beispiel.org&gt;
+</pre><p>Jede E-Mail-Software die nach Betreff filtern kann, sollte ebenso 
+einfach auch in der Lage sein, nach dem To-Header zu filtern.
+</p><p>Es gibt ein paar weitere optionale, aber üblicherweise angegebene 
+Header, die bei Mailinglisten erwartet werden. Nach ihnen zu filtern 
+ist noch zuverlässiger als die "To" oder "Cc" Header; da diese Header 
+von dem Verteiler an jede Nachrichten angehängt werden, verlassen sich
+manche Nutzer möglicherweise auf sie:</p><pre class="screen">
+list-help: &lt;mailto:discuss-help@lists.example.org&gt;
+list-unsubscribe: &lt;mailto:discuss-unsubscribe@lists.example.org&gt;
+list-post: &lt;mailto:discuss@lists.example.org&gt;
+Delivered-To: mailing list discuss@lists.example.org
+Mailing-List: contact discuss-help@lists.example.org; run by ezmlm
+</pre><p>Zum größten Teil sind diese selbsterklärend. Siehe 
+<a class="ulink" href="http://www.nisto.com/listspec/list-manager-intro.html" target="_top">http://www.nisto.com/listspec/list-manager-intro.html</a> 
+für eine weitergehende Erklärung, oder 
+<a class="ulink" href="http://www.faqs.org/rfcs/rfc2369.html" target="_top">http://www.faqs.org/rfcs/rfc2369.html</a> für die 
+ausführliche formale Spezifikation.</p><p>Beachten Sie auch, dass diese Header durch den Prefix "list" 
+implizieren, dass Sie auch administrative Adressen mit den Namen 
+"list-help" und "list-unsubscribe" eingerichtet haben. Weitere üblich 
+Adressen sind "list-subscribe", um die Liste zu abonnieren und 
+"list-owner", um seine Administratoren zu erreichen. Je nachdem welche
+Software Sie für Ihre Liste verwenden, werden diese und 
+verschiedene andere eingerichtet sein; die Dokumentation wird dazu 
+weitere Angaben bietem. Eine vollständige Liste aller Adressen wird
+meistens jedem Nutzer als Teil der "Willkommensnachricht", bei der 
+Anmeldung zugeschickt. Sie werden selber wahrscheinlich eine Kopie 
+dieser E-Mail bekommen. Wenn nicht sollten Sie jemand um eine Kopie
+bitten, damit Sie wissen was Ihre Nutzer sehen, sobald sie die 
+Liste abonnieren. Behalten Sie sie in Griffweite um Fragen über die
+Funktionen der Liste beantworten zu können, bzw. noch besser 
+wäre, es irgendwo auf Ihre Webseite zu stellen, um bei Fragen der Form
+"Wie kann ich mich abmelden?", Sie einfach auf eine URL weisen 
+können.</p><p>Manche Verteiler bieten die Option, an jede Nachricht Anweisungen
+anzuhängen, um sich abmelden. Wenn es sie gibt, sollten sie 
+angeschaltet werden. Es verbraucht für jede Nachricht nur ein paar 
+zusätzliche Zeilen an einer harmlosen Stelle und kann viel Zeit
+ersparen, indem es die Anzahl der Nutzer reduziert die an 
+Sie &#8211; oder schlimmer noch an die ganze Liste &#8211; Anfragen 
+schicken, wie man sich abmelden kann.</p></div><div class="sect2" title='Die große "reply-to"-Debatte'><div class="titlepage"><div><div><h3 class="title"><a name="reply-to"></a>Die große "reply-to"-Debatte</h3></div></div></div><p>Ich habe vorhin in <a class="xref" href="setting-tone.html#avoid-private-discussions" title="Private Diskussionen vermeiden">&#8222;Private Diskussionen vermeiden&#8220;</a>
+betont, wie wichtig es ist, Diskussionen in den öffentlichen Foren zu 
+halten und erwähnte, dass aktive Maßnahmen manchmal nötig sind, um 
+zu verhindern, dass Unterhaltungen ins private abgleiten; weiterhin
+geht es in diesem Kapitel darum, die Kommunikationssoftware soweit zu 
+konfigurieren, dass sie möglichst viel Arbeit übernimmt. Es wäre 
+deshalb anzunehmen, dass Verteiler mit einer Möglichkeit, alle
+Nachrichten öffentlich zu halten, diese Option offensichtlich
+anschalten sollte.</p><p>Nun ja, nicht ganz. Es gibt solch eine Funktion, allerdings hat
+sie ein paar schwerwiegende Nachteile. Die Frage ob man sie benutzen
+soll oder nicht, ist eine der am heißesten debattierten bei der 
+Verwaltung von Mailinglisten &#8211; zugegeben, es ist nicht 
+unbedingt eine Kontroverse die es auf die Titelseite Ihres Tageblatts
+schaffen würde, aber Sie kann in einem freien Software-Projekt ab und
+zu aufflammen. Unten werde ich die Funktion beschreiben, die 
+Hauptargumente beider Seiten erläutern und die mir bestmögliche
+Empfehlung geben.</p><p>Die Funktion selbst ist relativ einfach: Wenn Sie wollen, kann
+die Listen-Software automatisch den Reply-to (de. Antwort an) Header
+auf die Adresse der Liste setzen. Was so viel heißt, dass egal 
+was der Autor einer E-Mail in den Reply-to Header schreibt (bzw.
+selbst wenn er nicht einmal angegeben wird), bei den Empfängern 
+der Header mit der Adresse der Liste erscheint:</p><pre class="screen">
+Reply-to: discuss@lists.example.org
+</pre><p>Oberflächlich scheint das eine gute Sache zu sein. Praktisch 
+jede E-Mail-Software berücksichtigt den Reply-to Header. Wenn nun 
+jemand auf eine Nachricht antwortet, wird seine Nachricht an die 
+gesamte Liste gerichtet sein und nicht nur an den Autor der 
+ursprünglichen Nachricht. Natürlich kann der Antwortende immer noch 
+händisch den Empfänger ändern, wichtig ist aber, dass Antworten 
+<span class="emphasis"><em>standardmäßig</em></span> an die Liste gerichtet sind. Es
+ist ein perfektes Beispiel für eine Technik, um gemeinschaftliche 
+Arbeit zu unterstützen.</p><p>Leider gibt es einige Nachteile. Der erste ist bekannt als 
+das <em class="firstterm">Ich-finde-nicht-den-Weg-nach-Hause</em>-Problem:
+Manchmal setzt der ursprüngliche Absender seine "echte" E-Mail-Adresse
+in den Reply-to Header, da er aus irgendeinem Grund die Nachricht von 
+einer anderen Adresse absendet, als er Antworten empfangen möchte.
+Personen, die immer von der gleichen Adresse absenden und empfangen, 
+kennen dieses Problem nicht und viele sind überrascht, dass es das 
+Problem überhaupt gibt. Für Leute mit einer ungewöhnlichen 
+E-Mail-Konfiguration oder ohne Einfluss auf die Gestalt ihrer E-Mails 
+(vielleicht weil sie von der Arbeit schreiben und keinen Einfluss 
+auf ihre IT-Abteilung haben), kann der Reply-to Header die einzig
+sichere Möglichkeit sein, Antworten an die richtige Adresse zu leiten.
+Wenn Sie nun an eine Liste schreiben, ohne in dieser angemeldet zu 
+sein, wird ihre Reply-to Einstellung zu einer unabdingbaren Information.
+Wenn der Verteiler diese nun überschreibt, wird Sie die Rückmeldung auf 
+Ihre Nachricht vielleicht niemals erreichen.</p><p>Der zweite Nachteil betrifft eine Erwartungshaltung, und das ist
+meiner Meinung nach das stärkste Argument gegen die Verunstaltung von 
+Reply-to. Die meisten erfahrenen E-Mail-Nutzer, sind an zwei 
+grundsätzliche Arten zu antworten gewohnt: <em class="firstterm">reply-to-all 
+(Antwort an alle)</em> und <em class="firstterm">reply-to-author
+(Antwort an Autor)</em>. Alle modernen E-Mail-Programme bieten 
+beide Optionen an. Nutzer wissen, dass sie reply-to-all wählen 
+sollten um an alle zu antworten (d.h. inklusive der Personen auf der 
+Liste), und dass sie reply-to-author wählen sollten, um eine 
+private Nachricht an den Autor zu schicken. Auch wenn Sie an jeder
+möglichen Stelle zu offenen Diskussionen ermutigen sollten, gibt es
+doch Situationen, bei denen der Antwortende eine private Nachricht
+bevorzugen sollte &#8211; zum Beispiel wenn er etwas im Vertrauen
+an den Autor schreiben möchte, was unangemessen für die öffentliche
+Liste wäre.</p><p>Schauen Sie, was nun passiert, wenn der Verteiler den 
+ursprünglichen Reply-to Eintrag überschreibt und der Antwortende auf 
+den reply-to-author Knopf drückt, in der Erwartung eine private E-Mail
+an den Absender zu schicken. Aufgrund seiner Erwartungshaltung, wird 
+er die Adresse des Empfängers vielleicht nicht nochmals überprüfen. Er
+hat dabei vielleicht eine geheime, vertrauliche Nachricht verfasst,
+mit peinlichen Details über ein Mitglied des Verteilers und drückt nun
+auf absenden. Seine Nachricht erscheint nun unerwartet, etwas später
+<span class="emphasis"><em>auf dem Verteiler!</em></span> Zugegeben, theoretisch hätte
+er sorgfältig auf das Empfänger-Feld achten sollen, und keine Annahmen
+über den Reply-to Header machen sollen. Autoren setzen aber fast immer
+Reply-to auf ihre eigene persönliche Adresse (bzw. ihre E-Mail-Software
+macht es für sie), und viele langjährige Nutzer, erwarten es 
+mittlerweile. Das geht sogar soweit, dass wenn jemand absichtlich 
+reply-to auf irgendeine andere Adresse setzt als den Verteiler, er es
+explizit in dem Text der E-Mail erwähnt, damit Leute sich bei ihrer 
+Antwort nicht wundern.</p><p>Aufgrund der potentiell schwerwiegenden Folgen dieses unerwarteten
+Verhaltens, bevorzuge ich es, Verteiler so zu konfigurieren, dass sie
+den reply-to Header niemals anfassen. Es ist ein Beispiel für eine
+Technik um Zusammenarbeit zu unterstützen, mit wie es mir scheint,
+potentiell gefährlichen Nebenwirkungen. Auf der anderen Seite dieser 
+Debatte gibt es jedoch auch starke Argumente. Es werden Leute, egal wie
+Sie sich entscheiden, ab und zu fragen, warum Sie sich nicht anders
+entschieden haben. Da sowas niemals zum Hauptthema einer Diskussion 
+werden sollte, kann es angebracht sein, hierfür eine vorformulierte 
+Antwort parat zu haben, die so gestaltet ist, dass sie die Diskussion
+eher beendet als anfeuert. Stellen Sie klar, dass Sie 
+<span class="emphasis"><em>nicht</em></span> darauf bestehen, die einzig richtige und
+sinnvolle Entscheidung getroffen zu haben, (selbst wenn Sie das denken).
+Deuten statt dessen darauf wie alt diese Debatte ist, dass es gute 
+Argumente auf beiden Seiten gibt, keine Entscheidung alle 
+zufriedenstellen wird und dass Sie einfach die Ihnen bestmögliche 
+Entscheidung getroffen haben. Bitten Sie höfflich darum diese 
+Diskussion nicht weiterzuführen, es sei denn jemand hat etwas wirklich
+neues zu sagen. Halten Sie sich danach aus dem Thread heraus und 
+hoffen Sie, dass er eines natürlichen Todes stirbt.</p><p>Jemand wird vielleicht vorschlagen eine Wahl darüber zu halten.
+Wenn Sie möchten können Sie das tun, ich persönlich finde es in diesem 
+Fall jedoch unzureichend einfach Köpfe zu zählen. Für jemanden, der ein 
+gewisses Verhalten erwartet, wäre die Strafe unangemessen hoch 
+(versehentliche Sendung einer privaten E-Mail an die Liste) und 
+die Unbequemlichkeit für die übrigen Teilnehmer ist relativ gering (ab 
+und zu jemand daran erinnern an den ganzen Verteiler zu antworten,
+statt nur an den Autor), weshalb man nicht eindeutig sagen kann dass 
+die Mehrheit, auch wenn sie das ist, eine Minderheit in solch eine 
+Gefahr bringen darf.</p><p>Ich habe nur die wichtigsten Aspekte dieses Themas hier 
+angesprochen. Für eine vollständige Behandlung des Themas verweise 
+ich auf folgende zwei anerkannten Dokumente, die bei dieser Debatte 
+immer wieder zitiert werden:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>Lass Reply-to in Ruhe</strong></span>,
+     <span class="emphasis"><em>von Chip Rosenthal</em></span></p><p><a class="ulink" href="http://www.unicom.com/pw/reply-to-harmful.html" target="_top">http://www.unicom.com/pw/reply-to-harmful.html</a></p></li><li class="listitem"><p><span class="bold"><strong>Setze Reply-to auf die Liste</strong></span>,
+     <span class="emphasis"><em>von Simon Hill</em></span></p><p><a class="ulink" href="http://www.metasystema.net/essays/reply-to.mhtml" target="_top">http://www.metasystema.net/essays/reply-to.mhtml</a></p></li></ul></div><p>
+
+</p><p>Trotz meiner angedeuteten leichten Präferenz, denke ich nicht,
+dass es auf diese Frage eine "richtige" Antwort gibt und beteilige 
+mich auch gerne auf vielen Listen die Reply-to setzen. Das 
+wichtigste zu diesem Thema ist, sich frühzeitig für das eine oder 
+andere zu entscheiden und sich danach nicht zu Debatten über das Thema
+verleiten zu lassen.</p><div class="sect3" title="Zwei Fantasien"><div class="titlepage"><div><div><h4 class="title"><a name="reply-fantasies"></a>Zwei Fantasien</h4></div></div></div><p>Eines Tages wird jemand auf die geniale Idee kommen, einen
+<em class="firstterm">reply-to-list</em> Schlüssel in einer E-Mail 
+Software zu implementieren. Es würde irgendwelche der vorher 
+erwähnten spezifischen Header benutzen, um die Adresse der Mailingliste
+herauszufinden und direkt bzw. nur an die Liste zu 
+antworten, ohne gesonderte Adresse für den Empfänger, da diese höchst 
+wahrscheinlich sowieso die Liste abonniert haben. Mit der Zeit 
+werden andere E-Mail-Programme diese Funktion übernehmen und diese 
+ganze Debatte wird sich auflösen. (Tatsächlich gibt es sogar eine 
+E-Mail-Software namens <a class="ulink" href="http://www.mutt.org/" target="_top">Mutt</a> 
+mit einer solchen Funktion.<sup>[<a name="idp4605696" href="#ftn.idp4605696" class="footnote">18</a>]</sup>)
+</p><p>Eine noch bessere Lösung wäre es, die Verunstaltung von 
+Reply-to jedem selbst zu überlassen. Wer haben möchte, dass der
+Verteiler ihre Reply-to Header ändert (entweder nur für ihren eigenen
+oder für alle Nachrichten) könnten darum bitten und solche die es 
+nicht wollen, könnten bitten es in Ruhe zu lassen. Ich kenne jedoch 
+keine Software die so etwas für jeden Benutzer einzeln einstellen lässt. 
+Es scheint, dass wir derzeit mit einer globalen Einstellung für alle
+leben müssen.<sup>[<a name="idp4652592" href="#ftn.idp4652592" class="footnote">19</a>]</sup></p></div></div><div class="sect2" title="Archivierung"><div class="titlepage"><div><div><h3 class="title"><a name="archiving"></a>Archivierung</h3></div></div></div><p>Wie man genau ein Archiv für Mailinglisten einrichtet, ist bei
+jeder Listen-Software unterschiedlich, und würde den Rahmen dieses Buchs
+sprengen. Wenn Sie ein Programm zur Archivierung wählen oder konfigurieren,
+sollten Sie auf folgendes achten:</p><div class="variablelist"><dl><dt><span class="term">Zeitnahe Aktualisierung</span></dt><dd><p>Teilnehmer werden oft auf eine archivierte Nachricht
+            verweisen wollen, die erst vor ein oder zwei Stunden 
+			gepostet wurde. Wenn möglich sollte die Software jede
+			Nachricht sofort archivieren, sodass im gleichen Moment,
+			indem es vom Verteiler versandt wird, es auch im Archiv
+			ist. Wenn diese Option nicht verfügbar ist, versuchen Sie
+			die Software zumindest so einzustellen, dass es sich ca. 
+			jede Stunde aktualisiert. (Standardmäßig lässt mache 
+			Software die Aktualisierung ein Mal jede Nacht laufen, was
+			aber bei einer aktiven Mailingliste in der Praxis eine
+			viel zu große Verzögerung bedeutet.)</p></dd><dt><span class="term">Link Stabilität</span></dt><dd><p>Sobald eine E-Mail unter einer bestimmten URL archiviert
+            wurde, sollte sie ewig, bzw. so lang wie möglich unter 
+            genau der gleichen URL erreichbar sein. Selbst wenn die 
+            Archive neu aufgebaut werden, aus einem Backup
+            wiederhergestellt werden oder sonstwie repariert werden, 
+            sollte jede öffentlich bekannte URL weiterhin gültig sein.
+			Stabile Verweise ermöglichen es Suchmaschinen die Archive
+			zu indexieren und das ist für Nutzer die auf der Suche nach
+			einer bestimmten Nachricht sind, ein großer Segen. Stabile
+			Verweise sind auch wichtig, da der Bugtracker (siehe 
+            <a class="xref" href="bug-tracker.html" title="Bugtracker">&#8222;Bugtracker&#8220;</a>)<span> 
+            später in diesem Kapitel</span> oder Dokumente des 
+			Projekts oftmals auf darin enthaltene Nachrichten
+            verweisen.</p><p>Idealerweise würde die Mailinglisten-Software eine URL 
+            der jeweiligen Nachricht im Archiv, in einem Header 
+            mitschicken oder zumindest den URL-Teil, spezifisch für 
+            die E-Mail. So weiß jeder mit einer Kopie der E-Mail, wo 
+            es im Archiv zu finden ist, ohne die Archive tatsächlich 
+            aufsuchen zu müssen, was hilfreich wäre da jeder Vorgang 
+            mit dem Browser, automatisch einen größeren Zeitaufwand
+            bedeutet. Ich weiß nicht ob irgendeine Listen-Software 
+            diese Funktion anbietet; diejenigen die ich benutzt habe, 
+            können es leider nicht. Es ist allerdings etwas nachdem 
+            man suchen sollte (oder falls Sie Mailinglisten-Software 
+            schreiben, wäre es eine Funktion, die Sie bitte
+            in Erwägung ziehen sollten).</p></dd><dt><span class="term">Backup</span></dt><dd><p>Es sollte ziemlich offensichtlich sein wie man Sicherungen
+            des Archivs macht und der Vorgang um sie wiederherzustellen
+			sollte nicht zu schwierig sein. Mit anderen Worten, 
+			behandeln Sie Ihr Archiv nicht wie eine Blackbox. Sie (oder
+			jemand aus Ihrem Projekt) sollte wissen wo die Nachrichten
+			gespeichert werden und wie die Seiten des Archivs 
+			sich wiederherzustellen lassen, sollte es jemals nötig 
+			werden. Diese Archive sind wertvolle Daten &#8211; wenn ein
+			Projekt sie verliert, geht auch ein großer Teil seiner 
+			kollektiven Erinnerung verloren.</p></dd><dt><span class="term">Unterstützung für Threads</span></dt><dd><p>Es sollte möglich sein, von jeder Nachricht aus, zu seinem
+			zugehörigen <em class="firstterm">thread</em> (eine Gruppe
+			verwandter Nachrichten) zu gehen. Jeder Thread sollte auch
+			seine eigene URL haben, getrennt von denen seiner einzelnen 
+            Nachrichten.</p></dd><dt><span class="term">Durchsuchbarkeit</span></dt><dd><p>Ein Archiv das man nicht durchsuchen kann &#8211; sowohl
+            Volltext, als auch Betreffzeilen &#8211; ist nahezu wertlos.
+			Bedenke, dass manche Archive ihre Suchfunktion über eine
+			externe Suchmaschinen wie 
+            <a class="ulink" href="http://www.google.com/" target="_top">Google</a> 
+            anbieten, indem sie die Arbeit einfach auslagern. Das 
+            ist zwar akzeptable, aber eine direkte Suchfunktion ist 
+            meistens besser abgestimmt, da es dem Suchenden z.B. 
+			erlaubt, nur die Betreffzeile zu durchsuchen oder den
+			gesamten Text.</p></dd></dl></div><p>Obiges ist lediglich eine Checkliste, um Ihnen die Evaluierung und
+Einrichtung der Software für ihre Archive zu erleichtern. Leute zu
+überreden es wirklich zum Vorteil des Projekts zu 
+<span class="emphasis"><em>benutzen</em></span> wird in späteren Kapiteln behandelt, 
+insbesondere im Abschnitt <a class="xref" href="growth.html#using-archives" title="Auffällige Nutzung der Archive">&#8222;Auffällige Nutzung der Archive&#8220;</a>.</p></div><div class="sect2" title="Mailinglisten-Software"><div class="titlepage"><div><div><h3 class="title"><a name="mailing-list-software"></a>Mailinglisten-Software</h3></div></div></div><p>Hier sind einige Open-Source-Programme für die Verwaltung von
+Listen und Archives. Wenn Ihre Projektseite bereits vorkonfiguriert
+wurde, werden Sie sich u.U. niemals für eines entscheiden müssen. Wenn 
+Sie es jedoch selber einrichten müssen, sind hier einige Optionen. Zu 
+der Software, die ich tatsächlich benutzt habe gehört Mailman, Etmlm, 
+MHonArc, und Hypermail, was aber keine Aussage über andere sein soll
+(und natürlich gibt es bestimmt auch andere Programme die ich einfach
+nicht gefunden habe, betrachten Sie diese Liste also nicht als 
+vollständig).</p><p>Software für Mailinglisten:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>Mailman</strong></span> &#8211; <a class="ulink" href="http://www.list.org/" target="_top">http://www.list.org/</a></p><p>(Mit einem eingebauten Archiv und die Möglichkeit externe 
+         einzubinden. Mailman ist seit langer Zeit der Standard;
+         seine administrative Schnittstellen, insbesondere für die
+         Moderation von Spam und frisch angemeldeten Mitgliedern,
+         wirken recht angestaubt und können besonders auf diejenigen
+         frustrierend wirken, die modernere Schnittstellen
+         gewohnt sind.)</p></li><li class="listitem"><p><span class="bold"><strong>GroupServer</strong></span> &#8211; <a class="ulink" href="http://www.groupserver.org/" target="_top">http://www.groupserver.org/</a></p><p>(Hat eingebaute Archivierung und integriertes Web-Interface.
+         GroupServer ist etwas schwerer einzurichten als Mailman, und
+         erfordert (Stand: Anfang 2012) eine sehr spezielle Menge an
+         Voraussetzungen, aber wenn Sie ihn erst einmal zum Laufen
+         gebracht haben, bietet es den Benutzern ein besseres
+         Arbeiten.)</p></li><li class="listitem"><p><span class="bold"><strong>Sympa</strong></span> &#8212; <a class="ulink" href="http://www.sympa.org/" target="_top">http://www.sympa.org/</a></p><p>(Entwickelt und gepflegt durch einen Verband französischer
+         Universitäten, sowohl für sehr große Listen ausgelegt
+         (&gt; 700000 Mitglieder) als auch eine große Anzahl von Listen.
+         Es kann mit einer Vielzahl von Abhängigkeiten umgehen;
+         z.B. können Sie es mit sendmail, postfix, qmail oder exim
+         als unterliegenden Message Transfer Agent nutzen.
+         Eine Web-basierte Archivierung ist eingebaut.)</p></li><li class="listitem"><p><span class="bold"><strong>SmartList</strong></span> &#8211; <a class="ulink" href="http://www.procmail.org/" target="_top">http://www.procmail.org/</a></p><p>(Für die Nutzung mit Procmail gedacht.)</p></li><li class="listitem"><p><span class="bold"><strong>Ecartis</strong></span> &#8211; <a class="ulink" href="http://www.ecartis.org/" target="_top">http://www.ecartis.org/</a></p></li><li class="listitem"><p><span class="bold"><strong>ListProc</strong></span> &#8211; <a class="ulink" href="http://listproc.sourceforge.net/" target="_top">http://listproc.sourceforge.net/</a></p></li><li class="listitem"><p><span class="bold"><strong>Ezmlm</strong></span> &#8211; <a class="ulink" href="http://cr.yp.to/ezmlm.html" target="_top">http://cr.yp.to/ezmlm.html</a></p><p>(Entworfen für 
+         <a class="ulink" href="http://cr.yp.to/qmail.html" target="_top">Qmail</a>.)</p></li><li class="listitem"><p><span class="bold"><strong>Dada</strong></span> &#8211; <a class="ulink" href="http://mojo.skazat.com/" target="_top">http://mojo.skazat.com/</a></p><p>(Trotz des bizarren Versuchs der Webseite die Tatsache zu
+         verstecken, dass sie freie Software ist, wird sie unter der 
+         GNU GPL veröffentlicht. Es hat auch einen eingebauten 
+         Archiv.)</p></li></ul></div><p>Software zur Archivierung:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>MHonArc</strong></span> &#8211; <a class="ulink" href="http://www.mhonarc.org/" target="_top">http://www.mhonarc.org/</a></p></li><li class="listitem"><p><span class="bold"><strong>Hypermail</strong></span> &#8211; <a class="ulink" href="http://www.hypermail.org/" target="_top">http://www.hypermail.org/</a></p></li><li class="listitem"><p><span class="bold"><strong>Lurker</strong></span> &#8211; <a class="ulink" href="http://sourceforge.net/projects/lurker/" target="_top">http://sourceforge.net/projects/lurker/</a></p></li><li class="listitem"><p><span class="bold"><strong>Procmail</strong></span> &#8211; <a class="ulink" href="http://www.procmail.org/" target="_top">http://www.procmail.org/</a></p><p>(Begleitend zu SmartList, eine allgemeine Software zur 
+         Verarbeitung von E-Mails und scheinbar auch als Archiv
+         konfigurierbar.)</p></li></ul></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp4605696" href="#idp4605696" class="para">18</a>] </sup> Kurz nachdem dieses Buch 
+erschien, schrieb mir 
+<a class="ulink" href="http://www.michaelbernstein.com/" target="_top">Michael Bernstein</a>
+folgende Nachricht: "Es gibt weitere E-Mail-Programme außer Mutt, die 
+eine reply-to-list Funktion implementiert haben. Evolution bietet
+diese Funktion z.B. wenn auch ohne eigene Schaltfläche, über die 
+Tastenkombination (Strg+L)."</p></div><div class="footnote"><p><sup>[<a id="ftn.idp4652592" href="#idp4652592" class="para">19</a>] </sup>Seitdem ich das schrieb, habe ich
+zumindest von einer Mailinglisten-Software erfahren, die diese 
+Funktion anbietet: 
+<a class="ulink" href="http://siesta.unixbeard.net/" target="_top">Siesta</a>. Siehe dazu
+auch diesen Artikel:
+<a class="ulink" href="http://www.perl.com/pub/a/2004/02/05/siesta.html" target="_top">http://www.perl.com/pub/a/2004/02/05/siesta.html</a></p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="technical-infrastructure.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="vc.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Kapitel 3. Technische Infrastruktur </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Versionsverwaltung</td></tr></table></div></body></html>

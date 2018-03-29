@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Patents</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Patents"><div class="titlepage"><div><div><h1 class="title"><a id="patents"/>Patents</h1></div></div></div><p>Software patents have long been a lightning rod issue in
+free software, because they pose the only real threat against which
+the free software community cannot defend itself.  Copyright and
+trademark problems can always be gotten around.  If part of your code
+looks like it may infringe on someone else's copyright, you can just
+rewrite that part while continuing to use the same underlying
+algorithm.  If it turns out someone has a trademark on your
+project's name, at the very worst you can just rename the project.
+Although changing names would be a temporary inconvenience, it
+wouldn't matter in the long run, since the code itself would still do
+what it always did.</p><p>But a patent is a blanket injunction against implementing a
+certain idea.  It doesn't matter who writes the code, nor even what
+programming language is used.  Once someone has accused a free
+software project of infringing a patent, the project must either stop
+implementing that particular feature, or expose the project
+<span class="emphasis"><em>and its users</em></span> to expensive and
+time-consuming lawsuits.  Since the instigators of such lawsuits are
+usually corporations with deep pockets — that's who has the
+resources and inclination to acquire patents in the first
+place — most free software projects cannot afford either to defend
+themselves nor to indemnify their users, and must capitulate
+immediately even if they think it
+highly likely that the patent would be unenforceable in court.  To
+avoid getting into such a situation in the first place, free software
+projects have sometimes had to code defensively, avoiding patented
+algorithms in advance even when they are the best or only available
+solution to a programming problem.</p><p>Surveys and anecdotal evidence show that not only the vast
+majority of open source programmers, but a majority
+of <span class="emphasis"><em>all</em></span> programmers, think that software patents
+should be abolished entirely.<sup>[<a id="idm4396" href="#ftn.idm4396" class="footnote">110</a>]</sup> Open source programmers tend to feel
+particularly strongly about it, and may refuse to work on projects
+that are too closely associated with the collection or enforcement of
+software patents.  If your organization collects software patents,
+then make it clear, in a public and legally enforceable way, that the patents
+would never be enforced when the infringement comes from open source
+code, and that the patents are 
+only to be used as a defense in case some other party initiates an
+infringement suit against your organization.  This is not only the
+right thing to do, it's also good open source public relations.<sup>[<a id="idm4399" href="#ftn.idm4399" class="footnote">111</a>]</sup></p><p>Unfortunately, collecting patents purely for defensive purposes
+is rational.  The current patent system, at least in the United
+States, is by its nature an arms race: if your competitors have
+acquired a lot of patents, then your best defense is to acquire a lot
+of patents yourself, so that if you're ever hit with a patent
+infringement suit you can respond with a similar threat — then the
+two parties usually sit down and work out a cross-licensing deal so
+that neither of them has to pay anything, except to their patent 
+lawyers of course.</p><p>The harm done to free software by software patents is more
+insidious than just direct threats to code development, however.
+Software patents encourage an atmosphere of secrecy among firmware
+designers, who justifiably worry that by publishing details of their
+interfaces they will be making it easier for competitors to find ways
+to slap them with patent infringement suits.  This is not just a
+theoretical danger; it has apparently been happening for a long time
+in the video card industry, for example.  Many video card
+manufacturers are reluctant to release the detailed programming
+specifications needed to produce high-performance open source drivers
+for their cards, thus making it impossible for free operating systems
+to support those cards to their full potential.  Why would the
+manufacturers withold these specs?  It doesn't make sense for them to
+work <span class="emphasis"><em>against</em></span> software support; after all,
+compatibility with more operating systems can only mean more card
+sales.  But it turns out that, behind the design room door, these
+shops are all violating one another's patents, sometimes knowingly and
+sometimes accidentally.  The patents are so unpredictable and so
+potentially broad that no card manufacturer can ever be certain it's
+safe, even after doing a patent search.  Thus, manufacturers dare not
+publish their full interface specifications, since that would make it
+much easier for competitors to figure out whether any patents are
+being infringed.  (Of course, the nature of this situation is such
+that you will not find a written admission from a primary source that
+it is going on; I learned it through a personal communication.)</p><p>Modern free software licenses generally have clauses to combat,
+or at least mitigate, the dangers arising from software patents.
+Usually these clauses work by automatically revoking the overall open
+source license for any party who makes a patent infringement claim
+based on either the work as a whole<sup>[<a id="idm4406" href="#ftn.idm4406" class="footnote">112</a>]</sup>,
+or based on the claimant's code contributions to the project.  But
+though it is useful, both legally and politically, to build patent
+defenses into free software licenses in this way, in the end these
+protections are not enough to dispel the chilling effect that the
+threat of patent lawsuits has on free software.  Only changes in the
+substance or interpretation of international patent law will do
+that.</p><p>Recent developments, such as the 2014 decision by the
+U.S. Supreme Court against the patentability of abstract ideas, in
+<em class="citetitle">Alice Corp. v. CLS Bank</em> (<a class="ulink" href="https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International">https://en.wikipedia.org/wiki/Alice_Corp._v._CLS_Bank_International</a>),
+have made the future of software patents unpredictable.  But there is
+so much money to be extracted via infringement claims, in particular
+by "patent trolls" (<a class="ulink" href="https://en.wikipedia.org/wiki/Patent_troll">https://en.wikipedia.org/wiki/Patent_troll</a>) but in general by any entity with a large patent
+portfolio and a lack of other revenue sources, that I am not
+optimistic this fight will be over any time soon.  If you want to
+learn more about the problem, there are good links in
+the Wikipedia article <a class="ulink" href="https://en.wikipedia.org/wiki/Software_patent">https://en.wikipedia.org/wiki/Software_patent</a>.  I've also written
+some blog posts summarizing the arguments against software patents,
+collected at <a class="ulink" href="http://www.rants.org/patent-posts/">http://www.rants.org/patent-posts/</a>.  As of this writing it's been
+about six years since the main posts there were published, but all the
+reasons why software patents are a bad idea are just as true now as
+they were then.</p><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm4396" href="#idm4396" class="para">110</a>] </sup>See
+<a class="ulink" href="https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html">https://groups.csail.mit.edu/mac/projects/lpf/Whatsnew/survey.html</a>
+for one such survey.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4399" href="#idm4399" class="para">111</a>] </sup>For example, RedHat has pledged that open source projects are
+safe from its patents, see
+<a class="ulink" href="https://www.redhat.com/legal/patent_policy.html">https://www.redhat.com/legal/patent_policy.html</a>.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4406" href="#idm4406" class="para">112</a>] </sup>Remember that a
+patent may cover, or "read on" in patent jargon, code that the patent
+owner did not themselves write.  It is thus not necessary for a party
+to have contributed code to an open source project in order to claim patent
+infringement <span class="emphasis"><em>by</em></span> that project.</p></div></div></div></body></html>

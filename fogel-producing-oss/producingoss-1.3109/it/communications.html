@@ -1,0 +1,353 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Capitolo 6. Comunicazione</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produrre Software Open Source"><link rel="up" href="index.html" title="Produrre Software Open Source"><link rel="prev" href="marketing.html" title="Il Marketing"><link rel="next" href="common-pitfalls.html" title="Evitare le Trappole Comuni"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capitolo 6. Comunicazione</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="marketing.html">Indietro</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="common-pitfalls.html">Avanti</a></td></tr></table><hr></div><div class="chapter" title="Capitolo 6. Comunicazione"><div class="titlepage"><div><div><h2 class="title"><a name="communications"></a>Capitolo 6. Comunicazione</h2></div></div></div><div class="toc"><p><b>Indice</b></p><dl><dt><span class="sect1"><a href="communications.html#you-are-what-you-write">Sei quello che scrivi</a></span></dt><dd><dl><dt><span class="sect2"><a href="communications.html#structure-and-formatting">Struttura e Formattazione</a></span></dt><dt><span class="sect2"><a href="communications.html#writing-content">Contenuto</a></span></dt><dt><span class="sect2"><a href="communications.html#writing-tone">Tono</a></span></dt><dt><span class="sect2"><a href="communications.html#rudeness">Riconoscere la maleducazione</a></span></dt><dt><span class="sect2"><a href="communications.html#face">Facce</a></span></dt></dl></dd><dt><span class="sect1"><a href="common-pitfalls.html">Evitare le Trappole Comuni</a></span></dt><dd><dl><dt><span class="sect2"><a href="common-pitfalls.html#post-with-purpose">Non mandare messaggi senza motivo</a></span></dt><dt><span class="sect2"><a href="common-pitfalls.html#productive-threads">Thread Produttivi vs Thread Improduttivi</a></span></dt><dt><span class="sect2"><a href="common-pitfalls.html#bikeshed">Più semplice l'argomento, più lungo il dibattito</a></span></dt><dt><span class="sect2"><a href="common-pitfalls.html#holy-wars">Evitare le Guerre Sante</a></span></dt><dt><span class="sect2"><a href="common-pitfalls.html#noisy-minority">L'Effetto "Minoranza Rumorosa"</a></span></dt></dl></dd><dt><span class="sect1"><a href="difficult-people.html">Gente Difficile</a></span></dt><dd><dl><dt><span class="sect2"><a href="difficult-people.html#handling-difficult-people">Gestire la Gente Difficile</a></span></dt><dt><span class="sect2"><a href="difficult-people.html#difficult-people-case-study">Caso di Studio</a></span></dt></dl></dd><dt><span class="sect1"><a href="growth.html">Gestire la Crescita</a></span></dt><dd><dl><dt><span class="sect2"><a href="growth.html#using-archives">Uso Ben Visibile degli Archivi</a></span></dt><dd><dl><dt><span class="sect3"><a href="growth.html#all-as-archives">Trattate Tutte le Risorse Come un Archivio</a></span></dt></dl></dd><dt><span class="sect2"><a href="growth.html#codifying-tradition">La Tradizione della Codifica</a></span></dt></dl></dd><dt><span class="sect1"><a href="bug-tracker-usage.html">Nessuna Conversazione nel Tracciatore di Bug</a></span></dt><dt><span class="sect1"><a href="publicity.html">La Pubblicità</a></span></dt><dd><dl><dt><span class="sect2"><a href="publicity.html#security">Annunciare le Vulnerabilità della Sicurezza</a></span></dt><dd><dl><dt><span class="sect3"><a href="publicity.html#security-receiving">Ricevere il report</a></span></dt><dt><span class="sect3"><a href="publicity.html#security-finding-a-fix">Sviluppate la correzione silenziosamente</a></span></dt><dt><span class="sect3"><a href="publicity.html#security-cve">I numeri CAN/CVE</a></span></dt><dt><span class="sect3"><a href="publicity.html#security-prenotification">Pre notifica</a></span></dt><dt><span class="sect3"><a href="publicity.html#security-announcing">Distribuite la correzione pubblicamente</a></span></dt></dl></dd></dl></dd></dl></div><div class="simplesect"><div class="titlepage"></div><p>L'abilità  di scrivere chiaramente è forse la più importante capacità 
+che uno possa avere in un ambiente open source. Sulla lunga distanza, importa
+più del talento nella programmazione. Un bravo programmatore con pessime capacità 
+di comunicazione fare una sola cosa per volta, e comunque avere dei problemi a
+convincere altri a prestargli attenzione. Ma un pessimo programmatore con buone
+capacità  comunicative può coordinare e persuadere molte persone a fare molte
+cose diverse, quindi avere un effetto significativo sulla direzione e sulla forza
+del progetto.</p><p>Non sembra esserci molta correlazione, in nessuna direzione, tra l'abilità 
+di scrivere buon codice e l'abilità  di comunicare con i propri simili. C'è una qualche
+correlazione tra la buona programmazione e una buona descrizione dei problemi tecnici, ma
+descrivere problemi tecnici è solo una piccola parte della comunicazione in un progetto.
+Molto più importante è l'abilità  di identificarsi con la audience di qualuno, di vedere i propri
+post e commenti come altri li vedono, e di fare in modo che altri vedano i loro post con
+simile oggettività .
+Altrettanto importante è notare quando un certo mezzo di comunicazione non sta più
+lavorando bene, magari perchè non scala al crescere del numero di utenti, e prendere
+tempo per farci qualcosa.</p><p>Tutto questo è in teoria ovvio&#8212;cosa lo rende difficile in pratica
+è che gli ambienti di software libero sono 
+practice is that free software development environments are
+incoerentemente diversi sia nelle audience che nei meccanismi di comunicazione.
+Un certo pensiero deve esserre espresso in un messaggio sulla mailing list, come 
+annotazione nel bug tracker o come commento nel codice? Quando rispondere ad una domanda
+in forum pubblico, quanta conoscenza si può assumere esistere dal lato di chi legge, dato che
+"chi legge" non sempre è solo chi ha posto la domanda all'inizio, ma tutti quelli che potrebbero
+vedere la risposta?
+Come possono gli sviluppatori stare in contatto costruttivo con gli utenti, senza essere
+sommersi dalle richieste di funzionalità , scarne segnalazioni di bug e chiacchiera generale?
+Come dire quando un canale ha raggiunto i limiti della sua capacità , e cosa farci?</p><p>Le soluzioni a questi problemi sono solitamente parziali, perchè ogni singola soluzione
+è alla fine resa obsoleta dalla crescita del progetto o dai cambiamenti nella struttura del progetto.
+Sono anche spesso<span class="foreignphrase"><em class="foreignphrase">ad
+hoc</em></span>, perchè sono improvvisato risposte a situazioni dinamiche.
+Tutti i partecipanti possono diventare consci di quando e come la comunicazione può crollare,
+ed essere coinvolti nelle soluzioni. Aiutare la gente a fare questo è una grossa parte della gestione
+di un progetto open source. Le sezioni che seguono trattano sia di come portare avanti la propria comunicazione.
+e di come rendere una priorità  la cura dei meccanismi di comunicazione per tutti nel progetto.<sup>[<a name="idp7601888" href="#ftn.idp7601888" class="footnote">20</a>]</sup></p></div><div class="sect1" title="Sei quello che scrivi"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="you-are-what-you-write"></a>Sei quello che scrivi</h2></div></div></div><p>Considerate questo: la sola cosa che ognuna sa di voi su Internet viene
+da quello che scrivete, o cosa altri scrivono di voi. Potrete essere brillanti,
+attenti e carismatici di persona&#8212;ma se le vostre email sono confusionarie
+e non strutturate, la gente assumerà  che siate così. O magari siete davvero confusionari
+e disordinati di persona, ma nessuno ha bisogno di saperlo, se i vostri messaggi sono lucidi
+e informativi.</p><p>Dedicare un po' di cura alla vostra scrittura vi ripagherà  enormemente.
+Lo smanettone di lunga data di free software Jim Blandy racconta la seguente storiella;
+</p><div class="blockquote"><blockquote class="blockquote"><p>Nel 1993, stavo lavorando per la Free Software Foundation,
+  e stavamo facendo il beta testing della versione 19 di GNU Emacs.
+  Facevamo un rilascio della beta all'incirca ogni settimana, e la gente
+  la provava e ci mandava le segnalazioni di bug. C'era questo tizio ch
+  nessuno di noi aveva mai incontrato di persona ma che faceva un gran lavoro:
+  le sue segnalazioni di bug erano sempre chiare e ci portavano dritti al problema,
+  e quando ci forniva un fix lui stesso, era quasi sempre corretta. Era incredibile.</p><p>Prima che la FSF possa usare codice scritto da qualcun altro, dobbiamo fargli fare
+  alcune pratiche legali per assegnare i diritti di copyright per quel codice alla FSF. Solo
+  prendere codice da perfetti sconosciuti e buttarlo lì è la ricetta per un disastro legale.</p><p>Ho mandato una email al tizio con le pratiche, dicendo, "Qui ci sono
+  alcune pratiche di cui abbiamo bisogno, qui c'è cosa significa, firmi questa, fai firmare
+  al tuo datore di lavoro quest'altra, e poi possiamo iniziare a integrare i tuoi fix. Grazie mille."</p><p>Mi risponde dicendo "Non ho un datore di lavoro."</p><p>Allora gli dico, "OK, va bene, fallo firmare dalla tua università  e mandacelo indietro."</p><p>Dopo un po' mi risponde di nuovo e dice, "Bè, veramente... ho tredici anni e vivo con i miei genitori."</p></blockquote></div><p>Dato che il ragazzino non scriveva come un tredicenne, nessuno sapeva che lo fosse. In seguito ci sono alcuni
+modi per far fare una buona impressione anche alla vostra scrittura.</p><div class="sect2" title="Struttura e Formattazione"><div class="titlepage"><div><div><h3 class="title"><a name="structure-and-formatting"></a>Struttura e Formattazione</h3></div></div></div><p>Non cadete nella trappola di scrivere tutto come se fosse un messaggio
+di testo per il telefono cellulare. Scrivete frasi complete, mettendo la maiuscola
+alla prima parola di ogni frase, e usate interruzione di paragrafo dove necessario.
+Ciò è fondamentale nelle email e in altri scritti strutturati.
+In IRC o forum similarmente effimeri, va generalmente bene lasciare perdere le maiuscole
+usare abbreviazioni di espressioni comuni eccetera. Soltanto non portate queste
+abitudini in forum più formali, persistenti. Email, documentazione, segnalazioni di bug,
+e altre forme di scrittura pensate per persistere dovrebbero essere scritte usando la 
+grammatica e la sintassi standard, e avere una struttura narrativa coerente
+Questo non è perchè c'è qualcosa di interiormente buono nel seguire regole arbitrarie, ma
+piuttosto queste regole <span class="emphasis"><em>non</em></span> sono arbitrarie: sono evolute nella forme
+attuali perchè rendono il testo più leggibile, e dovreste seguirle per questa ragione.
+La leggibilità  è desiderabile non solo perchè significa che più persone capiranno cosa scrivete, ma
+perchè vi fa apparire come il tipo di persona che usa del tempo per comunicare chiaramente:
+cioà  qualcuno a cui valga la pena dare attenzione.</p><p>Soprattutto per le email, gli sviluppatori esperti di open source hanno stabilito alcune
+convenzioni:</p><p>Mandare solo email di puro testo, no HTML, RichText, o altri formati che potrebbero essere opachi
+ad alcuni lettori di email di solo testo. Impostate le vostre righe per essere lunghe circa 72 colonne.
+Non andate oltre le 80 colonne, che sono diventate lo standard <span class="foreignphrase"><em class="foreignphrase">de facto</em></span> 
+della lunghezza di terminale (cioè alcuni usano terminali più larghi, ma nessuno ne usa di più stretti).
+Facendo le vostre righe un po' <span class="emphasis"><em>meno</em></span> di 80 colonne, lasciate spazio per alcuni livelli
+di caratteri di citazione aggiunti nelle risposte di altri senza costringere alla riformattazione
+del vostro testo.</p><p><span class="emphasis"><em>Usate vere interruzioni di linea.</em></span> Alcuni programmi di mail
+fanno una specie di falsa delimitazione di riga, quindi quando state scrivendo una mail,
+il display mostra delle interruzioni di linea che in realtà  non ci sono. Quando la email
+viene spedita, potrebbe non avere le interruzioni di linea voi pensiate che abbia, e si disporrà 
+in maniera orrenda sugli schermi di un po' di gente. Se il vostro programma può usare false
+interruzioni di linea, cercate una qualche impostazione che possiate attivare per fare in modo 
+di mostrare le vere interruzioni di linea quando scrivete.</p><p>Quando si includono output video, stralci di codice, o altro
+testo preformattato, delimitatelo chiaramente, così che anche un occhio
+pigro possa facilmente vedere i confini tra le vostre parole e il materiale
+che state evidenziando. (Non mi sarei mai aspettato di scrivere un consiglio come 
+questo quando iniziai questo libro, ma più avanti su un gran numero di mailing list
+open source, ho visto gente mischiare testo da diverse fonti senza rendere chiaro
+cosa fosse cosa. L'effetto è molto frustrante. Rende i loro post decisamente più difficili
+da capire, e sinceramente fa vedere queste persone come un po' disordinate.)</p><p>Quando citate una email di qualcun altro, inserite le vostre risposte
+dove è più appropriato, in molti posti diversi se necessario, e tagliate via
+le parti della mail che non usate. Se state scrivendo un breve commento che 
+riguarda all'intero messaggio, va bene <em class="firstterm">anticipare</em> il commento
+(cioè mettere la vostra risposta al di sopra del testo citato della email); altrimenti,
+dovreste prima citare la porzione rilevante del testo originale, seguita dalla
+vostra risposta.
+</p><p>Scegliete attentamente l'oggetto delle vostre email. E' la riga
+più importante della vostra email, perchè permette ad ogni altra persona nel
+progetto di decidere se leggerla o meno. I moderni software di lettura email
+organizzano gruppi di messaggi correlati in thread, che possono essere definiti
+non solo da un oggetto comune, ma da vari altri header (che a volte non sono
+mostrati) Ne consegue che se un thread inizia ad andare verso un nuovo argomento,
+potete&#8212;e dovreste&#8212;aggiustare di conseguenza l'oggetto quando rispondete.
+L'integrità  del thread sarà  preservata, grazie a quegli altri header, ma il nuovo oggetto
+aiuterà  la gente che cerca un'idea del thread a sapere che il soggetto è cambiato.
+Similarmente, se davvero volete iniziare un nuovo argomento, fatelo mandando una
+nuova email, e non rispondendo a email esistenti e cambiandone l'oggetto. Altrimenti, la
+vostra email sarebbe ancora raggruppata con quelle dello stesso thread a cui state rispondendo,
+e quindi confonderebbe la gente nel pensare che sia su qualcosa che non è. Di nuovo, la pena
+non sarebbe solo lo spreco del loro tempo, ma la piccola falla nella vostra credibilità  come
+qualcuno spigliato nell'uso dei mezzi di comunicazione.</p></div><div class="sect2" title="Contenuto"><div class="titlepage"><div><div><h3 class="title"><a name="writing-content"></a>Contenuto</h3></div></div></div><p>Email ben formattate attraggono i lettori, ma il contenuto li mantiene.
+Nessun insieme di regole fisse può garantire un buon contenuto, certo, ma ci sono
+alcuni principi che lo rendono possibile.</p><p>Rendete le cose facili ai vostri lettori. Ci sono tonnellate di informazioni
+in giro in ogni progetto open source attivo, e non ci si può aspettare che i lettori
+siano familiari con la maggior parte dell'informazione&#8212;infatti, non ci si può
+aspettare che sappiano come diventarne familiari. Ovunque possibile, i vostri messaggi
+dovrebbero fornire informazione nella forma più appropriata per i lettori.
+Se dovete usare due minuti in più per cercare una URL di un particolare thread negli
+archivi della mailing list per risparmiare ai lettori di farlo, ne vale la pena.
+Se dovete spendere 5 o 10 minuti riassumendo le conclusioni fino a questo punto
+di un thread complesso, così da dare alla gente un contesto in cui capire il messaggio,allora
+fate così. Pensatela in questo modo: più un progetto ha successo, più alto sarà  il rapporto
+lettori per scrittore in ogni dato forum. Se ogni messaggio che pubblicate è visto da <span class="emphasis"><em>n</em></span>
+persone, allora quando <span class="emphasis"><em>n</em></span> cresce, la convenienza di fare uno sforzo extra per risparmiare
+tempo a questa gente sale con lui. E quando la gente vi vede imporre a voi stessi questo standard, lavorerà  per
+fare altrettanto nelle loro comunicazioni. Il risultato è, idealmente, un aumento dell'efficienza globale del
+progetto: quando c'è una scelta tra che <span class="emphasis"><em>n</em></span> persone facciano uno sforzo e una persona farlo,
+il progetto preferisce la seconda ipotesi.</p><p>Non perdetevi in iperboli. Esagerare nei messaggi in linea è una
+tipica corsa alle armi. Per esempio, una persona che segnala un bug potrebbe
+preoccuparsi che gli sviluppatori non gli presteranno sufficente attenzione, quindi lo
+descriverà  come un problema serio e bloccante che sta impedendo a lui (e a tutti i suoi
+amici/colleghi/cugini) di usare il software in maniera produttiva, quando è soltanto
+una piccola noia. Ma l'esagerazione non è limitata agli utenti&#8212;i programmatori a volte
+fanno lo stesso durante dibattiti tecnici, in particolare quando il disaccordo è su di una
+questione di gusto piuttosto che di correttezza:</p><div class="blockquote"><blockquote class="blockquote"><p>"Fare in questo modo renderebbe il codice totalmente
+     illegibile. Sarebbe un incubo mantenerlo, rispetto alla proposta di
+     J. Random..."</p></blockquote></div><p>Lo stesso sentimento in realtà  diventa
+<span class="emphasis"><em>più forte</em></span> quando espresso in maniera meno netta:</p><div class="blockquote"><blockquote class="blockquote"><p>"Funziona, ma non è ideale in termini di leggibilità  e mantenibilità , io penso.
+     La proposta di J.Random evita questi problemi perchè..."</p></blockquote></div><p>Non sarete in grado di liberarvi completamente dalle iperboli, e in generale
+non è necessario. Rispetto ad altre forme di cattiva comunicazione, l'iperbole non 
+è globalmente dannosa&#8212;danneggia principalmente chi la fa. I destinatari possono
+compensarla, soltanto il mittente perde un po' più credibilità  ogni volta. Quindi, per 
+l'amore della vostra stessa influenza nel progetto, provate a stare nel lato della moderazione.
+In questo modo, quando voi <span class="emphasis"><em>avete bisogno</em></span> di fare un'affermazione forte,
+la gente vi prenderà  seriamente.</p><p>Controllate due volte. Per ogni messaggio più lungo di un paragrafo di media grandezza,
+rileggetelo dall'inizio alla fine prima di mandarlo ma dopo che pensate di averlo finito una prima
+volta. Questo è un consiglio noto a chiunque abbia seguito lezioni di composizione, ma è soprattutto
+importante nelle discussioni online. Dato che il processo di comporre online tende ad essere
+altamente discontinuo (durante la scrittura di un messaggio, potreste aver bisogno di andare indietro
+e controllare altre email, visitare alcune pagine web, usare un comando per catturare il suo output di
+debug eccetera) è incredibilmente facile perdere il vostro senso di posizione nella narrazione. I 
+messaggi che sono stati composti in maniera discontinua e non controllati prima di essere inviati sono
+spesso riconoscibili come tali, soprattutto dallo smarrimento ( o così si dovrebbe sperare) dei loro autori.
+Prendetevi del tempo per rivedere cosa mandate. Più i vostri messaggi stanno assieme strutturalmente, più saranno
+letti.</p></div><div class="sect2" title="Tono"><div class="titlepage"><div><div><h3 class="title"><a name="writing-tone"></a>Tono</h3></div></div></div><p>Dopo aver scritto migliaia di messaggi, probabilmente
+noterete il vostro stile diventare conciso. Questa sembra essere la norma nella
+maggior parte dei forum tecnici, e non c'è nulla di sbagliato di per sè. Un grado
+di concisione che sarebbe inaccettabile nelle normali interazioni sociali è semplicemente
+la normalità  per chi ha a che fare con il free software. Qui c'è una risposta che una
+volta presi da una mailing list su qualche CMS (content management system) ben in
+evidenza:</p><pre class="screen">
+Puoi spiegare un po' di più esattamente qual'è il tuo problema,eccetera?
+
+Anche:
+
+Che versione di Slash stai usando? Non l'ho capito dal tuo precedente messaggio.
+
+Esattamente, come hai fatto il build del codice apache/mod_perl?
+
+Hai provato la patch di Apache 2.0 di cui si è parlato su slashcode.com?
+
+  Shane
+</pre><p>Ora, <span class="emphasis"><em>questo</em></span> è conciso! Nessun saluto, nessuna firma
+a parte il nome, e il messaggio stesso è solo un serie di domande poste nel modo più
+compatto possibile. La sua unica frase dichiarativa era una implicita critica al mio
+messaggio originale. Eppure, fui felice di vedere la email di Shane, e non presi la sua
+concisione come segno di nient'altro se non essere una persona occupata. Il mero fatto che 
+stava chiedendo domande, invece di ignorare il mio messaggio, significava che voleva spendere
+del tempo sul mio problema.</p><p>Tutti i lettori reagiranno positivamente al suo stile? Non necessariamente; dipende dalla
+persona e dal contesto. Per esempio, se qualcuno ha appena scritto riconoscendo di aver fatto
+un errore (magari aveva segnalato un bug), e sapete dalla vostra esperienza passata che questa persona tende ad essere 
+un po' insicura, allora mentre potreste scrivere una risposta compatta, dovreste fare in
+modo di completarlo con un qualche tipo di presa di coscienza dei suoi sentimenti. Il grosso
+della vostra risposta può essere una precisa, ingegneristica analisi della situazione, concisa
+quanto volete. Ma alla fine, scrivete qualcosa che indichi che la vostra concisione non
+deve essere presa per freddezza. Per esempio, se avete appena dato una gran quantità  di 
+consigli esattamente su come la persona deve riparare il bug, poi concludete con 
+"Buona fortuna, &lt;il vostro nome&gt;" per indicare che gli augurate del bene e che non 
+è pazzo. Uno smiley strategicamente piazzato o altro genere di emoticon può a volte essere
+anche abbastanza per rassicurare un interlocutore.</p><p>Può sembrare strano focalizzarsi tanto sui sentimenti dei partecipanti quanto sulla
+superficie di cosa dicono, ma per dirla semplicemente, i sentimenti condizionano la produttività .
+I sentimenti sono importanti anche per altre ragioni, ma anche limitandoci a livelli puramente
+utilitaristici, possiamo notare che persone infelici scrivono software peggiore, e meno. Data la
+natura ristretta della maggior parte dei media elettronici, comunque, non ci sarà  spesso alcuna
+indicazione di come una persona si sente. Dovrete farvi una educata idea basata su a) come la maggior
+parte della gente si sentirebbe in quella situazione, e b) cosa sapete di questa particolare persona
+da passate interazioni. Alcune persone preferiscono un atteggiamento diretto, e trattare semplicemente
+con chiunque come fossero faccia a faccia, con l'idea che se un partecipante non tira fuori che si sente
+in un particolare modo, allora uno non ha modo di trattare con lui come dovrebbe. Non seguo
+questo approccio, per alcune ragioni. Uno, la gente non si comporta così nella vita reale, quindi
+perchè dovrebbero online? Due, dato che la maggior parte delle interazioni avviene in
+forum pubblici, la gente tende ad essere ancora più riservata nell'esprimere emozioni
+che se fosse in privato. Per essere più precisi, spesso vogliono esprimere emozioni dirette
+agli altri, come gratitudine o rabbia, ma non emozioni dirette verso se stessi, come insicurezza
+o orgoglio. Comunque, la maggior parte degli umani lavora meglio quando sanno che gli altri
+sono al corrente del loro stato di pensiero. Prestando attenzione a piccoli indizi, potete solitamente
+indovinare giusto la maggior parte delle volte, e motivare la gente a rimanere coinvolta ad un livello
+maggiore di quello che altrimenti farebbero.</p><p>Certo non voglio dire che il vostro ruolo sia di essere un terapista di gruppo,
+aiutanto costantemente tutti a rimanere in contatto con i loro sentimenti. Ma facendo
+molta attenzione ai percorsi sul lungo periodo del comportamento umano, inizierete ad
+avere un'idea di loro come individui anche se non li avete mai incontrati faccia a faccia.
+Ed essendo sensibile al tono del vostro scrivere, potete avere una sorprendente influenza
+su come gli altri si sentono, per il bene finale del progetto.</p></div><div class="sect2" title="Riconoscere la maleducazione"><div class="titlepage"><div><div><h3 class="title"><a name="rudeness"></a>Riconoscere la maleducazione</h3></div></div></div><p>Una delle caratteristiche distintive della cultura open source è la sua
+	nozione di cosa costituisce maleducazione e cosa no.
+	Mentre le convenzioni descritte in seguito non sono peculiari dello sviluppo
+	di software libero, nè del software in generale&#8212; dovrebbero essere familiari
+	a chiunque lavori in matematica, scienze dure, o discipline ingegneristiche&#8212;il software
+	libero, con i suoi confini porosi e il costante afflusso di nuove leve, è un ambienete dove la gente
+	non abituata a queste convenzioni si contri con loro.</p><p>Cominciamo con le cose che <span class="emphasis"><em>non</em></span> sono maleducate:</p><p>Il criticismo tecnico, anche quando diretto e non filtrato, non è maleducato.
+	Invece, può essere una forma di adulazione: la critica sta dicendo, per implicazione,
+	che vale la pensa prendere seriamente in considerazione il suo bersaglio, e vale la 
+	pena spenderci un po' di tempo. Vale a dire, più sarebbe stato facile ignorare il post
+	di qualcuno, più diventa un complimento prendere del tempo per criticarlo (ovviamente a meno che la
+	critica diventi un attacco <span class="foreignphrase"><em class="foreignphrase">ad hominem</em></span> o qualche altra farma di palese 
+	maleducazione).</p><p>Anche domande grezze e spoglie, come quelle di Shane a me nella mail prima citata,
+	non sono maleducate. Domanede che in altri contesti sembrano fredde, retoriche o persino
+	ironiche, sono spesso intese come serie, e non hanno nessun obbiettivo nascosto tranne
+	ottenere informazioni il più velocemente possibile.
+	La famosa domanda del supporto tecnico "Il tuo computer è attaccato alla corrente?" è un classico esempio di questo.
+	La persona di supporto davvero ha bisogno di sapere se il tuo computer è attaccato alla corrente, e dopo i primi
+	giorni di lavoro, si è stancato di premettere alla domanda qualche educato preambolo ("Chiedo scusa, vorrei 
+	soltanto farle alcune semplici domande per escludere alcune possibilità. Alcune di queste sono molto
+	elementari,ma mi aiuti...").
+	A questo punto, non gli interessano più i preamboli, chiede direttamente: è attaccato o no?
+	Domande simili sono fatte di continuo nelle mailing list di software libero. L'intento non è 
+	insultare il destinatario, ma per escludere velocemente le spiegazioni più ovvie ( e magari le più
+	comuni). I destinatari che capiscono questo e rispondono di conseguenza, guadagnano punti nell'ottenere
+	una visione ampia senza chiedere pressantemente. Ma i destinatari che reagiscono male non devono 
+	essere neanche esclusi. E' solo uno scontro di culture, non è colpa di nessuno. Spiegate amabilmente che
+	le vostre domande (o critiche) non avevano significati nascosti; erano solo tesi ad ottenere (o trasmettere)
+	informazioni nel modo più efficiente possibile, nient'altro.</p><p>Cos'è allora maleducato?</p><p>Per lo stesso principio per cui un dettagliato criticismo tecnico
+	è una forma di adulazione, non fornire critica di qualità può essere
+	un insulto.
+	Non intendo semplicemente ignorare il lavoro di qualcuno, sia esso una proposta,
+	un cambiamento al codice, la segnalazione di un nuovo problema o altro.
+	A meno che non abbiate esplicitamente promesso in anticipo una risposta dettagliata,
+	va solitamente bene semplicemente non rispondere per niente. La gente assumerà che 
+	non avevate tempo di dire nulla. Ma se <span class="emphasis"><em>rispondete</em></span>, non
+	risparmiate; prendete il tempo per analizzare davvero le cose, fornire esempi
+	concreti dove appropriato, spulciare negli archivi per cercare post correlati
+	nel passato eccetera. O se non avete tempo di imbarcarvi in questo tipo di sforzo,
+	ma tuttavia avete bisogno di scrivere qualche tipo di risposta veloce, allora
+	scrivetelo apertamente nel messaggio ("Penso che ci sia un problema registrato per 
+	questo, ma sfortunatamente non ho avuto il tempo di cercarlo, mi dispiace").  
+	La cosa principale è riconoscere l'esistenza della norma culturale, o assecondandola
+	o riconoscendo apertamente di non aver avuto tempo. In entrambi i modi, la norma
+	è rispettata. Ma non rispettarla, allo stesso tempo non spiegando  <span class="emphasis"><em>perchè</em></span>
+	non l'avete fatto, è come dire che la discussione (e coloro che vi partecipano) non valeva il vostro tempo.
+	E' meglio mostrare che il vostro tempo è prezioso essendo chiari che essendo pigri.</p><p>Ci sono certamente molte altre forme di maleducazione, ma la maggior parte di queste non
+	sono peculiari del software libero, e il senso comune è una sufficiente guida per evitarle.
+	Vedete anche
+<a class="xref" href="setting-tone.html#prevent-rudeness" title="Stroncate sul Nascere la Scortesia">sezione chiamata «Stroncate sul Nascere la Scortesia»</a><span> in
+<a class="xref" href="getting-started.html" title="Capitolo 2. Partenza">Capitolo 2, <i>Partenza</i></a></span>, se non l'avete ancora fatto.</p></div><div class="sect2" title="Facce"><div class="titlepage"><div><div><h3 class="title"><a name="face"></a>Facce</h3></div></div></div><p>C'è una regione nel cervello umano che è dedicata in maniera specifica al 
+	riconoscimento delle facce. E' informalmente nota come 'area fusiforme della faccia',
+	e le sue capacità sono nella maggior parte innate, non imparate. Ne consegue che riconoscere
+	gli individui è talmente una capacità cruciale per la sopravvivenza che abbiamo
+	sviluppato hardware specializzato per farlo.</p><p>La collaborazione basata su Internet è quindi psicologicamente strana,
+	perchè implica una stretta collaborazione tra esseri umani che non riescono
+	praticamente mai ad identificarsi l'un l'altro con i metodi più naturali ed intuitivi:
+	il riconoscimento facciale innanzitutto, ma anche il suono della voce, la postura eccetera.
+	Per compensare a questo, provate ad usare un <em class="firstterm">nome immagine</em> consistente ovunque.
+	Potrebbe essere la parte iniziale del vostro indirizzo email (la parte prima del simbolo @), il vostro
+	username IRC, il nome che usate nei commit, lo username del tracciamento dei problemi, eccetera.
+	Questo nome è la vostra "faccia" online : una breve stringa identificativa che provvede ad alcuni degli stessi
+	usi della vostra vera faccia, anche se sfortunatamente non stimola lo stesso hardware integrato
+	nel cervello.</p><p>Il nome immagine dovrebbe essere qualche permutazione intuitiva del vostro
+	nome reale (il mio, per esempio, è "kfogel"). In alcune situazioni sarà comunque accompagnato
+	dal vostro nome completo, per esempio nelle testate delle email:</p><pre class="screen">
+From: "Karl Fogel" &lt;kfogel@whateverdomain.com&gt;
+</pre><p>In realtà, ci sono due cose in questo esemio. Come menzionato prima, il nome immagine
+	rimanda al nome reale in modo intuitivo. Inoltre, il nome reale è <span class="emphasis"><em>reale</em></span>.
+	cioè non è qualche appellativo costruito come:</p><pre class="screen">
+From: "Fantastico Hacker" &lt;fantasticohacker@undominio.com&gt;
+</pre><p>C'è un famosto fumetto di Paul Steiner, del 5 luglio 1993 uscito sul
+	 <em class="citetitle">The New Yorker</em>, che mostra un cane loggato ad un computer,
+	guardare in basso e dire ad un altro in modo cospirativo: "In Internet, nessuno
+	sa che sei un cane". Questo tipo di pensiero risiede probabilmente dietro a molte delle 
+	identità da fighi, auto-esaltanti che la gente si dà in rete&#8212;come se chiamarsi
+	"Fantastico Hacker" farà davvero credere alla gente di <span class="emphasis"><em>esserlo</em></span>.
+	Ma il fatto rimane: anche se nessuno sa che sei un cane, sei ancora un cane. Una fantastica
+	identità online non impressiona mai i lettori. Invece, li fa pensare che sei più
+	forma che sostanza, o semplicemente che sei insicuro. Usate il vostro vero nome per
+	tutte le interazioni, o se per qualche ragione avete bisogno di anonimato, allora costruite
+	un nome che sembri come un nome perfettamente reale, ed usatelo consistentemente.</p><p>Oltre a tenere il vostro nome immagine consistente, ci sono alcune cose che potete fare
+	per renderlo più attraente. Se avete un titolo ufficiale (per esempio "dottore", "professore", 
+	"direttore"), non ostentatelo, nè menzionatelo tranne quando è direttamente rilevante nella
+	conversazione. Il mondo hacker in generale, e la cultura del software libero in particolare,
+	tende a vedere l'esposizione del titolo come esclusiva e segno di insicurezza.
+	Va bene se il vostro titolo appare come parte del blocco di firma standard alla fine di ogni email,
+	solo non usatelo mai come mezzo per rinforzare la vostra posizione in una discussione&#8212;il tentativo
+	garantisce fuoco di risposta. Volete la gente che rispetta voi, non il titolo.</p><p>Parlando dei blocchi di firma: manteneteli brevi e gradevoli, o meglio ancora, inesistenti.
+	Evitate ingombranti disclaimer legali alla fine di ogni email, specialmente quando esprimono
+	sentimenti incompatibili con la partecipazione ad un progetto di software libero. Per esempio,
+	il seguente classico appare alla fine di ogni messaggio che un particolare utente manda su una
+	pubblica mailing list di cui faccio parte:</p><pre class="screen">
+OSSERVAZIONE IMPORTANTE
+
+Se avete ricevuto questa email per errore o volete leggere il nostro disclaimer
+per le email e la politica di monitoraggio, per favore fate riferimento sotto o contattate
+il mittente.
+
+Questa comunicazione proviene da Deloitte &amp; Touche LLP.  Deloitte &amp;
+Touche LLP è una società a responsabilità limitata registrata in Inghilterra e Galles con
+il numero registrato OC303675. Una lista dei nomi dei membri è disponibile
+per ispezioni a Stonecutter Court, 1 Stonecutter
+Street, London EC4A 4TR, United Kingdom, la sede principale dell'attività ed ufficio registrato. 
+Deloitte &amp; Touche LLP è autorizzato e regolato dalla Financial Services Authority.
+
+Questa comunicazione e tutti gli allegati contengono
+informazioni che sono confidenziali e possono essere legalmente protette.
+Sono per l'uso esclusivo dei destinatari. Se non siete il destinatario, per favore
+notate che ogni forma di comunicazione, pubblicazione, copia o uso di questa comunicazione
+o delle informazioni contenute o degli allegati è strettamente proibita e può essere illegale.
+Se avete ricevuto questa comunicazione per errore, per favore rimandatela con "ricevuta per errore"
+come oggetto a to IT.SECURITY.UK@deloitte.co.uk e poi cancellate la email e distruggetene ogni copia.
+
+Non si può garantire che le comunicazioni email siano sicure e senza errori,
+dato che le informazioni possono essere intercettate, corrotte, stralciate, perse,
+distrutte, in ritardo o incomplete, o contenenti virus. Non ci assumiamo
+la responsabilità di nessuno di questi fatti o delle loro conseguenze. Chiunque comunichi
+con noi via email accetta il rischio di farlo.
+
+Quando inviate ai nostri clienti, tutti le opinioni o i consigli contenuti in questa
+email ed ogni allegato sono soggetti ai termini e alle condizioni espresse nella lettera
+di ingaggio del cliente in uso a Deloitte &amp; Touche LLP.
+
+Opinioni, conclusioni e altre informazioni in questa email e tutti gli allegati che non
+riguardano gli affari ufficiali della ditta non sono da lei forniti nè supportati.
+</pre><p>Per qualcuno che si mostra appena per chiedere qualcosa ogni tanto, questo
+enorme disclaimer sembra un po' strano ma probabilmente non fa male. Comunque,
+se questa persona volesse partecipare attivamente al progetto, questa sbrodolata
+legale inizierebbe ad avere effetti più insidiosi. Manderebbe almeno due segnali
+potenzialmente distruttivi: primo, che questa persona non ha pieno controllo dei
+suoi strumenti&#8212;è intrappolato in qualche programma di posta aziendale che appioppa
+un noioso messaggio alla fine di ogni email, e non ha avuto modo di evitarlo&#8212;
+e, secondo, che ha poco o nessun supporto organizzativo per le sue attività di software libero.
+Si che l'organizzazione chiaramente non gli ha impedito di lasciare messaggi sulle mailing list,
+ma ha fatto sembrare i suoi messaggi nettamente ostili, come se il rischio di far uscire informazioni
+confidenziali debba smorzare tutte le altre priorità.</p><p>Se lavorate in un'azienda che insiste nell'aggiungere tali blocchi di firma
+a tutte le email in uscita, allora cercate di avere un account email gratis come, per esempio, <a class="ulink" href="gmail.google.com" target="_top">gmail.google.com</a>,
+<a class="ulink" href="www.hotmail.com" target="_top">www.hotmail.com</a>, o <a class="ulink" href="www.yahoo.com" target="_top">www.yahoo.com</a>, e usare questo come indirizzo per il progetto.</p></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp7601888" href="#idp7601888" class="para">20</a>] </sup>
+C'è stata un po' di interessante ricerca accademica su questo argomento; per esempio vedi
+ <em class="citetitle">Group Awareness in Distributed Software
+Development</em> di Gutwin, Penner, e Schneider. Questo articolo è stato online per un po', poi non disponibile,
+quindi online di nuovo a <a class="ulink" href="http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf" target="_top">http://www.st.cs.uni-sb.de/edu/empirical-se/2006/PDFs/gutwin04.pdf</a>.
+Quindi provate lì prima, ma siate pronti ad usare un motore di ricerca se si è di nuovo spostato.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="marketing.html">Indietro</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="common-pitfalls.html">Avanti</a></td></tr><tr><td width="40%" align="left" valign="top">Il Marketing </td><td width="20%" align="center"><a accesskey="h" href="index.html">Partenza</a></td><td width="40%" align="right" valign="top"> Evitare le Trappole Comuni</td></tr></table></div></body></html>

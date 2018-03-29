@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Choosing a License</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Choosing a License"><div class="titlepage"><div><div><h1 class="title"><a id="license-choosing"/>Choosing a License</h1></div></div></div><a id="license-choosing-mit-x"/><a id="license-bsd"/><p>When choosing a license to apply to your project, use an
+existing license instead of making up a new one.  And don't just use
+any existing license — use one of the widely-used,
+well-recognized existing licenses.</p><p>Such licenses are familiar to many people already.  If you use
+one of them, people won't feel they have to read the legalese in order
+to use your code, because they'll have already done so for that
+license a long time ago.  Thus, you reduce or remove one possible
+barrier to entry for your project.  They are also of a high quality:
+they are the products of much thought and experience; indeed most
+of them are revisions of previous versions of themselves, and the
+modern versions represent a great deal of accumulated legal and
+technical wisdom.  Unless your project has truly unusual needs, it is
+unlikely you could do better, even with a team of lawyers at your
+disposal.</p><p>Below is a list of licenses that in my opinion meets these
+criteria; in parentheses are the standard formal abbreviation for the
+license and an authoritative URL for its full text.  This list is not
+in order of preference, but rather in roughly descending order from
+strong copyleft at the top to completely non-copyleft at the bottom.
+The exact provisions of each license differ in various interesting
+ways (except for MIT and BSD, which differ only in uninteresting
+ways), and there isn't space here to explore all the possible
+ramifications of each for your project.  However, many good
+discussions of that sort are available on the Internet; in particular
+the Wikipedia pages for these licenses generally give good
+overviews.</p><p>If you have nothing else to guide you and you want a copyleft
+license, then choose either the GPL-3.0 or the
+AGPL-3.0 — the difference between them will be
+discussed below — and if you want a non-copyleft
+license, choose the MIT license.  I've put those licenses in boldface
+to reflect this:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><span class="bold"><strong>GNU General Public License version 3</strong></span> (<code class="code">GPL-3.0</code>, <a class="ulink" href="https://www.gnu.org/licenses/gpl.html">https://www.gnu.org/licenses/gpl.html</a>)</li><li class="listitem"><span class="bold"><strong>GNU Affero General Public License version 3</strong></span> (<code class="code">AGPL-3.0</code>, <a class="ulink" href="https://www.gnu.org/licenses/agpl.html">https://www.gnu.org/licenses/agpl.html</a>)</li><li class="listitem">Mozilla Public License 2.0 (<code class="code">MPL-2.0</code>, <a class="ulink" href="https://www.mozilla.org/MPL/">https://www.mozilla.org/MPL/</a>)</li><li class="listitem">GNU Library or "Lesser" General Public License version 3 (<code class="code">LGPL-3.0</code>, <a class="ulink" href="https://www.gnu.org/licenses/lgpl.html">https://www.gnu.org/licenses/lgpl.html</a>)</li><li class="listitem">Eclipse Public License 1.0 (<code class="code">EPL-1.0</code>, <a class="ulink" href="https://www.eclipse.org/legal/epl-v10.html">https://www.eclipse.org/legal/epl-v10.html</a>) <span class="emphasis"><em>(Note that version 2 of the EPL was almost ready as of mid-2014, and may be out by the time you read this.)</em></span></li><li class="listitem"><span class="bold"><strong>MIT license</strong></span> (<code class="code">MIT</code>, <a class="ulink" href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>)</li><li class="listitem">Apache License 2.0 (<code class="code">Apache-2.0</code>, <a class="ulink" href="https://apache.org/licenses/LICENSE-2.0">https://apache.org/licenses/LICENSE-2.0</a>)</li><li class="listitem">BSD 2-Clause ("Simplified" or "FreeBSD") license (<code class="code">BSD-2-Clause</code>, <a class="ulink" href="https://opensource.org/licenses/BSD-2-Clause">https://opensource.org/licenses/BSD-2-Clause</a>)</li></ul></div><p>Note that there are some arguments for choosing the Apache
+License 2.0 as a default non-copyleft license, and they are nearly as
+compelling as those for choosing MIT.  In the end, I come down in
+favor of MIT because it is extremely short, and both widely used and
+widely recognized<sup>[<a id="idm4221" href="#ftn.idm4221" class="footnote">100</a>]</sup>.  While the
+Apache License 2.0 has the advantage of containing some explicit
+defenses against misuse of software patents, which might be important
+to your organization depending on the kind of project you're
+launching, the MIT license is fully compatible with all versions of
+the GNU General Public License, meaning that you can distributed,
+under any version of the GPL, mixed-provenance works that contain
+MIT-licensed code.  The GPL-compatibility situation for the Apache
+License, on the other hand, is more complicated — by
+some interpretations, it is compatible with GPL version 3 only.
+Therefore, to avoid giving your downstream redistributors the headache
+of having to read sentences like the preceding ones, I just recommend
+the MIT license as the default non-copyleft license for anyone who
+doesn't have a reason to choose otherwise.</p><p>The mechanics of applying a license to your project are
+discussed in <a class="xref" href="ch02s02.html#license-quickstart-applying" title="How to Apply a License to Your Software">the section called “How to Apply a License to Your Software”</a><span> in <a class="xref" href="ch02.html" title="Chapter 2. Getting Started">Chapter 2, <em>Getting Started</em></a></span>.</p><div class="sect2" title="The GNU General Public License"><div class="titlepage"><div><div><h2 class="title"><a id="license-choosing-gpl"/>The GNU General Public License</h2></div></div></div><p>If you prefer that your project's code not be used in
+proprietary programs, or if you at least don't care whether or not it
+can be used in proprietary programs, the GNU General Public License is
+a good choice.</p><p>When writing a code library that is meant mainly to be used as
+part of other programs, consider carefully whether the restrictions
+imposed by the GPL are in line with your project's goals.  In some
+cases — for example, when you're trying to unseat a competing,
+proprietary library that offers the same functionality — it may
+make more strategic sense to license your code in such a way that it
+can be mixed into proprietary programs, even though you would
+otherwise not wish this.  The Free Software Foundation even fashioned
+an alternative to the GPL for such circumstances: the <em class="firstterm">GNU
+Lesser GPL</em><sup>[<a id="idm4233" href="#ftn.idm4233" class="footnote">101</a>]</sup> The LGPL has looser restrictions than the GPL,
+and can be mixed more easily with non-free code.  The FSF's page about
+the LGPL, <a class="ulink" href="https://www.gnu.org/licenses/lgpl.html">https://www.gnu.org/licenses/lgpl.html</a>, has a good discussion of when to
+use it.</p><div class="sect3" title="The &quot;or any later version&quot; Option: Future-Proofing the GPL"><div class="titlepage"><div><div><h3 class="title"><a id="gpl-future-proofing"/>The "or any later version" Option: Future-Proofing the GPL</h3></div></div></div><p>The GPL has a well-known optional recommendation that you
+release software under the current version of the GPL while giving
+downstream recipients the option to redistribute it under any
+<span class="emphasis"><em>later</em></span> (i.e., future) version.  The way to offer
+this option is to put language like this in the license headers (see
+<a class="xref" href="ch02s02.html#license-quickstart-applying" title="How to Apply a License to Your Software">the section called “How to Apply a License to Your Software”</a><span>
+in <a class="xref" href="ch02.html" title="Chapter 2. Getting Started">Chapter 2, <em>Getting Started</em></a></span>) of the actual source
+files:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, <span class="bold"><strong>or (at your option) any later
+version.</strong></span></em></span></p></blockquote></div><p>(Emphasis added.)</p><p>Whether you want to offer that option depends largely on how
+likely you think the Free Software Foundation is to make GPL revisions
+that you would approve of.  I think the FSF has done a good job of
+that so far, and I generally do include that option when I use the
+GPL.  That way I don't have to be responsible for updating the
+licenses myself forever — which is good, since I won't
+be around forever.  Others can do it, either just to keep the software
+license up-to-date with legal developments, or to solve some future
+license compatibility problem that couldn't have been anticipated now
+(for example, see the compatibility discussion in <a class="xref" href="ch09s04.html#gnu-affero-gpl" title="The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code">the section called “The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code”</a> below).</p><p>Not everyone feels the same way, however; most notably, the
+Linux kernel is famously licensed under the GNU GPL version 2
+<span class="emphasis"><em>without</em></span> the "or any later version" clause, and
+influential kernel copyright holders, especially Linus Torvalds, have
+expressed clearly that they do not intend to move its license to
+version 3.0.</p><p>This book cannot answer the question of whether you should
+include the option or not.  You now know that you have the choice, at
+least, and that different people come to different conclusions about
+it.</p></div><div class="sect3" title="The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code"><div class="titlepage"><div><div><h3 class="title"><a id="gnu-affero-gpl"/>The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code</h3></div></div></div><p>In 2007, the Free Software Foundation released a variant of the
+GPL called the <em class="firstterm">GNU Affero GPL</em>.  Its purpose was to bring
+copyleft-style sharing provisions to the increasing amount of code
+being run as hosted services — that is, software that
+runs "in the cloud" on remote servers, that users interact with only
+over the network, and that therefore is not directly distributed to its
+users as executable or source code.  Many such services use GPL'd
+software, often with extensive modifications, yet could avoid
+publishing their changes because they weren't actually distributing
+code.</p><p>The AGPL's solution to this was to take the GPL and add a
+"Remote Network Interaction" clause, stating "<span class="emphasis"><em>...if you
+modify the Program, your modified version must prominently offer all
+users interacting with it remotely through a computer network ... an
+opportunity to receive the Corresponding Source of your version ... at
+no charge, through some standard or customary means of facilitating
+copying of software.</em></span>" This expanded the GPL's enforcement
+powers into the new world of application service providers.  The Free
+Software Foundation recommends that the GNU AGPL 3.0 be used for any
+software that will commonly be run over a network.</p><p>Note that the AGPL-3.0 is not directly compatible with GPL-2.0,
+though it is compatible with GPL-3.0.  Since most software licensed
+under GPL-2.0 includes the "or any later version" clause anyway, that
+software can just be shifted to GPL-3.0 if and when you need to mix it
+with AGPL-3.0 code.  However, if you need to mix with programs
+licensed strictly under the GPL-2.0 (that is, programs licensed
+without the "or any later version" clause), the AGPL3.0 wouldn't be
+compatible with that.</p><p>Although the history of the AGPL-3.0 is a bit complicated, the
+license itself is simple: it's just the GPL-3.0 with one extra clause
+about network interaction.  The Wikipedia article on the AGPL is
+excellent: <a class="ulink" href="https://en.wikipedia.org/wiki/Affero_General_Public_License">https://en.wikipedia.org/wiki/Affero_General_Public_License</a></p></div><div class="sect3" title="The Copyright Holder Is Special, Even In Copyleft Licenses"><div class="titlepage"><div><div><h3 class="title"><a id="copyright-holder-is-special"/>The Copyright Holder Is Special, Even In Copyleft Licenses</h3></div></div></div><p>One common misunderstanding is that licensing your software
+under the GPL or AGPL requires you to provide source code to anyone
+who requests it under the terms of the license.  But that's not quite
+how it works.  If you are the <span class="emphasis"><em>sole</em></span> copyright
+holder in a piece of software, then you are not bound by the copyright
+terms you chose, because (essentially) you can't be forced to sue
+yourself for copyright infringement.  You can enforce the terms on
+others, but it's up to you to decide whether and when those terms
+apply to you.  After all, because you had the software originally, you
+never "distributed" it to yourself and thus are not bound by the
+redistribution requirements of the license.</p><p>Of course, this only applies to situations where you own the
+whole copyright.  If you include others' GPL- or AGPL-licensed code in
+your project and then distribute that project, you are not the sole
+copyright holder, and so you are as bound by the original terms as
+anyone else who uses and redistributes that code, either unmodified or
+as part of a derivative work.</p></div><div class="sect3" title="Is the GPL Free or Not Free?"><div class="titlepage"><div><div><h3 class="title"><a id="is-the-gpl-free"/>Is the GPL Free or Not Free?</h3></div></div></div><p>One consequence of choosing the GPL (or AGPL) is the
+possibility — small, but not infinitely small — of finding
+yourself or your project embroiled in a dispute about whether or not
+the GPL is truly "free", given that it places some restrictions on
+how you redistribute the code — namely, the restriction that the
+code cannot be distributed under any other license.  For some people,
+the existence of this restriction means the GPL is therefore "less
+free" than non-copyleft licenses.  Where this
+argument usually goes, of course, is that since "more free" must be
+better than "less free" (after all, who's not in favor of freedom?),
+it follows that those licenses are better than the GPL.</p><p>This debate is another popular holy war (see
+<a class="xref" href="ch06s03.html#holy-wars" title="Avoid Holy Wars">the section called “Avoid Holy Wars”</a><span> in
+<a class="xref" href="ch06.html" title="Chapter 6. Communications">Chapter 6, <em>Communications</em></a></span>).  Avoid participating
+in it, at least in project forums.  Don't attempt to prove that the
+GPL is less free, as free, or more free than other licenses.  Instead,
+emphasize the specific reasons your project chose the GPL.  If the
+recognizability of license was a reason, say that.  If the enforcement
+of a free license on derivative works was also a reason, say that too,
+but refuse to be drawn into discussion about whether this makes the
+code more or less "free".  Freedom is a complex topic, and there is
+little point talking about it if terminology is going to be used as a
+stalking horse for substance.</p><p>Since this is a book and not a mailing list thread, however, I
+will admit that I've never understood the "GPL is not free" argument.
+The only restriction the GPL imposes is that it prevents people from
+imposing <span class="emphasis"><em>further</em></span> restrictions.  To say that this
+results in less freedom has always seemed perverse to me.  If the
+retention of monopoly is somehow a freedom to be protected, then the
+word "freedom" is no longer meaningful.</p></div></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm4221" href="#idm4221" class="para">100</a>] </sup>License choice trends for open source
+repositories on GitHub are a good source of information on this.  See
+<a class="ulink" href="https://github.com/blog/1964-open-source-license-usage-on-github-com">https://github.com/blog/1964-open-source-license-usage-on-github-com</a>
+for statistics from March of 2015.</p></div><div class="footnote"><p><sup>[<a id="ftn.idm4233" href="#idm4233" class="para">101</a>] </sup>Originally named the
+<em class="firstterm">GNU Library GPL</em>, and later renamed by the
+FSF).</p></div></div></div></body></html>

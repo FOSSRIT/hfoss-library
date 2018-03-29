@@ -1,0 +1,94 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Asignación y propiedad del Copyright</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="legal.html" title="Capítulo 9. Licencias, Copyrights y Patentes"><link rel="prev" href="license-choosing.html" title="Eligiendo una licencia"><link rel="next" href="dual-licensing.html" title="Concesión de licencias dual"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Asignación y propiedad del Copyright</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="license-choosing.html">Anterior</a> </td><th width="60%" align="center">Capítulo 9. Licencias, Copyrights y Patentes</th><td width="20%" align="right"> <a accesskey="n" href="dual-licensing.html">Siguiente</a></td></tr></table><hr></div><div class="sect1" title="Asignación y propiedad del Copyright"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="copyright-assignment"></a>Asignación y propiedad del Copyright</h2></div></div></div><p>Hay tres maneras de gestionar la propiedad del copyrighy
+en el software libre contribuído por mucha gente. La primera es 
+ignorar totalmente el asunto del copyright (no recomiendo esta).
+La segunda es recoger un <em class="firstterm">acuerdo del contribuyente a la 
+licencia</em>(<em class="firstterm">CLA</em>, de las iniciales 
+de <span class="emphasis"><em>contributor license agreement</em></span>) de cada persona
+que trabaja en el proyecto, garantizando explícitamente al proyecto
+el derecho de usar el código de esa persona. Generalmente esto es 
+suficiente para la mayoría de proyectos, y algo positivo está en que 
+en algunas jurisdicciones, los CLAs pueden ser enviados por correo
+electrónico. El tercer modo es obtener asignaciones de propiedad del
+copyright de parte de los contribuyentes, de modo que el proyecto
+(por ejemplo, alguna entidad legal, generalmente sin ánimo de lucro)
+es la propietaria de todo el copyright. Esta es la manera más 
+hermética legalmente, pero es también la más onerosa para los 
+contribuyentes, sólo algunos proyectos insisten en ella.
+</p><p>Nótese que incluso bajo la propiedad centralizada del
+    copyright, el código permanece libre, porque las licencias
+    de software libre no dan al propietario del copyrifht
+    el derecho a apropiarse retroactivamente de todas las copias
+    del código. Por lo tanto, incluso si el proyecto, como entidad 
+    jurídica,  de repente decide cambiar y empezar a distribuir
+    el código bajo una licencia restrictiva, eso no causaría un 
+    problema a la comunidad. Los otros desarrolladores podrían 
+    simplemente comenzar un fork basado en la última copia libre del código,
+    y continuar como si nada hubiera pasado. Debido a que saben
+    que pueden hacer eso, muchos contribuyentes cooperan cuando
+    se les pide firmar un CLA o asignar el copyright.</p><div class="sect2" title="No hacer nada"><div class="titlepage"><div><div><h3 class="title"><a name="copyright-assignment-none"></a>No hacer nada</h3></div></div></div><p>Algunos proyectos nunca recogen CLAs o asignaciones de copyright
+    de sus contribuyentes. En lugar de eso, aceptan el código
+    siempre que quede razonablemente claro que el contribuyente
+    pretendía que fuera incluído en el proyecto.</p><p>Bajo circunstancias normales, eso es suficiente.
+    Pero de vez en cuando alguien puede decidir demandar
+    por infringimiento del copyright, alegando
+    que ellos son los verdaderos propietarios del código en 
+    cuestión y que nunca accedieron a que fuera distribuído por
+    el proyecto bajo una licencia libre. Por ejemplo, el Grupo SCO 
+    hizo algo como esto con el proyecto Linux, veáse
+    <a class="ulink" href="http://en.wikipedia.org/wiki/SCO-Linux_controversies" target="_top">http://en.wikipedia.org/wiki/SCO-Linux_controversies</a>
+    para más detalles. Cuando esto ocurre, el proyecto no tiene
+    documentación que demuestre que el contribuyente formalmente ha
+    garantizado el derecho a utilizar el código, que puede hacer
+    la defensa legal más complicada.</p></div><div class="sect2" title="Contributor License Agreements"><div class="titlepage"><div><div><h3 class="title"><a name="copyright-assignment-cla"></a>Contributor License Agreements</h3></div></div></div><p>Los CLAs probablemente ofrecen el mejor compromiso entre
+seguridad y conveniencia.Un CLA es habitualmente un formulario electrónico
+que un desarrollador rellena y envía al proyecto. En muchas jurisdicciones,
+el envío por correo electrónico es suficiente. Una firma digital segura puede
+o no ser requerida; consulta a un abogado para encontrar que método encaja
+mejor con tu proyecto.</p><p>Muchos proyectos usan dos CLAs ligeramente diferentes, uno para
+individuos, y otra para contribuyentes corporativos. Pero en ambos casos,
+el mensaje es el mismo: el contribuyente garantiza al proyecto el derecho
+<span class="emphasis"><em>"perpetuo, mundial, no exclusivo, sin cargo,
+libre royalties por derechos de autor, licencia de copyright irrevocable para reproducir,
+hacer trabajos derivados, mostrar públicamente, ejecución pública, sublicenciar,
+y distribuir las contribuciones y los trabajos derivados."</em></span> 
+De nuevo, deberías tener un abogado para aprobar cualquier CLA,
+pero si introduces todos estos adjetivos en él, probablemente esté bien.</p><p>Cuando solicites CLAs a los contribuyentes, asegúrate de remarcar que
+<span class="emphasis"><em>no</em></span>  estás solicitando transferencia de copyright. De hecho,
+muchos CLAs empiezan recordando esto al lector:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Esto sólo es un acuerdo de licencia: no transfiere
+la propiedad intelectual y no cambia tus derechos a usar tus propias
+contribuciones para cualquier otro propósito.</em></span></p></blockquote></div><p>Aquí hay algunos ejemplos:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>CLAs para individuales:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><a class="ulink" href="http://apache.org/licenses/icla.txt" target="_top">http://apache.org/licenses/icla.txt</a>
+      </p></li><li class="listitem"><p><a class="ulink" href="http://code.google.com/legal/individual-cla-v1.0.html" target="_top">http://code.google.com/legal/individual-cla-v1.0.html</a>
+      </p></li></ul></div></li><li class="listitem"><p>CLAs para corporaciones:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><a class="ulink" href="http://apache.org/licenses/cla-corporate.txt" target="_top">http://apache.org/licenses/cla-corporate.txt</a>
+      </p></li><li class="listitem"><p><a class="ulink" href="http://code.google.com/legal/corporate-cla-v1.0.html" target="_top">http://code.google.com/legal/corporate-cla-v1.0.html</a>
+      </p></li></ul></div></li></ul></div></div><div class="sect2" title="Transferencia de Copyright"><div class="titlepage"><div><div><h3 class="title"><a name="copyright-assignment-transfer"></a>Transferencia de Copyright</h3></div></div></div><p>La transferencia de Copyright significa que el contribuyente
+asigna al proyecto la propiedad intelectual en sus contribuciones.
+Idealmente, se realiza sobre papel y envíado mediante fax o correo 
+postal al proyecto.</p><p>Algunos proyectos insisten en la transferencia total porque que 
+una sola entidad legal posea el copyright de todo el código puede ser 
+útil si alguna vez los términos de la licencia de código abierto deben 
+hacerse valer en un tribunal. Si no existe una entidad única que tenga
+el derecho de hacerlo, todos los contribuyentes deberían cooperar, pero 
+algunos podrían no tener tiempo o no poder ser contactados cuando el 
+problema surja.</p><p>Distintas organizaciones aplican diferentes cantidades de rigor en
+la tarea de recolectar asignaciones. Algunas simplemente solicitan un 
+manifiesto informal del contribuyente en una lista de correo pública &#8212;
+algo en la línea de "Por la presente otorgo los derechos de autor en este 
+código al proyecto, con arreglo a las mismas condiciones que el resto del 
+código". Algún abogado de aquellos con los que he hablado dice que es suficiente,
+presumiblemente porque ocurre en un contexto en el que la asignación de los derechos
+de autor es habitual y esperada, y porque representa un esfuerzo de buena fé por parte
+del proyecto para determinar las verdaderas intenciones del desarrollador.
+Por otro lado, la Free Software Foundation va al otro extremo: solicitan a los
+contribuyentes a firmar físicamente y enviar por correo postal un documento con
+un manifiesto formal de asignación de copyright, algunas veces sólo por 
+la contribución en cuestión, otras por la presente y futuras contribuciones.
+Si el desarrollador está empleado, la FSF solicita al empleador que lo 
+firme también.</p><p>La paranoia de la FSF es comprensible. Si alguien viola los términos
+de la GPL incorporando parte de su software en software propietario, la FSG 
+necesitará demandar en un juzgado, y querrán que sus derechos de autor sean
+lo más herméticos posible cuando esto suceda. Dado que la FSF es titular de los
+derechos de autor de gran cantidad de software muy popular, esto se ve como una
+posibilidad real. Si tú organización necesita ser igualmente escrupulosa es algo 
+que sólo tú puedes decidir, en consulta con los abogados. En general, a menos que 
+exista alguna razón específica para que tu proyecto requiera asignación de todos
+los derechos de autor, utiliza los CLAs: son más cómodos para todo el mundo.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="license-choosing.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="legal.html">Subir</a></td><td width="40%" align="right"> <a accesskey="n" href="dual-licensing.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Eligiendo una licencia </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Concesión de licencias dual</td></tr></table></div></body></html>

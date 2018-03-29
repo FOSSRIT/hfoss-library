@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>Karl Fogel</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <link rev="made" href="mailto:kfogel@red-bean.com" />
+  <meta name="Author" content="Karl Fogel" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Resumé / Curriculum Vitae for Karl Fogel" />
+</head>
+
+<body>
+
+<script type="text/javascript">
+    <!-- Make sure we don't get stuck someone else's frameset. -->
+    if (top.location != self.location) {
+            top.location = self.location
+    }
+</script>
+
+<div id="mainbody">
+
+<h1>Karl Fogel</h1>
+
+  <div id="contactinfo">
+    <a href="http://www.producingoss.com/cv/general.html"
+            >http://www.producingoss.com/cv/general.html</a><br/>
+    <a href="http://www.red-bean.com/kfogel/contact.html"
+      >kfogel@producingoss.com</a><br/>
+    +1&nbsp;(773)&nbsp;351-1729<br/>
+    Personal home page: <a href="http://www.red-bean.com/kfogel/"
+                                           >red-bean.com/kfogel</a>
+  </div>
+
+<!-- ####################################################### -->
+<div id="publications" title="publications">
+<h2>Books and Articles</h2>
+
+<dl>
+  <dt>
+    <span class="subhead"><a href="http://producingoss.com"
+    ><b><i>Producing Open Source Software: How to
+    Run a Successful Free Software Project</i></b></a></span>
+  </dt>
+  <dd>
+    <p>Book, 272 pages, published 2005, O'Reilly Media, ISBN&nbsp;0-596-00759-0.<br/>
+       Also online under an open copyright:
+       <a href="http://www.producingoss.com/"
+               >http://www.producingoss.com/</a>
+    </p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a href="http://cvsbook.red-bean.com"
+    ><b><i>Open Source Development With CVS</i></b></a></span>
+  </dt>
+  <dd>
+    <p>Book, 315 pages, published 1999, Coriolis, ISBN&nbsp;1-57610-490-7.<br/>
+       Also online under an open copyright:
+       <a href="http://cvsbook.red-bean.com/"
+               >http://cvsbook.red-bean.com/</a><br/>
+       (Now in 3rd edition, as revised by Moshe Bar.)</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a
+    href="http://www.red-bean.com/kfogel/beautiful-teams/bt-chapter-21.html"
+    <b><i>Teams and Tools</i></b></a></span>
+  </dt>
+  <dd>
+    <p>Chapter 21 of the book <a
+    href="http://oreilly.com/catalog/9780596518028" >Beautiful
+    Teams</a> (O'Reilly Media, 2009, ISBN 0-596-51802-1 / 9780596518028).<br/>
+    Also online under an open copyright.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a
+    href="http://www.red-bean.com/kfogel/beautiful-code/bc-chapter-02.html"
+    ><b><i>Subversion's Delta Editor: Interface as Ontology</i></b></a></span>
+  </dt>
+  <dd>
+    <p>Chapter 2 of the book <a
+       href="http://beautifulcode.oreillynet.com/"
+       >Beautiful Code</a> (O'Reilly Media, 2007, ISBN 0-596-51004-7).<br/>
+       Also online under an open copyright.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a
+href="http://questioncopyright.org/promise"
+    ><b><i>The Promise of a Post-Copyright World</i></b></a></span>
+  </dt>
+  <dd>
+    <p>An article about expanding open source principles beyond the
+       software field.<br/>
+       Online under an open copyright.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a
+href="http://www.onlamp.com/pub/a/onlamp/2005/09/29/what-is-free-software.html"
+    ><b><i>What is Free Software?</i></b></a></span>
+  </dt>
+  <dd>
+    <p>An article at O'ReillyNet that explains free software to the
+       general reader.<br/>
+       Online under an open copyright.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><a
+    href="http://www.gnu.org/philosophy/why-audio-format-matters.html"
+    ><b><i>Why Audio Format Matters</i></b></a></span>
+  </dt>
+  <dd>
+    <p>An article about audio formats and software patents, written
+       for the Free Software Foundation.<br/>
+       Online under an open copyright.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b><i>Linux Bible</i></b>
+                            <i>(two chapters)</i></span>
+  </dt>
+  <dd>
+    <p>Wrote the chapters on Emacs and shell customization in
+       the <i>Linux User's Guide</i>, later published in the
+       <i>Linux Bible</i> from Yggdrasil Computing,
+       ISBN&nbsp;1-88360-10-X.</p>
+  </dd>
+
+</dl>
+</div>
+
+<!-- ####################################################### -->
+<div id="experience" title="experience">
+<h2>Experience</h2>
+
+<dl>
+
+  <dt>
+    <span class="subhead"><b>O'Reilly Media / Civic Commons</b>&nbsp;&nbsp;&nbsp;<i>June&nbsp;2010&nbsp;-&nbsp;present</i></span>
+  </dt>
+  <dd>
+    <p>Open Civics Development Specialist.  Help define and implement the development and community aspects of open government / Gov 2.0 projects.  Assist in the development of the non-profit organizations <a href="http://codeforamerica.org/" >Code for America</a> and <a href="http://civiccommons.org/" >Civic Commons</a>.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Canonical, Ltd</b>&nbsp;&nbsp;&nbsp;<i>Dec&nbsp;2008&nbsp;-&nbsp;May&nbsp;2010</i></span>
+  </dt>
+  <dd>
+    <p>Launchpad Ombudsman.  Managed the open-sourcing of <a href="http://launchpad.net/" >Launchpad.net</a> and, with the Canonical Launchpad engineering team, helped initiate a development community around it.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>QuestionCopyright.org</b>&nbsp;&nbsp;&nbsp;<i>Feb&nbsp;2007&nbsp;-&nbsp;present</i></span>
+  </dt>
+  <dd>
+    <p>Founder and President (part-time, non-profit).</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Independent&nbsp;consulting</b>&nbsp;&nbsp;&nbsp;<i>Jan&nbsp;2007&nbsp;-&nbsp;Dec&nbsp;2009</i></span>
+  </dt>
+  <dd>
+    <p>Independent consulting on the Subversion version control system
+    and on open source processes.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Google,&nbsp;Inc</b>&nbsp;&nbsp;&nbsp;<i>May&nbsp;2006&nbsp;-&nbsp;Oct&nbsp;2006</i></span>
+  </dt>
+  <dd>
+    <p>Open Source Program Specialist.  Open source training and
+    education, helping open source internal code, helping fund open
+    source organizations.  Resigned due to long commute; parted on
+    amicable terms and happy to provide references.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>CollabNet,&nbsp;Inc</b>&nbsp;&nbsp;&nbsp;<i>Feb&nbsp;2000&nbsp;-&nbsp;Apr&nbsp;2006</i></span>
+  </dt>
+  <dd>
+    <p>Managed creation and development of
+    <a href="http://subversion.apache.org/">Subversion</a>, an open
+    source version control system.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>onShore,&nbsp;Inc</b>&nbsp;&nbsp;&nbsp;<i>Dec&nbsp;1997&nbsp;-&nbsp;Jan&nbsp;2000</i></span>
+  </dt>
+  <dd>
+    <p>Programmer, release manager, resident CVS guru.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Yunnan&nbsp;University,&nbsp;Kunming,&nbsp;PR&nbsp;China</b>&nbsp;&nbsp;&nbsp;<i>Sep&nbsp;1996&nbsp;-&nbsp;Jul&nbsp;1997</i></span>
+   </dt>
+   <dd>
+    <p>Taught English and general computing at the undergraduate
+       level: Unix system administration, user-level applications, C
+       programming.  While there, implemented CVS's anonymous
+       read-only repository access feature.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Cyclic&nbsp;Software</b>&nbsp;&nbsp;&nbsp;<i>May&nbsp;1995&nbsp;-&nbsp;Jan&nbsp;1996</i></span>
+  </dt>
+  <dd>
+    <p>Co-founder and General Partner, with Jim Blandy; business
+    included selling CVS technical support and custom
+    development.  Ported CVS client to OS/2, implemented
+    password-authenticating server and read-only repository access.
+    We sold Cyclic Software to Jim Kingdon in early 1996.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>University&nbsp;of&nbsp;Illinois&nbsp;at&nbsp;Urbana-Champaign</b>&nbsp;&nbsp;&nbsp;<i>Jan&nbsp;1994&nbsp;-&nbsp;May&nbsp;1995</i></span>
+  </dt>
+  <dd>
+    <p>Programmer in the microbiology department, laboratory of 
+    <a href="http://en.wikipedia.org/wiki/Carl_Woese" >Carl Woese</a>.
+    Developed a gene sequence alignment editor
+    (<a href="http://www.red-bean.com/ale/">ALE</a>) for
+    microbiologists at UIUC and the University of Indiana.</p>
+  </dd>
+
+</dl>
+</div>
+
+<!-- ####################################################### -->
+<div id="projects" title="projects">
+<h2>Projects</h2>
+
+<dl>
+  <dt>
+    <span class="subhead"><b>Subversion</b></span>&nbsp;&nbsp;(<a
+    href="http://subversion.apache.org/"
+         >http://subversion.apache.org/</a>)
+  </dt>
+  <dd>
+    <p>Founding committer and long-time developer; no longer coding but
+       still active in community meta-development.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>GNU&nbsp;Emacs</b></span>&nbsp;&nbsp;(<a
+    href="http://www.gnu.org/software/emacs/emacs.html"
+         >http://www.gnu.org/software/emacs/emacs.html</a>)
+  </dt>
+  <dd>
+    <p>Committer, maintaining three packages in core distribution:
+    <a href="http://cvs.savannah.gnu.org/viewcvs/emacs/lisp/bookmark.el?rev=HEAD&root=emacs&view=log">bookmark.el</a>,
+    <a href="http://cvs.savannah.gnu.org/viewcvs/emacs/lisp/mail/mail-hist.el?rev=HEAD&root=emacs&view=log">mail-hist.el</a>, and
+    <a href="http://cvs.savannah.gnu.org/viewcvs/emacs/lisp/saveplace.el?rev=HEAD&root=emacs&view=log">saveplace.el</a>.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>QuestionCopyright.org</b></span>&nbsp;&nbsp;(<a
+    href="http://www.questioncopyright.org/"
+         >http://www.questioncopyright.org/</a>)
+  </dt>
+  <dd>
+    <p>Editor.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>Launchpad</b></span>&nbsp;&nbsp;(<a
+    href="https://launchpad.net/"
+         >https://launchpad.net/</a>)
+  </dt>
+  <dd>
+    <p>Developer, sometime ombudsman.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>CVS</b></span>&nbsp;&nbsp;(<a
+    href="http://cvs.nongnu.org/"
+         >http://cvs.nongnu.org/</a>)
+  </dt>
+  <dd>
+    <p>Former co-maintainer and committer, implemented anonymous
+       read-only repository access feature in 1997; no longer active.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>cvs2svn</b></span>&nbsp;&nbsp;(<a
+    href="http://cvs2svn.tigris.org/"
+         >http://cvs2svn.tigris.org/</a>)
+  </dt>
+  <dd>
+    <p>Former co-maintainer, still a committer but no longer active.</p>
+  </dd>
+
+  <dt>
+    <span class="subhead"><b>cvs2cl</b></span>&nbsp;&nbsp;(<a
+    href="http://www.red-bean.com/cvs2cl/"
+         >http://www.red-bean.com/cvs2cl/</a>)
+  </dt>
+  <dd>
+    <p>Original author, still technically a committer, but handed off
+       primary maintenance long ago.</p>
+  </dd>
+
+</dl>
+
+<p style="font-size: 80%; font-style: italic;">(For detailed open source activity, see my account at the aggregator <a href="https://www.ohloh.net/accounts/kfogel" >ohloh.net</a>.)</p>
+</div>
+
+<!-- ####################################################### -->
+<div id="programming" title="programming">
+<h2>Programming Languages and Environments</h2>
+
+    <p>C, Lisp/Scheme, Python, Perl, SQL, Bourne&nbsp;shell, Emacs,
+    Unix, X&nbsp;Windows, XML, HTML, CSS, SVN, CVS, XQR.</p> 
+
+
+<!-- ####################################################### -->
+<h2>Awards</h2>
+
+    <p><a
+    href="http://googlecode.blogspot.com/2007/07/drum-roll-winners-of-2007-google.html"
+    >2007 Google&ndash;O'Reilly Open Source Award</a> for
+    Best Community Builder.</p>
+
+    <p><a
+    href="http://www.ddj.com/architect/187900423?pgno=3"
+    >2006 Jolt Productivity Award</a> for the book <cite>Producing
+    Open Source Software</cite>.</p>
+</div>
+
+<!-- ####################################################### -->
+<div id="education" title="education">
+<h2>Education</h2>
+
+  <p>B.A. Oberlin College, 1994.  East Asian Studies major, Chinese
+  language concentration.</p>
+
+</div>
+</body>
+</html>

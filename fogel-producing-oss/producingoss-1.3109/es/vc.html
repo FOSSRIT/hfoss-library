@@ -1,0 +1,505 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Control de Versiones</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producir Software de Código Abierto"><link rel="up" href="technical-infrastructure.html" title="Capítulo 3. Infraestructura Técnica"><link rel="prev" href="message-forums.html" title="Listas de Correo / Foros de Mensajes"><link rel="next" href="bug-tracker.html" title="Seguimiento de errores"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Control de Versiones</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="message-forums.html">Anterior</a> </td><th width="60%" align="center">Capítulo 3. Infraestructura Técnica</th><td width="20%" align="right"> <a accesskey="n" href="bug-tracker.html">Siguiente</a></td></tr></table><hr></div><div class="sect1" title="Control de Versiones"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="vc"></a>Control de Versiones</h2></div></div></div><p>Un <em class="firstterm">sistema de control de versiones</em> (o
+<em class="firstterm">sistema de control de revisiones</em>) es una combinación
+de tecnologías y practicas para seguir y controlar los cambios
+realizados en los ficheros del proyecto, en particular en el código
+fuente, en la documentación y en las páginas web. Si nunca antes se ha
+utilizado un control de versiones, lo primero que hay que hacer es conseguir
+a alguien que sí lo haya hecho y hacer que se una al proyecto. Hoy en día
+todo el mundo espera que al menos el código fuente del proyecto este
+bajo un control de versiones y probablemente no se tomen el proyecto
+seriamente si no se utiliza este sistema con un mínimo de competencia.</p><p>La razón por la cual el control de versiones es universal es porque
+ayuda virtualmente en todos los aspectos al dirigir un proyecto: comunicación
+entre los desarrolladores, manejo de los lanzamientos, administración de fallos,
+estabilidad entre el código y los esfuerzos de desarrollo experimental y 
+atribución y autorización en los cambios de los desarrolladores. El sistema
+de control de versiones permite a una fuerza coordinadora central 
+abarcar todas estas áreas. El núcleo del sistema es la<em class="firstterm">
+gestión de cambios</em>: identificar cada cambio a los ficheros
+del proyecto, anotar cada cambio con meta-data como la fecha y el autor
+de la modificación y disponer esta información para quien sea y como sea.
+Es un mecanismo de comunicación donde el cambio es la unidad básica de
+información.</p><p>Aun no hemos discutido todos los aspectos de utilizar un sistema
+de control de versiones ya que es un tema tan extenso que será
+introducido según el tópico a lo largo de este libro. Ahora, vamos a
+concentrarnos en seleccionar y configurar un sistema de control de versiones
+de forma que fomentemos un desarrollo cooperativo.</p><div class="sect2" title="Vocabulario del Control de Versiones"><div class="titlepage"><div><div><h3 class="title"><a name="vc-vocabulary"></a>Vocabulario del Control de Versiones</h3></div></div></div><p>En este libro no podemos enseñar como utilizar el control de
+versiones si nunca antes lo ha utilizado, pero sería imposible continuar
+sin conocer algunos términos clave. Estos son útiles independientemente
+del sistema particular utilizado: son definiciones básicas y verbos sobre
+la colaboración en red y serán utilizados a lo largo del libro. Incluso
+si no existiera ningún sistema de control de versiones, el problema del
+control de los cambios aun existiría y estas palabras nos dan un lenguaje
+para hablar acerca de este problema consistentemente.</p><div class="variablelist"><div class="sidebar" title='"Versión" Versus "Revisión"'><a name="version-vs-revision"></a><div class="titlepage"><div><div><p class="title"><b>"Versión" Versus "Revisión"</b></p></div></div></div><p>El termino <em class="firstterm">versión</em> es a veces utilizado
+	como un sinónimo para "revisión", pero aquí no voy a utilizarla de esta
+	forma, ya que se puede confundir fácilmente con "versión" en el sentido
+	de una versión de un programa&#8212;así que, el número de lanzamiento
+	o edición como en "Versión 1.0". Y aunque la frase "control de versiones"
+	es un estándar, continuare utilizándolo como sinónimo para "control
+	de revisiones" y para "control de cambios".</p></div><dl><dt><a name="vc-vocabulary-commit"></a><span class="term"><em class="firstterm">commit</em></span></dt><dd><p>
+	Realizar un cambio en el proyecto. Formalmente, almacenar
+	un cambio en la base de datos del control de versiones de
+	forma que pueda ser incorporado en lanzamientos futuros del
+	proyecto. "Commit" puede ser utilizado como un verbo o como
+	un sustantivo. Como un sustantivo, es esencialmente un
+	sinónimo de "cambio". Por ejemplo: "He commited una reparación
+	para un fallo reportado en Mac OS X que hacia que el servidor
+	se colgara. Jóse ¿podrías por favor revisarlo y verificar que
+	no estoy haciendo mal la asignación?"
+  </p></dd><dt><a name="vc-vocabulary-push"></a></dt><dd></dd><dt><a name="vc-vocabulary-pull"></a></dt><dd><p>
+	Solicitar los cambios (commits) que han realizado
+	otros en la copia local del proyecto, esto actualiza
+	esta copia a la ultima versión. Es una operación muy
+	común ya que la mayoría de los desarrolladores actualizan
+	su código varias veces al día y así saben que están
+	ejecutando casi lo mismo que los otros desarrolladores, así
+	que si se descubre un fallo es muy posible que este aun
+	no haya sido resuelto. Por ejemplo: "Hey, he notado
+	que el código del índice está fallando en el último
+	byte. ¿Es esto un nuevo fallo?" "Sí, pero fue resuelto
+	la semana pasada&#8212;prueba actualizar para resolverlo."
+ 	</p></dd><dt><a name="vc-vocabulary-commit-message"></a><span class="term"><em class="firstterm">Mensaje de registro</em></span></dt><dd><p>
+	Un pequeño comentario añadido a cada commit que describe
+	el tipo y el propósito del commit. Los mensajes de
+	registro forman parte de los documentos más importantes
+	de cualquier proyecto ya que son un puente entre el
+	lenguaje altamente técnico de los cambios individuales
+	en el código y el lenguaje más orientado al usuario de
+	características, resolución de fallos y progreso del
+	proyecto. Más adelante vamos a ver la forma de distribuir
+	estos mensajes a la audiencia apropiada y también
+	<a class="xref" href="growth.html#codifying-tradition" title="Tradición en la organización del contenido">&#8220;Tradición en la organización del contenido&#8221;</a><span>
+	en <a class="xref" href="communications.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <i>Comunicaciones</i></a></span> discutimos
+	como ENCOURAGE a los voluntarios para que escriban mensajes
+	de registro útiles y concisos.
+	</p></dd><dt><a name="vc-vocabulary-repository"></a><span class="term"><em class="firstterm">repositorio</em></span></dt><dd><p>
+	Una base de datos en la que los cambios son almacenados. Algunas
+	versiones de sistemas de control de versiones son centralizados,
+	es decir, existe un único repositorio maestro, el cual almacena
+	todos los cambios en el proyecto. Otros sistemas son descentralizados,
+	cada desarrollador tiene su propio repositorio y los cambios pueden
+	ser intercambiados entre repositorios arbitrariamente. El sistema
+	de control de versiones mantiene un registro de las dependencias
+	entre estos cambios y cuando llega el momento de realizar un
+	lanzamiento, un conjunto particular de cambios es aprobado
+	para ese lanzamiento. La cuestión de cual sistema es mejor
+	es otra de las guerras santas del desarrollo de software.
+	Intentad no caer en la trampa de discutir sobre esto en las
+	listas de correo del proyecto.
+	</p></dd><dt><a name="vc-vocabulary-checkout"></a><span class="term"><em class="firstterm">checkout</em></span></dt><dd><p>
+	El proceso de obtener una copia del proyecto desde el repositorio.
+	Por lo general, un checkout produce un árbol de directorios
+	llamado "copia funcional" desde el cual los cambios serán
+	enviados de vuelta al repositorio original. En algunas versiones
+	descentralizadas de sistemas de control, cada copia funcional
+	es en si mismo un repositorio y los cambios son empujados (o
+	atraídos) a cualquier repositorio que este dispuesto a aceptarlos.
+	</p></dd><dt><a name="vc-vocabulary-working-copy"></a><span class="term"><em class="firstterm">copia funcional</em></span></dt><dd><p>
+	El árbol de directorios privado de cada desarrollador que
+	que contiene el código fuente del proyecto y posiblemente
+	las páginas web u otros documentos. Una copia funcional
+	también contiene un pequeña cantidad de meta-data administrada
+	por el sistema de control de versiones, informando a la copia
+	funcional cual es repositorio central de procedencia, la
+	revisión de los ficheros presentes, etc. Generalmente, cada
+	desarrollador tiene su propia copia funciona en la cual
+	realiza y prueba los cambios y desde la cual envía sus
+	commits (cambios).</p></dd><dt><a name="vc-vocabulary-revision"></a><span class="term"><em class="firstterm">revisión</em>,
+        <em class="firstterm">cambio</em>,
+        <em class="firstterm">conjunto de cambios</em></span></dt><dd><p>
+	Una revisión es usualmente una encarnación específica de un
+	fichero o directorio en particular. Por ejemplo, si el proyecto
+	se inicia en la revisión 6 del fichero F y alguien envía un
+	cambio al fichero F, esto produce la revisión 7 de F. Algunos
+	sistemas también utilizan revisión (revision), cambio (change)
+	o conjunto de cambios (changeset) para referirse a un conjunto
+	de cambios enviados juntos como una unidad conceptual.</p><p>Estos conceptos pueden tener distintos significados técnicos
+	en cada sistema de control de versiones, pero en general, la idea es
+	siempre la misma: dar un sistema para comunicar de manera precisa la
+	historia de cambios en un fichero o conjunto de ficheros (inmediatamente
+	antes y después de que se ha corregido un fallo). Por ejemplo: "Eso
+	se ha resuelto en la revisión 10" o "Se ha corregido eso en la revisión
+	10 del fichero foo.c."</p><p>Cuando se habla sobre ficheros o una colección de ficheros sin
+	especificar una revisión en particular, por lo general se asume que
+	nos referimos a la revisión disponible más reciente.</p></dd><dt><a name="vc-vocabulary-diff"></a><span class="term"><em class="firstterm">diff</em></span></dt><dd><p>
+	Una representación contextual de un cambio. Un diff muestra las lineas
+	que han sido modificadas, como y además, algunas lineas contextuales
+	rodeándolas a cada lado. Un desarrollador familiarizado con el código
+	puede, con leer un diff de ese código, entender lo que hace el cambio
+	e incluso detectar fallos.</p></dd><dt><a name="vc-vocabulary-tag"></a><span class="term"><em class="firstterm">etiqueta (tag)</em></span></dt><dd><p>
+	Una etiqueta para una colección particular de ficheros en una revisión
+	específica. Los tags son utilizados para preservar capturas interesantes
+	del proyecto. Por ejemplo, un tag es hecho para cada lanzamiento público,
+	de forma que cada persona pueda obtener, directamente desde el sistema
+	de control de versiones, el conjunto exacto de ficheros/revisiones
+	que componen el lanzamiento. Algunos tags comunes son como 
+	<code class="literal">Release_1_0</code>, <code class="literal">Delivery_00456</code>,
+	etc.</p></dd><dt><a name="vc-vocabulary-branch"></a><span class="term"><em class="firstterm">rama (branch)</em></span></dt><dd><p>
+	Es una copia del proyecto, bajo el control de versiones, pero aislado,
+	de forma que los cambios realizados en esta rama no afecten al resto
+	del proyecto y vice versa, excepto cuando los cambios sean
+	deliberadamente "unidos" de un lado al otro. Las ramas también son
+	conocidas como "lineas de desarrollo". Incluso cuando un proyecto
+	no tiene ramas específicas se considera que el desarrollo se esta
+	produciendo en la rama principal, también conocida como "línea
+	primaria" o "<em class="firstterm">trunk</em>".</p><p>Las ramas o branches, permiten aislar diferentes lineas de
+	desarrollo de si mismas. Por ejemplo, una rama puede ser utilizada
+	para un desarrollo experimental que sería demasiado inestable para
+	la rama principal. O al contrario, una rama puede ser utilizada
+	como sitio para estabilizar una versión para lanzamiento. Durante
+	el proceso de lanzamiento, el desarrollo regular se mantendría ininterrumpida
+	en la rama principal. Mientras tanto, en la rama de lanzamiento,
+	ningún cambio es aceptado excepto aquellos aprobados por el
+	responsable del lanzamiento. De esta manera, realizar un lanzamiento
+	no tiene porque interferir con el trabajo de desarrollo que se está
+	realizando. Para más información <a class="xref" href="vc.html#branches" title="Las ramas para evitar cuellos de botella">&#8220;Las ramas para evitar cuellos de botella&#8221;</a><span>
+	más adelante en el capítulo</span> para una discusión más
+	detallada sobre las ramas.</p></dd><dt><a name="vc-vocabulary-merge"></a><span class="term"><em class="firstterm">merge</em></span></dt><dd><p>
+	Mover un cambio de una rama a otra, lo que incluye unir desde
+	la rama principal a otra rama o vice versa. De hecho, estos
+	son las uniones más comunes y es rara la ocasión en la que
+	esto se hace entre dos ramas no principales. Para más
+	información sobre los merge <a class="xref" href="vc.html#vc-singularity" title="Singularidad de la información">&#8220;Singularidad de la información&#8221;</a>.
+	</p><p>"Merge" tiene otro significado: es lo que hace el sistema de control
+	de versiones cuando se encuentra con que dos personas han realizado
+	cambios en un mismo fichero sin relación alguna. Ya que estos cambios
+	no interfieren entre ellos, cuando alguna de estas personas actualizan
+	su copia del fichero (el cual ya contiene los cambios) los cambios
+	de la otra persona serán unidos automáticamente. Esto sucede muy a
+	menudo, especialmente en proyectos con múltiples personas realizando
+	cambios en el mismo código. Cuando dos cambios diferentes están
+	relacionados, el resultado es un "conflicto".</p></dd><dt><a name="vc-vocabulary-conflict"></a><span class="term"><em class="firstterm">conflicto</em></span></dt><dd><p>
+	Sucede cuando dos o más personas intentan realizar diferentes
+	cambios en la misma porción de código. Todos los sistemas
+	de control de versiones detectan estos conflictos automáticamente
+	y notifican a al menos uno de los humanos involucrados de que
+	sus cambios entran en conflicto con los de alguien más. Es
+	entonces tarea de esta personas <em class="firstterm">resolver</em>
+	el conflicto y comunicar esa resolución al sistema de control
+	de versiones.</p></dd><dt><a name="vc-vocabulary-lock"></a><span class="term"><em class="firstterm">bloqueo (lock)</em></span></dt><dd><p>
+	Declaración de un intento exclusivo para cambiar un fichero
+	o directorio en particular. Por ejemplo, "No puedo enviar
+	cambios a las paginas web ahora mismo, ya que parece que
+	Alfredo las tiene bloqueadas mientras arregla sus
+	imágenes de fondo." No todos los sistemas de control de
+	versiones ofrecen la posibilidad del bloqueo y aquellos
+	que sí lo permiten, no es necesario que se utilice. Esto
+	es porque el desarrollo paralelo y simultaneo es la norma
+	y bloquear a la gente para que no puedan modificar los
+	ficheros es contrario a la idea del sistema.</p><p>El modelo del sistema de control de versiones que requiere el bloqueo
+de ficheros suele ser llamado <em class="firstterm">bloqueo-modificación-desbloqueo</em>
+y el modelo que no requiere del bloqueo es llamado 
+<em class="firstterm">copia-modificación-unión</em>. Una excelente explicación
+en profundidad y comparaciones puede ser encontrada en
+<a class="ulink" href="http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html" target="_top">http://svnbook.red-bean.com/svnbook-1.0/ch02s02.html</a>. En
+general, el modelo de copia-modificación-unión es el mejor
+para el desarrollo open source y todos los sistemas de control
+de versiones discutidos en este libro soportan este modelo.
+</p></dd></dl></div></div><div class="sect2" title="Escoger un sistema de control de versiones"><div class="titlepage"><div><div><h3 class="title"><a name="vc-choosing"></a>Escoger un sistema de control de versiones</h3></div></div></div></div><div class="sect2" title="Utilizando el sistema de control de versiones"><div class="titlepage"><div><div><h3 class="title"><a name="vc-using"></a>Utilizando el sistema de control de versiones</h3></div></div></div><p>Las recomendaciones realizadas en esta sección no están
+enfocadas hacia un sistema de control de versiones en particular
+y debería ser sencillo implementarlas en cualquiera. La documentación
+específica del sistema debe ofrecer los detalles necesarios.</p><div class="sect3" title="Versiones de todo"><div class="titlepage"><div><div><h4 class="title"><a name="version-everything"></a>Versiones de todo</h4></div></div></div><p>No solo hay que mantener el código del proyecto bajo el control
+de versiones también las paginas web, documentación, FAQ, notas de 
+diseño y cualquier cosa que pueda ser necesario editar. Todo esto
+hay que mantenerlo cerca del código, en el mismo árbol que el
+repositorio. Se deben mantener versiones de cualquier pieza de
+información que pueda cambiar y archivar la que no cambie. 
+Por ejemplo, un correo electrónico,
+una vez enviado, no cambia, por lo tanto, mantener versiones de este
+no tiene sentido (a menos que se convierta en una parte importante
+de la documentación).</p><p>La razón de mantener versiones de todo en un mismo sitio, es
+para que la gente sólo tenga que aprender un sistema para realizar
+cambios. A menudo, un voluntario se iniciara modificando algunas
+paginas web o partes de la documentación, para luego pasar a realizar
+pequeñas contribuciones al código, por ejemplo. Cuando el proyecto
+utiliza el mismo sistema para todo tipo de cambios, las personas sólo
+tendrán que aprender THE ROPES una vez. Mantener las versiones juntas
+significa que nuevas características pueden ser añadidas junto
+a la actualización de la documentación, y que al crear ramas del
+código, se crearan ramas de la documentación, etc.</p><p>No hace falta mantener los <em class="firstterm">ficheros generados</em>
+bajo el sistema de control de versiones ya que no son datos editables
+generados por otros programas. Por ejemplo, algunos sistemas de
+compilado generan los ficheros <code class="filename">configure</code> basandose
+en una plantilla <code class="filename">configure.in</code>. Para realizar
+cambios al fichero <code class="filename">configure</code> bastaría con
+modificar <code class="filename">configure.in</code> y volver a generarlo.
+Entonces, sólo el fichero <code class="filename">configure.in</code> es
+un fichero editable. Sólo es necesario mantener versiones de las
+plantillas&#8212;si se hace con los ficheros generados, la gente
+se olvidará de volver a generarlos cuando realicen algún cambio
+en las plantillas y las resultantes inconsistencias crearan una
+mayor confusión. <sup>[<a name="idp1322" href="#ftn.idp1322" class="footnote">30</a>]</sup></p><p>La regla de que todos los datos editables deben ser mantenidos
+bajo el control de versiones tiene una excepción desafortunada: el
+gestor de fallos. La base de datos de fallos almacena una gran cantidad
+de datos editables pero generalmente, por razones técnicas, no se puede
+mantener bajo el control de versiones principal. (Algunos gestores
+tienen características primitivas de control de versiones, pero
+independiente de repositorio principal del proyecto.)</p></div><div class="sect3" title="Navegabilidad"><div class="titlepage"><div><div><h4 class="title"><a name="vc-browsing"></a>Navegabilidad</h4></div></div></div><p>El repositorio del proyecto debe ser accesible desde Internet.
+Esto no solo significa la habilidad de visualizar la ultima revisión
+de los ficheros del proyecto, pero permitir volver atrás en el tiempo
+y ver en revisiones anteriores, mirar las diferencias entre revisiones,
+leer los mensajes de registro para cambios específicos, etc.</p><p>La navegabilidad es importante porque es un ligero portal a los
+datos del proyecto. Si el repositorio no es accesible desde un navegador
+web entonces alguien que desea inspeccionar un fichero en particular (por
+ejemplo, para mirar si una mejora ha sido incluida en el código) tendrá
+que instalar el mismo programa utilizado por el sistema de control
+de versiones, lo cual convierte una simple consulta de dos minutos en
+una tarea de medio hora o más.</p><p>También implica URLs CANONICAL para visualizar revisiones
+específicas de un fichero y para la ultima revisión en cualquier
+momento. Esto puede ser muy útil durante discusiones técnicas o para
+indicar alguna documentación a la gente. Por ejemplo, en lugar de
+decir "Para ayudas sobre como encontrar fallos en el servidor,
+mirad el fichero www/hacking.html en vuestra copia funcional" se puede
+decir "Para ayudas sobre como encontrar fallos en el servidor,
+mirad <span class="emphasis"><em>http://subversion.apache.org/docs/community-guide/</em></span>,"
+dando una URL que siempre lleva a la ultima revisión del fichero
+<code class="filename">hacking.html</code>. La URL es mejor porque no es nada
+ambigua y evita la cuestión de si existe una copia funcional
+actualizada.</p><p>Algunos sistemas de control de versiones incluyen un mecanismo
+que permite la navegación del repositorio, mientras que otros
+dependen de herramientas de terceros. Tres de estas herramientas son
+<em class="firstterm">ViewCVS</em> (<a class="ulink" href="http://viewcvs.sourceforge.net/" target="_top">http://viewcvs.sourceforge.net/</a>),
+<em class="firstterm">CVSWeb</em> (<a class="ulink" href="http://www.freebsd.org/projects/cvsweb.html" target="_top">http://www.freebsd.org/projects/cvsweb.html</a>), and
+<em class="firstterm">WebSVN</em> (<a class="ulink" href="http://websvn.tigris.org/" target="_top">http://websvn.tigris.org/</a>).
+La primera trabaja muy bien con CVS y con Subversion, la segunda
+sólo con CVS y la tercera sólo con Subversion.</p></div><div class="sect3" title="Las ramas para evitar cuellos de botella"><div class="titlepage"><div><div><h4 class="title"><a name="branches"></a>Las ramas para evitar cuellos de botella</h4></div></div></div><p>Los usuarios inexpertos del control de versiones pueden sentirse
+temerosos de crear ramas y uniones. Esto sea probablemente un efecto
+colateral de la popularidad de CVS: su interfaz de ramas y uniones puede
+ser poco intuitivo, así que muchas personas han aprendido a evitar
+estas operaciones por completo.</p><p>Si se encuentra entre estas personas, decidase ahora mismo a
+conquistar cualquier miedo que pueda tener y tómese el tiempo de aprender
+cómo funcionan las ramas y las uniones. No son operaciones muy complicadas
+una vez que se acostumbra a ellas y se vuelven muy importantes mientras
+el proyecto adquiere más desarrolladores.</p><p>Las ramas son muy importantes porque convierten un recurso
+escaso&#8212;espacio de trabajo en el código del proyecto&#8212;en uno
+abundante. Normalmente, todos los desarrolladores trabajan juntos
+en la misma caja de arena, construyendo el mismo castillo. Cuando alguien
+desea añadir un nuevo puente levadizo, pero no puede convencer a los
+demás de que sería una mejora, entonces las ramas hacen posible que vaya
+a una esquina aislada donde probar su puente. Si el esfuerzo tiene éxito,
+puede invitar a otros desarrolladores para que evalúen el resultado. Si
+todos están de acuerdo en que el resultado es bueno, pueden hacer que
+el sistema de control de versiones mueva ("merge") el puente levadizo
+de la rama del castillo a la rama principal del castillo.</p><p>Es fácil ver como esta habilidad ayuda al desarrollo colaborativo,
+ya que la gente necesita de cierta libertad para probar cosas nuevas
+sin sentir que están interfiriendo con el trabajo de otros. Igual
+de importante es cuando el código debe ser aislado del CHURN usual
+de desarrollo de manera que un fallo sea reparado o un lanzamiento
+sea estabilizado (más en <a class="xref" href="stabilizing-a-release.html" title="Stabilizing a Release">&#8220;Stabilizing a Release&#8221;</a> y
+en <a class="xref" href="release-lines.html" title="Maintaining Multiple Release Lines">&#8220;Maintaining Multiple Release Lines&#8221;</a><span> en
+<a class="xref" href="development-cycle.html" title="Capítulo 7. Empaquetado, Liberación, y Desarrollo diario">Capítulo 7, <i>Empaquetado, Liberación, y Desarrollo diario</i></a></span>) sin la preocupación
+de seguir un blanco en movimiento.</p><p>Hay que utilizar las ramas libremente y fomentar su uso entre
+otros. Pero también hay que asegurarse de que una rama en particular
+se mantenga activa exactamente durante el tiempo que sea necesaria.
+Incluso quienes no trabajan en la rama principal mantienen una visión
+periférica de lo que está sucediendo en ésta. Esta visión es deseable,
+por supuesto, y los correos con cambios deben salir de estas ramas
+como de cualquier otra. Pero las ramas no deben convertirse en un
+mecanismo que divida a la comunidad de desarrolladores. Con raras
+excepciones, el objetivo eventual de la mayoría de las ramas debe
+de ser su unión a la rama principal y desaparecer.</p></div><div class="sect3" title="Singularidad de la información"><div class="titlepage"><div><div><h4 class="title"><a name="vc-singularity"></a>Singularidad de la información</h4></div></div></div><p>Las uniones tienen un corolario importante: nunca se debe enviar
+el mismo cambio dos veces, es decir, un cambio dado sólo debe ser
+introducido al sistema de control de versiones solo una vez. La revisión
+(o conjunto de revisiones) en la que el cambio es introducido es su
+identificador único desde ese momento. Si debe ser aplicado a otras
+ramas aparte de la cual en la que ha sido hecho, entonces deberá ser unido
+desde su punto de entrada original a sus otros destinos &#8212;al
+contrario de enviar cambios textualmente idénticos, que tendrían el
+mismo efecto en el código, pero harían del mantenimiento eficaz y de
+la gestión de lanzamientos una tarea imposible.</p><p>Los efectos prácticos de este consejo difieren entre sistemas
+de control de versiones. En algunos sistemas, las uniones son eventos
+especiales, fundamentalmente distintos de los commits y acarrean sus
+meta-datos propios. En otros, el resultado de las uniones son enviadas
+de la misma manera que los cambios son enviados así que la mejor manera
+de distinguir una unión de un nuevo cambio es leyendo los mensajes de
+registro. El mensaje de registro de una unión no repite el mensaje
+de registro del cambio original, en cambio, sólo indica que es una
+unión y da la identificación de la revisión del cambio original, con
+como mucho una línea de sumario del sus efectos. Si alguien desea ver
+el mensaje de registro completo, deberá consultar la revisión original.</p><p>La razón por la cual es importante evitar la repetición de los
+mensajes de registro es que estos pueden ser editados después de que
+se hayan enviado. Si un mensaje de registro es repetido en el destino
+de cada unión, entonces incluso si alguien edita el mensaje original,
+deja todos los otros mensajes sin corregir&#8212;lo cual sólo puede
+causar confusión a largo plazo.</p><p>El mismo principio se aplica al retirar un cambio. Si esto llegara
+a suceder, entonces el mensaje de registro para la retirada solo debe
+indicar que una revisión en particular está siendo retirada, 
+no debe describir el cambio en el código resultante, pues la semántica
+del cambio se puede intuir al leer el mensaje de registro original del
+cambio. Por supuesto, el mensaje de registro del retiro también debe
+indicar la razón por la cual ese cambio ha sido retirado, pero no debe
+duplicar nada del mensaje de registro del cambio original. Si es posible,
+hay que volver y editar el mensaje de registro original para señalar
+que ha sido retirado.</p><p>Todo lo anterior implica que se debe utilizar una sintaxis 
+consistente al referirnos a las revisiones. Esto es de gran ayuda
+no sólo en los mensajes de registro, sino en los correos electrónicos,
+en el gestor de fallos y en todas partes. Si se esta utilizando
+CVS, recomiendo "<code class="literal">directorio/al/fichero/del/proyecto/rama:REV</code>",
+donde REV es un número de revisión en CVS como "1.76". Si se esta
+utilizando Subversion, la sintaxis estándar para la revisión
+1729 es "r1729" (el directorio de los ficheros no es necesario
+porque Subversion utiliza números globales para las revisiones). En
+otros sistemas, existe por lo general una sintaxis estándar para
+expresar el nombre del conjunto de cambios. Cualquiera que sea
+la sintaxis apropiada para el sistema utilizado, hay que animar
+a la gente a que lo utilicen al referirse a algún cambio. El
+uso consistente en el nombre de los cambios permiten que el
+mantenimiento del proyecto sea mucho más sencillo (como ya
+veremos en <a class="xref" href="communications.html" title="Capítulo 6. Comunicaciones">Capítulo 6, <i>Comunicaciones</i></a> y en 
+<a class="xref" href="development-cycle.html" title="Capítulo 7. Empaquetado, Liberación, y Desarrollo diario">Capítulo 7, <i>Empaquetado, Liberación, y Desarrollo diario</i></a>), y dado que mucho de este
+mantenimiento será realizado por voluntarios, debe ser lo más
+sencillo posible.</p><p>Más información en
+<a class="xref" href="releases-and-daily-development.html" title="Releases and Daily Development">&#8220;Releases and Daily Development&#8221;</a><span> 
+<a class="xref" href="development-cycle.html" title="Capítulo 7. Empaquetado, Liberación, y Desarrollo diario">Capítulo 7, <i>Empaquetado, Liberación, y Desarrollo diario</i></a></span>.</p></div><div class="sect3" title="Autorizaciones"><div class="titlepage"><div><div><h4 class="title"><a name="vc-authz"></a>Autorizaciones</h4></div></div></div><p>Muchos de los sistemas de control de versiones ofrecen la posibilidad
+por la cual a ciertas personas se les permite o no, realizar cambios
+en áreas específicas del repositorio. Siguiendo el principio de que
+cuando a las personas se les entrega un martillo empiezan a buscar
+clavos para golpear, muchos proyectos utilizan esta característica
+con ABANDON, permitiendo cuidadosamente el acceso solo a las áreas
+donde tienen permiso de enviar cambio y asegurándose de que no lo puedan
+hacer en ningún otro sitio. (Más información en 
+<a class="xref" href="committers.html" title="Committers">&#8220;Committers&#8221;</a><span>
+<a class="xref" href="managing-volunteers.html" title="Capítulo 8. Coordinando a los Voluntarios">Capítulo 8, <i>Coordinando a los Voluntarios</i></a></span> sobre como
+los proyectos deciden quienes pueden hacer cambios y donde.)</p><p>Probablemente hayan pequeños daños implementar un control
+así de estricto, pero una política un poco más relajada también
+esta bien. Algunos proyectos utilizan un sistema basado en el honor:
+cuando a una persona se le permite la posibilidad de realizar cambios,
+aunque sea a una pequeña área del repositorio, lo que reciben es una
+contraseña que les permite realizar cambios en cualquier otro sitio
+del repositorio y sólo se les pide que mantengan sus cambios en su
+área. Hay que recordar que no existe ningún peligro aquí: de todas formas,
+en un proyecto activo, todos los cambios son revisados. Si alguien hace
+un cambio donde no debía, alguien más se dará cuenta y dirá algo. Es muy
+sencillo si un cambio debe ser rectificado&#8212;todo está bajo el control
+de versiones de todas formas, así que sólo hay que volver atras.</p><p>Existen varias ventajas en tal aproximación tan relajada.
+Primero, mientras los desarrolladores se vayan expandiendo en las
+diferentes áreas (lo cual harán a menudo si siguen en el proyecto),
+no es necesario un trabajo administrativo extra de tener que dar y
+quitar privilegios. Una vez que la decisión es tomada, la persona
+puede empezar a enviar sus cambios a la nueva área sin problemas.</p><p>Segundo, la expansión se puede filtrar mejor, ya que generalmente,
+quienes realizan cambios en el área X y desean expandirse al área Y
+sólo tienen que empezar a enviar sus cambios contra Y y solicitar
+su revisión. Si alguien con acceso a cambios al área Y recibe alguno
+de estos parches y lo aprueba, puede pedir que el cambio sea enviado
+directamente (mencionando el nombre de quien ha revisado/aprobado el
+cambio en el mensaje de registro). De esta manera, el commit vendrá
+de quien ha hecho el cambio, lo cual es preferible desde un punto de
+vista administrativo y de credibilidad.</p><p>Por último, y quizás la razón más importante, al utilizar
+un sistema basado en el honor, se crea una atmósfera de confianza
+y respeto mutuo. Al darle a alguien permiso para enviar cambio a
+un subdominio se hace una declaración acerca de su preparación
+técnica&#8212;la cual dice: "Hemos visto que tienes la capacidad
+para realizar cambios en cierto dominio, así que a por ello". Pero
+imponer controles estrictos en las autorizaciones dice: "No sólo
+estamos juzgando tus limitadas capacidades, sino que también
+sospechamos de tus <span class="emphasis"><em>intenciones</em></span>." Este no
+es el tipo de declaraciones que se desean hacer si pueden ser
+evitadas. Incluir a alguien dentro del grupo de desarrolladores
+del proyecto es una oportunidad de iniciarlos en un circulo de
+confianza mutua. Una buena manera de hacer esto es dar más
+poder del que se supone deben tener e informarles que es su
+responsabilidad mantenerse dentro de los límites impuestos.</p><p>El proyecto Subversion ha operado bajo este sistema por más
+de cuatro años, con 33 desarrolladores con privilegios completos
+y 43 con privilegios parciales. La única distinción que el sistema
+fuerza esta entre quienes envían cambios y quienes no, otras divisiones
+son mantenidas sólo por humanos. Incluso así, nunca hemos tenido
+ningún problema con que alguien realice un cambio deliberado fuera
+de su dominio. Una que otra vez han habido inocentes mal entendidos
+sobre la extensión de los privilegios de alguna persona, pero siempre
+es resuelto rápida y amigablemente.</p><p>Obviamente, en situaciones donde esto es poco práctico se debe
+depender en controles estrictos en las autorizaciones, pero dadas
+situaciones son raras. Incluso cuando hay millones de lineas de
+código y ciento o miles de desarrolladores, un commit hecho a
+cualquier módulo del código sigue siendo revisado por quienes
+trabajan en dicho módulo y son quienes pueden reconocer si quien
+lo ha intentado hacer puede hacerlo. Si una revisión regular no
+está sucediendo entonces el proyecto tiene problemas más importantes
+con los cuales lidiar que el sistema de autorizaciones.</p><p>Para concluir, no hace falta pasar mucho tiempo con las
+autorizaciones del sistema de control de versiones a menos que se
+tenga una razón en específico. Usualmente esto no trae beneficios
+tangibles y confiar en el control humano tiene sus ventajas.</p><p>Por supuesto que nada de esto significa que las restricciones mismas son poco
+importantes. Sería malo para un proyecto el animar a las personas 
+a realizar cambios en áreas para las cuales no están cualificadas. Incluso
+en algunos proyectos, el acceso ilimitado tiene un status especial:
+implica derecho de voto en cuestiones que atañen al proyecto por
+completo. Este aspecto político del acceso es discutido en mayor
+profundidad en <a class="xref" href="consensus-democracy.html#electorate" title="¿Quién Vota?">&#8220;¿Quién Vota?&#8221;</a><span>
+en <a class="xref" href="social-infrastructure.html" title="Capítulo 4. Infraestructura Social y Política">Capítulo 4, <i>Infraestructura Social y Política</i></a></span>.</p></div></div><div class="sect2"><div class="titlepage"></div><div class="sect3"><div class="titlepage"></div></div><div class="sect3"><div class="titlepage"></div></div><div class="sect3" title="Correos de cambios"><div class="titlepage"><div><div><h4 class="title"><a name="commit-emails"></a>Correos de cambios</h4></div></div></div><p>Cada commit al repositorio debería generar un correo electrónico
+mostrando quien ha hecho el cambio, cuando, cuales ficheros y directorios
+han cambiado y como. Este correo debe ser dirigido a una lista de correos
+separada de las listas a las que envían los humanos. Los desarrolladores
+y todos aquellos interesados deben ser animados para suscribirse a las
+lista de commits ya que es la manera más efectiva de mantenerse al día con
+lo que sucede en el proyecto al nivel del código. Aparte de los obvios
+beneficios técnicos de la revisión por la comunidad (<a class="xref" href="setting-tone.html#code-review" title="Practicar Revisiones Visibles del Código">&#8220;Practicar Revisiones Visibles del Código&#8221;</a>),
+los correos con los cambios ayudan a crear un sentido de comunidad
+porque establecen un ambiente compartido en el que la gente puede 
+reaccionar ante diferentes eventos (commits) que saben son visibles
+a otros tambien.</p><p>La configuración específica para habilitar estos correos varia
+dependiendo de la versión del sistema de control de versiones pero
+a menudo existe un script o paquete que facilita esto. Si se tiene
+algún problema para encontrar estos, intente buscar en la documentación
+el tema relacionado con los <em class="firstterm">hooks</em>,
+específicamente el <em class="firstterm">post-commit hook</em>, también
+llamado <em class="firstterm">loginfo hook</em> en CVS. Los
+Post-commit hooks son tareas automatizadas que se ejecutan como
+respuesta a los cambios enviados (commits). El hook es ejecutado
+por un cambio individual, se rellena con la información acerca del
+cambio y luego es liberada esa información para ser utilizada como
+se desee&#8212;por ejemplo, para enviar un correo electrónico.</p><p>Con los sistemas de correos con cambios ya listos para usar,
+quizás sea necesario modificar alguna de las siguientes conductas:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Algunos de estos sistemas no incluyen el diff en el correo
+	que envían sino que enlazan con una URL para poder ver el cambio
+	en la web utilizando el sistema de navegación del repositorio.
+	Aunque esta bien dar una URL para que se pueda revisar el cambio
+	luego, también es <span class="emphasis"><em>muy</em></span> importante que el
+	correo del commit incluya los diff. Leer el correo electrónico
+	ya es parte de la rutina de la gente, así que si el contenido es
+	visible allí mismo en el correo, los desarrolladores podrán
+	revisar el commit en el mismo sitio sin la necesidad de abandonar
+	sus clientes de correo. Si tienen que seguir un enlace a una
+	página de revisiones, muchos no lo pulsarán, ya que esto requiere
+	de una nueva acción en lugar de una continuación de lo que ya
+	estaban haciendo. Por si fuera poco, si el lector desea preguntar
+	algo acerca del cambio, es mucho más fácil responder al mensaje
+	incluyendo el texto original y simplemente realizar anotaciones
+	en el diff, en lugar de tener que visitar una página web y
+	tomarse la molestia de copiar y pegar partes del diff en el
+	navegador web al cliente de correo.</p><p>(Por supuesto que si el diff es gigantesco, como cuando
+	una gran parte de código nuevo ha sido añadido al repositorio,
+	entonces tiene sentido omitir la parte del diff y ofrecer
+	sólo la URL. Muchos de los sistemas permiten hacen esto
+	automáticamente. Si el utilizado en el proyecto no es capaz
+	de hacer esto, entonces sigue siendo mejor incluir los diffs
+	completos. La conveniencia de la revisión y los comentarios
+	es una piedra angular del desarrollo cooperativo, algo demasiado
+	importante para olvidar.)</p></li><li class="listitem"><p>Los correos con los cambios deben tener su cabecera
+	Reply-To direccionada hacia la lista regular de desarrollo, no
+	a la lista de los cambios, de esta manera cuando alguien revise
+	un cambio y escriba una respuesta, esta debe ser dirigida
+	automáticamente a la lista de desarrolladores, donde los temas
+	técnicos son discutidos normalmente. Existen varias razones para
+	esto, primero, se quiere mantener todas las discusiones técnicas
+	en la lista, porque es allí donde la gente espera que sucedan y
+	porque así ésta es la única lista que será necesario archivar.
+	Segundo, puede que existan partes interesadas no suscritas a la
+	lista de cambios. Tercero, la lista de cambios es publicitada
+	como una lista para los commits y no como una lista para los
+	commits y las discusiones técnicas ocasionadas. Quienes se han
+	suscrito sólo a la lista de cambios, no se han suscrito a nada
+	más que commits, al enviarles correos con material sin relación
+	utilizando ésta vía, es una violación del contrato implícito.
+	Cuarto, algunas personas escriben programas que procesan los
+	correos con los cambios (para publicarlos en una página web,
+	por ejemplo). Estos programas están preparados para manejar
+	correos con un formato consistente y son incapaces de trabajar
+	con correos escritos por humanos.</p><p>Hay que señalar que ésta recomendación no contradice
+	las recomendaciones anteriores en 
+	<a class="xref" href="message-forums.html#reply-to" title="El gran debate del Reply-To">&#8220;El gran debate del Reply-To&#8221;</a><span></span>.
+	Siempre esta bien que el remitente del mensaje configure
+	la cabecera Reply-to. En este caso, el remitente es el
+	sistema de control de versiones y su Reply-to lo configura
+	de tal manera que indique que el lugar apropiado para responder
+	es la lista de desarrollo y no la lista de cambios</p></li></ol></div></div></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp1322" href="#idp1322" class="para">30</a>] </sup>Alexey Mathotkin tiene una
+opinión diferente sobre el tema de controlar las versiones de los
+ficheros <code class="filename">configure</code> en un artículo llamado
+"<em class="citetitle">configure.in and version control</em>" en
+<a class="ulink" href="http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/" target="_top">http://versioncontrolblog.com/2007/01/08/configurein-and-version-control/</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="message-forums.html">Anterior</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">Subir</a></td><td width="40%" align="right"> <a accesskey="n" href="bug-tracker.html">Siguiente</a></td></tr><tr><td width="40%" align="left" valign="top">Listas de Correo / Foros de Mensajes </td><td width="20%" align="center"><a accesskey="h" href="index.html">Inicio</a></td><td width="40%" align="right" valign="top"> Seguimiento de errores</td></tr></table></div></body></html>

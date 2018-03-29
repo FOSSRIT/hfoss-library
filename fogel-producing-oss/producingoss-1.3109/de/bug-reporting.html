@@ -1,0 +1,130 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Anhang D. Beispiel-Anleitung für das Melden von Fehlern</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="index.html" title="Produktion von Open-Source-Software"><link rel="prev" href="bikeshed-full.html" title="Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen hat?"><link rel="next" href="copyright.html" title="Anhang E. Copyright"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Anhang D. Beispiel-Anleitung für das Melden von Fehlern</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="bikeshed-full.html">Zurück</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="copyright.html">Weiter</a></td></tr></table><hr></div><div class="appendix" title="Anhang D. Beispiel-Anleitung für das Melden von Fehlern"><div class="titlepage"><div><div><h2 class="title"><a name="bug-reporting"></a>Anhang D. Beispiel-Anleitung für das Melden von Fehlern</h2></div></div></div><div class="simplesect"><div class="titlepage"></div><p>Dies ist eine leicht abgewandelte Kopie der online verfügbaren 
+Anleitung des Subversion-Prokjekts für neue Benutzer, wie Fehler
+gemeldet werden sollten. Siehe <a class="xref" href="managing-volunteers.html#users-to-volunteers" title="Behandeln Sie jeden Nutzer wie einen möglichen Freiwilligen">&#8222;Behandeln Sie jeden Nutzer wie einen möglichen Freiwilligen&#8220;</a><span> im Kapitel
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span>, wo dargestellt wird,
+warum es wichtig ist, dass ein Projekt derartige Anleitungen hat. Das
+ursprüngliche Dokument befindet sich bei <a class="ulink" href="http://svn.collab.net/repos/svn/trunk/www/bugs.html" target="_top">http://svn.collab.net/repos/svn/trunk/www/bugs.html</a>.</p><pre class="screen">
+
+                    So melden Sie Fehler in Subversion
+
+
+Dieses Dokument erläutert, wie und wo Fehler Sie Fehler melden sollten.
+(Es ist keine Liste aller noch bestehender Fehler &#8212; diese können Sie
+stattdessen hier bekommen.)
+
+
+Wo Sie einen Fehler melden sollten
+----------------------------------
+
+    * Liegt der Fehler in Subversion selbst, senden Sie eine E-Mail
+      an users@subversion.tigris.org. Sobald der Fehler bestätigt wird,
+      kann jemand, vielleicht Sie, ihn in das Ticketsystem eingeben.
+      (Oder wenn Sie sich ziemlich sicher sind, können Sie auch
+      gleich an unsere Entwickler-Liste schreiben, 
+      dev@subversion.tigris.org. Sind Sie sich aber nicht sicher, ist
+      es besser zuerst an users@ zu schreiben; dort kann Ihnen
+      jemand sagen, ob das Verhalten, das Sie beobachtet haben, 
+      beabsichtigt ist oder nicht.)
+
+
+    * Liegt der Fehler in der APR-Bibliothek, melden Sie dies
+      bitte auf einer dieser Mailinglisten: dev@apr.apache.org, 
+      dev@subversion.tigris.org.
+
+
+    * Liegt der Fehler in der Neon-HTTP-Bibliothek, melden Sie 
+      dies bitte bei: neon@webdav.org, dev@subversion.tigris.org.
+
+
+    * Liegt der Fehler in Apache-HTTPD 2.0, melden Sie dies
+      bitte an die beiden folgenden Mailinglisten: dev@httpd.apache.org,
+      dev@subversion.tigris.org. Auf der Mailingliste der
+      Apache-httpd-Entwickler herrscht Hochbetrieb, es ist also möglich,
+      dass Ihre Meldung übersehen wird. Sie können auch eine Bug-Meldung
+      unter http://httpd.apache.org/bug_report.html einreichen.
+
+    * If the bug is in your rug, please give it a hug and keep it snug.
+
+
+
+Wie Sie einen Bug melden sollten
+--------------------------------
+
+Vergewissern Sie sich erst, dass es ein Fehler ist. Wenn Subversion sich
+nicht so verhält wie Sie es erwarten, schauen Sie in der Dokumentation und
+den Archiven der Mailverteiler nach und weisen Sie nach, dass es sich so
+verhalten sollte, wie Sie es erwarten. Wenn es allerdings etwas
+Offensichtliches ist, wie wenn Subversion mal eben Ihre Daten zerstört
+und Ihren Bildschirm dazu bringt, Rauch auszuspucken, dann können
+Sie Ihrem Urteil vertrauen. Wenn Sie sich aber nicht sicher sind, fragen
+Sie lieber zuerst auf der Benutzer-Mailingliste (users@subversion.tigris.org)
+oder im IRC bei #svn auf irc.freenode.net nach.
+
+
+Wenn Sie sich dann sicher sind, dass es ein Fehler ist, ist es das
+wichtigste, eine einfache Beschreibung und eine Anleitung zu finden,
+nach der der Fehler reproduziert weden kann. Wenn der Fehler als 
+Sie ihn ursprünglich gefunden haben, fünf Dateien über zehn Commits
+brauchte, versuchen Sie ihn mit nur einer Datei und einem Commit
+auszulösen. Je einfacher die Anleitung, desto wahrscheinlicher wird ein
+Entwickler ihn erfolgreich reproduzieren und beheben können.
+
+
+Wenn Sie die Anleitung schreiben, erklären Sie nicht einfach in Worten, 
+was Sie gemacht haben, um den Fehler zu bekommen. Schreiben Sie 
+stattdessen ein genaues Protokoll, welche Befehle Sie eingegeben haben
+und was diese ausgegeben haben. Sie sollten dies über Kopieren und 
+Einfügen tun. Wenn Dateien dafür gebraucht werden, sollten Sie die Namen
+der Dateien angeben, und sogar ihren Inhalt, wenn Sie meinen, dass diese
+relevant wären. Am besten ist es, wenn Sie Ihre Anleitung in Form eines
+Skripts bündeln würden, so etwas hilft ungemein.
+
+
+<span class="emphasis"><em>Nur kurz um etwas aus dem Weg zu räumen: Sie *haben* doch die
+neuste Version, oder? :-) Der Fehler wurde vielleicht schon behoben; Sie
+sollten deshalb Ihre Anleitung mit der aktuellen Entwickler-Version von
+Subversion ausprobieren.</em></span>
+
+
+Zusätzlich zu der Anleitung für die Reproduktion, brauchen wir auch eine
+komplette Beschreibung der Umgebung in der du den Fehler reproduziert
+hast. Das heißt:
+
+
+    * Ihr Betriebssystem 
+    * Die Version und/oder Revision von Subversion
+    * Der Compiler und die Einstellungen die Sie benutzt haben um Ihr
+      Build von Subversion zu erstellen
+    * Etwaige Änderungen, die Sie an Subversion vorgenommen haben
+    * Die Version von Berkeley DB die Sie mit Subversion benutzen,
+      falls überhaupt
+    * Alles andere, was möglicherweise relevant sein könnte. Wobei
+      Sie lieber zuviel Informationen geben sollten, als zu wenig.
+
+
+Wenn Sie all dies gemacht haben, sind Sie bereit die Meldung zu schreiben.
+Fangen Sie mit einer klaren Beschreibung des Fehlers an. D.h. sagen Sie,
+wie Sie erwarten, dass sich Subversion verhalten sollte, und im Gegensatz
+dazu wie es sich wirklich verhalten hat. Auch wenn der Fehler Ihnen
+offensichtlich erscheint, muss das nicht unbeningt für jemand anderes
+gelten, also vermeiden Sie am besten Ratespiele. Danach sollten Sie
+sich der Beschreibung der Umgebung zuwenden und der Anleitung zur
+Reproduktion des Fehlers. Wenn Sie auch eine Spekulation über die Ursache
+anstellen wollen, oder sogar einen Patch anbieten können, um den Fehler zu
+beheben, wäre das super &#8212; siehe 
+http://subversion.apache.org/docs/community-guide/#patches für eine
+Anleitung, wie Patches eingereicht werden sollten.
+
+
+Schreiben Sie all diese Informationen an dev@subversion.tigris.org, oder
+wenn Sie bereits dort gewesen sind und darum gebeten wurden ein Ticket
+anzulegen, gehen Sie direkt zum Bugtracker und folgen der dortigen
+Anleitung.
+
+
+Danke. Wir wissen, dass es eine Menge Arbeit ist, eine effektive 
+Bug-Meldung zu schreiben, aber eine gute Meldung kann einem Entwickler
+Stunden der Arbeit ersparen, und der Fehler wird so viel eher behoben.
+
+</pre></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bikeshed-full.html">Zurück</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="copyright.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Anhang C. Warum sollte es mich kümmern, welche Farbe der Fahrradschuppen
+hat? </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Anhang E. Copyright</td></tr></table></div></body></html>

@@ -1,0 +1,109 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Rozdzia&#322; 3. Infrastruktura techniczna</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produkcja oprogramowania Open Source"><link rel="up" href="index.html" title="Produkcja oprogramowania Open Source"><link rel="prev" href="announcing.html" title="Announcing"><link rel="next" href="mailing-lists.html" title="Listy dyskusyjne"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Rozdzia&#322; 3. Infrastruktura techniczna</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="announcing.html">Poprzedni</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="mailing-lists.html">Nast&#281;pny</a></td></tr></table><hr></div><div class="chapter" title="Rozdzia&#322; 3. Infrastruktura techniczna"><div class="titlepage"><div><div><h2 class="title"><a name="technical-infrastructure"></a>Rozdzia&#322; 3. Infrastruktura techniczna</h2></div></div></div><div class="toc"><p><b>Spis tre&#347;ci</b></p><dl><dt><span class="sect1"><a href="technical-infrastructure.html#tools-needed">Czego projekt potrzebuje</a></span></dt><dt><span class="sect1"><a href="mailing-lists.html">Listy dyskusyjne</a></span></dt><dd><dl><dt><span class="sect2"><a href="mailing-lists.html#spam-prevention">Unikanie spamu</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#spam-filtering">Filtrowanie wiadomo&#347;ci</a></span></dt><dt><span class="sect3"><a href="mailing-lists.html#address-hiding">Ukrywanie adresów w archiwach</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#header-management">Identyfikacja i nag&#322;ówki</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#reply-to">Wielka debata o nag&#322;ówek Reply-to</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#reply-fantasies">Dwie fantazje</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#archiving">Archiwizacja</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#mailing-list-software">Oprogramowanie</a></span></dt></dl></dd><dt><span class="sect1"><a href="vc.html">Kontrola wersji</a></span></dt><dd><dl><dt><span class="sect2"><a href="vc.html#vc-vocabulary">S&#322;ownictwo kontroli wersji</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-choosing">Wybór systemu kontroli wersji</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-using">Korzystanie z systemu kontroli wersji</a></span></dt><dd><dl><dt><span class="sect3"><a href="vc.html#version-everything">Wersjonuj wszystko</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-browsing">Mo&#380;liwo&#347;&#263; przegl&#261;dania</a></span></dt><dt><span class="sect3"><a href="vc.html#commit-emails">Powiadomienia o commitach</a></span></dt><dt><span class="sect3"><a href="vc.html#branches">Use branches to avoid bottlenecks</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-singularity">Singularity of information</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-authz">Authorization</a></span></dt></dl></dd></dl></dd><dt><span class="sect1"><a href="bug-tracker.html">Bug Tracker</a></span></dt><dd><dl><dt><span class="sect2"><a href="bug-tracker.html#bug-tracker-mailing-list-interaction">Interaction with Mailing Lists</a></span></dt><dt><span class="sect2"><a href="bug-tracker.html#bug-filtering">Pre-Filtering the Bug Tracker</a></span></dt></dl></dd><dt><span class="sect1"><a href="irc.html">IRC / Real-Time Chat Systems</a></span></dt><dd><dl><dt><span class="sect2"><a href="irc.html#bots">Bots</a></span></dt><dt><span class="sect2"><a href="irc.html#irc-archiving">Archiving IRC</a></span></dt></dl></dd><dt><span class="sect1"><a href="wikis.html">Wikis</a></span></dt><dt><span class="sect1"><a href="web-site.html">Web Site</a></span></dt><dd><dl><dt><span class="sect2"><a href="web-site.html#canned-hosting">Canned Hosting</a></span></dt><dd><dl><dt><span class="sect3"><a href="web-site.html#canned-hosting-choosing">Choosing a canned hosting site</a></span></dt><dt><span class="sect3"><a href="web-site.html#anonymity">Anonymity and involvement</a></span></dt></dl></dd></dl></dd></dl></div><div class="simplesect"><div class="titlepage"></div><p>Projekty wolnego oprogramowania wykorzystuj&#261; technologie wspieraj&#261;ce
+gromadzenie i integracj&#281; informacji. Im wi&#281;cej do&#347;wiadczenia posiadasz w ich
+u&#380;yciu, i przekonywaniu do tego innych, tym wi&#281;ksze szanse, &#380;e twój projekt
+b&#281;dzie udany. Ta zasada jest tym wa&#380;niejsza, im bardziej projekt ro&#347;nie.
+Dobre zarz&#261;dzanie informacjami sprawia, &#380;e projekt nie zapada si&#281; pod
+ci&#281;&#380;arem prawa Brooksa<sup>[<a name="idp6010384" href="#ftn.idp6010384" class="footnote">12</a>]</sup>, które
+mówi, &#380;e dodanie ludzi do projektu programistycznego, który jest opó&#378;niony,
+sprawia jedynie, &#380;e b&#281;dzie on jeszcze bardziej opó&#378;niony. Fred Brooks
+zauwa&#380;y&#322;, &#380;e z&#322;o&#380;ono&#347;&#263; projektu zwi&#281;ksza si&#281; z
+<span class="emphasis"><em>kwadratem</em></span> liczby uczestników. Gdy zaanga&#380;owanych jest
+jedynie kilka osób, ka&#380;dy mo&#380;e porozumie&#263; si&#281; z ka&#380;dym, ale gdy nad
+projektem pracuj&#261; setki osób, nikt nie jest w stanie ogarn&#261;&#263; tego, co robi&#261;
+wszyscy inni. Je&#347;li dobrym zarz&#261;dzaniem wolnymi projektami nazwiemy takie,
+które sprawia, &#380;e wszyscy maj&#261; wra&#380;enie wspólnej pracy w jednym pokoju,
+nasuwa si&#281; pytanie, co gdy w zat&#322;oczonym pokoju wszyscy usi&#322;uj&#261; mówi&#263; w tym
+samym czasie?</p><p>To nie nowy problem. W dos&#322;ownie rozumianych zat&#322;oczonych pokojach,
+rozwi&#261;zaniem jest <em class="firstterm">proces parlamentarny</em>: formalne
+wytyczne reguluj&#261;ce dyskusje w du&#380;ych grupach, uniemo&#380;liwiaj&#261;ce zagubienie
+istotnych uwag w zalewie g&#322;upich komentarzy, opisuj&#261;ce jak tworzy&#263; komisje,
+kiedy decyzje mo&#380;na uzna&#263; za podj&#281;te, i tak dalej. Istotnym elementem
+procesu parlamentarnego jest ustalenie, jak grupa korzysta ze swojego
+systemu gromadzenia informacji. Niektóre uwagi s&#261; wpisywane "do stenogramu",
+inne nie. Sam zapis mo&#380;e ulec zmianie, nie jest traktowany jako dos&#322;owny
+&#347;lad tego, co si&#281; faktycznie wydarzy&#322;o, ale jako deklaracja tego, co
+wydarzy&#322;o si&#281; wed&#322;ug <span class="emphasis"><em>decyzji</em></span> grupy. Taki zapis nie jest
+jednorodny, dla ró&#380;nych celów przyjmuje ró&#380;n&#261; posta&#263;. Mog&#261; to by&#263; notatki z
+poszczególnych spotka&#324;, zbiór notatek wszystkich spotka&#324;, podsumowania,
+agendy i komentarze do nich, raporty komitetów, raporty od nieobecnych
+korespondentów, listy zada&#324;, i tak dalej.</p><p>Tak naprawd&#281; Internet to nie pokój, wi&#281;c nie musimy matwi&#263; si&#281; o te
+elementy procesu parlamentarnego, które zapewniaj&#261; cisz&#281;, gdy inni mówi&#261;.
+Jednak gdy chodzi o techniki zarz&#261;dzania informacjami, dobrze prowadzone
+projekty otwartego oprogramowania to "procedura parlamentarna na sterydach".
+Jako &#380;e praktycznie ca&#322;a komunikacja w projektach wolnego oprogramowania
+odbywa si&#281; na pi&#347;mie, stworzone zosta&#322;y skomplikowane systemy u&#322;atwiaj&#261;ce
+przekazywanie i etykietowanie informacji, minimalizowanie powtórze&#324; i
+niepotrzebnych rozbie&#380;no&#347;ci, przechowywanie i odzyskiwanie danych,
+korygowanie z&#322;ych i przestarza&#322;ych informacji, &#322;&#261;czenie poszczególnych
+informacji pomi&#281;dzy sob&#261;. Aktywni uczestnicy sami zdaj&#261; sobie spraw&#281; z
+u&#380;yteczno&#347;ci tych technik, i potrafi&#261; poradzi&#263; sobie z nimi r&#281;cznie. Jednak
+na d&#322;u&#380;sz&#261; met&#281; jedyn&#261; drog&#261; jest u&#380;ycie odpowiedniego oprogramowania. Je&#347;li
+to tylko mo&#380;liwe, samo medium wymiany informacji powinno zapewnia&#263; jej
+przekazywanie, etykietowanie czy rejestrowanie, i udost&#281;pnia&#263; informacje
+ludziom w najdogodniejszej dla nich postaci. W praktyce interwencja
+cz&#322;owieka w tym procesie wci&#261;&#380; b&#281;dzie czasem konieczna, a wi&#281;c samo
+oprogramowanie powinno u&#322;atwia&#263; tak&#261; interwencj&#281;. Jednak w wi&#281;kszo&#347;ci
+wypadków je&#347;li cz&#322;owiek odpowiednio opisze informacj&#281; wprowadzaj&#261;c j&#261; do
+systemu, oprogramowanie powinno skorzysta&#263; z tych metadanych tak dobrze, jak
+to tylko mo&#380;liwe.</p><p>Porady w tym rozdziale s&#261; mocno praktyczne, oparte na do&#347;wiadczeniach
+z opisanym oprogramowaniem i ró&#380;nymi scenariuszami u&#380;ycia. Jednak g&#322;ównym
+celem nie jest jedynie przekazanie pewnego zestawu technik. Chodzi tak&#380;e o
+wskazanie (na wielu ma&#322;ych przyk&#322;adach) dobrego podej&#347;cia, który zach&#281;ci do
+skutecznego zarz&#261;dzania informacjami w projekcie. To podej&#347;cie sk&#322;ada si&#281;
+zarówno z umiej&#281;tno&#347;ci technicznych, jak i tych mi&#281;kkich. Umiej&#281;tno&#347;ci
+techniczne s&#261; konieczne, poniewa&#380; oprogramowanie do zarz&#261;dzania informacjami
+zawsze wymaga konfiguracji, a tak&#380;e pewnego wysi&#322;ku w utrzymaniu i
+dostosowywaniu do nowych potrzeb (na przyk&#322;ad patrz dyskusja o tym, jak
+radzi&#263; sobie z wzrostem projektu w <a class="xref" href="bug-tracker.html#bug-filtering" title="Pre-Filtering the Bug Tracker">&#8222;Pre-Filtering the Bug Tracker&#8221;</a><span> dalej w tym rozdziale</span>). Umiej&#281;tno&#347;ci mi&#281;kkie s&#261;
+niezb&#281;dne, poniewa&#380; ludzka spo&#322;eczno&#347;&#263; tak&#380;e wymaga opieki. Nie zawsze
+oczywiste jest, jak w pe&#322;ni wykorzysta&#263; stosowane narz&#281;dzia, a czasem
+projekty stosuj&#261; sprzeczne konwencje (na przyk&#322;ad patrz dyskusja o nag&#322;ówku
+<code class="systemitem">Reply-to</code> w wiadomo&#347;ciach na listach dyskusyjnych, w
+<a class="xref" href="mailing-lists.html" title="Listy dyskusyjne">&#8222;Listy dyskusyjne&#8221;</a>). Ka&#380;dy uczestnik projektu powinien by&#263;
+zach&#281;cany, w odpowiednim czasie i w odpowiedni sposób, do dbania o porz&#261;dek
+w informacjach projektu. Im wi&#281;ksze zaanga&#380;owanie uczestnika w projekt, tym
+bardziej z&#322;o&#380;onych i wyspecjalizowanych technik b&#281;dzie musia&#322; si&#281;
+nauczy&#263;.</p><p>Zarz&#261;dzanie informacjami to problem, na który nie ma podr&#281;cznikowej
+odpowiedzi. Wyst&#281;puje tu zbyt wiele zmiennych. Mo&#380;e si&#281; zdarzy&#263;, &#380;e wszystko
+jest skonfigurowane tak, jak sobie tego &#380;yczysz, a wi&#281;kszo&#347;&#263; spo&#322;eczno&#347;ci
+wspó&#322;pracuje, ale rozwój projektu sprawi, &#380;e niektóre praktyki przestan&#261; si&#281;
+skalowa&#263;. W projekcie, którego wzrost osi&#261;gn&#261;&#322; stabilny poziom, a
+programi&#347;ci i u&#380;ytkownicy przywykli do stosowanej infrastruktury, nowi
+uczestnicy mog&#261; dziwi&#263; si&#281;, dlaczego nie stosuje si&#281; jakiego&#347; nowopowsta&#322;ego
+systemu zarz&#261;dzania informacjami. To obecnie do&#347;&#263; powszechne zjawisko w
+projektach, które powsta&#322;y przed wynalezieniem wiki (patrz <a class="ulink" href="http://en.wikipedia.org/wiki/Wiki" target="_top">http://en.wikipedia.org/wiki/Wiki</a>). Odpowied&#378; na wiele pyta&#324; to
+sprawa wzgl&#281;dna, zale&#380;na od kompromisu pomi&#281;dzy wygod&#261; tych, którzy
+wprowadzaj&#261; informacj&#281;, a tych, do których jest ona kierowana, lub pomi&#281;dzy
+czasem koniecznym na skonfigurowanie systemu zarz&#261;dzania informacjami, a
+jego po&#380;ytkiem dla projektu.</p><p>Wystrzegaj si&#281; pokusy nadmiernej automatyzacji, czyli automatyzacji
+procesów, które w rzeczywisto&#347;ci wymagaj&#261; ludzkiej uwagi. Infrastruktura
+techniczna jest istotna, ale tym co sprawia, &#380;e projekty wolnego
+oprogramowania &#380;yj&#261;, jest troska ludzi w nie zaanga&#380;owanych. Infrastruktura
+techniczna powinna przede wszystkim by&#263; w tym pomoc&#261; dla cz&#322;owieka.</p></div><div class="sect1" title="Czego projekt potrzebuje"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="tools-needed"></a>Czego projekt potrzebuje</h2></div></div></div><p>Wi&#281;kszo&#347;c projektów otwartego oprogramowania posiada przynajmniej
+nast&#281;puj&#261;cy minimalny, standardowy zestaw narz&#281;dzi zarz&#261;dzania
+informacjami:</p><div class="variablelist"><dl><dt><span class="term">Strona WWW</span></dt><dd><p>To przede wszystki scentralizowany, jednokierunkowy kana&#322;
+     przekazu informacji z projektu do opinii publicznej. Strona WWW mo&#380;e
+     te&#380; stanowi&#263; panel administracyjny dla pozosta&#322;ych narz&#281;dzi
+     projektu.</p></dd><dt><span class="term">Listy dyskusyjne</span></dt><dd><p>Na ogó&#322; to najbardziej aktywne forum komunikacyjne projektu,
+       pe&#322;ni&#261;ce rol&#281; "stenogramu".</p></dd><dt><span class="term">Kontrola wersji</span></dt><dd><p>Pozwala programistom na wygodne zarz&#261;dzanie zmianami w kodzie,
+       w&#322;&#261;czaj&#261;c odwracanie zmian i ich "portowanie". Pozwala wszystkim
+       &#347;ledzi&#263;, co dzieje si&#281; w kodzie.</p></dd><dt><span class="term">&#346;ledzenie b&#322;&#281;dów</span></dt><dd><p>Pozwala programistom &#347;ledzi&#263; nad czym akutualnie pracuj&#261;,
+       koordynowa&#263; si&#281; wzajemnie i planowa&#263; wydania. Udost&#281;pnia wszystkim
+       informacje o stanie zg&#322;osze&#324; i dodatkowych informacjach (np. jak
+       odtworzy&#263; b&#322;&#261;d) o nich. Mo&#380;e zosta&#263; wykorzystany do &#347;ledzenia nie
+       tylko b&#322;&#281;dów, ale i informacji o zadaniach, wydaniach, nowych
+       pomys&#322;ach, itd.</p></dd><dt><span class="term">Czat na &#380;ywo</span></dt><dd><p>Miejsce na szybkie, mniej istotne dyskusje oraz wymian&#281; pyta&#324; i
+       odpowiedzi. Nie zawsze w pe&#322;ni archiwizowane.</p></dd></dl></div><p>Ka&#380;de narz&#281;dzie w tym zestawie zaspokaja inne potrzeby, ale ich
+dzia&#322;anie jest ze sob&#261; powi&#261;zane, powinny wi&#281;c dobrze za sob&#261; wspó&#322;pracowa&#263;.
+Poni&#380;ej opiszemy, jak tego dokona&#263; i, co wa&#380;niejsze, jak zach&#281;ci&#263; ludzi do
+korzystania z nich. Strona WWW zostanie omówiona na ko&#324;cu, gdy&#380; stanowi
+raczej klej dla wszystkich pozosta&#322;ych elementów, ni&#380; narz&#281;dzie samo w
+sobie.</p><p>Mo&#380;na unikn&#261;&#263; wielu problemów z wyborem i konfiguracj&#261; tych narz&#281;dzi,
+korzystaj&#261;c z serwisów oferuj&#261;cych <em class="firstterm">pakiet hostingowy</em>:
+serwer z preinstalowanymi wszystkim narz&#281;dziami, przydatnymi w projekcie
+wolnego oprogramowania. Patrz
+<a class="xref" href="web-site.html#canned-hosting" title="Canned Hosting">&#8222;Canned Hosting&#8221;</a><span> dalej
+w tym rozdziale</span> aby poczyta&#263; o zaletach i wadach pakietów
+hostingowych.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6010384" href="#idp6010384" class="para">12</a>] </sup>Z ksi&#261;&#380;ki <em class="citetitle">Mityczny
+osobomiesi&#261;c - eseje o in&#380;ynierii oprogramowania</em>, 1975. Patrz
+<a class="ulink" href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month" target="_top">http://en.wikipedia.org/wiki/The_Mythical_Man-Month</a> i <a class="ulink" href="http://en.wikipedia.org/wiki/Brooks_Law" target="_top">http://en.wikipedia.org/wiki/Brooks_Law</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="announcing.html">Poprzedni</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="mailing-lists.html">Nast&#281;pny</a></td></tr><tr><td width="40%" align="left" valign="top">Announcing </td><td width="20%" align="center"><a accesskey="h" href="index.html">Spis tre&#347;ci</a></td><td width="40%" align="right" valign="top"> Listy dyskusyjne</td></tr></table></div></body></html>

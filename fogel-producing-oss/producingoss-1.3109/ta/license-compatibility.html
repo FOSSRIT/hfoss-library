@@ -1,0 +1,56 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>The GPL and License Compatibility</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Producing Open Source Software"><link rel="up" href="legal.html" title="Chapter 10. Licenses, Copyrights, and Patents"><link rel="prev" href="license-aspects.html" title="Aspects of Licenses"><link rel="next" href="license-choosing.html" title="Choosing a License"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">The GPL and License Compatibility</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="license-aspects.html">Prev</a> </td><th width="60%" align="center">Chapter 10. Licenses, Copyrights, and Patents</th><td width="20%" align="right"> <a accesskey="n" href="license-choosing.html">Next</a></td></tr></table><hr></div><div class="sect1" title="The GPL and License Compatibility"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="license-compatibility"></a>The GPL and License Compatibility</h2></div></div></div><p>By far the sharpest dividing line in licensing is that between
+proprietary-incompatible and proprietary-compatible licenses, that is,
+between the GNU General Public License and everything else.  Because
+the primary goal of the GPL's authors is the promotion of free
+software, they deliberately crafted the license to make it impossible
+to mix GPLed code into proprietary programs.  Specifically, among the
+GPL's requirements (see
+<a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html" target="_top">fsf.org/licensing/licenses/gpl.html</a> for its
+full text) are these two:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Any derivative work&#8212;that is, any work
+            containing a nontrivial amount of GPLed code&#8212;must
+            itself be distributed under the GPL.</p></li><li class="listitem"><p>No additional restrictions may be placed on the
+            redistribution of either the original work or a derivative
+            work.  (The exact language is: "You may not impose any
+            further restrictions on the exercise of the rights granted
+            or affirmed under this License.")</p></li></ol></div><p>With these conditions, the GPL succeeds in making freedom
+contagious.  Once a program is copyrighted under the GPL, its terms of
+redistribution are <em class="firstterm">viral</em>&#8212;they are passed
+on to anything else the code gets incorporated into, making it
+effectively impossible to use GPLed code in closed-source programs.
+However, these same clauses also make the GPL incompatible with
+certain other free licenses.  The usual way this happens is that the
+other license imposes a requirement&#8212;for example, a credit clause
+requiring the original authors to be mentioned in some way&#8212;that
+is incompatible with the GPL's "You may not impose any further
+restrictions..." language.  From the point of view of the Free
+Software Foundation, these second-order consequences are desirable, or
+at least not regrettable.  The GPL not only keeps your software free,
+but effectively makes your software an agent in pushing
+<span class="emphasis"><em>other</em></span> software to enforce freedom as well.</p><p>The question of whether or not this is a good way to
+promote free software is one of the most persistent holy wars on the
+Internet (see <a class="xref" href="common-pitfalls.html#holy-wars" title="Avoid Holy Wars">the section called &#8220;Avoid Holy Wars&#8221;</a><span>
+in <a class="xref" href="communications.html" title="Chapter 6. Communications">Chapter 6, <i>Communications</i></a></span>), and we won't
+investigate it here.  What's important for our purposes is that
+GPL compatibility is an important issue when choosing a license.  The
+GPL is by far the most popular open source license; at one point
+Freecode had it at 68%, with the next highest license at 6%
+<sup>[<a name="idp10186624" href="#ftn.idp10186624" class="footnote">47</a>]</sup>.
+If you want your code to be able to be
+mixed freely with GPLed code&#8212;and there's a lot of GPLed code out
+there&#8212;then you should pick a GPL-compatible license.  Most of
+the GPL-compatible open source licenses are also
+proprietary-compatible: that is, code under such a license can be used
+in a GPLed program, and it can be used in a proprietary program.  Of
+course, the <span class="emphasis"><em>results</em></span> of these mixings would not be
+compatible with each other, since one would be under the GPL and the
+other would be under a closed-source license.  But that concern
+applies only to the derivative works, not to the code you distribute
+in the first place.</p><p>Fortunately, the Free Software Foundation maintains a list
+showing which licenses are compatible with the GPL and which are not,
+at <a class="ulink" href="http://www.gnu.org/licenses/license-list.html" target="_top">gnu.org/licenses/license-list.html</a>.  All
+of the licenses discussed in this chapter are present on that list, on
+one side or the other.</p><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp10186624" href="#idp10186624" class="para">47</a>] </sup>License statistics used to be available from
+Freecode.com, back when it was called Freshmeat.net, but in 2008 they
+switched to a freeform method of tagging projects that made it harder
+to generate reliable license statistics.  See <a class="ulink" href="http://help.freecode.com/discussions/questions/187-where-did-the-license-statistics-page-go" target="_top">help.freecode.com/discussions/questions/187-where-did-the-license-statistics-page-go</a>
+for a discussion of possible restoration of those stats.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="license-aspects.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="legal.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="license-choosing.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Aspects of Licenses </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Choosing a License</td></tr></table></div></body></html>

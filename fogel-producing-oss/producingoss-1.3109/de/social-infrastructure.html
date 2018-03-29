@@ -1,0 +1,161 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Kapitel 4. Soziale und politische Infrastruktur</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="index.html" title="Produktion von Open-Source-Software"><link rel="prev" href="web-site.html" title="Website"><link rel="next" href="consensus-democracy.html" title="Konsensbasierte Demokratie"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 4. Soziale und politische Infrastruktur</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="web-site.html">Zurück</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="consensus-democracy.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 4. Soziale und politische Infrastruktur"><div class="titlepage"><div><div><h2 class="title"><a name="social-infrastructure"></a>Kapitel 4. Soziale und politische Infrastruktur</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="social-infrastructure.html#benevolent-dictator">Gütige Diktatoren</a></span></dt><dd><dl><dt><span class="sect2"><a href="social-infrastructure.html#benevolent-dictator-qualifications">Wer kann ein gütiger Diktator sein?</a></span></dt></dl></dd><dt><span class="sect1"><a href="consensus-democracy.html">Konsensbasierte Demokratie</a></span></dt><dd><dl><dt><span class="sect2"><a href="consensus-democracy.html#version-control-relaxation">Versionsverwaltung bedeutet Entspannung</a></span></dt><dt><span class="sect2"><a href="consensus-democracy.html#voting">Wenn kein Konsens möglich ist, stimme ab!</a></span></dt><dt><span class="sect2"><a href="consensus-democracy.html#when-to-vote">Wann sollte abgestimmt werden?</a></span></dt><dt><span class="sect2"><a href="consensus-democracy.html#electorate">Wahlberechtigung</a></span></dt><dt><span class="sect2"><a href="consensus-democracy.html#polls">Meinungsumfragen contra Abstimmung</a></span></dt><dt><span class="sect2"><a href="consensus-democracy.html#veto">Vetos</a></span></dt></dl></dd><dt><span class="sect1"><a href="written-rules.html">Schriftliche Regeln</a></span></dt></dl></div><div class="simplesect"><div class="titlepage"></div><p>Das erste, was viele über freie Software wissen wollen, ist
+meist: "Wie funktioniert das? Was hält ein Projekt am Laufen? Wer
+trifft die Entscheidungen?". Ich bin immer unzufrieden mit dem faden
+Geschmack der Antworten über Meritokratie, den Geist der 
+Zusammenarbeit, Code der für sich selbst spricht, usw. Tatsache ist,
+die Frage ist nicht so leicht zu beantworten. Leistung, Zusammenarbeit
+und laufender Code gehören zwar alle dazu, sagen aber nichts über den
+täglichen Ablauf in einem Projekt, oder wie Konflikte gelöst 
+werden.</p><p>Dieses Kapitel soll zeigen, welche Grundbausteine zu einem
+erfolgreichen Projekt gehören. Mit "erfolgreich" meine ich nicht nur
+die technische Qualität, sondern auch die Gesundheit der Gemeinschaft
+und seine Überlebensfähigkeit. Die Gesundheit bezieht sich auf die
+Fähigkeit eines Projeks, neue Codebeiträge und Entwickler aufzunehmen,
+sowie auf eingehende Bug-Meldungen zu reagieren. Überlebensfähigkeit
+bedeutet, unabhängig von irgendeinem Beteiligten oder Geldgeber 
+fortbestehen zu können &#8211; betrachten Sie es als die Wahrscheinlichkeit
+für das Weiterleben eines Projekts, selbst wenn alle Gründungsmitglieder
+ihre Sachen packen und sich etwas anderem widmen. Technischer Erfolg
+ist leicht zu erreichen, aber ohne eine solide Entwicklergemeinschaft
+wird ein Projekt scheitern, sobald es wächst, Erfolg hat oder ein
+charismatisches Mitglied verliert.</p><p>Es gibt verschiedene Wege zu diesem Erfolg. Manche benutzen 
+formelle Leitungsstrukturen um ihre Debatten zu lösen, 
+neue Entwickler einzuladen (manchmal auch auszuladen), neue Funktionen
+zu planen usw. Andere haben weniger formelle Strukturen, dafür halten
+sich die Teilnehmer bewusst zurück, um eine gerechte Atmosphäre
+herzustellen, in der sich Leute auf diese Quasi-Regierungsform
+verlassen können. Beide Wege führen zum gleichen Ziel: das Gefühl einer
+beständigen Institution, die durch Gewohnheiten und Abläufe unterstützt
+wird, die alle Beteiligten gut verstehen. Diese Eigenschaften sind bei
+selbstorganisierenden Systemen noch wichtiger, als bei solchen mit
+einer zentralen Verwaltung, da jeder sich darüber im Klaren ist, dass
+ein paar faule Äpfel die ganze Kiste verderben können, zumindest eine
+Zeit lang.</p><div class="sect1" title="Aufspaltbarkeit"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="forkability"></a>Aufspaltbarkeit</h2></div></div></div><p>Entwickler in einem freien Softwareprojekt sind durch eine
+unverzichtbare Zutat verbunden: die Möglichkeit, es zu
+<em class="firstterm">forken</em><sup>[<a name="idp5099120" href="#ftn.idp5099120" class="footnote">35</a>]</sup>: jeder kann 
+eine Kopie des Quellcodes nehmen und daraus ein neues Projekt starten.
+Dieses wird als Fork bezeichnet und steht meistens in Konkurrenz zu dem
+ursprünglichen Projekt. Das paradoxe
+daran ist, dass die <span class="emphasis"><em>Möglichkeit</em></span> von Forks zumeist
+ein viel größerer Antrieb ist, als ein tatsächlich bestehender Fork,
+der übrigens sehr selten eintritt. Ein Fork ist schlecht für alle
+(die Gründe dafür werden in
+<a class="xref" href="forks.html" title="Abspaltungen">&#8222;Abspaltungen&#8220;</a><span> im Kapitel
+<a class="xref" href="managing-volunteers.html" title="Kapitel 8. Leitung von Freiwilligen">Kapitel 8, <i>Leitung von Freiwilligen</i></a></span> genauer untersucht),
+je ernster die Gefahr eines Forks wird, desto größer ist die
+Bereitschaft der Projektbeteiligten, Kompromisse einzugehen, um diese
+Gefahr abzuwenden.</p><p>Ein Fork, oder vielmehr das Potential dafür, ist der Grund, dass 
+freie Software-Projekte keine wirklichen Diktatoren haben. Das klingt
+überraschend, wenn man bedenkt, wie viele "Diktatoren" oder "Tyrannen"
+es bei verschiedenen Open-Source-Projekten gibt. Diese Art der 
+Tyrannei ist aber etwas Besonderes, völlig verschieden von dem
+gewöhnlichen Verständnis des Wortes. Stellen Sie sich einen König vor,
+dessen Untertanen jederzeit eine Kopie seines Königreichs machen
+könnten, in dem sie selbst nach eigenem Ermessen regieren könnten. Würde
+dieser König sich nicht völlig anders benehmen, als einer dessen
+Untertanen auf Gedeih und Verderb an ihn gebunden sind?</p><p>Projekte sind deshalb, auch ohne formal demokratische
+Struktur, faktisch Demokratien, zumindest bei wichtigen Entscheidungen.
+Die Kopierbarkeit von Projekten impliziert die Aufspaltbarkeit; 
+diese wiederum impliziert Konsens. Möglich, dass eine große Bereitschaft
+besteht, einem Anführer zu vertrauen (das bekannteste Beispiel ist
+wohl Linus Torvalds bei der Entwicklung des Linux-Kernels), aber nur
+deshalb, weil sie es sich so <span class="emphasis"><em>ausgesucht</em></span> haben, und
+das ist ganz und gar nicht ironisch oder zynisch gemeint. Der Diktator hat
+keine magische Macht über das Projekt. Eine wesentliche Eigenschaft
+aller Open-Source-Lizenzen ist, dass sie keiner einzelnen Partei die
+Entscheidungsgewalt über Änderungen am Code oder seine Nutzung einräumen.
+Wenn der Diktator plötzlich anfangen würde, schlechte Entscheidungen zu 
+treffen, würde das Unruhe hervorrufen, gefolgt von einer Revolte
+und einem Fork. Aber so weit kommt es meist nicht, da der Diktator
+vorher Kompromisse eingeht.</p><p>Aber auch wenn die Aufspaltbarkeit die Obergrenze für die Macht
+Einzelner im Projekt bestimmt, heißt das nicht, dass es nicht große
+Unterschiede in der Leitung von Projekten geben würde. Sie werden nicht 
+jede einzelne Entscheidung auf die Frage hinauslaufen lassen wollen, ob
+das jemanden zu einem Fork veranlassen könnte. Das würde ermüdend wirken 
+und eine Menge Energie von der eigentlichen Arbeit abziehen. 
+Die nächsten beiden Abschnitte untersuchen
+die verschiedenen Wege, Projekte so zu organisieren, dass die 
+meisten Entscheidungen reibungslos verlaufen. Diese beiden Beispiele 
+sind zugegeben idealisierte Grenzfälle; viele Projekte bewegen sich 
+irgendwo dazwischen.</p></div></div><div class="simplesect"><div class="titlepage"></div></div><div class="sect1" title="Gütige Diktatoren"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="benevolent-dictator"></a>Gütige Diktatoren</h2></div></div></div><p>Das Modell des <em class="firstterm">gütigen Diktators</em>
+entspricht genau dem, wonach es sich anhört: Die letzte
+Entscheidungsgewalt liegt bei einer Person, von der man aufgrund ihrer
+Persönlichkeit und Erfahrung erwartet, dass sie mit dieser weise 
+umgeht.</p><p>Auch wenn der Begriff "gütiger Diktator", im Englischen bekannt 
+als "benevolent dictator" (oder <em class="firstterm">BD</em>), der übliche 
+Begriff für diese Rolle ist, wäre es besser, ihn als einen von der
+Gemeinschaft anerkannten Vermittler oder Richter zu betrachten. Im
+allgemeinen treffen gütige Diktatoren nicht alle oder auch nur die
+meisten Entscheidungen. Es ist ohnehin unwahrscheinlich, dass eine
+einzelne Person genügend Kenntnisse hat, um in einem größeren Projekt
+durchweg gute Entscheidungen treffen zu können. Hochrangige Entwickler
+werden sich nicht lange am Projekt beteiligen, wenn sie nicht zumindest
+ein Stückweit Einfluss auf seine Richtung haben. Deshalb diktieren
+gütige Diktatoren nicht besonders viel. Stattdessen lassen sie möglichst
+viel ohne ihr Zutun, durch Diskussionen oder Experimente entscheiden. Sie
+nehmen zwar auch selber an diesen Diskussionen teil, jedoch nur als
+gewöhnliche Entwickler, oftmals verweisen sie auf einen Zuständigen, mit
+mehr Kenntnissen über einen bestimmten Bereich. Nur wenn offensichtlich 
+wird, dass kein Konsens erreicht werden kann und dass der größte Teil der 
+Gruppe eine Entscheidung haben <span class="emphasis"><em>will</em></span>, damit die 
+Entwicklung fortgesetzt werden kann, sprechen sie ein Machtwort. Der 
+Widerwille gegen Entscheidungen von oben ist ein Wesenszug, 
+den praktisch alle erfolgreichen gütigen Diktatoren teilen; er ist 
+einer der Gründe, dass sie es schaffen, diese Rolle zu behalten.</p><div class="simplesect"><div class="titlepage"></div></div><div class="sect2" title="Wer kann ein gütiger Diktator sein?"><div class="titlepage"><div><div><h3 class="title"><a name="benevolent-dictator-qualifications"></a>Wer kann ein gütiger Diktator sein?</h3></div></div></div><p>Ein gütiger Diktator braucht eine Kombination verschiedener 
+Wesenszüge. Erstens bedarf es eines feinsinniges Gespürs für den 
+eigenen Einfluss im Projekt, das wiederum Zurückhaltung mit sich 
+bringt. In der frühen Phase einer Diskussion sollte man nicht seine
+Meinungen und Folgerungen mit einer solchen Sicherheit ausdrücken, 
+dass andere das Gefühl bekommen, es wäre sinnlos zu widersprechen. 
+Menschen sollten die Freiheit haben, ihre Ideen auszudrücken, selbst 
+blöde Ideen. Es lässt sich natürlich nicht vermeiden, dass der gütige 
+Diktator ab und zu selber eine blöde Idee vorschlägt, weshalb die 
+Rolle auch die Fähigkeit erfordert, die eigenen schlechten 
+Entscheidungen zu erkennen und sie als solche zu akzeptieren &#8211; wobei 
+das ein Wesenszug ist, den <span class="emphasis"><em>jeder</em></span> gute Entwickler 
+aufweisen sollte, insbesondere wenn er lange beim Projekt bleibt. Der 
+Unterschied ist aber, dass der gütige Diktator sich ab und zu solche 
+Patzer leisten kann, ohne sich über sein Ruf all zu viele Sorgen machen zu 
+müssen. Neue Entwickler werden sich weniger selbstsicher fühlen, also 
+sollte der gütige Diktator seine Kritik mit etwas Gespür, sowohl für 
+das technische als auch das psychologische Gewicht seiner Worte 
+formulieren.</p><p>Der gütige Diktator muss <span class="emphasis"><em>nicht</em></span> die besten
+technischen Fähigkeiten im Projekt haben. Er muss lediglich gut genug 
+sein, um selber am Code zu arbeiten und einen Kommentar zu einer in
+Frage stehenden Änderung abgeben zu können, mehr aber nicht. Die 
+Position des gütigen Diktators kann man sich weder durch
+einschüchternd gute Programmierfähigkeiten aneignen noch behalten.
+<span class="emphasis"><em>Wichtig</em></span> ist vor allem Erfahrung und ein
+allgemeines Gespür für die Architektur von Quellcode &#8211; nicht 
+unbedingt die Fähigkeit, auf Befehl guten Code zu produzieren, wohl 
+aber die Fähigkeit, guten Code unabhängig von der Quelle zu 
+erkennen.</p><p>Der gütige Diktator ist auch häufig der Gründer des Projekts, 
+was sich aber eher so ergibt, als das es ein Grund 
+wäre. Die Qualitäten die es ermöglichen, erfolgreich ein Projekt  
+zu starten &#8211; technische Kompetenz, die Fähigkeit andere zur
+Beteiligung überzeugen zu können, usw. &#8211; sind genau die 
+Qualitäten, die jeder gütige Diktator besitzen muss. Natürlich besitzen
+die Gründer auch automatisch eine gewisse Erfahrung mit dem Projekt, 
+was ausreichen kann, allen Beteiligten eine gütige Diktatur 
+als einfachsten Weg erscheinen zu lassen.</p><p>Bedenken Sie, dass ein Fork aus beiden Richtungen droht. Ein
+gütiger Diktator kann genau so wie jeder andere einen Fork anfangen,
+und das haben gelegentlich schon welche gemacht, sobald sie das Gefühl
+hatten, das sie das Projekt in eine andere Richtung führen sollten,
+als die Mehrheit der übrigen Entwickler. Da jeder die Möglichkeit zu 
+einem Fork hat, ist es egal, ob der gütige Diktator vollen
+Zugriff auf die Server des Projekts hat oder nicht. Die Leute reden 
+mitunter vom Zugriff auf den Server, als sei er die ultimative 
+Quelle der Macht in einem Projekt, tatsächlich ist er aber 
+bedeutungslos. Die Fähigkeit, Benutzer zur Versionsverwaltung
+hinzuzufügen oder zu entfernen, beeinflusst nur die Kopie des Projekts
+die auf dem Server liegt. Anhaltender Missbrauch dieser Macht, ob vom 
+gütigen Diktator oder jemand anderem, würde einfach zum Umzug der 
+Entwicklung auf einem anderen Server führen.</p></div><p>Ob Ihr Projekt einen gütigen Diktator haben sollte oder mit 
+einem weniger zentralisierten System besser laufen würde, hängt 
+größtenteils davon ab, wer die Rolle einnehmen könnte. Eine gute 
+Faustregel ist: wenn für alle klar ist, wer der gütige Diktator sein 
+sollte, dann ist das der richtige Weg. Wenn es aber keinen
+offensichtlichen Kandidaten gibt, sollte das Projekt wahrscheinlich ein 
+dezentrales System für Entscheidungen benutzen, wie im nächsten 
+Abschnitt beschrieben.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp5099120" href="#idp5099120" class="para">35</a>] </sup>de. Gabel im Sinne einer
+Gabelung</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="web-site.html">Zurück</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="consensus-democracy.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Website </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Konsensbasierte Demokratie</td></tr></table></div></body></html>

@@ -1,0 +1,133 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Kapitel 3. Technische Infrastruktur</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="index.html" title="Produktion von Open-Source-Software"><link rel="prev" href="announcing.html" title="Bekanntgabe"><link rel="next" href="mailing-lists.html" title="Mailinglisten"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Kapitel 3. Technische Infrastruktur</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="announcing.html">Zurück</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="mailing-lists.html">Weiter</a></td></tr></table><hr></div><div class="chapter" title="Kapitel 3. Technische Infrastruktur"><div class="titlepage"><div><div><h2 class="title"><a name="technical-infrastructure"></a>Kapitel 3. Technische Infrastruktur</h2></div></div></div><div class="toc"><p><b>Inhaltsverzeichnis</b></p><dl><dt><span class="sect1"><a href="technical-infrastructure.html#tools-needed">Das nötige Werkzeug</a></span></dt><dt><span class="sect1"><a href="mailing-lists.html">Mailinglisten</a></span></dt><dd><dl><dt><span class="sect2"><a href="mailing-lists.html#spam-prevention">Schutz vor Spam</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#spam-filtering">Filterung von Nachrichten</a></span></dt><dt><span class="sect3"><a href="mailing-lists.html#address-hiding">Verschleierung von Adressen im Archiv</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#header-management">Umgang mit E-Mail-Headern</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#reply-to">Die große "reply-to"-Debatte</a></span></dt><dd><dl><dt><span class="sect3"><a href="mailing-lists.html#reply-fantasies">Zwei Fantasien</a></span></dt></dl></dd><dt><span class="sect2"><a href="mailing-lists.html#archiving">Archivierung</a></span></dt><dt><span class="sect2"><a href="mailing-lists.html#mailing-list-software">Mailinglisten-Software</a></span></dt></dl></dd><dt><span class="sect1"><a href="vc.html">Versionsverwaltung</a></span></dt><dd><dl><dt><span class="sect2"><a href="vc.html#vc-vocabulary">Vokabular der Versionsverwaltung</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-choosing">Wahl einer Versionsverwaltung</a></span></dt><dt><span class="sect2"><a href="vc.html#vc-using">Nutzung einer Versionsverwaltung</a></span></dt><dd><dl><dt><span class="sect3"><a href="vc.html#version-everything">Versioniere alles</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-browsing">Zugang per Browser</a></span></dt><dt><span class="sect3"><a href="vc.html#commit-emails">Commit-E-Mails</a></span></dt><dt><span class="sect3"><a href="vc.html#branches">Benutze Zweige, um Engpässe zu vermeiden</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-singularity">Eindeutigkeit von Informationen</a></span></dt><dt><span class="sect3"><a href="vc.html#vc-authz">Autorisierung</a></span></dt></dl></dd></dl></dd><dt><span class="sect1"><a href="bug-tracker.html">Bugtracker</a></span></dt><dd><dl><dt><span class="sect2"><a href="bug-tracker.html#bug-tracker-mailing-list-interaction">Interaktion mit Mailinglisten</a></span></dt><dt><span class="sect2"><a href="bug-tracker.html#bug-filtering">Vor-Filterung des Bugtrackers</a></span></dt></dl></dd><dt><span class="sect1"><a href="irc.html">IRC / Echtzeit-Nachrichtendienste</a></span></dt><dd><dl><dt><span class="sect2"><a href="irc.html#bots">Bots</a></span></dt><dt><span class="sect2"><a href="irc.html#irc-archiving">IRC-Archivierung</a></span></dt></dl></dd><dt><span class="sect1"><a href="rss.html">RSS-Feeds</a></span></dt><dt><span class="sect1"><a href="wikis.html">Wikis</a></span></dt><dt><span class="sect1"><a href="web-site.html">Website</a></span></dt><dd><dl><dt><span class="sect2"><a href="web-site.html#canned-hosting">Hosting-Pakete</a></span></dt><dd><dl><dt><span class="sect3"><a href="web-site.html#canned-hosting-choosing">Die Wahl des Hosting-Anbieters</a></span></dt><dt><span class="sect3"><a href="web-site.html#anonymity">Anonymität und Beteiligung</a></span></dt></dl></dd></dl></dd></dl></div><div class="simplesect"><div class="titlepage"></div><p>Freie Software-Projekte beruhen auf Techniken, die das
+selektive Aufgreifen und Integrieren von Information ermöglichen. Je 
+gewandter Sie mit diesen Techniken umgehen und andere dazu bewegen 
+können, sie zu benutzen, desto erfolgreicher wird Ihr Projekt sein. Mit
+zunehmender Größe Ihres Projekts, gewinnt diese Regel umso mehr an
+Bedeutung. Eine gute Informationsverwaltung verhindert, dass ein
+Open-Source-Projekt unter der Last von Brooks Gesetz ,<sup>[<a name="idm6505184" href="#ftn.idm6505184" class="footnote">17</a>]</sup>
+zusammenbricht. Sie besagt: Der Einsatz zusätzlicher Arbeitskräfte bei
+bereits verspäteten Softwareprojekten vergrößert nur die Verspätung. Er
+beobachtete, dass die Komplexität eines Projekts mit der Anzahl der 
+Teilnehmer <span class="emphasis"><em>Quadratisch</em></span> zunimmt. Wenn nur wenige
+beteiligt sind, kann jeder leicht mit jedem reden, wenn aber hunderte
+beteiligt sind, ist es nicht weiter möglich, dass jeder über die Arbeit
+aller anderen Bescheid weiß. Wenn es bei der Verwaltung eines freien 
+Software-Projekts darum geht, jedem das Gefühl zu geben in einem Raum 
+mit allen Anderen zu sitzen, stellt sich die offensichtliche Frage: Was 
+passiert wenn alle in einem gedrängten Raum versuchen auf einmal zu 
+reden?</p><p>Dieses Problem ist nicht neu. In der Praxis wird es gelöst
+wie in einem Parlament: Es gibt formelle Richtlinien für Diskussionen
+innerhalb von großen Gruppen, um sicherzustellen, dass wichtige
+Meinungsverschiedenheiten nicht durch Zwischenrufe verloren gehen.
+Weitere Richtlinien gibt es für die Bildung von Untergremien, sowie um
+erkennen zu können, wann Entscheidungen getroffen werden, usw. Ein 
+wichtiger Teil der parlamentarischen Diskussion ist zu spezifizieren, 
+wie die Gruppe ihre Informationen verwaltet. Manche Anmerkungen werden
+"fürs Protokoll" gemacht, andere nicht. Das Protokoll selbst ist
+Gegenstand direkter Änderungen, und wird nicht als wörtliche 
+Niederschrift der tatsächlichen Ereignisse angesehen, sondern als 
+Auflistungen der gemeinsam <span class="emphasis"><em>anerkannten</em></span> Ereignisse.
+Das Protokoll ist nicht monolitisch, sondern nimmt verschiedene Formen
+an, für verschiedene Zwecke. Es umfasst die einzelnen Sitzungen, die
+komplette Sammlung aller Sitzungen, Zusammenfassungen, Tagesordnungen
+mit Anmerkungen, Berichte von Gremien und nicht anwesenden
+Korrespondenten, Abläufe, usw.</p><p>Da das Internet nicht wirklich ein Raum ist, müssen wir nicht die 
+Teile der parlamentarischen Diskussion replizieren, die manche Leute 
+ruhig hält, während andere Reden. Wenn es aber um Techniken zur 
+Verwaltung von Informationen geht, sind gut betriebene 
+Open-Source-Projekte 
+wie eine parlamentarische Diskussionen auf Steroiden. Weil 
+fast die gesamte Kommunikation in Open-Source-Projekten schriftlich
+abläuft, haben sich wohl durchdachte Systeme entwickelt um Daten 
+angemessen zu markieren und an die richtige Stellen zu leiten; um 
+Wiederholungen zu minimieren, damit Diskussionen nicht auseinander 
+laufen; um Daten zu speichern und abzurufen; um schlechte oder veraltete
+Informationen zu korrigieren; und um getrennte Informationen miteinander 
+zu verbinden, wenn Zusammenhänge gefunden werden. Aktive Teilnehmer 
+verinnerlichen viele dieser Techniken und werden oft komplexe manuelle
+Aufgaben durchführen, um sicherzustellen, dass Information am richtigen
+Ziel ankommen. Diese Bestrebungen hängen aber letztendlich von der
+Unterstützung ausgeklügelter Software ab. Die Kommunikationsmedien
+sollten so weit möglich, diese Aufgaben selbstständig übernehmen und
+Information für Menschen so bequem wie möglich aufbereiten. In der 
+Praxis werden Menschen natürlich an vielen Stellen eingreifen müssen
+und es ist wichtig, dass diese Eingriffe möglichst einfach sind. Im
+allgemeinen sollte aber, solange die Menschen sich bemühen 
+Informationen sorgfältig zu Kennzeichnen und am richtigen Ziel zu
+leiten, die Software so konfiguriert sein, dass sie den größtmöglichen
+Nutzen aus diesen Metadaten zieht.</p><p>Die Ratschläge in diesem Kapitel sind sehr praxisnah und basieren
+auf ganz bestimmter Software und Nutzungsverhalten. Es geht hierbei aber
+nicht nur darum bestimmte Techniken zu zeigen. Es geht auch darum,
+durch viele kleine Beispiele, die beste Haltung zu demonstrieren, um in
+Ihrem Projekt eine möglichst gute Informationsverwaltung zu fördern. 
+Diese Haltung wird eine Kombination aus technischen Fähigkeiten und 
+sozialer Kompetenz sein. Technische Fähigkeiten sind unentbehrlich, da
+die Software konfiguriert, sowie gelegentlich gepflegt und Angepasst
+werden muss, sobald neue Anforderungen auftauchen (siehe z.B. den
+Abschnitt über die Handhabung von Wachstum, im Abschnitt 
+<a class="xref" href="bug-tracker.html#bug-filtering" title="Vor-Filterung des Bugtrackers">&#8222;Vor-Filterung des Bugtrackers&#8220;</a><span> später in 
+diesem Kapitel</span>). Soziale Kompetenz ist nötig, da eine 
+menschliche Gemeinschaft auch gepflegt werden muss: Es ist nicht immer
+sofort ersichtlich wie diese Hilfsmittel am besten genutzt werden,
+und manchmal haben Projekte widersprüchliche Konventionen (siehe z.B.
+Beispiel die Diskussion um die Einstellung des 
+<code class="systemitem">Reply-to</code> Headers bei ausgehende Nachrichten
+der Mailingliste, in <a class="xref" href="mailing-lists.html" title="Mailinglisten">&#8222;Mailinglisten&#8220;</a>). Jeder der
+mit dem Projekt etwas zu tun hat, wird zur richtigen Zeit und auf die
+richtigen Art, dazu ermutigt werden müssen, seinen Teil beizutragen,
+die Information des Projekts geordnet zu halten. Je größer die
+Beteiligung des Freiwilligen, desto komplexer und spezieller werden
+die Techniken die man von ihr erwarten kann, sich anzueignen.</p><p>Es gibt keine schablonenhafte Lösung für Informationsverwaltung.
+Es gibt einfach zu viele Variablen. Es kann sein das Sie irgendwann 
+alles richtig eingerichtet haben, genau wie Sie es haben möchten, und 
+die meisten Freiwilligen überredet haben mitzumachen. Sobald das Projekt
+jedoch wächst, können sich manche dieser Vorgänge als nicht skalierbar
+erweisen. Wenn der Wachstum sich stabilisiert und die Entwickler und 
+Nutzer sich an die technische Infrastruktur gewöhnen, kann eine völlig
+neues Verwaltungssystem für Informationen aufkommen und neue Freiwillige
+werden ziemlich bald fragen, warum Ihr Projekt diese nicht
+einsetzt &#8211; viele freie Software-Projekte die vor der Erfindung von
+Wikis gegründet wurden, erleben das derzeit (siehe 
+<a class="ulink" href="http://en.wikipedia.org/wiki/Wiki" target="_top">http://en.wikipedia.org/wiki/Wiki</a>). Viele Fragen sind
+Ansichtssache und sind Kompromisse zwischen dem Komfort derjenigen die
+Informationen produzieren und dem Komfort derjenigen die diese 
+konsumieren, oder der Zeit die erforderlich ist, die Software 
+einzurichten und ihrem Nutzen für das Projekt.</p><p>Hüten Sie sich vor der Verlockung allzuviel zu automatisieren,
+dass eigentlich die Aufmerksamkeit eines Menschen erfordert. Technische
+Infrastruktur ist wichtig, aber ein freies Software-Projekt
+funktioniert in Wirklichkeit durch die Fürsorge &#8211; und die kluge
+Formulierung dieser Fürsorge &#8211; der beteiligten Menschen. Die 
+technische Infrastruktur ist hauptsächlich diesen Menschen das möglichst 
+zu vereinfachen.</p></div><div class="sect1" title="Das nötige Werkzeug"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="tools-needed"></a>Das nötige Werkzeug</h2></div></div></div><p>Die meiste Open-Source-Projekte haben ein Mindestmaß an üblichen
+Hilfsmitteln um Informationen zu Verwalten:</p><div class="variablelist"><dl><dt><span class="term">Webseite</span></dt><dd><p>Hauptsächlich ein zentralisierter Kanal für
+           Informationen vom Projekt in die Öffentlichkeit. 
+           Die Webseite kann auch eine administrative 
+           Schnittstelle für andere Hilfsmittel des Projekts 
+           sein.</p></dd><dt><span class="term">Mailinglisten</span></dt><dd><p>Meistens das aktivste Forum in einem Projekt und das 
+	         Medium "fürs Protokoll".</p></dd><dt><span class="term">Versionsverwaltung</span></dt><dd><p>Ermöglicht es den Entwicklern Änderungen am Code bequem 
+             zu verwalten, u.a. auch rückgängig zu machen. Erlaubt es
+             allen zu sehen was mit dem Code passiert.</p></dd><dt><span class="term">Bugtracker</span></dt><dd><p>Ermöglicht Entwicklern ihre Arbeit im Blick zu behalten, 
+             miteinander zu koordinieren und neue Versionen zu planen. 
+             Erlaubt es jedem den Status von einem Bug zu überprüfen 
+             und Informationen über den Bug festzuhalten (z.B. wie man 
+             ihn reproduziert). Kann außer zur Beobachtung von Fehlern 
+             auch für die Planung von Aufgaben, neuen Versionen, 
+             Funktionen usw. benutzt werden.</p></dd><dt><span class="term">Chat</span></dt><dd><p>Ein Ort für kurze, oberflächliche Diskussionen und um
+             Fragen und Antworten auszutauschen. Wird nicht immer 
+             vollständig archiviert.</p></dd></dl></div><p>Jedes dieser Hilfsmittel ist dazu gedacht, einen bestimmten Bedarf
+zu decken, ihre Funktionen sind aber auch mit einander verwandt und 
+müssen so eingerichtet werden, dass sie zusammen funktionieren. Weiter 
+unten werden wir untersuchen wie man sie so einrichten kann und viel 
+wichtiger noch, wie man Leute dazu bewegt sie zu benutzen. Die Webseite
+wird erst zum Schluss behandelt, da es eher als Klebstoff dient denn als
+eigenständig zu sehendes Hilfsmittel.</p><p>Sie können sich eine Menge Kopfschmerzen bei der Einrichtung 
+dieser Hilfsmittel ersparen, mit der Hilfe von Hosting-Bündel: Ein 
+Server der vorkonfigurierte Seiten und Vorlagen bereitstellt, sowie alle
+zugehörigen Hilfsmittel die man braucht um ein freies Software-Projekt 
+zu betreiben. Siehe 
+<a class="xref" href="web-site.html#canned-hosting" title="Hosting-Pakete">&#8222;Hosting-Pakete&#8220;</a><span> später in 
+diesem Kapitel</span> indem die Vor- und Nachteile von Hosting-Lösungen 
+behandelt werden.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idm6505184" href="#idm6505184" class="para">17</a>] </sup>Aus
+seinem Buch <em class="citetitle">The Mythical Man Month</em>, 1975. Siehe 
+<a class="ulink" href="http://en.wikipedia.org/wiki/The_Mythical_Man-Month" target="_top">http://en.wikipedia.org/wiki/The_Mythical_Man-Month</a> und 
+<a class="ulink" href="http://en.wikipedia.org/wiki/Brooks_Law" target="_top">http://en.wikipedia.org/wiki/Brooks_Law</a>.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="announcing.html">Zurück</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="mailing-lists.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Bekanntgabe </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Mailinglisten</td></tr></table></div></body></html>

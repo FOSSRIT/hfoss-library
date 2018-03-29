@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Keine Unterhaltungen im Bugtracker</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="Keine Unterhaltungen im Bugtracker"><div class="titlepage"><div><div><h1 class="title"><a id="bug-tracker-usage"/>Keine Unterhaltungen im Bugtracker</h1></div></div></div><p>Bei jedem Projekt, welches aktiv seinen Bugtracker benutzt,
+gibt es immer die Gefahr, dass dieser Tracker sich selbst in ein 
+Diskussionsforum verwandelt, obwohl der Mailverteiler in
+Wirklichkeit besser wäre. Für gewöhnlich, fängt es ganz unschuldig an:
+Jemand hängt einen Kommentar an eine Meldung, sagen wir mit einem
+Lösungsvorschlag, oder einem unvolständigen Patch. Jemand anderes
+sieht das und bemerkt, dass es Probleme mit der Lösung gibt, und hängt
+einen weiteren Kommentar an um sie zu schildern. Die erste Person
+antwortet wiederrum, auch wieder mit einem Kommentar an der Meldung...
+und so geht es weiter.</p><p>Das Problem dabei ist erstens, dass der Bugtracker ein ziemlich 
+unbequemer Ort ist, um eine Unterhaltung zu führen, und zweitens,
+dass andere Leute vielleicht nicht zuschauen – schließlich erwarten
+Sie, dass Diskussionen über die Entwicklung auf dem Entwickler 
+Verteiler stattfinden, also ist das der Ort an dem sie suchen. Es mag
+sein, dass sie überhaupt nicht bei dem Verteiler für Änderungen im 
+Bugtracker angemeldet sind, und wenn sie es sind, kann es sein, dass sie
+es nicht sonderlich gründlich verfolgen.</p><p>Aber wo genau bei dem Ablauf ging etwas schief? War es als die
+ursprüngliche Person ihre Lösung an die Meldung anhängte – hätte
+sie lieber eine Nachricht an den Verteiler schreiben sollen? Oder war
+es als die zweite Person in der Meldung reagierte, anstatt an den
+Verteiler?</p><p>Es gibt keine eine richtige Antwort, aber es gibt eine allgemeine
+Regel: Wenn Sie lediglich Daten an einer Meldung anhängen, dann machen
+Sie es auf dem Tracker, wenn Sie aber eine <span class="emphasis"><em>Unterhaltung
+</em></span> anfangen, dann machen Sie es auf dem Mailverteiler. Es
+mag sein, dass Sie nicht immer erkennen können, was der Fall ist, 
+nutzen Sie aber einfach Ihre Urteilsvermögen. Wenn Sie zum Beispiel,
+einen Patch anhängen, welches eine möglicherweise kontroverse Lösung
+beinhaltet, kann es sein, dass Sie vorrausahnen können, das Leute
+Fragen darüber haben werden. Obwohl Sie also normalerweise den Patch
+an die Meldung anhängen würden (angenommen Sie wollen nicht oder lönnen
+nicht direkt einen Commit der Änderung machen), wäre es in diesem Fall
+vieleicht eher angemessen statt dessen, eine Nachricht an den 
+Mailverteiler zu schicken. In jedem Fall wird es aber einen Punkt geben,
+an dem die eine oder andere Partei erkennen kann, dass es gleich von
+dem einfachen Anhängen von Informationen zu einer echten Unterhaltung
+übergeht – in dem Beispiel mit dem dieser Abschnitt anfing, wäre
+das die zweite Person, welche in dem Moment, wo er bemerkt, dass es
+Probleme mit dem Patch gibt, hätte vorrausahnen können, dass eine echte
+Diskussion sich gleich entwickelt, und desshalb in dem angemessenen
+Medium gehalten werden sollte.</p><p>Um einen Vergleich zur Mathematik zu führen, wenn die 
+Information danach aussieht, als würde es schnell konvergieren, dann
+stellen Sie es gleich in den Bugtracker; wenn es danach aussieht
+als würde es divergieren, dann wäre ein Mailverteiler oder ein
+IRC-Kanal der bessere Ort.</p><p>Das bedeutet nicht, dass es niemals Austausche auf dem Bug 
+Tracker geben sollte. Dem Meldenden nach weiteren Details einer
+Anleitung zur Reproduktion zu fragen, neigt beispielsweise dazu ein im
+hohen maße konvergenter Ablauf zu sein. Die Rückmeldung wird 
+wahrscheinlich keine neuen Probleme hervorbringen, es wird lediglich
+die Informationen erweitern, die bereits erfasst wurden. Es gibt
+keinen Grund den Mailverteiler mit diesem Vorgang abzulenken; Sie
+können es durchaus in den Kommentaren des Bugtrackers erledigen.
+Gleichermaßen gilt, wenn Sie sich ziemlich sicher sind, dass der Bug
+fälschlicherweise gemeldet wurde (d.h. kein Bug ist), dann können Sie
+es gleich in der Meldung sagen. Selbst auf ein kleines Problem bei einer
+vorgeschlagenen Lösung hinzuweisen ist in Ordnung, angenommen es ist
+kein Problem welches die Lösung gänzlich verhindert.</p><p>Wenn Sie andererseits philosophische Angelegenheiten über den
+Ramen der Meldung oder das Verhalten der Anwendung aufbringen, können
+Sie sich sicher sein, dass andere Entwickler beteiligt sein wollen.
+Die Diskussion wird wahrscheinlich eine weile lang divergieren, bevor
+es konvergiert, also schreiben Sie an den Mailverteiler.</p><p>Verlinken Sie immer von der Meldung auf den Thread im 
+Mailverteiler. Es ist immer noch wichtig für jemand der die Meldung
+verfolgt, in der Lage zu sein, die Diskussion zu erreichen, selbst wenn
+die Meldung selber nicht das Forum der Diskussion ist. Die Person die
+den Thread anfängt, mag das ein wenig aufwendig finden, aber in 
+Open-Source-Kultur hat im allgemeinen der Autor die Verantwortung: Es ist
+viel wichtiger Sachen für duntzende oder hunderte Leute die den Bug
+möglicherweise lesen als für die drei oder fünf die darüber schreiben.
+</p><p>Es ist in Ordnung, wichtige Schlussfolgerungen oder 
+Zusammenfassungen aus der Listen-Diskussion in die Meldung zu
+übertragen, wenn das es für die Leser einfacher macht. Ein häufiger
+Ablauf ist es, eine E-Mail-Diskussion anzufangen, einen Link an den
+Thread in der Meldung zu schreiben, und dann sobald die Diskussion
+zu Ende ist, die finale Zusammenfassung in die Meldung zu kopieren
+(zusammen mit einem Link zu der Nachricht welche die Zusammenfassung
+beinhaltet), damit jemand die sich die Meldung anschaut, leicht
+erkennen kann, welche Lösung beschlossen wurde, ohne irgendwo anders
+hinclicken zu müssen. Man merke an, dass die gewöhnliche Problematik
+doppelter Informationen hier nicht gibtm da sowohl Archive als auch
+Kommentare in einer Meldung, im allgemeinen sowieso statische, 
+unveränderliche Daten sind.</p></div></body></html>

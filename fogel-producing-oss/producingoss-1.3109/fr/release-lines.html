@@ -1,0 +1,71 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Maintaining Multiple Release Lines</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produire un Logiciel Libre"><link rel="up" href="development-cycle.html" title="Chapitre 7. Packaging, Releasing, and Daily Development"><link rel="prev" href="testing-and-releasing.html" title="Testing and Releasing"><link rel="next" href="releases-and-daily-development.html" title="Releases and Daily Development"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Maintaining Multiple Release Lines</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="testing-and-releasing.html">Précédent</a> </td><th width="60%" align="center">Chapitre 7. Packaging, Releasing, and Daily Development</th><td width="20%" align="right"> <a accesskey="n" href="releases-and-daily-development.html">Suivant</a></td></tr></table><hr></div><div class="sect1" title="Maintaining Multiple Release Lines"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="release-lines"></a>Maintaining Multiple Release Lines</h2></div></div></div><p>Most mature projects maintain multiple release lines in
+parallel.  For example, after 1.0.0 comes out, that line should
+continue with micro (bugfix) releases 1.0.1, 1.0.2, etc., until the
+project explicitly decides to end the line.  Note that merely
+releasing 1.1.0 is not sufficient reason to end the 1.0.x line.  For
+example, some users make it a policy never to upgrade to the first
+release in a new minor or major series&#8212;they let others shake the
+bugs out of, say 1.1.0, and wait until 1.1.1.  This isn't necessarily
+selfish (remember, they're forgoing the bugfixes and new features
+too); it's just that, for whatever reason, they've decided to be very
+careful with upgrades.  Accordingly, if the project learns of a major
+bug in 1.0.3 right before it's about to release 1.1.0, it would be a
+bit severe to just put the bugfix in 1.1.0 and tell all the old 1.0.x
+users they should upgrade.  Why not release both 1.1.0 and 1.0.4, so
+everyone can be happy?</p><p>After the 1.1.x line is well under way, you can declare 1.0.x to
+be at <em class="firstterm">end of life</em>.  This should be announced
+officially.  The announcement could stand alone, or it could be
+mentioned as part of a 1.1.x release announcement; however you do
+it, users need to know that the old line is being phased out, so they
+can make upgrade decisions accordingly.</p><p>Some projects set a window of time during which they pledge to
+support the previous release line.  In an open source context,
+"support" means accepting bug reports against that line, and making
+maintenance releases when significant bugs are found.  Other projects
+don't give a definite amount of time, but watch incoming bug reports
+to gauge how many people are still using the older line.  When the
+percentage drops below a certain point, they declare end of life for
+the line and stop supporting it.</p><p>For each release, make sure to have a <em class="firstterm">target
+version</em> or <em class="firstterm">target milestone</em>
+available in the bug tracker, so people filing bugs will be able to do
+so against the proper release.  Don't forget to also have a target
+called "development" or "latest" for the most recent development
+sources, since some people&#8212;not only active developers&#8212;will
+often stay ahead of the official releases.</p><div class="sect2" title="Security Releases"><div class="titlepage"><div><div><h3 class="title"><a name="security-releases"></a>Security Releases</h3></div></div></div><p>Most of the details of handling security bugs were covered in
+<a class="xref" href="publicity.html#security" title="Announcing Security Vulnerabilities">la section intitulée « Announcing Security Vulnerabilities »</a><span> in
+<a class="xref" href="communications.html" title="Chapitre 6. Communications">Chapitre 6, <i>Communications</i></a></span>, but there are some
+special details to discuss for doing security releases.</p><p>A <em class="firstterm">security release</em> is a release made
+solely to close a security vulnerability.  The code that fixes the bug
+cannot be made public until the release is available, which means not
+only that the fixes cannot be committed to the repository until the
+day of the release, but also that the release cannot be publicly
+tested before it goes out the door.  Obviously, the developers can
+examine the fix among themselves, and test the release privately, but
+widespread real-world testing is not possible.</p><p>Because of this lack of testing, a security release should
+always consist of some existing release plus the fixes for the
+security bug, with <span class="emphasis"><em>no other changes</em></span>.  This is
+because the more changes you ship without testing, the more likely
+that one of them will cause a new bug, perhaps even a new security
+bug!  This conservatism is also friendly to administrators who may
+need to deploy the security fix, but whose upgrade policy prefers that
+they not deploy any other changes at the same time.</p><p>Making a security release sometimes involves some minor
+deception.  For example, the project may have been working on a 1.1.3
+release, with certain bug fixes to 1.1.2 already publicly declared,
+when a security report comes in.  Naturally, the developers cannot
+talk about the security problem until they make the fix available;
+until then, they must continue to talk publicly as though 1.1.3 will
+be what it's always been planned to be.  But when 1.1.3 actually
+comes out, it will differ from 1.1.2 only in the security fixes, and
+all those other fixes will have been deferred to 1.1.4 (which, of
+course, will now <span class="emphasis"><em>also</em></span> contain the security
+fix, as will all other future releases).</p><p>You could add an extra component to an existing release to
+indicate that it contains security changes only.  For example, people
+would be able to tell just from the numbers that 1.1.2.1 is a security
+release against 1.1.2, and they would know that any release "higher"
+than that (e.g., 1.1.3, 1.2.0, etc.) contains the same security fixes.
+For those in the know, this system conveys a lot of information.  On
+the other hand, for those not following the project closely, it can be
+a bit confusing to see a three-component release number most of the
+time with an occasional four-component one thrown in seemingly at
+random.  Most projects I've looked at choose consistency and simply
+use the next regularly scheduled number for security releases, even
+when it means shifting other planned releases by one.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="testing-and-releasing.html">Précédent</a> </td><td width="20%" align="center"><a accesskey="u" href="development-cycle.html">Niveau supérieur</a></td><td width="40%" align="right"> <a accesskey="n" href="releases-and-daily-development.html">Suivant</a></td></tr><tr><td width="40%" align="left" valign="top">Testing and Releasing </td><td width="20%" align="center"><a accesskey="h" href="index.html">Sommaire</a></td><td width="40%" align="right" valign="top"> Releases and Daily Development</td></tr></table></div></body></html>

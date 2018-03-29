@@ -1,0 +1,76 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Choose the Right Forum</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="&#1578;&#1608;&#1604;&#1740;&#1583; &#1606;&#1585;&#1605; &#1575;&#1601;&#1586;&#1575;&#1585;&#1607;&#1575;&#1740; &#1605;&#1578;&#1606; &#1576;&#1575;&#1586;"><link rel="up" href="communications.html" title="&#1601;&#1589;&#1604; 6. Communications"><link rel="prev" href="growth.html" title="Handling Growth"><link rel="next" href="publicity.html" title="Publicity"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF" dir="rtl"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Choose the Right Forum</th></tr><tr><td width="20%" align="right"><a accesskey="p" href="growth.html">&#1602;&#1576;&#1604;&#1740;</a> </td><th width="60%" align="center">
+      &#1601;&#1589;&#1604; 6. Communications</th><td width="20%" align="left"> <a accesskey="n" href="publicity.html">&#1576;&#1593;&#1583;&#1740;</a></td></tr></table><hr></div><div class="sect1" title="Choose the Right Forum"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="choose-the-forum"></a>Choose the Right Forum</h2></div></div></div><a name="bug-tracker-usage"></a><p>One of the trickiest things about managing an open source
+project is getting people to be thoughtful about which forum they
+choose for different kinds of communications.  It's tricky partly
+because it's not immediately obvious that it matters.  During any
+given conversation, the participants are mostly concerned with what
+the people involved are saying, and won't usually stop to think about
+whether or not the forum itself gives others who
+<span class="emphasis"><em>might</em></span> want to take part the opportunity to do
+so.</p><p>For example, a real-time forum like IRC is terrific for quick
+questions, for opportunistic synchronization of work, for reminding
+someone of something they promised to do, etc.  But it's not a good
+forum for making decisions that affect the whole project, because the
+people who take part in a conversation in IRC are just whoever
+happened to be in the channel at that moment &#8212; it's
+very dependent on work schedules, time zones, etc.  On the other hand,
+the development mailing list is a great place for making formal
+project-wide decisions, since every interested party will have an
+opportunity to see and respond to the relevant posts, even though it's
+not as well-suited to quick, real-time interactions as IRC is.</p><p>Another example comes up frequently in bug tracker usage,
+especially in the last few years as bug trackers have become so well
+integrated with email.  Sometimes people will be drawn into a
+discussion in a bug ticket<sup>[<a name="idp8177008" href="#ftn.idp8177008" class="footnote">44</a>]</sup> and because they simply see project-related
+emails coming in to their email client, they treat the discussion as
+though it's happening on the real development list.  But it's not:
+anyone who wasn't watching that bug and wasn't explicitly invited into
+the conversation won't even be aware it's happening.  If things are
+discussed in that bug ticket that go beyond the scope of just that one
+bug, they'll be discussed without input from people who should at
+least have had a chance to participate.</p><p>The solution to this is to encourage conscious, intentional
+forum changes.  If a discussion starts to get into questions beyond
+the scope of its original forum, then at some point someone involved
+should ask that the conversation move over to the main development
+list or some other wider forum.</p><p>It's not enough for you to do this on your own.  You have to
+create a culture where it's normal for everyone to do it, so everyone
+thinks about forum appropriateness as a matter of course, and feels
+comfortable raising questions of forum whenever necessary in any
+discussion.  Obviously, documenting the practice will help (see <a class="xref" href="written-rules.html" title="Writing It All Down">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Writing It All Down&#8221;
+    </a><span> in <a class="xref" href="social-infrastructure.html" title="&#1601;&#1589;&#1604; 4. Social and Political Infrastructure">
+      &#1601;&#1589;&#1604; 4, <i>Social and Political Infrastructure</i></a></span>), but you'll probably also
+need to remind people of it often, especially when your project is
+starting out.  A good rule of thumb is: if the conversation looks
+convergent, then it's okay to keep it in the bug ticket or other
+original forum.  But if it looks likely to diverge for a while (e.g.,
+widening into philosophical issues about how the software should
+behave, or raising design issues that go beyond just the one bug)
+before it converges, then take the discussion to a broader forum,
+usually the development mailing list.</p><div class="sect2" title="Cross-Link Between Forums"><div class="titlepage"><div><div><h3 class="title"><a name="cross-links"></a>Cross-Link Between Forums</h3></div></div></div><p>When a discussion moves from one place to another, cross-link
+between the old and new place.  For example, if discussion moves from
+the ticket tracker to the mailing list, link to the mailing list
+thread from the ticket, and mention the original ticket at the start
+of the new list thread.  It's important for someone following the
+ticket to be able to reach the later discussion; it's also important
+for someone who encounters the ticket a year later to be able to
+follow to where the conversation went to in the mailing list archives.
+The person who does the move may find this cross-linking slightly
+laborious, but open source is fundamentally a writer-responsible
+culture.  It's more important to make things easy for the tens or
+hundreds of people who may read the bug than for the three or five
+people writing about it.</p><p>It's also fine to take important conclusions or summaries from
+the list discussion and paste them into the ticket at the end, if that
+will make things convenient for readers.  A common idiom is to move
+discussion to the mailing list, put a link to that thread in the
+ticket, and then when the discussion finishes, paste the final summary
+into the ticket (along with a link to the message containing that
+summary), so someone browsing the ticket later can easily see what
+conclusion was reached without having to click to somewhere else or do
+detective work.  Note that the usual "two masters" data duplication
+problem does not exist here, because both archives and ticket comments
+are usually static, unchangeable data anyway.</p></div><div class="footnotes"><br><hr width="100" align="right"><div class="footnote"><p><sup>[<a id="ftn.idp8177008" href="#idp8177008" class="para">44</a>] </sup>For example, on GitHub,
+simply mentioning someone's GitHub account name with an @-sign (e.g.,
+<code class="code">@kfogel</code>) in a comment on a ticket will cause that person
+to be added to the email thread associated with that
+ticket.</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="right"><a accesskey="p" href="growth.html">&#1602;&#1576;&#1604;&#1740;</a> </td><td width="20%" align="center"><a accesskey="u" href="communications.html">&#1576;&#1575;&#1604;&#1575;</a></td><td width="40%" align="left"> <a accesskey="n" href="publicity.html">&#1576;&#1593;&#1583;&#1740;</a></td></tr><tr><td width="40%" align="right" valign="top">Handling Growth </td><td width="20%" align="center"><a accesskey="h" href="index.html">&#1582;&#1575;&#1606;&#1607;</a></td><td width="40%" align="left" valign="top"> Publicity</td></tr></table></div></body></html>

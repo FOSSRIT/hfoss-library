@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>IRC / 实时聊天系统</title><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"/></head><body><div class="sect1" title="IRC / 实时聊天系统"><div class="titlepage"><div><div><h1 class="title"><a id="irc"/>IRC / 实时聊天系统</h1></div></div></div><p>许多项目使用<em class="firstterm">互联网多线交谈</em>（<em class="firstterm">IRC</em>）提供实时聊天室，作为用户和开发者互相提问并得到及时答复的讨论场所。即使你<span class="emphasis"><em>可以</em></span>在你的服务器运行IRC服务器时，也不必为此事麻烦。而应该象其他人一样：在Freenode（<a class="ulink" href="http://freenode.net/">http://freenode.net/</a>）运行你的IRC频道。Freenode给了你足够的权利来管理你项目的IRC频道，<sup>[<a id="idm1285" href="#ftn.idm1285" class="footnote">17</a>]</sup>可以让你摆脱维护IRC服务器这类无意义的麻烦。</p><p>首先要选择一个频道名称。最明显的选择是你的项目名—如果在Freenode存在，就使用它。如果不存在，可以选择一个与项目名接近的名称，尽可能的易于记忆。在你的项目网站上将频道广而告之，这样期望快速提问的访问者可以立刻看到它。例如，Subversion主页上显著放置的方框中所出现的：</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>If you're using Subversion, we recommend that you
+    join the</em></span> <code class="literal">users@subversion.tigris.org</code>
+    <span class="emphasis"><em>mailing list, and read the <a class="ulink" href="http://svnbook.red-bean.com/">Subversion Book</a> and
+    <a class="ulink" href="http://subversion.tigris.org/faq.html">FAQ</a>.
+    You can also ask questions on IRC at</em></span>
+    <code class="literal">irc.freenode.net</code>
+    <span class="emphasis"><em>channel</em></span> <code class="literal">#svn</code>.</p></blockquote></div><p>一些项目有多个频道，每个子主题一个。例如，一个频道关注安装问题，另一个是使用问题，还有一个是开发聊天，等等。 （<span><a class="xref" href="ch06.html" title="Chapter 6. 交流">Chapter 6, <em>交流</em></a>的</span><a class="xref" href="ch06s04.html" title="处理成长">the section called “处理成长”</a>讨论了如何划分多个频道）。当你的项目还年轻时，应该只有一个频道，所有人在一起讨论。之后，随着用户到开发者比率增加，也就有必要分开单独的频道。</p><p>人们如何知道所有的已有频道，以及在哪个频道讨论？他们何时交谈，如何知道当地的习惯？</p><p>答案是通过设定<em class="firstterm">频道主题</em>告诉他们。<sup>[<a id="idm1305" href="#ftn.idm1305" class="footnote">18</a>]</sup>频道主题是每个用户在进入频道时看到的一些信息。可以给每个新人一份快速指南，指出更进一步的信息。例如：</p><pre class="screen">
+You are now talking on #svn
+
+Topic for #svn is Forum for Subversion user questions, see also
+http://subversion.tigris.org/. || Development discussion happens in
+#svn-dev. || Please don't paste long transcripts here, instead use
+a pastebin site like http://pastebin.ca/. || NEWS: Subversion 1.1.0
+is released, see http://svn110.notlong.com/ for details.
+</pre><p>内容很扼要，但是它告诉新人所必需知道的东西。它精确的说明频道的目的，提供了项目的主页（如果某人是游荡近来，而并非从项目网页过来），提及相关的频道，并给出一些指导。</p><div class="sidebar" title="粘贴站点"><a id="paste-sites"/><div class="titlepage"><div><div><p class="title"><strong>粘贴站点</strong></p></div></div></div><p>一个IRC频道是一个共享空间：任何人可以看到每个人的谈话。通常情况下，这是一个好事情，这允许人们在感到能做出贡献时跳入谈话，也可以通过观察学习。但如果某人希望一次提供一大段信息时，例如调试会话脚本，因为会输出很多行，会扰乱其他人的对话。</p><p>解决办法是使用<em class="firstterm">pastebin</em>或<em class="firstterm">pastebot</em>站点。当向某人要求一大块数据时，告知他们不要粘贴到频道中，而是去（例如）<a class="ulink" href="http://pastebin.ca/">http://pastebin.ca/</a>，将数据粘到那里的表单中，并在IRC频道中告知结果的URL。任何人可以访问这个URL并察看数据。</p><p>现在有许多免费的粘贴站点，完整地例子太多了，这里是我曾经用过的：<a class="ulink" href="http://www.nomorepasting.com/">http://www.nomorepasting.com/</a>、
+<a class="ulink" href="http://pastebin.ca/">http://pastebin.ca/</a>、
+<a class="ulink" href="http://nopaste.php.cd/">http://nopaste.php.cd/</a>、
+<a class="ulink" href="http://rafb.net/paste/">http://rafb.net/paste/</a>、
+<a class="ulink" href="http://sourcepost.sytes.net/">http://sourcepost.sytes.net/</a>、
+<a class="ulink" href="http://extraball.sunsite.dk/notepad.php">http://extraball.sunsite.dk/notepad.php</a>、
+和
+<a class="ulink" href="http://www.pastebin.com/">http://www.pastebin.com/</a>。</p></div><div class="sect2" title="机器人（Bots）"><div class="titlepage"><div><div><h2 class="title"><a id="bots"/>机器人（Bots）</h2></div></div></div><p>许多面向技术的IRC频道有一个非人的成员，叫做<em class="firstterm">机器人（bot）</em>，它可以对特定的命令返回信息。通常情况下，这个机器人就像频道中的其它成员一样，命令是通过谈话传递给的机器人。例如：</p><pre class="screen">
+&lt;kfogel&gt; ayita: learn diff-cmd = http://subversion.tigris.org/faq.html#diff-cmd
+&lt;ayita&gt;  Thanks!
+</pre><p>这是告诉机器人（以ayita登入了频道）记住以特定的URL回答“diff-cmd”的提问，现在其他用户可以向ayita讯问，并获取diff-cmd的信息：</p><pre class="screen">
+&lt;kfogel&gt; ayita: tell jrandom about diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>通过速记法可以得到同样的结果：</p><pre class="screen">
+&lt;kfogel&gt; !a jrandom diff-cmd
+&lt;ayita&gt;  jrandom: http://subversion.tigris.org/faq.html#diff-cmd
+</pre><p>准确的命令集和行为方式各不相同。以上的例子来自<code class="literal">ayita</code>（<a class="ulink" href="http://hix.nu/svn-public/alexis/trunk/">http://hix.nu/svn-public/alexis/trunk/</a>），通常在freenode的<code class="literal">#svn</code>运行着一个实例。其它机器人包括Dancer（<a class="ulink" href="http://dancer.sourceforge.net/">http://dancer.sourceforge.net/</a>）和Supybot（<a class="ulink" href="http://supybot.com/">http://supybot.com/</a>）。请注意，运行机器人无需服务器的权限。一个机器人就是一个客户端程序；任何人可以设置一个并监听特定的服务器/频道。</p><p>如果你的频道一次次的得到同样的问题，我强烈推荐你设置一个机器人。只有一小部分频道用户会获得需要处理机器人的专业技能，而这些用户会回答不成比例的大部分问题，因为机器人可以帮助他们有效率的回复。</p></div><div class="sect2" title="归档IRC"><div class="titlepage"><div><div><h2 class="title"><a id="irc-archiving"/>归档IRC</h2></div></div></div><p>尽管可以将IRC频道发生的任何事情都归档，但这不是必要的。IRC对话名义上是公开的，但是许多用户认为这是非正式的，半私密的对话。用户会对语法不是很在意，而且经常会表达意见（例如，关于其它软件或其他程序员），这些都不是他们希望永久保存归档的。</p><p>当然，有时候<span class="emphasis"><em>摘要</em></span>必须能够保存。大多数IRC客户端可以在用户要求的情况下记录对话到一个文件，如果不能，人们也可以仅仅是将对华拷贝和粘贴到固定的论坛（经常是bug跟踪系统）中。但是不加区分的归档所有内容会让某些用户不悦。如果你需要归档所有的事情，请确认你已经在频道主题明确说明，并给出了归档的URL。</p></div><div class="footnotes"><br/><hr/><div class="footnote"><p><sup>[<a id="ftn.idm1285" href="#idm1285" class="para">17</a>] </sup>没有要求或期望你能够为Freenode捐献，但是如果你或你的项目能够负担，请考虑贡献一下。他们在美国有一个免税的慈善团体，提供有价值的服务。</p></div><div class="footnote"><p><sup>[<a id="ftn.idm1305" href="#idm1305" class="para">18</a>] </sup>使用<code class="literal">/topic</code>命令设定频道主题。IRC频道中的所有的命令以“<code class="literal">/</code>”开头。如果你不熟悉IRC的使用和管理，可以看<a class="ulink" href="http://www.irchelp.org/">http://www.irchelp.org/</a>；而<a class="ulink" href="http://www.irchelp.org/irchelp/irctutorial.html">http://www.irchelp.org/irchelp/irctutorial.html</a>是一份完美的教程。</p></div></div></div></body></html>

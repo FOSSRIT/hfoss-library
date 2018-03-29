@@ -1,0 +1,570 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Mailing Lists / Message Forums</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="&#1578;&#1608;&#1604;&#1740;&#1583; &#1606;&#1585;&#1605; &#1575;&#1601;&#1586;&#1575;&#1585;&#1607;&#1575;&#1740; &#1605;&#1578;&#1606; &#1576;&#1575;&#1586;"><link rel="up" href="technical-infrastructure.html" title="&#1601;&#1589;&#1604; 3. Technical Infrastructure"><link rel="prev" href="web-site.html" title="Web Site"><link rel="next" href="vc.html" title="Version Control"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF" dir="rtl"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Mailing Lists / Message Forums</th></tr><tr><td width="20%" align="right"><a accesskey="p" href="web-site.html">&#1602;&#1576;&#1604;&#1740;</a> </td><th width="60%" align="center">
+      &#1601;&#1589;&#1604; 3. Technical Infrastructure</th><td width="20%" align="left"> <a accesskey="n" href="vc.html">&#1576;&#1593;&#1583;&#1740;</a></td></tr></table><hr></div><div class="sect1" title="Mailing Lists / Message Forums"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="message-forums"></a>Mailing Lists / Message Forums</h2></div></div></div><a name="mailing-lists"></a><p>Discussion forums in which participants post and respond to
+messages are the bread and butter of project communications.  For a
+long time these were mainly email-based discussion lists, but the
+distinction between Web-based forums and mailing lists is, thankfully,
+slowly disappearing.  Services like <a class="ulink" href="https://groups.google.com/" target="_top">Google Groups</a> (which is not
+itself open source) and <a class="ulink" href="http://Gmane.org/" target="_top">Gmane.org</a> (which is) have now established that
+cross-accessibility of message forums as mailing lists and vice versa
+is the minimum bar to meet, and modern discussion management systems
+like GroupServer and Sympa reflect this.</p><p>Because of this nearly-completed unification between email lists
+and web-based forums<sup>[<a name="idp6324208" href="#ftn.idp6324208" class="footnote">24</a>]</sup>, I will
+use the terms <em class="firstterm">message forum</em> and
+<em class="firstterm">mailing list</em> more or less interchangeably.
+They refer to any kind of message-based forum where posts are linked
+together in threads (topics), people can subscribe, archives of past
+messages can be browsed, and the forum can be interacted with via
+email or via a web browser.</p><p>If a user is exposed to any channel besides a project's web
+pages, it is most likely to be one of the project's message forums.
+But before she experiences the forum itself, she will experience the
+process of finding the right forums.  Your project should
+have a prominently-placed description of all the available public
+forums, to give newcomers guidance in deciding which ones to browse or
+post to first.  A typical such description might say something like
+this:</p><pre class="screen">
+  The mailing lists are the main day-to-day communication channels for
+  the Scanley community.  You don't have to be subscribed to post to a
+  list, but if it's your first time posting (whether you're subscribed
+  or not), your message may be held in a moderation queue until a
+  human moderator has a chance to confirm that the message is not spam.
+  We're sorry for this delay; blame the spammers who make it necessary.
+
+  Scanley has the following lists:
+
+  <span class="bold"><strong><code class="literal">users {_AT_} scanley.org</code></strong></span>:
+    Discussion about using Scanley or programming with the Scanley
+    API, suggestions of possible improvements, etc.  You can browse the
+    users@ archives at <span class="bold"><strong>&lt;&lt;&lt;link to archive&gt;&gt;&gt;</strong></span> or subscribe here:
+    <span class="bold"><strong>&lt;&lt;&lt;link to subscribe&gt;&gt;&gt;</strong></span>.
+
+  <span class="bold"><strong><code class="literal">dev {_AT_} scanley.org</code></strong></span>:
+    Discussion about developing Scanley.  Maintainers and contributors
+    are subscribed to this list.  You can browse the dev@ archives at
+    <span class="bold"><strong>&lt;&lt;&lt;link to archive&gt;&gt;&gt;</strong></span> or subscribe here: <span class="bold"><strong>&lt;&lt;&lt;link to subscribe&gt;&gt;&gt;</strong></span>.
+
+    (Sometimes threads cross over between users@ and dev@, and
+    Scanley's developers will often participate in discussions on both
+    lists.  In general if you're unsure where a question or post
+    should go, start it out on <code class="literal">users@</code>.  If it should be a
+    development discussion, someone will suggest moving it over to
+    <code class="literal">dev@</code>.)
+
+  <span class="bold"><strong><code class="literal">announcements {_AT_} scanley.org</code></strong></span>:
+    This is a low-traffic, subscribe-only list.  The Scanley
+    developers post announcements of new releases and occasional other
+    news items of interest to the entire Scanley community here, but
+    followup discussion takes place on users@ or dev@.
+    <span class="bold"><strong>&lt;&lt;&lt;link to subscribe&gt;&gt;&gt;</strong></span>.
+
+  <span class="bold"><strong><code class="literal">notifications {_AT_} scanley.org</code></strong></span>:
+    All code commit messages, bug tracker tickets, automated
+    build/integration failures, etc, are sent to this list.  Most
+    developers should subscribe: <span class="bold"><strong>&lt;&lt;&lt;link to subscribe&gt;&gt;&gt;</strong></span>.
+
+  There is also a non-public list you may need to send to, although
+  only developers are subscribed:
+
+  <span class="bold"><strong><code class="literal">security {_AT_} scanley.org</code></strong></span>:
+    Where the Scanley project receives confidential reports of
+    security vulnerabilities.  Of course, the report will be made
+    public eventually, but only after a fix is released; see our
+    security procedures page for more [...]
+</pre><div class="sect2" title="Choosing the Right Forum Management Software"><div class="titlepage"><div><div><h3 class="title"><a name="message-forum-choosing"></a>Choosing the Right Forum Management Software</h3></div></div></div><p>It's worth investing some time in choosing the right mailing
+list management system for your project.  Modern list management tools
+offer at least the following features:</p><div class="variablelist"><dl><dt><span class="term">Both email- and web-based access</span></dt><dd><p>Users should be able to subscribe to the forums by email,
+            and read them on the web (where they are organized into
+            conversations or "threads", just as they would be in a
+            mailreader).</p></dd><dt><span class="term">Moderation features</span></dt><dd><p>To "moderate" is to check posts, especially first-time
+            posts, to make sure they are not spam before they go out
+            to the entire list.  Moderation necessarily involves
+            human administrators, but software can do a great deal to
+            make it easier on the moderators.  There is more said
+            about moderation in <a class="xref" href="message-forums.html#spam-prevention" title="Spam Prevention">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Spam Prevention&#8221;
+    </a>
+            later in this chapter.</p></dd><dt><span class="term">Rich administrative interface</span></dt><dd><p>There are many things administrators need to do besides
+            spam moderation &#8212; for example, removing
+            obsolete addresses, a task that can become urgent when a
+            recipient's address starts sending "I am no longer at this
+            address" bounces back to the list in response to every
+            list post (though some systems can even detect this and
+            unsubscribe the person automatically).  If your forum
+            software doesn't have decent administrative capabilities,
+            you will quickly realize it, and should consider switching
+            to software that does.</p></dd><dt><span class="term">Header manipulation</span></dt><dd><p>Some people have sophisticated filtering and replying
+            rules set up in their mail readers, and rely on the forum
+            adding or manipulating certain standard headers.  See 
+            <a class="xref" href="message-forums.html#header-management" title="Identification and Header Management">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Identification and Header Management&#8221;
+    </a> later in this chapter
+            for more on this.</p></dd><dt><span class="term">Archiving</span></dt><dd><p>All posts to the managed lists are stored and made
+            available on the web (see <a class="xref" href="growth.html#using-archives" title="Conspicuous Use of Archives">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Conspicuous Use of Archives&#8221;
+    </a><span> in
+            <a class="xref" href="communications.html" title="&#1601;&#1589;&#1604; 6. Communications">
+      &#1601;&#1589;&#1604; 6, <i>Communications</i></a></span> for more on the
+            importance of public archives).  Usually the archiver is a
+            native part of the message forum system; occasionally, it
+            is a separate tool that needs to be integrated.</p></dd></dl></div><p>The point of the above list is really just to show that forum
+management is a complex problem that has already been given a lot of
+thought, and to some degree been solved.  You don't need to become an
+expert, but you will have to learn at least a little bit about
+it, and you should expect list management to occupy your attention
+from time to time in the course of running any free software project.
+Below we'll examine a few of the most common issues.</p><div class="sect3" title="Spam Prevention"><div class="titlepage"><div><div><h4 class="title"><a name="spam-prevention"></a>Spam Prevention</h4></div></div></div><p>Between when this sentence is written and when it is published,
+the Internet-wide spam problem will probably double in
+severity&#8212;or at least it will feel that way.  There was a time,
+not so long ago, when one could run a mailing list without taking any
+spam-prevention measures at all.  The occasional stray post would
+still show up, but infrequently enough to be only a low-level
+annoyance.  That era is gone forever.  Today, a mailing list that
+takes no spam prevention measures will quickly be submerged in junk
+emails, to the point of unusability.  Spam prevention is
+mandatory.</p><p>We divide spam prevention into two categories: preventing spam
+posts from appearing on your mailing lists, and preventing your
+mailing list from being a source of new email addresses for spammers'
+harvesters.  The former is more important to your project, so we
+examine it first.</p><div class="sect4" title="Filtering posts"><div class="titlepage"><div><div><h5 class="title"><a name="spam-filtering"></a>Filtering posts</h5></div></div></div><p>There are three basic techniques for preventing spam posts, and
+most mailing list software offers all three.  They are best used in
+tandem:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="bold"><strong>Only auto-allow postings from
+            list subscribers.</strong></span></p><p>This is effective as far as it goes, and also
+            involves very little administrative overhead, since it's
+            usually just a matter of changing a setting in the mailing
+            list software's configuration.  But note that posts which
+            aren't automatically approved must not be simply
+            discarded.  Instead, they should go into a moderation
+            queue, for two reasons.  First, you want to allow
+            non-subscribers to post: a person with a question or
+            suggestion should not need to subscribe to a mailing list
+            just to ask a question there.  Second, even
+            subscribers may sometimes post from an address other than
+            the one by which they're subscribed.  Email addresses are
+            not a reliable method of identifying people, and shouldn't
+            be treated as such.</p></li><li class="listitem"><p><span class="bold"><strong>Filter posts through
+            spam-detection software.</strong></span></p><p>If the mailing list software makes it possible (most
+            do), you can have posts filtered by spam-filtering
+            software.  Automatic spam-filtering is not perfect, and
+            never will be, since there is a never-ending arms race
+            between spammers and filter writers.  However, it can
+            greatly reduce the amount of spam that makes it through to the
+            moderation queue, and since the longer that queue is the
+            more time humans must spend examining it, any amount of
+            automated filtering is beneficial.</p><p>There is not space here for detailed instructions
+            on setting up spam filters.  You will have to consult
+            your mailing list software's documentation for that (see
+            <a class="xref" href="message-forums.html#mailing-list-software">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Mailing List / Message Forum Software&#8221;
+    </a><span> later in this chapter</span>).  List
+            software often comes with some built-in spam prevention
+            features, but you may want to add some third-party
+            filters.  I've had good experiences with SpamAssassin
+            (<a class="ulink" href="http://spamassassin.apache.org/" target="_top">spamassassin.apache.org</a>) and SpamProbe
+            (<a class="ulink" href="http://spamprobe.sourceforge.net/" target="_top">spamprobe.sourceforge.net</a>), but this
+            is not a comment on the many other open source spam
+            filters out there, some of which are apparently also quite
+            good.  I just happen to have used those two myself and
+            been satisfied with them.</p></li><li class="listitem"><p><span class="bold"><strong>Moderation.</strong></span></p><p>For mails that aren't automatically allowed by
+            virtue of being from a list subscriber, and which make it
+            through the spam filtering software, if any, the last stage
+            is <em class="firstterm">moderation</em>: the mail is routed
+            to a special holding area, where a human examines it and
+            confirms or rejects it.</p><p>Confirming a post usually takes one of two forms:
+            you can accept the sender's post just this once, or you
+            can tell the system to allow this and all future posts
+            from the same sender.  You almost always want to do the
+            latter, in order to reduce the future moderation
+            burden &#8212; after all, someone who has made a
+            valid post to a forum is unlikely to suddenly turn into a
+            spammer later.</p><p>Rejecting is done by either marking the item to be
+            discarded, or by explicitly telling the system the message
+            was spam so the system can improve its ability to
+            recognize future spams.  Sometimes
+            you also have the option to automatically discard future
+            mails from the same sender without them ever being held in
+            the moderation queue, but there is rarely any point doing
+            this, since spammers don't send from the same address
+            twice anyway.</p><p>Oddly, most message-forum systems have not yet given
+            the moderation queue administrative interface the
+            attention it deserves, considering how common the task is,
+            so moderation often still requires more clicks and UI
+            gestures than it should.  I hope this situation will
+            improve in the future.  In the meantime, perhaps knowing
+            you're not alone in your frustration will temper your
+            disappointment somewhat.</p></li></ol></div><p>Be sure to use moderation <span class="emphasis"><em>only</em></span> for
+filtering out spams, and perhaps for clearly off-topic messages such
+as when someone accidentally posts to the wrong mailing list.
+Although the moderation system may give you a way to respond directly
+to the sender, you should never use that method to answer questions
+that really belong on the mailing list itself, even if you know the
+answer off the top of your head.  To do so would deprive the project's
+community of an accurate picture of what sorts of questions people are
+asking, and deprive people of a chance to answer questions themselves
+and/or see answers from others.  Mailing list moderation is strictly
+about keeping the list free of spam and of wildly off-topic emails,
+nothing more.</p></div><div class="sect4" title="Address hiding in archives"><div class="titlepage"><div><div><h5 class="title"><a name="address-hiding"></a>Address hiding in archives</h5></div></div></div><p>To prevent your mailing lists from being a source of addresses
+for spammers, a common technique is for the archiving software to
+obscure people's email addresses, for example by replacing</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">jrandom@somedomain.com</code></p></blockquote></div><p>with</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">jrandom_AT_somedomain.com</code></p></blockquote></div><p>or</p><div class="blockquote"><blockquote class="blockquote"><p><code class="literal">jrandomNOSPAM@somedomain.com</code></p></blockquote></div><p>or some similarly obvious (to a human) encoding.  Since spam
+address harvesters often work by crawling through web
+pages&#8212;including your mailing list's online archives&#8212;and
+looking for sequences containing "@", encoding the addresses is a way
+of making people's email addresses invisible or useless to spammers.
+This does nothing to prevent spam from being sent to the mailing list
+itself, of course, but it does avoid increasing the amount of spam
+sent directly to list users' personal addresses.</p><p>Address hiding can be controversial.  Some people like it a lot,
+and will be surprised if your archives don't do it automatically.
+Other people think it's too much of an inconvenience (because humans
+also have to translate the addresses back before using them).
+Sometimes people assert that it's ineffective, because a harvester
+could in theory compensate for any consistent encoding pattern.
+However, note that there is empirical evidence that address hiding
+<span class="emphasis"><em>is</em></span> effective; see <a class="ulink" href="http://www.cdt.org/speech/spam/030319spamreport.shtml" target="_top">cdt.org/speech/spam/030319spamreport.shtml</a>.</p><p>Ideally, the list management software would leave the choice up
+to each individual subscriber, either through a special yes/no header
+or a setting in that subscriber's list account preferences.  However,
+I don't know of any software which offers per-subscriber or per-post
+choice in the matter, so for now the list manager must make a decision
+for everyone (assuming the archiver offers the feature at all, which
+is not always the case).  For what it's worth, I lean toward turning
+address hiding on.  Some people are very careful to avoid posting
+their email addresses on web pages or anywhere else a spam harvester
+might see it, and they would be disappointed to have all that care
+thrown away by a mailing list archive; meanwhile, the inconvenience
+address hiding imposes on archive users is very slight, since it's
+trivial to transform an obscured address back to a valid one if you
+need to reach the person.  But keep in mind that, in the end, it's
+still an arms race: by the time you read this, harvesters might well
+have evolved to the point where they can recognize most common forms
+of hiding, and we'll have to think of something else.</p></div></div><div class="sect3" title="Identification and Header Management"><div class="titlepage"><div><div><h4 class="title"><a name="header-management"></a>Identification and Header Management</h4></div></div></div><p>When interacting with the forum by email, subscribers often want
+to put mails from the list into a project-specific folder, separate
+from their other mail.  Their mail reading software can do this
+automatically by examining the mail's <em class="firstterm">headers</em>.
+The headers are the fields at the top of the mail that indicate the
+sender, recipient, subject, date, and various other things about the
+message.  Certain headers are well known and are effectively
+mandatory:</p><pre class="screen">
+From: ...
+To: ...
+Subject: ...
+Date: ...
+</pre><p>Others are optional, though still quite standard.  For example,
+emails are not strictly required to have the</p><pre class="screen">
+Reply-to: sender@email.address.here
+</pre><p>header, but most do, because it gives recipients a foolproof way
+to reach the author (it is especially useful when the author had to
+send from an address other than the one to which replies should be
+directed).</p><p>Some mail reading software offers an easy-to-use interface for
+filing mails based on patterns in the Subject header.  This leads
+people to request that the mailing list add an automatic prefix to all
+Subjects, so they can set their readers to look for that prefix and
+automatically file the mails in the right folder.  The idea is that
+the original author would write:</p><pre class="screen">
+Subject: Making the 2.5 release.
+</pre><p>but the mail would show up on the list looking like this:</p><pre class="screen">
+Subject: [Scanley Discuss] Making the 2.5 release.
+</pre><p>Although most list management software offers the option to do
+this, you may decide against turning the option on.  The problem
+it solves can often be solved in less obtrusive ways (see below), and
+there is a cost to eating space in the Subject field.  Experienced
+mailing list users typically scan the Subjects of the day's incoming
+list mail to decide what to read and/or respond to.  Prepending the
+list's name to the Subject can push the right side of the Subject off
+the screen, rendering it invisible.  This obscures information that
+people depend on to decide what mails to open, thus reducing the
+overall functionality of the mailing list for everyone.</p><p>Instead of munging the Subject header, your project could take
+advantage of the other standard headers, starting with the To header,
+which should say the mailing list's address:</p><pre class="screen">
+To: &lt;discuss@lists.example.org&gt;
+</pre><p>Any mail reader that can filter on Subject should be able to filter on
+To just as easily.</p><p>There are a few other optional-but-standard headers expected for
+mailing lists; they are sometimes not displayed by most mailreader
+software, but they are present nonetheless.  Filtering on them is
+even more reliable than using the "To" or "Cc" headers, and since these
+headers are added to each post by the mailing list management software
+itself, some users may be counting on their presence:</p><pre class="screen">
+list-help: &lt;mailto:discuss-help@lists.example.org&gt;
+list-unsubscribe: &lt;mailto:discuss-unsubscribe@lists.example.org&gt;
+list-post: &lt;mailto:discuss@lists.example.org&gt;
+Delivered-To: mailing list discuss@lists.example.org
+Mailing-List: contact discuss-help@lists.example.org; run by ezmlm
+</pre><p>For the most part, they are self-explanatory.  See <a class="ulink" href="http://www.nisto.com/listspec/list-manager-intro.html" target="_top">nisto.com/listspec/list-manager-intro.html</a> for more
+explanation, or if you need the really detailed, formal specification,
+see <a class="ulink" href="http://www.faqs.org/rfcs/rfc2369.html" target="_top">faqs.org/rfcs/rfc2369.html</a>.
+</p><p>Having said all that, these days I find that most subscribers
+just request that the Subject header include a list-identifying
+prefix.  That's increasingly how people are accustomed to filtering
+email: Subject-based filtering is what many of the major online email
+services (like Gmail) offer users by default, and those services tend
+not to make it easy to see the presence of less-commonly used headers
+like the ones I mentioned above &#8212; thus making it hard
+for people to figure out that they would even have the option of
+filtering on those other headers.</p><p>Therefore, reluctantly, I recommend using a Subject prefix (keep
+it as short as you can) if that's what your community wants.  But if
+your project highly technical and most of its participants are
+comfortable using the other headers, then that option is always there
+as a more space-efficient alternative.</p><p>It also used to be the case that if you have a mailing list
+named "foo", then you also have administrative addresses "foo-help"
+and "foo-unsubscribe" available.  In addition to these, it was
+traditional to have "foo-subscribe" for joining, and "foo-owner",
+for reaching the list administrators.  Increasingly, however,
+subscribers manage their list membership via Web-based interfaces, so
+even if the list management software you use sets up these
+administrative addresses, they may go largely unused.</p><p>Some mailing list software offers an option to append
+unsubscription instructions to the bottom of every post.  If that
+option is available, turn it on.  It causes only a couple of extra
+lines per message, in a harmless location, and it can save you a lot
+of time, by cutting down on the number of people who mail you&#8212;or
+worse, mail the list!&#8212;asking how to unsubscribe.</p></div><div class="sect3" title="The Great Reply-to Debate"><div class="titlepage"><div><div><h4 class="title"><a name="reply-to"></a>The Great Reply-to Debate</h4></div></div></div><p>Earlier, in <a class="xref" href="setting-tone.html#avoid-private-discussions" title="Avoid Private Discussions">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Avoid Private Discussions&#8221;
+    </a>, I stressed the
+importance of making sure discussions stay in public forums, and
+talked about how active measures are sometimes needed to prevent
+conversations from trailing off into private email threads;
+furthermore, this chapter is all about setting up project
+communications software to do as much of the work for people as possible.
+Therefore, if the mailing list management software offers a way to
+automatically cause discussions to stay on the list, you would think
+turning on that feature would be the obvious choice.</p><p>Well, not quite.  There is such a feature, but it has some
+pretty severe disadvantages.  The question of whether or not to use it
+is one of the hottest debates in mailing list
+management&#8212;admittedly, not a controversy that's likely to make
+the evening news in your city, but it can flare up from time to time
+in free software projects.  Below, I will describe the feature, give
+the major arguments on both sides, and make the best recommendation I
+can.</p><p>The feature itself is very simple: the mailing list software
+can, if you wish, automatically set the Reply-to header on every post
+to redirect replies to the mailing list.  That is, no matter what the
+original sender puts in the Reply-to header (or even if they don't
+include one at all), by the time the list subscribers see the post,
+the header will contain the list address:</p><pre class="screen">
+Reply-to: discuss@lists.example.org
+</pre><p>On its face, this seems like a good thing.  Because virtually
+all mail reading software pays attention to the Reply-to header, now
+when anyone responds to a post, their response will be automatically
+addressed to the entire list, not just to the sender of the message
+being responded to.  Of course, the responder can still manually
+change where the message goes, but the important thing is that
+<span class="emphasis"><em>by default</em></span> replies are directed to the list.
+It's a perfect example of using technology to encourage
+collaboration.</p><p>Unfortunately, there are some disadvantages.  The first is known
+as the <em class="firstterm">Can't Find My Way Back Home</em> problem:
+sometimes the original sender will put their "real" email address in
+the Reply-to field, because for one reason or another they send email
+from a different address than where they receive it.  People who
+always read and send from the same location don't have this problem,
+and may be surprised that it even exists.  But for those who have
+unusual email configurations, or who cannot control how the From
+address on their mails looks (perhaps because they send from work and
+do not have any influence over the IT department), using Reply-to may
+be the only way they have to ensure that responses reach them.  When
+such a person posts to a mailing list that he's not subscribed to, his
+setting of Reply-to becomes essential information.  If the list
+software overwrites it<sup>[<a name="idp6407056" href="#ftn.idp6407056" class="footnote">25</a>]</sup>, he may
+never see the responses to his post.</p><p>The second disadvantage has to do with expectations, and in my
+opinion is the most powerful argument against Reply-to munging.  Most
+experienced mail users are accustomed to two basic methods of
+replying: <em class="firstterm">reply-to-all</em> and
+<em class="firstterm">reply-to-author</em>.  All modern mail reading
+software has separate keys for these two actions.  Users know that to
+reply to everyone (that is, including the list), they should choose
+reply-to-all, and to reply privately to the author, they should choose
+reply-to-author.  Although you want to encourage people to reply to
+the list whenever possible, there are certainly circumstances where a
+private reply is the responder's prerogative&#8212;for example, they
+may want to say something confidential to the author of the original
+message, something that would be inappropriate on the public
+list.</p><p>Now consider what happens when the list has overridden the
+original sender's Reply-to.  The responder hits the reply-to-author
+key, expecting to send a private message back to the original author.
+Because that's the expected behavior, he may not bother to look
+carefully at the recipient address in the new message.  He composes
+his private, confidential message, one which perhaps says embarrassing
+things about someone on the list, and hits the send key.
+Unexpectedly, a few minutes later his message appears <span class="emphasis"><em>on the
+mailing list!</em></span> True, in theory he should have looked
+carefully at the recipient field, and should not have assumed anything
+about the Reply-to header.  But authors almost always set Reply-to to
+their own personal address (or rather, their mail software sets it for
+them), and many longtime email users have come to expect that.  In
+fact, when a person deliberately sets Reply-to to some other address,
+such as the list, she usually makes a point of mentioning this in the
+body of her message, so people won't be surprised at what happens when
+they reply.</p><p>Because of the possibly severe consequences of this unexpected
+behavior, my own preference is to configure list management software
+to never touch the Reply-to header.  This is one instance where using
+technology to encourage collaboration has, it seems to me, potentially
+dangerous side-effects.  However, there are also some powerful
+arguments on the other side of this debate.  Whichever way you choose,
+you will occasionally get people posting to your list asking why you
+didn't choose the other way.  Since this is not something you ever
+want as the main topic of discussion on your list, it might be good to
+have a canned response ready, of the sort that's more likely to stop
+discussion than encourage it.  Make sure you do
+<span class="emphasis"><em>not</em></span> insist that your decision, whichever it is,
+is obviously the only right and sensible one (even if you think that's
+the case).  Instead, point out that this is a very old debate, there
+are good arguments on both sides, no choice is going to satisfy
+all users, and therefore you just made the best decision you
+could.  Politely ask that the subject not be revisited unless someone
+has something genuinely new to say, then stay out of the thread and
+hope it dies a natural death.</p><p>Someone may suggest a vote to choose one way or the other.  You
+can do that if you want, but I personally do not feel that counting
+heads is a satisfactory solution in this case.  The penalty for
+someone who is surprised by the behavior is so huge (accidentally
+sending a private mail to a public list), and the inconvenience for
+everyone else is fairly slight (occasionally having to remind someone
+to respond to the whole list instead of just to you), that it's not
+clear that the majority, even though they are the majority, should be
+able to put the minority at such risk.</p><p>I have not addressed all aspects of this issue here, just the
+ones that seemed of overriding importance.  For a full discussion, see
+these two canonical documents, which are the ones people always cite
+when they're having this debate:
+
+</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>Leave Reply-to alone</strong></span>,
+     <span class="emphasis"><em>by Chip Rosenthal</em></span></p><p><a class="ulink" href="http://www.unicom.com/pw/reply-to-harmful.html" target="_top">unicom.com/pw/reply-to-harmful.html</a></p></li><li class="listitem"><p><span class="bold"><strong>Set Reply-to to list</strong></span>,
+     <span class="emphasis"><em>by Simon Hill</em></span></p><p><a class="ulink" href="http://www.metasystema.net/essays/reply-to.mhtml" target="_top">metasystema.net/essays/reply-to.mhtml</a></p></li></ul></div><p>
+
+</p><p>Despite the mild preference indicated above, I do not feel there
+is a "right" answer to this question, and happily participate in many
+lists that <span class="emphasis"><em>do</em></span> set Reply-to.  The most important
+thing you can do is settle on one way or the other early, and try not
+to get entangled in debates about it after that.  When the debate
+re-arises every few years, as it inevitably will, you can point people
+to the archived discussion from last time.</p><div class="sect4" title="Two fantasies"><div class="titlepage"><div><div><h5 class="title"><a name="reply-fantasies"></a>Two fantasies</h5></div></div></div><p>Someday, someone will get the bright idea to implement a
+<em class="firstterm">reply-to-list</em> key in a mail reader.  It would
+use some of the custom list headers mentioned earlier to figure out
+the address of the mailing list, and then address the reply directly
+to the list only, leaving off any other recipient addresses, since
+most are probably subscribed to the list anyway.  Eventually, other
+mail readers will pick up the feature, and this whole debate will go
+away.  (Actually, the <a class="ulink" href="http://www.mutt.org/" target="_top">Mutt</a>
+mail reader does offer this feature.<sup>[<a name="idp6425056" href="#ftn.idp6425056" class="footnote">26</a>]</sup>)</p><p>An even better solution would be for Reply-to munging to be a
+per-subscriber preference.  Those who want the list to set Reply-to
+munged (either on others' posts or on their own posts) could ask for
+that, and those who don't would ask for Reply-to to be left alone.
+However, I don't know of any list management software that offers this
+on a per-subscriber basis.  For now, we seem to be stuck with a global
+setting.<sup>[<a name="idp6427216" href="#ftn.idp6427216" class="footnote">27</a>]</sup></p></div></div><div class="sect3" title="Archiving"><div class="titlepage"><div><div><h4 class="title"><a name="archiving"></a>Archiving</h4></div></div></div><p>The technical details of setting up mailing list archiving are
+specific to the software that's running the list, and are beyond the
+scope of this book.  If you have to choose or configure an archiver,
+consider these qualities:</p><div class="variablelist"><dl><dt><span class="term">Prompt updating</span></dt><dd><p>People will often want to refer to an archived message
+            that was posted recently.  If possible, the archiver
+            should archive each post instantaneously, so that by the
+            time a post appears on the mailing list, it's already
+            present in the archives.  If that option isn't available,
+            then at least try to set the archiver to update itself
+            every hour or so.  (By default, some archivers run their
+            update processes once per night, but in practice that's
+            far too much lag time for an active mailing list.)</p></dd><dt><span class="term">Referential stability</span></dt><dd><p>Once a message is archived at a particular URL, it should
+            remain accessible at that exact same URL forever, or as
+            close to forever as possible.  Even if the archives are
+            rebuilt, restored from backup, or otherwise fixed, any
+            URLs that have already been made publicly available
+            should remain the same.  Stable references make it
+            possible for Internet search engines to index the
+            archives, which is a major boon to users looking for
+            answers.  Stable references are also important because
+            mailing list posts and threads are often linked to from
+            the bug tracker (see
+            <a class="xref" href="bug-tracker.html" title="Bug Tracker">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Bug Tracker&#8221;
+    </a><span>
+            later in this chapter</span>) or
+            from other project documents.</p><p>Ideally, mailing list software would include a message's
+            archive URL, or at least the message-specific portion of
+            the URL, in a header when it distributes the message to
+            recipients.  That way people who have a copy of the
+            message would be able to know its archive location
+            without having to actually visit the archives, which would
+            be helpful because any operation that involves one's web
+            browser is automatically time-consuming.  Whether any
+            mailing list software actually offers this feature, I don't
+            know; unfortunately, the ones I have used do not.
+            However, it's something to look for (or, if you write
+            mailing list software, it's a feature to consider
+            implementing, please).</p></dd><dt><span class="term">Thread support</span></dt><dd><p>It should be possible to go from any individual message to
+            the <em class="firstterm">thread</em> (group of related
+            messages) that the original message is part of.  Each
+            thread should have its own URL too, separate from the URLs
+            of the individual messages in the thread.</p></dd><dt><span class="term">Searchability</span></dt><dd><p>An archiver that doesn't support searching&#8212;on the
+            bodies of messages, as well as on authors and
+            subjects&#8212;is close to useless.  Note that some archivers 
+            support searching by simply farming the work out to an
+            external search engine such as <a class="ulink" href="http://www.google.com/" target="_top">Google</a>.  This is
+            acceptable, but direct search support is usually more
+            fine-tuned, because it allows the searcher to specify that
+            the match must appear in a subject line versus the body,
+            for example.</p></dd></dl></div><p>The above is just a technical checklist to help you evaluate and
+set up an archiver.  Getting people to
+actually <span class="emphasis"><em>use</em></span> the archiver to the project's
+advantage is discussed in later chapters, in particular
+<a class="xref" href="growth.html#using-archives" title="Conspicuous Use of Archives">
+      &#1576;&#1582;&#1588;&#1740; &#1576;&#1606;&#1575;&#1605;
+      &#8220;Conspicuous Use of Archives&#8221;
+    </a>.</p></div><div class="sect3" title="Mailing List / Message Forum Software"><div class="titlepage"><div><div><h4 class="title"><a name="message-forum-software"></a>Mailing List / Message Forum Software</h4></div></div></div><a name="mailing-list-software"></a><p>Here are some tools for running message forums.  If the site
+where you're hosting your project already has a default setup, then
+you can just use that and avoid having to choose.  But if you need to
+install one yourself, below are some possibilities.  (Of course, there
+are probably other tools out there that I just didn't happen to find,
+so don't take this as a complete list).</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>Google Groups</strong></span> &#8212; <a class="ulink" href="http://groups.google.com/" target="_top">groups.google.com</a></p><p>Listing Google Groups first was a tough call.  The service is
+         not itself open source, and a few of its administrative
+         functions can be a bit hard to use.  However, its advantages
+         are substantial: your group's archives are always online and
+         searchable; you don't have to worry about scalability,
+         backups, or other run-time infrastructure issues; the
+         moderation and spam-prevention features are pretty good (with
+         the latter constantly being improved, which is important in
+         the neverending spam arms race); and Google Groups are easily
+         accessible via both email and web, in ways that are likely to
+         be already familiar to many participants.  These are strong
+         advantages.  If you just want to get your project started,
+         and don't want to spend too much time thinking about what
+         message forum software or service to use, Google Groups
+         is a good default choice.</p></li><li class="listitem"><p><span class="bold"><strong>GroupServer</strong></span> &#8212; <a class="ulink" href="http://www.groupserver.org/" target="_top">http://www.groupserver.org/</a></p><p>Has built-in archiver and integrated Web-based interface.
+         GroupServer is a bit of work to set up, but once you have it
+         up and running it offers users a good experience.
+         You may  able to find free or low-cost hosted GroupServer
+         hosting for your project's forums, for example from <a class="ulink" href="https://OnlineGroups.net/" target="_top">OnlineGroups.net</a>.</p></li><li class="listitem"><p><span class="bold"><strong>Sympa</strong></span> &#8212; <a class="ulink" href="http://www.sympa.org/" target="_top">sympa.org</a></p><p>Developed and maintained by a consortium of French
+         universities, and designed for a given instance to handle
+         both very large lists (&gt; 700000 members, they claim) and a
+         large number of lists.  Sympa can work with a variety of
+         dependencies; for example, you can run it with sendmail,
+         postfix, qmail or exim as the underlying message transfer
+         agent.  It has built-in Web-based archiving.</p></li><li class="listitem"><p><span class="bold"><strong>Mailman</strong></span> &#8212; <a class="ulink" href="http://www.list.org/" target="_top">list.org</a></p><p>For many years, Mailman was the standard for open source
+         project mailing lists.  It comes with a built-in archiver,
+         Pipermail, and hooks for plugging in external archivers.
+         Unfortunately, Mailman is showing its age now, and while
+         it is very reliable in terms of message delivery and other
+         under-the-hood functionality, its administrative
+         interfaces &#8212; especially for spam moderation
+         and subscription moderation &#8212; are frustrating
+         for those accustomed to the modern Web.  As of this writing
+         in late 2013, the long-awaited Mailman 3 was still in
+         development but was about to enter beta-testing; by the time
+         you read this, Mailman 3 may be released, and would be worth
+         a look.  It is supposed to solve many of the problems of
+         Mailman 2, and may make Mailman a reasonable choice again.</p></li><li class="listitem"><p><span class="bold"><strong>Dada</strong></span> &#8212; <a class="ulink" href="http://dadamailproject.com/" target="_top">dadamailproject.com</a></p><p>I've not used Dada myself, but it is actively maintained and,
+         at least from outward appearances, quite spiffy.  Note that
+         to use it for participatory lists, as opposed to announcement
+         lists, you apparently need to activate the plug-in "Dada
+         Bridge".  Commercial Dada hosting and installation offerings
+         are available, or you can download the code and install it
+         yourself.</p></li></ul></div></div></div><div class="footnotes"><br><hr width="100" align="right"><div class="footnote"><p><sup>[<a id="ftn.idp6324208" href="#idp6324208" class="para">24</a>] </sup>Which was a long time
+coming &#8212; see <a class="ulink" href="http://www.rants.org/2008/03/06/thread_theory/" target="_top">rants.org/2008/03/06/thread_theory</a> for more.  And no, I'm not
+too dignified to refer to my own blog post.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp6407056" href="#idp6407056" class="para">25</a>] </sup>In theory, the list software
+could <span class="emphasis"><em>add</em></span> the lists's address to whatever
+Reply-to destination were already present, if any, instead of
+overwriting.  In practice, for reasons I don't know, most list
+software overwrites instead of appending.</p></div><div class="footnote"><p><sup>[<a id="ftn.idp6425056" href="#idp6425056" class="para">26</a>] </sup>Shortly after this
+book appeared, <a class="ulink" href="http://www.michaelbernstein.com/" target="_top">Michael Bernstein</a> wrote me to say: "There are other email
+clients that implement a reply-to-list function besides Mutt. For
+example, Evolution has this function as a keyboard shortcut, but not a
+button (Ctrl+L)."</p></div><div class="footnote"><p><sup>[<a id="ftn.idp6427216" href="#idp6427216" class="para">27</a>] </sup>Since I wrote that, I've learned that there is
+at least one list management system that offers this
+feature: <a class="ulink" href="http://siesta.unixbeard.net/" target="_top">Siesta</a>.
+See also this article about it:
+<a class="ulink" href="http://www.perl.com/pub/a/2004/02/05/siesta.html" target="_top">perl.com/pub/a/2004/02/05/siesta.html</a></p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="right"><a accesskey="p" href="web-site.html">&#1602;&#1576;&#1604;&#1740;</a> </td><td width="20%" align="center"><a accesskey="u" href="technical-infrastructure.html">&#1576;&#1575;&#1604;&#1575;</a></td><td width="40%" align="left"> <a accesskey="n" href="vc.html">&#1576;&#1593;&#1583;&#1740;</a></td></tr><tr><td width="40%" align="right" valign="top">Web Site </td><td width="20%" align="center"><a accesskey="h" href="index.html">&#1582;&#1575;&#1606;&#1607;</a></td><td width="40%" align="left" valign="top"> Version Control</td></tr></table></div></body></html>

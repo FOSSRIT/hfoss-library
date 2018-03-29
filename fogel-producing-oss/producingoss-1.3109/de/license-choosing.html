@@ -1,0 +1,185 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Die Wahl einer Lizenz</title><link rel="stylesheet" type="text/css" href="styles.css"><meta name="generator" content="DocBook XSL Stylesheets V1.76.1"><link rel="home" href="index.html" title="Produktion von Open-Source-Software"><link rel="up" href="legal.html" title="Kapitel 9. Lizenzen, Urheberrecht und Patente"><link rel="prev" href="license-compatibility.html" title="Die GPL und Lizenz-Kompatibilität"><link rel="next" href="copyright-assignment.html" title="Zuweisung von Urheberrechten"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Die Wahl einer Lizenz</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="license-compatibility.html">Zurück</a> </td><th width="60%" align="center">Kapitel 9. Lizenzen, Urheberrecht und Patente</th><td width="20%" align="right"> <a accesskey="n" href="copyright-assignment.html">Weiter</a></td></tr></table><hr></div><div class="sect1" title="Die Wahl einer Lizenz"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="license-choosing"></a>Die Wahl einer Lizenz</h2></div></div></div><p>Wenn man eine Lizenz wählt, die man für das Projekt benutzen will,
+sollte man wenn irgendwie möglich, eine bereits existierende wählen.
+Exisitierende Lizenzen sind aus zwei Gründen besser:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Bekanntheit. Wenn Sie eines der drei oder vier
+            verbreitetsten Lizenzen benutzen, wird man nicht das Gefühl
+            haben, sich um den rechtlichen Rahmen kümmern zu müssen,
+            wenn sie Ihren Code benutzen wollen. Für diese Lizenz, haben
+            sie das nämlich schon vor langem gemacht.</p></li><li class="listitem"><p>Qualität. Wenn Sie nicht gerade ein paar Rechtsanwälte
+            parat haben, ist es unwahrscheinlich, dass Sie sich eine
+            rechtlich wasserdichte Lizenz ausdenken. Die erwähnten
+            Lizenzen, sind mit viel Mühe und Erfahrung entstanden; Wenn
+            Ihr Projekt keine äußerst außergewöhnlichen Bedürfnisse hat,
+            werden sie es wahrscheinlich nicht besser machen.</p></li></ul></div><p>
+Siehe <a class="xref" href="license-quickstart.html#license-quickstart-applying" title="Eine Lizenz für Ihre Software">&#8222;Eine Lizenz für Ihre Software&#8220;</a><span>
+in <a class="xref" href="getting-started.html" title="Kapitel 2. Der Einstieg">Kapitel 2, <i>Der Einstieg</i></a></span>, um eine dieser Lizenzen auf
+Ihr Projekt anzuwenden.</p><div class="sect2" title="Die MIT- / X-Window-System-Lizenz"><div class="titlepage"><div><div><h3 class="title"><a name="license-choosing-mit-x"></a>Die MIT- / X-Window-System-Lizenz</h3></div></div></div><p>Wenn Sie wollen, dass Ihr Code die größtmögliche Anzahl an
+Entwickler und Derivate erreicht, und es sie nicht stört, wenn Ihr Code
+in proprietären Anwendungen benutzt wird, sollten Sie die MIT- / 
+X-Window-System-Lizenz wählen (der Name kommt durch seine Nutzung für den
+Code vom ursprünglichen X-Window-System veröffentlicht von dem 
+Massachusetts Institute of Technology). Die grundsätzliche Botschaft
+dieser Lizenz ist, "Du kannst mit diesem Code machen was du willst."
+Sie ist mit der GNU GPL kompatibel, sie ist kurz, einfach und leicht zu
+verstehen:</p><pre class="screen">Copyright (c) &lt;Jahr&gt; &lt;copyright Inhaber&gt;
+
+Hiermit wird unentgeltlich, jeder Person, die eine Kopie der Software
+und der zugehörigen Dokumentationen (die "Software") erhält, die
+Erlaubnis erteilt, uneingeschränkt zu benutzen, inklusive und ohne
+Ausnahme, dem Recht, sie zu verwenden, kopieren, ändern, fusionieren,
+verlegen, verbreiten, unter-lizenzieren und/oder zu verkaufen, und 
+Personen, die diese Software erhalten, diese Rechte zu geben, unter
+den folgenden Bedingungen:
+
+Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in 
+alle Kopien oder Teilkopien der Software beizulegen.
+
+DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE 
+BEREITGESTELLT, EINSCHLIESSLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN
+VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER 
+RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND
+DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE
+ANSPRUCH HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG VON EINEM 
+VERTRAG, EINEM DELIKT ODER ANDERS IM ZUSAMMENHANG MIT DER BENUTZUNG
+ODER SONSTIGE VERWENDUNG DER SOFTWARE ENTSTANDEN.<sup>[<a name="idp6336064" href="#ftn.idp6336064" class="footnote">48</a>]</sup></pre></div><div class="sect2" title="Die GNU GPL"><div class="titlepage"><div><div><h3 class="title"><a name="license-choosing-gpl"></a>Die GNU GPL</h3></div></div></div><p>Wenn Sie es vorziehen, dass Ihr Code nicht in Proprietären
+Anwendungen verwendet wird, oder es Ihnen zumindest egal ist, ob es in
+proprietären Anwendungen verwendet werden kann, sollten Sie die GNU 
+General Public License (de. Allgemeine Öffentliche Lizenz) verwenden
+(<a class="ulink" href="http://www.fsf.org/licensing/licenses/gpl.html" target="_top">http://www.fsf.org/licensing/licenses/gpl.html</a>). Die GPL
+ist wahrscheinlich die heute am weitesten verbreitete Lizenz für freie
+Software; diese breite Bekanntheit, ist an und für sich schon eine der
+großen Vorteile der GPL.</p><p>Wenn man eine Bibliothek schreibt, die hauptsächlich dazu gedacht
+ist, als Teil anderer Anwendungen verwendet zu werden, sollten sie genau
+überlegen, ob die Einschränkungen die von der GPL vorgegeben werden, mit
+den Zielen von Ihrem Projekt vereinbar sind. Manchmal &#8211; zum
+Beispiel, wenn Sie versuchen eine konkurrierende, propritäre Bibliothek,
+mit der gleichen Funktion, zu ersetzen &#8211; kann es aus strategischer
+Sicht sinnvoller sein, Ihre Lizenz derart zu wählen, dass es in
+proprietären Anwendungen verwendet werden kann, auch wenn Sie das sonst
+nicht so gerne sehen würden. Die Free Software Foundation hat sogar eine
+alternative zur GPL geschrieben, für genau diese Umstände: die 
+<em class="firstterm">GNU Library GPL</em>, später zur <em class="firstterm">GNU Lesser
+GPL</em> umbenannt (meistens wird das Kürzel
+<em class="firstterm">LGPL</em> verwendet). Die LGPL hat weniger
+Einschränkungen als die GPL und kann leichter min nicht freier Software
+zusammen benutzt werden. Es ist jedoch auch etwas komplex und erfordert
+etwas Zeit zum Verständnis, wenn Sie also nicht die GPL verwenden,
+empfehle ich einfach ein Lizenz der Art von MIT/X zu verwenden.</p><div class="sidebar" title="The GNU Affero GPL: A Version of the GNU GPL for Server-Side Code"><a name="gnu-affero-gpl"></a><div class="titlepage"><div><div><p class="title"><b>The GNU Affero GPL: A Version of the GNU GPL for Server-Side
+  Code</b></p></div></div></div><p>In 2007, the Free Software Foundation released a variant of
+  the GPL called the <em class="firstterm">GNU Affero GPL</em>
+  (<a class="ulink" href="http://www.fsf.org/licensing/licenses/agpl.html" target="_top">http://www.fsf.org/licensing/licenses/agpl.html</a>)<sup>[<a name="idp6409104" href="#ftn.idp6409104" class="footnote">49</a>]</sup>.
+  Its purpose is to enforce GPL-like sharing provisions on the growing
+  number of companies that offered hosted services&#8212;software that
+  runs on their servers, that users interact with only over the
+  network, and that therefore is never directly distributed to users
+  as executable or source code.  Many such services had been using
+  GPL'd software, often with modifications, yet didn't have to share
+  their changes with the world because they weren't distributing any
+  code.</p><p>The GNU AGPLv3's solution to this was to take the regular GPL
+  and add a "Remote Network Interaction" clause, stating
+  "<span class="emphasis"><em>...if you modify the Program, your modified version must
+  prominently offer all users interacting with it remotely through a
+  computer network ... an opportunity to receive the Corresponding
+  Source of your version ... at no charge, through some standard or
+  customary means of facilitating copying of software.</em></span>"
+  This expanded the GPL's enforcement powers into the new world of
+  application service providers.  The Free Software Foundation
+  recommends that the GNU AGPLv3 be used for any software that will
+  commonly be run over a network.</p><p>Note that the AGPLv3 is not directly compatible with GPLv2
+  (though it is compatible with GPLv3, of course).  However, most
+  software licensed under the GPLv2 includes the "or any later
+  version" clause anyway, so you can just shift it to GPLv3 if and
+  when you need to mix it with AGPLv3 code.  However, if you need to
+  mix with programs licensed strictly under the GPLv2 (that is,
+  without the "or any later version" clause), then the AGPLv3 won't
+  work.</p><p>Although the history of the AGPLv3 is a bit complicated, the
+  license itself is simple: it's just the GPLv3 with one extra clause
+  about network interaction.  The Wikipedia article on the AGPLv3 is
+  excellent:
+  <a class="ulink" href="http://en.wikipedia.org/wiki/Affero_General_Public_License" target="_top">http://en.wikipedia.org/wiki/Affero_General_Public_License</a></p></div><div class="sect3" title="Ist die GPL frei oder nicht frei?"><div class="titlepage"><div><div><h4 class="title"><a name="is-the-gpl-free"></a>Ist die GPL frei oder nicht frei?</h4></div></div></div><p>Eine der Konsequenzen der GPL, ist die Möglichkeit
+ &#8211; zwar klein aber dennoch vorhanden &#8211; sich oder oder Ihr
+Projekt in einer zu leiten, ob die GPL wirklich "frei" ist oder 
+nicht, in Anbetracht der Einschränkungen auf die Verwendung vom 
+Code &#8211; nämlich die Einschränkung, dass Code nicht unter irgend
+einer anderen Lizenz verbreitet werden darf. Für manche, bedeutet diese
+Einschränkung, dass die GPL weniger "frei ist" als die 
+toleranteren Lizenz, wie die MIT/X Lizenz. Dieses Argument führt
+natürlich meistens darauf, dass "mehr Freiheit" zwangsläufig
+besser ist als "weniger Freiheit" (wer ist schließlich nicht für
+Freiheit?), woraus folgt, dass diese Lizenzen besser sind, als die 
+GPL.</p><p>Diese Debatte ist ein weiteres der beliebten heiligen Kriege
+(siehe <a class="xref" href="common-pitfalls.html#holy-wars" title="Vermeiden Sie Heilige Kriege">&#8222;Vermeiden Sie Heilige Kriege&#8220;</a><span> im Kapitel
+<a class="xref" href="communications.html" title="Kapitel 6. Kommunikation">Kapitel 6, <i>Kommunikation</i></a></span>). Vermeiden Sie die
+Beteiligung daran, zumindest in den Foren des Projekts. Versuchen Sie
+nicht zu beweisen, dass die GPL weniger, gleich viel oder mehr Freiheit
+bietet als andere Lizenzen. Betonen Sie statt dessen, die spezifischen
+Gründe, die Ihr Projekt zur Wahl der GPL geführt hat. Wenn ihre weite
+Verbreitung eines der Gründe war, sollten Sie das sagen. Wenn die
+Übertragung einer freien Lizenz auf Abgeleitete Werke auch eines der 
+Gründe war, sollten Sie das ebenfalls erwähnen, lassen Sie sich aber 
+nicht in eine Diskussion darüber verleiten, ob der Code dadurch mehr
+oder weniger "Frei" ist. Freiheit ist ein komplexes Thema und es macht
+wenig Sinn darüber zu reden, wenn Begriffe als Vorwand benutzt werden
+vor dem Wesentlichen.</p><p>Da ich hier jedoch ein Buch schreibe und nicht eine E-Mail an
+einem Verteiler, gebe ich zu, dass nie das Argument "die GPL ist nicht
+frei" nie ganz verstanden habe. Die einzige Einschränkung die von der
+GPL auferlegt wird, ist dass andere daran gehindert werden,
+<span class="emphasis"><em>weitere</em></span> Einschränkungen zu machen. Zu behaupten,
+dass sie deswegen weniger frei wäre, erschien mir immer als ob man
+sagen würde, dass ein Gesetz gegen Sklaverei die Freiheit reduziert, da
+es manche daran hindert, Sklaven zu besitzen.</p><p>(Im übrigen, wenn Sie sich tatsächlich auf eine Debatte darüber
+einlassen wollen, machen Sie die Sache durch aufrührerischen Gleichnisse
+nicht schlimmer als nötig.)</p></div></div><div class="sect2" title="Wie sieht es mit der BSD-Lizenz aus?"><div class="titlepage"><div><div><h3 class="title"><a name="license-bsd"></a>Wie sieht es mit der BSD-Lizenz aus?</h3></div></div></div><p>Eine nicht unwesentliche Menge an freie Software wird unter einer 
+<em class="firstterm">BSD Lizense</em> veröffentlicht. Die ursprüngliche 
+BSD Lizenz wurde für die Berkeley Software Distribution verwenden,
+indem die Universität von Kalifornien wichtige Teile einer Unix
+Implementierung veröffentlichte. Diese Lizenz (der genaue Text findet
+man im Abschnitt 2.2.2 auf 
+<a class="ulink" href="http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6" target="_top">http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6</a>) wurde im
+Geiste der MIT/X Lizenz geschrieben, bis auf eine Klausel:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Jegliche Werbematerialien, die Funktionen oder die
+Nutzung dieser Software erwähnen, müssen die folgende Anerkennung
+einschließen: Dieses Produkt beinhaltet Software die von der Lawrence
+Berkeley Laboratory der Universität von Kalifornien entwickelt 
+wurde.</em></span></p></blockquote></div><p>Diese Klausel machte die Ursprüngliche BSD-Lizenz nicht nur
+inkompatibel zur GPL, sonder setzte auch noch ein gefährliches Beispiel:
+während andere Organisationen  ähnlichen Klausel in 
+<span class="emphasis"><em>ihre</em></span> freie Software schrieben &#8211; wobei sie den
+Namen Ihrer Organisation anstatt von "Lawrence Berkeley Laboratory der
+Universität von Kalifornien" einsetzten &#8211; wurde jedem der die 
+Software verbreiten wollte, eine immer größere Bürde auferlegt, jede
+einzelne Firma zu erwähnen. Zum Glück, wurden viele Projekte, sich
+dieser Problematik bewusst und ließen diese Klausel einfach fallen. 
+1999 schließlich sogar die Universität von Kalifornien.</p><p>Das Ergebnis ist die überarbeitete BSD-Lizenz, die einfach die
+ursprüngliche BSD-Lizenz ist, ohne die Werbeklausel. Diese Geschichte
+macht den Begriff BSD-Lizense jedoch etwas mehrdeutig: ist damit das
+Original oder die überarbeitete Fassung gemeint? Ich ziehe deshalb die 
+MIT/X Lizense vor, die im wesentlichen gleichwertig ist, und nicht unter
+dieser Mehrdeutigkeit leidet. Es gibt jedoch vielleicht ein Grund die BSD
+Lizenz der MIT/X Lizenz vorzuziehen, die BSD-Lizenz beinhaltet nämlich diese 
+Klausel:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>Weder der Name der &lt;ORGANIZATION&gt; noch die Namen
+seiner Teilhaber dürfen zur Werbung oder Förderung von Produkten
+verwendet werden, die von dieser Software abgeleitet werden, ohne
+explizite vorherige schriftliche Zustimmung.</em></span></p></blockquote></div><p>Es ist ohne ein solche Klausel nicht klar, ob jemand der die
+Software erhält, das Recht hat, den Namen des Lizenzgebers zu verwenden,
+die Klausel lässt daran aber keinen Zweifel. Organizationen, die sich um
+Markenrecht sorgen machen, mögen deshalb die überarbeitete BSD-Lizenz
+vorziehen. Im allgemeinen, impliziert eine liberale Urheberrechts-Lizenz
+jedoch nicht, dass Empfänger das Recht haben ihre Marken zu benutzen
+oder zu verwässern &#8211; Urheberrecht und Markenrechte sind zwei paar
+Schuhe.</p><p>Wenn Sie die überarbeitete BSD-Lizenz verwenden wollen, finden
+sieh hier eine Vorlage <a class="ulink" href="http://www.opensource.org/licenses/bsd-license.php" target="_top">http://www.opensource.org/licenses/bsd-license.php</a>.</p></div><div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.idp6336064" href="#idp6336064" class="para">48</a>] </sup>Diese
+freie Übersetzung, von 
+<a class="ulink" href="http://de.wikipedia.org/wiki/MIT-Lizenz" target="_top">http://de.wikipedia.org/wiki/MIT-Lizenz</a> wird zum besseren
+Verständnis benutzt, es ist keine offizielle oder im rechtlichen Sinne
+Anerkannte Übersetzung. In Ihrer Anwendung sollten die Originalfassung
+verwenden, die Sie hier finden: <a class="ulink" href="http://www.opensource.org/licenses/mit-license.php" target="_top">http://www.opensource.org/licenses/mit-license.php</a>
+</p></div><div class="footnote"><p><sup>[<a id="ftn.idp6409104" href="#idp6409104" class="para">49</a>] </sup>
+  The history of the license and its name is a bit complicated.  The
+  first version of the license was originally released by Affero, Inc,
+  who based it on the GNU GPL version 2.  This was commonly referred
+  to as the AGPL.  Later, the Free Software Foundation decided to
+  adopt the idea, but by then they had released version 3 of their GNU
+  GPL, so they based their new Affero-ized license on that and called
+  it the "GNU AGPL".  The old Affero license is more or less
+  deprecated now.  If you want Affero-like provisions, you should use
+  the GNU version.  To avoid ambiguity, call it the "AGPLv3", the "GNU
+  AGPL", or for maximum precision, "GNU AGPLv3".</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="license-compatibility.html">Zurück</a> </td><td width="20%" align="center"><a accesskey="u" href="legal.html">Nach oben</a></td><td width="40%" align="right"> <a accesskey="n" href="copyright-assignment.html">Weiter</a></td></tr><tr><td width="40%" align="left" valign="top">Die GPL und Lizenz-Kompatibilität </td><td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td><td width="40%" align="right" valign="top"> Zuweisung von Urheberrechten</td></tr></table></div></body></html>

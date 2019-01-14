@@ -1,4 +1,4 @@
-# Free and Open Source Software Library (HFOSS Spring 2018 edition)
+# Free and Open Source Software Library (HFOSS Spring 2019 edition)
 
 See also CONTRIBUTING.md
 
